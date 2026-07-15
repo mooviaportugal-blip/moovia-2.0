@@ -8,7 +8,7 @@ const Linkedin = ({ className, strokeWidth = 1.5 }: { className?: string; stroke
     <circle cx="4" cy="4" r="2" />
   </svg>
 );
-import danyAsset from "@/assets/dany.png.asset.json";
+
 import { reapplyCurrentLang } from "@/i18n";
 
 type Member = {
@@ -86,7 +86,7 @@ const ALL: Record<string, Member> = {
     name: "Laura Costa, LL.M.",
     initials: "LC",
     role: "Immigration Legal Specialist",
-    img: "/__l5e/assets-v1/28e9f1ef-4de8-42ab-9554-f6568192dfe9/laura.png",
+    img: "/images/laura.png",
     linkedin: "https://www.linkedin.com/in/laura-costa-334bab2a3",
     chips: ["Mestrado ULisboa", "Imigração"],
     bio: [
@@ -100,7 +100,7 @@ const ALL: Record<string, Member> = {
     name: "Sara Russo",
     initials: "SR",
     role: "Head of Real Estate",
-    img: "/__l5e/assets-v1/6cee731e-d2c9-40ad-b216-28a3f108d2a0/sara.png",
+    img: "/images/sara.png",
     linkedin: "https://www.linkedin.com/in/sararussoesteves/",
     chips: ["RE/MAX Collection", "Luxo", "10+ anos"],
     bio: [
@@ -164,7 +164,7 @@ const ALL: Record<string, Member> = {
     name: "Dany Zukerman",
     initials: "DZ",
     role: "School Hunter",
-    img: danyAsset.url,
+    img: "/images/dany.png",
     chips: ["School Matching", "Educação"],
     bio: [
       "Responsável pela frente de School Hunting da MOOVIA, dedicada à procura, avaliação e apoio à matrícula em escolas para famílias em transição para Portugal.",
@@ -176,7 +176,7 @@ const ALL: Record<string, Member> = {
     name: "Guilherme Souza",
     initials: "GS",
     role: "Head of Marketing & Brand",
-    img: "/__l5e/assets-v1/2b0dd907-bf87-4b7a-95d5-c932bc7273c5/guilherme.png",
+    img: "/images/guilherme.png",
     linkedin: "https://www.linkedin.com/in/guilherme-souza-ux/",
     chips: ["Branding", "Estratégia"],
     bio: [

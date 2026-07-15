@@ -1,22 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { TrainFront } from "lucide-react";
-import fredericoAsset from "@/assets/frederico.jpg.asset.json";
 import leticiaAsset from "@/assets/leticia.png.asset.json";
-import lauraAsset from "@/assets/laura.png.asset.json";
-import saraAsset from "@/assets/sara.png.asset.json";
 import cristinaAsset from "@/assets/cristina.png.asset.json";
-
-import danyAsset from "@/assets/dany.png.asset.json";
 import metroSound from "@/assets/metro.mp3.asset.json";
 
 const PHOTO_BY_NAME: Record<string, string> = {
-  "Frederico Prado": fredericoAsset.url,
+  "Frederico Prado": "/images/frederico.png",
   "Dra. Letícia de Mello": leticiaAsset.url,
-  "Dra. Laura Costa": lauraAsset.url,
-  "Sara Russo": saraAsset.url,
+  "Dra. Laura Costa": "/images/laura.png",
+  "Sara Russo": "/images/sara.png",
   "Sandra Santos": "/images/sandra.png",
   "Cristina Sousa": cristinaAsset.url,
-  "Dany Zukerman": danyAsset.url,
+  "Dany Zukerman": "/images/dany.png",
   "Equipa MOOVIA": "/mooviagold.svg",
 };
 

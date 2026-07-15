@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
-import fredericoAsset from "@/assets/frederico.jpg.asset.json";
+const fredericoAsset = { url: "/images/frederico.png" };
 import leticiaAsset from "@/assets/leticia.png.asset.json";
 
 export function ProcessSection() {
