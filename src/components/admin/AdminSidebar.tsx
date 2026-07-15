@@ -27,6 +27,7 @@ const menuItems = [
   { label: "Assessments", icon: Package, to: "/admin/assessments" },
   { label: "Blog", icon: FileText, to: "/admin/blog" },
   { label: "Conteúdo / CMS", icon: Database, to: "/admin/content" },
+  { label: "Imagens", icon: ImageIcon, to: "/admin/images" },
   { label: "Galeria", icon: ImageIcon, to: "/admin/gallery" },
   { label: "Páginas Legais", icon: Scale, to: "/admin/legal" },
   { label: "MAIA / IA", icon: Brain, to: "/admin/maia" },

@@ -333,7 +333,7 @@ async function loadFromDB() {
       (tracks || []).map(async (t: any) => ({
         id: t.id,
         title: t.title,
-        cover: t.cover_url || "",
+        cover: t.cover_url || "/mooviagold.svg",
         source_type: t.source_type,
         source_url: t.source_type === "mp3" ? await resolveMp3Url(t.source_url) : t.source_url,
       }))
