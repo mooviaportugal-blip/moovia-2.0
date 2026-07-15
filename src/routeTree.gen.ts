@@ -35,6 +35,7 @@ import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
 import { Route as AdminMaiaRouteImport } from './routes/admin.maia'
 import { Route as AdminLegalRouteImport } from './routes/admin.legal'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as AdminImagesRouteImport } from './routes/admin.images'
 import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
 import { Route as AdminContentRouteImport } from './routes/admin.content'
 import { Route as AdminChatRouteImport } from './routes/admin.chat'
@@ -179,6 +180,11 @@ const AdminLeadsRoute = AdminLeadsRouteImport.update({
   path: '/leads',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminImagesRoute = AdminImagesRouteImport.update({
+  id: '/images',
+  path: '/images',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminGalleryRoute = AdminGalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
@@ -271,6 +277,7 @@ export interface FileRoutesByFullPath {
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/images': typeof AdminImagesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/legal': typeof AdminLegalRoute
   '/admin/maia': typeof AdminMaiaRoute
@@ -311,6 +318,7 @@ export interface FileRoutesByTo {
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/images': typeof AdminImagesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/legal': typeof AdminLegalRoute
   '/admin/maia': typeof AdminMaiaRoute
@@ -352,6 +360,7 @@ export interface FileRoutesById {
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/images': typeof AdminImagesRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/admin/legal': typeof AdminLegalRoute
   '/admin/maia': typeof AdminMaiaRoute
@@ -395,6 +404,7 @@ export interface FileRouteTypes {
     | '/admin/chat'
     | '/admin/content'
     | '/admin/gallery'
+    | '/admin/images'
     | '/admin/leads'
     | '/admin/legal'
     | '/admin/maia'
@@ -435,6 +445,7 @@ export interface FileRouteTypes {
     | '/admin/chat'
     | '/admin/content'
     | '/admin/gallery'
+    | '/admin/images'
     | '/admin/leads'
     | '/admin/legal'
     | '/admin/maia'
@@ -475,6 +486,7 @@ export interface FileRouteTypes {
     | '/admin/chat'
     | '/admin/content'
     | '/admin/gallery'
+    | '/admin/images'
     | '/admin/leads'
     | '/admin/legal'
     | '/admin/maia'
@@ -701,6 +713,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLeadsRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/images': {
+      id: '/admin/images'
+      path: '/images'
+      fullPath: '/admin/images'
+      preLoaderRoute: typeof AdminImagesRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/gallery': {
       id: '/admin/gallery'
       path: '/gallery'
@@ -822,6 +841,7 @@ interface AdminRouteChildren {
   AdminChatRoute: typeof AdminChatRoute
   AdminContentRoute: typeof AdminContentRoute
   AdminGalleryRoute: typeof AdminGalleryRoute
+  AdminImagesRoute: typeof AdminImagesRoute
   AdminLeadsRoute: typeof AdminLeadsRoute
   AdminLegalRoute: typeof AdminLegalRoute
   AdminMaiaRoute: typeof AdminMaiaRoute
@@ -838,6 +858,7 @@ const AdminRouteChildren: AdminRouteChildren = {
   AdminChatRoute: AdminChatRoute,
   AdminContentRoute: AdminContentRoute,
   AdminGalleryRoute: AdminGalleryRoute,
+  AdminImagesRoute: AdminImagesRoute,
   AdminLeadsRoute: AdminLeadsRoute,
   AdminLegalRoute: AdminLegalRoute,
   AdminMaiaRoute: AdminMaiaRoute,
