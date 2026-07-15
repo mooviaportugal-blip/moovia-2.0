@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import danyAsset from "@/assets/dany.png.asset.json";
+
 
 type HomeMember = {
   id: string;
@@ -116,7 +116,7 @@ const COMUNIDADE: HomeMember[] = [
     id: "dany",
     name: "Dany Zukerman",
     role: "Jewish Community Advisor",
-    img: danyAsset.url,
+    img: "/images/dany.png",
     chips: ["Direito UCAM", "18 anos CLO", "Hebraico"],
     bio: "Lidera a integração comunitária e familiar, conectando clientes à comunidade judaica e às redes de apoio em Portugal.",
   },
