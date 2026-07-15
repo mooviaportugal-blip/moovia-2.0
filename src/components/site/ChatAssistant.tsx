@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { supabase } from '@/integrations/supabase/client'
-import maiaLogo from '@/assets/maia-logo.png.asset.json'
+const maiaLogo = { url: '/images/maia-logo.png' }
 import { useI18n } from '@/lib/i18n/I18nProvider'
 import { notifyLead } from '@/lib/leadNotifications'
 
