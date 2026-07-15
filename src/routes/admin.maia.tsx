@@ -30,10 +30,11 @@ type Document = {
   created_at: string;
 };
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string;
+const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL as string) || "https://eueddvtfjdhmqudnpzcz.supabase.co";
 const SUPABASE_KEY =
   (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string) ||
-  (import.meta.env.VITE_SUPABASE_ANON_KEY as string);
+  (import.meta.env.VITE_SUPABASE_ANON_KEY as string) ||
+  "sb_publishable_8CsuZb5A-PBJYek-WBz0hg_Il8FomRV";
 
 function AdminMaia() {
   const [knowledge, setKnowledge] = useState<Knowledge | null>(null);
