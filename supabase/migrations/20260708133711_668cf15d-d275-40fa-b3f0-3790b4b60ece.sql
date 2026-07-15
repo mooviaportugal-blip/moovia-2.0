@@ -1,0 +1,1 @@
+DELETE FROM public.gallery_images WHERE gallery='lisboa' AND (url LIKE '%preview--gleeful-script-friend%' OR url LIKE 'data:image/png%');

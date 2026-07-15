@@ -1,0 +1,1 @@
+INSERT INTO public.site_settings (key, value, type) VALUES ('airplane_enabled', 'false', 'boolean') ON CONFLICT (key) DO NOTHING;

@@ -1,144 +1,273 @@
-@import "tailwindcss" source(none);
-@source "../src";
-@import "tw-animate-css";
+@import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
+/* ── WRIGHT FONT FAMILY (Fontspring DEMO, hosted em mooviaportugal.com) ── */
+/* Wright Roman — display serif/sans elegante (usado em headings) */
+@font-face {
+  font-family: "Wright Roman";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightroman-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Roman";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightroman-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Roman";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightroman-semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Roman";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightroman-bold(1).otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Roman";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightroman-extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
+/* Wright Pro — sans neutra (usado em body) */
+@font-face {
+  font-family: "Wright Pro";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightpro-light(1).otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Pro";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightpro-regular(1).otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Pro";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightpro-semibold(1).otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Pro";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightpro-bold(1).otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
-@theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+/* Wright Deco — decorativa (disponível p/ destaques) */
+@font-face {
+  font-family: "Wright Deco";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightdeco-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Deco";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightdeco-semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wright Deco";
+  src: url("https://mooviaportugal.com/fonts/Fontspring-DEMO-wrightdeco-bold(1).otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  /* ── FUNDOS PRINCIPAIS ─────────────────────────── */
+  --black:    #06091a;
+  --black-2:  #0b1225;
+  --black-3:  #111d36;
+
+  /* ── ACENTOS DOURADOS ─────────────────────────── */
+  --gold:     #ad8957;
+  --gold-m:   #a58d67;
+  --gold-l:   #cead84;
+  --gold-xl:  #e8d5b0;
+
+  /* ── AZUIS ───────────────────────────────────── */
+  --navy:     #0f1f41;
+  --teal:     #4a90a0;
+
+  /* ── TEXTO ───────────────────────────────────── */
+  --white:    #f9f5ec;
+  --w70:      rgba(249,245,236,.7);
+  --w35:      rgba(249,245,236,.55);
+  --w50:      rgba(249,245,236,.55);
+  --w12:      rgba(249,245,236,.12);
+  --w05:      rgba(249,245,236,.05);
+
+  /* ── BORDAS ──────────────────────────────────── */
+  --b18:      rgba(173,137,87,.12);
+  --b35:      rgba(173,137,87,.30);
+  --navy-border: rgba(79,130,180,.12);
+
+  /* ── TRANSIÇÕES ──────────────────────────────── */
+  --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Space Grotesk", "Inter", system-ui, sans-serif;
+  
+  --color-black: var(--black);
+  --color-black-2: var(--black-2);
+  --color-black-3: var(--black-3);
+  --color-gold: var(--gold);
+  --color-gold-m: var(--gold-m);
+  --color-gold-l: var(--gold-l);
+  --color-gold-xl: var(--gold-xl);
+  --color-navy: var(--navy);
+  --color-teal: var(--teal);
+  --color-white: var(--white);
+  --color-w70: var(--w70);
+  --color-w35: var(--w35);
+  --color-w12: var(--w12);
+  --color-w05: var(--w05);
+  --color-b18: var(--b18);
+  --color-b35: var(--b35);
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
+  body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    overflow-x: clip;
+    cursor: none;
   }
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+  a, button, input, select, textarea {
+    cursor: none;
   }
+
+  select {
+    color-scheme: dark;
+  }
+
+  select option,
+  select optgroup {
+    background-color: var(--black-3);
+    color: var(--white);
+  }
+
+  select option:checked {
+    background-color: var(--navy);
+    color: var(--white);
+  }
+
+  /* Restore native cursor inside admin panel */
+  body:has(.admin-root),
+  body:has(.admin-root) a,
+  body:has(.admin-root) button,
+  body:has(.admin-root) input,
+  body:has(.admin-root) select,
+  body:has(.admin-root) textarea {
+    cursor: auto;
+  }
+  body:has(.admin-root) a,
+  body:has(.admin-root) button {
+    cursor: pointer;
+  }
+
+
+  /* Modern minimal sans display — matches MOOVIA wordmark */
+  .font-display {
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-wrap: balance;
+  }
+}
+
+
+.grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.45;
+  animation: grain 8s steps(10) infinite;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%22.04%22/%3E%3C/svg%3E');
+}
+
+@keyframes grain {
+  0%,100%{transform:translate(0,0)}
+  10%{transform:translate(-2%,-2%)}
+  20%{transform:translate(2%,-2%)}
+  30%{transform:translate(-2%,2%)}
+  40%{transform:translate(2%,2%)}
+  50%{transform:translate(-2%,-2%)}
+  60%{transform:translate(2%,-2%)}
+  70%{transform:translate(-2%,2%)}
+  80%{transform:translate(2%,2%)}
+  90%{transform:translate(-2%,-2%)}
+}
+
+/* Custom scrollbar — gold thumb, navy track, outer glow */
+html {
+  scrollbar-color: var(--gold) var(--navy);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold-l), var(--gold));
+  border-radius: 999px;
+  border: 2px solid var(--navy);
+  box-shadow:
+    0 0 6px var(--gold),
+    0 0 14px rgba(173, 137, 87, 0.7),
+    0 0 24px rgba(232, 213, 176, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--gold-xl), var(--gold-m));
+  box-shadow:
+    0 0 8px var(--gold-l),
+    0 0 18px rgba(232, 213, 176, 0.85),
+    0 0 32px rgba(232, 213, 176, 0.5);
+}
+::-webkit-scrollbar-corner {
+  background: var(--navy);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes goldSheen {
+  0% { transform: translateX(0) rotate(12deg); }
+  100% { transform: translateX(350%) rotate(12deg); }
+}
+
+@keyframes soundPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
 }

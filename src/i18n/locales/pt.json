@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "how_it_works": "Como funciona",
+    "services": "Serviços",
+    "assessment": "Avaliação Estratégica",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "cta": "Agendar Conversa",
+    "about": "Sobre",
+    "team": "Equipa"
+  },
+  "hero": {
+    "eyebrow": "Coordenação Internacional de Vida e Património",
+    "title_1": "Você não precisa",
+    "title_2": "de mais informação.",
+    "title_3": "Precisa de alguém",
+    "title_4": "que coordene",
+    "title_5": "a decisão.",
+    "lead": "Mudar de país é uma das decisões mais complexas da sua vida. A maioria das famílias chega fragmentada entre advogados, corretores, escolas e contadores, ninguém coordenando o todo. A MOOVIA existe para ser a única ligação de que você precisa: antes, durante e depois da chegada.",
+    "cta_primary": "Avaliar o meu caso",
+    "cta_secondary": "Ver como funciona",
+    "tagline": "Planejar · Chegar · Ficar",
+    "chapter_label": "Capítulo 01",
+    "chapter_title": "Mandato de transição"
+  },
+  "footer": {
+    "tagline": "Planejar · Chegar · Ficar",
+    "services": "Serviços",
+    "contact": "Contacto",
+    "privacy": "Privacidade",
+    "cookies": "Cookies",
+    "rights": "© 2026 MOOVIA Portugal | Brasil → Portugal"
+  }
+}

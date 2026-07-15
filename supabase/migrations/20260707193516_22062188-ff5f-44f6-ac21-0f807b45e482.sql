@@ -1,0 +1,1 @@
+ALTER TABLE public.sound_tracks ALTER COLUMN position DROP NOT NULL;

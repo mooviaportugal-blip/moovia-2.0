@@ -1,0 +1,166 @@
+import { motion } from "framer-motion";
+import { Calendar } from "lucide-react";
+import { RotatingLogo } from "@/components/ui/RotatingLogo";
+import fredericoAsset from "@/assets/frederico.jpg.asset.json";
+import leticiaAsset from "@/assets/leticia.png.asset.json";
+
+export function ProcessSection() {
+  const steps = [
+    {
+      id: "01",
+      tag: "Assessment",
+      title: "Compreender antes de agir",
+      body: "Conhecemos os objetivos, o contexto familiar ou empresarial, os riscos e as prioridades antes de qualquer decisão.",
+      badge: "Assessment",
+    },
+    {
+      id: "02",
+      tag: "Blueprint",
+      title: "Transformar objetivos numa estratégia",
+      body: "Construímos um roadmap personalizado que integra imigração, habitação, património, fiscalidade, educação, carreira e todas as decisões críticas da mobilidade internacional.",
+      badge: "Blueprint",
+    },
+    {
+      id: "03",
+      tag: "Orchestration",
+      title: "Coordenar especialistas. Simplificar decisões.",
+      body: "Atuamos como ponto único de coordenação entre clientes, empresas e uma rede multidisciplinar de especialistas, garantindo que todas as etapas trabalham em conjunto.",
+      badge: "Orchestration",
+    },
+    {
+      id: "04",
+      tag: "Integration",
+      title: "Porque a mudança começa quando se chega",
+      body: "Acompanhamos o processo de adaptação da família e do colaborador para aumentar as probabilidades de sucesso da mobilidade internacional, reduzindo o risco de turnover e insatisfação.",
+      badge: "Integration",
+    },
+    {
+      id: "05",
+      tag: "Success",
+      title: "O sucesso não é chegar. É prosperar.",
+      body: "Medimos o resultado real da mobilidade: integração duradoura, permanência e satisfação para a pessoa, a família e, quando aplicável, para a empresa.",
+      badge: "Success",
+    },
+  ];
+
+
+  return (
+    <section id="processo" className="bg-black py-16 md:py-24 lg:py-32 px-6 lg:px-20 relative overflow-hidden">
+      <RotatingLogo size="min(110vw,1400px)" opacity={0.03} duration={140} />
+      <div className="mx-auto max-w-[1400px] relative z-10">
+        <div className="max-w-3xl mb-20 text-center md:text-left mx-auto md:mx-0 flex flex-col items-center md:items-start">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
+          >
+            Como trabalhamos
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-[clamp(28px,4.5vw,60px)] font-[200] text-white leading-[0.95] tracking-[-0.04em]"
+          >
+            MOOVIA Framework™<br />
+            <span className="text-gold-l italic">Cinco etapas. Uma coordenação.</span>
+          </motion.h2>
+
+        </div>
+
+        {/* Horizontal step flow */}
+        <div className="relative">
+          {/* connecting line */}
+          <div className="hidden lg:block absolute top-6 left-0 right-0 h-px bg-b18" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 relative">
+            {steps.map((step, i) => (
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col group"
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <div
+                    className={`relative w-12 h-12 border flex items-center justify-center font-display text-[14px] transition-all duration-300 z-10 ${
+                      i === 0
+                        ? "bg-gold text-black border-gold"
+                        : "border-b18 bg-black text-gold group-hover:bg-gold group-hover:text-black"
+                    }`}
+                  >
+                    {step.id}
+                  </div>
+                  {i < steps.length - 1 && (
+                    <div className="hidden lg:block flex-1 h-px bg-b18" />
+                  )}
+                </div>
+                <p className="font-body text-[11px] font-[400] text-gold-m uppercase tracking-[0.15em] mb-3">
+                  {step.tag}
+                </p>
+                <h3 className="font-display text-[22px] font-[300] text-white mb-4 leading-tight">
+                  {step.title}
+                </h3>
+                {i === 1 && (
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex -space-x-2">
+                      <img
+                        src={fredericoAsset.url}
+                        alt="Frederico Prado"
+                        className="w-10 h-10 rounded-full object-cover border border-gold/40"
+                      />
+                      <img
+                        src={leticiaAsset.url}
+                        alt="Dra. Letícia de Mello"
+                        className="w-10 h-10 rounded-full object-cover border border-gold/40"
+                      />
+                    </div>
+                    <span className="font-body text-[11px] text-w35 leading-tight">
+                      Frederico Prado<br />Dra. Letícia de Mello
+                    </span>
+                  </div>
+                )}
+                <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-6">
+                  {step.body}
+                </p>
+                {i === 0 && (
+                  <div className="mb-6" />
+                )}
+
+                {i === 0 ? (
+                  <a
+                    href="/home#lead-form"
+                    onClick={(e) => {
+                      if (typeof window !== "undefined" && window.location.pathname === "/") {
+                        e.preventDefault();
+                        document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        history.replaceState(null, "", "/home#lead-form");
+                      }
+                    }}
+                    className="mt-auto px-3 py-2 w-fit flex items-center gap-2 transition-colors hover:bg-[rgba(173,137,87,.2)] cursor-pointer"
+                    style={{ background: "rgba(173,137,87,.12)", border: "1px solid rgba(173,137,87,.35)" }}
+                  >
+                    <Calendar size={12} strokeWidth={1.5} className="text-gold-l" />
+                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
+                      {step.badge}
+                    </span>
+                  </a>
+                ) : (
+                  <div className="mt-auto px-3 py-2 w-fit flex items-center gap-2 bg-w05 border border-b18">
+                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
+                      {step.badge}
+                    </span>
+                  </div>
+                )}
+
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

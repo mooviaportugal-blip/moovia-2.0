@@ -9,38 +9,628 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as SoundbrandRouteImport } from './routes/soundbrand'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as EquipaRouteImport } from './routes/equipa'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as Checkout2RouteImport } from './routes/checkout2'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as AssessmentRouteImport } from './routes/assessment'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AdminUxRouteImport } from './routes/admin.ux'
+import { Route as AdminSoundRouteImport } from './routes/admin.sound'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
+import { Route as AdminMaiaRouteImport } from './routes/admin.maia'
+import { Route as AdminLegalRouteImport } from './routes/admin.legal'
+import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
+import { Route as AdminContentRouteImport } from './routes/admin.content'
+import { Route as AdminChatRouteImport } from './routes/admin.chat'
+import { Route as AdminBlogRouteImport } from './routes/admin.blog'
+import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
+import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
+import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
+import { Route as ApiPublicMpTestRouteImport } from './routes/api/public/mp-test'
+import { Route as ApiPublicMercadopagoWebhookRouteImport } from './routes/api/public/mercadopago-webhook'
+import { Route as AdminSettingsTeamRouteImport } from './routes/admin.settings.team'
+import { Route as AdminSettingsScriptsRouteImport } from './routes/admin.settings.scripts'
+import { Route as AdminSettingsNotificationsRouteImport } from './routes/admin.settings.notifications'
+import { Route as AdminSettingsFinancialRouteImport } from './routes/admin.settings.financial'
 
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoundbrandRoute = SoundbrandRouteImport.update({
+  id: '/soundbrand',
+  path: '/soundbrand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosRoute = ServicosRouteImport.update({
+  id: '/servicos',
+  path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipaRoute = EquipaRouteImport.update({
+  id: '/equipa',
+  path: '/equipa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Checkout2Route = Checkout2RouteImport.update({
+  id: '/checkout2',
+  path: '/checkout2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssessmentRoute = AssessmentRouteImport.update({
+  id: '/assessment',
+  path: '/assessment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminUxRoute = AdminUxRouteImport.update({
+  id: '/ux',
+  path: '/ux',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSoundRoute = AdminSoundRouteImport.update({
+  id: '/sound',
+  path: '/sound',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminMaiaRoute = AdminMaiaRouteImport.update({
+  id: '/maia',
+  path: '/maia',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLegalRoute = AdminLegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLeadsRoute = AdminLeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminGalleryRoute = AdminGalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminContentRoute = AdminContentRouteImport.update({
+  id: '/content',
+  path: '/content',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminChatRoute = AdminChatRouteImport.update({
+  id: '/chat',
+  path: '/chat',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminBlogRoute = AdminBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAssessmentsRoute = AdminAssessmentsRouteImport.update({
+  id: '/assessments',
+  path: '/assessments',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAnalyticsRoute = AdminAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminSettingsRoute,
+} as any)
+const ApiPublicMpTestRoute = ApiPublicMpTestRouteImport.update({
+  id: '/api/public/mp-test',
+  path: '/api/public/mp-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicMercadopagoWebhookRoute =
+  ApiPublicMercadopagoWebhookRouteImport.update({
+    id: '/api/public/mercadopago-webhook',
+    path: '/api/public/mercadopago-webhook',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AdminSettingsTeamRoute = AdminSettingsTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => AdminSettingsRoute,
+} as any)
+const AdminSettingsScriptsRoute = AdminSettingsScriptsRouteImport.update({
+  id: '/scripts',
+  path: '/scripts',
+  getParentRoute: () => AdminSettingsRoute,
+} as any)
+const AdminSettingsNotificationsRoute =
+  AdminSettingsNotificationsRouteImport.update({
+    id: '/notifications',
+    path: '/notifications',
+    getParentRoute: () => AdminSettingsRoute,
+  } as any)
+const AdminSettingsFinancialRoute = AdminSettingsFinancialRouteImport.update({
+  id: '/financial',
+  path: '/financial',
+  getParentRoute: () => AdminSettingsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/assessment': typeof AssessmentRoute
+  '/checkout': typeof CheckoutRoute
+  '/checkout2': typeof Checkout2Route
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/equipa': typeof EquipaRoute
+  '/home': typeof HomeRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
+  '/soundbrand': typeof SoundbrandRoute
+  '/termos': typeof TermosRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/assessments': typeof AdminAssessmentsRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/admin/chat': typeof AdminChatRoute
+  '/admin/content': typeof AdminContentRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/leads': typeof AdminLeadsRoute
+  '/admin/legal': typeof AdminLegalRoute
+  '/admin/maia': typeof AdminMaiaRoute
+  '/admin/settings': typeof AdminSettingsRouteWithChildren
+  '/admin/sound': typeof AdminSoundRoute
+  '/admin/ux': typeof AdminUxRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/admin/settings/financial': typeof AdminSettingsFinancialRoute
+  '/admin/settings/notifications': typeof AdminSettingsNotificationsRoute
+  '/admin/settings/scripts': typeof AdminSettingsScriptsRoute
+  '/admin/settings/team': typeof AdminSettingsTeamRoute
+  '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
+  '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/admin/settings/': typeof AdminSettingsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/assessment': typeof AssessmentRoute
+  '/checkout': typeof CheckoutRoute
+  '/checkout2': typeof Checkout2Route
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/equipa': typeof EquipaRoute
+  '/home': typeof HomeRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
+  '/soundbrand': typeof SoundbrandRoute
+  '/termos': typeof TermosRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/assessments': typeof AdminAssessmentsRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/admin/chat': typeof AdminChatRoute
+  '/admin/content': typeof AdminContentRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/leads': typeof AdminLeadsRoute
+  '/admin/legal': typeof AdminLegalRoute
+  '/admin/maia': typeof AdminMaiaRoute
+  '/admin/sound': typeof AdminSoundRoute
+  '/admin/ux': typeof AdminUxRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/admin': typeof AdminIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/admin/settings/financial': typeof AdminSettingsFinancialRoute
+  '/admin/settings/notifications': typeof AdminSettingsNotificationsRoute
+  '/admin/settings/scripts': typeof AdminSettingsScriptsRoute
+  '/admin/settings/team': typeof AdminSettingsTeamRoute
+  '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
+  '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/admin/settings': typeof AdminSettingsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/assessment': typeof AssessmentRoute
+  '/checkout': typeof CheckoutRoute
+  '/checkout2': typeof Checkout2Route
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/empresas': typeof EmpresasRoute
+  '/equipa': typeof EquipaRoute
+  '/home': typeof HomeRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
+  '/soundbrand': typeof SoundbrandRoute
+  '/termos': typeof TermosRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/assessments': typeof AdminAssessmentsRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/admin/chat': typeof AdminChatRoute
+  '/admin/content': typeof AdminContentRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/leads': typeof AdminLeadsRoute
+  '/admin/legal': typeof AdminLegalRoute
+  '/admin/maia': typeof AdminMaiaRoute
+  '/admin/settings': typeof AdminSettingsRouteWithChildren
+  '/admin/sound': typeof AdminSoundRoute
+  '/admin/ux': typeof AdminUxRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/admin/settings/financial': typeof AdminSettingsFinancialRoute
+  '/admin/settings/notifications': typeof AdminSettingsNotificationsRoute
+  '/admin/settings/scripts': typeof AdminSettingsScriptsRoute
+  '/admin/settings/team': typeof AdminSettingsTeamRoute
+  '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
+  '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/admin/settings/': typeof AdminSettingsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/assessment'
+    | '/checkout'
+    | '/checkout2'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/equipa'
+    | '/home'
+    | '/perguntas-frequentes'
+    | '/privacidade'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/soundbrand'
+    | '/termos'
+    | '/admin/analytics'
+    | '/admin/assessments'
+    | '/admin/blog'
+    | '/admin/chat'
+    | '/admin/content'
+    | '/admin/gallery'
+    | '/admin/leads'
+    | '/admin/legal'
+    | '/admin/maia'
+    | '/admin/settings'
+    | '/admin/sound'
+    | '/admin/ux'
+    | '/blog/$slug'
+    | '/admin/'
+    | '/blog/'
+    | '/admin/settings/financial'
+    | '/admin/settings/notifications'
+    | '/admin/settings/scripts'
+    | '/admin/settings/team'
+    | '/api/public/mercadopago-webhook'
+    | '/api/public/mp-test'
+    | '/admin/settings/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/assessment'
+    | '/checkout'
+    | '/checkout2'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/equipa'
+    | '/home'
+    | '/perguntas-frequentes'
+    | '/privacidade'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/soundbrand'
+    | '/termos'
+    | '/admin/analytics'
+    | '/admin/assessments'
+    | '/admin/blog'
+    | '/admin/chat'
+    | '/admin/content'
+    | '/admin/gallery'
+    | '/admin/leads'
+    | '/admin/legal'
+    | '/admin/maia'
+    | '/admin/sound'
+    | '/admin/ux'
+    | '/blog/$slug'
+    | '/admin'
+    | '/blog'
+    | '/admin/settings/financial'
+    | '/admin/settings/notifications'
+    | '/admin/settings/scripts'
+    | '/admin/settings/team'
+    | '/api/public/mercadopago-webhook'
+    | '/api/public/mp-test'
+    | '/admin/settings'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/assessment'
+    | '/checkout'
+    | '/checkout2'
+    | '/contacto'
+    | '/cookies'
+    | '/empresas'
+    | '/equipa'
+    | '/home'
+    | '/perguntas-frequentes'
+    | '/privacidade'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/soundbrand'
+    | '/termos'
+    | '/admin/analytics'
+    | '/admin/assessments'
+    | '/admin/blog'
+    | '/admin/chat'
+    | '/admin/content'
+    | '/admin/gallery'
+    | '/admin/leads'
+    | '/admin/legal'
+    | '/admin/maia'
+    | '/admin/settings'
+    | '/admin/sound'
+    | '/admin/ux'
+    | '/blog/$slug'
+    | '/admin/'
+    | '/blog/'
+    | '/admin/settings/financial'
+    | '/admin/settings/notifications'
+    | '/admin/settings/scripts'
+    | '/admin/settings/team'
+    | '/api/public/mercadopago-webhook'
+    | '/api/public/mp-test'
+    | '/admin/settings/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRouteWithChildren
+  AssessmentRoute: typeof AssessmentRoute
+  CheckoutRoute: typeof CheckoutRoute
+  Checkout2Route: typeof Checkout2Route
+  ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
+  EmpresasRoute: typeof EmpresasRoute
+  EquipaRoute: typeof EquipaRoute
+  HomeRoute: typeof HomeRoute
+  PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
+  ServicosRoute: typeof ServicosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SobreRoute: typeof SobreRoute
+  SoundbrandRoute: typeof SoundbrandRoute
+  TermosRoute: typeof TermosRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  ApiPublicMercadopagoWebhookRoute: typeof ApiPublicMercadopagoWebhookRoute
+  ApiPublicMpTestRoute: typeof ApiPublicMpTestRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/soundbrand': {
+      id: '/soundbrand'
+      path: '/soundbrand'
+      fullPath: '/soundbrand'
+      preLoaderRoute: typeof SoundbrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos': {
+      id: '/servicos'
+      path: '/servicos'
+      fullPath: '/servicos'
+      preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipa': {
+      id: '/equipa'
+      path: '/equipa'
+      fullPath: '/equipa'
+      preLoaderRoute: typeof EquipaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout2': {
+      id: '/checkout2'
+      path: '/checkout2'
+      fullPath: '/checkout2'
+      preLoaderRoute: typeof Checkout2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assessment': {
+      id: '/assessment'
+      path: '/assessment'
+      fullPath: '/assessment'
+      preLoaderRoute: typeof AssessmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +638,240 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/ux': {
+      id: '/admin/ux'
+      path: '/ux'
+      fullPath: '/admin/ux'
+      preLoaderRoute: typeof AdminUxRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/sound': {
+      id: '/admin/sound'
+      path: '/sound'
+      fullPath: '/admin/sound'
+      preLoaderRoute: typeof AdminSoundRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/maia': {
+      id: '/admin/maia'
+      path: '/maia'
+      fullPath: '/admin/maia'
+      preLoaderRoute: typeof AdminMaiaRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/legal': {
+      id: '/admin/legal'
+      path: '/legal'
+      fullPath: '/admin/legal'
+      preLoaderRoute: typeof AdminLegalRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/leads': {
+      id: '/admin/leads'
+      path: '/leads'
+      fullPath: '/admin/leads'
+      preLoaderRoute: typeof AdminLeadsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/gallery': {
+      id: '/admin/gallery'
+      path: '/gallery'
+      fullPath: '/admin/gallery'
+      preLoaderRoute: typeof AdminGalleryRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/content': {
+      id: '/admin/content'
+      path: '/content'
+      fullPath: '/admin/content'
+      preLoaderRoute: typeof AdminContentRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/chat': {
+      id: '/admin/chat'
+      path: '/chat'
+      fullPath: '/admin/chat'
+      preLoaderRoute: typeof AdminChatRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/blog': {
+      id: '/admin/blog'
+      path: '/blog'
+      fullPath: '/admin/blog'
+      preLoaderRoute: typeof AdminBlogRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/assessments': {
+      id: '/admin/assessments'
+      path: '/assessments'
+      fullPath: '/admin/assessments'
+      preLoaderRoute: typeof AdminAssessmentsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/analytics': {
+      id: '/admin/analytics'
+      path: '/analytics'
+      fullPath: '/admin/analytics'
+      preLoaderRoute: typeof AdminAnalyticsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings/': {
+      id: '/admin/settings/'
+      path: '/'
+      fullPath: '/admin/settings/'
+      preLoaderRoute: typeof AdminSettingsIndexRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
+    '/api/public/mp-test': {
+      id: '/api/public/mp-test'
+      path: '/api/public/mp-test'
+      fullPath: '/api/public/mp-test'
+      preLoaderRoute: typeof ApiPublicMpTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/mercadopago-webhook': {
+      id: '/api/public/mercadopago-webhook'
+      path: '/api/public/mercadopago-webhook'
+      fullPath: '/api/public/mercadopago-webhook'
+      preLoaderRoute: typeof ApiPublicMercadopagoWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/settings/team': {
+      id: '/admin/settings/team'
+      path: '/team'
+      fullPath: '/admin/settings/team'
+      preLoaderRoute: typeof AdminSettingsTeamRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
+    '/admin/settings/scripts': {
+      id: '/admin/settings/scripts'
+      path: '/scripts'
+      fullPath: '/admin/settings/scripts'
+      preLoaderRoute: typeof AdminSettingsScriptsRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
+    '/admin/settings/notifications': {
+      id: '/admin/settings/notifications'
+      path: '/notifications'
+      fullPath: '/admin/settings/notifications'
+      preLoaderRoute: typeof AdminSettingsNotificationsRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
+    '/admin/settings/financial': {
+      id: '/admin/settings/financial'
+      path: '/financial'
+      fullPath: '/admin/settings/financial'
+      preLoaderRoute: typeof AdminSettingsFinancialRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
   }
 }
 
+interface AdminSettingsRouteChildren {
+  AdminSettingsFinancialRoute: typeof AdminSettingsFinancialRoute
+  AdminSettingsNotificationsRoute: typeof AdminSettingsNotificationsRoute
+  AdminSettingsScriptsRoute: typeof AdminSettingsScriptsRoute
+  AdminSettingsTeamRoute: typeof AdminSettingsTeamRoute
+  AdminSettingsIndexRoute: typeof AdminSettingsIndexRoute
+}
+
+const AdminSettingsRouteChildren: AdminSettingsRouteChildren = {
+  AdminSettingsFinancialRoute: AdminSettingsFinancialRoute,
+  AdminSettingsNotificationsRoute: AdminSettingsNotificationsRoute,
+  AdminSettingsScriptsRoute: AdminSettingsScriptsRoute,
+  AdminSettingsTeamRoute: AdminSettingsTeamRoute,
+  AdminSettingsIndexRoute: AdminSettingsIndexRoute,
+}
+
+const AdminSettingsRouteWithChildren = AdminSettingsRoute._addFileChildren(
+  AdminSettingsRouteChildren,
+)
+
+interface AdminRouteChildren {
+  AdminAnalyticsRoute: typeof AdminAnalyticsRoute
+  AdminAssessmentsRoute: typeof AdminAssessmentsRoute
+  AdminBlogRoute: typeof AdminBlogRoute
+  AdminChatRoute: typeof AdminChatRoute
+  AdminContentRoute: typeof AdminContentRoute
+  AdminGalleryRoute: typeof AdminGalleryRoute
+  AdminLeadsRoute: typeof AdminLeadsRoute
+  AdminLegalRoute: typeof AdminLegalRoute
+  AdminMaiaRoute: typeof AdminMaiaRoute
+  AdminSettingsRoute: typeof AdminSettingsRouteWithChildren
+  AdminSoundRoute: typeof AdminSoundRoute
+  AdminUxRoute: typeof AdminUxRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminAnalyticsRoute: AdminAnalyticsRoute,
+  AdminAssessmentsRoute: AdminAssessmentsRoute,
+  AdminBlogRoute: AdminBlogRoute,
+  AdminChatRoute: AdminChatRoute,
+  AdminContentRoute: AdminContentRoute,
+  AdminGalleryRoute: AdminGalleryRoute,
+  AdminLeadsRoute: AdminLeadsRoute,
+  AdminLegalRoute: AdminLegalRoute,
+  AdminMaiaRoute: AdminMaiaRoute,
+  AdminSettingsRoute: AdminSettingsRouteWithChildren,
+  AdminSoundRoute: AdminSoundRoute,
+  AdminUxRoute: AdminUxRoute,
+  AdminIndexRoute: AdminIndexRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRouteWithChildren,
+  AssessmentRoute: AssessmentRoute,
+  CheckoutRoute: CheckoutRoute,
+  Checkout2Route: Checkout2Route,
+  ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
+  EmpresasRoute: EmpresasRoute,
+  EquipaRoute: EquipaRoute,
+  HomeRoute: HomeRoute,
+  PerguntasFrequentesRoute: PerguntasFrequentesRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
+  ServicosRoute: ServicosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SobreRoute: SobreRoute,
+  SoundbrandRoute: SoundbrandRoute,
+  TermosRoute: TermosRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  ApiPublicMercadopagoWebhookRoute: ApiPublicMercadopagoWebhookRoute,
+  ApiPublicMpTestRoute: ApiPublicMpTestRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

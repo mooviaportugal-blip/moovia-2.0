@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN IF NOT EXISTS interest TEXT CHECK (interest IN ('conversa_gratuita','diagnostico'));
