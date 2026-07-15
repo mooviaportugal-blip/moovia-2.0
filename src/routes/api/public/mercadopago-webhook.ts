@@ -176,8 +176,8 @@ export const Route = createFileRoute("/api/public/mercadopago-webhook")({
               console.log("[mp-webhook] payment", { id: payment.id, status: mpStatus });
 
               // Helper: chama send-email via HTTP direto (mais confiável no Worker que supabaseAdmin.functions.invoke)
-              const SUPABASE_URL = process.env.SUPABASE_URL!;
-              const SUPABASE_ANON = process.env.SUPABASE_ANON_KEY ?? process.env.SUPABASE_PUBLISHABLE_KEY!;
+              const SUPABASE_URL = (process.env.SUPABASE_URL ?? process.env.EXTERNAL_SUPABASE_URL)!;
+              const SUPABASE_ANON = (process.env.SUPABASE_ANON_KEY ?? process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.EXTERNAL_SUPABASE_PUBLISHABLE_KEY)!;
               async function sendEmail(payload: Record<string, any>) {
                 try {
                   const resp = await fetch(`${SUPABASE_URL}/functions/v1/send-email`, {
