@@ -303,25 +303,6 @@ serve(async (req) => {
       stream: true,
     }
 
-    if (LOVABLE_API_KEY) {
-      try {
-        const response = await fetch(AI_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${LOVABLE_API_KEY}` },
-          body: JSON.stringify(aiBody),
-          signal: AbortSignal.timeout(60000),
-        })
-        if (response.ok && response.body) {
-          return new Response(response.body, {
-            headers: { ...corsHeaders, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' },
-          })
-        }
-        console.error('AI gateway error', response.status, await response.text().catch(() => ''))
-      } catch (e) {
-        console.error('AI gateway failed', e)
-      }
-    }
-
     if (GROQ_KEY) {
       try {
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -338,6 +319,25 @@ serve(async (req) => {
         console.error('Groq error', response.status, await response.text().catch(() => ''))
       } catch (e) {
         console.error('Groq failed', e)
+      }
+    }
+
+    if (LOVABLE_API_KEY) {
+      try {
+        const response = await fetch(AI_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${LOVABLE_API_KEY}` },
+          body: JSON.stringify(aiBody),
+          signal: AbortSignal.timeout(60000),
+        })
+        if (response.ok && response.body) {
+          return new Response(response.body, {
+            headers: { ...corsHeaders, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' },
+          })
+        }
+        console.error('AI gateway error', response.status, await response.text().catch(() => ''))
+      } catch (e) {
+        console.error('AI gateway failed', e)
       }
     }
 
