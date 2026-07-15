@@ -303,6 +303,12 @@ serve(async (req) => {
       stream: true,
     }
 
+    // Track WHY providers failed so we can surface a specific message.
+    // 'missing' = secret not configured; 'error' = called but failed.
+    let groqStatus: 'missing' | 'error' | null = GROQ_KEY ? null : 'missing'
+    let lovableStatus: 'missing' | 'error' | null = LOVABLE_API_KEY ? null : 'missing'
+    let lastProviderError = ''
+
     if (GROQ_KEY) {
       try {
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -316,10 +322,17 @@ serve(async (req) => {
             headers: { ...corsHeaders, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' },
           })
         }
-        console.error('Groq error', response.status, await response.text().catch(() => ''))
+        const body = await response.text().catch(() => '')
+        console.error('[MAIA] Groq HTTP error', response.status, body)
+        lastProviderError = `Groq HTTP ${response.status}: ${body.slice(0, 300)}`
+        groqStatus = 'error'
       } catch (e) {
-        console.error('Groq failed', e)
+        console.error('[MAIA] Groq fetch threw', e)
+        lastProviderError = `Groq threw: ${e instanceof Error ? e.message : String(e)}`
+        groqStatus = 'error'
       }
+    } else {
+      console.warn('[MAIA] GROQ_API_KEY not configured in Edge Function secrets')
     }
 
     if (LOVABLE_API_KEY) {
@@ -335,15 +348,48 @@ serve(async (req) => {
             headers: { ...corsHeaders, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' },
           })
         }
-        console.error('AI gateway error', response.status, await response.text().catch(() => ''))
+        const body = await response.text().catch(() => '')
+        console.error('[MAIA] Lovable AI gateway HTTP error', response.status, body)
+        lastProviderError = `Lovable HTTP ${response.status}: ${body.slice(0, 300)}`
+        lovableStatus = 'error'
       } catch (e) {
-        console.error('AI gateway failed', e)
+        console.error('[MAIA] Lovable AI gateway fetch threw', e)
+        lastProviderError = `Lovable threw: ${e instanceof Error ? e.message : String(e)}`
+        lovableStatus = 'error'
       }
+    } else {
+      console.warn('[MAIA] LOVABLE_API_KEY not configured in Edge Function secrets')
     }
 
-    return streamText(fallbackReply(String(lastUser?.content || ''), name))
+    // Distinguish: config missing on BOTH vs. provider(s) responded with error.
+    const bothMissing = groqStatus === 'missing' && lovableStatus === 'missing'
+    const userText = String(lastUser?.content || '')
+
+    // Keep smart keyword fallbacks (checkout / handoff) — they're user-useful regardless.
+    const kwText = userText.toLowerCase()
+    const isKeywordCase =
+      /pag(ar|amento)|checkout|comprar|contratar|assessment|avaliação|avaliacao/.test(kwText) ||
+      /humano|consultor|fundador|conversa gratuita|atendimento|atendido|atendida|reunião|reuniao/.test(kwText)
+
+    if (isKeywordCase) {
+      return streamText(fallbackReply(userText, name))
+    }
+
+    if (bothMissing) {
+      console.error('[MAIA] BOTH providers missing — no AI keys configured')
+      return streamText(
+        '[MAIA offline: nenhum provider de IA configurado — falta GROQ_API_KEY e/ou LOVABLE_API_KEY nos secrets da Edge Function.]',
+      )
+    }
+
+    console.error('[MAIA] All configured providers failed. Last error:', lastProviderError)
+    return streamText(
+      `[MAIA temporariamente indisponível — provider respondeu com erro. Detalhe (dev): ${lastProviderError.slice(0, 200)}]`,
+    )
   } catch (err) {
-    console.error('moovia-chat internal fallback', err)
-    return streamText('Estou com alta demanda agora e não quero te dar uma resposta incompleta. Pode tentar novamente em alguns minutos?')
+    console.error('[MAIA] internal exception in serve handler', err)
+    return streamText(
+      `[MAIA erro interno: ${err instanceof Error ? err.message : String(err)}]`,
+    )
   }
 })
