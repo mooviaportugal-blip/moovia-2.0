@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "anyone can insert leads" ON public.leads;
+CREATE POLICY "anyone can insert leads" ON public.leads FOR INSERT TO anon, authenticated WITH CHECK (name IS NOT NULL AND email IS NOT NULL);

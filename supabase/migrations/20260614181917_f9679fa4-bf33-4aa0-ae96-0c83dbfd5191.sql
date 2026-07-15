@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "anyone can insert leads" ON public.leads;

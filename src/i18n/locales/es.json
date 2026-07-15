@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "how_it_works": "Cómo funciona",
+    "services": "Servicios",
+    "assessment": "Evaluación Estratégica",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "cta": "Conversación Gratuita",
+    "about": "Sobre",
+    "team": "Equipo"
+  },
+  "hero": {
+    "eyebrow": "Coordinación Internacional de Vida e Integración",
+    "title_1": "No necesitas",
+    "title_2": "más información.",
+    "title_3": "Necesitas a alguien",
+    "title_4": "que coordine",
+    "title_5": "la decisión.",
+    "lead": "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta su disposición.",
+    "cta_primary": "Evaluar mi caso",
+    "cta_secondary": "Ver cómo funciona",
+    "tagline": "Planejar · Llegar · Quedarse",
+    "chapter_label": "Capítulo 01",
+    "chapter_title": "Mandato de transición"
+  },
+  "footer": {
+    "tagline": "Planejar · Llegar · Quedarse",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "rights": "© 2026 MOOVIA Portugal | Brasil → Portugal"
+  }
+}

@@ -1,0 +1,1 @@
+UPDATE maia_knowledge SET system_prompt = replace(system_prompt, '30min', '20min') WHERE system_prompt LIKE '%30min%';

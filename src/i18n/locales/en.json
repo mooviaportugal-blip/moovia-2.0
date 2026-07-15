@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "how_it_works": "How it works",
+    "services": "Services",
+    "assessment": "Strategic Assessment",
+    "blog": "Blog",
+    "contact": "Contact",
+    "cta": "Free Conversation",
+    "about": "About",
+    "team": "Team"
+  },
+  "hero": {
+    "eyebrow": "International Life & Patrimony Coordination",
+    "title_1": "You don't need",
+    "title_2": "more information.",
+    "title_3": "You need someone",
+    "title_4": "to coordinate",
+    "title_5": "the decision.",
+    "lead": "MOOVIA Portugal doesn't solve isolated tasks. End-to-end coordination, from the first diagnostic to your disposal.",
+    "cta_primary": "Assess my case",
+    "cta_secondary": "See how it works",
+    "tagline": "Plan · Arrive · Stay",
+    "chapter_label": "Chapter 01",
+    "chapter_title": "Transition mandate"
+  },
+  "footer": {
+    "tagline": "Plan · Arrive · Stay",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "rights": "© 2026 MOOVIA Portugal | Brazil → Portugal"
+  }
+}
