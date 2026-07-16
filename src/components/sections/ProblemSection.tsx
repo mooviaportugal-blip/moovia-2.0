@@ -6,27 +6,27 @@ export function ProblemSection() {
   const cards = [
     {
       icon: LayersIcon,
-      title: "Decisões simultâneas",
-      body: "O tempo não é o maior problema. É tomar dez decisões simultâneas sem noção do impacto que cada uma tem na sequência de decisões que precisam ser orquestradas.",
-      fullBody: "O tempo não é o maior problema. É tomar dez decisões simultâneas sem noção do impacto que cada uma tem na sequência de decisões que precisam ser orquestradas."
+      title: "Complexidade Humana",
+      body: "Uma contratação internacional exige a coordenação de múltiplas decisões interdependentes, que afetam diretamente a capacidade de adaptação, a produtividade e a permanência do talento.",
+      fullBody: "Uma contratação internacional exige a coordenação de múltiplas decisões interdependentes, que afetam diretamente a capacidade de adaptação, a produtividade e a permanência do talento."
     },
     {
       icon: SearchIcon,
-      title: "Volume de informação",
-      body: "Informação demais, clareza de menos",
-      fullBody: "Grupos de WhatsApp, YouTube, advogados e corretores dizem coisas diferentes. O volume de informação não resolve a decisão, cria mais dúvida."
+      title: "Falta de Visibilidade",
+      body: "As empresas têm ferramentas para medir custos, prazos burocráticos e compliance jurídico. O desafio reside em antecipar o impacto e o risco humano da mobilidade antes que afete os resultados.",
+      fullBody: "As empresas têm ferramentas para medir custos, prazos burocráticos e compliance jurídico. O desafio reside em antecipar o impacto e o risco humano da mobilidade antes que afete os resultados."
     },
     {
       icon: AlertIcon,
-      title: "Riscos invisíveis",
-      body: "Erros que custam",
-      fullBody: "Apartamento no bairro errado. Escola sem vaga. Uma rotina mal estruturada para a família. Cada erro custa dinheiro, tempo e energia que a família não tem."
+      title: "Riscos Invisíveis",
+      body: "Os fatores determinantes para o sucesso de uma mobilidade dificilmente constam dos indicadores tradicionais. O contexto familiar e a adaptação cultural revelam-se fundamentais para a estabilidade do processo.",
+      fullBody: "Os fatores determinantes para o sucesso de uma mobilidade dificilmente constam dos indicadores tradicionais. O contexto familiar e a adaptação cultural revelam-se fundamentais para a estabilidade do processo."
     },
     {
       icon: ClockIcon,
-      title: "Adaptação estruturada",
-      body: "O depois que ninguém resolve",
-      fullBody: "Chegar é metade do processo. A adaptação do cônjuge que largou a carreira, das crianças na nova escola, da rotina reconstruída, exige acompanhamento real, com uma psicóloga, não apenas suporte logístico."
+      title: "Integração Sustentável",
+      body: "A emissão do visto marca apenas o início logístico da mobilidade. A consolidação do investimento requer um processo estruturado de acompanhamento contínuo e gestão de expectativas.",
+      fullBody: "A emissão do visto marca apenas o início logístico da mobilidade. A consolidação do investimento requer um processo estruturado de acompanhamento contínuo e gestão de expectativas."
     }
   ];
 
@@ -39,32 +39,48 @@ export function ProblemSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="font-display text-[22px] md:text-[26px] font-[300] text-w35 leading-[1.4] max-w-[800px] mb-16 italic border-l border-gold/40 pl-6"
+            >
+              "A MOOVIA posiciona-se para redefinir como o sucesso da mobilidade internacional é avaliado pelas organizações."
+            </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
               O mercado resolve tarefas
             </motion.p>
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            className="font-display text-[clamp(28px,4vw,60px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-12"
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-[clamp(32px,4vw,64px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-14"
           >
-            O maior risco da mobilidade internacional não está no visto.<br/>
-            <span className="text-gold-l italic">Está no que acontece depois.</span>
+            <span className="block mb-1">O maior risco</span>
+            <span className="block font-[300] mb-1">da mobilidade internacional</span>
+            <span className="block mb-6 text-white/60">não está no visto.</span>
+            
+            <span className="text-gold-l italic font-[300] block">
+              Está no que <br className="hidden sm:block" />acontece depois.
+            </span>
           </motion.h2>
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-              viewport={{ once: true }}
-              className="font-body text-[18px] font-[300] text-w35 leading-[1.85] max-w-[640px]"
-            >
-              A mobilidade internacional é frequentemente tratada como uma sequência de tarefas: imigração, habitação, educação, fiscalidade e integração.
-              <br /><br />
-              O verdadeiro desafio, porém, é coordenar essas decisões para que pessoas, famílias e empresas alcancem uma <span className="text-ivory/90">transição internacional bem-sucedida</span>.
-              <br /><br />
-              <span className="text-gold font-[400]">É exatamente aí que a MOOVIA cria valor.</span>
-            </motion.p>
+            viewport={{ once: true }}
+            className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.9] max-w-[540px] space-y-6"
+          >
+            <p>
+              As empresas estruturam contratações internacionais focadas na previsibilidade e no rigor operacional. A maioria dos programas permanece centrada quase em exclusivo na componente logística e documental.
+            </p>
+            <p>
+              O ponto crítico surge na fase posterior à chegada: a integração corporativa e a adaptação familiar ditam o verdadeiro retorno sobre o investimento.
+            </p>
+            <p className="text-gold font-[400] pt-4">
+              A intervenção da MOOVIA protege o valor deste ciclo completo.
+            </p>
+          </motion.div>
           </div>
 
 
@@ -106,6 +122,18 @@ export function ProblemSection() {
 
         </div>
 
+        <div className="mb-12 mt-10">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-[clamp(26px,3vw,38px)] font-[200] text-white leading-[1.1] tracking-[-0.02em] max-w-[700px]"
+          >
+            <span className="text-white/60">Porque a mobilidade internacional continua a ser</span><br className="hidden md:block" />
+            <span className="font-[300] text-gold-l">um investimento de alto risco.</span>
+          </motion.h3>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-b18">
           {cards.map((card, i) => (
             <motion.div 
@@ -136,10 +164,12 @@ export function ProblemSection() {
           viewport={{ once: true }}
           className="mt-1 bg-black p-6 sm:p-16 md:p-20 text-center"
         >
-          <p className="font-display text-[15px] sm:text-[28px] md:text-[clamp(28px,3.6vw,46px)] font-[200] text-white leading-tight">
-            O mercado resolve tarefas.<br/>
-            <span className="text-gold-l italic font-[200]">A MOOVIA coordena o sucesso da mobilidade internacional.</span>
-          </p>
+          <div className="font-display text-[15px] sm:text-[28px] md:text-[clamp(28px,3.6vw,46px)] font-[200] text-white leading-[1.1] tracking-[-0.02em]">
+            <span className="text-white/60 block mb-3">O mercado resolve tarefas.</span>
+            <span className="text-gold-l italic font-[300] block">
+              A MOOVIA coordena o sucesso<br className="hidden sm:block" /> da mobilidade internacional.
+            </span>
+          </div>
 
         </motion.div>
 

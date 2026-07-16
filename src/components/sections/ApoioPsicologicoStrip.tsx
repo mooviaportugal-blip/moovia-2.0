@@ -75,7 +75,7 @@ export function ApoioPsicologicoStrip() {
           >
             <p className="font-body font-[300] text-[15px] text-ivory/90 leading-[1.8] mb-2">
               A avaliação da dimensão humana faz parte do{" "}
-              <strong className="font-[500] text-ivory">MOOVIA Strategic Assessment</strong>.
+              <strong className="font-[500] text-ivory">Global Mobility Success Assessment™</strong>.
             </p>
             <p className="font-body font-[300] text-[14px] text-ivory/80 leading-[1.8]">
               Porque uma estratégia sólida considera não apenas onde as pessoas vão viver, mas também como irão adaptar-se, crescer e construir o seu próximo capítulo.
@@ -151,17 +151,11 @@ function MetodologiaDialog() {
           </div>
 
           <p className="font-body text-[14px] font-[300] text-w35 leading-[1.8] mb-8">
-            Durante o Strategic Assessment, Frederico conduz uma entrevista conjunta, com o apoio da Dra. Letícia de Mello, mapeando onde a família está hoje em cada um desses eixos. O resultado integra o Relatório Estratégico Personalizado,
+            Durante o Global Mobility Success Assessment™, Frederico conduz uma entrevista conjunta, com o apoio da Dra. Letícia de Mello, mapeando onde a família está hoje em cada um desses eixos. O resultado integra o Relatório Estratégico Personalizado,
             <em className="text-gold-l not-italic"> respondendo se vocês estão prontos, e o que fortalecer antes de partir</em>.
           </p>
 
           <div className="flex items-center gap-4 border-t border-b15 pt-6">
-            <img
-              src={leticiaFullAsset.url}
-              alt="Dra. Letícia de Mello"
-              className="w-16 h-16 object-cover rounded-full grayscale-[20%]"
-              loading="lazy"
-            />
             <div>
               <p className="font-display text-[16px] font-[300] text-white">Dra. Letícia de Mello</p>
               <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mt-1">

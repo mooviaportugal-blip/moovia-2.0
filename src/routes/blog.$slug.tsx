@@ -201,7 +201,7 @@ function Post() {
                 <p className="font-urbanist text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Pronto para o próximo passo?</p>
                 <h2 className="font-sora text-[clamp(24px,3vw,36px)] font-[200] text-white leading-tight mb-8">Avalie o seu caso com a MOOVIA.</h2>
                 <Link to="/home" hash="lead-form" className="bg-gold text-black font-urbanist text-[12px] font-bold tracking-[0.18em] uppercase px-10 py-5 relative overflow-hidden group/btn transition-all duration-300 inline-block">
-                  <span className="relative z-10">Solicitar Strategic Assessment</span>
+                  <span className="relative z-10">Solicitar Global Mobility Success Assessment™</span>
                   <div className="absolute inset-0 bg-gold-xl origin-left scale-x-0 transition-transform duration-500 ease-out group-hover/btn:scale-x-100" />
                 </Link>
               </div>

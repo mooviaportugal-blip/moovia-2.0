@@ -135,27 +135,15 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Pós-chegada": { en: "Post-arrival", es: "Post-llegada" },
 
   // ---------- ASSESSMENT ----------
+  "The Global Mobility Success Assessment™": { en: "The Global Mobility Success Assessment™", es: "The Global Mobility Success Assessment™" },
+  "Global Mobility Success Assessment™": { en: "Global Mobility Success Assessment™", es: "Global Mobility Success Assessment™" },
+  "O Global Mobility Success Assessment™ inclui:": { en: "The Global Mobility Success Assessment™ includes:", es: "El Global Mobility Success Assessment™ incluye:" },
+  "O Global Mobility Success Assessment™ foi desenvolvido para transformar uma decisão complexa num plano estratégico estruturado.": {
+    en: "The Global Mobility Success Assessment™ was developed to transform a complex decision into a structured strategic plan.",
+    es: "El Global Mobility Success Assessment™ fue desarrollado para transformar una decisión compleja en un plan estratégico estructurado."
+  },
+  "Solicitar Global Mobility Success Assessment™": { en: "Request Global Mobility Success Assessment™", es: "Solicitar Global Mobility Success Assessment™" },
   "Strategic Relocation Assessment": { en: "Strategic Relocation Assessment", es: "Strategic Relocation Assessment" },
-  "\"O diagnóstico que organiza": { en: "\"The diagnostic that organises", es: "\"El diagnóstico que organiza" },
-  "o que você não sabia": { en: "what you didn't know", es: "lo que no sabías" },
-  "que precisava organizar.\"": { en: "you needed to organise.\"", es: "que necesitabas organizar.\"" },
-  "Não é uma consulta. É o primeiro trabalho estratégico da MOOVIA, com entregável físico, que mapeia tudo o que precisa ser decidido antes de comprar a passagem.":
-    { en: "This is not a consultation. It is MOOVIA's first strategic engagement, with a physical deliverable that maps out everything that needs to be decided before you book a flight.", es: "No es una consulta. Es el primer trabajo estratégico de MOOVIA, con entregable físico, que mapea todo lo que hay que decidir antes de comprar el billete." },
-  "A maioria das pessoas chega a Portugal sem ter respondido as perguntas certas. Nós construímos o mapa antes da viagem.":
-    { en: "Most people arrive in Portugal without having answered the right questions. We build the map before the journey.", es: "La mayoría de personas llega a Portugal sin haber respondido las preguntas correctas. Nosotros construimos el mapa antes del viaje." },
-  "60 minutos estruturados": { en: "A structured 60-minute session", es: "60 minutos estructurados" },
-  "Entregável físico que você leva": { en: "A physical deliverable for you to keep", es: "Entregable físico que te llevas" },
-  "€250 (+IVA) abatidos no mandato": { en: "€250 (+VAT) credited towards the full mandate", es: "€250 (+IVA) descontados del mandato" },
-  "Diretamente com 1 founder": { en: "Directly with a founder", es: "Diretamente con 1 founder" },
-  "60 minutos · Entregável físico": { en: "60 minutes · Physical deliverable", es: "60 minutos · Entregable físico" },
-  "Mapa de decisão personalizado": { en: "Personalised decision map", es: "Mapa de decisión personalizado" },
-  "Estratégia de habitação": { en: "Housing strategy", es: "Estrategia de vivienda" },
-  "Estratégia documental e migratória": { en: "Documentary and immigration strategy", es: "Estrategia documental y migratoria" },
-  "Estratégia familiar e escolar": { en: "Family and schooling strategy", es: "Estrategia familiar y escolar" },
-  "Estrutura fiscal inicial": { en: "Initial tax structure", es: "Estructura fiscal inicial" },
-  "Plano de próximos passos com cronograma": { en: "Next steps plan with timeline", es: "Plan de próximos pasos con cronograma" },
-  "Entregável físico: documento que você leva": { en: "Physical deliverable: a document for you to keep", es: "Entregable físico: documento que te llevas" },
-  "Solicitar Assessment": { en: "Request an Assessment", es: "Solicitar Assessment" },
 
   // ---------- PILLARS ----------
   "Quatro pilares": { en: "Four pillars", es: "Cuatro pilares" },
@@ -410,7 +398,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Atualmente, atua na área de Direito Empresarial (Corporate e M&A) na Abreu Advogados, uma das mais prestigiadas sociedades de advogados de Portugal, participando em operações societárias, corporate housekeeping e assessoria jurídica a clientes nacionais e internacionais.": { en: "He currently works in the Corporate and M&A practice at Abreu Advogados, one of Portugal's most prestigious law firms, participating in corporate transactions, corporate housekeeping and legal advisory for national and international clients.", es: "Actualmente, actúa en el área de Derecho Empresarial (Corporate y M&A) en Abreu Advogados, una de las más prestigiosas sociedades de abogados de Portugal, participando en operaciones societarias, corporate housekeeping y asesoría jurídica a clientes nacionales e internacionales." },
   "Avaliação Emocional e Adaptativa": { en: "Emotional and Adaptive Assessment", es: "Evaluación Emocional y Adaptativa" },
   "Avaliação Estratégica": { en: "Strategic Assessment", es: "Evaluación Estratégica" },
-  "Avaliação Estratégica MOOVIA · €250 (+IVA)": { en: "MOOVIA Strategic Assessment · €250 (+VAT)", es: "Evaluación Estratégica MOOVIA · €250 (+IVA)" },
+  "Avaliação Estratégica MOOVIA · €250 (+IVA)": { en: "Global Mobility Success Assessment™ · €250 (+VAT)", es: "Evaluación Estratégica MOOVIA · €250 (+IVA)" },
   "Avaliação Estratégica, MOOVIA Portugal": { en: "Strategic Assessment, MOOVIA Portugal", es: "Evaluación Estratégica, MOOVIA Portugal" },
   "Busca Ativa de Habitação": { en: "Active Housing Search", es: "Búsqueda Activa de Vivienda" },
   "Busca de imóveis": { en: "Property search", es: "Búsqueda de inmuebles" },
@@ -804,10 +792,10 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Psicóloga · +20 anos": { en: "Psychologist · +20 years", es: "Psicóloga · +20 años" },
 
   // ---------- Assessment ----------
-  "Avaliação Estratégica MOOVIA": { en: "MOOVIA Strategic Assessment", es: "Evaluación Estratégica MOOVIA" },
+  "Avaliação Estratégica MOOVIA": { en: "Global Mobility Success Assessment™", es: "Evaluación Estratégica MOOVIA" },
   "Antes de escolher uma escola, um imóvel ou iniciar um processo de mudança, existe uma pergunta mais importante.": { en: "Before choosing a school, a property, or starting the relocation process, there is a more important question.", es: "Antes de elegir una escuela, un inmueble o iniciar un proceso de mudanza, hay una pregunta más importante." },
   "Portugal é realmente compatível com os objetivos da sua família?": { en: "Is Portugal truly compatible with your family's objectives?", es: "¿Es Portugal realmente compatible con los objetivos de tu familia?" },
-  "A Avaliação Estratégica MOOVIA foi desenvolvida para responder essa questão.": { en: "The MOOVIA Strategic Assessment was developed to answer this question.", es: "La Evaluación Estratégica MOOVIA fue desarrollada para responder a esa pregunta." },
+  "A Avaliação Estratégica MOOVIA foi desenvolvida para responder essa questão.": { en: "The Global Mobility Success Assessment™ was developed to answer this question.", es: "La Evaluación Estratégica MOOVIA fue desarrollada para responder a esa pregunta." },
   "Durante uma sessão individual de 60 minutos, analisamos o contexto da sua família, os seus objetivos, prioridades, recursos disponíveis e os principais fatores que influenciarão o sucesso da sua transição para Portugal.": { en: "During a 60-minute one-to-one session, we analyse your family's context, objectives, priorities, available resources, and the key factors that will influence the success of your transition to Portugal.", es: "Durante una sesión individual de 60 minutos, analizamos el contexto de tu familia, sus objetivos, prioridades, recursos disponibles y los principales factores que influirán en el éxito de tu transición a Portugal." },
   "Não se trata de uma reunião comercial. Trata-se de um diagnóstico estruturado conduzido por profissionais que já passaram pela experiência de viver uma mudança internacional.": { en: "This is not a sales meeting. It is a structured diagnostic led by professionals who have already been through the experience of an international move.", es: "No se trata de una reunión comercial. Se trata de un diagnóstico estructurado realizado por profesionales que ya han vivido una mudanza internacional." },
   "O que irá receber": { en: "What you will receive", es: "Lo que recibirás" },
@@ -913,7 +901,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "O símbolo da MOOVIA não é decorativo. Cada elemento do azulejo representa um momento real da sua transição, do planejamento ao destino. Quando você olha o símbolo, está olhando para a jornada que coordenamos.": { en: "The MOOVIA symbol is not merely decorative. Each element of the tile represents a real moment in your transition, from planning to destination. When you look at the symbol, you are looking at the journey we coordinate.", es: "El símbolo de MOOVIA no es decorativo. Cada elemento del azulejo representa un momento real de tu transición, de la planificación al destino. Cuando miras el símbolo, miras el trayecto que coordinamos." },
   "O símbolo e o que ele diz": { en: "The symbol and what it represents", es: "El símbolo y lo que dice" },
   "Orquestramos toda a jornada para que cada decisão contribua para a vida que pretende construir em Portugal.": { en: "We orchestrate the entire journey, ensuring every decision contributes to the life you intend to build in Portugal.", es: "Orquestamos todo el trayecto para que cada decisión contribuya a la vida que deseas construir en Portugal." },
-  "Os outros executam etapas.": { en: "Others execute stages.", es: "Los demás ejecutan etapas." },
+
   "Para quem é indicado.": { en: "Who this is for.", es: "Para quién es." },
   "Parceiros Estratégicos": { en: "Strategic Partners", es: "Socios Estratégicos" },
   "Pet Relocation, Transporte de Animais": { en: "Pet Relocation, Animal Transport", es: "Pet Relocation, Transporte de Animales" },

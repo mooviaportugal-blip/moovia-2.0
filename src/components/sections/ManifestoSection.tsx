@@ -32,26 +32,26 @@ export function ManifestoSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="font-display text-[clamp(26px,4.5vw,60px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] max-w-[960px] mb-10"
+          className="font-display text-white leading-[1.05] tracking-[-0.03em] max-w-[960px] mb-12 text-[clamp(32px,5vw,64px)]"
         >
-          A qualidade da nossa coordenação é mais importante<br className="hidden md:block" />{" "}
-          do que a quantidade de projetos.
+          <span className="block font-[200]">Acreditamos em qualidade, controlo</span>
+          <span className="block font-[300] text-gold-l italic mt-2">e visão integrada de longo prazo.</span>
         </motion.h2>
 
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: 48 }}
           viewport={{ once: true }}
-          className="h-px bg-gold mb-10"
+          className="h-px bg-gold mb-12"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-body text-[17px] font-[300] text-w35 leading-[1.9] max-w-[620px] mb-8"
+          className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.9] max-w-[620px] mb-6"
         >
-          Cada mobilidade internacional é única.
+          As empresas que nos procuram sabem que o investimento em mobilidade humana não permite erros amadores. É por isso que não tentamos escalar a nossa operação para atender milhares de clientes por ano.
         </motion.p>
 
         <motion.p
@@ -59,11 +59,9 @@ export function ManifestoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-body text-[17px] font-[300] text-w35 leading-[1.9] max-w-[620px] mb-8"
+          className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.9] max-w-[620px] mb-10"
         >
-          É por isso que privilegiamos um acompanhamento próximo, estratégico e
-          personalizado, garantindo que cada cliente beneficia da atenção,
-          coordenação e visão integrada que caracterizam a metodologia MOOVIA.
+          Privilegiamos um modelo boutique de atuação, onde cada cliente B2B beneficia da atenção, coordenação e visão estratégica que caracterizam a MOOVIA.
         </motion.p>
 
         <motion.p
@@ -71,10 +69,9 @@ export function ManifestoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="font-body text-[16px] font-[300] text-w35 italic max-w-[620px]"
+          className="font-display text-[20px] md:text-[24px] font-[300] text-gold-l italic max-w-[700px] leading-[1.5] mt-6 pt-10 border-t border-gold/20"
         >
-          O nosso compromisso não é crescer a qualquer custo. É preservar a
-          qualidade de cada projeto que aceitamos.
+          O nosso foco absoluto é garantir a maior eficácia na redução do risco humano e na proteção integral do investimento dos nossos clientes.
         </motion.p>
       </div>
     </section>

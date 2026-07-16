@@ -22,8 +22,8 @@ const SPIN_MS = 6000;
 export function ConstellationLogo({
   className,
   size = 760,
-  outlineSrc = "/moovia-logotype.png",
-  filledSrc = "/mooviagold.png",
+  outlineSrc = "/mooviagold.svg",
+  filledSrc = "/mooviagold.svg",
 }: ConstellationLogoProps) {
   const [phase, setPhase] = useState<"idle" | "spinning" | "complete">("idle");
   const animating = useRef(false);
@@ -169,7 +169,7 @@ export function ConstellationLogo({
             alt=""
             draggable={false}
             className="mlogo-img transition-opacity duration-500"
-            style={{ opacity: isComplete ? 0 : 1 }}
+            style={{ opacity: isComplete ? 0 : 0.15 }}
           />
 
           {/* Filled, reveals bottom-up during spin, fully visible after */}

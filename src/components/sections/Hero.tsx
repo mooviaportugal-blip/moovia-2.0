@@ -35,32 +35,49 @@ export function Hero() {
         <h1
           key={locale}
           data-no-translate
-          className="font-display text-[clamp(30px,3.4vw,54px)] text-white leading-[1.05] tracking-[-0.025em] mb-8"
+          className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
-          <span className="font-[300] block">Coordenamos</span>
-          <span className="font-[400] block mt-1">transições internacionais</span>
-          <span className="font-[400] text-gold-l italic block mt-1">de vida, carreira e patrimônio.</span>
+          <span className="text-white/60 font-[200] block mb-2">Ajudamos empresas a reduzir</span>
+          <span className="text-white font-[400] block">o risco humano da</span>
+          <span className="text-gold-l italic font-[300] block">mobilidade internacional.</span>
         </h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="font-body text-[15px] font-[300] text-w35 leading-[1.7] max-w-[520px] mb-8 mx-auto lg:mx-0"
+          className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
-          Mudar de país é uma das decisões mais importantes da vida. A MOOVIA transforma essa complexidade numa <span className="text-white/85">estratégia integrada</span>, coordenando especialistas, parceiros e todas as etapas da jornada para pessoas, famílias e empresas que procuram uma transição internacional bem-sucedida.
-        </motion.p>
+          <p>
+            As empresas alocam capital substancial na contratação internacional, mas poucas avaliam o risco sistémico associado à integração, retenção e quebra de produtividade.
+          </p>
+          <p>
+            A MOOVIA implementa uma arquitetura estratégica desenvolvida para antecipar riscos operacionais e garantir o sucesso a longo prazo em cada mudança.
+          </p>
+        </motion.div>
 
         <motion.blockquote
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="font-display italic text-[13px] md:text-[14px] font-[300] text-gold-l/80 leading-[1.5] max-w-[520px] mb-10 mx-auto lg:mx-0 border-l border-gold/40 pl-4"
+          className="font-display italic text-[18px] md:text-[22px] font-[300] text-gold-l/90 leading-[1.5] max-w-[520px] mb-12 mx-auto lg:mx-0 border-l-[3px] border-gold/40 pl-5"
         >
-          "A mobilidade internacional não deve ser medida pela chegada. Deve ser medida pela integração bem-sucedida."
+          "A transição internacional não termina no desembarque.<br className="hidden sm:block" /> É nesse momento que ela verdadeiramente começa."
         </motion.blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
+          <Link
+            to="/empresas"
+            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[96px] flex flex-col items-center justify-center"
+          >
+            <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold flex flex-col leading-tight items-center text-center">
+              <span>Para Empresas</span>
+              <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
+                Reduzindo turnover, aumentando retenção e protegendo o ROI da contratação internacional.
+              </span>
+            </span>
+          </Link>
           <Link
             to="/home"
             hash="lead-form"
@@ -70,22 +87,14 @@ export function Hero() {
                 document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
               }
             }}
-            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[76px] flex items-center justify-center"
-          >
-            <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold flex flex-col leading-tight">
-              <span>Life Transition™</span>
-              <span className="text-[9px] tracking-[0.2em] opacity-70 mt-1 font-[400]">Pessoas &amp; Famílias</span>
-            </span>
-          </Link>
-          <Link
-            to="/empresas"
-            className="group relative overflow-hidden border border-b35 text-gold font-body font-[500] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] isolate hover:border-gold text-center min-h-[76px] flex items-center justify-center"
+            className="group relative overflow-hidden border border-b35 text-gold font-body font-[500] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] isolate hover:border-gold text-center min-h-[96px] flex flex-col items-center justify-center"
           >
             <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-[#06091a] flex flex-col leading-tight">
-              <span className="text-[10px] sm:text-[11px]">Human Mobility Risk Assurance Program™</span>
-              <span className="text-[9px] tracking-[0.2em] opacity-70 mt-1 font-[400]">Empresas</span>
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-[#06091a] flex flex-col leading-tight items-center text-center">
+              <span>Para Executivos Internacionais</span>
+              <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
+                A metodologia utilizada pelas empresas para apoiar executivos e famílias durante a integração internacional.
+              </span>
             </span>
           </Link>
         </div>

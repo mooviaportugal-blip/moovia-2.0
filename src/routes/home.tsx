@@ -3,13 +3,8 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
-import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
-import { FoundersSection } from "@/components/sections/FoundersSection";
-import { EquipaShowcase } from "@/components/sections/EquipaShowcase";
 import { ProcessSection } from "@/components/sections/ProcessSection";
-
-import { ApoioPsicologicoStrip } from "@/components/sections/ApoioPsicologicoStrip";
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 
 
@@ -28,8 +23,8 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal, Coordenação de Transição Internacional Brasil → Portugal" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar." },
+      { title: "MOOVIA Portugal — Human Mobility Assurance" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -52,7 +47,7 @@ function HomeReal() {
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
               Global Mobility Success <span className="text-gold text-[10px]">♦</span>
-              Strategic Assessment <span className="text-gold text-[10px]">♦</span>
+              Global Mobility Success Assessment™ <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Life Transition <span className="text-gold text-[10px]">♦</span>
               Human Mobility Risk Assurance <span className="text-gold text-[10px]">♦</span>
@@ -66,11 +61,8 @@ function HomeReal() {
       <ProblemSection />
       <MarketResearchSection />
       <B2BRiskSection />
-      <NossaTeseSection />
       <ProcessSection />
-      <FoundersSection />
-      <EquipaShowcase hideFounders />
-      <ApoioPsicologicoStrip />
+
       <AssessmentSection />
       <EcossistemaSection />
       

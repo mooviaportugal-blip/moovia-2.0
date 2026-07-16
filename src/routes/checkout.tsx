@@ -354,7 +354,7 @@ function CheckoutAssessmentPage() {
         {search.status && (
           <StatusBanner
             status={search.status}
-            onReset={() => router.navigate({ to: "/checkout", search: {} })}
+            onReset={() => router.navigate({ to: "/checkout", search: { status: undefined, name: search.name, email: search.email } })}
           />
         )}
 
@@ -680,7 +680,7 @@ function CheckoutAssessmentPage() {
                         return;
                       }
                       if (result.status === "approved") {
-                        router.navigate({ to: "/checkout", search: { status: "success" } });
+                        router.navigate({ to: "/checkout", search: { status: "success", name: search.name, email: search.email } });
                         return;
                       }
                       if (result.boleto_url) {
@@ -690,7 +690,7 @@ function CheckoutAssessmentPage() {
                       }
                       router.navigate({
                         to: "/checkout",
-                        search: { status: result.status === "rejected" ? "failure" : "pending" },
+                        search: { status: result.status === "rejected" ? "failure" : "pending", name: search.name, email: search.email },
                       });
                     } catch (e) {
                       setError(e instanceof Error ? e.message : "Falha no pagamento.");

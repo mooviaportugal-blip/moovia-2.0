@@ -76,19 +76,7 @@ export function Nav() {
       {/* CTA + Language (Desktop) */}
       <div className="hidden lg:flex items-center gap-3 ml-auto">
         {langEnabled && <LanguageSwitcher />}
-        <a
-          href="/home#lead-form"
-          onClick={(e) => {
-            if (typeof window !== "undefined" && window.location.pathname === "/") {
-              e.preventDefault();
-              document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              history.replaceState(null, "", "/home#lead-form");
-            }
-          }}
-          className="border border-b35 text-gold-l font-body font-[600] text-[11px] tracking-[0.18em] uppercase px-6 py-3.5 hover:bg-gold hover:text-black hover:border-gold transition-all"
-        >
-          {t("nav.cta")}
-        </a>
+
       </div>
 
 
@@ -141,22 +129,7 @@ export function Nav() {
                 </Link>
               </motion.div>
             ))}
-            <a
-              href="/home#lead-form"
-              onClick={(e) => {
-                setMobileOpen(false);
-                if (typeof window !== "undefined" && window.location.pathname === "/") {
-                  e.preventDefault();
-                  setTimeout(() => {
-                    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                    history.replaceState(null, "", "/home#lead-form");
-                  }, 100);
-                }
-              }}
-              className="mt-2 border border-gold text-gold font-body font-[600] text-[14px] tracking-[0.2em] uppercase px-10 py-4"
-            >
-              {t("nav.cta")}
-            </a>
+
           </motion.div>
         )}
       </AnimatePresence>

@@ -59,24 +59,28 @@ export function B2BRiskSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display font-[200] text-white leading-[1.08] tracking-[-0.03em] text-[clamp(28px,4vw,52px)] mb-8"
+            className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            O investimento em talento internacional está em risco —{" "}
-            <span className="text-gold-l italic font-[300]">
-              e a maioria das empresas não sabe disso.
+            <span className="block font-[200]">O investimento em talento</span>
+            <span className="block font-[200]">internacional está exposto.</span>
+            <span className="block text-gold-l italic font-[300] mt-4">
+              A maioria das empresas<br className="hidden sm:block" /> não avalia esta exposição.
             </span>
           </motion.h2>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-body text-[16px] md:text-[17px] font-[300] text-white/60 leading-[1.8]"
+            className="font-body text-[16px] md:text-[18px] font-[300] text-white/70 leading-[1.9] max-w-[580px] space-y-6"
           >
-            Empresas investem milhares de euros para contratar talentos internacionais.
-            Mas uma parte significativa desse investimento é colocada em risco por
-            fatores que ficam fora do processo tradicional de onboarding.
-          </motion.p>
+            <p>
+              As organizações alocam recursos significativos à contratação internacional.
+            </p>
+            <p>
+              Grande parte deste capital fica vulnerável a fatores sociais, familiares e culturais que o processo tradicional de onboarding corporativo não consegue monitorizar nem resolver.
+            </p>
+          </motion.div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -151,17 +155,7 @@ export function B2BRiskSection() {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-20 flex justify-center">
-          <Link
-            to="/servicos"
-            className="group relative inline-flex overflow-hidden border border-gold/50 text-gold hover:text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate transition-colors"
-          >
-            <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10">
-              Conhecer o Human Mobility
-            </span>
-          </Link>
-        </div>
+
       </div>
     </section>
   );

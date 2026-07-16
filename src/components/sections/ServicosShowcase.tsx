@@ -502,7 +502,7 @@ export function ServicosShowcase() {
             className="group relative mt-12 inline-flex items-center overflow-hidden bg-gold px-8 py-4 font-urbanist text-[13px] font-[600] uppercase tracking-[0.22em] text-black transition-colors"
           >
             <span className="absolute inset-0 -translate-x-full bg-gold-xl transition-transform duration-500 group-hover:translate-x-0" />
-            <span className="relative">Solicitar Strategic Assessment</span>
+            <span className="relative">Solicitar Global Mobility Success Assessment™</span>
           </a>
 
         </div>

@@ -19,9 +19,8 @@ export function NossaTeseSection() {
           viewport={{ once: true }}
           className="font-display text-[clamp(26px,3.6vw,52px)] font-[200] text-white leading-[1.15] tracking-[-0.03em] mb-6"
         >
-          Hoje a mobilidade internacional é medida pela chegada.
-          <br />
-          <span className="text-white/60">Nós acreditamos que isso está errado.</span>
+          <span className="block">A avaliação da mobilidade internacional</span>
+          <span className="block text-white/60 font-[300]">continua focada no momento da chegada.</span>
         </motion.h2>
 
         <motion.p
@@ -31,10 +30,9 @@ export function NossaTeseSection() {
           transition={{ delay: 0.1 }}
           className="font-display text-[clamp(18px,2vw,26px)] font-[300] text-w35 leading-[1.5] max-w-[820px] mx-auto mb-16"
         >
-          O verdadeiro sucesso acontece quando o colaborador e a sua família conseguem
-          integrar-se, permanecer e prosperar.
-          <br />
-          <span className="text-white/85">É isso que reduz o turnover.</span>
+          O retorno sobre o investimento depende, no entanto, da capacidade do colaborador e da sua família se integrarem, permanecerem e prosperarem num novo contexto.
+          <br className="hidden md:block" />
+          <span className="text-gold-l italic block mt-2">Esta é a única métrica que efetivamente mitiga a taxa de insucesso.</span>
         </motion.p>
 
         <motion.div

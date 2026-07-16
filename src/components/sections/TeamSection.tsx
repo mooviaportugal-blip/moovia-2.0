@@ -47,18 +47,6 @@ const FUNDADORES: HomeMember[] = [
   },
 ];
 
-const CONSELHO: HomeMember[] = [
-  {
-    id: "moyses",
-    name: "Moyses Filipe Martins",
-    role: "Strategic Advisor",
-    img: "https://qtbkvshbmqlszncxlcuc.supabase.co/storage/v1/object/public/dsl-uploads/wL56vv9aWnXIzmsslu1zptvkF1F2/4f81f8a0-6ff2-428f-9eec-ffe38206b1e0.png",
-    linkedin: "https://www.linkedin.com/in/moyses-filipe-martins-655168/",
-    chips: ["Deloitte", "Oracle", "SAP", "25+ anos"],
-    bio: "Conselheiro Estratégico com 25+ anos em tecnologia e transformação digital. Passagem por Deloitte, Oracle, IBM, SAP e Salesforce.",
-  },
-];
-
 const ESPECIALISTAS: HomeMember[] = [
   {
     id: "laura",
@@ -82,7 +70,7 @@ const ESPECIALISTAS: HomeMember[] = [
     id: "leticia",
     name: "Dra. Letícia de Mello",
     role: "Psicóloga | Wellness & Integração Familiar",
-    img: "/__l5e/assets-v1/625c36cf-4e85-4b80-94f9-71df201f523b/leticia.png",
+    img: "/images/leticia.jpg",
     chips: ["Psicologia", "Wellness", "Integração Familiar"],
     bio: "Apoia famílias internacionais no bem-estar emocional e na adaptação à nova vida em Portugal, com escuta clínica e abordagem humanizada.",
     linkedin: "https://www.linkedin.com/in/let%C3%ADcia-mello-48610721",
@@ -104,7 +92,7 @@ const REGIONAIS: HomeMember[] = [
     id: "cristina-sousa",
     name: "Cristina Sousa",
     role: "Real Estate Advisor | Grande Porto",
-    img: "/__l5e/assets-v1/6da8aae4-ca63-49b0-8fbc-0313ccec9781/cristina.png",
+    img: "/images/cristina.png",
     caption: "Grande Porto",
     chips: ["Grande Porto", "Fisioterapia", "Desde 2019", "Comprador & Arrendatário"],
     bio: "Fisioterapeuta reconvertida ao imobiliário em 2019, especialista no Grande Porto. Combina escuta clínica e conhecimento do mercado para acompanhar compradores e arrendatários com proximidade real em cada etapa do processo.",
@@ -141,7 +129,6 @@ const COMUNIDADE: HomeMember[] = [
 ];
 
 const BLOCKS: Block[] = [
-  { title: "Conselho Estratégico", members: CONSELHO },
   { title: "Especialistas", members: ESPECIALISTAS },
   { title: "Equipa Regional", members: REGIONAIS },
   { title: "Crescimento da MOOVIA", members: COMUNIDADE },

@@ -44,6 +44,7 @@ function SobrePage() {
     <SiteLayout>
       <Hero />
       <OrigemMercado />
+      <EquacaoHistoria />
       <MarketResearchSection />
       <Diferencia />
       <MetodoSection />
@@ -71,8 +72,7 @@ function MetodoSection() {
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
           <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework™, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
-          <p>O resultado não é apenas um plano.</p>
-          <p className="text-gold-l italic">É um diagnóstico estratégico que reduz risco, aumenta previsibilidade e coordena todas as dimensões da mobilidade numa única visão.</p>
+          <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que mitiga riscos, introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {blocos.map((b, i) => (
@@ -136,9 +136,9 @@ function Hero() {
 
         <h1 className="font-display font-[200] text-white leading-[1.02] tracking-[-0.03em] text-[clamp(52px,7vw,96px)]">
           {[
-            { t: "Antes de coordenar", cls: "" },
-            { t: "transições internacionais,", cls: "" },
-            { t: "vivemos as nossas.", cls: "text-gold-l italic font-[300]" },
+            { t: "Antes de desenvolvermos", cls: "" },
+            { t: "uma metodologia,", cls: "" },
+            { t: "vivemos a experiência.", cls: "text-gold-l italic font-[300]" },
           ].map((l, i) => (
             <motion.span
               key={i}
@@ -355,6 +355,70 @@ function Diferencia() {
           <p className="font-display font-[200] italic text-gold-l leading-[1.2] text-[clamp(22px,3vw,40px)]">
             A MOOVIA coordena decisões.
           </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────── A EQUAÇÃO DA SUA HISTÓRIA ─────────────────────────── */
+function EquacaoHistoria() {
+  return (
+    <section className="bg-black py-[100px] px-6 lg:px-20 border-b border-b18">
+      <div className="max-w-[900px] mx-auto">
+        <h2 className="font-display font-[200] text-ivory leading-[1.15] text-[clamp(28px,3.5vw,46px)] mb-16 text-center">
+          A equação da sua história
+        </h2>
+        
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 w-full bg-[#0a0d18] border border-b15 p-8 text-center"
+          >
+            <h3 className="font-body text-[13px] tracking-[0.2em] uppercase text-gold mb-3">Revenue Assurance</h3>
+            <p className="font-body font-[300] text-[15px] text-w35 leading-[1.6]">
+              ensinou a enxergar riscos e perdas invisíveis.
+            </p>
+          </motion.div>
+
+          <span className="text-gold/50 text-2xl font-light">+</span>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex-1 w-full bg-[#0a0d18] border border-b15 p-8 text-center"
+          >
+            <h3 className="font-body text-[13px] tracking-[0.2em] uppercase text-gold mb-3">Carreira internacional</h3>
+            <p className="font-body font-[300] text-[15px] text-w35 leading-[1.6]">
+              permitiu viver o problema da mobilidade.
+            </p>
+          </motion.div>
+
+          <span className="text-gold-l text-2xl font-light">=</span>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex-1 w-full p-8 text-center relative overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, rgba(173,137,87,0.06) 0%, rgba(15,31,65,0.4) 100%), #0a0d18",
+              border: "1px solid rgba(173,137,87,0.25)"
+            }}
+          >
+            <h3 className="font-display text-[22px] font-[300] text-white mb-3">MOOVIA</h3>
+            <p className="font-body font-[300] text-[15px] text-w70 leading-[1.6]">
+              é a aplicação dessa experiência à proteção do investimento humano.
+            </p>
+          </motion.div>
+
         </div>
       </div>
     </section>

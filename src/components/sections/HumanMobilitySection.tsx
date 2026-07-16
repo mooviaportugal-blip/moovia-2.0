@@ -10,12 +10,21 @@ const COLABORADOR = [
 ];
 
 const EMPRESA = [
-  "Redução do risco humano da mobilidade",
-  "Melhor integração",
-  "Maior retenção",
-  "Redução do turnover",
-  "Fortalecimento da marca empregadora",
-  "Maior retorno sobre o investimento em talento internacional",
+  "Monitorização estruturada da mobilidade",
+  "Indicadores de Human Mobility Risk",
+  "Executive Mobility Success Report",
+  "Recomendações para RH e liderança",
+  "Maior capacidade de intervenção preventiva",
+  "Mais informação para decisões de mobilidade",
+];
+
+const MEDIDA = [
+  "Assessment inicial",
+  "Roadmap personalizado",
+  "Acompanhamento 30 dias",
+  "Acompanhamento 60 dias",
+  "Acompanhamento 90 dias",
+  "Executive Mobility Success Report",
 ];
 
 export function HumanMobilitySection() {
@@ -30,17 +39,22 @@ export function HumanMobilitySection() {
         >
           Para empresas
         </motion.p>
-        <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-6 text-center max-w-[900px] mx-auto">
-          Human Mobility Risk{" "}
-          <span className="text-gold-l italic">Assurance Program™</span>
+        <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[900px] mx-auto">
+          <span className="block font-[200] text-white">Human Mobility Risk</span>
+          <span className="block text-gold-l italic font-[300]">Assurance Program™</span>
         </h2>
-        <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.7] max-w-[780px] mx-auto text-center mb-16">
-          Um benefício para o colaborador. Um retorno para a empresa. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.
+        <p className="font-body text-[14px] md:text-[16px] font-[400] text-gold uppercase tracking-[0.15em] mb-8 text-center">
+          Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
         </p>
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+        <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto text-center mb-20">
+          Um benefício para o colaborador. Um retorno para a empresa.<br className="hidden sm:block" />
+          Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.
+        </p>
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {[
             { title: "Para o colaborador", items: COLABORADOR },
             { title: "Para a empresa", items: EMPRESA },
+            { title: "Como medimos o impacto", items: MEDIDA },
           ].map((col) => (
             <div
               key={col.title}
@@ -64,13 +78,19 @@ export function HumanMobilitySection() {
           ))}
         </div>
 
+        <div className="mt-12 bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto text-center">
+          <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto">
+            <strong className="text-gold-l font-[500]">Confidencialidade garantida.</strong> O acompanhamento do executivo é integralmente confidencial e realizado em conformidade com o RGPD. A empresa recebe indicadores de evolução, níveis de risco e recomendações de gestão, nunca dados pessoais ou informações protegidas do colaborador.
+          </p>
+        </div>
+
         <div className="mt-14 flex justify-center">
           <Link
             to="/empresas"
             className="group relative inline-flex overflow-hidden border border-gold/50 text-gold hover:text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate transition-colors"
           >
             <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10">Falar com a MOOVIA para Empresas</span>
+            <span className="relative z-10">Conhecer o Human Mobility Risk Assurance Program™</span>
           </Link>
         </div>
       </div>

@@ -43,6 +43,7 @@ import { Route as AdminBlogRouteImport } from './routes/admin.blog'
 import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
 import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
 import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
+import { Route as ApiPublicSeedBlogRouteImport } from './routes/api/public/seed-blog'
 import { Route as ApiPublicMpTestRouteImport } from './routes/api/public/mp-test'
 import { Route as ApiPublicMercadopagoWebhookRouteImport } from './routes/api/public/mercadopago-webhook'
 import { Route as AdminSettingsTeamRouteImport } from './routes/admin.settings.team'
@@ -220,6 +221,11 @@ const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AdminSettingsRoute,
 } as any)
+const ApiPublicSeedBlogRoute = ApiPublicSeedBlogRouteImport.update({
+  id: '/api/public/seed-blog',
+  path: '/api/public/seed-blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicMpTestRoute = ApiPublicMpTestRouteImport.update({
   id: '/api/public/mp-test',
   path: '/api/public/mp-test',
@@ -293,6 +299,7 @@ export interface FileRoutesByFullPath {
   '/admin/settings/team': typeof AdminSettingsTeamRoute
   '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
   '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/api/public/seed-blog': typeof ApiPublicSeedBlogRoute
   '/admin/settings/': typeof AdminSettingsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -333,6 +340,7 @@ export interface FileRoutesByTo {
   '/admin/settings/team': typeof AdminSettingsTeamRoute
   '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
   '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/api/public/seed-blog': typeof ApiPublicSeedBlogRoute
   '/admin/settings': typeof AdminSettingsIndexRoute
 }
 export interface FileRoutesById {
@@ -376,6 +384,7 @@ export interface FileRoutesById {
   '/admin/settings/team': typeof AdminSettingsTeamRoute
   '/api/public/mercadopago-webhook': typeof ApiPublicMercadopagoWebhookRoute
   '/api/public/mp-test': typeof ApiPublicMpTestRoute
+  '/api/public/seed-blog': typeof ApiPublicSeedBlogRoute
   '/admin/settings/': typeof AdminSettingsIndexRoute
 }
 export interface FileRouteTypes {
@@ -420,6 +429,7 @@ export interface FileRouteTypes {
     | '/admin/settings/team'
     | '/api/public/mercadopago-webhook'
     | '/api/public/mp-test'
+    | '/api/public/seed-blog'
     | '/admin/settings/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -460,6 +470,7 @@ export interface FileRouteTypes {
     | '/admin/settings/team'
     | '/api/public/mercadopago-webhook'
     | '/api/public/mp-test'
+    | '/api/public/seed-blog'
     | '/admin/settings'
   id:
     | '__root__'
@@ -502,6 +513,7 @@ export interface FileRouteTypes {
     | '/admin/settings/team'
     | '/api/public/mercadopago-webhook'
     | '/api/public/mp-test'
+    | '/api/public/seed-blog'
     | '/admin/settings/'
   fileRoutesById: FileRoutesById
 }
@@ -527,6 +539,7 @@ export interface RootRouteChildren {
   BlogIndexRoute: typeof BlogIndexRoute
   ApiPublicMercadopagoWebhookRoute: typeof ApiPublicMercadopagoWebhookRoute
   ApiPublicMpTestRoute: typeof ApiPublicMpTestRoute
+  ApiPublicSeedBlogRoute: typeof ApiPublicSeedBlogRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -769,6 +782,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSettingsIndexRouteImport
       parentRoute: typeof AdminSettingsRoute
     }
+    '/api/public/seed-blog': {
+      id: '/api/public/seed-blog'
+      path: '/api/public/seed-blog'
+      fullPath: '/api/public/seed-blog'
+      preLoaderRoute: typeof ApiPublicSeedBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/mp-test': {
       id: '/api/public/mp-test'
       path: '/api/public/mp-test'
@@ -892,7 +912,18 @@ const rootRouteChildren: RootRouteChildren = {
   BlogIndexRoute: BlogIndexRoute,
   ApiPublicMercadopagoWebhookRoute: ApiPublicMercadopagoWebhookRoute,
   ApiPublicMpTestRoute: ApiPublicMpTestRoute,
+  ApiPublicSeedBlogRoute: ApiPublicSeedBlogRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

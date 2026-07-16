@@ -9,36 +9,36 @@ export function ProcessSection() {
     {
       id: "01",
       tag: "Assessment",
-      title: "Compreender antes de agir",
-      body: "Conhecemos os objetivos, o contexto familiar ou empresarial, os riscos e as prioridades antes de qualquer decisão.",
+      title: "Compreender antes de agir.",
+      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de qualquer decisão logística.",
       badge: "Assessment",
     },
     {
       id: "02",
       tag: "Blueprint",
-      title: "Transformar objetivos numa estratégia",
-      body: "Construímos um roadmap personalizado que integra imigração, habitação, património, fiscalidade, educação, carreira e todas as decisões críticas da mobilidade internacional.",
+      title: "Converter risco num plano.",
+      body: "A partir do diagnóstico inicial, desenvolvemos um roadmap estruturado para mitigar os riscos e maximizar a probabilidade de uma transição fluida.",
       badge: "Blueprint",
     },
     {
       id: "03",
       tag: "Orchestration",
-      title: "Coordenar especialistas. Simplificar decisões.",
-      body: "Atuamos como ponto único de coordenação entre clientes, empresas e uma rede multidisciplinar de especialistas, garantindo que todas as etapas trabalham em conjunto.",
+      title: "Executar com inteligência.",
+      body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe.",
       badge: "Orchestration",
     },
     {
       id: "04",
       tag: "Integration",
-      title: "Porque a mudança começa quando se chega",
-      body: "Acompanhamos o processo de adaptação da família e do colaborador para aumentar as probabilidades de sucesso da mobilidade internacional, reduzindo o risco de turnover e insatisfação.",
+      title: "Acompanhamento pós-chegada.",
+      body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. É nesta etapa que neutralizamos os principais fatores de turnover.",
       badge: "Integration",
     },
     {
       id: "05",
       tag: "Success",
-      title: "O sucesso não é chegar. É prosperar.",
-      body: "Medimos o resultado real da mobilidade: integração duradoura, permanência e satisfação para a pessoa, a família e, quando aplicável, para a empresa.",
+      title: "O foco no longo prazo.",
+      body: "Avaliamos o impacto duradouro da transição: estabilidade, integração efetiva e satisfação, assegurando o retorno final sobre o investimento da mudança.",
       badge: "Success",
     },
   ];
@@ -61,10 +61,17 @@ export function ProcessSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-[clamp(28px,4.5vw,60px)] font-[200] text-white leading-[0.95] tracking-[-0.04em]"
+            className="font-display leading-[1.05] tracking-[-0.03em]"
           >
-            MOOVIA Framework™<br />
-            <span className="text-gold-l italic">Cinco etapas. Uma coordenação.</span>
+            <span className="block text-[clamp(32px,5vw,64px)] font-[200] text-white mb-1">
+              Global Mobility Success™
+            </span>
+            <span className="block text-[clamp(28px,4.5vw,56px)] font-[300] text-gold-l italic mb-8">
+              The MOOVIA Framework
+            </span>
+            <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
+              Cinco etapas. Uma metodologia para reduzir o Human Mobility Risk.
+            </span>
           </motion.h2>
 
         </div>

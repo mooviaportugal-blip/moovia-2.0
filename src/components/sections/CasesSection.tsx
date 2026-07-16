@@ -134,7 +134,7 @@ export function CasesSection({ showCta = true }: { showCta?: boolean }) {
               className="group relative inline-flex overflow-hidden bg-gold text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate"
             >
               <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
-                Solicitar Strategic Assessment · A partir de €350 (+IVA)
+                Solicitar Global Mobility Success Assessment™ · A partir de €350 (+IVA)
               </span>
               <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
             </a>

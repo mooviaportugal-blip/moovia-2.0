@@ -67,20 +67,7 @@ const ALL: Record<string, Member> = {
     ],
     quote: "O conhecimento do sistema jurídico português de dentro é o que diferencia uma boa decisão de uma decisão cara.",
   },
-  moyses: {
-    id: "moyses",
-    name: "Moyses Filipe Martins",
-    initials: "MF",
-    role: "Strategic Advisor",
-    img: "https://qtbkvshbmqlszncxlcuc.supabase.co/storage/v1/object/public/dsl-uploads/wL56vv9aWnXIzmsslu1zptvkF1F2/4f81f8a0-6ff2-428f-9eec-ffe38206b1e0.png",
-    linkedin: "https://www.linkedin.com/in/moyses-filipe-martins-655168/",
-    chips: ["Deloitte", "Oracle", "SAP", "25+ anos"],
-    bio: [
-      "Moyses Filipe é Conselheiro Estratégico da MOOVIA Portugal, com mais de 25 anos de experiência internacional em tecnologia, transformação digital e desenvolvimento de negócios.",
-      "Passou por empresas como Deloitte, Oracle, IBM, SAP, Guidewire e Salesforce, apoiando grandes organizações na criação de valor tangível, modernização operacional e construção de relações duradouras com clientes.",
-    ],
-    quote: "Construir uma operação de alto padrão não é sobre tamanho. É sobre critério, disciplina e visão de longo prazo.",
-  },
+
   laura: {
     id: "laura",
     name: "Laura Costa, LL.M.",
@@ -114,7 +101,7 @@ const ALL: Record<string, Member> = {
     name: "Dra. Letícia de Mello",
     initials: "LM",
     role: "Psicóloga | Wellness & Integração Familiar",
-    img: "/__l5e/assets-v1/625c36cf-4e85-4b80-94f9-71df201f523b/leticia.png",
+    img: "/images/leticia.jpg",
     linkedin: "https://www.linkedin.com/in/let%C3%ADcia-mello-48610721",
     chips: ["Psicologia", "Wellness"],
     bio: [
@@ -139,7 +126,7 @@ const ALL: Record<string, Member> = {
     name: "Cristina Sousa",
     initials: "CS",
     role: "Real Estate Advisor | Grande Porto",
-    img: "/__l5e/assets-v1/6da8aae4-ca63-49b0-8fbc-0313ccec9781/cristina.png",
+    img: "/images/cristina.png",
     chips: ["Grande Porto", "Desde 2019"],
     bio: [
       "Real Estate Advisor da MOOVIA para o Grande Porto. Fisioterapeuta reconvertida ao imobiliário em 2019, combina escuta clínica e conhecimento do mercado.",
@@ -185,11 +172,10 @@ const ALL: Record<string, Member> = {
   },
 };
 
-const SOCIOS = [ALL.frederico, ALL.pablo, ALL.joao, ALL.moyses];
-const ROW2 = [ALL.laura, ALL.sara, ALL.leticia, ALL.sandra];
-const ROW3 = [ALL.cristina, ALL.eduardo, ALL.dany, ALL.guilherme];
+const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.eduardo, ALL.guilherme, ALL.leticia, ALL.laura];
+const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra, ALL.dany];
 
-function MemberCard({ m, onOpen, index }: { m: Member; onOpen: () => void; index: number }) {
+function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen: () => void; index: number; isPartner?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -232,8 +218,13 @@ function MemberCard({ m, onOpen, index }: { m: Member; onOpen: () => void; index
       </button>
 
       <div className="mt-5 px-2">
-        <h3 className="font-sora text-[15px] font-[300] text-white leading-tight">{m.name}</h3>
-        <p className="mt-1.5 font-urbanist text-[10px] font-[400] uppercase tracking-[0.2em] text-gold/80">
+        <h3 className="font-display text-[15px] md:text-[16px] font-[300] text-white leading-tight flex flex-col items-center gap-2">
+          {m.name}
+          {isPartner && (
+            <span className="inline-block border border-gold/40 px-2 py-0.5 text-[9px] uppercase tracking-[0.2em] text-gold/80 rounded-sm">Rede de Parceiros</span>
+          )}
+        </h3>
+        <p className="mt-1.5 font-body text-[10px] font-[400] uppercase tracking-[0.2em] text-gold/80">
           {m.role}
         </p>
       </div>
@@ -282,8 +273,8 @@ function Lightbox({ m, onClose }: { m: Member; onClose: () => void }) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-5">
-            <p className="font-sora text-[20px] font-[300] text-white leading-tight">{m.name}</p>
-            <p className="mt-1 font-urbanist text-[11px] uppercase tracking-[0.22em] text-gold">{m.role}</p>
+            <p className="font-display text-[22px] md:text-[24px] font-[300] text-white leading-tight">{m.name}</p>
+            <p className="mt-1 font-body text-[11px] uppercase tracking-[0.22em] text-gold">{m.role}</p>
             {m.linkedin && (
               <a
                 href={m.linkedin}
@@ -308,7 +299,7 @@ function Lightbox({ m, onClose }: { m: Member; onClose: () => void }) {
 
           <div className="flex flex-wrap gap-2 pr-12">
             {m.chips.map((c) => (
-              <span key={c} className="border border-gold/30 px-2.5 py-1 font-urbanist text-[10px] uppercase tracking-[0.2em] text-w70">
+              <span key={c} className="border border-gold/30 px-2.5 py-1 font-body text-[10px] uppercase tracking-[0.2em] text-w70">
                 {c}
               </span>
             ))}
@@ -318,15 +309,15 @@ function Lightbox({ m, onClose }: { m: Member; onClose: () => void }) {
 
           <div className="space-y-4">
             {m.bio.map((p, i) => (
-              <p key={i} className="font-urbanist text-[14px] font-[300] leading-[1.8] text-w70">
+              <p key={i} className="font-body text-[15px] md:text-[16px] font-[300] leading-[1.8] text-w70">
                 {p}
               </p>
             ))}
           </div>
 
           {m.quote && (
-            <div className="mt-6 border-l-2 border-gold pl-5 py-3">
-              <p className="font-sora text-[14px] font-[300] italic text-gold-l leading-relaxed">"{m.quote}"</p>
+            <div className="mt-6 border-l-[3px] border-gold/40 pl-5 py-3">
+              <p className="font-display text-[16px] md:text-[18px] font-[300] italic text-gold-l leading-relaxed">"{m.quote}"</p>
             </div>
           )}
         </div>
@@ -335,31 +326,39 @@ function Lightbox({ m, onClose }: { m: Member; onClose: () => void }) {
   );
 }
 
-export function EquipaShowcase({ hideFounders = false }: { hideFounders?: boolean } = {}) {
+export function EquipaShowcase() {
   const [active, setActive] = useState<Member | null>(null);
-  const rows: { title?: string; members: Member[] }[] = [
-    ...(hideFounders ? [] : [{ title: "Sócios", members: SOCIOS }]),
-    { members: ROW2 },
-    { members: ROW3 },
-  ];
 
   return (
     <section className="bg-black px-6 pb-24 lg:px-20">
       <div className="mx-auto max-w-[1200px]">
-        {rows.map((row, ri) => (
-          <div key={ri} className={ri === 0 ? "" : "mt-16 md:mt-20"}>
-            {row.title && (
-              <p className="mb-8 font-urbanist text-[11px] uppercase tracking-[0.32em] text-gold text-center">
-                {row.title}
-              </p>
-            )}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8">
-              {row.members.map((m, i) => (
-                <MemberCard key={m.id} m={m} onOpen={() => setActive(m)} index={i} />
-              ))}
-            </div>
-          </div>
-        ))}
+        
+        {/* SECÇÃO A: EQUIPA MOOVIA */}
+        <div className="mb-12 text-center md:text-left">
+          <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Equipa MOOVIA</h2>
+          <p className="mt-2 font-body text-[14px] md:text-[16px] text-white/60">A consultoria que coordena. Enxuta, multidisciplinar, por desenho.</p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8 mb-24">
+          {EQUIPA_INTERNA.map((m, i) => (
+            <MemberCard key={m.id} m={m} onOpen={() => setActive(m)} index={i} />
+          ))}
+        </div>
+
+        {/* SECÇÃO B: REDE DE PARCEIROS */}
+        <div className="mb-12 text-center md:text-left max-w-[800px]">
+          <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Rede de Parceiros</h2>
+          <p className="mt-4 font-body text-[14px] md:text-[16px] text-white/60 leading-[1.8]">
+            Quando um executivo precisa de apoio adicional — encontrar casa, escolher escola, tratar documentação — a MOOVIA orquestra uma rede de parceiros especializados para essas necessidades específicas. A empresa pode identificar essa necessidade pelo perfil do cargo e incluir no pacote de mobilidade, ou o próprio executivo aciona os serviços ao conhecer a rede de parceiros que a MOOVIA orquestra.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8">
+          {REDE_PARCEIROS.map((m, i) => (
+            <MemberCard key={m.id} m={m} onOpen={() => setActive(m)} index={i} isPartner />
+          ))}
+        </div>
+
       </div>
 
       <AnimatePresence>{active && <Lightbox m={active} onClose={() => setActive(null)} />}</AnimatePresence>

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import { EquipaShowcase } from "@/components/sections/EquipaShowcase";
@@ -7,14 +8,14 @@ import { JornadaCliente } from "@/components/sections/JornadaCliente";
 export const Route = createFileRoute("/equipa")({
   head: () => ({
     meta: [
-      { title: "Nossa Equipa, 12 Especialistas para sua Transição para Portugal | MOOVIA" },
-      { name: "description", content: "Advogados, especialistas em imóveis, educação, psicologia, comunidades e património. 12 profissionais coordenados para acompanhar cada fase da sua jornada para Portugal." },
-      { property: "og:title", content: "Nossa Equipa, 12 Especialistas para sua Transição" },
-      { property: "og:description", content: "Advogados, imobiliário, educação, psicologia, comunidades e património. 12 profissionais coordenados pela MOOVIA." },
+      { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
+      { name: "description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso. A MOOVIA integra estratégia, direito, fiscalidade, tecnologia e a dimensão humana." },
+      { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
+      { property: "og:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso." },
       { property: "og:url", content: "https://mooviaportugal.com/equipa" },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Equipa MOOVIA, 12 especialistas" },
-      { name: "twitter:description", content: "Multidisciplinares. Cada decisão importante coordenada por quem entende dela." },
+      { name: "twitter:title", content: "Equipa e Rede MOOVIA" },
+      { name: "twitter:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa." },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/equipa" }],
     scripts: [
@@ -53,16 +54,38 @@ function Equipa() {
       <div className="relative overflow-hidden bg-black pt-[120px]">
         <RotatingLogo size="min(90vw,1100px)" opacity={0.025} duration={150} />
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 md:px-[80px] py-20">
-          <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center gap-3">
+          <motion.p 
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8 flex items-center gap-3"
+          >
             <span className="w-6 h-px bg-gold" />
             A equipa
-          </p>
-          <h1 className="font-sora text-[clamp(40px,6vw,72px)] font-[100] leading-[1.05] text-white">
-            Multidisciplinar.<br />Por desenho, não por acaso.
-          </h1>
-          <p className="mt-10 max-w-2xl font-urbanist text-[17px] font-[300] text-w35 leading-relaxed">
-            Doze especialistas, uma só coordenação. Direito, fiscalidade, imobiliário, educação, património e mobilidade internacional, pessoas que viveram o caminho antes de o coordenarem para si.
-          </p>
+          </motion.p>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-display text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-0.03em] mb-14"
+          >
+            <span className="block font-[200] text-white mb-2">Oito pessoas coordenam.</span>
+            <span className="block font-[300] italic text-gold-l">Uma rede executa quando é preciso.</span>
+          </motion.h1>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="max-w-[720px] border-l-[3px] border-gold/40 pl-6 space-y-6"
+          >
+            <p className="font-display text-[20px] md:text-[24px] font-[300] text-white/90 leading-[1.5]">
+              O Global Mobility Success Framework integra estratégia, direito, fiscalidade, tecnologia e a dimensão humana dentro da MOOVIA.
+            </p>
+            <p className="font-body text-[16px] md:text-[18px] font-[300] text-white/60 leading-[1.8]">
+              E quando surgem as necessidades operacionais de cada mobilidade, orquestramos uma rede de parceiros especializados para executar com precisão.
+            </p>
+          </motion.div>
         </div>
       </div>
 

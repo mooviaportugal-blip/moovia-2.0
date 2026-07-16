@@ -4,13 +4,11 @@ import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
-import { FoundersSection } from "@/components/sections/FoundersSection";
-import { EquipaShowcase } from "@/components/sections/EquipaShowcase";
 
 import { ProcessSection } from "@/components/sections/ProcessSection";
 
 
-import { ApoioPsicologicoStrip } from "@/components/sections/ApoioPsicologicoStrip";
+
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
 
@@ -31,14 +29,14 @@ import { MaintenancePage } from "@/components/site/MaintenancePage";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal, Coordenação de Transição Internacional Brasil → Portugal" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Não somos uma agência. Somos quem coordena o todo. Avaliação Estratégica a partir de €250." },
-      { property: "og:title", content: "MOOVIA Portugal, Coordenação de Transição Internacional Brasil → Portugal" },
-      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Não somos uma agência. Somos quem coordena o todo. Avaliação Estratégica a partir de €250." },
+      { title: "MOOVIA Portugal — Human Mobility Assurance" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { property: "og:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
+      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
       { property: "og:url", content: "https://mooviaportugal.com/" },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "MOOVIA Portugal, Coordenação de Transição Internacional Brasil → Portugal" },
-      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Não somos uma agência. Somos quem coordena o todo. Avaliação Estratégica a partir de €250." },
+      { name: "twitter:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
+      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
     scripts: [
@@ -153,10 +151,6 @@ function HomeReal() {
       <ProcessSection />
 
 
-      <FoundersSection />
-      <EquipaShowcase hideFounders />
-      
-      <ApoioPsicologicoStrip />
       <CasesSection />
       <AssessmentSection />
       <EcossistemaSection />

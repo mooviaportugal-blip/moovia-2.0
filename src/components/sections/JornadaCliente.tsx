@@ -12,6 +12,7 @@ const PHOTO_BY_NAME: Record<string, string> = {
   "Sandra Santos": "/images/sandra.png",
   "Cristina Sousa": cristinaAsset.url,
   "Dany Zukerman": "/images/dany.png",
+  "Pablo Alejandro Saco Paim": "/images/pablo.png",
   "Equipa MOOVIA": "/mooviagold.svg",
 };
 
@@ -656,18 +657,22 @@ export function JornadaCliente() {
         }
       `}</style>
       <div className="mx-auto max-w-[1400px] px-6 md:px-[80px]">
-        <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center gap-3">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8 flex items-center gap-3">
           <span className="w-6 h-px bg-gold" />
           Framework Global Mobility Success™
         </p>
-        <h2 className="font-sora text-[clamp(32px,4.5vw,56px)] font-[100] leading-[1.1] text-white max-w-4xl">
-          O sucesso de uma mobilidade internacional não acontece por acaso.
-          Acontece quando cada decisão é tomada na sequência certa.
+        
+        <h2 className="font-display text-[clamp(32px,4.5vw,56px)] leading-[1.1] tracking-[-0.03em] mb-12 max-w-4xl">
+          <span className="block font-[200] text-white mb-2">O sucesso de uma mobilidade internacional não acontece por acaso.</span>
+          <span className="block font-[300] italic text-gold-l">Acontece quando cada decisão é tomada na sequência certa.</span>
         </h2>
-        <div className="mt-8 max-w-3xl space-y-4 font-urbanist text-[16px] font-[300] text-w35 leading-relaxed">
+        
+        <div className="max-w-3xl space-y-6 font-body font-[300] text-[16px] md:text-[18px] text-w35 leading-[1.8] border-l-[3px] border-gold/30 pl-6">
+          <p className="font-display text-[20px] md:text-[22px] font-[300] text-white/90 leading-[1.5]">
+            O problema nunca foi a falta de especialistas. Sempre foi a falta de coordenação.
+          </p>
           <p>
-            O problema nunca foi a falta de especialistas. Sempre foi a falta de
-            coordenação. A MOOVIA resolve essa lacuna através de uma metodologia
+            A MOOVIA resolve essa lacuna através de uma metodologia
             que integra estratégia, coordenação multidisciplinar e adaptação
             humana em seis etapas encadeadas.
           </p>
@@ -680,10 +685,12 @@ export function JornadaCliente() {
       </div>
 
       <div className="mx-auto max-w-[1400px] px-6 md:px-[80px]">
-        <p className="mt-16 max-w-3xl font-sora text-[clamp(20px,2.2vw,28px)] font-[200] leading-snug text-white/90">
-          Existe um método. Existe coordenação. Existe uma equipa especializada
-          por trás de cada etapa da sua mudança.
-        </p>
+        <div className="mt-16 md:mt-24 border-l-[3px] border-gold pl-6 py-2">
+          <p className="max-w-3xl font-display text-[clamp(20px,2.5vw,32px)] font-[300] leading-[1.4] text-white/90">
+            Existe um método. Existe coordenação.<br className="hidden md:block" />
+            <span className="italic text-gold-l">Existe uma equipa especializada por trás de cada etapa da sua mudança.</span>
+          </p>
+        </div>
       </div>
     </section>
   );

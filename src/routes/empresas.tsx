@@ -117,8 +117,8 @@ function EmpresasPage() {
             Para Empresas
           </p>
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10 max-w-[900px]">
-            O investimento em talento internacional está em risco{" "}
-            <span className="text-gold-l italic">— e a maioria das empresas não sabe disso.</span>
+            <span className="block">O investimento em talento internacional está exposto.</span>
+            <span className="text-gold-l italic block mt-2">A maioria das empresas não avalia esta exposição.</span>
           </h2>
           <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.85] space-y-6 max-w-[820px]">
             <p>
@@ -165,7 +165,7 @@ function EmpresasPage() {
             >
               <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
               <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-                Conhecer o Human Mobility
+                Conhecer o Human Mobility Risk Assurance Program™
               </span>
             </Link>
           </div>
@@ -181,7 +181,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic">Um retorno para a empresa.</span>
           </h2>
           <p className="font-body text-[14px] md:text-[15px] font-[300] italic text-white/60 leading-[1.7] text-center max-w-[720px] mx-auto mb-16">
-            Atendemos particulares e empresas de todos os tamanhos. Cada proposta é construída à medida da necessidade — não existe um cardápio fixo.
+            Atendemos particulares e empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
           </p>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {[
@@ -232,6 +232,9 @@ function EmpresasPage() {
       </section>
       <ProcessSection />
 
+      {/* BENEFÍCIO VS RISCO */}
+      <BeneficioGestaoRisco />
+
       {/* FORMULÁRIO UNIFICADO */}
       <section id="empresas-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
         <UnifiedLeadForm context="empresas" />
@@ -241,8 +244,8 @@ function EmpresasPage() {
       <section className="bg-[#06091a] py-24 md:py-32 px-6 lg:px-20">
         <div className="mx-auto max-w-[1000px] text-center">
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-8">
-            Pronto para reduzir o risco da{" "}
-            <span className="text-gold-l italic">sua próxima contratação internacional?</span>
+            <span className="block">Pretende reduzir o risco da sua</span>
+            <span className="text-gold-l italic block mt-1">próxima contratação internacional?</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto mb-6">
             Agende uma Strategic Discovery Call para entendermos o perfil da sua equipa, os países envolvidos e como o Human Mobility Risk Assurance Program pode ser estruturado para a sua empresa.
@@ -254,5 +257,60 @@ function EmpresasPage() {
         </div>
       </section>
     </SiteLayout>
+  );
+}
+
+/* ─────────────────────────── BENEFÍCIO VS GESTÃO DE RISCO ─────────────────────────── */
+function BeneficioGestaoRisco() {
+  return (
+    <section className="bg-black-2 py-24 md:py-32 px-6 lg:px-20 border-t border-b18">
+      <div className="mx-auto max-w-[900px]">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
+          Perspetiva de Valor
+        </p>
+        <h2 className="font-display text-[clamp(28px,4vw,48px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-12 text-center">
+          Benefício ou <span className="text-gold-l italic">gestão de risco?</span>
+        </h2>
+        
+        <div className="space-y-6 text-w35 font-body font-[300] text-[15px] md:text-[17px] leading-[1.8]">
+          <p>O nosso foco não reside na categoria de benefícios corporativos.</p>
+          <p>
+            É natural que o colaborador experiencie o acompanhamento da MOOVIA como um benefício vital durante uma fase crítica de transição pessoal e familiar.
+          </p>
+          <p>O racional da empresa para esta contratação assenta, contudo, numa gestão rigorosa de indicadores.</p>
+          <p>
+            O objetivo corporativo é maximizar as probabilidades de sucesso da mobilidade internacional. Ao mitigar riscos sociais e culturais, a empresa assegura a adaptação, potencia a produtividade e garante o retorno sobre o capital alocado a esse talento.
+          </p>
+        </div>
+
+        <div className="mt-12 p-8 border-l-[3px] border-gold/30 bg-[#0a0d18] space-y-4">
+          <p className="font-body font-[500] text-[16px] text-white">
+            "Então vocês são uma empresa de benefícios?"
+          </p>
+          <p className="font-body font-[300] text-[15px] text-w70 leading-[1.7]">
+            Somos uma empresa de <strong className="font-[500] text-gold-l">Human Mobility Assurance</strong>. O benefício para o colaborador é uma consequência do nosso trabalho. O valor para a empresa está na mitigação do risco humano da mobilidade internacional.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-6 text-w35 font-body font-[300] text-[15px] md:text-[17px] leading-[1.8]">
+          <p>
+            Um seguro de saúde constitui indiscutivelmente um benefício para a equipa. A empresa disponibiliza-o porque reconhece que o bem-estar reduz absentismo, potencia a produtividade e reforça a retenção na organização.
+          </p>
+          <p>
+            A intervenção da MOOVIA obedece a uma lógica estruturalmente idêntica: o colaborador recebe um apoio de imenso valor percebido, enquanto a empresa assegura uma ferramenta estratégica de retenção, integração e proteção do seu capital humano.
+          </p>
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="font-display font-[300] text-[clamp(20px,2.5vw,32px)] leading-[1.3] text-white">
+            Para o colaborador, somos um benefício.
+          </p>
+          <p className="font-display font-[200] italic text-[clamp(20px,2.5vw,32px)] leading-[1.3] text-gold-l mt-2">
+            Para a empresa, somos uma estratégia de mitigação de risco e proteção do investimento em capital humano.
+          </p>
+        </div>
+
+      </div>
+    </section>
   );
 }

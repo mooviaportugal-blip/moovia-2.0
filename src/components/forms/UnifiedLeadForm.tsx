@@ -99,23 +99,23 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         </h3>
         <div className="grid md:grid-cols-2 gap-4">
           <button
-            onClick={() => setTipo("pessoa")}
-            className="group border border-b30 bg-black-2 p-8 text-left transition-colors hover:border-gold-l"
-          >
-            <User className="w-8 h-8 text-gold mb-4" />
-            <p className="font-sora text-[20px] font-[300] text-white mb-2">Pessoa Física</p>
-            <p className="font-urbanist text-[13px] font-[300] text-w35 leading-relaxed">
-              Estou a planear a minha mudança.
-            </p>
-          </button>
-          <button
             onClick={() => setTipo("empresa")}
             className="group border border-b30 bg-black-2 p-8 text-left transition-colors hover:border-gold-l"
           >
             <Building2 className="w-8 h-8 text-gold mb-4" />
-            <p className="font-sora text-[20px] font-[300] text-white mb-2">Empresa</p>
+            <p className="font-sora text-[20px] font-[300] text-white mb-2">Sou uma empresa</p>
             <p className="font-urbanist text-[13px] font-[300] text-w35 leading-relaxed">
-              Quero mover colaboradores internacionalmente.
+              Mobilidade de colaboradores
+            </p>
+          </button>
+          <button
+            onClick={() => setTipo("pessoa")}
+            className="group border border-b30 bg-black-2 p-8 text-left transition-colors hover:border-gold-l"
+          >
+            <User className="w-8 h-8 text-gold mb-4" />
+            <p className="font-sora text-[20px] font-[300] text-white mb-2">Sou particular</p>
+            <p className="font-urbanist text-[13px] font-[300] text-w35 leading-relaxed">
+              Mudança pessoal/familiar
             </p>
           </button>
         </div>
