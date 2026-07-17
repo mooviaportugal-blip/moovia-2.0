@@ -209,6 +209,21 @@ function EmpresasPage() {
               </div>
             ))}
           </div>
+
+          {/* REFORÇO — Velocidade de onboarding via rede */}
+          <div className="mt-14 md:mt-16 mx-auto max-w-[880px] border-l-2 border-gold pl-6 md:pl-8">
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-3">
+              Velocidade de execução
+            </p>
+            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.85]">
+              A velocidade de onboarding do talento contratado depende tanto da
+              qualidade da estratégia quanto da capacidade de execução. O
+              mandato MOOVIA aciona uma rede de especialistas credenciados —
+              imobiliário, jurídico, integração escolar — sob demanda, sem
+              custo fixo de equipa própria em cada área operacional para a
+              empresa contratante.
+            </p>
+          </div>
         </div>
       </section>
 
