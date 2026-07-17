@@ -335,3 +335,117 @@ function BeneficioGestaoRisco() {
     </section>
   );
 }
+
+/* ─────────────────────────── O QUE ESTAMOS ASSEGURANDO ─────────────────────────── */
+function OqueAsseguramos() {
+  const itens = [
+    "Identificar riscos que normalmente ficam invisíveis",
+    "Reduzir decisões baseadas apenas em perceção",
+    "Tratar os fatores identificados",
+    "Coordenar diferentes especialistas",
+    "Acompanhar a adaptação",
+    "Produzir evidências sobre a evolução da mobilidade",
+    "Apoiar a empresa antes que o problema se transforme em turnover",
+  ];
+  return (
+    <section className="bg-black py-24 md:py-32 px-6 lg:px-20 border-t border-b18">
+      <div className="mx-auto max-w-[900px]">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
+          Escopo e limites
+        </p>
+        <h2 className="font-display text-[clamp(28px,4vw,48px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-10 text-center">
+          O que estamos <span className="text-gold-l italic">a assegurar?</span>
+        </h2>
+        <p className="font-body font-[300] text-[16px] md:text-[18px] text-white/85 leading-[1.85] text-center max-w-[780px] mx-auto mb-10">
+          Não asseguramos que o profissional permanecerá na empresa independentemente de qualquer circunstância.
+        </p>
+        <p className="font-body font-[400] text-[15px] md:text-[16px] text-gold uppercase tracking-[0.15em] text-center mb-8">
+          Asseguramos que existe um processo estruturado para:
+        </p>
+        <ul className="max-w-[780px] mx-auto space-y-4">
+          {itens.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-4 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.7]"
+            >
+              <span className="mt-[10px] h-px w-5 bg-gold shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────── COMO GERAMOS VALOR (3 PÚBLICOS) ─────────────────────────── */
+function ComoGeramosValor() {
+  const empresa = [
+    "Redução dos riscos humanos associados à mobilidade internacional",
+    "Maior probabilidade de retenção do talento",
+    "Integração mais rápida e estruturada",
+    "Redução do risco de retorno antecipado",
+    "Maior produtividade durante os primeiros meses",
+    "Melhor retorno sobre o investimento realizado",
+    "Apoio às equipas de RH e Global Mobility",
+    "Informação estruturada para tomada de decisão",
+  ];
+  const executivo = [
+    "Clareza antes da mudança",
+    "Maior preparação para a nova realidade",
+    "Apoio nas decisões críticas",
+    "Redução da ansiedade durante a transição",
+    "Coordenação de especialistas",
+    "Acompanhamento estruturado",
+    "Maior confiança para iniciar uma nova etapa profissional e pessoal",
+  ];
+  const familia = [
+    "Alinhamento de expectativas",
+    "Preparação para a mudança",
+    "Estratégia para habitação e educação",
+    "Melhor integração territorial",
+    "Maior estabilidade emocional",
+    "Apoio durante a adaptação",
+    "Construção de uma base sólida para a permanência no novo país",
+  ];
+  const colunas = [
+    { title: "Para a empresa", items: empresa },
+    { title: "Para o executivo", items: executivo },
+    { title: "Para a família", items: familia },
+  ];
+  return (
+    <section className="bg-[#06091a] py-24 md:py-32 px-6 lg:px-20">
+      <div className="mx-auto max-w-[1200px]">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
+          Valor entregue
+        </p>
+        <h2 className="font-display text-[clamp(28px,4vw,48px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-14 text-center max-w-[880px] mx-auto">
+          Como <span className="text-gold-l italic">geramos valor.</span>
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+          {colunas.map((col) => (
+            <div
+              key={col.title}
+              className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col"
+            >
+              <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6">
+                {col.title}
+              </p>
+              <ul className="space-y-4">
+                {col.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 font-body text-[14px] md:text-[15px] font-[300] text-white/90 leading-[1.6]"
+                  >
+                    <span className="mt-[9px] h-px w-4 bg-gold shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
