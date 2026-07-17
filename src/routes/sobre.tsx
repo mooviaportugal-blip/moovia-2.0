@@ -45,13 +45,219 @@ function SobrePage() {
       <Hero />
       <OrigemMercado />
       <EquacaoHistoria />
+      <HistoriaPessoal />
       <MarketResearchSection />
+      <NossaCategoria />
+      <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
+      <ComoFazemosSection />
       <ValidacaoSection />
       <PosicaoMarca />
       <SymbolSection />
     </SiteLayout>
+  );
+}
+
+/* ─────────────────────────── A NOSSA CATEGORIA ─────────────────────────── */
+function NossaCategoria() {
+  const naoSomos = [
+    "uma empresa de relocation",
+    "uma empresa de imigração",
+    "uma consultoria de Recursos Humanos",
+    "uma empresa de benefícios",
+    "uma consultoria tradicional de Global Mobility",
+  ];
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[900px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">A nossa categoria</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-10">
+          Criámos uma nova <span className="italic text-gold-l">camada de assurance</span> sobre a mobilidade internacional.
+        </h2>
+        <div className="space-y-6 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
+          <p>
+            Acreditamos que as categorias atualmente existentes não descrevem aquilo que fazemos.
+          </p>
+          <p>Não somos:</p>
+          <ul className="space-y-2 pl-0 list-none">
+            {naoSomos.map((n) => (
+              <li key={n} className="flex items-start gap-3">
+                <span className="mt-[10px] h-px w-4 bg-gold shrink-0" />
+                <span className="text-white/85">{n}</span>
+              </li>
+            ))}
+          </ul>
+          <p>
+            Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
+          </p>
+          <p>
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Human Mobility Assurance</strong> sobre a mobilidade internacional — com um objetivo claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
+          </p>
+          <p>
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Human Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
+          </p>
+        </div>
+        <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4">
+          <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
+            Human Mobility Assurance é o que fazemos.
+          </p>
+          <p className="font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] mt-1">
+            Global Mobility Success é o resultado que procuramos entregar.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ────────────────────── COMPARAÇÃO DE CATEGORIA (GMM vs HMA) ────────────────────── */
+function ComparacaoCategoria() {
+  const gmm = [
+    "Políticas",
+    "Vistos",
+    "Impostos",
+    "Payroll",
+    "Benefícios",
+    "Fornecedores",
+    "Compliance",
+    "Logística da transferência",
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">Categoria de mercado</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center max-w-[880px] mx-auto">
+          A diferença para <span className="italic text-gold-l">Global Mobility Management.</span>
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col">
+            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Management</p>
+            <p className="font-display font-[300] text-white text-[20px] leading-[1.3] mb-6">Administra a mobilidade</p>
+            <ul className="space-y-3">
+              {gmm.map((item) => (
+                <li key={item} className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.6]">
+                  <span className="mt-[10px] h-px w-4 bg-gold/60 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
+            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Human Mobility Assurance</p>
+            <p className="font-display font-[300] text-gold-l text-[20px] leading-[1.3] mb-6 italic">Avalia se a mobilidade vai funcionar</p>
+            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.85]">
+              Avalia se as condições humanas, familiares, financeiras e territoriais estão alinhadas para que essa mobilidade produza o resultado esperado.
+            </p>
+          </div>
+        </div>
+        <div className="mt-14 text-center max-w-[900px] mx-auto">
+          <p className="font-display font-[200] text-white text-[clamp(20px,2.6vw,32px)] leading-[1.3]">
+            A área de Global Mobility faz a mobilidade acontecer.
+          </p>
+          <p className="font-display font-[200] italic text-gold-l text-[clamp(20px,2.6vw,32px)] leading-[1.3] mt-2">
+            A MOOVIA ajuda a aumentar a confiança de que ela funcionará depois que acontecer.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────── COMO FAZEMOS (6 passos resumidos) ─────────────────────── */
+function ComoFazemosSection() {
+  const passos = [
+    {
+      n: "01",
+      titulo: "Entendemos o contexto da empresa",
+      texto: "Antes de avaliar o profissional, compreendemos a mobilidade proposta: posição, destino, remuneração, prazo esperado e critérios de sucesso definidos pela empresa.",
+    },
+    {
+      n: "02",
+      titulo: "Avaliamos o profissional e o contexto familiar",
+      texto: "Entrevistas e análise multidimensional para compreender expectativas, capacidade de adaptação, alinhamento familiar e fatores emocionais. Não avaliamos competência técnica — avaliamos as condições que podem favorecer ou comprometer o sucesso da transição.",
+    },
+    {
+      n: "03",
+      titulo: "Cruzamos inteligência humana e tecnologia",
+      texto: "A entrevista identifica nuances que não aparecem num formulário. A tecnologia estrutura os dados e aumenta a consistência da análise.",
+    },
+    {
+      n: "04",
+      titulo: "Entregamos diagnóstico e plano de mitigação",
+      texto: "Para o colaborador, recomendações práticas e personalizadas. Para a empresa, respeitando o RGPD, uma visão executiva sem dados pessoais ou sensíveis.",
+    },
+    {
+      n: "05",
+      titulo: "Coordenamos a implementação",
+      texto: "Transformamos o diagnóstico em ação através da rede de parceiros orquestrados pela MOOVIA.",
+    },
+    {
+      n: "06",
+      titulo: "Acompanhamos e medimos",
+      texto: "Marcos aos 30, 60 e 90 dias, com relatórios executivos sobre evolução e opções de intervenção.",
+    },
+  ];
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Como fazemos</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14">
+          Do contexto da empresa <span className="italic text-gold-l">à evolução medida.</span>
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          {passos.map((p, i) => (
+            <motion.div
+              key={p.n}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06 }}
+              className="pl-6 border-l-[3px] border-gold/60"
+            >
+              <span className="block font-display text-[1.6rem] font-[300] text-gold mb-2">{p.n}</span>
+              <h3 className="font-display text-[1.15rem] text-white mb-3 font-[300]">{p.titulo}</h3>
+              <p className="font-body text-[15px] font-[300] text-w35 leading-[1.8]">{p.texto}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────── HISTÓRIA PESSOAL (complemento da Equação) ─────────────────────── */
+function HistoriaPessoal() {
+  const paragrafos = [
+    "A MOOVIA nasceu da união de duas experiências.",
+    "Durante mais de cinco anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
+    "Mais tarde, depois de viver e trabalhar em diferentes países, percebi que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding — mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
+    "A adaptação da família, o custo de vida, a moradia, as escolas, as expectativas e a integração só se transformavam em prioridade quando já havia um problema.",
+    "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica que aprendi em Revenue Assurance. Identificar riscos antes que se transformem em perdas. Acompanhar sinais. Coordenar respostas. Medir resultados. E proteger o investimento que as empresas fazem nas pessoas.",
+  ];
+  return (
+    <section className="bg-black py-[100px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[820px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">A história por trás da equação</p>
+        <h2 className="font-display font-[200] text-white leading-[1.1] tracking-[-0.03em] text-[clamp(26px,3.4vw,42px)] mb-10">
+          Duas experiências, <span className="italic text-gold-l">uma convicção.</span>
+        </h2>
+        <div className="space-y-6">
+          {paragrafos.map((p, i) => (
+            <motion.p
+              key={i}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ delay: i * 0.05, duration: 0.6 }}
+              className="font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]"
+            >
+              {p}
+            </motion.p>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
