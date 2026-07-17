@@ -150,6 +150,9 @@ function ValidacaoSection() {
       </div>
     </section>
   );
+}
+
+
 
 /* ─────────────────────────── HERO ─────────────────────────── */
 function Hero() {
