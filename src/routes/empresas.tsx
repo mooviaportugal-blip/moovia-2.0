@@ -250,6 +250,12 @@ function EmpresasPage() {
       {/* BENEFÍCIO VS RISCO */}
       <BeneficioGestaoRisco />
 
+      {/* O QUE ESTAMOS ASSEGURANDO */}
+      <OqueAsseguramos />
+
+      {/* COMO GERAMOS VALOR (3 públicos) */}
+      <ComoGeramosValor />
+
       {/* FORMULÁRIO UNIFICADO */}
       <section id="empresas-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
         <UnifiedLeadForm context="empresas" />
