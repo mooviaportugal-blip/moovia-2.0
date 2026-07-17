@@ -153,6 +153,7 @@ function HomeReal() {
 
 
       <CasesSection />
+      <MandatoRedeSection />
       <AssessmentSection />
       <EcossistemaSection />
       
