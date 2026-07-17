@@ -48,6 +48,7 @@ function SobrePage() {
       <MarketResearchSection />
       <Diferencia />
       <MetodoSection />
+      <ValidacaoSection />
       <PosicaoMarca />
       <SymbolSection />
     </SiteLayout>
