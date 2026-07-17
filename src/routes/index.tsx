@@ -11,6 +11,7 @@ import { ProcessSection } from "@/components/sections/ProcessSection";
 
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
+import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
 
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { FamiliesSection } from "@/components/sections/FamiliesSection";
