@@ -158,15 +158,11 @@ export function MethodologySection() {
 
                   <div className="h-px w-12 bg-gold/20 mx-auto" />
 
-                  <p className="font-urbanist font-[400] text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-2">
-                    {dim.concept}
-                  </p>
-
                   <p className="font-urbanist font-[300] text-[15px] text-w35 leading-[1.8] min-h-[120px]">
                     {dim.description}
                   </p>
 
-                  <p className="font-urbanist font-[300] text-[13px] text-gold/70 italic mt-6 tracking-wide">
+                  <p className="font-urbanist font-[300] text-[13px] text-gold/70 italic mt-6 tracking-wide border-t border-gold/10 pt-4">
                     {dim.quote}
                   </p>
                 </div>
