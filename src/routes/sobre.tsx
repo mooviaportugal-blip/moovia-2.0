@@ -100,12 +100,15 @@ function NossaCategoria() {
             Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Human Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
           </p>
         </div>
-        <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4">
+        <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Human Mobility Assurance é o que fazemos.
+            Global Mobility Success™ é o resultado.
           </p>
-          <p className="font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] mt-1">
-            Global Mobility Success é o resultado que procuramos entregar.
+          <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
+            Global Mobility Strategy™ é a disciplina que o torna possível.
+          </p>
+          <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
+            Global Mobility Assurance™ é a categoria que o torna mensurável.
           </p>
         </div>
       </div>
