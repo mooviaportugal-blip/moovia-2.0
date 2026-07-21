@@ -309,7 +309,7 @@ function BeneficioGestaoRisco() {
             "Então vocês são uma empresa de benefícios?"
           </p>
           <p className="font-body font-[300] text-[15px] text-w70 leading-[1.7]">
-            Somos uma empresa de <strong className="font-[500] text-gold-l">Human Mobility Assurance</strong>. O benefício para o colaborador é uma consequência do nosso trabalho. O valor para a empresa está na mitigação do risco humano da mobilidade internacional.
+            Somos uma empresa de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong>. O benefício para o colaborador é uma consequência do nosso trabalho. O valor para a empresa está na mitigação do risco humano da mobilidade internacional.
           </p>
         </div>
 

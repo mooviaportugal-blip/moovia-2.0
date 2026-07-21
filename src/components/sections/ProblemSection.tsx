@@ -128,7 +128,7 @@ export function ProblemSection() {
                 <div className="mt-5 flex items-center gap-3">
                   <span className="h-px w-8 bg-gold" />
                   <span className="font-body text-[10px] tracking-[0.28em] uppercase text-gold/90">
-                    Human Mobility Assurance
+                    Global Mobility Assurance
                   </span>
                 </div>
               </div>
