@@ -101,7 +101,52 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  return <MaintenancePage />;
+  const airplaneEnabled = useAirplaneEnabled();
+  return (
+    <SiteLayout>
+      {airplaneEnabled && <AirplaneScene />}
+      <Hero />
+      
+      <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
+        <motion.div 
+          animate={{ x: [0, "-50%"] }}
+          transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+          className="flex whitespace-nowrap"
+        >
+          {[1, 2].map((i) => (
+            <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
+              Transição Internacional <span className="text-gold text-[10px]">♦</span> 
+              Brasil para Portugal <span className="text-gold text-[10px]">♦</span> 
+              Coordenação de Vida e Património <span className="text-gold text-[10px]">♦</span> 
+              Avaliação Estratégica <span className="text-gold text-[10px]">♦</span> 
+              Mandato Personalizado <span className="text-gold text-[10px]">♦</span> 
+              90 dias Pós-chegada <span className="text-gold text-[10px]">♦</span> 
+              School Matching <span className="text-gold text-[10px]">♦</span> 
+              Fiscalidade Internacional <span className="text-gold text-[10px]">♦</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <ProblemSection />
+      <B2BRiskSection />
+      <NossaTeseSection />
+      <ProcessSection />
+
+      <CasesSection />
+      <MandatoRedeSection />
+      <AssessmentSection />
+      <EcossistemaSection />
+      
+      <FamiliesSection />
+      
+      <LisboaGallery />
+      <BlogTeaserSection />
+      <MaiaSection />
+      
+      <FormSection />
+    </SiteLayout>
+  );
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
