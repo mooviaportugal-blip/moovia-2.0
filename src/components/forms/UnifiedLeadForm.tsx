@@ -276,7 +276,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         {/* Contacto — comum */}
         <input
           required
-          placeholder={tipo === "empresa" ? "Nome do contacto" : "Nome completo"}
+          placeholder="Nome do contacto"
           value={form.name || ""}
           onChange={(e) => set("name", e.target.value)}
           className={inputCls}
