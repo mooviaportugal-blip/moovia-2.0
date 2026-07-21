@@ -77,6 +77,14 @@ function Servicos() {
               >
                 Atendemos particulares e empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
               </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+                className="font-body text-[16px] md:text-[18px] font-[500] text-gold-l leading-[1.7] max-w-[720px]"
+              >
+                Para empresas e os seus colaboradores expatriados — e as famílias, em todas as suas formas.
+              </motion.p>
             </div>
           </div>
 

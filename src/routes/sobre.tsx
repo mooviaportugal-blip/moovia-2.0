@@ -47,7 +47,9 @@ function SobrePage() {
       <EquacaoHistoria />
       <HistoriaPessoal />
       <MarketResearchSection />
+      <SaudeMentalMigrantes />
       <NossaCategoria />
+      <OqueSomos />
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
@@ -111,6 +113,72 @@ function NossaCategoria() {
   );
 }
 
+/* ───────────────────────────── O QUE SOMOS ───────────────────────────── */
+function OqueSomos() {
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20">
+      <div className="max-w-[900px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">Identidade</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center">
+          O que somos
+        </h2>
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="bg-w05 border border-b18 p-8 md:p-10">
+            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para o colaborador</p>
+            <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
+              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> — um acompanhamento de alto valor durante uma das maiores transições da sua vida.
+            </p>
+          </div>
+          <div className="bg-w05 border border-b18 p-8 md:p-10">
+            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para a empresa</p>
+            <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
+              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility — a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────── SAÚDE MENTAL DE MIGRANTES ───────────────────── */
+function SaudeMentalMigrantes() {
+  const stats = [
+    {
+      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional — e a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
+    },
+    {
+      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano, com 56% dos millennials não-nativos a apontar a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental — 87% mais do que não-nativos entre 55 e 75 anos.",
+    },
+    {
+      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental — preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
+    },
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">O CONTEXTO EM PORTUGAL</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center">
+          A saúde mental de quem migra <span className="italic text-gold-l">não é um detalhe.</span>
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {stats.map((s, i) => (
+            <div key={i} className="flex flex-col">
+              <span className="w-10 h-px bg-gold mb-6 opacity-40" />
+              <p className="font-body font-[300] text-[15px] text-w35 leading-[1.8] whitespace-pre-line">
+                {s.texto}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-12 text-center font-body text-[11px] tracking-[0.2em] uppercase text-w12">
+          Fonte: AXA Mind Health Report · Ordem dos Psicólogos Portugueses
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ────────────────────── COMPARAÇÃO DE CATEGORIA (GMM vs HMA) ────────────────────── */
 function ComparacaoCategoria() {
   const gmm = [
@@ -127,9 +195,13 @@ function ComparacaoCategoria() {
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">Categoria de mercado</p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center max-w-[880px] mx-auto">
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-2 text-center max-w-[880px] mx-auto">
           A diferença para <span className="italic text-gold-l">Global Mobility Management.</span>
         </h2>
+        <p className="font-body text-[12px] font-[400] tracking-[0.2em] uppercase text-gold/60 mb-14 text-center">
+          Risk Intelligence. Human Success.
+        </p>
+
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           <div className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Management</p>
@@ -145,7 +217,48 @@ function ComparacaoCategoria() {
           </div>
           <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Human Mobility Assurance</p>
-            <p className="font-display font-[300] text-gold-l text-[20px] leading-[1.3] mb-6 italic">Avalia se a mobilidade vai funcionar</p>
+            
+            {/* Mockup visual de relatório */}
+            <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl">
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-4 border-b border-gold/10 pb-2">
+                EXEMPLO DE ENTREGÁVEL PARA EMPRESAS<br/>
+                <span className="text-[9px] normal-case opacity-60">(Dados agregados e anonimizados)</span>
+              </p>
+              
+              <div className="flex justify-between items-end mb-6">
+                <div>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Human Mobility Risk Score</p>
+                  <p className="text-2xl font-display font-[300] text-white">74 <span className="text-sm text-white/40">/ 100</span></p>
+                </div>
+                <div className="text-right">
+                  <span className="inline-block px-2 py-0.5 bg-red-900/30 border border-red-500/30 text-red-400 text-[9px] uppercase tracking-widest rounded-full">High Risk</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  { label: "Family Alignment", score: 82, color: "bg-green-500/50" },
+                  { label: "Financial Preparedness", score: 46, color: "bg-red-500/50" },
+                  { label: "Cultural Adaptation", score: 71, color: "bg-yellow-500/50" },
+                  { label: "Career Continuity", score: 38, color: "bg-red-500/50" },
+                ].map((item) => (
+                  <div key={item.label} className="space-y-1">
+                    <div className="flex justify-between text-[10px] text-w70 font-[300]">
+                      <span>{item.label}</span>
+                      <span>{item.score}</span>
+                    </div>
+                    <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                      <div className={`h-full ${item.color}`} style={{ width: `${item.score}%` }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
+                Nota: "Estes indicadores não contêm dados pessoais. São métricas agregadas para apoio à decisão estratégica."
+              </p>
+            </div>
+
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.85]">
               Avalia se as condições humanas, familiares, financeiras e territoriais estão alinhadas para que essa mobilidade produza o resultado esperado.
             </p>
@@ -230,7 +343,7 @@ function ComoFazemosSection() {
 function HistoriaPessoal() {
   const paragrafos = [
     "A MOOVIA nasceu da união de duas experiências.",
-    "Durante mais de cinco anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
+    "Durante mais de sete anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
     "Mais tarde, depois de viver e trabalhar em diferentes países, percebi que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding — mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
     "A adaptação da família, o custo de vida, a moradia, as escolas, as expectativas e a integração só se transformavam em prioridade quando já havia um problema.",
     "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica que aprendi em Revenue Assurance. Identificar riscos antes que se transformem em perdas. Acompanhar sinais. Coordenar respostas. Medir resultados. E proteger o investimento que as empresas fazem nas pessoas.",

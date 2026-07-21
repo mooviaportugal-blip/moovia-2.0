@@ -7,8 +7,6 @@ import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 
 import { ProcessSection } from "@/components/sections/ProcessSection";
 
-
-
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
 import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
@@ -16,7 +14,6 @@ import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { FamiliesSection } from "@/components/sections/FamiliesSection";
 
-import { ManifestoSection } from "@/components/sections/ManifestoSection";
 import { MaiaSection } from "@/components/sections/MaiaSection";
 
 import { FormSection } from "@/components/sections/FormSection";
@@ -89,14 +86,6 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "A MOOVIA atende famílias no Brasil ou só em Portugal?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Atende clientes no Brasil e em Portugal através de reuniões previamente agendadas por videoconferência. A equipa opera no corredor Brasil → Portugal e acompanha a família antes da mudança, durante a chegada e nos primeiros meses de adaptação em Portugal.",
-              },
-            },
-            {
-              "@type": "Question",
               name: "Qual a diferença entre a MOOVIA e uma agência de imigração?",
               acceptedAnswer: {
                 "@type": "Answer",
@@ -115,7 +104,6 @@ function Home() {
   return <MaintenancePage />;
 }
 
-// Home original preservada — reativar trocando o componente da rota acima.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function HomeReal() {
   const airplaneEnabled = useAirplaneEnabled();
@@ -124,7 +112,6 @@ function HomeReal() {
       {airplaneEnabled && <AirplaneScene />}
       <Hero />
       
-      {/* MARQUEE, SEÇÃO 2 */}
       <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
         <motion.div 
           animate={{ x: [0, "-50%"] }}
@@ -151,7 +138,6 @@ function HomeReal() {
       <NossaTeseSection />
       <ProcessSection />
 
-
       <CasesSection />
       <MandatoRedeSection />
       <AssessmentSection />
@@ -160,7 +146,6 @@ function HomeReal() {
       <FamiliesSection />
       
       <LisboaGallery />
-      <ManifestoSection />
       <BlogTeaserSection />
       <MaiaSection />
       

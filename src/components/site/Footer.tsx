@@ -33,9 +33,8 @@ export function Footer() {
               <img src="/moovia-logotype.png" alt="MOOVIA Portugal" className="h-[40px] w-auto object-contain" />
             </Link>
             <p className="font-urbanist text-[12px] font-[400] tracking-[0.28em] uppercase text-w35 mb-6">Planear · Decidir · Integrar</p>
-            <p className="font-urbanist text-[13px] font-[300] text-w35 max-w-[260px] leading-relaxed mx-auto lg:mx-0">
-              Human Mobility Assurance<br/>
-              Global Mobility Success™
+            <p className="font-urbanist text-[13px] font-[300] text-w35 max-w-[320px] leading-relaxed mx-auto lg:mx-0">
+              MOOVIA / Global Mobility Assurance / Delivering Global Mobility Success.
             </p>
 
           </div>
