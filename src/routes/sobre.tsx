@@ -230,7 +230,7 @@ function ComparacaoCategoria() {
               
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <p className="text-[9px] uppercase tracking-tighter text-w35">Global Mobility Risk Score</p>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Human Mobility Risk Score</p>
                   <p className="text-2xl font-display font-[300] text-white">74 <span className="text-sm text-white/40">/ 100</span></p>
                 </div>
                 <div className="text-right">

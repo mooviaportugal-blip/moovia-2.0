@@ -70,7 +70,7 @@ export function ProcessSection() {
               The MOOVIA Framework
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
-              Cinco etapas. Uma metodologia para reduzir o Global Mobility Risk.
+              Cinco etapas. Uma metodologia para reduzir o Human Mobility Risk através de Risk Intelligence.
             </span>
           </motion.h2>
 
