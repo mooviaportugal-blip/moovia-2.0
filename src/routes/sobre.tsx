@@ -94,10 +94,10 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Human Mobility Assurance</strong> sobre a mobilidade internacional — com um objetivo claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional — com um objetivo claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
           </p>
           <p>
-            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Human Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
           </p>
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
@@ -219,7 +219,7 @@ function ComparacaoCategoria() {
             </ul>
           </div>
           <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
-            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Human Mobility Assurance</p>
+            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Assurance</p>
             
             {/* Mockup visual de relatório */}
             <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl">
@@ -230,7 +230,7 @@ function ComparacaoCategoria() {
               
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <p className="text-[9px] uppercase tracking-tighter text-w35">Human Mobility Risk Score</p>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Global Mobility Risk Score</p>
                   <p className="text-2xl font-display font-[300] text-white">74 <span className="text-sm text-white/40">/ 100</span></p>
                 </div>
                 <div className="text-right">

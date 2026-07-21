@@ -23,8 +23,8 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal — Human Mobility Assurance" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework" },
+      { title: "MOOVIA Portugal — Global Mobility Assurance" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Global Mobility Assurance | Global Mobility Success Framework" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -50,7 +50,7 @@ function HomeReal() {
               Global Mobility Success Assessment <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Life Transition <span className="text-gold text-[10px]">♦</span>
-              Human Mobility Risk Assurance <span className="text-gold text-[10px]">♦</span>
+              Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
               Orchestration <span className="text-gold text-[10px]">♦</span>
               Integration <span className="text-gold text-[10px]">♦</span>
             </div>

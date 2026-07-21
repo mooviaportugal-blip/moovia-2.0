@@ -184,7 +184,7 @@ function AdminBlog() {
 <li>Deloitte Global Human Capital Trends — retenção e experiência do colaborador.</li>
 <li>AXA Global Healthcare (2026) — dados sobre mobilidade internacional e desafios de adaptação.</li>
 </ul>`,
-              category: "Human Mobility Assurance",
+              category: "Global Mobility Assurance",
               tags: ["mobilidade internacional", "turnover", "integração", "ROI", "gestão de risco", "expatriação", "retenção de talentos", "MOOVIA"],
               published: true,
               featured_image: "",
@@ -262,7 +262,7 @@ function AdminBlog() {
 <li>Lei et al. (2025). <em>When can cultural intelligence be effective for expatriate cross-cultural work adjustment?</em> International Journal of Human Resource Management.</li>
 <li>Personality and Individual Differences (2025). <em>Cool Head after Warm Heart: Emotional Intelligence, Cultural Intelligence and Expatriate Adjustment.</em></li>
 </ul>`,
-              category: "Human Mobility Assurance",
+              category: "Global Mobility Assurance",
               tags: ["mobilidade internacional", "inteligência artificial", "inteligência humana", "adaptação", "psicologia", "gestão de risco", "MOOVIA"],
               published: true,
               featured_image: "",
