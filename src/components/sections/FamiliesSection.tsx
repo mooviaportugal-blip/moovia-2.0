@@ -56,7 +56,7 @@ export function FamiliesSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-6 font-display font-[200] text-white leading-[1.15] text-[clamp(22px,4vw,52px)] px-2 break-words"
         >
-          Cada jornada começa de um lugar diferente.{" "}
+          Atendemos executivos(as) e as suas famílias em todas as suas formas.{" "}
           <span className="block sm:inline">Coordenamos todas elas.</span>
         </motion.h2>
 
