@@ -12,67 +12,34 @@ function CaseEditorial({ t, index }: { t: Testimonial; index: number }) {
       className="relative w-full max-w-[1180px] mx-auto"
     >
       {/* Frame */}
-      <div className="relative grid md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-0 md:gap-14 border border-gold/15 bg-gradient-to-br from-[#080d1c] via-[#0a1024] to-[#050814] overflow-hidden">
-        {/* soft corner glow */}
+      <div className="relative py-12 md:py-16 border-t border-b border-gold/10 bg-black/20 backdrop-blur-sm overflow-hidden text-center">
+        {/* soft glow */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full"
-          style={{ background: "radial-gradient(closest-side, rgba(173,137,87,0.16), transparent 70%)" }}
+          className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full"
+          style={{ background: "radial-gradient(closest-side, rgba(173,137,87,0.08), transparent 70%)" }}
         />
 
-        {/* LEFT — image / initials */}
-        <div className="relative min-h-[320px] md:min-h-[520px] border-b md:border-b-0 md:border-r border-gold/10">
-          {t.photo ? (
-            <>
-              <img src={t.photo} alt={t.name} className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050814] via-[#050814]/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0a1024]/70" />
-            </>
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-black">
-              <span className="font-display text-[120px] font-[200] text-gold/40">{t.initials}</span>
-            </div>
-          )}
-
-          {/* Meta bottom-left */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-            <span className="block font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">
+        <div className="relative max-w-[800px] mx-auto px-6">
+          <div className="flex flex-col items-center mb-10">
+            <span className="block font-body text-[9px] tracking-[0.32em] uppercase text-gold/60 mb-4">
               Case · {num}
             </span>
-            <span className="block font-display text-[22px] md:text-[26px] text-white font-[300] leading-tight">
+            <div className="text-gold/80 text-[12px] tracking-[3px] mb-8" aria-label={`${t.stars} de 5 estrelas`}>
+              {"★".repeat(t.stars)}
+            </div>
+          </div>
+
+          <blockquote className="font-display italic font-[200] text-[18px] md:text-[24px] text-white/90 leading-[1.7] tracking-tight mb-10">
+            "{t.text}"
+          </blockquote>
+
+          <div className="flex flex-col items-center">
+            <span className="block font-display text-[18px] md:text-[20px] text-white font-[300] tracking-wide">
               {t.name}
             </span>
-            <span className="block font-body text-[12px] text-white/60 mt-1">{t.context}</span>
-          </div>
-        </div>
-
-        {/* RIGHT — quote */}
-        <div className="relative p-8 md:p-14 flex flex-col justify-between">
-          <div>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="font-display text-gold/50 leading-none text-[64px] md:text-[80px]" style={{ fontFamily: "Georgia, serif" }}>
-                “
-              </span>
-              <div className="h-px flex-1 bg-gradient-to-r from-gold/40 to-transparent" />
-              <div className="text-gold text-[14px] tracking-[3px]" aria-label={`${t.stars} de 5 estrelas`}>
-                {"★".repeat(t.stars)}
-              </div>
-            </div>
-
-            <blockquote className="font-display italic font-[300] text-[17px] md:text-[22px] text-white/95 leading-[1.6] tracking-[-0.005em]">
-              {t.text}
-            </blockquote>
-          </div>
-
-          <div className="mt-10 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-body text-[11px] tracking-[0.28em] uppercase text-gold">
-                {t.service}
-              </span>
-            </div>
-            <span className="font-body text-[11px] tracking-[0.2em] uppercase text-white/40">
-              {t.date}
+            <span className="block font-body text-[10px] tracking-[0.2em] uppercase text-white/40 mt-3">
+              {t.context}
             </span>
           </div>
         </div>
