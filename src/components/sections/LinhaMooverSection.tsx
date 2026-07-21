@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { TrainFront } from "lucide-react";
@@ -11,7 +11,7 @@ type Member = {
   img?: string;
   logo?: string;
   tags: string[];
-  type?: 'person' | 'entity' | 'hub';
+  type: 'person' | 'entity' | 'hub';
 };
 
 const LINES = [
