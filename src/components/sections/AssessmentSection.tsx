@@ -80,62 +80,30 @@ export function AssessmentSection() {
               Global Mobility Success Assessment
             </h3>
             <p className="font-body text-[12px] font-[300] text-w35 uppercase tracking-widest text-center mb-10">
-              Sessão Estratégica + Relatório Personalizado
+              Sessão de Consultoria Estratégica
             </p>
 
             <div className="mb-8">
-              {/* BLOCO 1: Entregável Executivo */}
-              <div className="mb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="w-6 h-px bg-gold/50" />
-                  <p className="font-body text-[13px] font-[500] text-gold uppercase tracking-wider">
-                    Entregável Executivo
-                  </p>
-                </div>
-                <ul className="grid grid-cols-1 gap-y-2.5 pl-2 border-l border-gold/20 ml-2">
-                  {[
-                    "Diagnóstico Estratégico de Mobilidade",
-                    "Relatório de Riscos e Oportunidades",
-                    "Mapa de Prioridades"
-                  ].map((d) => (
-                    <li
-                      key={d}
-                      className="flex gap-3 font-body text-[14px] font-[300] text-white/80 items-center"
-                    >
-                      <ArrowRight
-                        size={14}
-                        className="text-gold shrink-0"
-                        strokeWidth={2}
-                      />
-                      <span>{d}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Human Dimension Assessment */}
+              <div className="mb-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
+                <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
+                  Human Dimension Assessment
+                </p>
+                <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
+                  Uma avaliação integrada da dimensão humana da mobilidade
+                  internacional, ajudando a antecipar fatores que podem
+                  influenciar a adaptação, o bem-estar e o sucesso da transição.
+                </p>
+                <p className="font-body text-[12px] font-[300] italic text-white/50 leading-[1.5]">
+                  Conduzido por <span className="not-italic text-gold">Frederico Prado</span>, com o apoio da{" "}
+                  <span className="not-italic text-gold">Dra. Letícia de Mello</span>.
+                </p>
 
-              {/* BLOCO 2: Human Mobility Risk Assurance */}
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="w-6 h-px bg-gold/50" />
-                  <p className="font-body text-[13px] font-[500] text-gold uppercase tracking-wider">
-                    Human Mobility Risk Assurance
-                  </p>
-                </div>
-                <ul className="grid grid-cols-1 gap-y-3 pl-2 border-l border-gold/20 ml-2">
-                  {[
-                    "Alinhamento de Expectativas",
-                    "Capacidade de Adaptação",
-                    "Riscos de Isolamento e Retenção"
-                  ].map((d) => (
-                    <li
-                      key={d}
-                      className="flex items-center gap-3 font-body text-[14px] font-[300] text-white/80"
-                    >
-                      <ArrowRight size={14} className="text-gold shrink-0" strokeWidth={2} />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
+                {leticiaQuote ? (
+                  <blockquote className="mt-5 pl-4 border-l-2 border-gold/60 font-display text-[14px] font-[300] italic text-white/85 leading-[1.6]">
+                    &ldquo;{leticiaQuote}&rdquo;
+                  </blockquote>
+                ) : null}
               </div>
             </div>
 
@@ -152,27 +120,6 @@ export function AssessmentSection() {
               </p>
             </div>
 
-            {/* Human Dimension Assessment */}
-            <div className="mb-8 mt-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
-              <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
-                Human Dimension Assessment
-              </p>
-              <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
-                Uma avaliação integrada da dimensão humana da mobilidade
-                internacional, ajudando a antecipar fatores que podem
-                influenciar a adaptação, o bem-estar e o sucesso da transição.
-              </p>
-              <p className="font-body text-[12px] font-[300] italic text-white/50 leading-[1.5]">
-                Conduzido por <span className="not-italic text-gold">Frederico Prado</span>, com o apoio da{" "}
-                <span className="not-italic text-gold">Dra. Letícia de Mello</span>.
-              </p>
-
-              {leticiaQuote ? (
-                <blockquote className="mt-5 pl-4 border-l-2 border-gold/60 font-display text-[14px] font-[300] italic text-white/85 leading-[1.6]">
-                  &ldquo;{leticiaQuote}&rdquo;
-                </blockquote>
-              ) : null}
-            </div>
 
 
             {/* Entregável */}
