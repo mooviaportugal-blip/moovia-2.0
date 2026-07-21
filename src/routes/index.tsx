@@ -6,7 +6,7 @@ import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 
-import { ProcessSection } from "@/components/sections/ProcessSection";
+import { FrameworkSection } from "@/components/sections/framework/FrameworkSection";
 
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
@@ -133,7 +133,7 @@ function Home() {
       <MarketResearchSection />
       <B2BRiskSection />
       <NossaTeseSection />
-      <ProcessSection />
+      <FrameworkSection />
 
       <CasesSection />
       <MandatoRedeSection />
