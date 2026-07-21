@@ -64,7 +64,7 @@ export function ProcessSection() {
             className="font-display leading-[1.05] tracking-[-0.03em]"
           >
             <span className="block text-[clamp(32px,5vw,64px)] font-[200] text-white mb-1">
-              Global Mobility Success™
+              Global Mobility Success
             </span>
             <span className="block text-[clamp(28px,4.5vw,56px)] font-[300] text-gold-l italic mb-8">
               The MOOVIA Framework

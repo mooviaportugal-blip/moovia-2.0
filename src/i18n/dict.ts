@@ -135,14 +135,14 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Pós-chegada": { en: "Post-arrival", es: "Post-llegada" },
 
   // ---------- ASSESSMENT ----------
-  "The Global Mobility Success Assessment™": { en: "The Global Mobility Success Assessment™", es: "The Global Mobility Success Assessment™" },
-  "Global Mobility Success Assessment™": { en: "Global Mobility Success Assessment™", es: "Global Mobility Success Assessment™" },
-  "O Global Mobility Success Assessment™ inclui:": { en: "The Global Mobility Success Assessment™ includes:", es: "El Global Mobility Success Assessment™ incluye:" },
-  "O Global Mobility Success Assessment™ foi desenvolvido para transformar uma decisão complexa num plano estratégico estruturado.": {
-    en: "The Global Mobility Success Assessment™ was developed to transform a complex decision into a structured strategic plan.",
-    es: "El Global Mobility Success Assessment™ fue desarrollado para transformar una decisión compleja en un plan estratégico estructurado."
+  "The Global Mobility Success Assessment": { en: "The Global Mobility Success Assessment", es: "The Global Mobility Success Assessment" },
+  "Global Mobility Success Assessment": { en: "Global Mobility Success Assessment", es: "Global Mobility Success Assessment" },
+  "O Global Mobility Success Assessment inclui:": { en: "The Global Mobility Success Assessment includes:", es: "El Global Mobility Success Assessment incluye:" },
+  "O Global Mobility Success Assessment foi desenvolvido para transformar uma decisão complexa num plano estratégico estruturado.": {
+    en: "The Global Mobility Success Assessment was developed to transform a complex decision into a structured strategic plan.",
+    es: "El Global Mobility Success Assessment fue desarrollado para transformar una decisión compleja en un plan estratégico estructurado."
   },
-  "Solicitar Global Mobility Success Assessment™": { en: "Request Global Mobility Success Assessment™", es: "Solicitar Global Mobility Success Assessment™" },
+  "Solicitar Global Mobility Success Assessment": { en: "Request Global Mobility Success Assessment", es: "Solicitar Global Mobility Success Assessment" },
   "Strategic Relocation Assessment": { en: "Strategic Relocation Assessment", es: "Strategic Relocation Assessment" },
 
   // ---------- PILLARS ----------
@@ -398,7 +398,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Atualmente, atua na área de Direito Empresarial (Corporate e M&A) na Abreu Advogados, uma das mais prestigiadas sociedades de advogados de Portugal, participando em operações societárias, corporate housekeeping e assessoria jurídica a clientes nacionais e internacionais.": { en: "He currently works in the Corporate and M&A practice at Abreu Advogados, one of Portugal's most prestigious law firms, participating in corporate transactions, corporate housekeeping and legal advisory for national and international clients.", es: "Actualmente, actúa en el área de Derecho Empresarial (Corporate y M&A) en Abreu Advogados, una de las más prestigiosas sociedades de abogados de Portugal, participando en operaciones societarias, corporate housekeeping y asesoría jurídica a clientes nacionales e internacionales." },
   "Avaliação Emocional e Adaptativa": { en: "Emotional and Adaptive Assessment", es: "Evaluación Emocional y Adaptativa" },
   "Avaliação Estratégica": { en: "Strategic Assessment", es: "Evaluación Estratégica" },
-  "Avaliação Estratégica MOOVIA · €250 (+IVA)": { en: "Global Mobility Success Assessment™ · €250 (+VAT)", es: "Evaluación Estratégica MOOVIA · €250 (+IVA)" },
+  "Avaliação Estratégica MOOVIA · €250 (+IVA)": { en: "Global Mobility Success Assessment · €250 (+VAT)", es: "Evaluación Estratégica MOOVIA · €250 (+IVA)" },
   "Avaliação Estratégica, MOOVIA Portugal": { en: "Strategic Assessment, MOOVIA Portugal", es: "Evaluación Estratégica, MOOVIA Portugal" },
   "Busca Ativa de Habitação": { en: "Active Housing Search", es: "Búsqueda Activa de Vivienda" },
   "Busca de imóveis": { en: "Property search", es: "Búsqueda de inmuebles" },
@@ -792,10 +792,10 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Psicóloga · +20 anos": { en: "Psychologist · +20 years", es: "Psicóloga · +20 años" },
 
   // ---------- Assessment ----------
-  "Avaliação Estratégica MOOVIA": { en: "Global Mobility Success Assessment™", es: "Evaluación Estratégica MOOVIA" },
+  "Avaliação Estratégica MOOVIA": { en: "Global Mobility Success Assessment", es: "Evaluación Estratégica MOOVIA" },
   "Antes de escolher uma escola, um imóvel ou iniciar um processo de mudança, existe uma pergunta mais importante.": { en: "Before choosing a school, a property, or starting the relocation process, there is a more important question.", es: "Antes de elegir una escuela, un inmueble o iniciar un proceso de mudanza, hay una pregunta más importante." },
   "Portugal é realmente compatível com os objetivos da sua família?": { en: "Is Portugal truly compatible with your family's objectives?", es: "¿Es Portugal realmente compatible con los objetivos de tu familia?" },
-  "A Avaliação Estratégica MOOVIA foi desenvolvida para responder essa questão.": { en: "The Global Mobility Success Assessment™ was developed to answer this question.", es: "La Evaluación Estratégica MOOVIA fue desarrollada para responder a esa pregunta." },
+  "A Avaliação Estratégica MOOVIA foi desenvolvida para responder essa questão.": { en: "The Global Mobility Success Assessment was developed to answer this question.", es: "La Evaluación Estratégica MOOVIA fue desarrollada para responder a esa pregunta." },
   "Durante uma sessão individual de 60 minutos, analisamos o contexto da sua família, os seus objetivos, prioridades, recursos disponíveis e os principais fatores que influenciarão o sucesso da sua transição para Portugal.": { en: "During a 60-minute one-to-one session, we analyse your family's context, objectives, priorities, available resources, and the key factors that will influence the success of your transition to Portugal.", es: "Durante una sesión individual de 60 minutos, analizamos el contexto de tu familia, sus objetivos, prioridades, recursos disponibles y los principales factores que influirán en el éxito de tu transición a Portugal." },
   "Não se trata de uma reunião comercial. Trata-se de um diagnóstico estruturado conduzido por profissionais que já passaram pela experiência de viver uma mudança internacional.": { en: "This is not a sales meeting. It is a structured diagnostic led by professionals who have already been through the experience of an international move.", es: "No se trata de una reunión comercial. Se trata de un diagnóstico estructurado realizado por profesionales que ya han vivido una mudanza internacional." },
   "O que irá receber": { en: "What you will receive", es: "Lo que recibirás" },

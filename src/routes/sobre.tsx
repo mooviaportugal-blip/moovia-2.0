@@ -387,11 +387,11 @@ function MetodoSection() {
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">O nosso método</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(30px,3.8vw,48px)] mb-10">
-          O <span className="italic text-gold-l">Global Mobility Success Framework™</span>
+          O <span className="italic text-gold-l">Global Mobility Success Framework</span>
         </h2>
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
-          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework™, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
+          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
           <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que mitiga riscos, introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">

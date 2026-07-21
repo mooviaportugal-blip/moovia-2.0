@@ -24,7 +24,7 @@ export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
       { title: "MOOVIA Portugal — Human Mobility Assurance" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -47,7 +47,7 @@ function HomeReal() {
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
               Global Mobility Success <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Success Assessment™ <span className="text-gold text-[10px]">♦</span>
+              Global Mobility Success Assessment <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Life Transition <span className="text-gold text-[10px]">♦</span>
               Human Mobility Risk Assurance <span className="text-gold text-[10px]">♦</span>

@@ -29,13 +29,13 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "MOOVIA Portugal — Human Mobility Assurance" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework" },
       { property: "og:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
-      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework" },
       { property: "og:url", content: "https://mooviaportugal.com/" },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
-      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework" },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
     scripts: [
