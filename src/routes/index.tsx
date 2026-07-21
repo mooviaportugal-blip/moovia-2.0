@@ -7,6 +7,7 @@ import { MarketResearchSection } from "@/components/sections/MarketResearchSecti
 import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 
 import { FrameworkSection } from "@/components/sections/framework/FrameworkSection";
+import { SymbolSection } from "@/components/sections/SymbolSection";
 
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
@@ -23,7 +24,6 @@ import { LisboaGallery } from "@/components/sections/LisboaGallery";
 import { AirplaneScene } from "@/components/AirplaneScene";
 import { useAirplaneEnabled } from "@/hooks/useAirplaneEnabled";
 import { motion } from "framer-motion";
-import { MaintenancePage } from "@/components/site/MaintenancePage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,6 +134,7 @@ function Home() {
       <B2BRiskSection />
       <NossaTeseSection />
       <FrameworkSection />
+      <SymbolSection />
 
       <CasesSection />
       <MandatoRedeSection />
