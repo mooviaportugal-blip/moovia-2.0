@@ -8,17 +8,17 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Global Mobility Risk Assurance Program — MOOVIA" },
+      { title: "Global Mobility Assurance — MOOVIA" },
       {
         name: "description",
         content:
-          "Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
+          "Transformamos Human Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
-      { property: "og:title", content: "Global Mobility Risk Assurance Program — MOOVIA" },
+      { property: "og:title", content: "Global Mobility Assurance — MOOVIA" },
       {
         property: "og:description",
         content:
-          "Programa B2B da MOOVIA para reduzir o risco humano da mobilidade internacional e aumentar a retenção de talentos.",
+          "Programa B2B da MOOVIA para reduzir o Human Mobility Risk da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
       },
     ],
   }),
@@ -93,19 +93,44 @@ function EmpresasPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-display text-[clamp(32px,5vw,68px)] font-[300] text-white leading-[1.05] tracking-[-0.03em] mb-8 max-w-[900px]"
+            className="font-display text-[clamp(32px,5vw,68px)] font-[300] text-white leading-[1.05] tracking-[-0.03em] mb-4 max-w-[900px]"
           >
-            Global Mobility Risk{" "}
-            <span className="text-gold-l italic font-[400]">Assurance Program</span>
+            Global Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.7] max-w-[720px] mb-10"
+            transition={{ delay: 0.15 }}
+            className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px] mb-8"
           >
-            Reduza o risco humano da mobilidade internacional dos seus talentos — e aumente o retorno sobre o investimento em contratação global.
+            A nova categoria para reduzir o Human Mobility Risk e transformar mobilidade internacional em melhores resultados para empresas e colaboradores.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
+          >
+            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            className="mb-10"
+          >
+            <p className="font-body text-[16px] md:text-[18px] font-[600] text-white mb-6">
+              Um benefício para o colaborador. Um investimento mensurável para a empresa.
+            </p>
+            <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-4">
+              <p>
+                Transformamos Human Mobility Risk em Global Mobility Success.
+              </p>
+              <p>
+                Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, nós medimos aquilo que realmente determina o sucesso de uma mobilidade internacional: a adaptação humana. Nossa metodologia identifica riscos, gera inteligência e acompanha indicadores ao longo da jornada para reduzir turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para o RH, para o CFO e para o negócio.
+              </p>
+            </div>
+          </motion.div>
           <CTALink label="Agendar Strategic Discovery Call" sublabel="Empresas" />
         </div>
       </section>
