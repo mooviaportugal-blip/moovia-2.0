@@ -19,7 +19,7 @@ const chipBtn = (active: boolean) =>
   }`;
 
 export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
-  const [tipo, setTipo] = useState<Tipo | null>(null);
+  const [tipo, setTipo] = useState<Tipo | null>("empresa");
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<any>({});
@@ -125,12 +125,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
 
   return (
     <div className="mx-auto max-w-[720px]">
-      <button
-        onClick={() => setTipo(null)}
-        className="font-urbanist text-[11px] tracking-[0.24em] uppercase text-w35 hover:text-gold mb-6"
-      >
-        ← voltar
-      </button>
+      {/* Botão de voltar removido para manter foco em empresas */}
 
       <form
         onSubmit={(e) => {
