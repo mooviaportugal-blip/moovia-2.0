@@ -95,7 +95,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
 <li>Deloitte Global Human Capital Trends — retenção e experiência do colaborador.</li>
 <li>AXA Global Healthcare (2026) — dados sobre mobilidade internacional e desafios de adaptação.</li>
 </ul>`,
-          category: "Human Mobility Assurance",
+          category: "Global Mobility Assurance",
           tags: [
             "mobilidade internacional",
             "turnover",
