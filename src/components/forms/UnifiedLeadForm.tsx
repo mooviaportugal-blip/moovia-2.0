@@ -134,7 +134,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         }}
         className="flex flex-col gap-1"
       >
-        {tipo === "pessoa" ? (
+        {false ? (
           <>
             <select
               required
