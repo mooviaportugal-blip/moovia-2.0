@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 
-const cards = [
+const cards: { n: string; title: string; body: string; source: string; insight?: string }[] = [
   {
     n: "01",
     title: "Quase metade das missões internacionais termina antes do previsto",
     body: "Um estudo internacional da AXA Global Healthcare (2025), realizado junto de 689 decisores de RH e 641 expatriados em 10 mercados, concluiu que quase metade das atribuições internacionais é interrompida antes do previsto. As principais causas não são técnicas ou profissionais, mas sim: dificuldades de adaptação da família, integração cultural e falta de apoio social.",
     source: "Fonte: AXA Global Healthcare, 2025",
+    insight: "Isto desloca o problema do RH tradicional para um problema de mobilidade global.",
   },
   {
     n: "02",
