@@ -111,6 +111,72 @@ function NossaCategoria() {
   );
 }
 
+/* ───────────────────────────── O QUE SOMOS ───────────────────────────── */
+function OqueSomos() {
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20">
+      <div className="max-w-[900px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">Identidade</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center">
+          O que somos
+        </h2>
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="bg-w05 border border-b18 p-8 md:p-10">
+            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para o colaborador</p>
+            <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
+              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> — um acompanhamento de alto valor durante uma das maiores transições da sua vida.
+            </p>
+          </div>
+          <div className="bg-w05 border border-b18 p-8 md:p-10">
+            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para a empresa</p>
+            <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
+              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility — a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────── SAÚDE MENTAL DE MIGRANTES ───────────────────── */
+function SaudeMentalMigrantes() {
+  const stats = [
+    {
+      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional — e a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
+    },
+    {
+      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano, com 56% dos millennials não-nativos a apontar a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental — 87% mais do que não-nativos entre 55 e 75 anos.",
+    },
+    {
+      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental — preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
+    },
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">O CONTEXTO EM PORTUGAL</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center">
+          A saúde mental de quem migra <span className="italic text-gold-l">não é um detalhe.</span>
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {stats.map((s, i) => (
+            <div key={i} className="flex flex-col">
+              <span className="w-10 h-px bg-gold mb-6 opacity-40" />
+              <p className="font-body font-[300] text-[15px] text-w35 leading-[1.8] whitespace-pre-line">
+                {s.texto}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-12 text-center font-body text-[11px] tracking-[0.2em] uppercase text-w12">
+          Fonte: AXA Mind Health Report · Ordem dos Psicólogos Portugueses
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ────────────────────── COMPARAÇÃO DE CATEGORIA (GMM vs HMA) ────────────────────── */
 function ComparacaoCategoria() {
   const gmm = [
