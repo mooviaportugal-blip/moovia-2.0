@@ -293,7 +293,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
             required
             value={form.email || ""}
             onChange={(v) => set("email", v)}
-            placeholder={tipo === "empresa" ? "E-mail corporativo" : "E-mail"}
+            placeholder="E-mail corporativo"
             className="w-full bg-transparent border-0 outline-none font-urbanist text-[15px] font-[300] text-w70"
           />
         </div>
