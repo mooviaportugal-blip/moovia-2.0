@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const dimensions = [
   {
     id: "01",
-    title: "Human Intelligence",
-    description: "Toda mobilidade começa por compreender pessoas, não processos. Entrevistas, contexto familiar, expectativas, capacidade de adaptação — a metodologia da MOOVIA parte da inteligência humana antes de qualquer estrutura ou tecnologia entrar em ação.",
+    title: "Mobility Intelligence",
+    description: "Análise estruturada do contexto, objetivos, riscos e variáveis da mobilidade.",
     quote: "Antes dos dados, as pessoas.",
     icon: "/icons/aviao.svg",
     iconScale: 1.16,
@@ -14,8 +14,8 @@ const dimensions = [
   },
   {
     id: "02",
-    title: "Risk Assurance",
-    description: "O que identificamos transforma-se em risco mensurável — adaptação familiar, integração cultural, alinhamento de expectativas. Não tratamos estes fatores como imponderáveis; tratamos como riscos que podem ser avaliados, mitigados e acompanhados.",
+    title: "Decision Intelligence Engine",
+    description: "O nosso motor analisa milhares de variáveis, identifica dependências, conflitos e fatores críticos para apoiar decisões de mobilidade com maior previsibilidade.",
     quote: "O que se mede, pode ser protegido.",
     icon: "/icons/ponte.svg",
     iconScale: 1.28,
@@ -23,8 +23,8 @@ const dimensions = [
   },
   {
     id: "03",
-    title: "Global Coordination",
-    description: "Uma estratégia só funciona se todos os especialistas envolvidos — jurídico, fiscal, imobiliário, educacional — trabalharem na mesma direção. A MOOVIA orquestra essa rede, seja ela própria ou os parceiros que a empresa já tem, para que nenhuma decisão fique desconectada das restantes.",
+    title: "Human Strategic Assessment",
+    description: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em mobilidade internacional e adaptação humana.",
     quote: "Um único ponto. Nenhuma decisão isolada.",
     icon: "/icons/pessoa.svg",
     iconScale: 0.9,

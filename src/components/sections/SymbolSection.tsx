@@ -14,10 +14,10 @@ type Card = {
 const cards: Card[] = [
   {
     num: "01 / 04",
-    concept: "Human Intelligence",
+    concept: "Mobility Intelligence",
     pillar: "",
     description:
-      "Toda mobilidade começa por compreender pessoas, não processos. Entrevistas, contexto familiar, expectativas, capacidade de adaptação — a metodologia da MOOVIA parte da inteligência humana antes de qualquer estrutura ou tecnologia entrar em ação.",
+      "Análise estruturada do contexto, objetivos, riscos e variáveis da mobilidade.",
     tagline: "Antes dos dados, as pessoas.",
     icon: "/icons/aviao.svg",
     alt: "Ícone de avião",
@@ -25,10 +25,10 @@ const cards: Card[] = [
   },
   {
     num: "02 / 04",
-    concept: "Risk Assurance",
+    concept: "Decision Intelligence Engine",
     pillar: "",
     description:
-      "O que identificamos transforma-se em risco mensurável — adaptação familiar, integração cultural, alinhamento de expectativas. Não tratamos estes fatores como imponderáveis; tratamos como riscos que podem ser avaliados, mitigados e acompanhados.",
+      "O nosso motor analisa milhares de variáveis, identifica dependências, conflitos e fatores críticos para apoiar decisões de mobilidade com maior previsibilidade.",
     tagline: "O que se mede, pode ser protegido.",
     icon: "/icons/ponte.svg",
     alt: "Ícone de arco/ponte",
@@ -36,10 +36,10 @@ const cards: Card[] = [
   },
   {
     num: "03 / 04",
-    concept: "Global Coordination",
+    concept: "Human Strategic Assessment",
     pillar: "",
     description:
-      "Uma estratégia só funciona se todos os especialistas envolvidos — jurídico, fiscal, imobiliário, educacional — trabalharem na mesma direção. A MOOVIA orquestra essa rede, seja ela própria ou os parceiros que a empresa já tem, para que nenhuma decisão fique desconectada das restantes.",
+      "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em mobilidade internacional e adaptação humana.",
     tagline: "Um único ponto. Nenhuma decisão isolada.",
     icon: "/icons/pessoa.svg",
     alt: "Ícone de pessoa",
