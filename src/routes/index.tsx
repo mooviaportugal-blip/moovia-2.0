@@ -1,87 +1,155 @@
-# MOOVIA Portugal — Ajustes Multi-Secção do Site
-## Prompt Antigravity/Lovable
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/SiteLayout";
+import { Hero } from "@/components/sections/Hero";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
+import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 
----
+import { ProcessSection } from "@/components/sections/ProcessSection";
 
-## ✅ 2 PONTOS JÁ CONFIRMADOS PELO FREDERICO
+import { AssessmentSection } from "@/components/sections/AssessmentSection";
+import { CasesSection } from "@/components/sections/CasesSection";
+import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
 
-1. **ASSINATURA DE MARCA — mantém-se a já confirmada**
-   - Assinatura principal (rodapé, capa do deck, etc.): "MOOVIA / Global Mobility Assurance / Delivering Global Mobility Success."
-   - A variante "Risk Intelligence. Human Success." NÃO é assinatura de marca concorrente — usar, no máximo, como subtítulo pontual dentro da tabela comparativa Global Mobility Management vs. Human Mobility Assurance, nunca substituindo a assinatura principal em nenhum outro local.
+import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
+import { FamiliesSection } from "@/components/sections/FamiliesSection";
 
-2. **FORMULAÇÃO SOBRE IDIOMA — mantém-se a cautelosa já decidida**
-   - Confirmado: nunca "vantagens da fala pelo corpo" ou qualquer afirmação de que a linguagem corporal muda ao falar outra língua. Usar sempre a formulação sobre carga cognitiva e viés já aprovada.
+import { MaiaSection } from "@/components/sections/MaiaSection";
 
----
+import { FormSection } from "@/components/sections/FormSection";
+import { BlogTeaserSection } from "@/components/sections/BlogTeaserSection";
+import { LisboaGallery } from "@/components/sections/LisboaGallery";
+import { AirplaneScene } from "@/components/AirplaneScene";
+import { useAirplaneEnabled } from "@/hooks/useAirplaneEnabled";
+import { motion } from "framer-motion";
+import { MaintenancePage } from "@/components/site/MaintenancePage";
 
-## 1. Nova secção/slide — "O que somos" (resolve pergunta comum)
-Adicionado em `/sobre` (posicionada em Empresas e Sobre).
-- **Título:** O que somos
-- **Corpo:** "Para o colaborador, a MOOVIA é um benefício — um acompanhamento de alto valor durante uma das maiores transições da sua vida. Para a empresa, a MOOVIA é um parceiro estratégico em Global Mobility — a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional."
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "MOOVIA Portugal — Human Mobility Assurance" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { property: "og:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
+      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+      { property: "og:url", content: "https://mooviaportugal.com/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "MOOVIA Portugal — Human Mobility Assurance" },
+      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Human Mobility Assurance | Global Mobility Success Framework™" },
+    ],
+    links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "O que é a MOOVIA Portugal?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A MOOVIA Portugal é uma empresa de coordenação de transição internacional de vida e património, especializada no corredor Brasil → Portugal. Diferente de agências de imigração ou imobiliárias, a MOOVIA coordena toda a jornada, visto, moradia, escola, fiscalidade e adaptação familiar, através de uma equipa multidisciplinar integrada.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Quanto custa se mudar para Portugal saindo do Brasil?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza uma Avaliação Estratégica (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Qual o visto mais adequado para brasileiros que querem morar em Portugal?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A escolha do visto depende do perfil do candidato: D7 para renda passiva ou trabalho remoto, D8 para nómadas digitais, D2 para empreendedores, e Reagrupamento Familiar para quem tem familiar com residência legal em Portugal. A MOOVIA conta com a Dra. Laura Costa, especialista em mobilidade internacional, para definir a estratégia migratória correta para cada perfil.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Como funciona a Avaliação Estratégica da MOOVIA?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sessão de 60 minutos conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos, riscos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. €250, abatidos no Mandato caso a família avance.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "O que é um Mandato MOOVIA?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: PLANEJAMOS (antes da mudança), INSTALAMOS (na chegada), INTEGRAMOS (primeiros meses) e ESTRUTURAMOS (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após a Avaliação Estratégica.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Qual a diferença entre a MOOVIA e uma agência de imigração?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Uma agência de imigração resolve a parte documental. A MOOVIA coordena tudo o que acontece antes, durante e depois: estratégia de mudança, processo migratório, busca de moradia, matrícula dos filhos, abertura de contas, adaptação emocional e estruturação patrimonial em Portugal. O problema de uma mudança internacional nunca é a burocracia, é que ninguém coordena o todo.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
+  }),
+  component: Home,
+});
 
----
+function Home() {
+  return <MaintenancePage />;
+}
 
-## 2. Nova secção — Dados de saúde mental de migrantes em Portugal
-Adicionado em `/sobre`.
-- **Eyebrow:** O CONTEXTO EM PORTUGAL
-- **Título:** A saúde mental de quem migra não é um detalhe.
-- **Blocos:** Estatísticas AXA Mind Health e Ordem dos Psicólogos sobre isolamento, burnout e habitacional.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function HomeReal() {
+  const airplaneEnabled = useAirplaneEnabled();
+  return (
+    <SiteLayout>
+      {airplaneEnabled && <AirplaneScene />}
+      <Hero />
+      
+      <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
+        <motion.div 
+          animate={{ x: [0, "-50%"] }}
+          transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+          className="flex whitespace-nowrap"
+        >
+          {[1, 2].map((i) => (
+            <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
+              Transição Internacional <span className="text-gold text-[10px]">♦</span> 
+              Brasil para Portugal <span className="text-gold text-[10px]">♦</span> 
+              Coordenação de Vida e Património <span className="text-gold text-[10px]">♦</span> 
+              Avaliação Estratégica <span className="text-gold text-[10px]">♦</span> 
+              Mandato Personalizado <span className="text-gold text-[10px]">♦</span> 
+              90 dias Pós-chegada <span className="text-gold text-[10px]">♦</span> 
+              School Matching <span className="text-gold text-[10px]">♦</span> 
+              Fiscalidade Internacional <span className="text-gold text-[10px]">♦</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
----
+      <ProblemSection />
+      <B2BRiskSection />
+      <NossaTeseSection />
+      <ProcessSection />
 
-## 3. Substituir frase — "Cada jornada começa de um lugar diferente"
-Localizado em `FamiliesSection.tsx`.
-- **Antes:** "Cada jornada começa de um lugar diferente."
-- **Depois:** "Atendemos executivos(as) e as suas famílias em todas as suas formas."
-
----
-
-## 4. Secção "O que receberá" (Assessment) — reorganizar entregáveis
-Localizado em `AssessmentSection.tsx`.
-- Reorganizada a estrutura atual para destacar: Entregável Executivo e Human Mobility Risk Assurance.
-- Adicionada nota sobre o Assessment ser conduzido na língua emocional.
-- CTA atualizado para "Solicitar Assessment".
-
----
-
-## 5. Secção "Uma rede multidisciplinar. Uma única estratégia."
-Localizado em `EcossistemaSection.tsx`.
-- Adicionado parágrafo sobre flexibilidade/orquestração de parceiros existentes (não substituição).
-
----
-
-## 6. REMOVER — secção "Acreditamos em qualidade, controlo..." (boutique)
-- `ManifestoSection.tsx` foi removido e as suas importações limpas em `/` e `/home`.
-
----
-
-## 7. "Os Nossos Programas" — adicionar linha inclusiva (RH)
-Localizado em `/servicos`.
-- Adicionado: "Para empresas e os seus colaboradores expatriados — e as famílias, em todas as suas formas."
-
----
-
-## 8. Correção factual — "cinco anos" → "sete anos"
-- Corrigido em `sobre.tsx` (história de origem).
-
----
-
-## 9. Tabela "Global Mobility Management vs. Human Mobility Assurance"
-Localizado em `/sobre`.
-- Removida tagline fraca.
-- Adicionado mockup visual de indicadores (Human Mobility Risk Score) com nota RGPD.
-
----
-
-## CHECKLIST
-- [x] Assinatura principal confirmada
-- [x] Formulação sobre idioma correta
-- [x] Secção "O que somos" adicionada
-- [x] Dados de saúde mental adicionados
-- [x] Frase de hero substituída
-- [x] Entregáveis reorganizados
-- [x] Parágrafo de flexibilidade adicionado
-- [x] Secção boutique removida
-- [x] Linha inclusiva em programas adicionada
-- [x] Correção de anos (5 -> 7) efetuada
-- [x] Mockup na tabela comparativa integrado
+      <CasesSection />
+      <MandatoRedeSection />
+      <AssessmentSection />
+      <EcossistemaSection />
+      
+      <FamiliesSection />
+      
+      <LisboaGallery />
+      <BlogTeaserSection />
+      <MaiaSection />
+      
+      <FormSection />
+    </SiteLayout>
+  );
+}
