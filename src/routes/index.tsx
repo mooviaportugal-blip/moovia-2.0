@@ -133,7 +133,7 @@ function Home() {
       <MarketResearchSection />
       <B2BRiskSection />
       <NossaTeseSection />
-      <MethodologySection />
+      
 
       <CasesSection />
       <MandatoRedeSection />
