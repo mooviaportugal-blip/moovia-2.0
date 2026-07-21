@@ -10,7 +10,7 @@ import { AssessmentSection } from "@/components/sections/AssessmentSection";
 
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { FamiliesSection } from "@/components/sections/FamiliesSection";
-import { ManifestoSection } from "@/components/sections/ManifestoSection";
+
 import { MaiaSection } from "@/components/sections/MaiaSection";
 
 import { FormSection } from "@/components/sections/FormSection";
@@ -68,7 +68,7 @@ function HomeReal() {
       
       <FamiliesSection />
       <LisboaGallery />
-      <ManifestoSection />
+      
       <BlogTeaserSection />
       <MaiaSection />
       

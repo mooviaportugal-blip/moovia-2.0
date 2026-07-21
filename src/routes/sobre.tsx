@@ -343,7 +343,7 @@ function ComoFazemosSection() {
 function HistoriaPessoal() {
   const paragrafos = [
     "A MOOVIA nasceu da união de duas experiências.",
-    "Durante mais de cinco anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
+    "Durante mais de sete anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
     "Mais tarde, depois de viver e trabalhar em diferentes países, percebi que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding — mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
     "A adaptação da família, o custo de vida, a moradia, as escolas, as expectativas e a integração só se transformavam em prioridade quando já havia um problema.",
     "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica que aprendi em Revenue Assurance. Identificar riscos antes que se transformem em perdas. Acompanhar sinais. Coordenar respostas. Medir resultados. E proteger o investimento que as empresas fazem nas pessoas.",
