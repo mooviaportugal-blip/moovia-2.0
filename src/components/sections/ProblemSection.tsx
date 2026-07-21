@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { LayersIcon, SearchIcon, AlertIcon, ClockIcon } from "@/components/ui/MooviaIcons";
-import planningAsset from "@/assets/problem-lisboa-planning.jpg";
+import airportFamilyAsset from "@/assets/problem-family-airport.png.asset.json";
 
 export function ProblemSection() {
   const cards = [
@@ -82,9 +82,9 @@ export function ProblemSection() {
             className="group relative min-h-[520px] lg:min-h-[640px] rounded-2xl overflow-hidden ring-1 ring-gold/40 shadow-[0_20px_60px_-20px_rgba(173,137,87,0.35)]"
           >
             <img
-              src={planningAsset}
+              src={airportFamilyAsset.url}
               loading="lazy"
-              alt="Planeamento Estratégico de Mobilidade Internacional"
+              alt="Família expatriada no aeroporto ao pôr do sol"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
