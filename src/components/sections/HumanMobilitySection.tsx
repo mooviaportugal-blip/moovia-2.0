@@ -11,7 +11,7 @@ const COLABORADOR = [
 
 const EMPRESA = [
   "Monitorização estruturada da mobilidade",
-  "Indicadores de Human Mobility Risk",
+  "Indicadores de Global Mobility Risk",
   "Executive Mobility Success Report",
   "Recomendações para RH e liderança",
   "Maior capacidade de intervenção preventiva",
@@ -40,7 +40,7 @@ export function HumanMobilitySection() {
           Para empresas
         </motion.p>
         <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[900px] mx-auto">
-          <span className="block font-[200] text-white">Human Mobility Risk</span>
+          <span className="block font-[200] text-white">Global Mobility Risk</span>
           <span className="block text-gold-l italic font-[300]">Assurance Program</span>
         </h2>
         <p className="font-body text-[14px] md:text-[16px] font-[400] text-gold uppercase tracking-[0.15em] mb-8 text-center">

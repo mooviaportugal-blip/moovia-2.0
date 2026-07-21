@@ -61,7 +61,7 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            <span className="block font-[200]">Human Mobility Risk</span>
+            <span className="block font-[200]">Global Mobility Risk</span>
             <span className="block font-[200]">Assurance Program</span>
             <span className="block text-gold-l italic font-[300] mt-4 uppercase text-[14px] tracking-[0.2em]">
               CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
@@ -78,7 +78,7 @@ export function B2BRiskSection() {
               Um benefício para o colaborador. Um investimento mensurável para a empresa.
             </p>
             <p>
-              Reduza o Human Mobility Risk com uma metodologia que aumenta a retenção, acelera a integração e transforma a mobilidade internacional em melhores resultados para o RH, para o CFO e para o negócio.
+              Reduza o Global Mobility Risk com uma metodologia que aumenta a retenção, acelera a integração e transforma a mobilidade internacional em melhores resultados para o RH, para o CFO e para o negócio.
             </p>
           </motion.div>
         </div>
