@@ -118,10 +118,10 @@ export const PHRASES: Record<string, Phrase> = {
     es: "Llegar es la mitad del proceso. La adaptación del cónyuge que dejó su carrera, de los niños en la nueva escuela y de la rutina reconstruida exige acompañamiento real.",
     en: "Arriving is half the process. The adaptation of the spouse who left a career, the children in a new school and the rebuilt routine requires real support.",
   },
-  "O mercado resolve tarefas. A MOOVIA resolve a decisão.": {
-    "pt-BR": "O mercado resolve tarefas. A MOOVIA resolve a decisão.",
-    es: "El mercado resuelve tareas. MOOVIA resuelve la decisión.",
-    en: "The market handles tasks. MOOVIA resolves the decision.",
+  "O mercado resolve tarefas. A MOOVIA assegura o sucesso da mobilidade corporativa.": {
+    "pt-BR": "O mercado resolve tarefas. A MOOVIA assegura o sucesso da mobilidade corporativa.",
+    es: "El mercado resuelve tareas. MOOVIA asegura el éxito de la movilidad corporativa.",
+    en: "The market handles tasks. MOOVIA ensures corporate mobility success.",
   },
 
   // Founders / team
