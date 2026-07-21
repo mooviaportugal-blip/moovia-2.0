@@ -101,11 +101,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  return <MaintenancePage />;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function HomeReal() {
   const airplaneEnabled = useAirplaneEnabled();
   return (
     <SiteLayout>
