@@ -4,38 +4,34 @@ import { cn } from "@/lib/utils";
 
 const dimensions = [
   {
-    id: "01",
+    id: "01 / 04",
     title: "Human Intelligence",
-    concept: "Compreendemos",
-    description: "Toda decisão estratégica começa por compreender pessoas, contexto e objetivos. Combinamos análise humana, experiência internacional e inteligência contextual para identificar os fatores que realmente influenciam o sucesso de uma mobilidade internacional.",
-    quote: "Better intelligence creates better decisions.",
+    description: "Toda mobilidade começa por compreender pessoas, não processos. Entrevistas, contexto familiar, expectativas, capacidade de adaptação — a metodologia da MOOVIA parte da inteligência humana antes de qualquer estrutura ou tecnologia entrar em ação.",
+    quote: "Antes dos dados, as pessoas.",
     icon: "/icons/aviao.svg",
     iconScale: 1.16,
   },
   {
-    id: "02",
+    id: "02 / 04",
     title: "Risk Assurance",
-    concept: "Antecipamos",
-    description: "Transformamos incerteza em previsibilidade. Identificamos riscos humanos, familiares e operacionais antes que comprometam integração, produtividade ou retenção.",
-    quote: "From uncertainty to informed decisions.",
+    description: "O que identificamos transforma-se em risco mensurável — adaptação familiar, integração cultural, alinhamento de expectativas. Não tratamos estes fatores como imponderáveis; tratamos como riscos que podem ser avaliados, mitigados e acompanhados.",
+    quote: "O que se mede, pode ser protegido.",
     icon: "/icons/ponte.svg",
     iconScale: 1.28,
   },
   {
-    id: "03",
+    id: "03 / 04",
     title: "Global Coordination",
-    concept: "Orquestramos",
-    description: "Coordenamos especialistas, parceiros e decisões sob uma única estratégia. Garantimos alinhamento entre todas as partes envolvidas para reduzir fricção e aumentar a eficiência da mobilidade internacional.",
-    quote: "One strategy. Multiple specialists.",
+    description: "Uma estratégia só funciona se todos os especialistas envolvidos — jurídico, fiscal, imobiliário, educacional — trabalharem na mesma direção. A MOOVIA orquestra essa rede, seja ela própria ou os parceiros que a empresa já tem, para que nenhuma decisão fique desconectada das restantes.",
+    quote: "Um único ponto. Nenhuma decisão isolada.",
     icon: "/icons/pessoa.svg",
     iconScale: 0.9,
   },
   {
-    id: "04",
+    id: "04 / 04",
     title: "Global Mobility Success",
-    concept: "Garantimos",
-    description: "O verdadeiro objetivo nunca foi apenas mudar de país. Medimos o sucesso pela integração sustentável, retenção, estabilidade e impacto de longo prazo para pessoas, famílias e organizações.",
-    quote: "Arrival is a milestone. Success is the destination.",
+    description: "O resultado não é a chegada. É a permanência, a integração e a produtividade sustentada ao longo do tempo. É assim que medimos se uma mobilidade internacional foi, de facto, bem-sucedida.",
+    quote: "O sucesso não é chegar. É permanecer.",
     icon: "/icons/casa.svg",
     iconScale: 0.95,
   },
@@ -72,8 +68,8 @@ export function MethodologySection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-sora font-[200] text-white text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight"
           >
-            As Quatro Dimensões da
-            <span className="block italic text-gold/90 mt-2">Inteligência MOOVIA</span>
+            Um símbolo.
+            <span className="block italic text-gold/90 mt-2">Quatro dimensões da Global Mobility Assurance.</span>
           </motion.h2>
         </div>
 
@@ -162,15 +158,11 @@ export function MethodologySection() {
 
                   <div className="h-px w-12 bg-gold/20 mx-auto" />
 
-                  <p className="font-urbanist font-[400] text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-2">
-                    {dim.concept}
-                  </p>
-
                   <p className="font-urbanist font-[300] text-[15px] text-w35 leading-[1.8] min-h-[120px]">
                     {dim.description}
                   </p>
 
-                  <p className="font-urbanist font-[300] text-[13px] text-gold/70 italic mt-6 tracking-wide">
+                  <p className="font-urbanist font-[300] text-[13px] text-gold/70 italic mt-6 tracking-wide border-t border-gold/10 pt-4">
                     {dim.quote}
                   </p>
                 </div>
