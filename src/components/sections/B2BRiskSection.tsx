@@ -61,10 +61,10 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            <span className="block font-[200]">O investimento em talento</span>
-            <span className="block font-[200]">internacional está exposto.</span>
-            <span className="block text-gold-l italic font-[300] mt-4">
-              A maioria das empresas<br className="hidden sm:block" /> não avalia esta exposição.
+            <span className="block font-[200]">Human Mobility Risk</span>
+            <span className="block font-[200]">Assurance Program</span>
+            <span className="block text-gold-l italic font-[300] mt-4 uppercase text-[14px] tracking-[0.2em]">
+              CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
             </span>
           </motion.h2>
 
@@ -72,13 +72,13 @@ export function B2BRiskSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-body text-[16px] md:text-[18px] font-[300] text-white/70 leading-[1.9] max-w-[580px] space-y-6"
+            className="font-body text-[16px] md:text-[18px] font-[300] text-white/70 leading-[1.8] max-w-[720px] space-y-6"
           >
-            <p>
-              As organizações alocam recursos significativos à contratação internacional.
+            <p className="text-white/90 font-medium">
+              Um benefício para o colaborador. Um investimento mensurável para a empresa.
             </p>
             <p>
-              Grande parte deste capital fica vulnerável a fatores sociais, familiares e culturais que o processo tradicional de onboarding corporativo não consegue monitorizar nem resolver.
+              Reduza o Human Mobility Risk com uma metodologia que aumenta a retenção, acelera a integração e transforma a mobilidade internacional em melhores resultados para o RH, para o CFO e para o negócio.
             </p>
           </motion.div>
         </div>
