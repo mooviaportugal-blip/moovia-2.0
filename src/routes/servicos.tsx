@@ -8,17 +8,17 @@ import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços MOOVIA — Life Transition e Human Mobility Risk Assurance Program" },
+      { title: "Serviços MOOVIA — Life Transition e Global Mobility Risk Assurance Program" },
       {
         name: "description",
         content:
-          "Duas formas de coordenar mobilidade internacional: Strategic Discovery Call para pessoas e famílias, e Human Mobility Risk Assurance Program para empresas.",
+          "Duas formas de coordenar mobilidade internacional: Strategic Discovery Call para pessoas e famílias, e Global Mobility Risk Assurance Program para empresas.",
       },
       { property: "og:title", content: "Serviços MOOVIA — Global Mobility Success" },
       {
         property: "og:description",
         content:
-          "Strategic Discovery Call + Human Mobility Risk Assurance Program. A metodologia MOOVIA para pessoas e empresas.",
+          "Strategic Discovery Call + Global Mobility Risk Assurance Program. A metodologia MOOVIA para pessoas e empresas.",
       },
       { property: "og:url", content: "https://mooviaportugal.com/servicos" },
       { property: "og:type", content: "website" },
@@ -99,7 +99,7 @@ function Servicos() {
         </div>
       </section>
 
-      {/* BLOCO 2 — Human Mobility Risk Assurance Program (empresas) */}
+      {/* BLOCO 2 — Global Mobility Risk Assurance Program (empresas) */}
       <HumanMobilitySection />
     </SiteLayout>
   );

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/perguntas-frequentes")({
       {
         name: "description",
         content:
-          "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Human Mobility Risk Assurance Program.",
+          "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Global Mobility Risk Assurance Program.",
       },
       { property: "og:title", content: "Perguntas Frequentes — MOOVIA" },
       {
@@ -51,11 +51,11 @@ const faqs: QA[] = [
     a: "Não. A MOOVIA atende qualquer pessoa, família ou empresa que esteja a coordenar uma mobilidade internacional para Portugal, independentemente da nacionalidade de origem. A nossa metodologia foi desenhada para ser replicada internacionalmente, e Portugal continua a ser o nosso mercado principal.",
   },
   {
-    q: "O que é o Human Mobility Risk Assurance Program?",
+    q: "O que é o Global Mobility Risk Assurance Program?",
     a: "É o programa da MOOVIA para empresas que contratam talento internacional. Reduz o risco humano da mobilidade — adaptação da família, integração cultural, isolamento social — que normalmente fica fora do processo de onboarding e é uma das principais causas de turnover em contratações internacionais.",
   },
   {
-    q: "Como funciona a cobrança do Human Mobility Risk Assurance Program?",
+    q: "Como funciona a cobrança do Global Mobility Risk Assurance Program?",
     a: "Estrutura de cobrança definida caso a caso, conforme o perfil da equipa e os países envolvidos. Detalhes são apresentados na Strategic Discovery Call para empresas.",
     pending: true,
   },
@@ -144,7 +144,7 @@ function FAQPage() {
             para as decisões que exigem clareza.
           </h1>
           <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.7] max-w-[720px]">
-            Sobre a MOOVIA, o Strategic Assessment, o mandato completo e o Human Mobility Risk Assurance Program para empresas.
+            Sobre a MOOVIA, o Strategic Assessment, o mandato completo e o Global Mobility Risk Assurance Program para empresas.
           </p>
         </div>
       </section>

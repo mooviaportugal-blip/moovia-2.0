@@ -90,7 +90,7 @@ export function HumanMobilitySection() {
             className="group relative inline-flex overflow-hidden border border-gold/50 text-gold hover:text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate transition-colors"
           >
             <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10">Conhecer o Human Mobility Risk Assurance Program</span>
+            <span className="relative z-10">Conhecer o Global Mobility Risk Assurance Program</span>
           </Link>
         </div>
       </div>

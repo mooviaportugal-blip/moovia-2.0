@@ -8,13 +8,13 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Human Mobility Risk Assurance Program — MOOVIA" },
+      { title: "Global Mobility Risk Assurance Program — MOOVIA" },
       {
         name: "description",
         content:
           "Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
-      { property: "og:title", content: "Human Mobility Risk Assurance Program — MOOVIA" },
+      { property: "og:title", content: "Global Mobility Risk Assurance Program — MOOVIA" },
       {
         property: "og:description",
         content:
@@ -165,7 +165,7 @@ function EmpresasPage() {
             >
               <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
               <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-                Conhecer o Human Mobility Risk Assurance Program
+                Conhecer o Global Mobility Risk Assurance Program
               </span>
             </Link>
           </div>
@@ -269,7 +269,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic block mt-1">próxima contratação internacional?</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto mb-6">
-            Agende uma Strategic Discovery Call para entendermos o perfil da sua equipa, os países envolvidos e como o Human Mobility Risk Assurance Program pode ser estruturado para a sua empresa.
+            Agende uma Strategic Discovery Call para entendermos o perfil da sua equipa, os países envolvidos e como o Global Mobility Risk Assurance Program pode ser estruturado para a sua empresa.
           </p>
           <p className="font-body text-[13px] md:text-[14px] font-[400] text-gold/90 leading-[1.6] max-w-[780px] mx-auto mb-12 italic">
             Agende e a equipa MOOVIA entrará em contacto.
