@@ -139,9 +139,17 @@ export function AssessmentSection() {
               </div>
             </div>
 
-            {/* Assessment Methodology Quote */}
-            <div className="mb-8 font-body text-[13px] font-[300] text-w35 italic leading-[1.7] border-l border-gold/20 pl-4 py-2">
-              "O Assessment é conduzido, sempre que possível, na língua emocional do participante — reduzindo o viés que a comunicação numa segunda língua pode introduzir na avaliação."
+            {/* Assessment Methodology Quote - Expanded Version */}
+            <div className="mb-8 font-body text-[13px] font-[300] text-w35 leading-[1.7] border-l border-gold/20 pl-4 py-2 space-y-3">
+              <p>
+                O Assessment é conduzido, sempre que possível, na língua emocional do participante.
+              </p>
+              <p>
+                Falar numa segunda língua exige esforço cognitivo — a pessoa está, ao mesmo tempo, a pensar, traduzir e escolher palavras. Esse esforço tem um efeito observável: menos gestos, mais pausas, olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
+              </p>
+              <p>
+                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível — para que o que é lido seja a pessoa, não o esforço de falar noutra língua.
+              </p>
             </div>
 
             {/* Human Dimension Assessment */}
