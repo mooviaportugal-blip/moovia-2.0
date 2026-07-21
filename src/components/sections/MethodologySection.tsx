@@ -68,8 +68,8 @@ export function MethodologySection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-sora font-[200] text-white text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight"
           >
-            As Quatro Dimensões da
-            <span className="block italic text-gold/90 mt-2">Inteligência MOOVIA</span>
+            Um símbolo.
+            <span className="block italic text-gold/90 mt-2">Quatro dimensões da Global Mobility Assurance.</span>
           </motion.h2>
         </div>
 
