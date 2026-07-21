@@ -47,7 +47,9 @@ function SobrePage() {
       <EquacaoHistoria />
       <HistoriaPessoal />
       <MarketResearchSection />
+      <SaudeMentalMigrantes />
       <NossaCategoria />
+      <OqueSomos />
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
