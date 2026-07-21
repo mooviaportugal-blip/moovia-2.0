@@ -14,44 +14,44 @@ type Card = {
 const cards: Card[] = [
   {
     num: "01 / 04",
-    concept: "A Decisão",
-    pillar: "Planejamos",
+    concept: "Human Intelligence",
+    pillar: "",
     description:
-      "Toda transição começa com uma decisão. Antes de comprar a passagem, é preciso ter clareza sobre o que vem depois: visto, escola, imóvel, fiscalidade, família. A Avaliação Estratégica existe para que a partida seja o início de um plano, não o início de um improviso.",
-    tagline: "A decisão certa começa aqui.",
+      "Toda mobilidade começa por compreender pessoas, não processos. Entrevistas, contexto familiar, expectativas, capacidade de adaptação — a metodologia da MOOVIA parte da inteligência humana antes de qualquer estrutura ou tecnologia entrar em ação.",
+    tagline: "Antes dos dados, as pessoas.",
     icon: "/icons/aviao.svg",
     alt: "Ícone de avião",
     iconScale: 1.16,
   },
   {
     num: "02 / 04",
-    concept: "A Passagem",
-    pillar: "Instalamos",
+    concept: "Risk Assurance",
+    pillar: "",
     description:
-      "Cruzar uma fronteira não é só pegar um avião. É obter documentação, abrir uma conta bancária, conseguir o NIF, a casa, a escola, as ativações. A MOOVIA coordena cada etapa dessa passagem para que a família chegue a Portugal instalada, não perdida.",
-    tagline: "A fronteira é o começo, não o obstáculo.",
+      "O que identificamos transforma-se em risco mensurável — adaptação familiar, integração cultural, alinhamento de expectativas. Não tratamos estes fatores como imponderáveis; tratamos como riscos que podem ser avaliados, mitigados e acompanhados.",
+    tagline: "O que se mede, pode ser protegido.",
     icon: "/icons/ponte.svg",
     alt: "Ícone de arco/ponte",
     iconScale: 1.28,
   },
   {
     num: "03 / 04",
-    concept: "A Coordenação",
-    pillar: "Integramos",
+    concept: "Global Coordination",
+    pillar: "",
     description:
-      "Uma mudança de país não termina quando o avião aterrissa. Começa. A escola das crianças, a rotina do cônjuge, a rede social, a adaptação cultural, tudo isso precisa de atenção nos primeiros 90 dias. A MOOVIA é a única empresa que acompanha este período de forma estruturada.",
-    tagline: "Chegar é metade. Ficar é o que importa.",
+      "Uma estratégia só funciona se todos os especialistas envolvidos — jurídico, fiscal, imobiliário, educacional — trabalharem na mesma direção. A MOOVIA orquestra essa rede, seja ela própria ou os parceiros que a empresa já tem, para que nenhuma decisão fique desconectada das restantes.",
+    tagline: "Um único ponto. Nenhuma decisão isolada.",
     icon: "/icons/pessoa.svg",
     alt: "Ícone de pessoa",
     iconScale: 0.9,
   },
   {
     num: "04 / 04",
-    concept: "O Destino",
-    pillar: "Estruturamos",
+    concept: "Global Mobility Success",
+    pillar: "",
     description:
-      "O objetivo final não é ter o visto ou o NIF. É ter uma vida em Portugal, estruturada, legal e financeiramente organizada. Fiscalidade, empresa, patrimônio, investimento. A MOOVIA coordena a chegada e a construção do que vem depois.",
-    tagline: "Portugal não é o destino. É o começo.",
+      "O resultado não é a chegada. É a permanência, a integração e a produtividade sustentada ao longo do tempo. É assim que medimos se uma mobilidade internacional foi, de facto, bem-sucedida.",
+    tagline: "O sucesso não é chegar. É permanecer.",
     icon: "/icons/casa.svg",
     alt: "Ícone de casa",
     iconScale: 0.95,
@@ -77,11 +77,11 @@ export function SymbolSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-sora font-[200] text-white text-[clamp(36px,5vw,64px)] leading-[1.05] mb-8"
+          className="font-sora font-[200] text-white text-[clamp(36px,5vw,64px)] leading-[1.1] mb-8"
         >
-          Quatro ícones.
+          Um símbolo.
           <br />
-          <span className="italic text-gold/90">A sua jornada inteira.</span>
+          <span className="italic text-gold/90">Quatro dimensões da Global Mobility Assurance.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
