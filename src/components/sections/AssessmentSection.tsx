@@ -123,23 +123,25 @@ export function AssessmentSection() {
                 </div>
                 <ul className="grid grid-cols-1 gap-y-3 pl-2 border-l border-gold/20 ml-2">
                   {[
-                    { label: "Alinhamento de Expectativas", status: "🟢🟡🔴" },
-                    { label: "Capacidade de Adaptação", status: "🟢🟡🔴" },
-                    { label: "Riscos de Isolamento e Retenção", status: "🟢🟡🔴" }
+                    "Alinhamento de Expectativas",
+                    "Capacidade de Adaptação",
+                    "Riscos de Isolamento e Retenção"
                   ].map((d) => (
                     <li
-                      key={d.label}
-                      className="flex justify-between items-center gap-3 font-body text-[14px] font-[300] text-white/80 bg-white/[0.03] px-3 py-2 rounded-md border border-white/[0.05]"
+                      key={d}
+                      className="flex items-center gap-3 font-body text-[14px] font-[300] text-white/80"
                     >
-                      <span className="flex items-center gap-2">
-                        <ArrowRight size={14} className="text-gold shrink-0" strokeWidth={2} />
-                        {d.label}
-                      </span>
-                      <span className="text-[10px] tracking-[0.2em]">{d.status}</span>
+                      <ArrowRight size={14} className="text-gold shrink-0" strokeWidth={2} />
+                      {d}
                     </li>
                   ))}
                 </ul>
               </div>
+            </div>
+
+            {/* Assessment Methodology Quote */}
+            <div className="mb-8 font-body text-[13px] font-[300] text-w35 italic leading-[1.7] border-l border-gold/20 pl-4 py-2">
+              "O Assessment é conduzido, sempre que possível, na língua emocional do participante — reduzindo o viés que a comunicação numa segunda língua pode introduzir na avaliação."
             </div>
 
             {/* Human Dimension Assessment */}
@@ -202,7 +204,7 @@ export function AssessmentSection() {
               className="block text-center w-full bg-gold text-black font-body font-[600] text-[13px] tracking-[0.22em] uppercase py-6 transition-all hover:bg-gold-xl group overflow-hidden relative"
             >
               <span className="relative z-10 leading-tight">
-                Solicitar Global Mobility<br className="sm:hidden" /> Success Assessment™
+                Solicitar Assessment
               </span>
               <div className="absolute inset-0 bg-gold-xl translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             </a>
