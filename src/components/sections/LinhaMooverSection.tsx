@@ -258,9 +258,9 @@ export function LinhaMooverSection() {
                             )}
                           >
                             <div className="flex items-start gap-4 mb-4">
-                              {member.img ? (
+                              {member.type === 'person' && member.img ? (
                                 <img src={member.img} alt={member.name} className="h-14 w-14 rounded-full border border-gold/30 object-cover" />
-                              ) : member.logo ? (
+                              ) : member.type === 'entity' && member.logo ? (
                                 <div className="h-14 w-14 rounded-full border border-gold/30 bg-black p-2 flex items-center justify-center">
                                   <img src={member.logo} alt={member.name} className="w-full h-full object-contain" />
                                 </div>
@@ -268,7 +268,11 @@ export function LinhaMooverSection() {
                                 <div className="h-14 w-14 rounded-full border border-gold/60 bg-gold/10 flex items-center justify-center text-gold">
                                   <TrainFront size={24} />
                                 </div>
-                              ) : null}
+                              ) : (
+                                <div className="h-14 w-14 rounded-full border border-gold/30 bg-black/40 flex items-center justify-center text-gold/40">
+                                  <span className="font-sora text-xs">M</span>
+                                </div>
+                              )}
                               <div>
                                 <h4 className="font-sora text-white text-sm font-medium tracking-wide">{member.name}</h4>
                                 <p className="font-urbanist text-gold/80 text-[10px] uppercase tracking-wider mt-1">{member.role}</p>
