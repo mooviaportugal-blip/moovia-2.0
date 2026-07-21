@@ -127,9 +127,13 @@ function ComparacaoCategoria() {
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">Categoria de mercado</p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center max-w-[880px] mx-auto">
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-2 text-center max-w-[880px] mx-auto">
           A diferença para <span className="italic text-gold-l">Global Mobility Management.</span>
         </h2>
+        <p className="font-body text-[12px] font-[400] tracking-[0.2em] uppercase text-gold/60 mb-14 text-center">
+          Risk Intelligence. Human Success.
+        </p>
+
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           <div className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Management</p>
@@ -145,7 +149,48 @@ function ComparacaoCategoria() {
           </div>
           <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Human Mobility Assurance</p>
-            <p className="font-display font-[300] text-gold-l text-[20px] leading-[1.3] mb-6 italic">Avalia se a mobilidade vai funcionar</p>
+            
+            {/* Mockup visual de relatório */}
+            <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl">
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-4 border-b border-gold/10 pb-2">
+                EXEMPLO DE ENTREGÁVEL PARA EMPRESAS<br/>
+                <span className="text-[9px] normal-case opacity-60">(Dados agregados e anonimizados)</span>
+              </p>
+              
+              <div className="flex justify-between items-end mb-6">
+                <div>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Human Mobility Risk Score</p>
+                  <p className="text-2xl font-display font-[300] text-white">74 <span className="text-sm text-white/40">/ 100</span></p>
+                </div>
+                <div className="text-right">
+                  <span className="inline-block px-2 py-0.5 bg-red-900/30 border border-red-500/30 text-red-400 text-[9px] uppercase tracking-widest rounded-full">High Risk</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  { label: "Family Alignment", score: 82, color: "bg-green-500/50" },
+                  { label: "Financial Preparedness", score: 46, color: "bg-red-500/50" },
+                  { label: "Cultural Adaptation", score: 71, color: "bg-yellow-500/50" },
+                  { label: "Career Continuity", score: 38, color: "bg-red-500/50" },
+                ].map((item) => (
+                  <div key={item.label} className="space-y-1">
+                    <div className="flex justify-between text-[10px] text-w70 font-[300]">
+                      <span>{item.label}</span>
+                      <span>{item.score}</span>
+                    </div>
+                    <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                      <div className={`h-full ${item.color}`} style={{ width: `${item.score}%` }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
+                Nota: "Estes indicadores não contêm dados pessoais. São métricas agregadas para apoio à decisão estratégica."
+              </p>
+            </div>
+
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.85]">
               Avalia se as condições humanas, familiares, financeiras e territoriais estão alinhadas para que essa mobilidade produza o resultado esperado.
             </p>
