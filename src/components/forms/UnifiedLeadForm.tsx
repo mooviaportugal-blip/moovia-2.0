@@ -19,7 +19,7 @@ const chipBtn = (active: boolean) =>
   }`;
 
 export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
-  const [tipo, setTipo] = useState<Tipo | null>(null);
+  const [tipo, setTipo] = useState<Tipo | null>("empresa");
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<any>({});
@@ -125,12 +125,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
 
   return (
     <div className="mx-auto max-w-[720px]">
-      <button
-        onClick={() => setTipo(null)}
-        className="font-urbanist text-[11px] tracking-[0.24em] uppercase text-w35 hover:text-gold mb-6"
-      >
-        ← voltar
-      </button>
+      {/* Botão de voltar removido para manter foco em empresas */}
 
       <form
         onSubmit={(e) => {
@@ -139,7 +134,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         }}
         className="flex flex-col gap-1"
       >
-        {tipo === "pessoa" ? (
+        {false ? (
           <>
             <select
               required
@@ -281,7 +276,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         {/* Contacto — comum */}
         <input
           required
-          placeholder={tipo === "empresa" ? "Nome do contacto" : "Nome completo"}
+          placeholder="Nome do contacto"
           value={form.name || ""}
           onChange={(e) => set("name", e.target.value)}
           className={inputCls}
@@ -298,7 +293,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
             required
             value={form.email || ""}
             onChange={(v) => set("email", v)}
-            placeholder={tipo === "empresa" ? "E-mail corporativo" : "E-mail"}
+            placeholder="E-mail corporativo"
             className="w-full bg-transparent border-0 outline-none font-urbanist text-[15px] font-[300] text-w70"
           />
         </div>

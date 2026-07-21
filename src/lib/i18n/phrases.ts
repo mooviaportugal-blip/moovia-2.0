@@ -113,15 +113,15 @@ export const PHRASES: Record<string, Phrase> = {
     es: "Un piso en el barrio equivocado. Una escuela sin plazas. Una rutina familiar mal estructurada. Cada error cuesta dinero, tiempo y energía que la familia no tiene.",
     en: "An apartment in the wrong neighbourhood. A school with no places. A poorly structured routine for the family. Every mistake costs money, time and energy the family does not have.",
   },
-  "Chegar é metade do processo. A adaptação, do cônjuge que largou a carreira, das crianças na nova escola, da rotina reconstruída, exige acompanhamento real.": {
-    "pt-BR": "Chegar é metade do processo. A adaptação, do cônjuge que largou a carreira, das crianças na nova escola, da rotina reconstruída, exige acompanhamento real.",
-    es: "Llegar es la mitad del proceso. La adaptación del cónyuge que dejó su carrera, de los niños en la nueva escuela y de la rutina reconstruida exige acompañamiento real.",
-    en: "Arriving is half the process. The adaptation of the spouse who left a career, the children in a new school and the rebuilt routine requires real support.",
+  "A adaptação humana é o fator crítico de sucesso na mobilidade internacional. O acompanhamento real reduz riscos de retenção e garante a continuidade do talento.": {
+    "pt-BR": "A adaptação humana é o fator crítico de sucesso na mobilidade internacional. O acompanhamento real reduz riscos de retenção e garante a continuidade do talento.",
+    es: "La adaptación humana es el factor crítico de éxito en la movilidad internacional. El acompañamiento real reduce riesgos de retención y garantiza la continuidad del talento.",
+    en: "Human adaptation is the critical success factor in international mobility. Real support reduces retention risks and ensures talent continuity.",
   },
-  "O mercado resolve tarefas. A MOOVIA resolve a decisão.": {
-    "pt-BR": "O mercado resolve tarefas. A MOOVIA resolve a decisão.",
-    es: "El mercado resuelve tareas. MOOVIA resuelve la decisión.",
-    en: "The market handles tasks. MOOVIA resolves the decision.",
+  "O mercado resolve tarefas. A MOOVIA assegura o sucesso da mobilidade corporativa.": {
+    "pt-BR": "O mercado resolve tarefas. A MOOVIA assegura o sucesso da mobilidade corporativa.",
+    es: "El mercado resuelve tareas. MOOVIA asegura el éxito de la movilidad corporativa.",
+    en: "The market handles tasks. MOOVIA ensures corporate mobility success.",
   },
 
   // Founders / team

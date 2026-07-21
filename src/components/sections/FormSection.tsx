@@ -27,7 +27,7 @@ export function FormSection() {
           </motion.h2>
           <div className="space-y-6 max-w-lg mb-10">
             <p className="font-urbanist text-[16px] font-[300] text-w35 leading-[1.9]">
-              Quer pretenda proteger o ROI das suas contratações internacionais ou planear a mudança da sua própria família com segurança, a nossa equipa ajuda a mapear os riscos e a definir a melhor estratégia.
+              Quer pretenda proteger o ROI das contratações internacionais da sua empresa ou planear a mobilidade corporativa com segurança, a nossa equipa ajuda a mapear os riscos e a definir a melhor estratégia.
             </p>
           </div>
 
