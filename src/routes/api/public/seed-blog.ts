@@ -69,9 +69,9 @@ export const Route = createFileRoute("/api/public/seed-blog")({
 
 <p>Durante muitos anos a mobilidade internacional foi tratada como uma sequência de tarefas administrativas. Hoje, empresas mais maduras começam a enxergá-la como uma estratégia de retenção de talentos e continuidade do negócio. O foco deixa de ser apenas mover pessoas entre países e passa a ser proteger um investimento estratégico.</p>
 
-<h2>O papel do MOOVIA Mobility Risk Assessment™</h2>
+<h2>O papel do MOOVIA Mobility Risk Assessment</h2>
 
-<p>O <strong>MOOVIA Mobility Risk Assessment™</strong> nasceu exatamente para responder a esse desafio. Antes da mudança, avaliamos fatores profissionais, familiares, financeiros, territoriais, culturais e emocionais que podem comprometer a integração. A partir dessa avaliação, estruturamos um plano de mitigação e coordenamos especialistas para aumentar as probabilidades de sucesso.</p>
+<p>O <strong>MOOVIA Mobility Risk Assessment</strong> nasceu exatamente para responder a esse desafio. Antes da mudança, avaliamos fatores profissionais, familiares, financeiros, territoriais, culturais e emocionais que podem comprometer a integração. A partir dessa avaliação, estruturamos um plano de mitigação e coordenamos especialistas para aumentar as probabilidades de sucesso.</p>
 
 <p>Nosso objetivo é reduzir o risco humano da <strong>mobilidade internacional</strong>.</p>
 
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
 
 <p>Quando os riscos são identificados antes da mudança e tratados de forma estruturada, a mobilidade deixa de ser apenas uma operação logística e passa a ser uma vantagem competitiva.</p>
 
-<p><em>Esse é o propósito do MOOVIA Mobility Risk Assessment™: transformar riscos invisíveis em decisões melhores e criar as condições para um verdadeiro Global Mobility Success.</em></p>
+<p><em>Esse é o propósito do MOOVIA Mobility Risk Assessment: transformar riscos invisíveis em decisões melhores e criar as condições para um verdadeiro Global Mobility Success.</em></p>
 
 <h3>Referências</h3>
 

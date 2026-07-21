@@ -83,7 +83,7 @@ export function ConversaGratuitaStrip() {
             <span className="relative">Agendar agora</span>
           </a>
           <p className="font-body font-[300] italic text-[11px] text-w35 mt-4 leading-[1.5]">
-            Se identificarmos fit, o próximo passo é o Global Mobility Success Assessment™ — com proposta sob consulta.
+            Se identificarmos fit, o próximo passo é o Global Mobility Success Assessment — com proposta sob consulta.
           </p>
         </motion.div>
       </div>

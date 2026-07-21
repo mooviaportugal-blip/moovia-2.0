@@ -47,7 +47,7 @@ const ESTACOES: Estacao[] = [
     nome: "Diagnosticar",
     pergunta: "Compreender objetivos, riscos, stakeholders e fatores críticos de sucesso.",
     objetivo:
-      "Análise inicial do contexto, dos stakeholders e das variáveis críticas da mobilidade. Metodologia: Entrevista Estratégica MOOVIA™, AI Mobility Discovery™, Context Mapping Framework™. A IA estrutura informação e identifica padrões; a decisão é sempre dos especialistas MOOVIA.",
+      "Análise inicial do contexto, dos stakeholders e das variáveis críticas da mobilidade. Metodologia: Entrevista Estratégica MOOVIA, AI Mobility Discovery, Context Mapping Framework. A IA estrutura informação e identifica padrões; a decisão é sempre dos especialistas MOOVIA.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Framework Owner · Lead Strategist" },
     ],
@@ -57,7 +57,7 @@ const ESTACOES: Estacao[] = [
     nome: "Avaliar",
     pergunta: "Identificar riscos estratégicos, operacionais, familiares e patrimoniais.",
     objetivo:
-      "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Mobility Risk Assessment™.",
+      "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Mobility Risk Assessment.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Global Mobility Strategy" },
       { nome: "Dra. Letícia de Mello", papel: "Adaptive Integration Assessment" },
@@ -88,7 +88,7 @@ const ESTACOES: Estacao[] = [
     nome: "Integrar",
     pergunta: "Acompanhar a adaptação da família e garantir os resultados esperados.",
     objetivo:
-      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Adaptive Integration Framework™, AEAI Follow-up™, AI Success Monitor™.",
+      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Adaptive Integration Framework, AEAI Follow-up, AI Success Monitor.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Programme Director" },
       { nome: "Dra. Letícia de Mello", papel: "Adaptive Integration Specialist" },
@@ -99,7 +99,7 @@ const ESTACOES: Estacao[] = [
     nome: "Medir",
     pergunta: "Monitorizar indicadores de sucesso e apoiar decisões futuras.",
     objetivo:
-      "Acompanhamento contínuo dos resultados da mobilidade. Metodologia: Global Mobility Success Index™, Outcome Dashboard™, AI Predictive Insights™.",
+      "Acompanhamento contínuo dos resultados da mobilidade. Metodologia: Global Mobility Success Index, Outcome Dashboard, AI Predictive Insights.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Programme Director" },
     ],
@@ -659,7 +659,7 @@ export function JornadaCliente() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-[80px]">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8 flex items-center gap-3">
           <span className="w-6 h-px bg-gold" />
-          Framework Global Mobility Success™
+          Framework Global Mobility Success
         </p>
         
         <h2 className="font-display text-[clamp(32px,4.5vw,56px)] leading-[1.1] tracking-[-0.03em] mb-12 max-w-4xl">

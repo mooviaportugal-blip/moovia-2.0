@@ -165,7 +165,7 @@ function EmpresasPage() {
             >
               <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
               <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-                Conhecer o Human Mobility Risk Assurance Program™
+                Conhecer o Human Mobility Risk Assurance Program
               </span>
             </Link>
           </div>
@@ -241,7 +241,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic">Aplicada à sua equipa.</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto">
-            O MOOVIA Framework™ coordena cada etapa da mobilidade do seu colaborador — do assessment inicial à integração completa da família — com o mesmo rigor que aplicamos a cada mandato individual.
+            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador — do assessment inicial à integração completa da família — com o mesmo rigor que aplicamos a cada mandato individual.
           </p>
         </div>
       </section>
