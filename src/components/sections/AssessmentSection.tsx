@@ -120,27 +120,6 @@ export function AssessmentSection() {
               </p>
             </div>
 
-            {/* Human Dimension Assessment */}
-            <div className="mb-8 mt-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
-              <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
-                Human Dimension Assessment
-              </p>
-              <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
-                Uma avaliação integrada da dimensão humana da mobilidade
-                internacional, ajudando a antecipar fatores que podem
-                influenciar a adaptação, o bem-estar e o sucesso da transição.
-              </p>
-              <p className="font-body text-[12px] font-[300] italic text-white/50 leading-[1.5]">
-                Conduzido por <span className="not-italic text-gold">Frederico Prado</span>, com o apoio da{" "}
-                <span className="not-italic text-gold">Dra. Letícia de Mello</span>.
-              </p>
-
-              {leticiaQuote ? (
-                <blockquote className="mt-5 pl-4 border-l-2 border-gold/60 font-display text-[14px] font-[300] italic text-white/85 leading-[1.6]">
-                  &ldquo;{leticiaQuote}&rdquo;
-                </blockquote>
-              ) : null}
-            </div>
 
 
             {/* Entregável */}
