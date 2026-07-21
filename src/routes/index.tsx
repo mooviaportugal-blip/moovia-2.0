@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
+import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 
 import { ProcessSection } from "@/components/sections/ProcessSection";
@@ -129,6 +130,7 @@ function Home() {
       </div>
 
       <ProblemSection />
+      <MarketResearchSection />
       <B2BRiskSection />
       <NossaTeseSection />
       <ProcessSection />
