@@ -32,7 +32,7 @@ const faqs: QA[] = [
   },
   {
     q: "O que é o Strategic Assessment?",
-    a: "Trabalho estratégico real com entregável físico — não uma consulta. Uma sessão dedicada com um founder, mapeamento completo de perfil, riscos, estratégias e cronograma, incluindo o Human Dimension Assessment, conduzido por Frederico Prado com o apoio da Dra. Letícia de Mello. Sob consulta, personalizado conforme o perfil — cada proposta é desenhada à medida da complexidade de cada cliente, particular ou empresa.",
+    a: "Trabalho estratégico real com entregável físico, não apenas uma consulta. O Assessment consiste numa sessão dedicada com um founder, mapeamento completo de perfil, riscos, estratégias e cronograma. Inclui também o Human Dimension Assessment, conduzido por Frederico Prado com o apoio da Dra. Letícia de Mello. Cada proposta é personalizada e desenhada à medida da complexidade do caso, seja para um particular ou para uma empresa.",
   },
   {
     q: "A MOOVIA trabalha com pacotes ou planos de serviço?",
