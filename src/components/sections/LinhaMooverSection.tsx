@@ -313,7 +313,7 @@ export function LinhaMooverSection() {
               <div className="w-px h-16 bg-gradient-to-b from-gold/60 to-transparent" />
               <div className="border border-gold/40 bg-navy px-8 py-3 rounded-sm shadow-[0_0_30px_rgba(173,137,87,0.2)]">
                 <div className="flex items-center gap-3">
-                  <span className="text-xl">🏁</span>
+                  <img src="/mooviagold.svg" alt="MOOVIA" className="h-6 w-6 object-contain" />
                   <div className="text-center">
                     <h3 className="font-sora text-gold text-sm font-semibold tracking-[0.2em] uppercase">Global Mobility Success</h3>
                     <p className="font-urbanist text-w35 text-[10px] mt-1 italic uppercase tracking-widest">
