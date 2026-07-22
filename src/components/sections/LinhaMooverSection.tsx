@@ -34,7 +34,7 @@ const LINES = [
         id: "pablo",
         number: "02",
         name: "PABLO ALEJANDRO",
-        role: "CTO & Co-Founder",
+        role: "Co-Founder & CPTO",
         img: "/images/pablo.png",
         tags: ["Tecnologia", "Inteligência de Dados", "Desenvolvimento de IA"],
         type: "person" as const
@@ -43,7 +43,7 @@ const LINES = [
         id: "leticia",
         number: "03",
         name: "DRA. LETÍCIA MELLO",
-        role: "Chief Scientific Officer",
+        role: "Co-Founder & CSO",
         img: "/images/leticia.jpg",
         tags: ["Human Mobility Assurance", "Metodologias Preditivas", "Inteligência Humana"],
         type: "person" as const
