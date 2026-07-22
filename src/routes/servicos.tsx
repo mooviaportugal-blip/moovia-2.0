@@ -83,7 +83,7 @@ function Servicos() {
                 transition={{ delay: 0.35 }}
                 className="font-body text-[16px] md:text-[18px] font-[500] text-gold-l leading-[1.7] max-w-[720px]"
               >
-                Para empresas e os seus colaboradores expatriados — e as famílias, em todas as suas formas.
+                Para empresas e os seus colaboradores expatriados, incluindo as famílias em todas as suas formas.
               </motion.p>
             </div>
           </div>
