@@ -23,7 +23,7 @@ export function FormSection() {
             viewport={{ once: true }}
             className="font-sora text-[clamp(28px,3.5vw,44px)] font-[200] text-white leading-tight mb-8"
           >
-            O primeiro passo é proteger o seu investimento.
+            O primeiro passo consiste em proteger o seu investimento.
           </motion.h2>
           <div className="space-y-6 max-w-lg mb-10">
             <p className="font-urbanist text-[16px] font-[300] text-w35 leading-[1.9]">

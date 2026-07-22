@@ -94,7 +94,7 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional — com um objetivo claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
           </p>
           <p>
             Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
@@ -129,13 +129,13 @@ function OqueSomos() {
           <div className="bg-w05 border border-b18 p-8 md:p-10">
             <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para o colaborador</p>
             <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
-              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> — um acompanhamento de alto valor durante uma das maiores transições da sua vida.
+              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> que oferece um acompanhamento de alto valor durante uma das maiores transições da sua vida.
             </p>
           </div>
           <div className="bg-w05 border border-b18 p-8 md:p-10">
             <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para a empresa</p>
             <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
-              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility — a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
+              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility. Somos a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
             </p>
           </div>
         </div>
@@ -148,13 +148,13 @@ function OqueSomos() {
 function SaudeMentalMigrantes() {
   const stats = [
     {
-      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional — e a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
+      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional. Além disso, a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
     },
     {
-      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano, com 56% dos millennials não-nativos a apontar a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental — 87% mais do que não-nativos entre 55 e 75 anos.",
+      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano. 56% dos millennials não-nativos apontam a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental, um valor 87% superior aos não-nativos entre 55 e 75 anos.",
     },
     {
-      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental — preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
+      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental, pois preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
     },
   ];
   return (
@@ -291,7 +291,7 @@ function ComoFazemosSection() {
     {
       n: "02",
       titulo: "Avaliamos o profissional e o contexto familiar",
-      texto: "Entrevistas e análise multidimensional para compreender expectativas, capacidade de adaptação, alinhamento familiar e fatores emocionais. Não avaliamos competência técnica — avaliamos as condições que podem favorecer ou comprometer o sucesso da transição.",
+      texto: "Entrevistas e análise multidimensional para compreender expectativas, capacidade de adaptação, alinhamento familiar e fatores emocionais. Não avaliamos competência técnica, mas sim as condições que podem favorecer ou comprometer o sucesso da transição.",
     },
     {
       n: "03",
@@ -347,9 +347,9 @@ function HistoriaPessoal() {
   const paragrafos = [
     "A MOOVIA nasceu da união de duas experiências.",
     "Durante mais de sete anos, trabalhei com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
-    "Mais tarde, depois de viver e trabalhar em diferentes países, percebi que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding — mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
+    "Mais tarde, depois de viver e trabalhar em diferentes países, percebi que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding, mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
     "A adaptação da família, o custo de vida, a moradia, as escolas, as expectativas e a integração só se transformavam em prioridade quando já havia um problema.",
-    "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica que aprendi em Revenue Assurance. Identificar riscos antes que se transformem em perdas. Acompanhar sinais. Coordenar respostas. Medir resultados. E proteger o investimento que as empresas fazem nas pessoas.",
+    "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica que aprendi em Revenue Assurance. O objetivo é identificar riscos antes que se transformem em perdas. Através da nossa metodologia, acompanhamos sinais, coordenamos respostas, medimos resultados e protegemos o investimento que as empresas fazem nas pessoas.",
   ];
   return (
     <section className="bg-black py-[100px] px-6 lg:px-20 border-t border-b18">
@@ -445,7 +445,7 @@ function ValidacaoSection() {
             </h3>
             <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
               A MOOVIA está a desenvolver modelos preditivos próprios para
-              apoiar a avaliação de risco humano da mobilidade internacional —
+              apoiar a avaliação de risco humano da mobilidade internacional,
               parte da evolução contínua da nossa metodologia.
             </p>
           </div>
@@ -455,7 +455,7 @@ function ValidacaoSection() {
             </h3>
             <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
               Diagnóstico validado por especialistas em estratégia, adaptação
-              humana e coordenação patrimonial — orquestrado sob mandato.
+              humana e coordenação patrimonial, tudo orquestrado sob mandato.
             </p>
           </div>
         </div>

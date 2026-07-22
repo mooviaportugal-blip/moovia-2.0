@@ -78,7 +78,7 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
           Recebido
         </p>
         <h3 className="font-sora text-[clamp(22px,3vw,32px)] font-[200] text-white leading-tight">
-          Obrigado. A equipa MOOVIA entrará em contacto.
+          Obrigado. A equipa MOOVIA entrará em contacto brevemente.
         </h3>
         <p className="mt-6 font-urbanist text-[14px] font-[300] text-w35">
           Vamos rever o seu contexto e responderemos em até um dia útil.

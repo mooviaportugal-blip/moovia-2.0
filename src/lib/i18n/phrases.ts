@@ -129,7 +129,7 @@ export const PHRASES: Record<string, Phrase> = {
   "Background de Deloitte, Oracle e SAP. Cada sócio passou pelo processo que coordenamos. Essa experiência não é marketing: é o único diferencial que nenhum concorrente consegue replicar.": {
     "pt-BR": "Background de Deloitte, Oracle e SAP. Cada sócio passou pelo processo que coordenamos. Essa experiência não é marketing: é o único diferencial que nenhum concorrente consegue replicar.",
     es: "Trayectoria en Deloitte, Oracle y SAP. Cada socio pasó por el proceso que coordinamos. Esa experiencia no es marketing: es el único diferencial que ningún competidor puede replicar.",
-    en: "Backgrounds at Deloitte, Oracle and SAP. Every partner has gone through the process we coordinate. That experience is not marketing; it is the one differentiator no competitor can replicate.",
+    en: "Backgrounds at Deloitte, Oracle and SAP. Every partner has gone through the process we coordinate. That experience is not marketing, it is the one differentiator no competitor can replicate.",
   },
   "Vamos coordenar a sua transição internacional com o mesmo nível de cuidado, estrutura e atenção que gostaríamos de ter recebido na nossa.": {
     "pt-BR": "Vamos coordenar a sua transição internacional com o mesmo nível de cuidado, estrutura e atenção que gostaríamos de ter recebido na nossa.",
@@ -184,7 +184,7 @@ export const PHRASES: Record<string, Phrase> = {
   },
 
   // Process / assessment / pillars
-  "Um processo. Do diagnóstico ao destino.": { "pt-BR": "Um processo. Do diagnóstico ao destino.", es: "Un proceso. Del diagnóstico al destino.", en: "One process. From diagnosis to destination." },
+  "Um processo que vai do diagnóstico ao destino.": { "pt-BR": "Um processo que vai do diagnóstico ao destino.", es: "Un proceso del diagnóstico al destino.", en: "One process from diagnosis to destination." },
   "Conversa com um dos Fundadores": { "pt-BR": "Conversa com um dos Fundadores", es: "Sin coste · Calendly", en: "No cost · Calendly" },
   "Uma conversa direta com 1 founder, sem script, sem chatbot. Validamos o fit e mostramos como a MOOVIA pensa o seu caso.": {
     "pt-BR": "Uma conversa direta com 1 founder, sem script, sem chatbot. Validamos o fit e mostramos como a MOOVIA pensa o seu caso.",

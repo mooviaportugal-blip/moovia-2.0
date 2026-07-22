@@ -8,17 +8,17 @@ import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços MOOVIA — Life Transition e Global Mobility Assurance" },
+      { title: "Serviços MOOVIA | Life Transition e Global Mobility Assurance" },
       {
         name: "description",
         content:
           "Duas formas de coordenar mobilidade internacional: Strategic Discovery Call para pessoas e famílias, e Global Mobility Assurance para empresas.",
       },
-      { property: "og:title", content: "Serviços MOOVIA — Global Mobility Success" },
+      { property: "og:title", content: "Serviços MOOVIA | Global Mobility Success" },
       {
         property: "og:description",
         content:
-          "Strategic Discovery Call + Global Mobility Assurance. A metodologia MOOVIA para pessoas e empresas.",
+          "Strategic Discovery Call e Global Mobility Assurance. Conheça a metodologia MOOVIA para pessoas e empresas.",
       },
       { property: "og:url", content: "https://mooviaportugal.com/servicos" },
       { property: "og:type", content: "website" },
@@ -83,7 +83,7 @@ function Servicos() {
                 transition={{ delay: 0.35 }}
                 className="font-body text-[16px] md:text-[18px] font-[500] text-gold-l leading-[1.7] max-w-[720px]"
               >
-                Para empresas e os seus colaboradores expatriados — e as famílias, em todas as suas formas.
+                Para empresas e os seus colaboradores expatriados, incluindo as famílias em todas as suas formas.
               </motion.p>
             </div>
           </div>

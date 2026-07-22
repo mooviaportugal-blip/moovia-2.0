@@ -8,13 +8,13 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Global Mobility Assurance — MOOVIA" },
+      { title: "Global Mobility Assurance | MOOVIA" },
       {
         name: "description",
         content:
           "Transformamos Human Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
-      { property: "og:title", content: "Global Mobility Assurance — MOOVIA" },
+      { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
@@ -111,7 +111,7 @@ function EmpresasPage() {
             transition={{ delay: 0.2 }}
             className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
           >
-            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
+            CONTRATADO PELA EMPRESA, VIVIDO PELO EXECUTIVO E MEDIDO AO LONGO DO TEMPO.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -120,7 +120,7 @@ function EmpresasPage() {
             className="mb-10"
           >
             <p className="font-body text-[16px] md:text-[18px] font-[600] text-white mb-6">
-              Um benefício para o colaborador. Um investimento mensurável para a empresa.
+              Um benefício para o colaborador que representa um investimento mensurável para a empresa.
             </p>
             <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-4">
               <p>
@@ -243,8 +243,8 @@ function EmpresasPage() {
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.85]">
               A velocidade de onboarding do talento contratado depende tanto da
               qualidade da estratégia quanto da capacidade de execução. O
-              mandato MOOVIA aciona uma rede de especialistas credenciados —
-              imobiliário, jurídico, integração escolar — sob demanda, sem
+              mandato MOOVIA aciona uma rede de especialistas credenciados em áreas como
+              imobiliário, jurídico ou integração escolar. Esta ativação ocorre sob demanda, sem
               custo fixo de equipa própria em cada área operacional para a
               empresa contratante.
             </p>
@@ -266,7 +266,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic">Aplicada à sua equipa.</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto">
-            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador — do assessment inicial à integração completa da família — com o mesmo rigor que aplicamos a cada mandato individual.
+            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador, desde o assessment inicial até à integração completa da família, com o mesmo rigor que aplicamos a cada mandato individual.
           </p>
         </div>
       </section>

@@ -6,13 +6,13 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 export const Route = createFileRoute("/perguntas-frequentes")({
   head: () => ({
     meta: [
-      { title: "Perguntas Frequentes — MOOVIA" },
+      { title: "Perguntas Frequentes | MOOVIA" },
       {
         name: "description",
         content:
           "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Global Mobility Assurance.",
       },
-      { property: "og:title", content: "Perguntas Frequentes — MOOVIA" },
+      { property: "og:title", content: "Perguntas Frequentes | MOOVIA" },
       {
         property: "og:description",
         content:
@@ -28,11 +28,11 @@ type QA = { q: string; a: React.ReactNode; pending?: boolean };
 const faqs: QA[] = [
   {
     q: "O que é a MOOVIA?",
-    a: "A MOOVIA coordena transições internacionais de vida e património. Não somos uma empresa de imigração nem uma consultoria pontual — somos o ponto único que integra estratégia, execução e acompanhamento antes, durante e depois da chegada.",
+    a: "A MOOVIA coordena transições internacionais de vida e património. Não somos uma empresa de imigração nem uma consultoria pontual. Somos o ponto único que integra estratégia, execução e acompanhamento antes, durante e depois da chegada.",
   },
   {
     q: "O que é o Strategic Assessment?",
-    a: "Trabalho estratégico real com entregável físico — não uma consulta. Uma sessão dedicada com um founder, mapeamento completo de perfil, riscos, estratégias e cronograma, incluindo o Human Dimension Assessment, conduzido por Frederico Prado com o apoio da Dra. Letícia de Mello. Sob consulta, personalizado conforme o perfil — cada proposta é desenhada à medida da complexidade de cada cliente, particular ou empresa.",
+    a: "Trabalho estratégico real com entregável físico, não apenas uma consulta. O Assessment consiste numa sessão dedicada com um founder, mapeamento completo de perfil, riscos, estratégias e cronograma. Inclui também o Human Dimension Assessment, conduzido por Frederico Prado com o apoio da Dra. Letícia de Mello. Cada proposta é personalizada e desenhada à medida da complexidade do caso, seja para um particular ou para uma empresa.",
   },
   {
     q: "A MOOVIA trabalha com pacotes ou planos de serviço?",
@@ -44,7 +44,7 @@ const faqs: QA[] = [
   },
   {
     q: "Quanto custa a transição completa com a MOOVIA?",
-    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta — desde o Strategic Assessment até um mandato completo — é construída à medida da necessidade específica de cada cliente, seja um particular ou uma empresa de qualquer dimensão. O valor é sempre definido após entendermos o que precisa de ser feito.",
+    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta, desde o Strategic Assessment até um mandato completo, é construída à medida da necessidade específica de cada cliente. O valor é sempre definido após entendermos a complexidade do que precisa de ser feito.",
   },
   {
     q: "A MOOVIA atende apenas brasileiros?",
@@ -52,7 +52,7 @@ const faqs: QA[] = [
   },
   {
     q: "O que é o Global Mobility Assurance?",
-    a: "É a categoria da MOOVIA para empresas que contratam talento internacional. Reduz o Human Mobility Risk — adaptação da família, integração cultural, isolamento social — que normalmente fica fora do processo de onboarding e é uma das principais causas de turnover em contratações internacionais.",
+    a: "É a categoria da MOOVIA para empresas que contratam talento internacional. O programa reduz o Human Mobility Risk ao focar na adaptação da família, integração cultural e isolamento social. Estes fatores normalmente ficam fora do processo de onboarding e são as principais causas de turnover em contratações internacionais.",
   },
   {
     q: "Como funciona a cobrança do Global Mobility Assurance?",
@@ -61,7 +61,7 @@ const faqs: QA[] = [
   },
   {
     q: "Quantos colaboradores a empresa precisa ter para contratar o programa?",
-    a: "Não existe um número mínimo rígido. O programa é estruturado a partir do perfil e da complexidade dos casos de mobilidade — validado na Strategic Discovery Call.",
+    a: "Não existe um número mínimo rígido. O programa é estruturado a partir do perfil e da complexidade dos casos de mobilidade, sendo validado na Strategic Discovery Call.",
     pending: true,
   },
   {
