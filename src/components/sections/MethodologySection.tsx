@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const dimensions = [
   {
     id: "01",
-    title: "Mobility Intelligence",
-    description: "Análise estruturada do contexto, objetivos, riscos e variáveis da mobilidade.",
+    title: "Inteligência Humana",
+    description: "Toda mobilidade internacional começa pelas pessoas. Antes de qualquer decisão logística, jurídica ou tecnológica, procuramos compreender quem vai viver a mudança: as suas motivações, expectativas, contexto familiar e capacidade de adaptação. É nesta compreensão que nasce uma decisão verdadeiramente inteligente.",
     quote: "Antes dos dados, as pessoas.",
     icon: "/icons/aviao.svg",
     iconScale: 1.16,
@@ -14,18 +14,18 @@ const dimensions = [
   },
   {
     id: "02",
-    title: "Decision Intelligence Engine",
-    description: "O nosso motor analisa milhares de variáveis, identifica dependências, conflitos e fatores críticos para apoiar decisões de mobilidade com maior previsibilidade.",
-    quote: "O que se mede, pode ser protegido.",
+    title: "Human Mobility Assurance",
+    description: "A mobilidade internacional envolve riscos humanos que raramente são medidos. A MOOVIA transforma fatores como adaptação, integração, expectativas e bem-estar em inteligência estruturada para apoiar decisões mais seguras. Não eliminamos a incerteza, reduzimo-la através de método, evidência e acompanhamento.",
+    quote: "O que compreendemos, podemos proteger.",
     icon: "/icons/ponte.svg",
     iconScale: 1.28,
     position: "right"
   },
   {
     id: "03",
-    title: "Human Strategic Assessment",
-    description: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em mobilidade internacional e adaptação humana.",
-    quote: "Um único ponto. Nenhuma decisão isolada.",
+    title: "Coordenação Global",
+    description: "Uma decisão de mobilidade nunca depende de um único especialista. Questões jurídicas, imigração, habitação, educação, património e integração precisam de atuar de forma coordenada. A MOOVIA orquestra este ecossistema para que cada decisão fortaleça as restantes.",
+    quote: "Nenhuma decisão isolada.",
     icon: "/icons/pessoa.svg",
     iconScale: 0.9,
     position: "bottom"
@@ -33,7 +33,7 @@ const dimensions = [
   {
     id: "04",
     title: "Global Mobility Success",
-    description: "O resultado não é a chegada. É a permanência, a integração e a produtividade sustentada ao longo do tempo. É assim que medimos se uma mobilidade internacional foi, de facto, bem-sucedida.",
+    description: "O verdadeiro sucesso não acontece quando alguém chega a um novo país. Acontece quando essa pessoa se integra, permanece, produz e constrói uma vida sustentável ao longo do tempo. É assim que a MOOVIA mede uma mobilidade internacional bem-sucedida.",
     quote: "O sucesso não é chegar. É permanecer.",
     icon: "/icons/casa.svg",
     iconScale: 0.95,

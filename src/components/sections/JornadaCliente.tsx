@@ -59,7 +59,7 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Mobility Risk Assessment.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Global Mobility Strategy" },
+      { nome: "Frederico Prado", papel: "Human Mobility Assurance" },
       { nome: "Dra. Letícia de Mello", papel: "Avaliação de Integração Adaptativa" },
     ],
   },
