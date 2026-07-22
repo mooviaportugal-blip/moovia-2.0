@@ -118,33 +118,37 @@ export function MarketResearchSection() {
           Fontes: Cambridge · AXA Global Healthcare (2025) · livingintraining.nl · Repositório ISCTE
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {/* Card 01 */}
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">01</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">01</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 Desempenho abaixo do esperado
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-8 mb-6">
-              <Donut percent={33}>
-                <div className="flex flex-col items-center gap-1">
-                  <PersonIcon />
-                  <span className="font-display text-[13px] text-gold-l tracking-wider">1 EM 3</span>
-                </div>
-              </Donut>
-              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1">
+
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 mb-6">
+              <div className="shrink-0">
+                <Donut percent={33} size={140}>
+                  <div className="flex flex-col items-center gap-1">
+                    <PersonIcon size={34} />
+                    <span className="font-display text-[12px] text-gold-l tracking-wider">1 EM 3</span>
+                  </div>
+                </Donut>
+              </div>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1 min-w-0 break-words text-center sm:text-left">
                 Estudos clássicos mostram que aproximadamente 1 em cada 3 expatriados apresenta
                 desempenho abaixo das expectativas durante a missão.
               </p>
             </div>
+
 
             <p className="font-body italic text-gold text-[14px] leading-[1.6] mt-auto">
               Muito mais relevante para um CFO do que o simples regresso antecipado.
@@ -160,21 +164,24 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">02</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">02</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 O mito dos "40% de fracasso"
               </span>
             </div>
 
-            <div className="flex items-start gap-6 mb-6">
-              <XCircleIcon />
-              <p className="font-display text-[1.15rem] text-ivory leading-[1.4] font-[300]">
+            <div className="flex items-start gap-4 sm:gap-6 mb-6">
+              <div className="shrink-0">
+                <XCircleIcon size={52} />
+              </div>
+              <p className="font-display text-[1.05rem] sm:text-[1.15rem] text-ivory leading-[1.4] font-[300] min-w-0 break-words">
                 "Não é verdade que 40% regressem para casa."
               </p>
             </div>
+
 
             <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-4">
               Durante décadas repetiu-se que 20 a 40% dos expatriados regressavam antes do fim da
@@ -195,14 +202,15 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.16 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">03</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">03</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 Problemas de adaptação são o fator decisivo
               </span>
             </div>
+
 
             <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-6">
               Em pesquisas com empresas multinacionais, os principais fatores associados ao
@@ -226,30 +234,33 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.24 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">04</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">04</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 O custo de uma missão falhada
               </span>
             </div>
 
-            <div className="flex items-start gap-6 mb-6">
-              <CoinsIcon />
-              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1">
+            <div className="flex items-start gap-4 sm:gap-6 mb-6">
+              <div className="shrink-0">
+                <CoinsIcon size={52} />
+              </div>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1 min-w-0 break-words">
                 As empresas atualmente reportam entre 5% e 10% das missões terminando antes do
                 previsto. Empresas com programas maduros chegam a menos de 5%.
               </p>
             </div>
 
             <div className="border-t border-border-b18 pt-6 mt-auto">
-              <p className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60 mb-2">
+              <p className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 mb-2">
                 Custo total estimado por expatriado
               </p>
-              <p className="font-display text-[clamp(2.4rem,5vw,3.6rem)] font-[300] text-gold-l leading-none tracking-[-0.02em]">
+              <p className="font-display text-[clamp(1.7rem,7vw,3.6rem)] font-[300] text-gold-l leading-none tracking-[-0.02em] break-words">
                 €215K <span className="text-gold/60">–</span> €470K
               </p>
+
               <p className="font-body text-[12px] font-[300] text-w35/70 leading-[1.6] mt-3">
                 Somando salário, benefícios, repatriação e substituição.
               </p>
