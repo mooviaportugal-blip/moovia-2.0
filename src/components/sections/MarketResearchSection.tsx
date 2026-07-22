@@ -118,7 +118,7 @@ export function MarketResearchSection() {
           Fontes: Cambridge · AXA Global Healthcare (2025) · livingintraining.nl · Repositório ISCTE
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {/* Card 01 */}
           <motion.article
             initial={{ opacity: 0, y: 30 }}
