@@ -139,19 +139,14 @@ export function Hero() {
               maskPosition: "center",
             }}
           >
-            <video
-              ref={videoRef}
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              loop={false}
-              onEnded={(e) => e.currentTarget.pause()}
+            <img
+              src={HERO_MEDIA_URL}
+              alt="Animação institucional MOOVIA, vista de Lisboa"
               className="w-full h-full object-cover"
-              aria-label="Vídeo institucional MOOVIA — vista de Lisboa"
-            >
-              <source src={HERO_VIDEO_URL} type="video/mp4" />
-            </video>
+              loading="eager"
+              decoding="async"
+            />
+
             {/* Fade radial interno dissolvendo no fundo do site */}
             <div
               className="absolute inset-0 pointer-events-none"
