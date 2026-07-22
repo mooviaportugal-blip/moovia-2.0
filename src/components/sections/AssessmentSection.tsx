@@ -87,7 +87,7 @@ export function AssessmentSection() {
               {/* Human Dimension Assessment */}
               <div className="mb-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
                 <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
-                  Human Dimension Assessment
+                  Human Strategic Assessment
                 </p>
                 <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
                   Uma avaliação integrada da dimensão humana da mobilidade
