@@ -1,90 +1,111 @@
-# Varredura de Conteúdo e Estrutura de Texto — MOOVIA Portugal
+# Varredura Completa de Conteúdo e Estrutura — MOOVIA Portugal (V2)
 
-Este documento detalha a disposição de todos os textos institucionais, técnicos e promocionais presentes nas principais páginas e componentes do ecossistema MOOVIA.
-
----
-
-## 1. Página Inicial (`/home` e `/index` em manutenção)
-
-### Ticker / Marquee de Especialidades
-*   **Seção:** Faixa de rolagem abaixo do Hero.
-*   **Conteúdo:**
-    *   GLOBAL MOBILITY ASSURANCE
-    *   AVALIAÇÃO GLOBAL MOBILITY SUCCESS
-    *   COORDENAÇÃO DE VIDA, CARREIRA E PATRIMÓNIO
-    *   TRANSIÇÃO DE VIDA
-    *   ORQUESTRAÇÃO
-    *   INTEGRAÇÃO
-
-### Página de Manutenção (`MaintenancePage.tsx`)
-*   **Seção:** Ecrã de bloqueio temporário.
-*   **Conteúdo:** "Aguarde até sexta-feira" (Contagem regressiva), "Estamos a finalizar a nova infraestrutura digital da MOOVIA", Contacto: `contato@mooviaglobal.com`.
+Este documento é a versão definitiva e exaustiva de todo o conteúdo institucional do ecossistema digital da MOOVIA.
 
 ---
 
-## 2. Página Sobre a MOOVIA (`/sobre`)
+## 1. Identidade e Home (`/home`, `/index`)
+
+### Hero Principal (`Hero.tsx`)
+*   **Título:** "Ajudamos empresas a reduzir o risco humano da mobilidade internacional."
+*   **Citação:** "A transição internacional não termina no desembarque. É nesse momento que ela verdadeiramente começa."
+*   **Botão A (Empresas):** "Reduzindo turnover, aumentando retenção e protegendo o ROI da contratação internacional."
+*   **Botão B (Executivos):** "A metodologia utilizada pelas empresas para apoiar executivos e famílias durante a integração internacional."
+*   **Lema Inferior:** Plan · Arrive · Stay.
+
+### Faixa Marquee (Ticker)
+*   **Terminologia Padronizada:** GLOBAL MOBILITY ASSURANCE ♦ AVALIAÇÃO GLOBAL MOBILITY SUCCESS ♦ COORDENAÇÃO DE VIDA, CARREIRA E PATRIMÓNIO ♦ TRANSIÇÃO DE VIDA ♦ ORQUESTRAÇÃO ♦ INTEGRAÇÃO.
+
+### Galeria Lisboa (`LisboaGallery.tsx`)
+*   **Texto:** "Uma vida em Portugal, vista por dentro."
+*   **Editorial:** Lisboa · Cascais · Estoril.
+
+---
+
+## 2. Página Institucional (`/sobre`)
 
 ### A Nossa Categoria (`NossaCategoria`)
-*   **Foco:** Definição da nova camada de Assurance.
-*   **Texto Chave:** "Global Mobility Success é o resultado. Global Mobility Strategy é a disciplina que o torna possível. Global Mobility Assurance é a categoria que o torna mensurável."
-*   **Diferenciação:** Lista o que a MOOVIA *não* é (relocation, imigração, RH tradicional).
+*   **Diferenciação:** Camada de Global Mobility Assurance (inspirado em Revenue Assurance).
+*   **Trilogia:** Success (resultado), Strategy (disciplina), Assurance (categoria mensurável).
 
-### Saúde Mental e Contexto (`SaudeMentalMigrantes`)
-*   **Foco:** Dados estatísticos sobre a realidade de quem migra para Portugal.
-*   **Texto Chave:** "A saúde mental de quem migra não é um detalhe." Citação de 1,1 milhões de estrangeiros e o impacto da crise habitacional.
+### Equação e História (`HistoriaPessoal`)
+*   **Conteúdo:** Relato de Frederico Prado sobre transição internacional, focado em "viver a própria experiência antes de coordenar a dos outros".
 
-### Metodologia Orbital (`MethodologySection`)
-*   **Pilar 01:** Inteligência Humana — "Antes dos dados, as pessoas."
-*   **Pilar 02:** Human Mobility Assurance — "O que compreendemos, podemos proteger."
-*   **Pilar 03:** Coordenação Global — "Nenhuma decisão isolada."
-*   **Pilar 04:** Global Mobility Success — "O sucesso não é chegar. É permanecer."
-
----
-
-## 3. Página Para Empresas (`/empresas`)
-
-### Hero e Posicionamento
-*   **Título:** Global Mobility Assurance.
-*   **Subtítulo:** "A nova categoria para reduzir o Human Mobility Risk".
-*   **Texto Técnico:** "Transformamos Human Mobility Risk em Global Mobility Success."
-
-### Benefício vs Gestão de Risco
-*   **Foco:** Racional financeiro e corporativo.
-*   **Conteúdo:** Explica que o colaborador vê como benefício, mas a empresa vê como mitigação de perda de capital humano e aumento de produtividade.
-
-### O Que Asseguramos
-*   **Seção:** Lista de garantias operacionais.
-*   **Itens:** Continuidade operacional, Proteção do Capital Humano, Precisão no Onboarding, Estabilidade da Cadeia de Valor.
-
----
-
-## 4. Componentes de Seção Globais
-
-### Evidência de Mercado (`MarketResearchSection`)
+### Pesquisa de Mercado (`MarketResearchSection`)
 *   **Dados AXA 2025:**
-    1. Quase metade das missões termina antes do previsto.
-    2. Mais de metade enfrenta problemas de saúde mental nos primeiros meses.
-    3. Família como principal fator de retenção.
-    4. Solidão como fator determinante para millennials.
-*   **Fonte Unificada:** AXA Global Healthcare & AXA Mind Health Report (2025).
-
-### Assessment Estratégico (`AssessmentSection`)
-*   **Depoimento Real:** Vinicius Mattos (Tecnologia), Cliente Brasil → Portugal.
-*   **Metodologia:** Foco na "Língua Emocional" do participante para evitar contaminação comportamental por esforço cognitivo de tradução.
-*   **Orquestradores:** Frederico Prado e Dra. Letícia de Mello.
-
-### Linha Moovers (`LinhaMooverSection`)
-*   **Estrutura:** 4 Trilhos (Founders, Core Team, Orquestração, Trusted Partners).
-*   **Finalização:** Ícone oficial MOOVIA e o lema "Melhores decisões, transições mais suaves e futuros mais fortes."
-
-### Ecossistema (`EcossistemaSection`)
-*   **Grid 3x2:** Estratégia, Coordenação, Jurídico, Património, Integração, Moradia e Escola.
-*   **Mensagem Central:** "Muitas empresas já trabalham com parceiros... A MOOVIA não substitui essas relações — orquestra-as."
+    1. 50% das missões terminam antes do prazo.
+    2. 50% enfrentam problemas de saúde mental nos primeiros 3 meses.
+    3. Família = Fator #1 de retenção.
+    4. 56% dos millennials sofrem com solidão e isolamento.
 
 ---
 
-## 5. Formulários e Contacto (`UnifiedLeadForm.tsx`)
+## 3. Página de Programas e Serviços (`/servicos`)
 
-*   **Padrão:** Foco B2B/Empresarial ativo por defeito.
-*   **Campos:** Nome, Cargo, Empresa, E-mail Corporativo, Motivo do Contacto.
-*   **Footer:** Compliance financeiro, menção à não prestação de aconselhamento financeiro regulado e jurisdição de Portugal.
+### Visão Geral
+*   **Chamada:** "Dois programas. Uma metodologia. O mesmo compromisso: aumentar a probabilidade de sucesso da mobilidade internacional."
+*   **Público:** Pessoas, famílias e empresas de todos os tamanhos.
+
+---
+
+## 4. Página Para Empresas (`/empresas`)
+
+### Fatores de Risco (Human Mobility Risk)
+*   **Lista:** Adaptação da família, habitação, integração cultural, escolas, isolamento social, expectativas desalinhadas, dificuldades práticas.
+
+### Consequências de Negócio
+*   **Impactos:** Menor produtividade, menor satisfação, risco de turnover, perda do investimento na contratação.
+
+### Racional de Valor
+*   **Texto:** "Um benefício para o colaborador que representa um investimento mensurável para a empresa." (Comparação com seguro de saúde).
+
+---
+
+## 5. Metodologia e Jornada (`MethodologySection`, `JornadaCliente.tsx`)
+
+### Os 4 Pilares Orbitais
+1. **Inteligência Humana:** Antes dos dados, as pessoas.
+2. **Human Mobility Assurance:** O que compreendemos, podemos proteger.
+3. **Coordenação Global:** Nenhuma decisão isolada.
+4. **Global Mobility Success:** O sucesso não é chegar. É permanecer.
+
+### A Linha Moovers (Jornada Técnica)
+1. **Diagnosticar:** Stakeholders e fatores críticos.
+2. **Avaliar:** Mobility Risk Assessment.
+3. **Desenhar:** Roadmap estratégico.
+4. **Coordenar:** Governance e orquestração operacional.
+5. **Integrar:** AEAI Follow-up (30, 60, 90 dias).
+6. **Medir:** Success Index e Outcome Dashboard.
+
+---
+
+## 6. Ecossistema e Famílias (`EcossistemaSection`, `FamiliesSection`)
+
+### Pilares do Ecossistema
+*   Estratégia, Coordenação, Jurídico, Património, Integração, Moradia e Escola.
+
+### Tipologias Familiares
+*   **Foco:** Inclusividade total (Solteiros, Casais, Casais do mesmo sexo, Famílias com filhos, Pet Friendly).
+*   **Lema:** "Atendemos famílias internacionais em todas as suas formas. Coordenamos todas elas."
+
+---
+
+## 7. Suporte e FAQ (`perguntas-frequentes.tsx`)
+
+*   **Definições:** O que é a MOOVIA, Strategic Assessment, Personalização (sem pacotes), MAIA (Assistente AI).
+*   **Nacionalidade:** Atendimento global para quem vai para Portugal (não apenas brasileiros).
+
+---
+
+## 8. Blog e Conteúdo (`BlogTeaserSection.tsx`)
+
+*   **Chamada:** "O que você precisa entender antes de decidir."
+*   **Categorias:** Artigo, Estratégia, Vida em Portugal.
+
+---
+
+## 9. Manutenção e Contacto (`MaintenancePage.tsx`, `UnifiedLeadForm.tsx`)
+
+*   **Padrão B2B:** Formulário unificado com default para empresas.
+*   **Contacto:** `contato@mooviaglobal.com`.
+*   **Aviso Legal:** "A MOOVIA não presta aconselhamento financeiro regulado. Jurisdição: Portugal."
