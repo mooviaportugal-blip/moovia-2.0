@@ -125,20 +125,8 @@ export function Hero() {
           transition={{ duration: 1.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
-          {/* Video com máscara azulejo (quadrifólio) + fade radial no fundo */}
-          <div
-            className="relative w-[88%] sm:w-[72%] lg:w-[78%] aspect-square max-h-[70vh]"
-            style={{
-              WebkitMaskImage: "url('/masks/azulejo-frame.svg')",
-              maskImage: "url('/masks/azulejo-frame.svg')",
-              WebkitMaskRepeat: "no-repeat",
-              maskRepeat: "no-repeat",
-              WebkitMaskSize: "contain",
-              maskSize: "contain",
-              WebkitMaskPosition: "center",
-              maskPosition: "center",
-            }}
-          >
+          {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
+          <div className="relative w-[88%] sm:w-[72%] lg:w-[78%] aspect-square max-h-[70vh]">
             <img
               src={HERO_MEDIA_URL}
               alt="Animação institucional MOOVIA, vista de Lisboa"
@@ -147,14 +135,15 @@ export function Hero() {
               decoding="async"
             />
 
-            {/* Fade radial interno dissolvendo no fundo do site */}
+            {/* Fade radial arredondado dissolvendo no fundo do site */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: `radial-gradient(ellipse at center, transparent 55%, ${HERO_BG} 92%)`,
+                background: `radial-gradient(ellipse at center, transparent 50%, ${HERO_BG} 90%)`,
               }}
             />
           </div>
+
 
 
 
