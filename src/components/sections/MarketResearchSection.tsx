@@ -126,12 +126,13 @@ export function MarketResearchSection() {
             viewport={{ once: true }}
             className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">01</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">01</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 Desempenho abaixo do esperado
               </span>
             </div>
+
 
             <div className="flex flex-col sm:flex-row items-center gap-8 mb-6">
               <Donut percent={33}>
