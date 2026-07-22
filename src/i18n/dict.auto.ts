@@ -43,6 +43,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "3. Lista detalhada de cookies": { en: "3. Detailed list of cookies" },
   "3. Propriedade intelectual": { en: "3. Intellectual Property" },
   "30 anos": { en: "30 years" },
+  "Experiência como expatriados": { en: "Experience as expatriates" },
   "4. Cookies de terceiros": { en: "4. Third-party cookies" },
   "4. Fundamento legal": { en: "4. Legal Basis" },
   "4. Responsabilidade": { en: "4. Liability" },
