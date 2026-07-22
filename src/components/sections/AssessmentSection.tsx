@@ -141,7 +141,7 @@ export function AssessmentSection() {
                 "A experiência com o Assessment da MOOVIA superou as nossas expectativas."
               </p>
               <span className="font-body text-[11px] text-white/40">
-                — Cliente MOOVIA, Brasil → Portugal
+                Cliente MOOVIA, Brasil para Portugal
               </span>
             </div>
 
