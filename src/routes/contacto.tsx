@@ -45,9 +45,11 @@ export const Route = createFileRoute("/contacto")({
 function Contacto() {
   const whatsappEnabled = useWhatsappEnabled();
   const channels = [
-    { label: "E-mail", value: "contacto@mooviaglobal.com", href: "mailto:contacto@mooviaglobal.com" },
+    { label: "E-mail institucional", value: "contacto@mooviaglobal.com", href: "mailto:contacto@mooviaglobal.com" },
+    { label: "E-mail direto (Frederico Prado)", value: "frederico.prado@mooviaglobal.com", href: "mailto:frederico.prado@mooviaglobal.com" },
     ...(whatsappEnabled ? [{ label: "WhatsApp", value: "+351 910 388 877", href: "https://wa.me/351910388877" }] : []),
-    { label: "LinkedIn", value: "/company/moovia-portugal", href: "https://www.linkedin.com/company/moovia-portugal" },
+    { label: "LinkedIn (empresa)", value: "/company/moovia-portugal", href: "https://www.linkedin.com/company/moovia-portugal" },
+    { label: "LinkedIn (Frederico Prado)", value: "/in/frederico-prado", href: "https://www.linkedin.com/in/frederico-prado" },
     { label: "Horário", value: "Segunda a Sexta das 09h às 18h (horário de Lisboa)" },
   ];
 

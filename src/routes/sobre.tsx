@@ -53,11 +53,181 @@ function SobrePage() {
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
+      <RaizesEAsas />
+      <ComoConstruimosInteligencia />
       <ComoFazemosSection />
       <ValidacaoSection />
       <PosicaoMarca />
       <MethodologySection />
+      <HowWeBuiltTimeline />
     </SiteLayout>
+  );
+}
+
+/* ─────────────────────── RAÍZES E ASAS (Lógica de Decisão) ─────────────────────── */
+function RaizesEAsas() {
+  const etapas = [
+    { n: "01", titulo: "Recolha de Dados", texto: "Estruturação do conhecimento humano em variáveis mensuráveis, através de entrevistas conduzidas por especialistas." },
+    { n: "02", titulo: "Máquina de Regras", texto: "Motor computacional que aplica critérios explícitos, evidenciando dependências, conflitos e fatores críticos de sucesso." },
+    { n: "03", titulo: "Dashboard", texto: "Visão executiva integrada dos resultados, com cada recomendação rastreável até à regra que a originou." },
+  ];
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Lógica de Decisão</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
+          Metodologia <span className="italic text-gold-l">Raízes e Asas.</span>
+        </h2>
+        <p className="max-w-[780px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-14">
+          O conhecimento da equipa converte-se numa lógica computacional explicável. A informação percorre um caminho auditável, da entrevista à recomendação, sem passos ocultos.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
+          {etapas.map((e, i) => (
+            <motion.div
+              key={e.n}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="relative border border-b18 bg-w05 p-8"
+            >
+              <span className="block font-display text-[1.4rem] font-[300] text-gold mb-3">{e.n}</span>
+              <h3 className="font-display text-[1.15rem] text-white mb-3 font-[300]">{e.titulo}</h3>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75]">{e.texto}</p>
+              {i < etapas.length - 1 && (
+                <span className="hidden md:block absolute top-1/2 -right-4 text-gold/60 text-2xl font-thin">→</span>
+              )}
+            </motion.div>
+          ))}
+        </div>
+        <div className="mt-12 border-l-2 border-gold pl-6 max-w-[820px]">
+          <p className="font-body font-[300] italic text-[16px] md:text-[18px] text-white/85 leading-[1.7]">
+            Framework proprietário aplicado na fase de Recolha de Dados, estruturando o conhecimento humano em variáveis mensuráveis antes de alimentar o motor de regras.
+          </p>
+          <p className="mt-4 font-display font-[200] text-gold-l text-[clamp(18px,2vw,22px)] leading-[1.4]">
+            Uma abordagem estabelecida e comprovada. Cada resultado é rastreável até à regra que o originou.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────── COMO CONSTRUÍMOS A INTELIGÊNCIA DA MOOVIA ─────────────────── */
+function ComoConstruimosInteligencia() {
+  const cadeia = [
+    "Conhecimento humano",
+    "Dados estruturados",
+    "Regras e scores",
+    "Aprendizagem estatística",
+    "Modelos preditivos",
+    "Plataforma de decisão",
+  ];
+  const naoPromessas = [
+    "Uma plataforma completa pronta para comercialização",
+    "Machine Learning sem base de dados suficiente",
+    "Um sistema que substitua psicólogos, consultores ou decisões humanas",
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Evolução do produto</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
+          Como construímos a <span className="italic text-gold-l">inteligência da MOOVIA.</span>
+        </h2>
+        <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
+          O produto nasce do conhecimento estruturado gerado pelos especialistas e dos dados recolhidos em cada caso.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-14">
+          {cadeia.map((etapa, i) => (
+            <div key={etapa} className="flex items-center gap-3 md:gap-4">
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="inline-block px-4 py-2 border border-gold/40 bg-w05 font-body font-[400] text-[13px] md:text-[14px] text-white/90"
+              >
+                {etapa}
+              </motion.span>
+              {i < cadeia.length - 1 && <span className="text-gold/60 text-lg">→</span>}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
+          <p>
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, experiência de risco e regras de negócio, numa lógica computacional explicável.
+          </p>
+        </div>
+
+        <div className="mt-12 max-w-[860px] p-8 border-l-[3px] border-gold/40 bg-[#0a0d18]">
+          <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-5">
+            O que não prometemos ainda
+          </p>
+          <ul className="space-y-3">
+            {naoPromessas.map((item) => (
+              <li key={item} className="flex items-start gap-3 font-body font-[300] text-[15px] text-white/85 leading-[1.7]">
+                <span className="mt-[10px] h-px w-4 bg-gold/60 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSURANCE ─────────────────── */
+function HowWeBuiltTimeline() {
+  const marcos = [
+    { destaque: "30 anos", texto: "Experiência em Negócios Internacionais" },
+    { texto: "Metodologias de Revenue Assurance" },
+    { texto: "Metodologias psicológicas" },
+    { texto: "Engenharia e motor de regras" },
+    { texto: "Assessments piloto" },
+    { texto: "Refinamento da metodologia" },
+    { texto: "Validação jurídica (RGPD)" },
+    { texto: "Lançamento no mercado" },
+  ];
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1000px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Origem e validação</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14">
+          How We Built <span className="italic text-gold-l">Human Mobility Assurance.</span>
+        </h2>
+
+        <ol className="relative border-l border-gold/30 pl-8 md:pl-10 space-y-8">
+          {marcos.map((m, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, x: -12 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06 }}
+              className="relative"
+            >
+              <span className="absolute -left-[42px] md:-left-[50px] top-2 h-2 w-2 rounded-full bg-gold" />
+              {m.destaque && (
+                <p className="font-display font-[300] text-gold text-[clamp(20px,2.4vw,28px)] leading-tight mb-1">
+                  {m.destaque}
+                </p>
+              )}
+              <p className="font-body font-[300] text-[15px] md:text-[16px] text-white/85 leading-[1.7]">
+                {m.texto}
+              </p>
+            </motion.li>
+          ))}
+        </ol>
+
+        <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
+          A MOOVIA não nasceu de uma ideia. Nasceu de um processo de validação.
+        </p>
+      </div>
+    </section>
   );
 }
 
