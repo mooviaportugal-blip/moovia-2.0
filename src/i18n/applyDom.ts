@@ -142,25 +142,17 @@ function scheduleFlush() {
 function ensureObserver() {
   if (observer || typeof MutationObserver === "undefined") return;
   observer = new MutationObserver((records) => {
+    if (!currentLang || currentLang === "pt") return;
+    // Clear caches for changed text/attr so they retranslate from fresh values.
     for (const r of records) {
-      if (r.type === "childList") {
-        r.addedNodes.forEach((n) => schedule(n));
-      } else if (r.type === "characterData" && r.target.nodeType === 3) {
-        // Text node content changed (e.g. React updated a variable) — retranslate.
-        const t = r.target as Text;
-        ORIGINAL_TEXT.delete(t);
-        schedule(t);
-      } else if (r.type === "attributes" && r.target.nodeType === 1) {
-        const el = r.target as Element;
-        if (r.attributeName && ATTRS.includes(r.attributeName)) {
-          const store = ORIGINAL_ATTR.get(el);
-          if (store) delete store[r.attributeName];
-          if (currentLang && currentLang !== "pt" && currentLang !== "pt-BR") {
-            translateAttr(el, r.attributeName, currentLang);
-          }
-        }
+      if (r.type === "characterData" && r.target.nodeType === 3) {
+        ORIGINAL_TEXT.delete(r.target as Text);
+      } else if (r.type === "attributes" && r.target.nodeType === 1 && r.attributeName) {
+        const store = ORIGINAL_ATTR.get(r.target as Element);
+        if (store) delete store[r.attributeName];
       }
     }
+    scheduleFlush();
   });
   observer.observe(document.body, {
     childList: true, subtree: true, characterData: true,
