@@ -56,7 +56,7 @@ function SobrePage() {
       <RaizesEAsas />
       <ComoConstruimosInteligencia />
       <ComoFazemosSection />
-      <ValidacaoSection />
+      
       <PosicaoMarca />
       <MethodologySection />
       <HowWeBuiltTimeline />
