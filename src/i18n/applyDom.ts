@@ -121,31 +121,23 @@ function walk(root: Node, lang: WalkerLang) {
 
 let currentLang: WalkerLang | null = null;
 let observer: MutationObserver | null = null;
-let pendingNodes: Set<Node> = new Set();
 let flushHandle: number | null = null;
 
 function flushPending() {
   flushHandle = null;
-  if (!currentLang || currentLang === "pt" || currentLang === "pt-BR") return;
-  const nodes = Array.from(pendingNodes);
-  pendingNodes.clear();
-  for (const n of nodes) {
-    if (!n.isConnected) continue;
-    if (n.nodeType === 3) {
-      translateTextNode(n as Text, currentLang);
-    } else if (n.nodeType === 1) {
-      walk(n, currentLang);
-    }
-  }
+  if (!currentLang || currentLang === "pt") return;
+  // Just re-walk the whole body. Cheap enough (~ms) and immune to
+  // partial subtree edge cases.
+  walk(document.body, currentLang);
 }
 
-function schedule(node: Node) {
-  pendingNodes.add(node);
+function scheduleFlush() {
   if (flushHandle != null) return;
   flushHandle = (typeof requestAnimationFrame !== "undefined"
     ? requestAnimationFrame(flushPending)
     : (setTimeout(flushPending, 16) as unknown as number));
 }
+
 
 function ensureObserver() {
   if (observer || typeof MutationObserver === "undefined") return;
