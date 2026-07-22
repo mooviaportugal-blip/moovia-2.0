@@ -100,7 +100,7 @@ const ALL: Record<string, Member> = {
     id: "leticia",
     name: "Dra. Letícia de Mello",
     initials: "LM",
-    role: "Psicóloga | Wellness & Integração Familiar",
+    role: "Co-Founder & CSO | Wellness & Integração Familiar",
     img: "/images/leticia.jpg",
     linkedin: "https://www.linkedin.com/in/let%C3%ADcia-mello-48610721",
     chips: ["Psicologia", "Wellness"],
