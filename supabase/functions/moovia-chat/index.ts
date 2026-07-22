@@ -189,10 +189,11 @@ async function loadKnowledge(supabase: any): Promise<string> {
       .limit(1)
       .maybeSingle()
     if (!data) return DEFAULT_SYSTEM_PROMPT
-    const base = (data.system_prompt && data.system_prompt.trim().length > 50)
-      ? data.system_prompt
-      : DEFAULT_SYSTEM_PROMPT
-    const parts: string[] = [base]
+    // Reposicionamento Global Mobility Assurance: o DEFAULT é SEMPRE a base.
+    // Rows antigas em maia_knowledge só podem ACRESCENTAR (persona/rules/faqs/vocab/examples),
+    // nunca substituir o system_prompt — evita relíquias da fase antiga (relocation).
+    const parts: string[] = [DEFAULT_SYSTEM_PROMPT]
+
     if (data.persona) parts.push(`\n━━━ PERSONA ━━━\n${data.persona}`)
     if (Array.isArray(data.rules) && data.rules.length) {
       parts.push(`\n━━━ REGRAS ADICIONAIS ━━━\n${data.rules.map((r: any) => `- ${r}`).join('\n')}`)
