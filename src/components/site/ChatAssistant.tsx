@@ -24,27 +24,41 @@ interface QualState {
 
 type HandoffField =
   | 'persona_type'
+  // B2B
+  | 'nome_empresa'
+  | 'cargo_responsavel'
+  | 'colaboradores_12m'
+  | 'paises_origem_destino'
+  | 'desafio_principal'
+  | 'programa_existente'
+  // B2C
   | 'objective'
   | 'timing'
   | 'composition'
   | 'decision_phase'
-  | 'email'
+  // Contacto comum
+  | 'name'
   | 'whatsapp'
-  | 'contact_period'
-  | 'contact_method'
+  | 'email'
   | 'message'
 
+type HandoffBranch = 'empresa' | 'pessoa'
 
 interface HandoffStep {
   field: HandoffField
   question: string
   options?: string[]
+  optional?: boolean
+  label?: string
 }
 
 interface HandoffState {
   active: boolean
   step: number
+  branch?: HandoffBranch
   answers: Partial<Record<HandoffField, string>>
+  confirming?: boolean
+  closing?: boolean
 }
 
 const DDI_LIST = [
@@ -78,60 +92,91 @@ function newSessionId(): string {
 
 const CHECKOUT_URL = 'https://mooviaportugal.com/checkout'
 const CHECKOUT_RE = /https?:\/\/[^\s)]*mooviaportugal\.com\/checkout\/?/gi
-const HANDOFF_TRIGGER_RE = /\b(atendimento|atendido|atendida|conversa gratuita|conversar com humano|falar com humano|falar com um humano|falar com consultor|falar com fundador|marcar reunião|marcar reuniao|quero ser atendido|quero ser atendida|humano)\b/i
+const HANDOFF_TRIGGER_RE = /\b(atendimento|atendido|atendida|conversa gratuita|conversar com humano|falar com humano|falar com um humano|falar com consultor|falar com fundador|marcar reunião|marcar reuniao|quero ser atendido|quero ser atendida|humano|agendar|marcar|contratar|quero uma proposta|proposta comercial|discovery call|saber mais sobre contratar|avançar)\b/i
 
-const HANDOFF_STEPS: HandoffStep[] = [
+const PERSONA_STEP: HandoffStep = {
+  field: 'persona_type',
+  question: 'Antes de mais: está a falar em nome de uma empresa que coordena mobilidade de colaboradores, ou é uma questão pessoal/familiar?',
+  options: ['Empresa', 'Pessoa ou família'],
+  label: 'Perfil',
+}
+
+const B2B_STEPS: HandoffStep[] = [
+  { field: 'nome_empresa', question: 'Qual o nome da empresa?', label: 'Empresa' },
+  { field: 'cargo_responsavel', question: 'Quem é o responsável e o cargo? (ex: Ana Silva, RH)', label: 'Responsável' },
   {
-    field: 'persona_type',
-    question: 'Antes de mais: fala em nome de uma empresa ou como pessoa/família?',
-    options: ['Empresa (RH ou Mobilidade)', 'Pessoa ou família'],
+    field: 'colaboradores_12m',
+    question: 'Quantos colaboradores a empresa pretende mover nos próximos 12 meses?',
+    options: ['1', '2-5', '6-20', 'Mais de 20'],
+    label: 'Colaboradores (12m)',
+  },
+  { field: 'paises_origem_destino', question: 'Qual(is) o(s) país(es) de origem e destino?', label: 'Origem → Destino' },
+  {
+    field: 'desafio_principal',
+    question: 'Qual o principal desafio hoje?',
+    options: ['Adaptação familiar', 'Habitação', 'Integração cultural', 'Retenção pós-mudança', 'Ainda não identificámos', 'Outro'],
+    label: 'Principal desafio',
   },
   {
+    field: 'programa_existente',
+    question: 'Já têm um programa de mobilidade estruturado?',
+    options: ['Sim', 'Não', 'Parcialmente'],
+    label: 'Programa estruturado',
+  },
+  { field: 'name', question: 'Qual o nome do contacto?', label: 'Nome do contacto' },
+  { field: 'whatsapp', question: 'Qual o telefone do contacto? (com indicativo do país)', label: 'Telefone' },
+  { field: 'email', question: 'Qual o e-mail corporativo?', label: 'E-mail' },
+  {
+    field: 'message',
+    question: 'Quer adicionar alguma mensagem para o time? (opcional)',
+    options: ['Pular'],
+    optional: true,
+    label: 'Mensagem',
+  },
+]
+
+const B2C_STEPS: HandoffStep[] = [
+  {
     field: 'objective',
-    question: 'Qual o objetivo principal com Portugal (ou com mobilidade internacional)?',
-    options: [
-      'Expatriar colaboradores (Global Mobility Assurance)',
-      'Reduzir risco humano em missões internacionais',
-      'Mudar com a família para Portugal',
-      'Reforma ou recomeço pessoal em Portugal',
-      'Investir em imóveis / património',
-      'Outro',
-    ],
+    question: 'Qual o seu objetivo principal?',
+    options: ['Trabalhar em Portugal', 'Estudar em Portugal', 'Mudar com a família', 'Investir em imóveis', 'Reforma em Portugal', 'Outro'],
+    label: 'Objetivo',
   },
   {
     field: 'timing',
-    question: 'Qual o horizonte da decisão?',
-    options: ['Menos de 60 dias', '3 a 6 meses', '6 a 12 meses', 'Já tomei a decisão', 'Ainda a explorar'],
+    question: 'Quando pretende mudar?',
+    options: ['Menos de 3 meses (urgente)', '3 a 6 meses', '6 a 12 meses', 'Mais de 1 ano', 'Ainda estou a pesquisar'],
+    label: 'Quando',
   },
   {
     field: 'composition',
-    question: 'Quem participa nesta transição?',
-    options: ['Apenas eu', 'Casal', 'Família com filhos', 'Colaborador + família', 'Equipa / vários colaboradores'],
+    question: 'Qual a composição da mudança?',
+    options: ['Vou sozinho(a)', 'Casal', 'Casal com filhos', 'Vou com meu pet', 'Família', 'Todos os tipos de famílias'],
+    label: 'Composição',
   },
   {
     field: 'decision_phase',
-    question: 'Em que fase está?',
-    options: ['A explorar categorias', 'A comparar fornecedores', 'Já decidi, a planear', 'Preciso agir agora', 'Já com proposta ou contrato assinado'],
+    question: 'Em que fase da decisão está?',
+    options: ['Apenas a pesquisar', 'Comparando Portugal com outras opções', 'Já decidi Portugal, a planear quando', 'Tomei a decisão, preciso agir', 'Já tenho proposta/contrato assinado'],
+    label: 'Fase da decisão',
   },
-
-  { field: 'email', question: 'Pode confirmar o seu e-mail?' },
-  { field: 'whatsapp', question: 'E o seu WhatsApp (com indicativo do país)?' },
-  {
-    field: 'contact_period',
-    question: 'Qual o melhor período para te ligarem?',
-    options: ['Manhã', 'Tarde', 'Noite'],
-  },
-  {
-    field: 'contact_method',
-    question: 'Prefere Ligação ou Vídeo Chamada?',
-    options: ['Ligação', 'Vídeo Chamada'],
-  },
-  {
-    field: 'message',
-    question: 'Quer me contar brevemente o seu caso? (opcional, pode pular)',
-    options: ['Pular'],
-  },
+  { field: 'name', question: 'Qual o seu nome?', label: 'Nome' },
+  { field: 'whatsapp', question: 'Qual o seu telefone/WhatsApp? (com indicativo)', label: 'Telefone' },
+  { field: 'email', question: 'Qual o seu melhor e-mail?', label: 'E-mail' },
 ]
+
+function getStepsForBranch(branch?: HandoffBranch): HandoffStep[] {
+  if (branch === 'empresa') return [PERSONA_STEP, ...B2B_STEPS]
+  if (branch === 'pessoa') return [PERSONA_STEP, ...B2C_STEPS]
+  return [PERSONA_STEP]
+}
+
+function parseBranch(value: string): HandoffBranch | null {
+  const v = value.trim().toLowerCase()
+  if (v.startsWith('empresa') || v.includes('rh') || v.includes('mobilidade')) return 'empresa'
+  if (v.startsWith('pessoa') || v.includes('família') || v.includes('familia') || v.includes('particular')) return 'pessoa'
+  return null
+}
 
 function stripOptionsStreaming(text: string): string {
   let out = text.replace(/\[OPTIONS\][\s\S]*?\[\/OPTIONS\]/g, '')
