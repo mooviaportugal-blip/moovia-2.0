@@ -77,7 +77,7 @@ export function AssessmentSection() {
               O que receberá
             </p>
             <h3 className="font-display text-[26px] font-[300] text-white leading-tight mb-2 text-center">
-              Global Mobility Success Assessment
+              Avaliação Global Mobility Success
             </h3>
             <p className="font-body text-[12px] font-[300] text-w35 uppercase tracking-widest text-center mb-10">
               Sessão de Consultoria Estratégica
