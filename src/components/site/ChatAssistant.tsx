@@ -237,12 +237,13 @@ const MAIA_STRINGS: Record<MaiaLang, {
     voiceUnsupported: 'Seu navegador não suporta reconhecimento de voz.',
   },
   en: {
-    invites: ['Hi, can I help you?','Any questions I can answer?','I’m here to help!','Hey! Want to chat?','Can I guide you about Portugal?'],
-    greetingNew: 'Hi! I’m MAIA, MOOVIA Portugal’s assistant.\n\nFirst, what should I call you?',
-    greetingDone: (n) => `Welcome back, ${n}! I’m MAIA, how can I help today?`,
+    invites: ['Hi, can I help?','Any questions on Global Mobility Assurance?','I’m here to help!','Hey! Want to chat?','Can I guide you on international mobility?'],
+    greetingNew: 'Hi! I’m MAIA, MOOVIA’s assistant — the company that created the Global Mobility Assurance category.\n\nFirst, what should I call you?',
+    greetingDone: (n) => `Welcome back, ${n}! I’m MAIA. How can I help with your international mobility today?`,
     greetingWhats: (n) => `Hi again, ${n}! To finish your registration, what’s your WhatsApp?`,
     greetingEmail: (n) => `Hi ${n}! I’m MAIA. To continue, what’s your best email?`,
     askName: 'Hi! First, what should I call you?',
+
     askEmailAfterName: (n) => `${n}, nice to meet you! What’s your best contact email?`,
     invalidEmail: 'That email doesn’t look valid. Could you type it again?',
     askWhats: 'Perfect! Now please share your WhatsApp (with country code) to finish?',
