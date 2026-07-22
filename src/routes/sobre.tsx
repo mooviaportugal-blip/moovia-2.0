@@ -455,7 +455,7 @@ function ValidacaoSection() {
             </h3>
             <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
               Diagnóstico validado por especialistas em estratégia, adaptação
-              humana e coordenação patrimonial — orquestrado sob mandato.
+              humana e coordenação patrimonial, tudo orquestrado sob mandato.
             </p>
           </div>
         </div>
