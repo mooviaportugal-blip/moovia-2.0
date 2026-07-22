@@ -435,12 +435,13 @@ function PostEditor({ post, onCancel, onSaved }: { post: Post; onCancel: () => v
         <button onClick={onCancel} className="flex items-center gap-2 text-white/60 hover:text-gold font-urbanist text-[11px] uppercase tracking-[0.2em]">
           <ArrowLeft size={14} /> Voltar
         </button>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           {form.id && (
             <a href={`/blog/${form.slug}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-3 border border-border text-white/60 hover:text-gold hover:border-gold transition-colors font-urbanist text-[11px] uppercase tracking-[0.2em]">
               <ExternalLink size={14} /> Pré-visualizar
             </a>
           )}
+          {form.id && <TranslationControls postId={form.id} />}
           {form.id && (
             <button onClick={remove} className="flex items-center gap-2 px-4 py-3 border border-red-500/30 text-red-400 hover:bg-red-500/10 transition-colors font-urbanist text-[11px] uppercase tracking-[0.2em]">
               <Trash2 size={14} /> Apagar
@@ -453,6 +454,7 @@ function PostEditor({ post, onCancel, onSaved }: { post: Post; onCancel: () => v
             {form.published ? "Atualizar" : "Publicar"}
           </button>
         </div>
+
       </div>
 
       <div className="grid lg:grid-cols-[1fr_360px] gap-8">
