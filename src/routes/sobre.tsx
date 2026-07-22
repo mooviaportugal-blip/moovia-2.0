@@ -135,7 +135,7 @@ function OqueSomos() {
           <div className="bg-w05 border border-b18 p-8 md:p-10">
             <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para a empresa</p>
             <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
-              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility — a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
+              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility. Somos a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
             </p>
           </div>
         </div>
