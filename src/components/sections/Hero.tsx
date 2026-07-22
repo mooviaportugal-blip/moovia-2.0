@@ -1,12 +1,30 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import molduraMp4 from "@/assets/moldura.mp4.asset.json";
-import molduraWebm from "@/assets/moldura.webm.asset.json";
+import { useEffect, useRef } from "react";
+
+const HERO_VIDEO_URL = "https://mooviaportugal.com/video/moovia-cover.mp4";
+const HERO_BG = "#06091a";
 
 export function Hero() {
   const { i18n } = useTranslation();
   const locale = i18n.language;
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const play = () => {
+      v.play().catch(() => {});
+    };
+    if (v.readyState >= 2) play();
+    else v.addEventListener("loadeddata", play, { once: true });
+    return () => v.removeEventListener("loadeddata", play);
+  }, []);
+
+
 
 
 
