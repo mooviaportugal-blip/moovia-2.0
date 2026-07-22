@@ -1,4 +1,3 @@
-import { createFileRoute } from '@tanstack/react-router'
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
