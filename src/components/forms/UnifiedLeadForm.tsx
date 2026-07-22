@@ -204,21 +204,22 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
             />
             <div className="bg-black-3 border-0 border-b border-b18 p-5">
               <p className="font-urbanist text-[11px] tracking-[0.24em] uppercase text-w35 mb-3">
-                Colaboradores a mover (12 meses)
+                Quantidade de colaboradores
               </p>
               <div className="flex flex-wrap gap-2">
-                {["1", "2-5", "6-20", "mais_20"].map((v) => (
+                {["1-50", "50-100", "100-500", "mais_500"].map((v) => (
                   <button
                     type="button"
                     key={v}
                     onClick={() => set("colaboradores_12m", v)}
                     className={chipBtn(form.colaboradores_12m === v)}
                   >
-                    {v === "mais_20" ? "Mais de 20" : v}
+                    {v === "mais_500" ? "Mais de 500" : v === "1-50" ? "1 a 50" : v === "50-100" ? "50 a 100" : "100 a 500"}
                   </button>
                 ))}
               </div>
             </div>
+
             <input
               placeholder="País(es) de origem e destino"
               value={form.paises_origem_destino || ""}
