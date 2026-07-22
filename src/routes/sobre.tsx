@@ -94,7 +94,7 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional — com um objetivo claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
           </p>
           <p>
             Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
