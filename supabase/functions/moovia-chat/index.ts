@@ -271,15 +271,20 @@ function streamText(text: string) {
 
 function fallbackReply(lastUserText: string, name?: string) {
   const text = lastUserText.toLowerCase()
+  const looksB2B = /\b(empresa|corporat|rh|recursos humanos|mobilidade corporativa|expatri|colaborador|equipa|b2b|company|hr|employees?)\b/.test(text)
   if (/pag(ar|amento)|checkout|comprar|contratar|assessment|avaliação|avaliacao/.test(text)) {
-    return 'Pode fazer o pagamento seguro por aqui: https://mooviaportugal.com/checkout — após a confirmação, entramos em contacto para agendar a sessão de 60 minutos.'
+    if (looksB2B) {
+      return 'Para empresas o fecho é sempre por Strategic Discovery Call com um dos founders — não trabalhamos por checkout no programa Global Mobility Assurance. Quer que eu marque a call agora?'
+    }
+    return 'Pode fazer o pagamento seguro por aqui: https://mooviaportugal.com/checkout — após a confirmação, entramos em contacto para agendar a sessão do Global Mobility Success Assessment.'
   }
-  if (/humano|consultor|fundador|conversa gratuita|atendimento|atendido|atendida|reunião|reuniao/.test(text)) {
+  if (/humano|consultor|fundador|conversa gratuita|discovery|atendimento|atendido|atendida|reunião|reuniao/.test(text)) {
     const first = name?.trim().split(/\s+/)[0]
-    return `Claro${first ? `, ${first}` : ''}, vou ajudá-lo a marcar. Antes preciso fazer algumas perguntas rápidas para que o fundador chegue já com contexto do seu caso. Qual o seu objetivo principal com Portugal?\n[OPTIONS]Trabalhar em Portugal|Estudar em Portugal|Mudar com a família|Investir em imóveis|Reforma em Portugal|Outro[/OPTIONS]`
+    return `Claro${first ? `, ${first}` : ''}, vou ajudá-lo(a) a marcar. Antes preciso de algumas respostas rápidas para o founder chegar já com contexto. Fala em nome de uma empresa ou como pessoa/família?\n[OPTIONS]Empresa (RH ou Mobilidade)|Pessoa ou família[/OPTIONS]`
   }
-  return 'Estou com alta demanda agora e não quero te dar uma resposta incompleta. Pode tentar novamente em alguns minutos?'
+  return 'Estou com muita procura agora e não quero dar uma resposta incompleta. Pode tentar novamente daqui a pouco?'
 }
+
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: corsHeaders })
