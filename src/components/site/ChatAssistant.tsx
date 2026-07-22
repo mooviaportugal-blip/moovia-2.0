@@ -253,12 +253,13 @@ const MAIA_STRINGS: Record<MaiaLang, {
     voiceUnsupported: 'Your browser does not support voice recognition.',
   },
   es: {
-    invites: ['¡Hola! ¿Puedo ayudarte?','¿Alguna duda que pueda resolver?','¡Estoy aquí para ayudarte!','¡Hola! ¿Quieres hablar conmigo?','¿Te oriento sobre Portugal?'],
-    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA Portugal.\n\nAntes de nada, ¿cómo te llamo?',
-    greetingDone: (n) => `¡Bienvenido de nuevo, ${n}! Soy MAIA, ¿en qué puedo ayudarte hoy?`,
+    invites: ['¡Hola! ¿Puedo ayudarte?','¿Dudas sobre Global Mobility Assurance?','¡Estoy aquí para ayudarte!','¡Hola! ¿Quieres hablar conmigo?','¿Te oriento sobre movilidad internacional?'],
+    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA — la empresa que creó la categoría Global Mobility Assurance.\n\nAntes de nada, ¿cómo te llamo?',
+    greetingDone: (n) => `¡Bienvenido de nuevo, ${n}! Soy MAIA. ¿En qué puedo ayudarte hoy con tu movilidad internacional?`,
     greetingWhats: (n) => `¡Hola otra vez, ${n}! Para terminar tu registro, ¿me das tu WhatsApp?`,
     greetingEmail: (n) => `¡Hola, ${n}! Soy MAIA. Para continuar, ¿cuál es tu mejor email?`,
     askName: '¡Hola! Antes de nada, ¿cómo te llamo?',
+
     askEmailAfterName: (n) => `¡${n}, encantada! ¿Cuál es tu mejor email de contacto?`,
     invalidEmail: 'Ese email no parece válido. ¿Puedes escribirlo de nuevo?',
     askWhats: '¡Perfecto! Ahora pásame tu WhatsApp (con prefijo) para finalizar?',
