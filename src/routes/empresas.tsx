@@ -120,7 +120,7 @@ function EmpresasPage() {
             className="mb-10"
           >
             <p className="font-body text-[16px] md:text-[18px] font-[600] text-white mb-6">
-              Um benefício para o colaborador. Um investimento mensurável para a empresa.
+              Um benefício para o colaborador que representa um investimento mensurável para a empresa.
             </p>
             <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-4">
               <p>
