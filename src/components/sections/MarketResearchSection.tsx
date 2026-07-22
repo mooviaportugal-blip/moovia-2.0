@@ -124,7 +124,7 @@ export function MarketResearchSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
             <div className="flex items-start justify-between mb-6">
               <span className="font-display text-[2rem] font-[300] text-gold">01</span>
@@ -160,7 +160,7 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
             <div className="flex items-start justify-between mb-6">
               <span className="font-display text-[2rem] font-[300] text-gold">02</span>
@@ -195,7 +195,7 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.16 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
             <div className="flex items-start justify-between mb-6">
               <span className="font-display text-[2rem] font-[300] text-gold">03</span>
@@ -226,7 +226,7 @@ export function MarketResearchSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.24 }}
-            className="border border-border-b18 bg-black/30 p-8 lg:p-10 flex flex-col"
+            className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
             <div className="flex items-start justify-between mb-6">
               <span className="font-display text-[2rem] font-[300] text-gold">04</span>
