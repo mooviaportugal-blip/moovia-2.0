@@ -38,7 +38,6 @@ export function Hero() {
 
         <h1
           key={locale}
-          data-no-translate
           className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
           <span className="text-white/60 font-[200] block mb-2">Ajudamos empresas a reduzir</span>
