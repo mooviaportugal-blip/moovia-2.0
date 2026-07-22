@@ -94,7 +94,43 @@ function Equipa() {
 
       <LinhaMooverSection />
 
+      <HistoriaPrecedeEquipa />
+
       <EquipaShowcase />
     </SiteLayout>
+  );
+}
+
+function HistoriaPrecedeEquipa() {
+  const paragrafos = [
+    "A MOOVIA não nasce de uma ideia isolada. Nasce da amizade de décadas e de duas trajetórias que se cruzaram no mundo corporativo internacional, entre Revenue Assurance, grandes consultorias e tecnologia empresarial, e que viveram na pele os desafios humanos da mobilidade internacional.",
+    "Depois de anos a proteger o investimento das empresas em processos e receita, decidimos aplicar a mesma disciplina de rigor, evidência e rastreabilidade a algo que nunca teve essa proteção: o investimento humano da mobilidade internacional.",
+    "Dessa convicção, de que os fatores que mais determinam o sucesso de uma mobilidade raramente são medidos, nasce a MOOVIA.",
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[860px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
+          A história que precede a equipa
+        </p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-12">
+          Antes das pessoas, <span className="italic text-gold-l">a convicção.</span>
+        </h2>
+        <div className="space-y-6">
+          {paragrafos.map((p, i) => (
+            <motion.p
+              key={i}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ delay: i * 0.08, duration: 0.6 }}
+              className="font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]"
+            >
+              {p}
+            </motion.p>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
