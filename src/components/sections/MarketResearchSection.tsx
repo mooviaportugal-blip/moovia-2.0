@@ -236,28 +236,31 @@ export function MarketResearchSection() {
             transition={{ delay: 0.24 }}
             className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">04</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">04</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 O custo de uma missão falhada
               </span>
             </div>
 
-            <div className="flex items-start gap-6 mb-6">
-              <CoinsIcon />
-              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1">
+            <div className="flex items-start gap-4 sm:gap-6 mb-6">
+              <div className="shrink-0">
+                <CoinsIcon size={52} />
+              </div>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1 min-w-0 break-words">
                 As empresas atualmente reportam entre 5% e 10% das missões terminando antes do
                 previsto. Empresas com programas maduros chegam a menos de 5%.
               </p>
             </div>
 
             <div className="border-t border-border-b18 pt-6 mt-auto">
-              <p className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60 mb-2">
+              <p className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 mb-2">
                 Custo total estimado por expatriado
               </p>
-              <p className="font-display text-[clamp(2.4rem,5vw,3.6rem)] font-[300] text-gold-l leading-none tracking-[-0.02em]">
+              <p className="font-display text-[clamp(1.7rem,7vw,3.6rem)] font-[300] text-gold-l leading-none tracking-[-0.02em] break-words">
                 €215K <span className="text-gold/60">–</span> €470K
               </p>
+
               <p className="font-body text-[12px] font-[300] text-w35/70 leading-[1.6] mt-3">
                 Somando salário, benefícios, repatriação e substituição.
               </p>
