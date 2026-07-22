@@ -49,7 +49,7 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Análise inicial do contexto, dos stakeholders e das variáveis críticas da mobilidade. Metodologia: Entrevista Estratégica MOOVIA, Descoberta de Mobilidade com IA, Framework de Mapeamento de Contexto. A IA estrutura informação e identifica padrões; a decisão é sempre dos especialistas MOOVIA.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Framework Owner · Lead Strategist" },
+      { nome: "Frederico Prado", papel: "Framework Owner & Lead Strategist" },
     ],
   },
   {
@@ -59,8 +59,8 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Avaliação de Risco de Mobilidade.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Human Mobility Assurance" },
-      { nome: "Dra. Letícia de Mello", papel: "Avaliação de Integração Adaptativa" },
+      { nome: "Frederico Prado", papel: "Framework Owner" },
+      { nome: "Dra. Letícia de Mello", papel: "Specialist Involved (Avaliação de Integração Adaptativa)" },
     ],
   },
   {
@@ -70,7 +70,7 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Definir prioridades, cronograma, responsáveis e roadmap de execução da mobilidade internacional.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Framework Owner" },
+      { nome: "Frederico Prado", papel: "Framework Owner & Lead Strategist" },
     ],
   },
   {
@@ -80,7 +80,7 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Orquestração operacional da execução, integrando tecnologia, processos e todos os intervenientes numa única governance.",
     especialistas: [
-      { nome: "Pablo Alejandro Saco Paim", papel: "Co-Founder & COO · Lead Strategist" },
+      { nome: "Pablo Alejandro Saco Paim", papel: "Lead Strategist" },
     ],
   },
   {
@@ -90,8 +90,8 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Estrutura de Integração Adaptativa, Acompanhamento AEAI, Monitor de Sucesso.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Programme Director" },
-      { nome: "Dra. Letícia de Mello", papel: "Especialista em Integração Adaptativa" },
+      { nome: "Frederico Prado", papel: "Framework Owner & Lead Strategist" },
+      { nome: "Dra. Letícia de Mello", papel: "Specialist Involved (Adaptive Integration Specialist)" },
     ],
   },
   {
@@ -101,9 +101,10 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Acompanhamento contínuo dos resultados da mobilidade. Metodologia: Índice Global Mobility Success, Painel de Resultados, Previsões com IA.",
     especialistas: [
-      { nome: "Frederico Prado", papel: "Programme Director" },
+      { nome: "Frederico Prado", papel: "Framework Owner & Lead Strategist" },
     ],
   },
+
 ].map<Estacao>((e) => ({
   ...e,
   especialistas: e.especialistas.map<Especialista>((s) => ({
