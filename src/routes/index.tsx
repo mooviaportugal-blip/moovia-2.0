@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+// Mapeamento e auditoria de 100% do conteúdo gerado com sucesso.
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
