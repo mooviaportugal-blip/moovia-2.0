@@ -43,7 +43,7 @@ const ALL: Record<string, Member> = {
     id: "pablo",
     name: "Pablo Alejandro Saco Paim",
     initials: "PP",
-    role: "Co-Founder & COO",
+    role: "Co-Founder & CPTO",
     img: "/images/pablo.png",
     linkedin: "https://www.linkedin.com/in/pablo-alejandro-bbb4681a6/",
     chips: ["IST", "SeaRider", "AXL MOTORS", "Digital Assets"],
