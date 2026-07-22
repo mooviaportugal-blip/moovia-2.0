@@ -640,15 +640,21 @@ export function ChatAssistant() {
     return first ? first.charAt(0).toUpperCase() + first.slice(1) : ''
   }
 
+  function currentSteps(branch?: HandoffBranch): HandoffStep[] {
+    return getStepsForBranch(branch ?? handoff.branch)
+  }
+
   function findHandoffStepFromAssistant(content?: string): number | null {
     if (!content) return null
+    const steps = currentSteps()
     const clean = stripOptionsStreaming(content)
     const opts = parseOptions(content)
-    const byQuestion = HANDOFF_STEPS.findIndex((step) => clean.includes(step.question))
+    const byQuestion = steps.findIndex((step) => clean.includes(step.question))
     if (byQuestion >= 0) return byQuestion
     if (opts.length) {
-      const byOptions = HANDOFF_STEPS.findIndex((step) =>
-        step.options?.length === opts.length && step.options.every((option) => opts.includes(option)),
+      const byOptions = steps.findIndex((step) =>
+        step.options?.length === opts.length &&
+        step.options.every((option) => opts.includes(option)),
       )
       if (byOptions >= 0) return byOptions
     }
@@ -656,6 +662,7 @@ export function ChatAssistant() {
   }
 
   function deriveHandoffAnswersFromMessages(history: Message[]) {
+    const steps = currentSteps()
     const answers: Partial<Record<HandoffField, string>> = {}
     for (let i = 0; i < history.length - 1; i += 1) {
       const assistantMsg = history[i]
@@ -663,23 +670,46 @@ export function ChatAssistant() {
       if (assistantMsg.role !== 'assistant' || userMsg.role !== 'user') continue
       const stepIndex = findHandoffStepFromAssistant(assistantMsg.content)
       if (stepIndex === null) continue
-      const step = HANDOFF_STEPS[stepIndex]
+      const step = steps[stepIndex]
+      if (!step) continue
       const value = userMsg.content.trim()
-      if (step.options?.length && !step.options.includes(value)) continue
+      if (step.options?.length && !step.optional && !step.options.includes(value)) continue
       answers[step.field] = step.field === 'message' && value === 'Pular' ? '' : value
     }
     return answers
   }
 
-  function handoffQuestion(stepIndex: number): string {
-    const step = HANDOFF_STEPS[stepIndex]
+  function handoffQuestion(stepIndex: number, branch?: HandoffBranch): string {
+    const step = currentSteps(branch)[stepIndex]
     return step ? withOptions(step.question, step.options) : ''
+  }
+
+  function buildSummary(branch: HandoffBranch, answers: Partial<Record<HandoffField, string>>): string {
+    const steps = getStepsForBranch(branch)
+    const lines = steps
+      .filter((s) => s.field !== 'persona_type')
+      .map((s) => `• ${s.label || s.field}: ${answers[s.field] || '—'}`)
+    const header = branch === 'empresa'
+      ? 'Perfeito. Vou confirmar os dados antes de enviar ao time MOOVIA:'
+      : 'Ótimo. Vou confirmar os seus dados antes de enviar:'
+    return `${header}\n\n${lines.join('\n')}\n\nEstá tudo correto?\n[OPTIONS]Confirmar e enviar|Corrigir[/OPTIONS]`
+  }
+
+  function buildCorrectionMenu(branch: HandoffBranch): string {
+    const steps = getStepsForBranch(branch).filter((s) => s.field !== 'persona_type')
+    const opts = steps.map((s) => s.label || s.field).join('|')
+    return `Qual campo quer corrigir?\n[OPTIONS]${opts}[/OPTIONS]`
+  }
+
+  function fieldIndexByLabel(branch: HandoffBranch, label: string): number {
+    const steps = getStepsForBranch(branch)
+    return steps.findIndex((s) => (s.label || s.field) === label)
   }
 
   function startHandoff(newMessages: Message[]) {
     const name = firstNameFromQual()
     const prefix = name ? `Claro, ${name},` : 'Claro,'
-    const reply = `${prefix} vou ajudar a marcar. Antes preciso de fazer algumas perguntas rápidas para que o fundador chegue já com contexto do seu caso. ${handoffQuestion(0)}`
+    const reply = `${prefix} para avançar preciso apenas de alguns dados rápidos. ${handoffQuestion(0, undefined)}`
     const final = [...newMessages, { role: 'assistant' as const, content: reply }]
     setHandoff({ active: true, step: 0, answers: {} })
     setMessages(final)
@@ -687,36 +717,207 @@ export function ChatAssistant() {
     saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
   }
 
+  function closingMessage(branch: HandoffBranch): string {
+    const name = firstNameFromQual() || (branch === 'empresa' ? 'colega' : 'tudo certo')
+    const map: Record<MaiaLang, string> = {
+      pt: `Obrigada, ${name}! Recebemos os seus dados. A equipa MOOVIA vai rever o seu contexto e entrará em contacto em até um dia útil.\n\nTem mais alguma dúvida que eu possa ajudar agora?`,
+      en: `Thank you, ${name}! We've received your details. The MOOVIA team will review your context and get in touch within one business day.\n\nIs there anything else I can help you with?`,
+      es: `¡Gracias, ${name}! Hemos recibido tus datos. El equipo de MOOVIA revisará tu contexto y se pondrá en contacto en un día hábil.\n\n¿Hay algo más en lo que pueda ayudarte?`,
+    }
+    return `${map[mLang]}\n[OPTIONS]Sim|Não[/OPTIONS]`
+  }
+
+  async function submitHandoff(
+    branch: HandoffBranch,
+    answers: Partial<Record<HandoffField, string>>,
+    newMessages: Message[],
+  ) {
+    const email = answers.email || qual.email
+    const rawPhone = (answers.whatsapp || qual.whatsapp || '').replace(/\D/g, '')
+    const fullPhone = rawPhone ? `${selectedDDI.code} ${rawPhone}` : (qual.whatsapp || '')
+    const displayName = answers.name || qual.name || firstNameFromQual()
+
+    const payload: any = {
+      tipo: branch,
+      name: displayName,
+      email,
+      whatsapp: fullPhone,
+      message: answers.message || null,
+      source: 'maia_chat',
+      origem: 'MAIA (chat)',
+    }
+    if (branch === 'empresa') {
+      Object.assign(payload, {
+        nome_empresa: answers.nome_empresa,
+        cargo_responsavel: answers.cargo_responsavel,
+        colaboradores_12m: answers.colaboradores_12m,
+        paises_origem_destino: answers.paises_origem_destino,
+        desafio_principal: answers.desafio_principal,
+        programa_existente: answers.programa_existente,
+      })
+    } else {
+      Object.assign(payload, {
+        objective: answers.objective,
+        timing: answers.timing,
+        composition: answers.composition,
+        decision_phase: answers.decision_phase,
+      })
+    }
+
+    const qForSave: QualState = {
+      ...qual,
+      name: displayName || qual.name,
+      email: email || qual.email,
+      whatsapp: fullPhone || qual.whatsapp,
+      ddi: selectedDDI.code,
+      step: 'done',
+    }
+    setQual(qForSave)
+
+    try {
+      await saveLead({ ...answers, ...payload, handoff: true, persona_type: branch }, qForSave)
+    } catch (e) {
+      console.error('[MAIA] saveLead failed', e)
+    }
+    try {
+      const { notifyTeam } = await import('@/lib/notify')
+      await notifyTeam(branch === 'empresa' ? ('empresas_lead' as any) : 'form_lead', payload)
+    } catch (e) {
+      console.error('[MAIA] notifyTeam failed', e)
+    }
+
+    const reply = closingMessage(branch)
+    const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+    setHandoff({ active: true, step: -1, branch, answers, closing: true })
+    setMessages(final)
+    speak(reply)
+    await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
+  }
+
   async function continueHandoff(text: string, newMessages: Message[], inferredStep?: number | null) {
+    const value = text.trim()
+
+    // Closing stage: user answering "Tem mais dúvidas?"
+    if (handoff.closing) {
+      const yes = /^(sim|yes|sí|si)$/i.test(value)
+      if (yes) {
+        const reply = mLang === 'en'
+          ? 'Great — go ahead, I\'m listening.'
+          : mLang === 'es'
+            ? 'Perfecto, adelante. Te escucho.'
+            : 'Perfeito, pode dizer. Estou a ouvir.'
+        const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+        setHandoff({ active: false, step: 0, answers: {} })
+        setMessages(final)
+        await saveHistory(final).catch(() => {})
+        return true
+      }
+      const reply = mLang === 'en'
+        ? 'Perfect. Talk soon!'
+        : mLang === 'es'
+          ? 'Perfecto. ¡Hasta pronto!'
+          : 'Perfeito. Até já!'
+      const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+      setHandoff({ active: false, step: 0, answers: {} })
+      setMessages(final)
+      await saveHistory(final).catch(() => {})
+      return true
+    }
+
+    // Confirmation stage
+    if (handoff.confirming && handoff.branch) {
+      if (/^confirmar/i.test(value)) {
+        await submitHandoff(handoff.branch, handoff.answers, newMessages)
+        return true
+      }
+      if (/^corrigir/i.test(value)) {
+        const reply = buildCorrectionMenu(handoff.branch)
+        const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+        setHandoff({ ...handoff, confirming: false, step: -2 })
+        setMessages(final)
+        await saveHistory(final).catch(() => {})
+        return true
+      }
+      // Awaiting correction target
+      if (handoff.step === -2) {
+        const idx = fieldIndexByLabel(handoff.branch, value)
+        if (idx < 0) {
+          const reply = `Escolha um dos campos.\n${buildCorrectionMenu(handoff.branch)}`
+          const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+          setMessages(final)
+          await saveHistory(final).catch(() => {})
+          return true
+        }
+        const reply = handoffQuestion(idx, handoff.branch)
+        const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+        setHandoff({ ...handoff, step: idx, confirming: false })
+        setMessages(final)
+        await saveHistory(final).catch(() => {})
+        return true
+      }
+      // fallback: re-show confirmation
+      const reply = buildSummary(handoff.branch, handoff.answers)
+      const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+      setMessages(final)
+      await saveHistory(final).catch(() => {})
+      return true
+    }
+
+    // Normal step progression
+    const branch = handoff.branch
+    const steps = currentSteps(branch)
     const stepIndex = inferredStep ?? handoff.step
-    const current = HANDOFF_STEPS[stepIndex]
+    const current = steps[stepIndex]
     if (!current) return false
 
-    const value = text.trim()
-    if (current.options?.length && !current.options.includes(value)) {
+    // persona_type parse
+    if (current.field === 'persona_type') {
+      const parsed = parseBranch(value)
+      if (!parsed) {
+        const reply = `Escolha uma das opções abaixo.\n${handoffQuestion(stepIndex)}`
+        const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+        setMessages(final)
+        await saveHistory(final).catch(() => {})
+        return true
+      }
+      const nextAnswers = { ...handoff.answers, persona_type: parsed }
+      const nextStep = 1
+      const reply = handoffQuestion(nextStep, parsed)
+      const final = [...newMessages, { role: 'assistant' as const, content: reply }]
+      setHandoff({ active: true, step: nextStep, branch: parsed, answers: nextAnswers })
+      setMessages(final)
+      speak(reply)
+      await saveHistory(final).catch(() => {})
+      return true
+    }
+
+    // Option validation (non-optional steps)
+    if (current.options?.length && !current.optional && !current.options.includes(value)) {
       const reply = `Escolha uma das opções abaixo para eu seguir corretamente.\n${handoffQuestion(stepIndex)}`
       const final = [...newMessages, { role: 'assistant' as const, content: reply }]
       setHandoff((prev) => ({ ...prev, active: true, step: stepIndex }))
       setMessages(final)
-      await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
+      await saveHistory(final).catch(() => {})
       return true
     }
 
+    // Email validation
     if (current.field === 'email' && !/^\S+@\S+\.\S+$/.test(value)) {
       const reply = `Esse e-mail não parece válido. Pode escrever novamente?\n${current.question}`
       const final = [...newMessages, { role: 'assistant' as const, content: reply }]
       setHandoff((prev) => ({ ...prev, active: true, step: stepIndex }))
       setMessages(final)
-      await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
+      await saveHistory(final).catch(() => {})
       return true
     }
 
+    // Phone validation
     if (current.field === 'whatsapp' && value.replace(/\D/g, '').length < 8) {
-      const reply = 'Número incompleto. Pode enviar-me o WhatsApp com indicativo do país?'
+      const reply = 'Número incompleto. Envie-me o telefone com indicativo do país.'
       const final = [...newMessages, { role: 'assistant' as const, content: reply }]
       setHandoff((prev) => ({ ...prev, active: true, step: stepIndex }))
       setMessages(final)
-      await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
+      await saveHistory(final).catch(() => {})
       return true
     }
 
@@ -735,39 +936,32 @@ export function ChatAssistant() {
 
     if (current.field === 'email') setQual((q) => ({ ...q, email: value }))
     if (current.field === 'whatsapp') setQual((q) => ({ ...q, whatsapp: value, ddi: selectedDDI.code }))
+    if (current.field === 'name') setQual((q) => ({ ...q, name: value }))
 
     const nextStep = stepIndex + 1
-    if (nextStep < HANDOFF_STEPS.length) {
-      const reply = handoffQuestion(nextStep)
+    if (branch && nextStep < steps.length) {
+      const reply = handoffQuestion(nextStep, branch)
       const final = [...newMessages, { role: 'assistant' as const, content: reply }]
-      setHandoff({ active: true, step: nextStep, answers: nextAnswers })
+      setHandoff({ active: true, step: nextStep, branch, answers: nextAnswers })
       setMessages(final)
       speak(reply)
-      await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
+      await saveHistory(final).catch(() => {})
       return true
     }
 
-    const name = firstNameFromQual()
-    const reply = `Muito obrigado, ${name || 'tudo certo'}! Em breve 1 fundador entrará em contacto para atendê-lo e avaliar o seu caso. Fique de olho no seu e-mail e WhatsApp.`
-    const final = [...newMessages, { role: 'assistant' as const, content: reply }]
-    const qForSave: QualState = {
-      ...qual,
-      email: nextAnswers.email || qual.email,
-      whatsapp: nextAnswers.whatsapp || qual.whatsapp,
-      step: 'done',
+    // Fim dos steps → confirmação
+    if (branch) {
+      const summary = buildSummary(branch, nextAnswers)
+      const final = [...newMessages, { role: 'assistant' as const, content: summary }]
+      setHandoff({ active: true, step: steps.length, branch, answers: nextAnswers, confirming: true })
+      setMessages(final)
+      speak(summary)
+      await saveHistory(final).catch(() => {})
+      return true
     }
-    setHandoff({ active: false, step: 0, answers: {} })
-    setQual(qForSave)
-    setMessages(final)
-    speak(reply)
-    try {
-      await saveLead({ ...nextAnswers, name: qual.name, ddi: selectedDDI.code, handoff: true }, qForSave)
-    } catch (e) {
-      console.error('[MAIA] saveLead failed', e)
-    }
-    await saveHistory(final).catch((e) => console.error('[MAIA] saveHistory failed', e))
-    return true
+    return false
   }
+
 
   async function send(overrideText?: string) {
     const text = (overrideText ?? input).trim()
