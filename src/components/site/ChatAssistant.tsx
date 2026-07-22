@@ -221,8 +221,8 @@ const MAIA_STRINGS: Record<MaiaLang, {
   voiceUnsupported: string
 }> = {
   pt: {
-    invites: ['Olá, posso ajudar?','Alguma dúvida sobre Global Mobility Assurance?','Estou aqui para ajudar!','Olá! Quer conversar?','Posso orientá-lo(a) sobre mobilidade internacional?'],
-    greetingNew: 'Olá! Eu sou a MAIA, assistente da MOOVIA — a empresa que criou a categoria Global Mobility Assurance.\n\nAntes de mais, como se chama?',
+    invites: ['A sua empresa move colaboradores?','Dúvidas sobre Global Mobility Assurance?','Reduza o Human Mobility Risk da sua equipa','Fala em nome de uma empresa?','Posso ajudar com o programa de mobilidade da sua empresa?'],
+    greetingNew: 'Olá! Eu sou a MAIA, assistente da MOOVIA, a empresa que criou a categoria Global Mobility Assurance.\n\nAntes de mais, como se chama?',
     greetingDone: (n) => `Bem-vindo(a) de volta, ${n}! Sou a MAIA. Em que posso ajudar hoje sobre a sua mobilidade internacional?`,
     greetingWhats: (n) => `Olá de novo, ${n}! Para finalizar o seu registo, passa-me o seu WhatsApp?`,
     greetingEmail: (n) => `Olá, ${n}! Sou a MAIA. Para continuarmos, qual o seu melhor e-mail?`,
@@ -238,7 +238,7 @@ const MAIA_STRINGS: Record<MaiaLang, {
   },
   en: {
     invites: ['Hi, can I help?','Any questions on Global Mobility Assurance?','I’m here to help!','Hey! Want to chat?','Can I guide you on international mobility?'],
-    greetingNew: 'Hi! I’m MAIA, MOOVIA’s assistant — the company that created the Global Mobility Assurance category.\n\nFirst, what should I call you?',
+    greetingNew: 'Hi! I’m MAIA, MOOVIA’s assistant, the company that created the Global Mobility Assurance category.\n\nFirst, what should I call you?',
     greetingDone: (n) => `Welcome back, ${n}! I’m MAIA. How can I help with your international mobility today?`,
     greetingWhats: (n) => `Hi again, ${n}! To finish your registration, what’s your WhatsApp?`,
     greetingEmail: (n) => `Hi ${n}! I’m MAIA. To continue, what’s your best email?`,
@@ -254,7 +254,7 @@ const MAIA_STRINGS: Record<MaiaLang, {
   },
   es: {
     invites: ['¡Hola! ¿Puedo ayudarte?','¿Dudas sobre Global Mobility Assurance?','¡Estoy aquí para ayudarte!','¡Hola! ¿Quieres hablar conmigo?','¿Te oriento sobre movilidad internacional?'],
-    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA — la empresa que creó la categoría Global Mobility Assurance.\n\nAntes de nada, ¿cómo te llamo?',
+    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA, la empresa que creó la categoría Global Mobility Assurance.\n\nAntes de nada, ¿cómo te llamo?',
     greetingDone: (n) => `¡Bienvenido de nuevo, ${n}! Soy MAIA. ¿En qué puedo ayudarte hoy con tu movilidad internacional?`,
     greetingWhats: (n) => `¡Hola otra vez, ${n}! Para terminar tu registro, ¿me das tu WhatsApp?`,
     greetingEmail: (n) => `¡Hola, ${n}! Soy MAIA. Para continuar, ¿cuál es tu mejor email?`,
