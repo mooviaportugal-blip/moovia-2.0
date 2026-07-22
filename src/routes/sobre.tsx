@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { SymbolSection } from "@/components/sections/SymbolSection";
+import { MethodologySection } from "@/components/sections/MethodologySection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
