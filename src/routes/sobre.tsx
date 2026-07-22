@@ -291,7 +291,7 @@ function ComoFazemosSection() {
     {
       n: "02",
       titulo: "Avaliamos o profissional e o contexto familiar",
-      texto: "Entrevistas e análise multidimensional para compreender expectativas, capacidade de adaptação, alinhamento familiar e fatores emocionais. Não avaliamos competência técnica — avaliamos as condições que podem favorecer ou comprometer o sucesso da transição.",
+      texto: "Entrevistas e análise multidimensional para compreender expectativas, capacidade de adaptação, alinhamento familiar e fatores emocionais. Não avaliamos competência técnica, mas sim as condições que podem favorecer ou comprometer o sucesso da transição.",
     },
     {
       n: "03",
