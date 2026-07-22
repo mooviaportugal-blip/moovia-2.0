@@ -183,7 +183,7 @@ function ComoConstruimosInteligencia() {
 /* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSURANCE ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
-    { destaque: "30 anos", texto: "Experiência em Negócios Internacionais" },
+    { destaque: "Experiência como expatriados", texto: "Experiência em Negócios Internacionais" },
     { texto: "Metodologias de Revenue Assurance" },
     { texto: "Metodologias psicológicas" },
     { texto: "Engenharia e motor de regras" },
