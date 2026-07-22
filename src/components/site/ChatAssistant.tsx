@@ -23,6 +23,7 @@ interface QualState {
 }
 
 type HandoffField =
+  | 'persona_type'
   | 'objective'
   | 'timing'
   | 'composition'
@@ -32,6 +33,7 @@ type HandoffField =
   | 'contact_period'
   | 'contact_method'
   | 'message'
+
 
 interface HandoffStep {
   field: HandoffField
