@@ -44,7 +44,7 @@ const faqs: QA[] = [
   },
   {
     q: "Quanto custa a transição completa com a MOOVIA?",
-    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta — desde o Strategic Assessment até um mandato completo — é construída à medida da necessidade específica de cada cliente, seja um particular ou uma empresa de qualquer dimensão. O valor é sempre definido após entendermos o que precisa de ser feito.",
+    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta, desde o Strategic Assessment até um mandato completo, é construída à medida da necessidade específica de cada cliente. O valor é sempre definido após entendermos a complexidade do que precisa de ser feito.",
   },
   {
     q: "A MOOVIA atende apenas brasileiros?",
