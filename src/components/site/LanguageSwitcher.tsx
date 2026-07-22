@@ -12,8 +12,8 @@ import { cn } from "@/lib/utils";
 const LANGS: { code: Lang; native: string; label: string; short: string }[] = [
   { code: "pt-BR", native: "Português · Brasil", label: "Portuguese (Brazil)", short: "BR" },
   { code: "en", native: "English", label: "English", short: "EN" },
-  { code: "es", native: "Español", label: "Spanish", short: "ES" },
 ];
+
 
 const FlagFor: Record<Lang, React.ComponentType<{ className?: string; title?: string }>> = {
   "pt-BR": BR,

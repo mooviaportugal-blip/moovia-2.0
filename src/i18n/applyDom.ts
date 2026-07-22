@@ -119,8 +119,10 @@ function walk(root: Node, lang: WalkerLang) {
   }
 }
 
-export function applyDomTranslations(_lang: WalkerLang) {
-  // No-op: site is single-language (pt-BR). Runtime DOM translation disabled
-  // to prevent stray English/Spanish text on returning visitors.
-  return;
+export function applyDomTranslations(lang: WalkerLang) {
+  if (typeof document === "undefined") return;
+  // pt-BR is the source language; no DOM rewrite needed.
+  if (lang === "pt-BR" || lang === "pt") return;
+  walk(document.body, lang);
 }
+

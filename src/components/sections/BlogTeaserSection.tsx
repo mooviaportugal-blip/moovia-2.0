@@ -62,22 +62,26 @@ export function BlogTeaserSection() {
 
   const posts = useMemo(
     () =>
-      (rawPosts || []).map((p: any) => {
-        const localized = pickPostLocale(p, locale);
-        const date = new Date(p.published_at || p.created_at);
-        return {
-          slug: p.slug,
-          category: p.category || "Artigo",
-          title: localized.title || p.title,
-          excerpt: localized.excerpt || p.excerpt || "",
-          date: date.toLocaleDateString("pt-PT", { day: "2-digit", month: "short", year: "numeric" }),
-          readTime: p.read_time ? `${p.read_time} min` : "",
-          image: p.featured_image || blogVistoLisboa,
-          alt: p.title,
-        };
-      }),
+      (rawPosts || [])
+        .map((p: any) => {
+          const localized = pickPostLocale(p, locale);
+          if (!localized) return null;
+          const date = new Date(p.published_at || p.created_at);
+          return {
+            slug: localized.slug || p.slug,
+            category: p.category || "Artigo",
+            title: localized.title || p.title,
+            excerpt: localized.excerpt || p.excerpt || "",
+            date: date.toLocaleDateString("pt-PT", { day: "2-digit", month: "short", year: "numeric" }),
+            readTime: p.read_time ? `${p.read_time} min` : "",
+            image: p.featured_image || blogVistoLisboa,
+            alt: p.title,
+          };
+        })
+        .filter((x): x is NonNullable<typeof x> => x !== null),
     [rawPosts, locale],
   );
+
 
   return (
     <section className="bg-transparent py-16 md:py-24 lg:py-32 px-6 lg:px-20 relative overflow-hidden">

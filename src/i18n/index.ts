@@ -16,13 +16,14 @@ function resourceKey(lang: Lang): string {
 }
 
 export function detectInitialLang(): Lang {
-  // Site is single-language (pt-BR). Clear any legacy stored preference so
-  // returning visitors who previously picked en/es don't see stale English.
-  if (typeof window !== "undefined") {
-    try { localStorage.removeItem(STORAGE_KEY); } catch {}
-  }
+  if (typeof window === "undefined") return "pt-BR";
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
+    if (stored && SUPPORTED.includes(stored)) return stored;
+  } catch {}
   return "pt-BR";
 }
+
 
 if (!i18n.isInitialized) {
   const initial = detectInitialLang();

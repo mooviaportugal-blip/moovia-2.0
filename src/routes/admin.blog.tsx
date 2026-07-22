@@ -435,12 +435,13 @@ function PostEditor({ post, onCancel, onSaved }: { post: Post; onCancel: () => v
         <button onClick={onCancel} className="flex items-center gap-2 text-white/60 hover:text-gold font-urbanist text-[11px] uppercase tracking-[0.2em]">
           <ArrowLeft size={14} /> Voltar
         </button>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           {form.id && (
             <a href={`/blog/${form.slug}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-3 border border-border text-white/60 hover:text-gold hover:border-gold transition-colors font-urbanist text-[11px] uppercase tracking-[0.2em]">
               <ExternalLink size={14} /> Pré-visualizar
             </a>
           )}
+          {form.id && <TranslationControls postId={form.id} />}
           {form.id && (
             <button onClick={remove} className="flex items-center gap-2 px-4 py-3 border border-red-500/30 text-red-400 hover:bg-red-500/10 transition-colors font-urbanist text-[11px] uppercase tracking-[0.2em]">
               <Trash2 size={14} /> Apagar
@@ -453,6 +454,7 @@ function PostEditor({ post, onCancel, onSaved }: { post: Post; onCancel: () => v
             {form.published ? "Atualizar" : "Publicar"}
           </button>
         </div>
+
       </div>
 
       <div className="grid lg:grid-cols-[1fr_360px] gap-8">
@@ -629,5 +631,96 @@ function ImageField({ label, value, onChange, hint }: { label: string; value: st
         )}
       </div>
     </Field>
+  );
+}
+
+// ============================================================================
+// EN Translation controls — surfaces the auto-translate-post edge function
+// and lets the admin promote translations.en.status: draft → reviewed → published.
+// ============================================================================
+function TranslationControls({ postId }: { postId: string }) {
+  const [status, setStatus] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  const load = async () => {
+    const { data } = await supabase.from("posts").select("translations").eq("id", postId).maybeSingle();
+    setStatus((data as any)?.translations?.en?.status ?? null);
+    setLoaded(true);
+  };
+
+  useEffect(() => { load(); }, [postId]);
+
+  const generate = async () => {
+    setBusy(true);
+    try {
+      const { error } = await supabase.functions.invoke("auto-translate-post", { body: { post_id: postId } });
+      if (error) throw error;
+      toast.success("Rascunho EN gerado. Revise antes de publicar.");
+      await load();
+    } catch (e: any) {
+      toast.error(e.message || "Falha ao gerar tradução");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const setEnStatus = async (next: "reviewed" | "published") => {
+    setBusy(true);
+    try {
+      const { data } = await supabase.from("posts").select("translations").eq("id", postId).maybeSingle();
+      const translations = (data as any)?.translations || {};
+      if (!translations.en) throw new Error("Gere o rascunho EN primeiro");
+      translations.en = { ...translations.en, status: next, reviewed_at: new Date().toISOString() };
+      const { error } = await supabase.from("posts").update({ translations }).eq("id", postId);
+      if (error) throw error;
+      toast.success(next === "published" ? "Tradução EN publicada" : "Marcada como revisada");
+      setStatus(next);
+    } catch (e: any) {
+      toast.error(e.message || "Falha ao atualizar status");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  if (!loaded) return null;
+
+  const badge =
+    status === "published" ? "bg-green-500/20 text-green-300 border-green-500/40"
+    : status === "reviewed" ? "bg-blue-500/20 text-blue-300 border-blue-500/40"
+    : status === "draft" ? "bg-amber-500/20 text-amber-300 border-amber-500/40"
+    : "bg-white/5 text-white/40 border-border";
+
+  return (
+    <div className="flex items-center gap-2 px-3 py-2 border border-border">
+      <span className={cn("px-2 py-1 text-[10px] font-urbanist uppercase tracking-[0.2em] border", badge)}>
+        EN: {status ?? "sem"}
+      </span>
+      <button
+        onClick={generate}
+        disabled={busy}
+        className="text-[11px] font-urbanist uppercase tracking-[0.18em] text-white/70 hover:text-gold disabled:opacity-40"
+      >
+        {status ? "Regerar" : "Gerar rascunho EN"}
+      </button>
+      {status === "draft" && (
+        <button
+          onClick={() => setEnStatus("reviewed")}
+          disabled={busy}
+          className="text-[11px] font-urbanist uppercase tracking-[0.18em] text-blue-300 hover:text-blue-200"
+        >
+          Marcar revisada
+        </button>
+      )}
+      {(status === "draft" || status === "reviewed") && (
+        <button
+          onClick={() => setEnStatus("published")}
+          disabled={busy}
+          className="text-[11px] font-urbanist uppercase tracking-[0.18em] text-green-300 hover:text-green-200"
+        >
+          Publicar EN
+        </button>
+      )}
+    </div>
   );
 }
