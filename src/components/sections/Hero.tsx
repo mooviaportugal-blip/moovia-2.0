@@ -1,28 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef } from "react";
 
-const HERO_VIDEO_URL = "https://mooviaportugal.com/video/moovia-cover.mp4";
+const HERO_MEDIA_URL = "https://mooviaglobal.com/file/moovia-pt.gif";
 const HERO_BG = "#06091a";
 
 export function Hero() {
   const { i18n } = useTranslation();
   const locale = i18n.language;
-  const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
-    const play = () => {
-      v.play().catch(() => {});
-    };
-    if (v.readyState >= 2) play();
-    else v.addEventListener("loadeddata", play, { once: true });
-    return () => v.removeEventListener("loadeddata", play);
-  }, []);
 
 
 
@@ -153,19 +139,14 @@ export function Hero() {
               maskPosition: "center",
             }}
           >
-            <video
-              ref={videoRef}
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              loop={false}
-              onEnded={(e) => e.currentTarget.pause()}
+            <img
+              src={HERO_MEDIA_URL}
+              alt="Animação institucional MOOVIA, vista de Lisboa"
               className="w-full h-full object-cover"
-              aria-label="Vídeo institucional MOOVIA — vista de Lisboa"
-            >
-              <source src={HERO_VIDEO_URL} type="video/mp4" />
-            </video>
+              loading="eager"
+              decoding="async"
+            />
+
             {/* Fade radial interno dissolvendo no fundo do site */}
             <div
               className="absolute inset-0 pointer-events-none"
