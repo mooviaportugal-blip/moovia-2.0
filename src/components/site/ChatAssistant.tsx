@@ -1088,10 +1088,10 @@ export function ChatAssistant() {
     }
   }
 
-  const currentHandoffField = handoff.active ? HANDOFF_STEPS[handoff.step]?.field : (() => {
+  const currentHandoffField = handoff.active ? currentSteps()[handoff.step]?.field : (() => {
     const last = [...messages].reverse().find((m) => m.role === 'assistant')
     const idx = findHandoffStepFromAssistant(last?.content)
-    return idx !== null && idx !== undefined ? HANDOFF_STEPS[idx]?.field : undefined
+    return idx !== null && idx !== undefined ? currentSteps()[idx]?.field : undefined
   })()
   const isPhoneStep = qual.step === 'whatsapp' || currentHandoffField === 'whatsapp'
 
