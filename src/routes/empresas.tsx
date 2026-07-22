@@ -111,7 +111,7 @@ function EmpresasPage() {
             transition={{ delay: 0.2 }}
             className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
           >
-            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
+            CONTRATADO PELA EMPRESA, VIVIDO PELO EXECUTIVO E MEDIDO AO LONGO DO TEMPO.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

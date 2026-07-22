@@ -48,7 +48,7 @@ function Contacto() {
     { label: "E-mail", value: "contacto@mooviaglobal.com", href: "mailto:contacto@mooviaglobal.com" },
     ...(whatsappEnabled ? [{ label: "WhatsApp", value: "+351 910 388 877", href: "https://wa.me/351910388877" }] : []),
     { label: "LinkedIn", value: "/company/moovia-portugal", href: "https://www.linkedin.com/company/moovia-portugal" },
-    { label: "Horário", value: "Seg–Sex 09h–18h (horário de Lisboa)" },
+    { label: "Horário", value: "Segunda a Sexta das 09h às 18h (horário de Lisboa)" },
   ];
 
   return (
