@@ -17,7 +17,7 @@ type EmpresaForm = {
   message: string;
 };
 
-const VOLUMES = ["1", "2-5", "6-20", "Mais de 20"];
+const VOLUMES = ["1 a 50", "50 a 100", "100 a 500", "Mais de 500"];
 const CHALLENGES = [
   "Adaptação familiar",
   "Habitação",
