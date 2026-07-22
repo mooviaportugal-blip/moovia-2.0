@@ -22,7 +22,7 @@ export function AssessmentSection() {
               viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              Global Mobility Success Assessment
+              Avaliação Global Mobility Success
             </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ export function AssessmentSection() {
             className="font-body text-[16px] md:text-[17px] font-[300] text-w35 leading-[1.9] max-w-[500px] space-y-6"
           >
             <p>
-              O Global Mobility Success Assessment traduz uma decisão complexa e de alto impacto num plano estratégico estruturado e tangível.
+              A Avaliação Global Mobility Success traduz uma decisão complexa e de alto impacto num plano estratégico estruturado e tangível.
             </p>
             <p>
               Nesta sessão de consultoria, conduzimos uma análise exaustiva ao contexto familiar e corporativo, mapeando riscos, prioridades e oportunidades para arquitetar uma transição segura.
@@ -77,7 +77,7 @@ export function AssessmentSection() {
               O que receberá
             </p>
             <h3 className="font-display text-[26px] font-[300] text-white leading-tight mb-2 text-center">
-              Global Mobility Success Assessment
+              Avaliação Global Mobility Success
             </h3>
             <p className="font-body text-[12px] font-[300] text-w35 uppercase tracking-widest text-center mb-10">
               Sessão de Consultoria Estratégica

@@ -60,7 +60,7 @@ const ESTACOES: Estacao[] = [
       "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Mobility Risk Assessment.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Global Mobility Strategy" },
-      { nome: "Dra. Letícia de Mello", papel: "Adaptive Integration Assessment" },
+      { nome: "Dra. Letícia de Mello", papel: "Avaliação de Integração Adaptativa" },
     ],
   },
   {
@@ -88,10 +88,10 @@ const ESTACOES: Estacao[] = [
     nome: "Integrar",
     pergunta: "Acompanhar a adaptação da família e garantir os resultados esperados.",
     objetivo:
-      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Adaptive Integration Framework, AEAI Follow-up, AI Success Monitor.",
+      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Estrutura de Integração Adaptativa, AEAI Follow-up, Monitor de Sucesso.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Programme Director" },
-      { nome: "Dra. Letícia de Mello", papel: "Adaptive Integration Specialist" },
+      { nome: "Dra. Letícia de Mello", papel: "Especialista em Integração Adaptativa" },
     ],
   },
   {

@@ -46,13 +46,12 @@ function HomeReal() {
         >
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
-              Global Mobility Success <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Success Assessment <span className="text-gold text-[10px]">♦</span>
-              Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
-              Life Transition <span className="text-gold text-[10px]">♦</span>
               Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
-              Orchestration <span className="text-gold text-[10px]">♦</span>
-              Integration <span className="text-gold text-[10px]">♦</span>
+              Avaliação Global Mobility Success <span className="text-gold text-[10px]">♦</span>
+              Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
+              Transição de Vida <span className="text-gold text-[10px]">♦</span>
+              Orquestração <span className="text-gold text-[10px]">♦</span>
+              Integração <span className="text-gold text-[10px]">♦</span>
             </div>
           ))}
         </motion.div>
