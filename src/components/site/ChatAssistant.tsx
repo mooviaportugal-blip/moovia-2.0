@@ -23,6 +23,7 @@ interface QualState {
 }
 
 type HandoffField =
+  | 'persona_type'
   | 'objective'
   | 'timing'
   | 'composition'
@@ -32,6 +33,7 @@ type HandoffField =
   | 'contact_period'
   | 'contact_method'
   | 'message'
+
 
 interface HandoffStep {
   field: HandoffField
@@ -80,25 +82,38 @@ const HANDOFF_TRIGGER_RE = /\b(atendimento|atendido|atendida|conversa gratuita|c
 
 const HANDOFF_STEPS: HandoffStep[] = [
   {
+    field: 'persona_type',
+    question: 'Antes de mais: fala em nome de uma empresa ou como pessoa/família?',
+    options: ['Empresa (RH ou Mobilidade)', 'Pessoa ou família'],
+  },
+  {
     field: 'objective',
-    question: 'Qual o seu objetivo principal com Portugal?',
-    options: ['Trabalhar em Portugal', 'Estudar em Portugal', 'Mudar com a família', 'Investir em imóveis', 'Reforma em Portugal', 'Outro'],
+    question: 'Qual o objetivo principal com Portugal (ou com mobilidade internacional)?',
+    options: [
+      'Expatriar colaboradores (Global Mobility Assurance)',
+      'Reduzir risco humano em missões internacionais',
+      'Mudar com a família para Portugal',
+      'Reforma ou recomeço pessoal em Portugal',
+      'Investir em imóveis / património',
+      'Outro',
+    ],
   },
   {
     field: 'timing',
-    question: 'Quando pretende mudar?',
-    options: ['Menos de 60 dias', '3 a 6 meses', '6 a 12 meses', 'Já tomei a decisão', 'Já tenho proposta assinada', 'Ainda pesquisando'],
+    question: 'Qual o horizonte da decisão?',
+    options: ['Menos de 60 dias', '3 a 6 meses', '6 a 12 meses', 'Já tomei a decisão', 'Ainda a explorar'],
   },
   {
     field: 'composition',
-    question: 'Quantas pessoas participam da mudança?',
-    options: ['Apenas eu', 'Casal', 'Família com filhos', 'Casal com pet', 'Família com filhos e pets'],
+    question: 'Quem participa nesta transição?',
+    options: ['Apenas eu', 'Casal', 'Família com filhos', 'Colaborador + família', 'Equipa / vários colaboradores'],
   },
   {
     field: 'decision_phase',
-    question: 'Em que fase da decisão está?',
-    options: ['Apenas pesquisando', 'Comparando Portugal com outras opções', 'Já decidi Portugal, planejando quando', 'Tomei a decisão, preciso agir', 'Já tenho proposta ou contrato assinado'],
+    question: 'Em que fase está?',
+    options: ['A explorar categorias', 'A comparar fornecedores', 'Já decidi, a planear', 'Preciso agir agora', 'Já com proposta ou contrato assinado'],
   },
+
   { field: 'email', question: 'Pode confirmar o seu e-mail?' },
   { field: 'whatsapp', question: 'E o seu WhatsApp (com indicativo do país)?' },
   {
@@ -206,12 +221,13 @@ const MAIA_STRINGS: Record<MaiaLang, {
   voiceUnsupported: string
 }> = {
   pt: {
-    invites: ['Olá, posso ajudar?','Gostaria de tirar alguma dúvida?','Estou aqui para ajudar!','Olá! Quer falar comigo?','Posso orientá-lo(a) sobre Portugal?'],
-    greetingNew: 'Olá! Eu sou a MAIA, assistente da MOOVIA Portugal.\n\nAntes de tudo, como se chama?',
-    greetingDone: (n) => `Bem-vindo(a) de volta, ${n}! Sou a MAIA, em que posso ajudar hoje?`,
+    invites: ['Olá, posso ajudar?','Alguma dúvida sobre Global Mobility Assurance?','Estou aqui para ajudar!','Olá! Quer conversar?','Posso orientá-lo(a) sobre mobilidade internacional?'],
+    greetingNew: 'Olá! Eu sou a MAIA, assistente da MOOVIA — a empresa que criou a categoria Global Mobility Assurance.\n\nAntes de mais, como se chama?',
+    greetingDone: (n) => `Bem-vindo(a) de volta, ${n}! Sou a MAIA. Em que posso ajudar hoje sobre a sua mobilidade internacional?`,
     greetingWhats: (n) => `Olá de novo, ${n}! Para finalizar o seu registo, passa-me o seu WhatsApp?`,
     greetingEmail: (n) => `Olá, ${n}! Sou a MAIA. Para continuarmos, qual o seu melhor e-mail?`,
-    askName: 'Olá! Antes de tudo, como se chama?',
+    askName: 'Olá! Antes de mais, como se chama?',
+
     askEmailAfterName: (n) => `${n}, prazer! Qual o seu melhor e-mail para contacto?`,
     invalidEmail: 'Esse e-mail não parece válido. Pode escrever novamente?',
     askWhats: 'Perfeito! Agora passe-me o seu WhatsApp (com indicativo) para finalizar?',
@@ -221,12 +237,13 @@ const MAIA_STRINGS: Record<MaiaLang, {
     voiceUnsupported: 'Seu navegador não suporta reconhecimento de voz.',
   },
   en: {
-    invites: ['Hi, can I help you?','Any questions I can answer?','I’m here to help!','Hey! Want to chat?','Can I guide you about Portugal?'],
-    greetingNew: 'Hi! I’m MAIA, MOOVIA Portugal’s assistant.\n\nFirst, what should I call you?',
-    greetingDone: (n) => `Welcome back, ${n}! I’m MAIA, how can I help today?`,
+    invites: ['Hi, can I help?','Any questions on Global Mobility Assurance?','I’m here to help!','Hey! Want to chat?','Can I guide you on international mobility?'],
+    greetingNew: 'Hi! I’m MAIA, MOOVIA’s assistant — the company that created the Global Mobility Assurance category.\n\nFirst, what should I call you?',
+    greetingDone: (n) => `Welcome back, ${n}! I’m MAIA. How can I help with your international mobility today?`,
     greetingWhats: (n) => `Hi again, ${n}! To finish your registration, what’s your WhatsApp?`,
     greetingEmail: (n) => `Hi ${n}! I’m MAIA. To continue, what’s your best email?`,
     askName: 'Hi! First, what should I call you?',
+
     askEmailAfterName: (n) => `${n}, nice to meet you! What’s your best contact email?`,
     invalidEmail: 'That email doesn’t look valid. Could you type it again?',
     askWhats: 'Perfect! Now please share your WhatsApp (with country code) to finish?',
@@ -236,12 +253,13 @@ const MAIA_STRINGS: Record<MaiaLang, {
     voiceUnsupported: 'Your browser does not support voice recognition.',
   },
   es: {
-    invites: ['¡Hola! ¿Puedo ayudarte?','¿Alguna duda que pueda resolver?','¡Estoy aquí para ayudarte!','¡Hola! ¿Quieres hablar conmigo?','¿Te oriento sobre Portugal?'],
-    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA Portugal.\n\nAntes de nada, ¿cómo te llamo?',
-    greetingDone: (n) => `¡Bienvenido de nuevo, ${n}! Soy MAIA, ¿en qué puedo ayudarte hoy?`,
+    invites: ['¡Hola! ¿Puedo ayudarte?','¿Dudas sobre Global Mobility Assurance?','¡Estoy aquí para ayudarte!','¡Hola! ¿Quieres hablar conmigo?','¿Te oriento sobre movilidad internacional?'],
+    greetingNew: '¡Hola! Soy MAIA, asistente de MOOVIA — la empresa que creó la categoría Global Mobility Assurance.\n\nAntes de nada, ¿cómo te llamo?',
+    greetingDone: (n) => `¡Bienvenido de nuevo, ${n}! Soy MAIA. ¿En qué puedo ayudarte hoy con tu movilidad internacional?`,
     greetingWhats: (n) => `¡Hola otra vez, ${n}! Para terminar tu registro, ¿me das tu WhatsApp?`,
     greetingEmail: (n) => `¡Hola, ${n}! Soy MAIA. Para continuar, ¿cuál es tu mejor email?`,
     askName: '¡Hola! Antes de nada, ¿cómo te llamo?',
+
     askEmailAfterName: (n) => `¡${n}, encantada! ¿Cuál es tu mejor email de contacto?`,
     invalidEmail: 'Ese email no parece válido. ¿Puedes escribirlo de nuevo?',
     askWhats: '¡Perfecto! Ahora pásame tu WhatsApp (con prefijo) para finalizar?',
@@ -481,7 +499,11 @@ export function ChatAssistant() {
       contact_period: data?.contact_period || null,
       contact_method: data?.contact_method || null,
       message: data?.message || data?.notes || null,
-      notes: data?.notes || null,
+      notes: [
+        data?.persona_type ? `Perfil: ${data.persona_type}` : null,
+        data?.notes || null,
+      ].filter(Boolean).join(' · ') || null,
+
       referrer: typeof window !== 'undefined' ? window.location.href : null,
       utm_source: utm?.get('utm_source') || null,
       utm_medium: utm?.get('utm_medium') || null,
