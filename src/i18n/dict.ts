@@ -1034,6 +1034,8 @@ const SUFFIX_RULES: { pt: RegExp; build: (m: RegExpMatchArray) => { en: string; 
   },
 ];
 
+import { DICT_AUTO } from "./dict.auto";
+
 export function translate(text: string, lang: Lang): string | null {
   if (lang === "pt") return null;
   const key = text.trim();
@@ -1041,8 +1043,12 @@ export function translate(text: string, lang: Lang): string | null {
   const entry = DICT[key];
   if (entry) {
     const out = entry[lang];
-    // Preserve original surrounding whitespace
     return text.replace(key, out);
+  }
+  // Auto-generated fallback (DeepL + MOOVIA glossary). EN only for now.
+  if (lang === "en") {
+    const auto = DICT_AUTO[key];
+    if (auto) return text.replace(key, auto.en);
   }
   for (const rule of SUFFIX_RULES) {
     const m = key.match(rule.pt);

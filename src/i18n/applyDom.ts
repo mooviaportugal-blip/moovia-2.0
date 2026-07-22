@@ -119,10 +119,53 @@ function walk(root: Node, lang: WalkerLang) {
   }
 }
 
+let currentLang: WalkerLang | null = null;
+let observer: MutationObserver | null = null;
+let flushHandle: number | null = null;
+
+function flushPending() {
+  flushHandle = null;
+  if (!currentLang || currentLang === "pt") return;
+  // Just re-walk the whole body. Cheap enough (~ms) and immune to
+  // partial subtree edge cases.
+  walk(document.body, currentLang);
+}
+
+function scheduleFlush() {
+  if (flushHandle != null) return;
+  flushHandle = (typeof requestAnimationFrame !== "undefined"
+    ? requestAnimationFrame(flushPending)
+    : (setTimeout(flushPending, 16) as unknown as number));
+}
+
+
+function ensureObserver() {
+  if (observer || typeof MutationObserver === "undefined") return;
+  observer = new MutationObserver((records) => {
+    if (!currentLang || currentLang === "pt") return;
+    // Clear caches for changed text/attr so they retranslate from fresh values.
+    for (const r of records) {
+      if (r.type === "characterData" && r.target.nodeType === 3) {
+        ORIGINAL_TEXT.delete(r.target as Text);
+      } else if (r.type === "attributes" && r.target.nodeType === 1 && r.attributeName) {
+        const store = ORIGINAL_ATTR.get(r.target as Element);
+        if (store) delete store[r.attributeName];
+      }
+    }
+    scheduleFlush();
+  });
+  observer.observe(document.body, {
+    childList: true, subtree: true, characterData: true,
+    attributes: true, attributeFilter: ATTRS,
+  });
+}
+
 export function applyDomTranslations(lang: WalkerLang) {
   if (typeof document === "undefined") return;
-  // pt-BR is the source language; no DOM rewrite needed.
+  currentLang = lang;
   if (lang === "pt-BR" || lang === "pt") return;
   walk(document.body, lang);
+  ensureObserver();
 }
+
 
