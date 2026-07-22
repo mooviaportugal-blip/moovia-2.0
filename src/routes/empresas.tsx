@@ -266,7 +266,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic">Aplicada à sua equipa.</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto">
-            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador — do assessment inicial à integração completa da família — com o mesmo rigor que aplicamos a cada mandato individual.
+            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador, desde o assessment inicial até à integração completa da família, com o mesmo rigor que aplicamos a cada mandato individual.
           </p>
         </div>
       </section>
