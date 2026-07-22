@@ -1,7 +1,13 @@
-// Auto-translate post (PT -> EN) using Lovable AI Gateway with a MOOVIA
-// brand glossary. Writes into posts.translations.en with status="draft" so
-// the admin must explicitly promote to "published" before the EN version
-// shows up on /blog when locale=en.
+// Auto-translate post (PT -> EN) using DeepL API with a MOOVIA custom
+// glossary. Writes into posts.translations.en with status="draft" so the
+// admin must explicitly promote to "published" before the EN version shows
+// up on /blog when locale=en.
+//
+// Required env (set on the Supabase project, not on Lovable):
+//   supabase secrets set DEEPL_API_KEY=... DEEPL_GLOSSARY_ID_PT_EN=... \
+//     --project-ref eueddvtfjdhmqudnpzcz
+//
+// Endpoint: api-free.deepl.com (key ends in :fx). Paid keys use api.deepl.com.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
 const corsHeaders = {
@@ -9,84 +15,57 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const AI_URL = "https://ai.gateway.lovable.dev/v1/chat/completions";
-// Claude Sonnet: better fidelity for brand terminology than Gemini Flash.
-const AI_MODEL = "anthropic/claude-sonnet-4-5";
+const DEEPL_KEY = Deno.env.get("DEEPL_API_KEY") ?? "";
+const GLOSSARY_ID = Deno.env.get("DEEPL_GLOSSARY_ID_PT_EN") ?? "";
+const DEEPL_HOST = DEEPL_KEY.endsWith(":fx")
+  ? "https://api-free.deepl.com"
+  : "https://api.deepl.com";
 
-const GLOSSARY = `
-MOOVIA BRAND GLOSSARY — preserve these terms EXACTLY, never translate, never confuse them with each other:
-
-- MOOVIA (brand name)
-- Global Mobility Assurance (the category MOOVIA created — B2B)
-- GMA (abbreviation for Global Mobility Assurance)
-- Global Mobility Success (the outcome — B2C service line)
-- GMS (abbreviation for Global Mobility Success)
-- Human Mobility Risk (the problem MOOVIA solves) — NEVER write "Global Mobility Risk"
-- Human Mobility Assurance (methodological framing)
-- Risk Intelligence (the methodology)
-- NIF, NHR, IFICI, RNH, D7, D2, D3 (Portuguese legal/tax terms — keep as-is)
-- MAIA (name of the AI assistant)
-
-Nomenclature rules:
-- Do NOT use "relocation", "expat services", or "immigration consulting" as translations for MOOVIA's offering.
-- "Assessment Estratégico" -> "Strategic Assessment"
-- "Discovery Call" stays in English.
-- Keep the four category terms (GMA, GMS, Human Mobility Risk, Risk Intelligence) untouched even when the surrounding sentence is translated.
-`;
-
-async function aiTranslate(text: string, isHtml: boolean): Promise<string> {
+// DeepL free tier: rate limits are undocumented. Serialize all calls.
+async function deeplTranslate(text: string, isHtml: boolean): Promise<string> {
   if (!text || !text.trim()) return text;
-  const apiKey = Deno.env.get("LOVABLE_API_KEY");
-  if (!apiKey) {
-    console.error("LOVABLE_API_KEY missing");
+  if (!DEEPL_KEY) {
+    console.error("DEEPL_API_KEY missing");
     return text;
   }
-  const system = `You are MOOVIA's in-house translator. Translate the user message from Portuguese (pt-BR/pt-PT) into professional, publication-ready English.
+  const body = new URLSearchParams();
+  body.append("text", text);
+  body.append("source_lang", "PT");
+  body.append("target_lang", "EN-US");
+  if (GLOSSARY_ID) body.append("glossary_id", GLOSSARY_ID);
+  if (isHtml) {
+    body.append("tag_handling", "html");
+    body.append("preserve_formatting", "1");
+  }
 
-${GLOSSARY}
-
-STRICT RULES:
-- Translate ONLY what is provided. Do NOT add, expand, summarize, explain, continue, or invent content.
-- Output MUST have the same structure and approximately the same length as the input.
-- Do NOT wrap the output in quotes, code fences, or markdown.
-- Do NOT add prefixes like "Translation:" or commentary of any kind.
-${
-    isHtml
-      ? "- Input is HTML. Preserve every tag, attribute and structural element exactly. Translate only visible text nodes."
-      : "- Input is short plain text (a title, excerpt or meta tag). Return ONLY the translated line, nothing else."
-  }`;
   try {
-    const res = await fetch(AI_URL, {
+    const res = await fetch(`${DEEPL_HOST}/v2/translate`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `DeepL-Auth-Key ${DEEPL_KEY}`,
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({
-        model: AI_MODEL,
-        messages: [
-          { role: "system", content: system },
-          { role: "user", content: text },
-        ],
-      }),
-      signal: AbortSignal.timeout(90000),
+      body,
+      signal: AbortSignal.timeout(60000),
     });
+
+    if (res.status === 456) {
+      console.error("DeepL quota exceeded (456)");
+      return text;
+    }
+    if (res.status === 429) {
+      console.error("DeepL rate limited (429)");
+      return text;
+    }
     if (!res.ok) {
-      console.error("AI gateway error", res.status, await res.text().catch(() => ""));
+      console.error("DeepL error", res.status, await res.text().catch(() => ""));
       return text;
     }
     const json = await res.json();
-    let out = json?.choices?.[0]?.message?.content;
-    if (typeof out !== "string" || !out.trim()) return text;
-    out = out.trim().replace(/^```[a-z]*\n?|\n?```$/gi, "").trim();
-    if (!isHtml) {
-      const firstLine = out.split(/\r?\n/)[0].trim();
-      const maxLen = Math.max(160, text.length * 3);
-      out = (firstLine.length > 0 ? firstLine : out).slice(0, maxLen);
-    }
-    return out;
+    const out = json?.translations?.[0]?.text;
+    return typeof out === "string" && out.trim() ? out : text;
   } catch (e) {
-    console.error("AI translate failed", e);
+    console.error("DeepL translate failed", e);
     return text;
   }
 }
@@ -98,13 +77,13 @@ function slugify(s: string): string {
 }
 
 async function translateEnglish(post: any) {
-  const [title, excerpt, content, meta_title, meta_description] = await Promise.all([
-    aiTranslate(post.title || "", false),
-    aiTranslate(post.excerpt || "", false),
-    aiTranslate(post.content || "", true),
-    aiTranslate(post.meta_title || post.title || "", false),
-    aiTranslate(post.meta_description || post.excerpt || "", false),
-  ]);
+  // Serialize calls to respect the free-tier undocumented rate limit.
+  const title = await deeplTranslate(post.title || "", false);
+  const excerpt = await deeplTranslate(post.excerpt || "", false);
+  const content = await deeplTranslate(post.content || "", true);
+  const meta_title = await deeplTranslate(post.meta_title || post.title || "", false);
+  const meta_description = await deeplTranslate(post.meta_description || post.excerpt || "", false);
+
   return {
     title,
     excerpt,
@@ -114,6 +93,7 @@ async function translateEnglish(post: any) {
     slug: slugify(title || post.slug),
     status: "draft" as const,
     generated_at: new Date().toISOString(),
+    provider: "deepl" as const,
   };
 }
 
@@ -138,9 +118,8 @@ Deno.serve(async (req) => {
 
     const en = await translateEnglish(post);
 
-    // Preserve any manual edits: if a reviewed/published EN version already
-    // exists, do NOT overwrite it — return the existing one so the admin can
-    // decide whether to force-regenerate.
+    // Preserve manual edits: if a reviewed/published EN version already
+    // exists, do NOT overwrite it.
     const existing = post.translations?.en;
     const shouldPreserve = existing && (existing.status === "reviewed" || existing.status === "published");
     const nextEn = shouldPreserve ? existing : en;
@@ -154,7 +133,7 @@ Deno.serve(async (req) => {
     if (upErr) throw upErr;
 
     return new Response(
-      JSON.stringify({ ok: true, post_id, preserved: shouldPreserve, status: nextEn.status }),
+      JSON.stringify({ ok: true, post_id, preserved: shouldPreserve, status: nextEn.status, provider: "deepl" }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (e) {
