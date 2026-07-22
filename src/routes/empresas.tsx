@@ -243,8 +243,8 @@ function EmpresasPage() {
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.85]">
               A velocidade de onboarding do talento contratado depende tanto da
               qualidade da estratégia quanto da capacidade de execução. O
-              mandato MOOVIA aciona uma rede de especialistas credenciados —
-              imobiliário, jurídico, integração escolar — sob demanda, sem
+              mandato MOOVIA aciona uma rede de especialistas credenciados em áreas como
+              imobiliário, jurídico ou integração escolar. Esta ativação ocorre sob demanda, sem
               custo fixo de equipa própria em cada área operacional para a
               empresa contratante.
             </p>
