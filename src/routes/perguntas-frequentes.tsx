@@ -61,7 +61,7 @@ const faqs: QA[] = [
   },
   {
     q: "Quantos colaboradores a empresa precisa ter para contratar o programa?",
-    a: "Não existe um número mínimo rígido. O programa é estruturado a partir do perfil e da complexidade dos casos de mobilidade — validado na Strategic Discovery Call.",
+    a: "Não existe um número mínimo rígido. O programa é estruturado a partir do perfil e da complexidade dos casos de mobilidade, sendo validado na Strategic Discovery Call.",
     pending: true,
   },
   {
