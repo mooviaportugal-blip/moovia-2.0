@@ -10,7 +10,7 @@ export function ProcessSection() {
       id: "01",
       tag: "Assessment",
       title: "Compreender antes de agir.",
-      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de qualquer decisão logística.",
+      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de avançarmos para qualquer decisão logística.",
       badge: "Assessment",
     },
     {
