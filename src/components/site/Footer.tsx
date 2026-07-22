@@ -34,7 +34,7 @@ export function Footer() {
             </Link>
             <p className="font-urbanist text-[12px] font-[400] tracking-[0.28em] uppercase text-w35 mb-6">Planear · Decidir · Integrar</p>
             <p className="font-urbanist text-[13px] font-[300] text-w35 max-w-[320px] leading-relaxed mx-auto lg:mx-0">
-              MOOVIA / Global Mobility Assurance / Delivering Global Mobility Success.
+              MOOVIA / Global Mobility Assurance / Entregando Global Mobility Success.
             </p>
 
           </div>
