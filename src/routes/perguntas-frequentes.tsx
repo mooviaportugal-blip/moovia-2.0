@@ -6,13 +6,13 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 export const Route = createFileRoute("/perguntas-frequentes")({
   head: () => ({
     meta: [
-      { title: "Perguntas Frequentes — MOOVIA" },
+      { title: "Perguntas Frequentes | MOOVIA" },
       {
         name: "description",
         content:
           "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Global Mobility Assurance.",
       },
-      { property: "og:title", content: "Perguntas Frequentes — MOOVIA" },
+      { property: "og:title", content: "Perguntas Frequentes | MOOVIA" },
       {
         property: "og:description",
         content:
