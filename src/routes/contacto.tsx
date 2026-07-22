@@ -60,7 +60,7 @@ function Contacto() {
             Contacto
           </p>
           <h1 className="font-sora text-[clamp(28px,4.5vw,52px)] font-[100] leading-[1.05] max-w-3xl mx-auto lg:mx-0 text-white">
-            Vamos coordenar a sua mobilidade<br />internacional, do diagnóstico<br />à integração.
+            Vamos coordenar a sua mobilidade internacional, do diagnóstico à integração.
           </h1>
           <div className="mt-8 max-w-2xl mx-auto lg:mx-0 space-y-5 font-urbanist text-[17px] font-[300] text-w35 leading-relaxed">
             <p>
