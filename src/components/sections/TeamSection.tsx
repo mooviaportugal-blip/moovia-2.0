@@ -69,7 +69,7 @@ const ESPECIALISTAS: HomeMember[] = [
   {
     id: "leticia",
     name: "Dra. Letícia de Mello",
-    role: "Psicóloga | Wellness & Integração Familiar",
+    role: "Co-Founder & CSO | Wellness & Integração Familiar",
     img: "/images/leticia.jpg",
     chips: ["Psicologia", "Wellness", "Integração Familiar"],
     bio: "Apoia famílias internacionais no bem-estar emocional e na adaptação à nova vida em Portugal, com escuta clínica e abordagem humanizada.",

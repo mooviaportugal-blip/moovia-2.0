@@ -80,7 +80,7 @@ const ESTACOES: Estacao[] = [
     objetivo:
       "Orquestração operacional da execução, integrando tecnologia, processos e todos os intervenientes numa única governance.",
     especialistas: [
-      { nome: "Pablo Alejandro Saco Paim", papel: "Lead Strategist" },
+      { nome: "Pablo Alejandro Saco Paim", papel: "Co-Founder & CPTO · Lead Strategist" },
     ],
   },
   {
