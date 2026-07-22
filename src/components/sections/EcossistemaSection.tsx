@@ -74,7 +74,7 @@ export function EcossistemaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group relative bg-black-2 p-10 md:p-12 overflow-hidden transition-colors hover:bg-[#0a1024]"
+              className="group relative bg-black-2 p-10 md:p-12 overflow-hidden transition-colors hover:bg-[#0a1024] flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
               <div className="mb-6 text-gold">
