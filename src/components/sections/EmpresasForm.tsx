@@ -175,7 +175,7 @@ export function EmpresasForm() {
 
               <div>
                 <label className={labelCls}>
-                  Colaboradores a mover internacionalmente (próximos 12 meses)
+                  Quantidade de colaboradores
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {VOLUMES.map((v) => (
