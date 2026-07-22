@@ -16,8 +16,8 @@ export function ProcessSection() {
     {
       id: "02",
       tag: "Plano Estratégico",
-      title: "Converter risco num plano.",
-      body: "A partir do diagnóstico inicial, desenvolvemos um roadmap estruturado para mitigar os riscos e maximizar a probabilidade de uma transição fluida.",
+      title: "Converter risco em estratégia.",
+      body: "Combinamos entrevistas estruturadas, metodologias proprietárias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
       badge: "Plano Estratégico",
     },
     {
