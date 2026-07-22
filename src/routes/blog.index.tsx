@@ -60,9 +60,17 @@ function Blog() {
   });
 
   const posts = useMemo(
-    () => (rawPosts || []).map((p: any) => ({ ...p, ...pickPostLocale(p, locale) })),
+    () =>
+      (rawPosts || [])
+        .map((p: any) => {
+          const loc = pickPostLocale(p, locale);
+          if (!loc) return null;
+          return { ...p, ...loc };
+        })
+        .filter((x: any): x is any => x !== null),
     [rawPosts, locale],
   );
+
 
   const categories = useMemo(() => {
     const set = new Set<string>();
