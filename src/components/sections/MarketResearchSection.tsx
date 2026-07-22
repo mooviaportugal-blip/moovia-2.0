@@ -166,19 +166,22 @@ export function MarketResearchSection() {
             transition={{ delay: 0.08 }}
             className="border border-border-b18 bg-black/30 p-5 sm:p-8 lg:p-10 flex flex-col min-w-0 overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-6">
-              <span className="font-display text-[2rem] font-[300] text-gold">02</span>
-              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-w35/60">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <span className="font-display text-[2rem] font-[300] text-gold shrink-0">02</span>
+              <span className="font-body text-[10px] tracking-[0.24em] uppercase text-w35/60 text-right min-w-0 break-words">
                 O mito dos "40% de fracasso"
               </span>
             </div>
 
-            <div className="flex items-start gap-6 mb-6">
-              <XCircleIcon />
-              <p className="font-display text-[1.15rem] text-ivory leading-[1.4] font-[300]">
+            <div className="flex items-start gap-4 sm:gap-6 mb-6">
+              <div className="shrink-0">
+                <XCircleIcon size={52} />
+              </div>
+              <p className="font-display text-[1.05rem] sm:text-[1.15rem] text-ivory leading-[1.4] font-[300] min-w-0 break-words">
                 "Não é verdade que 40% regressem para casa."
               </p>
             </div>
+
 
             <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-4">
               Durante décadas repetiu-se que 20 a 40% dos expatriados regressavam antes do fim da
