@@ -148,13 +148,13 @@ function OqueSomos() {
 function SaudeMentalMigrantes() {
   const stats = [
     {
-      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional — e a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
+      texto: "Portugal tem hoje cerca de 1,1 milhões de estrangeiros residentes. Para muitos, a saúde mental continua a ser um tabu cultural que atrasa a procura de apoio profissional. Além disso, a crise habitacional é apontada pela Ordem dos Psicólogos Portugueses como um dos fatores que mais compromete o bem-estar emocional de quem chega.",
     },
     {
-      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano, com 56% dos millennials não-nativos a apontar a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental — 87% mais do que não-nativos entre 55 e 75 anos.",
+      texto: "O AXA Mind Health Report identifica um aumento de 11% em depressão e ansiedade entre jovens não-nativos num único ano. 56% dos millennials não-nativos apontam a solidão e o isolamento como fatores que prejudicam significativamente a sua saúde mental, um valor 87% superior aos não-nativos entre 55 e 75 anos.",
     },
     {
-      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental — preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
+      texto: "80% dos não-nativos reportam preocupações de saúde mental ligadas ao ambiente de trabalho, e 49% encontram-se em burnout. Ainda assim, desde 2023 há uma redução de 21% no número de jovens que recorrem ao médico do trabalho para gerir a sua saúde mental, pois preferem procurar ajuda fora do ambiente profissional.\n\nIsto reforça exatamente o espaço onde a MOOVIA atua: antes de o problema se tornar visível para a empresa.",
     },
   ];
   return (
