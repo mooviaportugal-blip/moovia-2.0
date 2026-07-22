@@ -188,8 +188,8 @@ export function LinhaMooverSection() {
         {/* Lines Stack */}
         <div className="space-y-12 md:space-y-20 relative">
           
-          {LINES.map((line) => (
-            <div key={line.id} className="relative flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
+          {LINES.map((line, lineIdx) => (
+            <div key={line.id} className="relative flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12" style={{ zIndex: LINES.length - lineIdx }}>
               
               {/* Left Label */}
               <div className="w-full md:w-48 shrink-0">
