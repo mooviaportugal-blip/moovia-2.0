@@ -139,30 +139,42 @@ export function Hero() {
           transition={{ duration: 1.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
-          {/* Layer mask via alpha gradient — sem overlay de cor */}
-          <div className="relative w-[85%] sm:w-[70%] lg:w-[75%] h-[70%] lg:h-[60%] max-h-[60vh] opacity-90">
+          {/* Video com máscara azulejo (quadrifólio) + fade radial no fundo */}
+          <div
+            className="relative w-[88%] sm:w-[72%] lg:w-[78%] aspect-square max-h-[70vh]"
+            style={{
+              WebkitMaskImage: "url('/masks/azulejo-frame.svg')",
+              maskImage: "url('/masks/azulejo-frame.svg')",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+            }}
+          >
             <video
+              ref={videoRef}
               autoPlay
               muted
               playsInline
               preload="auto"
-              className="w-full h-full object-contain"
-              aria-label="Moldura editorial Lisboa"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 60% 65% at 50% 50%, black 45%, rgba(0,0,0,0.65) 62%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0) 95%)",
-                maskImage:
-                  "radial-gradient(ellipse 60% 65% at 50% 50%, black 45%, rgba(0,0,0,0.65) 62%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0) 95%)",
-                WebkitMaskRepeat: "no-repeat",
-                maskRepeat: "no-repeat",
-                WebkitMaskSize: "100% 100%",
-                maskSize: "100% 100%",
-              }}
+              loop={false}
+              onEnded={(e) => e.currentTarget.pause()}
+              className="w-full h-full object-cover"
+              aria-label="Vídeo institucional MOOVIA — vista de Lisboa"
             >
-              <source src={molduraWebm.url} type="video/webm" />
-              <source src={molduraMp4.url} type="video/mp4" />
+              <source src={HERO_VIDEO_URL} type="video/mp4" />
             </video>
+            {/* Fade radial interno dissolvendo no fundo do site */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: `radial-gradient(ellipse at center, transparent 55%, ${HERO_BG} 92%)`,
+              }}
+            />
           </div>
+
 
 
         </motion.div>
