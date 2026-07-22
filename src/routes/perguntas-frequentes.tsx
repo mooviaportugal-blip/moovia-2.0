@@ -28,7 +28,7 @@ type QA = { q: string; a: React.ReactNode; pending?: boolean };
 const faqs: QA[] = [
   {
     q: "O que é a MOOVIA?",
-    a: "A MOOVIA coordena transições internacionais de vida e património. Não somos uma empresa de imigração nem uma consultoria pontual — somos o ponto único que integra estratégia, execução e acompanhamento antes, durante e depois da chegada.",
+    a: "A MOOVIA coordena transições internacionais de vida e património. Não somos uma empresa de imigração nem uma consultoria pontual. Somos o ponto único que integra estratégia, execução e acompanhamento antes, durante e depois da chegada.",
   },
   {
     q: "O que é o Strategic Assessment?",
