@@ -445,7 +445,7 @@ function ValidacaoSection() {
             </h3>
             <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
               A MOOVIA está a desenvolver modelos preditivos próprios para
-              apoiar a avaliação de risco humano da mobilidade internacional —
+              apoiar a avaliação de risco humano da mobilidade internacional,
               parte da evolução contínua da nossa metodologia.
             </p>
           </div>
