@@ -98,7 +98,11 @@ function Post() {
     initialData: initialData?.post,
     retry: 1,
   });
-  const post: any = rawPost ? { ...rawPost, ...pickPostLocale(rawPost, locale) } : rawPost;
+  const localized = rawPost ? pickPostLocale(rawPost, locale) : null;
+  // When EN is requested but no published translation exists, fall through
+  // to the "not found" branch below (Opção A — never show PT as fallback).
+  const post: any = rawPost && localized ? { ...rawPost, ...localized } : rawPost && locale === "pt" ? rawPost : null;
+
 
   if (error) {
     return (
