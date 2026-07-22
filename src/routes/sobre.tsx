@@ -56,7 +56,7 @@ function SobrePage() {
       <RaizesEAsas />
       <ComoConstruimosInteligencia />
       <ComoFazemosSection />
-      <ValidacaoSection />
+      
       <PosicaoMarca />
       <MethodologySection />
       <HowWeBuiltTimeline />
@@ -588,61 +588,6 @@ function MetodoSection() {
   );
 }
 
-/* ─────────────────────── COMO VALIDAMOS O SERVIÇO ─────────────────────── */
-function ValidacaoSection() {
-  return (
-    <section className="bg-black py-[100px] md:py-[140px] px-6 lg:px-20 border-t border-b18">
-      <div className="max-w-[1100px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
-          Metodologia
-        </p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-10">
-          Como <span className="italic text-gold-l">validamos o nosso serviço.</span>
-        </h2>
-
-        <div className="max-w-[820px] space-y-6 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
-          <p>
-            A nossa metodologia combina conhecimento de negócio dos fundadores,
-            tecnologia aplicada e uma abordagem estruturada de avaliação de
-            risco humano.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 mb-14">
-          <div className="pl-6 border-l-[3px] border-gold">
-            <h3 className="font-display text-[1.2rem] text-white mb-3 font-[300]">
-              Tecnologia aplicada
-            </h3>
-            <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
-              A MOOVIA está a desenvolver modelos preditivos próprios para
-              apoiar a avaliação de risco humano da mobilidade internacional,
-              parte da evolução contínua da nossa metodologia.
-            </p>
-          </div>
-          <div className="pl-6 border-l-[3px] border-gold/40">
-            <h3 className="font-display text-[1.2rem] text-white mb-3 font-[300]">
-              Abordagem multidisciplinar
-            </h3>
-            <p className="font-body text-[15px] font-[300] text-w35 leading-[1.75]">
-              Diagnóstico validado por especialistas em estratégia, adaptação
-              humana e coordenação patrimonial, tudo orquestrado sob mandato.
-            </p>
-          </div>
-        </div>
-
-        <a
-          href="#contacto"
-          className="group relative overflow-hidden inline-flex bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center"
-        >
-          <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-          <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-            Conhecer a Metodologia
-          </span>
-        </a>
-      </div>
-    </section>
-  );
-}
 
 
 
