@@ -82,25 +82,38 @@ const HANDOFF_TRIGGER_RE = /\b(atendimento|atendido|atendida|conversa gratuita|c
 
 const HANDOFF_STEPS: HandoffStep[] = [
   {
+    field: 'persona_type',
+    question: 'Antes de mais: fala em nome de uma empresa ou como pessoa/família?',
+    options: ['Empresa (RH ou Mobilidade)', 'Pessoa ou família'],
+  },
+  {
     field: 'objective',
-    question: 'Qual o seu objetivo principal com Portugal?',
-    options: ['Trabalhar em Portugal', 'Estudar em Portugal', 'Mudar com a família', 'Investir em imóveis', 'Reforma em Portugal', 'Outro'],
+    question: 'Qual o objetivo principal com Portugal (ou com mobilidade internacional)?',
+    options: [
+      'Expatriar colaboradores (Global Mobility Assurance)',
+      'Reduzir risco humano em missões internacionais',
+      'Mudar com a família para Portugal',
+      'Reforma ou recomeço pessoal em Portugal',
+      'Investir em imóveis / património',
+      'Outro',
+    ],
   },
   {
     field: 'timing',
-    question: 'Quando pretende mudar?',
-    options: ['Menos de 60 dias', '3 a 6 meses', '6 a 12 meses', 'Já tomei a decisão', 'Já tenho proposta assinada', 'Ainda pesquisando'],
+    question: 'Qual o horizonte da decisão?',
+    options: ['Menos de 60 dias', '3 a 6 meses', '6 a 12 meses', 'Já tomei a decisão', 'Ainda a explorar'],
   },
   {
     field: 'composition',
-    question: 'Quantas pessoas participam da mudança?',
-    options: ['Apenas eu', 'Casal', 'Família com filhos', 'Casal com pet', 'Família com filhos e pets'],
+    question: 'Quem participa nesta transição?',
+    options: ['Apenas eu', 'Casal', 'Família com filhos', 'Colaborador + família', 'Equipa / vários colaboradores'],
   },
   {
     field: 'decision_phase',
-    question: 'Em que fase da decisão está?',
-    options: ['Apenas pesquisando', 'Comparando Portugal com outras opções', 'Já decidi Portugal, planejando quando', 'Tomei a decisão, preciso agir', 'Já tenho proposta ou contrato assinado'],
+    question: 'Em que fase está?',
+    options: ['A explorar categorias', 'A comparar fornecedores', 'Já decidi, a planear', 'Preciso agir agora', 'Já com proposta ou contrato assinado'],
   },
+
   { field: 'email', question: 'Pode confirmar o seu e-mail?' },
   { field: 'whatsapp', question: 'E o seu WhatsApp (com indicativo do país)?' },
   {
