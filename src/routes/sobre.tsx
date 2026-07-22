@@ -672,18 +672,24 @@ function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mb-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-10 items-center max-w-[900px] border-y border-b18 py-8"
+          className="mb-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-8 items-center max-w-[1100px] border-y border-b18 py-8"
         >
           <div className="text-center md:text-left">
-            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Success</p>
-            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é o resultado.</p>
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Assurance</p>
+            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a categoria que o torna mensurável.</p>
           </div>
           <div className="hidden md:block w-px h-16 bg-b30" />
           <div className="text-center md:text-left">
             <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Strategy</p>
             <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a disciplina que o torna possível.</p>
           </div>
+          <div className="hidden md:block w-px h-16 bg-b30" />
+          <div className="text-center md:text-left">
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Success</p>
+            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é o resultado.</p>
+          </div>
         </motion.div>
+
 
         <h1 className="font-display font-[200] text-white leading-[1.02] tracking-[-0.03em] text-[clamp(52px,7vw,96px)]">
           {[
