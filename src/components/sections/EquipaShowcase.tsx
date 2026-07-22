@@ -349,7 +349,7 @@ export function EquipaShowcase() {
         <div id="rede-parceiros" className="mb-12 text-center md:text-left max-w-[800px] scroll-mt-24">
           <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Rede de Parceiros</h2>
           <p className="mt-4 font-body text-[14px] md:text-[16px] text-white/60 leading-[1.8]">
-            Quando um executivo precisa de apoio adicional — encontrar casa, escolher escola, tratar documentação — a MOOVIA orquestra uma rede de parceiros especializados para essas necessidades específicas. A empresa pode identificar essa necessidade pelo perfil do cargo e incluir no pacote de mobilidade, ou o próprio executivo aciona os serviços ao conhecer a rede de parceiros que a MOOVIA orquestra.
+            Quando um executivo precisa de apoio adicional, seja encontrar casa, escolher escola ou tratar documentação, a MOOVIA orquestra uma rede de parceiros especializados para essas necessidades específicas. A empresa pode identificar essa necessidade pelo perfil do cargo e incluir no pacote de mobilidade, ou o próprio executivo aciona os serviços ao conhecer a rede de parceiros que a MOOVIA orquestra.
           </p>
         </div>
         

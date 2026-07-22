@@ -47,7 +47,7 @@ const ESTACOES: Estacao[] = [
     nome: "Diagnosticar",
     pergunta: "Compreender objetivos, riscos, stakeholders e fatores críticos de sucesso.",
     objetivo:
-      "Análise inicial do contexto, dos stakeholders e das variáveis críticas da mobilidade. Metodologia: Entrevista Estratégica MOOVIA, AI Mobility Discovery, Context Mapping Framework. A IA estrutura informação e identifica padrões; a decisão é sempre dos especialistas MOOVIA.",
+      "Análise inicial do contexto, dos stakeholders e das variáveis críticas da mobilidade. Metodologia: Entrevista Estratégica MOOVIA, Descoberta de Mobilidade com IA, Framework de Mapeamento de Contexto. A IA estrutura informação e identifica padrões; a decisão é sempre dos especialistas MOOVIA.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Framework Owner · Lead Strategist" },
     ],
@@ -57,7 +57,7 @@ const ESTACOES: Estacao[] = [
     nome: "Avaliar",
     pergunta: "Identificar riscos estratégicos, operacionais, familiares e patrimoniais.",
     objetivo:
-      "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Mobility Risk Assessment.",
+      "Diagnóstico multidimensional que integra entrevistas estruturadas e apoio de IA para orientar as decisões seguintes. Metodologia: Avaliação de Risco de Mobilidade.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Human Mobility Assurance" },
       { nome: "Dra. Letícia de Mello", papel: "Avaliação de Integração Adaptativa" },
@@ -88,7 +88,7 @@ const ESTACOES: Estacao[] = [
     nome: "Integrar",
     pergunta: "Acompanhar a adaptação da família e garantir os resultados esperados.",
     objetivo:
-      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Estrutura de Integração Adaptativa, AEAI Follow-up, Monitor de Sucesso.",
+      "Reduzir riscos após a chegada e apoiar a adaptação humana. Metodologia: Estrutura de Integração Adaptativa, Acompanhamento AEAI, Monitor de Sucesso.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Programme Director" },
       { nome: "Dra. Letícia de Mello", papel: "Especialista em Integração Adaptativa" },
@@ -99,7 +99,7 @@ const ESTACOES: Estacao[] = [
     nome: "Medir",
     pergunta: "Monitorizar indicadores de sucesso e apoiar decisões futuras.",
     objetivo:
-      "Acompanhamento contínuo dos resultados da mobilidade. Metodologia: Global Mobility Success Index, Outcome Dashboard, AI Predictive Insights.",
+      "Acompanhamento contínuo dos resultados da mobilidade. Metodologia: Índice Global Mobility Success, Painel de Resultados, Previsões com IA.",
     especialistas: [
       { nome: "Frederico Prado", papel: "Programme Director" },
     ],

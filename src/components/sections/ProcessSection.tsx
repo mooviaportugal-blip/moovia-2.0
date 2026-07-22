@@ -11,18 +11,18 @@ export function ProcessSection() {
       tag: "Avaliação",
       title: "Compreender antes de agir.",
       body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de avançarmos para qualquer decisão logística.",
-      badge: "Assessment",
+      badge: "Avaliação",
     },
     {
       id: "02",
       tag: "Plano Estratégico",
       title: "Converter risco num plano.",
       body: "A partir do diagnóstico inicial, desenvolvemos um roadmap estruturado para mitigar os riscos e maximizar a probabilidade de uma transição fluida.",
-      badge: "Blueprint",
+      badge: "Plano Estratégico",
     },
     {
       id: "03",
-      tag: "Orchestração",
+      tag: "Orquestração",
       title: "Executar com inteligência.",
       body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe.",
       badge: "Orquestração",
@@ -39,7 +39,7 @@ export function ProcessSection() {
       tag: "Sucesso",
       title: "O foco no longo prazo.",
       body: "Avaliamos o impacto duradouro da transição: estabilidade, integração efetiva e satisfação, assegurando o retorno final sobre o investimento da mudança.",
-      badge: "Success",
+      badge: "Sucesso",
     },
   ];
 

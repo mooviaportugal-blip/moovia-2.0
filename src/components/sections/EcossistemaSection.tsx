@@ -62,7 +62,7 @@ export function EcossistemaSection() {
             É exatamente esse o papel da MOOVIA.
             <br />
             <br />
-            Muitas empresas já trabalham com parceiros de relocation, imobiliário ou fiscalidade de confiança. A MOOVIA não substitui essas relações — orquestra-as. Coordenamos tanto a nossa rede de especialistas como os parceiros já existentes do cliente, sempre dentro da mesma estratégia integrada.
+            Muitas empresas já trabalham com parceiros de relocation, imobiliário ou fiscalidade de confiança. A MOOVIA não substitui essas relações: orquestra-as. Coordenamos tanto a nossa rede de especialistas como os parceiros já existentes do cliente, sempre dentro da mesma estratégia integrada.
           </motion.p>
         </div>
 
