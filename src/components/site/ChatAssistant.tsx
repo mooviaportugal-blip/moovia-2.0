@@ -106,10 +106,11 @@ const B2B_STEPS: HandoffStep[] = [
   { field: 'cargo_responsavel', question: 'Quem é o responsável e o cargo? (ex: Ana Silva, RH)', label: 'Responsável' },
   {
     field: 'colaboradores_12m',
-    question: 'Quantos colaboradores a empresa pretende mover nos próximos 12 meses?',
-    options: ['1', '2-5', '6-20', 'Mais de 20'],
-    label: 'Colaboradores (12m)',
+    question: 'Qual a quantidade de colaboradores da empresa?',
+    options: ['1 a 50', '50 a 100', '100 a 500', 'Mais de 500'],
+    label: 'Quantidade de colaboradores',
   },
+
   { field: 'paises_origem_destino', question: 'Qual(is) o(s) país(es) de origem e destino?', label: 'Origem → Destino' },
   {
     field: 'desafio_principal',
