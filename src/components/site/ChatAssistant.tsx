@@ -499,7 +499,11 @@ export function ChatAssistant() {
       contact_period: data?.contact_period || null,
       contact_method: data?.contact_method || null,
       message: data?.message || data?.notes || null,
-      notes: data?.notes || null,
+      notes: [
+        data?.persona_type ? `Perfil: ${data.persona_type}` : null,
+        data?.notes || null,
+      ].filter(Boolean).join(' · ') || null,
+
       referrer: typeof window !== 'undefined' ? window.location.href : null,
       utm_source: utm?.get('utm_source') || null,
       utm_medium: utm?.get('utm_medium') || null,
