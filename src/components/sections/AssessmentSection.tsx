@@ -116,7 +116,7 @@ export function AssessmentSection() {
                 Falar numa segunda língua exige esforço cognitivo, pois a pessoa está a pensar, traduzir e escolher palavras simultaneamente. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
               </p>
               <p>
-                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível — para que o que é lido seja a pessoa, não o esforço de falar noutra língua.
+                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível para que o que é lido seja a pessoa, não o esforço de falar noutra língua.
               </p>
             </div>
 
