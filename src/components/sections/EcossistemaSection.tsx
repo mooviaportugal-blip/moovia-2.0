@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Compass, Network, Scale, Landmark, Users, Cpu } from "lucide-react";
+import { Compass, Network, Scale, Landmark, Users, Home } from "lucide-react";
 
 const pilares = [
   { icon: Compass, title: "Estratégia", body: "Planeamento integrado antes de qualquer decisão." },
   { icon: Network, title: "Coordenação", body: "Um único ponto de contacto durante toda a jornada." },
   { icon: Scale, title: "Jurídico", body: "Segurança legal em todas as etapas." },
   { icon: Landmark, title: "Património", body: "Diagnóstico patrimonial para a mobilidade internacional." },
-  { icon: Users, title: "Integração", body: "Pessoas, famílias e empresas." },
-  { icon: Cpu, title: "Tecnologia", body: "Coordenação inteligente apoiada pela MAIA." },
+  { icon: Users, title: "Integração", body: "Estilo de vida, desportos, atividades culturais e religião." },
+  { icon: Home, title: "Moradia e Escola", body: "Apoio na procura de habitação e escolha de escola alinhadas ao perfil da família." },
 ];
 
 export function EcossistemaSection() {
@@ -66,7 +66,7 @@ export function EcossistemaSection() {
           </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/10 items-stretch">
           {pilares.map((p, i) => (
             <motion.div
               key={p.title}
@@ -74,7 +74,7 @@ export function EcossistemaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group relative bg-black-2 p-10 md:p-12 overflow-hidden transition-colors hover:bg-[#0a1024]"
+              className="group relative bg-black-2 p-10 md:p-12 overflow-hidden transition-colors hover:bg-[#0a1024] flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
               <div className="mb-6 text-gold">
