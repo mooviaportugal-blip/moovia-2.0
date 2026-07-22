@@ -129,7 +129,7 @@ function OqueSomos() {
           <div className="bg-w05 border border-b18 p-8 md:p-10">
             <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para o colaborador</p>
             <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
-              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> — um acompanhamento de alto valor durante uma das maiores transições da sua vida.
+              A MOOVIA é um <strong className="font-[500] text-gold-l">benefício</strong> que oferece um acompanhamento de alto valor durante uma das maiores transições da sua vida.
             </p>
           </div>
           <div className="bg-w05 border border-b18 p-8 md:p-10">
