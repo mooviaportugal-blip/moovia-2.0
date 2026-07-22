@@ -134,18 +134,21 @@ export function MarketResearchSection() {
             </div>
 
 
-            <div className="flex flex-col sm:flex-row items-center gap-8 mb-6">
-              <Donut percent={33}>
-                <div className="flex flex-col items-center gap-1">
-                  <PersonIcon />
-                  <span className="font-display text-[13px] text-gold-l tracking-wider">1 EM 3</span>
-                </div>
-              </Donut>
-              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1">
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 mb-6">
+              <div className="shrink-0">
+                <Donut percent={33} size={140}>
+                  <div className="flex flex-col items-center gap-1">
+                    <PersonIcon size={34} />
+                    <span className="font-display text-[12px] text-gold-l tracking-wider">1 EM 3</span>
+                  </div>
+                </Donut>
+              </div>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] flex-1 min-w-0 break-words text-center sm:text-left">
                 Estudos clássicos mostram que aproximadamente 1 em cada 3 expatriados apresenta
                 desempenho abaixo das expectativas durante a missão.
               </p>
             </div>
+
 
             <p className="font-body italic text-gold text-[14px] leading-[1.6] mt-auto">
               Muito mais relevante para um CFO do que o simples regresso antecipado.
