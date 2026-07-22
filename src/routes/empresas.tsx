@@ -476,3 +476,68 @@ function ComoGeramosValor() {
     </section>
   );
 }
+
+/* ─────────────────────────── EVERYBODY WINS (Global Mobility Success) ─────────────────────────── */
+function EverybodyWins() {
+  const colunas = [
+    {
+      title: "Colaborador",
+      items: ["Integrado", "Engajado", "Produtivo", "Construindo um futuro"],
+    },
+    {
+      title: "Família",
+      items: ["Estável", "Adaptada", "Apoiada", "Confiante"],
+    },
+    {
+      title: "Empresa",
+      items: [
+        "Talento retido",
+        "Produtividade mais rápida",
+        "Menor risco de mobilidade",
+        "Melhor ROI",
+      ],
+    },
+  ];
+  return (
+    <section className="bg-black py-24 md:py-32 px-6 lg:px-20 border-t border-b18">
+      <div className="mx-auto max-w-[1200px]">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
+          Global Mobility Success
+        </p>
+        <h2 className="font-display text-[clamp(32px,4.5vw,60px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-14 text-center">
+          Everybody <span className="text-gold-l italic">wins.</span>
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {colunas.map((col, i) => (
+            <motion.div
+              key={col.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col"
+            >
+              <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6">
+                {col.title}
+              </p>
+              <ul className="space-y-3">
+                {col.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.6]"
+                  >
+                    <span className="mt-[10px] h-px w-4 bg-gold shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+        <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(22px,3vw,36px)] leading-[1.3] text-center max-w-[820px] mx-auto">
+          A chegada é o marco. O sucesso é o destino.
+        </p>
+      </div>
+    </section>
+  );
+}
