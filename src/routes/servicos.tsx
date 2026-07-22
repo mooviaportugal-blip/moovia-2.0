@@ -8,7 +8,7 @@ import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços MOOVIA | Life Transition e Global Mobility Assurance" },
+      { title: "Serviços MOOVIA | Transição de Vida e Global Mobility Assurance" },
       {
         name: "description",
         content:
