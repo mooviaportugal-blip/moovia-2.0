@@ -119,10 +119,69 @@ function walk(root: Node, lang: WalkerLang) {
   }
 }
 
+let currentLang: WalkerLang | null = null;
+let observer: MutationObserver | null = null;
+let pendingNodes: Set<Node> = new Set();
+let flushHandle: number | null = null;
+
+function flushPending() {
+  flushHandle = null;
+  if (!currentLang || currentLang === "pt" || currentLang === "pt-BR") return;
+  const nodes = Array.from(pendingNodes);
+  pendingNodes.clear();
+  for (const n of nodes) {
+    if (!n.isConnected) continue;
+    if (n.nodeType === 3) {
+      translateTextNode(n as Text, currentLang);
+    } else if (n.nodeType === 1) {
+      walk(n, currentLang);
+    }
+  }
+}
+
+function schedule(node: Node) {
+  pendingNodes.add(node);
+  if (flushHandle != null) return;
+  flushHandle = (typeof requestAnimationFrame !== "undefined"
+    ? requestAnimationFrame(flushPending)
+    : (setTimeout(flushPending, 16) as unknown as number));
+}
+
+function ensureObserver() {
+  if (observer || typeof MutationObserver === "undefined") return;
+  observer = new MutationObserver((records) => {
+    for (const r of records) {
+      if (r.type === "childList") {
+        r.addedNodes.forEach((n) => schedule(n));
+      } else if (r.type === "characterData" && r.target.nodeType === 3) {
+        // Text node content changed (e.g. React updated a variable) — retranslate.
+        const t = r.target as Text;
+        ORIGINAL_TEXT.delete(t);
+        schedule(t);
+      } else if (r.type === "attributes" && r.target.nodeType === 1) {
+        const el = r.target as Element;
+        if (r.attributeName && ATTRS.includes(r.attributeName)) {
+          const store = ORIGINAL_ATTR.get(el);
+          if (store) delete store[r.attributeName];
+          if (currentLang && currentLang !== "pt" && currentLang !== "pt-BR") {
+            translateAttr(el, r.attributeName, currentLang);
+          }
+        }
+      }
+    }
+  });
+  observer.observe(document.body, {
+    childList: true, subtree: true, characterData: true,
+    attributes: true, attributeFilter: ATTRS,
+  });
+}
+
 export function applyDomTranslations(lang: WalkerLang) {
   if (typeof document === "undefined") return;
-  // pt-BR is the source language; no DOM rewrite needed.
+  currentLang = lang;
   if (lang === "pt-BR" || lang === "pt") return;
   walk(document.body, lang);
+  ensureObserver();
 }
+
 
