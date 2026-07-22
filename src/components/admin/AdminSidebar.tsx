@@ -14,6 +14,7 @@ import {
   Brain,
   Scale,
   Music,
+  Languages,
   Image as ImageIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -35,6 +36,7 @@ const menuItems = [
   { label: "Analytics", icon: BarChart3, to: "/admin/analytics" },
   { label: "UX Insights", icon: Activity, to: "/admin/ux" },
   { label: "Sound", icon: Music, to: "/admin/sound" },
+  { label: "Linguagens", icon: Languages, to: "/admin/languages" },
   { label: "Configurações", icon: Settings, to: "/admin/settings" },
 ];
 
