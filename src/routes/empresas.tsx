@@ -8,13 +8,13 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Global Mobility Assurance — MOOVIA" },
+      { title: "Global Mobility Assurance | MOOVIA" },
       {
         name: "description",
         content:
           "Transformamos Human Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
-      { property: "og:title", content: "Global Mobility Assurance — MOOVIA" },
+      { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
