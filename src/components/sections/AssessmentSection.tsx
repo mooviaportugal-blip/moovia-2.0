@@ -113,10 +113,10 @@ export function AssessmentSection() {
                 O Assessment é conduzido, sempre que possível, na língua emocional do participante.
               </p>
               <p>
-                Falar numa segunda língua exige esforço cognitivo, pois a pessoa está a pensar, traduzir e escolher palavras simultaneamente. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
+                Falar numa segunda língua exige esforço cognitivo. A pessoa está, ao mesmo tempo, a pensar, traduzir e escolher palavras. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
               </p>
               <p>
-                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível para que o que é lido seja a pessoa, não o esforço de falar noutra língua.
+                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível: o que é lido deve ser a pessoa, não o esforço de falar noutra língua.
               </p>
             </div>
 
@@ -136,13 +136,17 @@ export function AssessmentSection() {
               </p>
             </div>
 
-            <div className="max-w-[480px] mx-auto text-center mt-12 mb-6 opacity-75">
-              <p className="font-body italic text-[13px] text-white/60 leading-[1.6] mb-1">
+            <div className="max-w-[480px] mx-auto text-center mt-12 mb-6 opacity-85">
+              <div className="mb-4">
+                <p className="font-display text-[14px] font-[500] text-gold uppercase tracking-widest">Vinicius Mattos</p>
+                <p className="font-body text-[11px] text-white/50 uppercase tracking-tighter">Tecnologia</p>
+              </div>
+              <p className="font-body italic text-[14px] text-white/90 leading-[1.6] mb-3">
                 "A experiência com o Assessment da MOOVIA superou as nossas expectativas."
               </p>
-              <span className="font-body text-[11px] text-white/40">
-                Cliente MOOVIA, Brasil para Portugal
-              </span>
+              <p className="font-body text-[11px] text-white/40">
+                Cliente MOOVIA, Brasil → Portugal
+              </p>
             </div>
 
             <a
