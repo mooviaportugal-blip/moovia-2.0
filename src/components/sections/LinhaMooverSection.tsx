@@ -317,7 +317,7 @@ export function LinhaMooverSection() {
                   <div className="text-center">
                     <h3 className="font-sora text-gold text-sm font-semibold tracking-[0.2em] uppercase">Global Mobility Success</h3>
                     <p className="font-urbanist text-w35 text-[10px] mt-1 italic uppercase tracking-widest">
-                      Melhores decisões. Transições mais suaves. Futuros mais fortes.
+                      Melhores decisões, transições mais suaves e futuros mais fortes.
                     </p>
                   </div>
                 </div>
