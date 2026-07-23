@@ -44,7 +44,7 @@ function SobrePage() {
     <SiteLayout>
       <Hero />
       <OrigemMercado />
-      <EquacaoHistoria />
+      <EquacaoMoovia />
       <HistoriaPessoal />
       <MarketResearchSection />
       <SaudeMentalMigrantes />
@@ -864,64 +864,79 @@ function Diferencia() {
 }
 
 /* ─────────────────────────── A EQUAÇÃO DA SUA HISTÓRIA ─────────────────────────── */
-function EquacaoHistoria() {
+function EquacaoMoovia() {
+  const colunas = [
+    {
+      title: "CARREIRA INTERNACIONAL",
+      items: ["Décadas de experiência em negócios internacionais"],
+    },
+    {
+      title: "REVENUE ASSURANCE",
+      items: ["Identificação de riscos e perdas invisíveis"],
+    },
+    {
+      title: "METODOLOGIAS PROPRIETÁRIAS",
+      customContent: (
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h4 className="font-display text-[15px] text-white font-[300]">Raízes e Asas</h4>
+            <p className="font-body text-[14px] text-w35 font-[300]">Dra. Letícia de Mello</p>
+          </div>
+          <div className="h-px bg-b30" />
+          <div className="space-y-2">
+            <h4 className="font-display text-[15px] text-white font-[300]">Tecnologia</h4>
+            <p className="font-body text-[14px] text-w35 font-[300]">Pablo Alejandro</p>
+          </div>
+        </div>
+      )
+    },
+  ];
+
   return (
-    <section className="bg-black py-[100px] px-6 lg:px-20 border-b border-b18">
-      <div className="max-w-[900px] mx-auto">
-        <h2 className="font-display font-[200] text-ivory leading-[1.15] text-[clamp(28px,3.5vw,46px)] mb-16 text-center">
-          A equação da sua história
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-b border-b18">
+      <div className="max-w-[1200px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
+          A EQUAÇÃO DA MOOVIA
+        </p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14 text-center">
+          De onde viemos.
         </h2>
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex-1 w-full bg-[#0a0d18] border border-b15 p-8 text-center"
-          >
-            <h3 className="font-body text-[13px] tracking-[0.2em] uppercase text-gold mb-3">Revenue Assurance</h3>
-            <p className="font-body font-[300] text-[15px] text-w35 leading-[1.6]">
-              ensinou a enxergar riscos e perdas invisíveis.
-            </p>
-          </motion.div>
-
-          <span className="text-gold/50 text-2xl font-light">+</span>
-
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex-1 w-full bg-[#0a0d18] border border-b15 p-8 text-center"
-          >
-            <h3 className="font-body text-[13px] tracking-[0.2em] uppercase text-gold mb-3">Carreira internacional</h3>
-            <p className="font-body font-[300] text-[15px] text-w35 leading-[1.6]">
-              permitiu viver o problema da mobilidade.
-            </p>
-          </motion.div>
-
-          <span className="text-gold-l text-2xl font-light">=</span>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1 w-full p-8 text-center relative overflow-hidden"
-            style={{
-              background: "linear-gradient(135deg, rgba(173,137,87,0.06) 0%, rgba(15,31,65,0.4) 100%), #0a0d18",
-              border: "1px solid rgba(173,137,87,0.25)"
-            }}
-          >
-            <h3 className="font-display text-[22px] font-[300] text-white mb-3">MOOVIA</h3>
-            <p className="font-body font-[300] text-[15px] text-w70 leading-[1.6]">
-              é a aplicação dessa experiência à proteção do investimento humano.
-            </p>
-          </motion.div>
-
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {colunas.map((col, i) => (
+            <motion.div
+              key={col.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col min-h-[240px]"
+            >
+              <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-8">
+                {col.title}
+              </p>
+              {col.items ? (
+                <ul className="space-y-4">
+                  {col.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.6]"
+                    >
+                      <img src="/mooviagold.png" alt="" className="mt-[10px] h-3 w-3 object-contain shrink-0 opacity-80" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                col.customContent
+              )}
+            </motion.div>
+          ))}
         </div>
+
+        <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(18px,2.4vw,26px)] leading-[1.4] text-center max-w-[820px] mx-auto">
+          A MOOVIA é a aplicação dessa experiência à proteção do investimento humano.
+        </p>
       </div>
     </section>
   );
