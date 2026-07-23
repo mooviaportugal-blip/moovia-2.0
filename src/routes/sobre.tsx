@@ -169,7 +169,7 @@ function ComoConstruimosInteligencia() {
           <ul className="space-y-3">
             {naoPromessas.map((item) => (
               <li key={item} className="flex items-start gap-3 font-body font-[300] text-[15px] text-white/85 leading-[1.7]">
-                <span className="mt-[10px] h-px w-4 bg-gold/60 shrink-0" />
+                <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
                 <span>{item}</span>
               </li>
             ))}
@@ -255,7 +255,7 @@ function NossaCategoria() {
           <ul className="space-y-2 pl-0 list-none">
             {naoSomos.map((n) => (
               <li key={n} className="flex items-start gap-3">
-                <span className="mt-[10px] h-px w-4 bg-gold shrink-0" />
+                <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
                 <span className="text-white/85">{n}</span>
               </li>
             ))}
@@ -382,7 +382,7 @@ function ComparacaoCategoria() {
             <ul className="space-y-3">
               {gmm.map((item) => (
                 <li key={item} className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.6]">
-                  <span className="mt-[10px] h-px w-4 bg-gold/60 shrink-0" />
+                  <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
                   <span>{item}</span>
                 </li>
               ))}
