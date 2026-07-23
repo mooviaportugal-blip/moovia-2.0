@@ -53,7 +53,7 @@ export function EcossistemaSection() {
           >
             A mobilidade internacional envolve decisões jurídicas, fiscais, patrimoniais,
             imobiliárias, familiares, profissionais e humanas. O verdadeiro desafio não é
-            encontrar especialistas para cada uma dessas áreas —{" "}
+            encontrar especialistas para cada uma dessas áreas e garantir que o seu RH não precise de lidar com imprevistos operacionais.
             <span className="text-white/85">
               é garantir que todos trabalhem em conjunto, seguindo uma única estratégia.
             </span>

@@ -75,7 +75,7 @@ export function MaiaSection() {
               lineHeight: 1.7,
             }}
           >
-            A MAIA aprende com cada mobilidade internacional que coordenamos —
+            A MAIA aprende com cada mobilidade internacional que coordenamos, como parte do compromisso da MOOVIA em construir a base de conhecimento mais completa sobre sucesso em mobilidade internacional.
             parte do compromisso da MOOVIA em construir a base de conhecimento
             mais completa sobre sucesso em mobilidade internacional.
           </p>
