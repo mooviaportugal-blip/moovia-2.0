@@ -8,17 +8,17 @@ import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços MOOVIA | Transição de Vida e Global Mobility Assurance" },
+      { title: "Serviços MOOVIA | Human Mobility Assurance" },
       {
         name: "description",
         content:
-          "Duas formas de coordenar mobilidade internacional: Strategic Discovery Call para pessoas e famílias, e Global Mobility Assurance para empresas.",
+          "Uma metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar o sucesso da mobilidade internacional.",
       },
       { property: "og:title", content: "Serviços MOOVIA | Global Mobility Success" },
       {
         property: "og:description",
         content:
-          "Strategic Discovery Call e Global Mobility Assurance. Conheça a metodologia MOOVIA para pessoas e empresas.",
+          "Uma metodologia. Três perspetivas. Um único objetivo: aumentar a probabilidade de sucesso da mobilidade internacional.",
       },
       { property: "og:url", content: "https://mooviaportugal.com/servicos" },
       { property: "og:type", content: "website" },
@@ -48,7 +48,7 @@ function Servicos() {
               animate={{ opacity: 1, y: 0 }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              Os nossos programas
+              A nossa metodologia
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -56,7 +56,7 @@ function Servicos() {
               transition={{ delay: 0.1 }}
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
-              <span className="block font-[200] text-white mb-2">Dois programas. Uma metodologia. O mesmo compromisso:</span>
+              <span className="block font-[200] text-white mb-2">Uma metodologia. Três perspetivas. Um único objetivo:</span>
               <span className="block text-gold-l italic font-[300]">aumentar a probabilidade de sucesso da mobilidade internacional.</span>
             </motion.h1>
             
@@ -67,7 +67,7 @@ function Servicos() {
                 transition={{ delay: 0.2 }}
                 className="font-display text-[20px] md:text-[24px] font-[300] text-white/90 leading-[1.5] max-w-[720px] border-l-[3px] border-gold/40 pl-5"
               >
-                Para pessoas e famílias. Para empresas. A mesma metodologia MOOVIA, aplicada ao mandato de cada cliente.
+                A MOOVIA aplica a sua metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar a probabilidade de sucesso de cada mobilidade internacional.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -75,15 +75,23 @@ function Servicos() {
                 transition={{ delay: 0.3 }}
                 className="font-body text-[16px] md:text-[18px] font-[300] italic text-white/60 leading-[1.7] max-w-[720px] pt-2"
               >
-                Atendemos particulares e empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
+                Trabalhamos de forma integrada com a empresa, o executivo e a sua família, porque o sucesso de uma mobilidade depende da coordenação entre todos os intervenientes.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
+                className="font-body text-[16px] md:text-[18px] font-[300] text-w80 leading-[1.7] max-w-[720px]"
+              >
+                Cada programa é adaptado ao papel de quem participa na mobilidade, mantendo uma metodologia única baseada em ciência, tecnologia e inteligência aplicada aos fatores humanos.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
                 className="font-body text-[16px] md:text-[18px] font-[500] text-gold-l leading-[1.7] max-w-[720px]"
               >
-                Para empresas e os seus colaboradores expatriados, incluindo as famílias em todas as suas formas.
+                Porque proteger uma mobilidade internacional é proteger simultaneamente o investimento da empresa, o sucesso do executivo e o bem-estar da sua família.
               </motion.p>
             </div>
           </div>

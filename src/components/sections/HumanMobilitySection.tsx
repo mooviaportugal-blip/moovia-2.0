@@ -37,24 +37,32 @@ export function HumanMobilitySection() {
           viewport={{ once: true }}
           className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center"
         >
-          Para empresas
+          Três perspetivas
         </motion.p>
-        <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[900px] mx-auto">
-          <span className="block font-[200] text-white">Human Mobility Risk</span>
-          <span className="block text-gold-l italic font-[300]">Global Mobility Assurance</span>
+        <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[1000px] mx-auto">
+          <span className="block font-[200] text-white italic">Um programa desenhado para quem decide,</span>
+          <span className="block text-gold-l font-[300] mt-2">quem coordena e quem vive a mobilidade.</span>
         </h2>
-        <p className="font-body text-[14px] md:text-[16px] font-[400] text-gold uppercase tracking-[0.15em] mb-8 text-center">
-          Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
-        </p>
-        <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto text-center mb-20">
-          Um benefício para o colaborador. Um retorno para a empresa.<br className="hidden sm:block" />
-          Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.
+        <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-[900px] mx-auto">
+          {[
+            { label: "EMPRESA", desc: "ROI e Governança", icon: "briefcase" },
+            { label: "EXECUTIVO", desc: "Foco e Performance", icon: "user" },
+            { label: "FAMÍLIA", desc: "Bem-estar e Adaptação", icon: "users" }
+          ].map((item) => (
+            <div key={item.label} className="text-center p-6 border border-white/5 bg-white/5">
+              <p className="text-gold font-body text-[11px] tracking-widest mb-2">{item.label}</p>
+              <p className="text-white/70 font-display text-[14px]">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.8] max-w-[850px] mx-auto text-center mb-20">
+          O sucesso de uma mobilidade internacional não é um evento isolado, mas o resultado da harmonia entre os objetivos da organização, a carreira do talento e a estabilidade do núcleo familiar.
         </p>
         <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {[
-            { title: "Para o colaborador", items: COLABORADOR },
             { title: "Para a empresa", items: EMPRESA },
-            { title: "Como medimos o impacto", items: MEDIDA },
+            { title: "Para o executivo", items: MEDIDA },
+            { title: "Para a família", items: COLABORADOR },
           ].map((col) => (
             <div
               key={col.title}

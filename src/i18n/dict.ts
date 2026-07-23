@@ -112,6 +112,8 @@ export const DICT: Record<string, { en: string; es: string }> = {
 
   // ---------- PROCESS ----------
   "Como trabalhamos": { en: "How we work", es: "Cómo trabajamos" },
+  "Uma metodologia. Três perspetivas. Um único objetivo.": { en: "One methodology. Three perspectives. One single goal.", es: "Una metodología. Tres perspectivas. Un único objetivo." },
+  "Aumentar a probabilidade de sucesso da mobilidade internacional.": { en: "Increasing the likelihood of success of international mobility.", es: "Aumentar la probabilidad de éxito de la movilidad internacional." },
   "\"Um processo.": { en: "\"One process.", es: "\"Un proceso." },
   "Do diagnóstico ao destino.\"": { en: "From diagnostic to destination.\"", es: "Del diagnóstico al destino.\"" },
   "Conversa com um dos Fundadores": { en: "Conversation with a founder", es: "Conversación con un fundador" },
