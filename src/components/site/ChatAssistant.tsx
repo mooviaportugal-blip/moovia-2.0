@@ -107,7 +107,7 @@ const B2B_STEPS: HandoffStep[] = [
   {
     field: 'colaboradores_12m',
     question: 'Qual a quantidade de colaboradores da empresa?',
-    options: ['1 a 50', '50 a 100', '100 a 500', 'Mais de 500'],
+    options: ['1 a 50', '50 a 100', '100 a 500', '500 a 1000', 'Mais de 1000'],
     label: 'Quantidade de colaboradores',
   },
 
