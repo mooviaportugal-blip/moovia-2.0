@@ -75,8 +75,17 @@ const LINES = [
         type: "person" as const
       },
       {
-        id: "dany",
+        id: "guilherme",
         number: "06",
+        name: "GUILHERME SOUZA",
+        role: "Head of Marketing & Brand",
+        img: "/images/guilherme.png",
+        tags: ["Branding", "Estratégia de Posicionamento", "Comunicação Institucional"],
+        type: "person" as const
+      },
+      {
+        id: "dany",
+        number: "07",
         name: "DANY",
         role: "Especialista em Educação",
         img: "/images/dany.png",
@@ -109,7 +118,7 @@ const LINES = [
     members: [
       {
         id: "sara",
-        number: "07",
+        number: "08",
         name: "SARA",
         role: "Consultora Imobiliária",
         img: "/images/sara.png",
@@ -118,7 +127,7 @@ const LINES = [
       },
       {
         id: "sandra",
-        number: "08",
+        number: "09",
         name: "SANDRA",
         role: "Consultora de Mobilidade",
         img: "/images/sandra.png",
@@ -127,7 +136,7 @@ const LINES = [
       },
       {
         id: "cristina",
-        number: "09",
+        number: "10",
         name: "CRISTINA",
         role: "Consultora de Mobilidade",
         img: "/images/cristina.png",
@@ -136,7 +145,7 @@ const LINES = [
       },
       {
         id: "laura",
-        number: "10",
+        number: "11",
         name: "DRA. LAURA COSTA",
         role: "Advogada de Imigração",
         img: "/images/laura.png",
@@ -145,7 +154,7 @@ const LINES = [
       },
       {
         id: "kmi",
-        number: "11",
+        number: "12",
         name: "KMI",
         role: "Wealth Management",
         logo: "/mooviagold.svg",
@@ -154,7 +163,7 @@ const LINES = [
       },
       {
         id: "parceiros",
-        number: "12",
+        number: "13",
         name: "+ PARCEIROS",
         role: "Ecossistema",
         tags: [
