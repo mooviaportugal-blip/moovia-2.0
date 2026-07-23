@@ -423,14 +423,14 @@ function DesktopJornada() {
                       aria-label={`Estação ${e.id}: ${e.nome}`}
                       className={[
                         "relative h-12 w-12 rounded-full border-2 transition-all duration-300",
-                        "flex items-center justify-center font-urbanist text-[10px] gap-0.5 cursor-pointer",
+                        "flex items-center justify-center font-urbanist text-[10px] cursor-pointer",
                         isVisited
                           ? "bg-gold border-gold text-black"
                           : "bg-black border-gold/40 text-gold/70 hover:border-gold hover:text-gold",
                         isOpen ? "shadow-[0_0_0_6px_rgba(173,137,87,0.15),0_0_30px_rgba(173,137,87,0.6)]" : "",
                       ].join(" ")}
                     >
-                      <img src="/mooviagold.png" alt="" className={`h-6 w-6 object-contain ${isVisited ? "brightness-0" : "opacity-80"}`} />
+                      <span className={`font-urbanist text-[14px] ${isVisited ? "text-black font-bold" : "text-gold/80"}`}>{e.id}</span>
                     </button>
 
                     <div className="mt-4 text-center px-1">
