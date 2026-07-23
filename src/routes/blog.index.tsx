@@ -26,9 +26,9 @@ function useLocale(): Locale {
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog, MOOVIA Portugal" },
-      { name: "description", content: "Artigos sobre transição internacional, fiscalidade, habitação, escolas e adaptação. Brasil → Portugal." },
-      { property: "og:title", content: "Blog MOOVIA Portugal" },
+      { title: "Insights, MOOVIA Portugal" },
+      { name: "description", content: "Insights sobre transição internacional, fiscalidade, habitação, escolas e adaptação. Brasil → Portugal." },
+      { property: "og:title", content: "Insights MOOVIA Portugal" },
       { property: "og:description", content: "Estratégia para quem está a coordenar uma transição internacional." },
       { property: "og:url", content: "https://mooviaportugal.com/blog" },
     ],
@@ -115,7 +115,7 @@ function Blog() {
         <div className="mx-auto max-w-[1400px] px-6 md:px-[80px] py-16">
           <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-gold" />
-            Blog
+            Insights
           </p>
           <h1 className="font-sora text-[clamp(40px,6vw,68px)] font-[100] leading-[1.05] max-w-3xl text-white">
             Estratégia, não dicas.
