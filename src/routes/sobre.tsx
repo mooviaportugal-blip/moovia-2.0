@@ -865,36 +865,32 @@ function Diferencia() {
 
 /* ─────────────────────────── A EQUAÇÃO DA SUA HISTÓRIA ─────────────────────────── */
 function EquacaoMoovia() {
-  const colunas = [
+  const blocos = [
     {
       title: "CARREIRA INTERNACIONAL",
-      items: ["Décadas de experiência em negócios internacionais"],
+      text: "Décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes.",
     },
     {
       title: "REVENUE ASSURANCE",
-      items: ["Identificação de riscos e perdas invisíveis"],
+      text: "Identificação de riscos e perdas invisíveis, a disciplina que ensinou a MOOVIA a enxergar aquilo que os modelos tradicionais de gestão não capturam.",
     },
     {
       title: "METODOLOGIAS PROPRIETÁRIAS",
-      customContent: (
-        <div className="space-y-6">
-          <div className="space-y-2">
-            <h4 className="font-display text-[15px] text-white font-[300]">Raízes e Asas</h4>
-            <p className="font-body text-[14px] text-w35 font-[300]">Dra. Letícia de Mello</p>
-          </div>
-          <div className="h-px bg-b30" />
-          <div className="space-y-2">
-            <h4 className="font-display text-[15px] text-white font-[300]">Tecnologia</h4>
-            <p className="font-body text-[14px] text-w35 font-[300]">Pablo Alejandro</p>
-          </div>
-        </div>
-      )
+      text: "A combinação de ciência do comportamento humano e engenharia de sistemas, transformando conhecimento especializado em processo estruturado e replicável.",
+    },
+    {
+      title: "RAÍZES E ASAS — DRA. LETÍCIA DE MELLO",
+      text: "A metodologia que estrutura a dimensão humana da mobilidade internacional, traduzindo adaptação, integração e bem-estar em variáveis mensuráveis.",
+    },
+    {
+      title: "TECNOLOGIA — PABLO ALEJANDRO",
+      text: "A arquitetura que converte esse conhecimento humano em lógica computacional explicável, rastreável e sem caixa-preta.",
     },
   ];
 
   return (
-    <section className="bg-black py-[120px] px-6 lg:px-20 border-b border-b18">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-b border-b18 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center">
           A EQUAÇÃO DA MOOVIA
         </p>
@@ -902,34 +898,42 @@ function EquacaoMoovia() {
           De onde viemos.
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {colunas.map((col, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 items-stretch">
+          {blocos.map((bloco, i) => (
             <motion.div
-              key={col.title}
+              key={bloco.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col min-h-[240px]"
+              className="group relative border border-b18 bg-w05 p-6 md:p-8 flex flex-col h-full hover:border-gold/40 transition-colors duration-500"
             >
-              <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-8">
-                {col.title}
-              </p>
-              {col.items ? (
-                <ul className="space-y-4">
-                  {col.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.6]"
-                    >
-                      <img src="/mooviagold.png" alt="" className="mt-[10px] h-3 w-3 object-contain shrink-0 opacity-80" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                col.customContent
+              {/* Optional connector visual */}
+              {i < 2 && (
+                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-gold/20 text-xl font-thin">
+                  +
+                </div>
               )}
+              {i === 2 && (
+                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-gold/20 text-xl font-thin">
+                  =
+                </div>
+              )}
+
+              <div className="flex items-start justify-between gap-3 mb-6">
+                <p className="font-body text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-gold leading-tight">
+                  {bloco.title.split(" — ").map((part, idx) => (
+                    <span key={idx} className={idx > 0 ? "block mt-1 text-[9px] opacity-70 tracking-widest" : ""}>
+                      {part}
+                    </span>
+                  ))}
+                </p>
+                <img src="/mooviagold.png" alt="" className="h-3 w-3 object-contain shrink-0 opacity-40 group-hover:opacity-100 transition-opacity mt-0.5" />
+              </div>
+
+              <p className="font-body text-[14px] md:text-[15px] font-[300] text-w35 leading-[1.7] mt-auto">
+                {bloco.text}
+              </p>
             </motion.div>
           ))}
         </div>
