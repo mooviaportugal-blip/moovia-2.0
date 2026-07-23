@@ -16,12 +16,12 @@ function resourceKey(lang: Lang): string {
 }
 
 export function detectInitialLang(): Lang {
-  if (typeof window === "undefined") return "pt-BR";
+  if (typeof window === "undefined") return "pt-PT";
   try {
     const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (stored && SUPPORTED.includes(stored)) return stored;
   } catch {}
-  return "pt-BR";
+  return "pt-PT";
 }
 
 
@@ -55,13 +55,13 @@ export function setLang(lang: Lang) {
 }
 
 export function getCurrentLang(): Lang {
-  if (typeof window === "undefined") return "pt-BR";
+  if (typeof window === "undefined") return "pt-PT";
   try {
     const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (stored && SUPPORTED.includes(stored)) return stored;
   } catch {}
   const r = (i18n.language as string) ?? "pt";
-  if (r === "pt") return "pt-BR";
+  if (r === "pt") return "pt-PT";
   return (r as Lang);
 }
 
