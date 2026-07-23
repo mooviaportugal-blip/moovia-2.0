@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
+
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 const fredericoAsset = { url: "/images/frederico.png" };
 import leticiaAsset from "@/assets/leticia.png.asset.json";
@@ -11,35 +11,30 @@ export function ProcessSection() {
       tag: "Avaliação",
       title: "Compreender antes de agir.",
       body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de avançarmos para qualquer decisão logística.",
-      badge: "Avaliação",
     },
     {
       id: "02",
       tag: "Plano Estratégico",
       title: "Converter risco em estratégia.",
       body: "Combinamos entrevistas estruturadas, metodologias proprietárias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
-      badge: "Plano Estratégico",
     },
     {
       id: "03",
       tag: "Orquestração",
       title: "Executar com inteligência.",
       body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe.",
-      badge: "Orquestração",
     },
     {
       id: "04",
       tag: "Integração",
       title: "Acompanhamento pós-chegada.",
       body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. É nesta etapa que neutralizamos os principais fatores de turnover.",
-      badge: "Integração",
     },
     {
       id: "05",
       tag: "Sucesso",
       title: "O foco no longo prazo.",
       body: "Avaliamos o impacto duradouro da transição: estabilidade, integração efetiva e satisfação, assegurando o retorno final sobre o investimento da mudança.",
-      badge: "Sucesso",
     },
   ];
 
