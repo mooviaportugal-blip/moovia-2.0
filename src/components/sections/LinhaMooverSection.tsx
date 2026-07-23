@@ -234,7 +234,7 @@ export function LinhaMooverSection() {
                       >
                         {member.type === 'hub' ? (
                           <div className="relative z-20 h-full w-full rounded-full flex items-center justify-center p-2.5">
-                            <img alt="MOOVIA" className="w-full h-full object-contain brightness-0 invert opacity-90" src="/logo.svg" />
+                            <img alt="MOOVIA" className="w-full h-full object-contain brightness-0 invert opacity-90" src="/mooviagold.svg" />
                           </div>
                         ) : (
                           member.number

@@ -179,7 +179,7 @@ export function MethodologySection() {
             className="relative z-20 h-24 w-24 md:h-32 md:w-32 rounded-full border border-gold/30 bg-black flex items-center justify-center p-6 backdrop-blur-xl"
           >
             <img 
-              src="/logo.svg" 
+              src="/mooviagold.svg" 
               alt="MOOVIA" 
               className="w-full h-full object-contain brightness-0 invert opacity-90" 
             />
