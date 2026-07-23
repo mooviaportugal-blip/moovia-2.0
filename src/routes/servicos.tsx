@@ -6,13 +6,13 @@ import { HumanMobilitySection } from "@/components/sections/HumanMobilitySection
 import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 
 export const Route = createFileRoute("/servicos")({
-  head: () => ({
+    head: () => ({
     meta: [
       { title: "Serviços MOOVIA | Human Mobility Assurance" },
       {
         name: "description",
         content:
-          "Uma metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar o sucesso da mobilidade internacional.",
+          "A MOOVIA aplica a sua metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar a probabilidade de sucesso de cada mobilidade internacional.",
       },
       { property: "og:title", content: "Serviços MOOVIA | Global Mobility Success" },
       {
