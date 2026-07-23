@@ -225,19 +225,16 @@ export function LinhaMooverSection() {
                         className={cn(
                           "h-12 w-12 rounded-full border-2 flex items-center justify-center font-urbanist text-xs transition-all duration-300",
                           member.type === 'hub' 
-                            ? "h-20 w-20 bg-black border-gold/60 text-gold scale-110 shadow-[0_0_20px_rgba(173,137,87,0.3)]" 
+                            ? "h-20 w-20 bg-black border-gold/30 text-gold scale-110 shadow-[0_0_20px_rgba(173,137,87,0.1)] backdrop-blur-xl" 
+
                             : activeId === member.id
                               ? "bg-gold border-gold text-black shadow-[0_0_20px_rgba(173,137,87,0.6)] scale-110"
                               : "bg-black border-gold/40 text-gold/70 group-hover:border-gold group-hover:text-gold"
                         )}
                       >
                         {member.type === 'hub' ? (
-                          <div className="flex flex-col items-center">
-                            <div className="flex gap-1 mb-1">
-                              <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
-                              <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                            </div>
-                            <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
+                          <div className="relative z-20 h-full w-full rounded-full flex items-center justify-center p-2.5">
+                            <img alt="MOOVIA" className="w-full h-full object-contain brightness-0 invert opacity-90" src="/logo.svg" />
                           </div>
                         ) : (
                           member.number
