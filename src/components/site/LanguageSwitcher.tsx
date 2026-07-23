@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import BR from "country-flag-icons/react/3x2/BR";
-
+import PT from "country-flag-icons/react/3x2/PT";
 import ES from "country-flag-icons/react/3x2/ES";
 import GB from "country-flag-icons/react/3x2/GB";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -10,14 +9,14 @@ import type { Lang } from "@/i18n";
 import { cn } from "@/lib/utils";
 
 const LANGS: { code: Lang; native: string; label: string; short: string }[] = [
-  { code: "pt-BR", native: "Português · Brasil", label: "Portuguese (Brazil)", short: "BR" },
+  { code: "pt-PT", native: "Português", label: "Portuguese", short: "PT" },
   { code: "en", native: "English", label: "English", short: "EN" },
 ];
 
 
 const FlagFor: Record<Lang, React.ComponentType<{ className?: string; title?: string }>> = {
-  "pt-BR": BR,
-  "pt-PT": BR,
+  "pt-BR": PT,
+  "pt-PT": PT,
   en: GB,
   es: ES,
 };
