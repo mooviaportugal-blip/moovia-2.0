@@ -430,7 +430,7 @@ function DesktopJornada() {
                         isOpen ? "shadow-[0_0_0_6px_rgba(173,137,87,0.15),0_0_30px_rgba(173,137,87,0.6)]" : "",
                       ].join(" ")}
                     >
-                      <span className="font-urbanist text-[12px]">{String(e.id).padStart(2, "0")}</span>
+                      <img src="/mooviagold.png" alt="" className={`h-6 w-6 object-contain ${isVisited ? "brightness-0" : "opacity-80"}`} />
                     </button>
 
                     <div className="mt-4 text-center px-1">

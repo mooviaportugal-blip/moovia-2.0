@@ -51,7 +51,7 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-3 font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
           >
-            <span className="h-px w-8 bg-gold/60" />
+            <img src="/mooviagold.png" alt="" className="h-4 w-4 object-contain opacity-60" />
             Para empresas
           </motion.span>
 
@@ -87,7 +87,7 @@ export function B2BRiskSection() {
           {/* Riscos */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <span className="h-px w-6 bg-gold/50" />
+              <img src="/mooviagold.png" alt="" className="h-3 w-3 object-contain opacity-50" />
               <span className="font-body text-[10px] tracking-[0.32em] uppercase text-white/50">
                 Fatores de risco
               </span>
@@ -116,7 +116,7 @@ export function B2BRiskSection() {
           {/* Consequências */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <span className="h-px w-6 bg-gold/50" />
+              <img src="/mooviagold.png" alt="" className="h-3 w-3 object-contain opacity-50" />
               <span className="font-body text-[10px] tracking-[0.32em] uppercase text-gold">
                 Consequências de negócio
               </span>

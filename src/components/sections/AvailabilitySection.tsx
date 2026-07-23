@@ -17,7 +17,7 @@ export function AvailabilitySection() {
             className="font-urbanist text-gold mb-5 flex items-center gap-3"
             style={{ fontSize: 11, letterSpacing: ".28em", textTransform: "uppercase", fontWeight: 500 }}
           >
-            <span className="w-6 h-px bg-gold" />
+            <img src="/mooviagold.png" alt="" className="w-3.5 h-3.5 object-contain opacity-80" />
             Disponibilidade
           </p>
           <h2 className="font-sora font-[200] text-white leading-[1.15] mb-6" style={{ fontSize: "clamp(28px,3.5vw,44px)" }}>

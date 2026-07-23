@@ -30,9 +30,9 @@ export function EcossistemaSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-3 font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
           >
-            <span className="h-px w-8 bg-gold/60" />
+            <img src="/mooviagold.png" alt="" className="h-4 w-4 object-contain opacity-60" />
             Ecossistema MOOVIA
-            <span className="h-px w-8 bg-gold/60" />
+            <img src="/mooviagold.png" alt="" className="h-4 w-4 object-contain opacity-60" />
           </motion.span>
 
           <motion.h2

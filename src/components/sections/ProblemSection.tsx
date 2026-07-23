@@ -126,7 +126,7 @@ export function ProblemSection() {
                   "A MOOVIA posiciona-se para redefinir como o sucesso da mobilidade internacional é avaliado pelas organizações."
                 </p>
                 <div className="mt-5 flex items-center gap-3">
-                  <span className="h-px w-8 bg-gold" />
+                  <img src="/mooviagold.png" alt="" className="h-4 w-4 object-contain opacity-80" />
                   <span className="font-body text-[10px] tracking-[0.28em] uppercase text-gold/90">
                     Global Mobility Assurance
                   </span>

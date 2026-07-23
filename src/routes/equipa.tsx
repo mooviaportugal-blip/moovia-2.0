@@ -61,7 +61,7 @@ function Equipa() {
             animate={{ opacity: 1, y: 0 }}
             className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8 flex items-center gap-3"
           >
-            <span className="w-6 h-px bg-gold" />
+            <img src="/mooviagold.png" alt="" className="w-4 h-4 object-contain opacity-80" />
             A equipa
           </motion.p>
           
