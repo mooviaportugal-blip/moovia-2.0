@@ -90,7 +90,7 @@ function Equipa() {
         </div>
       </div>
 
-      <JornadaCliente />
+      
 
       <LinhaMooverSection />
 
