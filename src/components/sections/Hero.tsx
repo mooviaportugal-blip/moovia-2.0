@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const HERO_MEDIA_URL = "https://mooviaportugal.com/video/moovia-cover.mp4";
+const HERO_MEDIA_URL = "https://mooviaportugal.com/video/moovia-pt.gif"; // Fallback para o GIF enquanto o MP4 está indisponível
 const HERO_BG = "#06091a";
 
 export function Hero() {
@@ -125,20 +125,28 @@ export function Hero() {
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
           <div className="relative w-full h-full">
-            <video
-              autoPlay
-              muted
-              playsInline
-              loop={false}
-              onEnded={(e) => {
-                const target = e.target as HTMLVideoElement;
-                target.pause();
-                target.currentTime = target.duration;
-              }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
-            >
-              <source src={HERO_MEDIA_URL} type="video/mp4" />
-            </video>
+            {HERO_MEDIA_URL.endsWith('.mp4') ? (
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop={false}
+                onEnded={(e) => {
+                  const target = e.target as HTMLVideoElement;
+                  target.pause();
+                  target.currentTime = target.duration;
+                }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+              >
+                <source src={HERO_MEDIA_URL} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={HERO_MEDIA_URL}
+                alt="Moovia"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+              />
+            )}
 
             {/* Fade radial elíptico (60% 60%) dissolvendo no fundo do site */}
             <div
