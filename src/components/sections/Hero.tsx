@@ -147,14 +147,6 @@ export function Hero() {
 
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.8 }}
-          className="absolute top-16 right-12 [writing-mode:vertical-rl] rotate-180 font-body text-[10px] tracking-[0.5em] uppercase text-gold/60 font-medium pointer-events-none"
-        >
-          Lisboa · Cascais · Estoril, 38.7223° N
-        </motion.div>
 
       </div>
 
