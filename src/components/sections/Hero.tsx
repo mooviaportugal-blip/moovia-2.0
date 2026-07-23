@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const HERO_MEDIA_URL = "https://mooviaportugal.com/video/moovia-cover.mp4"; // Revertendo para o MP4 que deve ser restaurado no servidor
+const HERO_MEDIA_URL = "https://mooviaportugal.com/video/moovia-pt.gif"; // Fallback para o GIF enquanto o MP4 está indisponível
 const HERO_BG = "#06091a";
 
 export function Hero() {
