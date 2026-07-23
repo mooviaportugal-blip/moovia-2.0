@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const HERO_MEDIA_URL = "https://mooviaglobal.com/file/moovia-pt.gif";
+const HERO_MEDIA_URL = "https://mooviaportugal.com/video/moovia-cover.mp4";
 const HERO_BG = "#06091a";
 
 export function Hero() {
@@ -116,7 +116,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 block lg:w-1/2 w-full h-[320px] sm:h-[400px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
+      <div className="relative z-10 block lg:w-1/2 w-full h-[450px] sm:h-[550px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -124,20 +124,27 @@ export function Hero() {
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
-          <div className="relative w-[88%] sm:w-[72%] lg:w-[78%] aspect-square max-h-[70vh]">
-            <img
-              src={HERO_MEDIA_URL}
-              alt="Animação institucional MOOVIA, vista de Lisboa"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
+          <div className="relative w-full h-full">
+            <video
+              autoPlay
+              muted
+              playsInline
+              loop={false}
+              onEnded={(e) => {
+                const target = e.target as HTMLVideoElement;
+                target.pause();
+                target.currentTime = target.duration;
+              }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+            >
+              <source src={HERO_MEDIA_URL} type="video/mp4" />
+            </video>
 
-            {/* Fade radial arredondado dissolvendo no fundo do site */}
+            {/* Fade radial elíptico (60% 60%) dissolvendo no fundo do site */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: `radial-gradient(ellipse at center, transparent 50%, ${HERO_BG} 90%)`,
+                background: `radial-gradient(ellipse 60% 60% at center, transparent 40%, ${HERO_BG} 85%)`,
               }}
             />
           </div>
