@@ -49,9 +49,8 @@ export function B2BRiskSection() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
+            className="inline-block font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
           >
-            <img src="/mooviagold.png" alt="" className="h-4 w-4 object-contain opacity-60" />
             Para empresas
           </motion.span>
 
