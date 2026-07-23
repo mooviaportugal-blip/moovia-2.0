@@ -45,10 +45,10 @@ export function Footer() {
             <div className="flex flex-col gap-3 items-center lg:items-start">
               {[
                 { label: "Serviços", to: "/servicos" },
-                { label: "Empresas", to: "/empresas" },
+                { label: "Human Mobility Assurance", to: "/empresas" },
                 { label: "Sobre", to: "/sobre" },
                 { label: "Equipa", to: "/equipa" },
-                { label: "Blog", to: "/blog" },
+                { label: "Insights", to: "/blog" },
                 { label: "Contacto", to: "/contacto" },
               ].map((l) => (
                 <a key={l.label} href={l.to} className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors">
