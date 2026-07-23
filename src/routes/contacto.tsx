@@ -58,7 +58,7 @@ function Contacto() {
       <div className="bg-black pt-[120px]">
         <div className="mx-auto max-w-[1400px] px-6 md:px-[80px] py-16 text-center lg:text-left">
           <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center justify-center lg:justify-start gap-3">
-            <span className="w-6 h-px bg-gold" />
+            <img src="/mooviagold.png" alt="" className="w-4 h-4 object-contain opacity-80" />
             Contacto
           </p>
           <h1 className="font-sora text-[clamp(28px,4.5vw,52px)] font-[100] leading-[1.05] max-w-3xl mx-auto lg:mx-0 text-white">

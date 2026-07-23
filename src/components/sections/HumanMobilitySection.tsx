@@ -69,7 +69,7 @@ export function HumanMobilitySection() {
                     key={item}
                     className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.6]"
                   >
-                    <span className="mt-[10px] h-px w-4 bg-gold shrink-0" />
+                    <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
                     <span>{item}</span>
                   </li>
                 ))}
