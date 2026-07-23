@@ -24,7 +24,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.":
     { en: "MOOVIA Portugal doesn't solve isolated tasks. Complete coordination, from the initial diagnostic to integration.", es: "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración." },
   "Ver como funciona": { en: "See how it works", es: "Ver cómo funciona" },
-  "Planejar · Chegar · Ficar": { en: "Plan · Arrive · Settle", es: "Planejar · Llegar · Quedarse" },
+  "Planejar · Chegar · Ficar": { en: "Planejar · Chegar · Ficar", es: "Planejar · Llegar · Quedarse" },
   "Capítulo 01": { en: "Chapter 01", es: "Capítulo 01" },
   "Mandato de transição": { en: "Transition Mandate", es: "Mandato de transición" },
   "Transição Internacional": { en: "International Transition", es: "Transición Internacional" },
@@ -150,7 +150,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "\"Uma jornada completa.\"": { en: "\"A complete journey.\"", es: "\"Un trayecto completo.\"" },
   "Não resolvemos tarefas isoladas. Coordenamos a jornada inteira, do planejamento à estruturação da vida em Portugal.":
     { en: "We don't just handle isolated tasks. We coordinate the entire journey, from planning to establishing your life in Portugal.", es: "No resolvemos tareas aisladas. Coordinamos el trayecto entero, desde la planificación hasta la estructuración de la vida en Portugal." },
-  "Planejamos": { en: "Plan", es: "Planificamos" },
+  "Planejamos": { en: "Planejamos", es: "Planificamos" },
   "Instalamos": { en: "Settle", es: "Instalamos" },
   "Integramos": { en: "Integration", es: "Integramos" },
   "Estruturamos": { en: "Structuring", es: "Estructuramos" },
