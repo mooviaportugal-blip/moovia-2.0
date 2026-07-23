@@ -98,7 +98,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: Home,
+  component: MaintenancePage,
 });
 
 function Home() {
