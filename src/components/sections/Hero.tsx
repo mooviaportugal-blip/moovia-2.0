@@ -116,7 +116,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 block lg:w-1/2 w-full h-[320px] sm:h-[400px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
+      <div className="relative z-10 block lg:w-1/2 w-full h-[450px] sm:h-[550px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
