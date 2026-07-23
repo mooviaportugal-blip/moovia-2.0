@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
+
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 const fredericoAsset = { url: "/images/frederico.png" };
 import leticiaAsset from "@/assets/leticia.png.asset.json";
@@ -11,35 +11,30 @@ export function ProcessSection() {
       tag: "Avaliação",
       title: "Compreender antes de agir.",
       body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de avançarmos para qualquer decisão logística.",
-      badge: "Avaliação",
     },
     {
       id: "02",
       tag: "Plano Estratégico",
       title: "Converter risco em estratégia.",
       body: "Combinamos entrevistas estruturadas, metodologias proprietárias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
-      badge: "Plano Estratégico",
     },
     {
       id: "03",
       tag: "Orquestração",
       title: "Executar com inteligência.",
       body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe.",
-      badge: "Orquestração",
     },
     {
       id: "04",
       tag: "Integração",
       title: "Acompanhamento pós-chegada.",
       body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. É nesta etapa que neutralizamos os principais fatores de turnover.",
-      badge: "Integração",
     },
     {
       id: "05",
       tag: "Sucesso",
       title: "O foco no longo prazo.",
       body: "Avaliamos o impacto duradouro da transição: estabilidade, integração efetiva e satisfação, assegurando o retorno final sobre o investimento da mudança.",
-      badge: "Sucesso",
     },
   ];
 
@@ -137,31 +132,6 @@ export function ProcessSection() {
                   <div className="mb-6" />
                 )}
 
-                {i === 0 ? (
-                  <a
-                    href="/home#lead-form"
-                    onClick={(e) => {
-                      if (typeof window !== "undefined" && window.location.pathname === "/") {
-                        e.preventDefault();
-                        document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                        history.replaceState(null, "", "/home#lead-form");
-                      }
-                    }}
-                    className="mt-auto px-3 py-2 w-fit flex items-center gap-2 transition-colors hover:bg-[rgba(173,137,87,.2)] cursor-pointer"
-                    style={{ background: "rgba(173,137,87,.12)", border: "1px solid rgba(173,137,87,.35)" }}
-                  >
-                    <Calendar size={12} strokeWidth={1.5} className="text-gold-l" />
-                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
-                      {step.badge}
-                    </span>
-                  </a>
-                ) : (
-                  <div className="mt-auto px-3 py-2 w-fit flex items-center gap-2 bg-w05 border border-b18">
-                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
-                      {step.badge}
-                    </span>
-                  </div>
-                )}
 
               </motion.div>
             ))}
