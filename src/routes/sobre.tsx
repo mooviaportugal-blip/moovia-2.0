@@ -401,19 +401,19 @@ function ComparacaoCategoria() {
               <div className="flex justify-between items-end mb-6">
                 <div>
                   <p className="text-[9px] uppercase tracking-tighter text-w35">Human Mobility Risk Score</p>
-                  <p className="text-2xl font-display font-[300] text-white">74 <span className="text-sm text-white/40">/ 100</span></p>
+                  <p className="text-2xl font-display font-[300] text-white">24 <span className="text-sm text-white/40">/ 100</span></p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block px-2 py-0.5 bg-red-900/30 border border-red-500/30 text-red-400 text-[9px] uppercase tracking-widest rounded-full">High Risk</span>
+                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">Low Risk</span>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {[
-                  { label: "Family Alignment", score: 82, color: "bg-green-500/50" },
-                  { label: "Financial Preparedness", score: 46, color: "bg-red-500/50" },
-                  { label: "Cultural Adaptation", score: 71, color: "bg-yellow-500/50" },
-                  { label: "Career Continuity", score: 38, color: "bg-red-500/50" },
+                  { label: "Family Alignment", score: 82, color: "bg-emerald-500/50" },
+                  { label: "Financial Preparedness", score: 76, color: "bg-emerald-500/50" },
+                  { label: "Cultural Adaptation", score: 81, color: "bg-emerald-500/50" },
+                  { label: "Career Continuity", score: 88, color: "bg-emerald-500/50" },
                 ].map((item) => (
                   <div key={item.label} className="space-y-1">
                     <div className="flex justify-between text-[10px] text-w70 font-[300]">
