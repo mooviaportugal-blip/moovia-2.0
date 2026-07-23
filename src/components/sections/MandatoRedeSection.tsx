@@ -33,7 +33,7 @@ export function MandatoRedeSection() {
           className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.85] max-w-[820px] mx-auto mb-12"
         >
           Depois do diagnóstico, o mandato coordena a execução através da rede
-          de parceiros orquestrados pela MOOVIA — reduzindo o tempo entre a
+          de parceiros orquestrados pela MOOVIA, reduzindo o tempo entre a
           decisão e a produtividade real do talento contratado.
         </motion.p>
 
