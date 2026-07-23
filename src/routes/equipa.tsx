@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import { EquipaShowcase } from "@/components/sections/EquipaShowcase";
-import { JornadaCliente } from "@/components/sections/JornadaCliente";
+
 import { LinhaMooverSection } from "@/components/sections/LinhaMooverSection";
 
 export const Route = createFileRoute("/equipa")({
