@@ -132,31 +132,6 @@ export function ProcessSection() {
                   <div className="mb-6" />
                 )}
 
-                {i === 0 ? (
-                  <a
-                    href="/home#lead-form"
-                    onClick={(e) => {
-                      if (typeof window !== "undefined" && window.location.pathname === "/") {
-                        e.preventDefault();
-                        document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                        history.replaceState(null, "", "/home#lead-form");
-                      }
-                    }}
-                    className="mt-auto px-3 py-2 w-fit flex items-center gap-2 transition-colors hover:bg-[rgba(173,137,87,.2)] cursor-pointer"
-                    style={{ background: "rgba(173,137,87,.12)", border: "1px solid rgba(173,137,87,.35)" }}
-                  >
-                    <Calendar size={12} strokeWidth={1.5} className="text-gold-l" />
-                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
-                      {step.badge}
-                    </span>
-                  </a>
-                ) : (
-                  <div className="mt-auto px-3 py-2 w-fit flex items-center gap-2 bg-w05 border border-b18">
-                    <span className="font-body text-[10px] font-[500] uppercase tracking-widest text-gold-l">
-                      {step.badge}
-                    </span>
-                  </div>
-                )}
 
               </motion.div>
             ))}
