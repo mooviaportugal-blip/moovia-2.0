@@ -132,7 +132,6 @@ function Home() {
       <B2BRiskSection />
       <NossaTeseSection />
       
-      <CasesSection />
       <MandatoRedeSection />
       <AssessmentSection />
       <EcossistemaSection />
