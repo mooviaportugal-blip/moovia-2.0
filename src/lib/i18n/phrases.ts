@@ -248,7 +248,7 @@ export const PHRASES: Record<string, Phrase> = {
     es: "No resolvemos tareas aisladas. Coordinamos todo el trayecto, desde la planificación hasta la estructuración de la vida en Portugal.",
     en: "We do not solve isolated tasks. We coordinate the entire journey, from planning to structuring life in Portugal.",
   },
-  "Planejamos": { "pt-BR": "Planejamos", es: "Planificamos", en: "We plan" },
+  "Planejamos": { "pt-BR": "Planejamos", es: "Planificamos", en: "Planejamos" },
   "Instalamos": { "pt-BR": "Instalamos", es: "Instalamos", en: "We settle" },
   "Integramos": { "pt-BR": "Integramos", es: "Integramos", en: "We integrate" },
   "Estruturamos": { "pt-BR": "Estruturamos", es: "Estructuramos", en: "We structure" },
@@ -422,7 +422,7 @@ export const PHRASES: Record<string, Phrase> = {
   },
   "Ver como funciona": { "pt-BR": "Ver como funciona", es: "Ver cómo funciona", en: "See how it works" },
   "Planejar · Chegar · Ficar": {
-    "pt-BR": "Planejar · Chegar · Ficar", es: "Planejar · Llegar · Quedarse", en: "Plan · Arrive · Stay",
+    "pt-BR": "Planejar · Chegar · Ficar", es: "Planejar · Llegar · Quedarse", en: "Planejar · Chegar · Ficar",
   },
   "Lisboa · Cascais · Estoril, 38.7223° N": {
     "pt-BR": "Lisboa · Cascais · Estoril, 38.7223° N",
