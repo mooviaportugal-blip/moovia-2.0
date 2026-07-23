@@ -207,14 +207,14 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
                 Quantidade de colaboradores
               </p>
               <div className="flex flex-wrap gap-2">
-                {["1-50", "50-100", "100-500", "mais_500"].map((v) => (
+                {["1-50", "50-100", "100-500", "500-1000", "mais_1000"].map((v) => (
                   <button
                     type="button"
                     key={v}
                     onClick={() => set("colaboradores_12m", v)}
                     className={chipBtn(form.colaboradores_12m === v)}
                   >
-                    {v === "mais_500" ? "Mais de 500" : v === "1-50" ? "1 a 50" : v === "50-100" ? "50 a 100" : "100 a 500"}
+                    {v === "mais_1000" ? "Mais de 1000" : v === "500-1000" ? "500 a 1000" : v === "1-50" ? "1 a 50" : v === "50-100" ? "50 a 100" : "100 a 500"}
                   </button>
                 ))}
               </div>
