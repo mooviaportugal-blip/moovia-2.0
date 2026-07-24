@@ -12,13 +12,13 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "A MOOVIA aplica a sua metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar a probabilidade de sucesso de cada mobilidade internacional.",
+          "A MOOVIA aplica a metodologia Human Mobility Assurance, baseada em princípios internacionalmente reconhecidos de gestão de riscos, para identificar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
       },
       { property: "og:title", content: "Serviços MOOVIA | Global Mobility Success" },
       {
         property: "og:description",
         content:
-          "Uma metodologia. Três perspetivas. Um único objetivo: aumentar a probabilidade de sucesso da mobilidade internacional.",
+          "Uma metodologia. Três dimensões. Um único objetivo: aumentar a probabilidade de sucesso de mobilidade internacional.",
       },
       { property: "og:url", content: "https://mooviaportugal.com/servicos" },
       { property: "og:type", content: "website" },
@@ -56,8 +56,8 @@ function Servicos() {
               transition={{ delay: 0.1 }}
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
-              <span className="block font-[200] text-white mb-2">Uma metodologia. Três perspetivas. Um único objetivo:</span>
-              <span className="block text-gold-l italic font-[300]">aumentar a probabilidade de sucesso da mobilidade internacional.</span>
+              <span className="block font-[200] text-white mb-2">Uma metodologia. Três dimensões. Um único objetivo:</span>
+              <span className="block text-gold-l italic font-[300]">aumentar a probabilidade de sucesso de mobilidade internacional.</span>
             </motion.h1>
             
             <div className="space-y-6">
@@ -67,7 +67,7 @@ function Servicos() {
                 transition={{ delay: 0.2 }}
                 className="font-display text-[20px] md:text-[24px] font-[300] text-white/90 leading-[1.5] max-w-[720px] border-l-[3px] border-gold/40 pl-5"
               >
-                A MOOVIA aplica a sua metodologia proprietária de Human Mobility Assurance para ajudar empresas a reduzir o Human Mobility Risk e aumentar a probabilidade de sucesso de cada mobilidade internacional.
+                A MOOVIA aplica a metodologia Human Mobility Assurance, baseada em princípios internacionalmente reconhecidos de gestão de riscos, para identificar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
