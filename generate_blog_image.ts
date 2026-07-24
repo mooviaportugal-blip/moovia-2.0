@@ -18,7 +18,7 @@ async function generateAndUpload() {
       'Lovable-API-Key': process.env.LOVABLE_API_KEY!
     },
     body: JSON.stringify({
-      model: "openai/gpt-image-2",
+      model: "google/gemini-3.1-flash-image",
       prompt: prompt,
       n: 1,
       size: "1024x1024",
@@ -27,19 +27,36 @@ async function generateAndUpload() {
   });
 
   const result = await response.json();
+  console.log("Response keys:", Object.keys(result));
   
   if (result.status && result.status !== 200) {
      throw new Error(`API Error: ${result.message || JSON.stringify(result)}`);
   }
 
-  if (!result.data || !result.data[0] || !result.data[0].b64_json) {
-    throw new Error("No image data (b64_json) in response");
+  // The gpt-image-2 returned an object with 'data' containing b64_json
+  // But Gemini might return it differently or I might have hit a gateway limit/model issue.
+  // Checking exact structure from the last "Raw API response" in logs which showed "data" was an array but with b64_json.
+  
+  if (!result.data || !result.data[0]) {
+    console.log("Full Result:", JSON.stringify(result, null, 2));
+    throw new Error("No data in response");
   }
 
-  const b64Data = result.data[0].b64_json;
-  console.log("Image generated (base64)");
+  const imageData = result.data[0];
+  const b64Data = imageData.b64_json || imageData.url; // fallback if it ignored format
 
-  const buffer = Buffer.from(b64Data, 'base64');
+  if (!b64Data) {
+    throw new Error("No b64_json or url in result data");
+  }
+
+  let buffer: Buffer;
+  if (b64Data.startsWith('http')) {
+     const imgRes = await fetch(b64Data);
+     buffer = Buffer.from(await imgRes.arrayBuffer());
+  } else {
+     buffer = Buffer.from(b64Data, 'base64');
+  }
+
   const fileName = `blog-strategy-vs-success-${Date.now()}.png`;
 
   const { data: uploadData, error: uploadError } = await supabase.storage
