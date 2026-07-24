@@ -493,7 +493,6 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "Horário comercial de Lisboa, de segunda a sexta-feira.": { en: "Business hours in Lisbon, Monday through Friday." },
   "How We Built": { en: "How We Built" },
   "Hub de Coordenação": { en: "Coordination Hub" },
-  "Global Mobility Assurance": { en: "Global Mobility Assurance" },
   "Global Mobility Assurance.": { en: "Global Mobility Assurance." },
   "Human Mobility Risk": { en: "Human Mobility Risk" },
   "Human Mobility Risk Score": { en: "Human Mobility Risk Score" },
