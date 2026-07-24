@@ -52,7 +52,7 @@ const faqs: QA[] = [
   },
   {
     q: "O que é o Global Mobility Assurance?",
-    a: "É a categoria da MOOVIA para empresas que contratam talento internacional. O programa reduz o Human Mobility Risk ao focar na adaptação da família, integração cultural e isolamento social. Estes fatores normalmente ficam fora do processo de onboarding e são as principais causas de turnover em contratações internacionais.",
+    a: "É a categoria da MOOVIA para empresas que contratam talento internacional. O programa reduz o Global Mobility Risk ao focar na adaptação da família, integração cultural e isolamento social. Estes fatores normalmente ficam fora do processo de onboarding e são as principais causas de turnover em contratações internacionais.",
   },
   {
     q: "Como funciona a cobrança do Global Mobility Assurance?",
