@@ -45,7 +45,7 @@ export function Footer() {
             <div className="flex flex-col gap-3 items-center lg:items-start">
               {[
                 { label: "Serviços", to: "/servicos" },
-                { label: "Human Mobility Assurance", to: "/empresas" },
+                { label: "Global Mobility Assurance", to: "/empresas" },
                 { label: "Sobre", to: "/sobre" },
                 { label: "Equipa", to: "/equipa" },
                 { label: "Insights", to: "/blog" },

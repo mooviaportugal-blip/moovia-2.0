@@ -60,7 +60,10 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            <span className="block font-[200]">Human Mobility Assurance</span>
+            <span className="block font-[200]">GMA</span>
+            <span className="block text-[clamp(18px,2.5vw,28px)] font-body font-[300] tracking-normal text-gold-l mt-2">
+              Reduzindo o Human Mobility Risk.
+            </span>
           </motion.h2>
 
           <motion.div
@@ -158,7 +161,7 @@ export function B2BRiskSection() {
           className="mt-20 pt-8 border-t border-white/5"
         >
           <p className="text-[12px] font-body italic text-white/40 tracking-wide">
-            Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+            Metodologia Global Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
           </p>
         </motion.div>
       </div>

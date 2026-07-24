@@ -8,13 +8,13 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Human Mobility Assurance | MOOVIA" },
+      { title: "Global Mobility Assurance | MOOVIA" },
       {
         name: "description",
         content:
           "Transformamos Human Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
-      { property: "og:title", content: "Human Mobility Assurance | MOOVIA" },
+      { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
@@ -141,7 +141,7 @@ function EmpresasPage() {
               className="mt-12 pt-6 border-t border-white/5"
             >
               <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-                Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+                Metodologia Global Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
               </p>
             </motion.div>
           </motion.div>

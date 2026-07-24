@@ -36,7 +36,7 @@ export function Nav() {
 
   const links = [
     { name: cmsText("nav.link_servicos", t("nav.services")), to: "/servicos" },
-    { name: cmsText("nav.link_hma", "Human Mobility Assurance"), to: "/empresas" },
+    { name: cmsText("nav.link_hma", "Global Mobility Assurance"), to: "/empresas" },
     { name: cmsText("nav.link_sobre", t("nav.about")), to: "/sobre" },
     { name: cmsText("nav.link_equipa", t("nav.team")), to: "/equipa" },
     { name: cmsText("nav.link_insights", "Insights"), to: "/blog" },
