@@ -506,7 +506,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "Impostos": { en: "Taxes" },
   "In a Bossa Nova Mood - Gordon Ree": { en: "In a Bossa Nova Mood - Gordon Ree" },
   "Independente da estrutura familiar, da origem ou do perfil. Ninguém fica de fora.": { en: "Regardless of family structure, background, or profile. No one is left out." },
-  "Indicadores de Human Mobility Risk": { en: "Human Mobility Risk Indicators" },
+  "Indicadores de Global Mobility Risk": { en: "Global Mobility Risk Indicators" },
   "Informação estruturada para tomada de decisão": { en: "Structured Information for Decision-Making" },
   "Instagram": { en: "Instagram" },
   "Integrado": { en: "Integrated" },
