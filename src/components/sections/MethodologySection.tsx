@@ -14,7 +14,7 @@ const dimensions = [
   },
   {
     id: "02",
-    title: "Human Mobility Assurance",
+    title: "Global Mobility Assurance",
     description: "A mobilidade internacional envolve riscos humanos que raramente são medidos. A MOOVIA transforma fatores como adaptação, integração, expectativas e bem-estar em inteligência estruturada para apoiar decisões mais seguras. Não eliminamos a incerteza, reduzimo-la através de método, evidência e acompanhamento.",
     quote: "O que compreendemos, podemos proteger.",
     icon: "/icons/ponte.svg",
