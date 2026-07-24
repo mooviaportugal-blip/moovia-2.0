@@ -95,7 +95,7 @@ function EmpresasPage() {
             transition={{ delay: 0.1 }}
             className="font-display text-[clamp(32px,5vw,68px)] font-[300] text-white leading-[1.05] tracking-[-0.03em] mb-4 max-w-[900px]"
           >
-            Global Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
+            Human Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
