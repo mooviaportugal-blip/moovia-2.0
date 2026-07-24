@@ -11,15 +11,11 @@ async function generateAndUpload() {
   
   console.log("Generating image with prompt:", prompt);
   
-  // Note: Since I don't have a direct tool to generate an image to a file in one go here, 
-  // I will use the AI Gateway via fetch to generate an image.
-  // Actually, I'll use the 'ai_gateway--enable' then fetch.
-  
   const response = await fetch('https://ai.gateway.lovable.dev/v1/images/generations', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.LOVABLE_API_KEY}`
+      'Lovable-API-Key': process.env.LOVABLE_API_KEY!
     },
     body: JSON.stringify({
       model: "openai/dall-e-3",
@@ -28,36 +24,34 @@ async function generateAndUpload() {
       size: "1024x1024",
       response_format: "url"
     })
-
   });
 
   const result = await response.json();
   console.log("Raw API response:", JSON.stringify(result, null, 2));
-  if (result.error) {
-    throw new Error(JSON.stringify(result.error));
+  
+  if (result.status && result.status !== 200) {
+     throw new Error(`API Error: ${result.message || JSON.stringify(result)}`);
   }
 
+  if (!result.data || !result.data[0]) {
+    throw new Error("No image data in response");
+  }
 
   const imageUrl = result.data[0].url;
   console.log("Image generated:", imageUrl);
 
-  // Download image
   const imgRes = await fetch(imageUrl);
   const buffer = await imgRes.arrayBuffer();
 
   const fileName = `blog-strategy-vs-success-${Date.now()}.png`;
-  const filePath = `blog-images/${fileName}`;
 
-  // Upload to Supabase Storage
   const { data: uploadData, error: uploadError } = await supabase.storage
     .from('blog-images')
     .upload(fileName, buffer, {
       contentType: 'image/png'
     });
 
-  if (uploadError) {
-    throw uploadError;
-  }
+  if (uploadError) throw uploadError;
 
   const { data: { publicUrl } } = supabase.storage
     .from('blog-images')
@@ -65,7 +59,6 @@ async function generateAndUpload() {
 
   console.log("Public URL:", publicUrl);
 
-  // Update post
   const postId = "ad8651ca-b7f6-42c4-bdfc-212cb35c9fd0";
   const { error: updateError } = await supabase
     .from('posts')
@@ -75,9 +68,7 @@ async function generateAndUpload() {
     })
     .eq('id', postId);
 
-  if (updateError) {
-    throw updateError;
-  }
+  if (updateError) throw updateError;
 
   console.log("Post updated successfully!");
 }
