@@ -126,7 +126,7 @@ export function Hero() {
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
           <div className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 lg:p-6">
-            <div className="relative w-full h-full max-w-[98%] lg:max-w-[95%]">
+            <div className="relative w-full h-full">
               {HERO_MEDIA_URL.endsWith('.mp4') ? (
                 <video
                   autoPlay
