@@ -22,27 +22,24 @@ async function generateAndUpload() {
       prompt: prompt,
       n: 1,
       size: "1024x1024",
-      response_format: "url"
+      response_format: "b64_json"
     })
   });
 
   const result = await response.json();
-  console.log("Raw API response:", JSON.stringify(result, null, 2));
   
   if (result.status && result.status !== 200) {
      throw new Error(`API Error: ${result.message || JSON.stringify(result)}`);
   }
 
-  if (!result.data || !result.data[0]) {
-    throw new Error("No image data in response");
+  if (!result.data || !result.data[0] || !result.data[0].b64_json) {
+    throw new Error("No image data (b64_json) in response");
   }
 
-  const imageUrl = result.data[0].url;
-  console.log("Image generated:", imageUrl);
+  const b64Data = result.data[0].b64_json;
+  console.log("Image generated (base64)");
 
-  const imgRes = await fetch(imageUrl);
-  const buffer = await imgRes.arrayBuffer();
-
+  const buffer = Buffer.from(b64Data, 'base64');
   const fileName = `blog-strategy-vs-success-${Date.now()}.png`;
 
   const { data: uploadData, error: uploadError } = await supabase.storage
