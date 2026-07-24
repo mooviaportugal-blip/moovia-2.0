@@ -62,7 +62,7 @@ export function B2BRiskSection() {
           >
             <span className="block font-[200] text-[clamp(28px,4vw,52px)]">Global Mobility Assurance</span>
             <span className="block text-[clamp(18px,2.5vw,28px)] font-body font-[300] tracking-normal text-gold-l mt-4">
-              Reduzindo o Human Mobility Risk.
+              Reduzindo o Global Mobility Risk.
             </span>
           </motion.h2>
 
@@ -76,7 +76,7 @@ export function B2BRiskSection() {
               Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
             </p>
             <p>
-              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Human Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
+              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Global Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
             </p>
           </motion.div>
         </div>
