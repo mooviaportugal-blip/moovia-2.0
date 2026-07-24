@@ -180,7 +180,7 @@ function ComoConstruimosInteligencia() {
   );
 }
 
-/* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSURANCE ─────────────────── */
+/* ─────────────────── HOW WE BUILT GLOBAL MOBILITY ASSURANCE ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
     { destaque: "Experiência como expatriados", texto: "Experiência em Negócios Internacionais" },
