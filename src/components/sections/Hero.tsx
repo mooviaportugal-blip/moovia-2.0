@@ -125,37 +125,39 @@ export function Hero() {
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
-          <div className="relative w-full h-full">
-            {HERO_MEDIA_URL.endsWith('.mp4') ? (
-              <video
-                autoPlay
-                muted
-                playsInline
-                loop={false}
-                onEnded={(e) => {
-                  const target = e.target as HTMLVideoElement;
-                  target.pause();
-                  target.currentTime = target.duration;
-                }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
-              >
-                <source src={HERO_MEDIA_URL} type="video/mp4" />
-              </video>
-            ) : (
-              <img
-                src={HERO_MEDIA_URL}
-                alt="Moovia"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
-              />
-            )}
+          <div className="relative w-full h-full flex items-center justify-center p-8 sm:p-12 lg:p-20">
+            <div className="relative w-full max-w-[85%] aspect-[1.15/1]">
+              {HERO_MEDIA_URL.endsWith('.mp4') ? (
+                <video
+                  autoPlay
+                  muted
+                  playsInline
+                  loop={false}
+                  onEnded={(e) => {
+                    const target = e.target as HTMLVideoElement;
+                    target.pause();
+                    target.currentTime = target.duration;
+                  }}
+                  className="w-full h-full object-contain"
+                >
+                  <source src={HERO_MEDIA_URL} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={HERO_MEDIA_URL}
+                  alt="Moovia"
+                  className="w-full h-full object-contain"
+                />
+              )}
 
-            {/* Fade radial elíptico (60% 60%) dissolvendo no fundo do site */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: `radial-gradient(ellipse 60% 60% at center, transparent 40%, ${HERO_BG} 85%)`,
-              }}
-            />
+              {/* Fade radial elíptico (70% 70%) para suavizar bordas do media */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: `radial-gradient(ellipse 70% 70% at center, transparent 30%, ${HERO_BG} 90%)`,
+                }}
+              />
+            </div>
           </div>
 
 
