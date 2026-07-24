@@ -62,7 +62,7 @@ export function B2BRiskSection() {
           >
             <span className="block font-[200] text-[clamp(28px,4vw,52px)]">Global Mobility Assurance</span>
             <span className="block text-[clamp(18px,2.5vw,28px)] font-body font-[300] tracking-normal text-gold-l mt-4">
-              Reduzindo o Human Mobility Risk.
+              Reduzindo o Global Mobility Risk.
             </span>
           </motion.h2>
 

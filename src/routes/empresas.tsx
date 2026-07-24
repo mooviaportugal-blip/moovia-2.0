@@ -124,7 +124,7 @@ function EmpresasPage() {
             </p>
             <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-6">
               <p className="text-white/90">
-                Transformamos Human Mobility Risk em Global Mobility Success.
+                Transformamos Global Mobility Risk em Global Mobility Success.
               </p>
               <p>
                 Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, nós medimos aquilo que realmente determina o sucesso de uma mobilidade internacional: a adaptação humana.
