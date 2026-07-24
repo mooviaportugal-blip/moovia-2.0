@@ -45,7 +45,7 @@ function SobrePage() {
       <Hero />
       <OrigemMercado />
       <EquacaoMoovia />
-      <HistoriaPessoal />
+      
       <MarketResearchSection />
       <SaudeMentalMigrantes />
       <NossaCategoria />
@@ -512,40 +512,6 @@ function ComoFazemosSection() {
   );
 }
 
-/* ─────────────────────── HISTÓRIA PESSOAL (FREDERICO PRADO) ─────────────────────── */
-function HistoriaPessoal() {
-  const paragrafos = [
-    "A MOOVIA nasceu da união de três experiências fundamentais.",
-    "Durante mais de sete anos, Frederico Prado trabalhou com Revenue Assurance, identificando perdas que muitas vezes não apareciam nos processos tradicionais.",
-    "Mais tarde, depois de viver e trabalhar em diferentes países, percebeu que o mesmo acontecia na mobilidade internacional. As empresas cuidavam do visto, da mudança, do contrato e do onboarding, mas muitos dos fatores que realmente determinavam o sucesso daquela mobilidade permaneciam invisíveis.",
-    "A adaptação da família, o custo de vida, a moradia, as escolas, as expectativas e a integração só se transformavam em prioridade quando já havia um problema.",
-    "Foi aí que surgiu a ideia da MOOVIA: aplicar à mobilidade internacional a mesma lógica aprendida em Revenue Assurance. O objetivo é identificar riscos antes que se transformem em perdas. Através da nossa metodologia, acompanhamos sinais, coordenamos respostas, medimos resultados e protegemos o investimento que as empresas fazem nas pessoas.",
-  ];
-  return (
-    <section className="bg-black py-[100px] px-6 lg:px-20 border-t border-b18">
-      <div className="max-w-[820px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">A história por trás da equação</p>
-        <h2 className="font-display font-[200] text-white leading-[1.1] tracking-[-0.03em] text-[clamp(26px,3.4vw,42px)] mb-10">
-          Três experiências, <span className="italic text-gold-l">uma convicção.</span>
-        </h2>
-        <div className="space-y-6">
-          {paragrafos.map((p, i) => (
-            <motion.p
-              key={i}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ delay: i * 0.05, duration: 0.6 }}
-              className="font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]"
-            >
-              {p}
-            </motion.p>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ─────────────────────────── O NOSSO MÉTODO ─────────────────────────── */
 function MetodoSection() {
