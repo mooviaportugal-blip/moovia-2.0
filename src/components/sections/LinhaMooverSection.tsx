@@ -258,7 +258,7 @@ export function LinhaMooverSection() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             className={cn(
-                              "absolute z-[100] w-64 p-5 bg-navy border border-gold/30 shadow-2xl rounded-sm",
+                              "absolute z-[100] w-[280px] sm:w-[320px] p-5 bg-navy/95 backdrop-blur-md border border-gold/30 shadow-2xl rounded-sm",
                               "md:top-16 md:left-1/2 md:-translate-x-1/2",
                               "left-16 top-0"
                             )}
@@ -284,9 +284,9 @@ export function LinhaMooverSection() {
                                 <p className="font-urbanist text-gold/80 text-[10px] uppercase tracking-wider mt-1">{member.role}</p>
                               </div>
                             </div>
-                            <div className="flex flex-wrap gap-1.5">
+                            <div className="flex flex-wrap gap-1.5 mt-auto">
                               {member.tags.map((tag, i) => (
-                                <span key={i} className="text-[9px] font-urbanist text-w35 px-2 py-0.5 border border-white/10 rounded-full whitespace-nowrap">
+                                <span key={i} className="text-[9px] font-urbanist text-w35 px-2 py-0.5 border border-white/10 rounded-full whitespace-normal text-left">
                                   {tag}
                                 </span>
                               ))}
