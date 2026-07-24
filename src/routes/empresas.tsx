@@ -103,7 +103,7 @@ function EmpresasPage() {
             transition={{ delay: 0.15 }}
             className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px] mb-8"
           >
-            A nova categoria para reduzir o Human Mobility Risk e transformar mobilidade internacional em melhores resultados para empresas e colaboradores.
+            A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ function EmpresasPage() {
             transition={{ delay: 0.2 }}
             className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
           >
-            CONTRATADO PELA EMPRESA, VIVIDO PELO EXECUTIVO E MEDIDO AO LONGO DO TEMPO.
+            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,14 +122,28 @@ function EmpresasPage() {
             <p className="font-body text-[16px] md:text-[18px] font-[600] text-white mb-6">
               Um benefício para o colaborador que representa um investimento mensurável para a empresa.
             </p>
-            <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-4">
-              <p>
+            <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] max-w-[800px] space-y-6">
+              <p className="text-white/90">
                 Transformamos Human Mobility Risk em Global Mobility Success.
               </p>
               <p>
-                Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, nós medimos aquilo que realmente determina o sucesso de uma mobilidade internacional: a adaptação humana. Nossa metodologia identifica riscos, gera inteligência e acompanha indicadores ao longo da jornada para reduzir turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para o RH, para o CFO e para o negócio.
+                Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, nós medimos aquilo que realmente determina o sucesso de uma mobilidade internacional: a adaptação humana.
+              </p>
+              <p>
+                Ao longo da jornada, transformamos estes fatores em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para o RH, para o CFO e para o negócio.
               </p>
             </div>
+            {/* ISO Footer Seal */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="mt-12 pt-6 border-t border-white/5"
+            >
+              <p className="font-body text-[12px] text-white/40 italic">
+                Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+              </p>
+            </motion.div>
           </motion.div>
           <CTALink label="Agendar Strategic Discovery Call" sublabel="Empresas" />
         </div>
