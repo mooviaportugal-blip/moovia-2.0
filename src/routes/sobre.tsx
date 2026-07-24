@@ -180,7 +180,7 @@ function ComoConstruimosInteligencia() {
   );
 }
 
-/* ─────────────────── HOW WE BUILT GLOBAL MOBILITY ASSURANCE ─────────────────── */
+/* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSESSMENT ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
     { destaque: "Experiência como expatriados", texto: "Experiência em Negócios Internacionais" },
@@ -973,7 +973,7 @@ function Cta() {
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <span className="relative z-10 transition-colors group-hover:text-gold">Solicitar Strategic Assessment</span>
+            <span className="relative z-10 transition-colors group-hover:text-gold">Solicitar Human Mobility Assessment</span>
           </Link>
           <Link
             to="/equipa"
