@@ -47,7 +47,7 @@ function HomeReal() {
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
               Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
-              Avaliação Global Mobility Success <span className="text-gold text-[10px]">♦</span>
+              Human Mobility Assessment <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Transição de Vida <span className="text-gold text-[10px]">♦</span>
               Orquestração <span className="text-gold text-[10px]">♦</span>
