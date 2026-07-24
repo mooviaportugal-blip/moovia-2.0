@@ -161,7 +161,7 @@ export function B2BRiskSection() {
           className="mt-20 pt-8 border-t border-white/5"
         >
           <p className="text-[12px] font-body italic text-white/40 tracking-wide">
-            Metodologia Global Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+            A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional.
           </p>
         </motion.div>
       </div>
