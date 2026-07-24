@@ -109,9 +109,9 @@ function EmpresasPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
+            className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic border-l-2 border-gold/50 pl-6 py-2"
           >
-            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
+            Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
