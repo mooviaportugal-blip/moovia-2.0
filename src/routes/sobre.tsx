@@ -197,7 +197,7 @@ function HowWeBuiltTimeline() {
       <div className="max-w-[1000px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Origem e validação</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14">
-          How We Built <span className="italic text-gold-l">Global Mobility Assurance.</span>
+          Como construímos o <span className="italic text-gold-l">Global Mobility Assurance.</span>
         </h2>
 
         <ol className="relative border-l border-gold/30 pl-8 md:pl-10 space-y-8">
