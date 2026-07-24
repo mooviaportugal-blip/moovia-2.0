@@ -60,8 +60,7 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            <span className="block font-[200]">Human Mobility Risk</span>
-            <span className="block font-[200]">Global Mobility Assurance</span>
+            <span className="block font-[200]">Human Mobility Assurance</span>
           </motion.h2>
 
           <motion.div
