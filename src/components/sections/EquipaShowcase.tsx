@@ -114,7 +114,7 @@ const ALL: Record<string, Member> = {
     name: "Sandra Santos",
     initials: "SS",
     img: "/images/sandra.png",
-    role: "Real Estate Advisor | Algarve",
+    role: "Consultora Imobiliária | Algarve",
     linkedin: "https://www.linkedin.com/in/sandra-santos-361863417",
     chips: ["Algarve", "Investimento"],
     bio: [
@@ -125,7 +125,7 @@ const ALL: Record<string, Member> = {
     id: "cristina-sousa",
     name: "Cristina Sousa",
     initials: "CS",
-    role: "Real Estate Advisor | Grande Porto",
+    role: "Consultora Imobiliária | Grande Porto",
     img: "/images/cristina.png",
     chips: ["Grande Porto", "Desde 2019"],
     bio: [
@@ -172,8 +172,8 @@ const ALL: Record<string, Member> = {
   },
 };
 
-const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme, ALL.laura];
-const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra, ALL.dany];
+const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme, ALL.dany, ALL.laura];
+const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra];
 
 function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen: () => void; index: number; isPartner?: boolean }) {
   return (
