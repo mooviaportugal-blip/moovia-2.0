@@ -140,8 +140,8 @@ function EmpresasPage() {
               transition={{ delay: 0.4 }}
               className="mt-12 pt-6 border-t border-white/5"
             >
-              <p className="font-body text-[12px] text-white/40 italic">
-                Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+              <p className="font-body text-[12px] text-white/40 italic tracking-wide">
+                Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
               </p>
             </motion.div>
           </motion.div>
