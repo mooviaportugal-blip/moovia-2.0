@@ -125,8 +125,8 @@ export function Hero() {
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
-          <div className="relative w-full h-full flex items-center justify-center p-8 sm:p-12 lg:p-20">
-            <div className="relative w-full max-w-[85%] aspect-[1.15/1]">
+          <div className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 lg:p-6">
+            <div className="relative w-full h-full">
               {HERO_MEDIA_URL.endsWith('.mp4') ? (
                 <video
                   autoPlay
@@ -150,11 +150,11 @@ export function Hero() {
                 />
               )}
 
-              {/* Fade radial elíptico (70% 70%) para suavizar bordas do media */}
+              {/* Fade radial elíptico (85% 85%) para suavizar bordas mantendo o preenchimento */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  background: `radial-gradient(ellipse 70% 70% at center, transparent 30%, ${HERO_BG} 90%)`,
+                  background: `radial-gradient(ellipse 85% 85% at center, transparent 50%, ${HERO_BG} 100%)`,
                 }}
               />
             </div>
