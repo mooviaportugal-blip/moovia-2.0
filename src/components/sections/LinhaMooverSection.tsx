@@ -27,7 +27,7 @@ const LINES = [
         name: "FREDERICO PRADO",
         role: "CEO & Founder",
         img: "/images/frederico.png",
-        tags: ["Revenue Assurance", "Business Intelligence", "Human Mobility Assurance"],
+        tags: ["Revenue Assurance", "Business Intelligence", "Global Mobility Assurance"],
         type: "person" as const
       },
       {
@@ -45,7 +45,7 @@ const LINES = [
         name: "DRA. LETÍCIA MELLO",
         role: "Co-Founder & CSO",
         img: "/images/leticia.jpg",
-        tags: ["Human Mobility Assurance", "Metodologias Preditivas", "Inteligência Humana"],
+        tags: ["Global Mobility Assurance", "Metodologias Preditivas", "Inteligência Humana"],
         type: "person" as const
       },
       {

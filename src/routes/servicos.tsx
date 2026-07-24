@@ -8,13 +8,13 @@ import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 export const Route = createFileRoute("/servicos")({
     head: () => ({
     meta: [
-      { title: "Serviços MOOVIA | Human Mobility Assurance" },
+      { title: "Serviços MOOVIA | Global Mobility Assurance" },
       {
         name: "description",
         content:
-          "A MOOVIA aplica a metodologia Human Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
+          "A MOOVIA aplica a metodologia Global Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
       },
-      { property: "og:title", content: "Serviços MOOVIA | Human Mobility Assurance" },
+      { property: "og:title", content: "Serviços MOOVIA | Global Mobility Assurance" },
       {
         property: "og:description",
         content:
@@ -67,7 +67,7 @@ function Servicos() {
                 transition={{ delay: 0.2 }}
                 className="font-display text-[20px] md:text-[22px] font-[300] text-white/90 leading-[1.6] max-w-[760px] border-l-[3px] border-gold pl-6 py-2"
               >
-                A MOOVIA aplica a metodologia Human Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.
+                A MOOVIA aplica a metodologia Global Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.
               </motion.p>
 
               {/* ISO Footer Seal */}
@@ -78,7 +78,7 @@ function Servicos() {
                 className="pt-4 pb-2"
               >
                 <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-                  Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+                  Metodologia Global Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
                 </p>
               </motion.div>
               

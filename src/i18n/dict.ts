@@ -9,7 +9,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Como funciona": { en: "How it works", es: "Cómo funciona" },
   "Serviços": { en: "Services", es: "Servicios" },
   "Assessment": { en: "Assessment", es: "Assessment" },
-  "Human Mobility Assurance": { en: "Human Mobility Assurance", es: "Human Mobility Assurance" },
+  "Global Mobility Assurance": { en: "Global Mobility Assurance", es: "Global Mobility Assurance" },
   "Insights": { en: "Insights", es: "Insights" },
   "Contacto": { en: "Contact", es: "Contacto" },
   "Avaliar o meu caso": { en: "Assess my case", es: "Evaluar mi caso" },
