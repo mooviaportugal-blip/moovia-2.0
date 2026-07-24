@@ -91,6 +91,15 @@ const LINES = [
         img: "/images/dany.png",
         tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
         type: "person" as const
+      },
+      {
+        id: "laura",
+        number: "08",
+        name: "DRA. LAURA COSTA",
+        role: "Advogada de Imigração",
+        img: "/images/laura.png",
+        tags: ["Vistos", "Residência", "Nacionalidade"],
+        type: "person" as const
       }
     ]
   },
@@ -118,7 +127,7 @@ const LINES = [
     members: [
       {
         id: "sara",
-        number: "08",
+        number: "09",
         name: "SARA",
         role: "Consultora Imobiliária",
         img: "/images/sara.png",
@@ -127,29 +136,20 @@ const LINES = [
       },
       {
         id: "sandra",
-        number: "09",
+        number: "10",
         name: "SANDRA",
-        role: "Consultora de Mobilidade",
+        role: "Consultora Imobiliária",
         img: "/images/sandra.png",
         tags: ["Acompanhamento", "Integração", "Apoio à Família"],
         type: "person" as const
       },
       {
         id: "cristina",
-        number: "10",
+        number: "11",
         name: "CRISTINA",
-        role: "Consultora de Mobilidade",
+        role: "Consultora Imobiliária",
         img: "/images/cristina.png",
         tags: ["Relocation Support", "Integração Cultural", "Apoio à Família"],
-        type: "person" as const
-      },
-      {
-        id: "laura",
-        number: "11",
-        name: "DRA. LAURA COSTA",
-        role: "Advogada de Imigração",
-        img: "/images/laura.png",
-        tags: ["Vistos", "Residência", "Nacionalidade"],
         type: "person" as const
       },
       {
