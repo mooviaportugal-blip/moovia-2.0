@@ -267,7 +267,7 @@ const MAIA_STRINGS: Record<MaiaLang, {
   voiceUnsupported: string
 }> = {
   pt: {
-    invites: ['A sua empresa move colaboradores?','Dúvidas sobre Global Mobility Assurance?','Reduza o Human Mobility Risk da sua equipa','Fala em nome de uma empresa?','Posso ajudar com o programa de mobilidade da sua empresa?'],
+    invites: ['A sua empresa move colaboradores?','Dúvidas sobre Global Mobility Assurance?','Reduza o Global Mobility Risk da sua equipa','Fala em nome de uma empresa?','Posso ajudar com o programa de mobilidade da sua empresa?'],
     greetingNew: 'Olá! Eu sou a MAIA, assistente da MOOVIA, a empresa que criou a categoria Global Mobility Assurance.\n\nAntes de mais, como se chama?',
     greetingDone: (n) => `Bem-vindo(a) de volta, ${n}! Sou a MAIA. Em que posso ajudar hoje sobre a sua mobilidade internacional?`,
     greetingWhats: (n) => `Olá de novo, ${n}! Para finalizar o seu registo, passa-me o seu WhatsApp?`,
