@@ -50,7 +50,7 @@ export function ProcessSection() {
             viewport={{ once: true }}
             className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
           >
-            Como trabalhamos
+            GMA
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
