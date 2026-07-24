@@ -125,7 +125,7 @@ export function Hero() {
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
-          <div className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 lg:p-6">
+          <div className="relative w-full h-full">
             <div className="relative w-full h-full">
               {HERO_MEDIA_URL.endsWith('.mp4') ? (
                 <video
@@ -138,7 +138,7 @@ export function Hero() {
                     target.pause();
                     target.currentTime = target.duration;
                   }}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 >
                   <source src={HERO_MEDIA_URL} type="video/mp4" />
                 </video>
@@ -146,7 +146,7 @@ export function Hero() {
                 <img
                   src={HERO_MEDIA_URL}
                   alt="Moovia"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               )}
 
@@ -154,7 +154,7 @@ export function Hero() {
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  background: `radial-gradient(ellipse 85% 85% at center, transparent 50%, ${HERO_BG} 100%)`,
+                  background: `radial-gradient(ellipse 85% 85% at center, transparent 30%, ${HERO_BG} 100%)`,
                 }}
               />
             </div>
