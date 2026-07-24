@@ -62,7 +62,7 @@ export function MethodologySection() {
             viewport={{ once: true }}
             className="font-urbanist text-[11px] font-[400] tracking-[0.4em] uppercase text-gold/60 mb-8"
           >
-            Metodologia Proprietária
+            Metodologia Própria
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}

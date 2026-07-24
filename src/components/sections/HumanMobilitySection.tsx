@@ -37,7 +37,7 @@ export function HumanMobilitySection() {
           viewport={{ once: true }}
           className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center"
         >
-          Três perspetivas
+          Três dimensões
         </motion.p>
         <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[1000px] mx-auto">
           <span className="block font-[200] text-white italic">Um programa desenhado para quem decide,</span>

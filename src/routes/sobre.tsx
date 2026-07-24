@@ -102,7 +102,7 @@ function RaizesEAsas() {
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 max-w-[820px]">
           <p className="font-body font-[300] italic text-[16px] md:text-[18px] text-white/85 leading-[1.7]">
-            Framework proprietário aplicado na fase de Recolha de Dados, estruturando o conhecimento humano em variáveis mensuráveis antes de alimentar o motor de regras.
+            Framework próprio aplicado na fase de Recolha de Dados, estruturando o conhecimento humano em variáveis mensuráveis antes de alimentar o motor de regras.
           </p>
           <p className="mt-4 font-display font-[200] text-gold-l text-[clamp(18px,2vw,22px)] leading-[1.4]">
             Uma abordagem estabelecida e comprovada. Cada resultado é rastreável até à regra que o originou.
