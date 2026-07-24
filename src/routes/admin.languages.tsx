@@ -106,7 +106,7 @@ function AdminLanguages() {
             "Global Mobility Assurance",
             "Global Mobility Strategy",
             "Global Mobility Success",
-            "Human Mobility Risk",
+            "Global Mobility Risk",
             "Risk Intelligence",
             "MOOVIA",
             "MAIA",
