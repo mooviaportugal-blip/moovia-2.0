@@ -180,7 +180,7 @@ function ComoConstruimosInteligencia() {
   );
 }
 
-/* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSURANCE ─────────────────── */
+/* ─────────────────── HOW WE BUILT GLOBAL MOBILITY ASSURANCE ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
     { destaque: "Experiência como expatriados", texto: "Experiência em Negócios Internacionais" },
@@ -841,7 +841,7 @@ function EquacaoMoovia() {
       text: "Identificação de riscos e perdas invisíveis, a disciplina que ensinou a MOOVIA a enxergar aquilo que os modelos tradicionais de gestão não capturam.",
     },
     {
-      title: "METODOLOGIAS PROPRIETÁRIAS",
+      title: "METODOLOGIAS PRÓPRIAS",
       text: "A combinação de ciência do comportamento humano e engenharia de sistemas, transformando conhecimento especializado em processo estruturado e replicável.",
     },
     {

@@ -32,7 +32,7 @@ export function Hero() {
           className="flex items-center mb-10"
         >
           <span className="font-body text-[11px] font-[400] tracking-[0.32em] uppercase text-gold">
-            GMA
+            Global Mobility Assurance
           </span>
         </motion.div>
 
