@@ -8,7 +8,7 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
-      { title: "Global Mobility Assurance | MOOVIA" },
+      { title: "Human Mobility Assurance | MOOVIA" },
       {
         name: "description",
         content:
