@@ -76,7 +76,7 @@ export function B2BRiskSection() {
               Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
             </p>
             <p>
-              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Human Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
+              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Global Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
             </p>
           </motion.div>
         </div>

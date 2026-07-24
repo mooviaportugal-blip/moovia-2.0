@@ -12,13 +12,13 @@ export const Route = createFileRoute("/empresas")({
       {
         name: "description",
         content:
-          "Transformamos Human Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
+          "Transformamos Global Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
       { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
-          "Programa B2B da MOOVIA para reduzir o Human Mobility Risk da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
+          "Programa B2B da MOOVIA para reduzir o Global Mobility Risk da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
       },
     ],
   }),
@@ -103,7 +103,7 @@ function EmpresasPage() {
             transition={{ delay: 0.15 }}
             className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px] mb-8"
           >
-            A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
+            A nova categoria para reduzir o Global Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
