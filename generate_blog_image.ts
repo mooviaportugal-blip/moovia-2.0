@@ -18,7 +18,7 @@ async function generateAndUpload() {
       'Lovable-API-Key': process.env.LOVABLE_API_KEY!
     },
     body: JSON.stringify({
-      model: "google/gemini-3.1-flash-image",
+      model: "openai/gpt-image-2",
       prompt: prompt,
       n: 1,
       size: "1024x1024",
