@@ -109,9 +109,9 @@ function EmpresasPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic"
+            className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 mb-8 italic border-l-2 border-gold/50 pl-6 py-2"
           >
-            CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
+            Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -140,8 +140,8 @@ function EmpresasPage() {
               transition={{ delay: 0.4 }}
               className="mt-12 pt-6 border-t border-white/5"
             >
-              <p className="font-body text-[12px] text-white/40 italic">
-                Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+              <p className="font-body text-[12px] text-white/40 italic tracking-wide">
+                Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
               </p>
             </motion.div>
           </motion.div>

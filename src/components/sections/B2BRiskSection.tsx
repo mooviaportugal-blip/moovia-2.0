@@ -62,9 +62,6 @@ export function B2BRiskSection() {
           >
             <span className="block font-[200]">Human Mobility Risk</span>
             <span className="block font-[200]">Global Mobility Assurance</span>
-            <span className="block text-gold-l italic font-[300] mt-4 uppercase text-[14px] tracking-[0.2em]">
-              CONTRATADO PELA EMPRESA. VIVIDO PELO EXECUTIVO. MEDIDO AO LONGO DO TEMPO.
-            </span>
           </motion.h2>
 
           <motion.div
@@ -73,8 +70,8 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-body text-[16px] md:text-[18px] font-[300] text-white/70 leading-[1.8] max-w-[720px] space-y-6"
           >
-            <p className="text-white/90 font-medium">
-              Um benefício para o colaborador. Um investimento mensurável para a empresa.
+            <p className="text-white/90 font-medium italic border-l-2 border-gold/50 pl-6 py-2">
+              Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
             </p>
             <p>
               Reduza o Human Mobility Risk através de Risk Intelligence com uma metodologia que aumenta a retenção, acelera a integração e transforma a mobilidade internacional em Global Mobility Success.
@@ -154,7 +151,17 @@ export function B2BRiskSection() {
           </div>
         </div>
 
-
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-20 pt-8 border-t border-white/5"
+        >
+          <p className="text-[12px] font-body italic text-white/40 tracking-wide">
+            Metodologia Human Mobility Assurance, desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
