@@ -517,7 +517,7 @@ function ComoFazemosSection() {
 function MetodoSection() {
   const blocos = [
     { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos, riscos e variáveis da mobilidade." },
-    { n: "02", titulo: "Motor de Decisão com IA", texto: "O nosso framework tecnológico organiza milhares de pontos de informação, identifica dependências, conflitos e fatores críticos de sucesso." },
+    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando riscos, dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
     { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com riscos identificados, prioridades, recomendações e roadmap de implementação." },
   ];
