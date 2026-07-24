@@ -22,11 +22,13 @@ async function generateAndUpload() {
       'Authorization': `Bearer ${process.env.LOVABLE_API_KEY}`
     },
     body: JSON.stringify({
+      model: "openai/dall-e-3",
       prompt: prompt,
       n: 1,
       size: "1024x1024",
       response_format: "url"
     })
+
   });
 
   const result = await response.json();
