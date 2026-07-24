@@ -60,8 +60,7 @@ export function B2BRiskSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,56px)] mb-10"
           >
-            <span className="block font-[200]">Human Mobility Risk</span>
-            <span className="block font-[200]">Global Mobility Assurance</span>
+            <span className="block font-[200]">Human Mobility Assurance</span>
           </motion.h2>
 
           <motion.div
@@ -74,7 +73,7 @@ export function B2BRiskSection() {
               Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
             </p>
             <p>
-              Reduza o Human Mobility Risk através de Risk Intelligence com uma metodologia que aumenta a retenção, acelera a integração e transforma a mobilidade internacional em Global Mobility Success.
+              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Human Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
             </p>
           </motion.div>
         </div>
