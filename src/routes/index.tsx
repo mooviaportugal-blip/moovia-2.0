@@ -58,7 +58,7 @@ export const Route = createFileRoute("/")({
               name: "Quanto custa se mudar para Portugal saindo do Brasil?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza uma Avaliação Estratégica (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
+                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Human Mobility Assessment (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
               },
             },
             {
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "Como funciona a Avaliação Estratégica da MOOVIA?",
+              name: "Como funciona o Human Mobility Assessment da MOOVIA?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Sessão de 60 minutos conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos, riscos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. €250, abatidos no Mandato caso a família avance.",
@@ -82,7 +82,7 @@ export const Route = createFileRoute("/")({
               name: "O que é um Mandato MOOVIA?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: PLANEJAMOS (antes da mudança), INSTALAMOS (na chegada), INTEGRAMOS (primeiros meses) e ESTRUTURAMOS (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após a Avaliação Estratégica.",
+                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: PLANEJAMOS (antes da mudança), INSTALAMOS (na chegada), INTEGRAMOS (primeiros meses) e ESTRUTURAMOS (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após o Human Mobility Assessment.",
               },
             },
             {
@@ -98,7 +98,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: MaintenancePage,
+  component: Home,
 });
 
 function Home() {
@@ -118,7 +118,7 @@ function Home() {
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
               Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
-              Avaliação Global Mobility Success <span className="text-gold text-[10px]">♦</span>
+              Human Mobility Assessment <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Transição de Vida <span className="text-gold text-[10px]">♦</span>
               Orquestração <span className="text-gold text-[10px]">♦</span>

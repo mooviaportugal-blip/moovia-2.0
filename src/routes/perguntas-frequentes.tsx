@@ -10,7 +10,7 @@ export const Route = createFileRoute("/perguntas-frequentes")({
       {
         name: "description",
         content:
-          "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Global Mobility Assurance.",
+          "Respostas às principais dúvidas sobre a MOOVIA, o Human Mobility Assessment e o Global Mobility Assurance.",
       },
       { property: "og:title", content: "Perguntas Frequentes | MOOVIA" },
       {
