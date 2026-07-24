@@ -30,9 +30,11 @@ async function generateAndUpload() {
   });
 
   const result = await response.json();
+  console.log("Raw API response:", JSON.stringify(result, null, 2));
   if (result.error) {
     throw new Error(JSON.stringify(result.error));
   }
+
 
   const imageUrl = result.data[0].url;
   console.log("Image generated:", imageUrl);
