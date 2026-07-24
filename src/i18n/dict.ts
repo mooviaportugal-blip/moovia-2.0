@@ -138,16 +138,14 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Pós-chegada": { en: "Post-arrival", es: "Post-llegada" },
 
   // ---------- ASSESSMENT ----------
-  "The Global Mobility Success Assessment": { en: "The Global Mobility Success Assessment", es: "The Global Mobility Success Assessment" },
-  "Global Mobility Success Assessment": { en: "Global Mobility Success Assessment", es: "Global Mobility Success Assessment" },
-  "O Global Mobility Success Assessment inclui:": { en: "The Global Mobility Success Assessment includes:", es: "El Global Mobility Success Assessment incluye:" },
-  "O Global Mobility Success Assessment foi desenvolvido para transformar uma decisão complexa num plano estratégico estruturado.": {
-    en: "The Global Mobility Success Assessment was developed to transform a complex decision into a structured strategic plan.",
-    es: "El Global Mobility Success Assessment fue desarrollado para transformar una decisión compleja en un plan estratégico estructurado."
+  "Human Mobility Assessment": { en: "Human Mobility Assessment", es: "Human Mobility Assessment" },
+  "O Human Mobility Assessment inclui:": { en: "The Human Mobility Assessment includes:", es: "El Human Mobility Assessment incluye:" },
+  "O Human Mobility Assessment foi desenvolvido para transformar uma decisão complexa num plano estratégico estruturado.": {
+    en: "The Human Mobility Assessment was developed to transform a complex decision into a structured strategic plan.",
+    es: "El Human Mobility Assessment fue desarrollado para transformar una decisión compleja en un plan estratégico estructurado."
   },
-  "Solicitar Global Mobility Success Assessment": { en: "Request Global Mobility Success Assessment", es: "Solicitar Global Mobility Success Assessment" },
+  "Solicitar Human Mobility Assessment": { en: "Request Human Mobility Assessment", es: "Solicitar Human Mobility Assessment" },
   "Strategic Relocation Assessment": { en: "Strategic Relocation Assessment", es: "Strategic Relocation Assessment" },
-
   // ---------- PILLARS ----------
   "Quatro pilares": { en: "Four pillars", es: "Cuatro pilares" },
   "\"Uma jornada completa.\"": { en: "\"A complete journey.\"", es: "\"Un trayecto completo.\"" },

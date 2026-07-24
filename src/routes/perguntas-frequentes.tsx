@@ -10,7 +10,7 @@ export const Route = createFileRoute("/perguntas-frequentes")({
       {
         name: "description",
         content:
-          "Respostas às principais dúvidas sobre a MOOVIA, o Strategic Assessment e o Global Mobility Assurance.",
+          "Respostas às principais dúvidas sobre a MOOVIA, o Human Mobility Assessment e o Global Mobility Assurance.",
       },
       { property: "og:title", content: "Perguntas Frequentes | MOOVIA" },
       {
@@ -31,20 +31,20 @@ const faqs: QA[] = [
     a: "A MOOVIA coordena transições internacionais de vida e património. Não somos uma empresa de imigração nem uma consultoria pontual. Somos o ponto único que integra estratégia, execução e acompanhamento antes, durante e depois da chegada.",
   },
   {
-    q: "O que é o Strategic Assessment?",
+    q: "O que é o Human Mobility Assessment?",
     a: "Trabalho estratégico real com entregável físico, não apenas uma consulta. O Assessment consiste numa sessão dedicada com um founder, mapeamento completo de perfil, riscos, estratégias e cronograma. Inclui também o Human Dimension Assessment, conduzido por Frederico Prado com o apoio da Dra. Letícia de Mello. Cada proposta é personalizada e desenhada à medida da complexidade do caso, seja para um particular ou para uma empresa.",
   },
   {
     q: "A MOOVIA trabalha com pacotes ou planos de serviço?",
-    a: "Não. Cada cliente recebe uma proposta construída a partir do seu Strategic Assessment. Não existe Plano A, B ou C. Existe um mandato personalizado. Um alfaiate não tem prateleira. Nós também não.",
+    a: "Não. Cada cliente recebe uma proposta construída a partir do seu Human Mobility Assessment. Não existe Plano A, B ou C. Existe um mandato personalizado. Um alfaiate não tem prateleira. Nós também não.",
   },
   {
     q: "Quanto tempo leva o processo de transição?",
-    a: "Depende do perfil. Um profissional com proposta de trabalho confirmada pode estar operacional em 30 a 90 dias. Uma família em transição patrimonial pode levar de 3 a 12 meses. O cronograma real é definido no Strategic Assessment.",
+    a: "Depende do perfil. Um profissional com proposta de trabalho confirmada pode estar operacional em 30 a 90 dias. Uma família em transição patrimonial pode levar de 3 a 12 meses. O cronograma real é definido no Human Mobility Assessment.",
   },
   {
     q: "Quanto custa a transição completa com a MOOVIA?",
-    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta, desde o Strategic Assessment até um mandato completo, é construída à medida da necessidade específica de cada cliente. O valor é sempre definido após entendermos a complexidade do que precisa de ser feito.",
+    a: "Não trabalhamos com tabela de preços nem pacotes fechados. Cada proposta, desde o Human Mobility Assessment até um mandato completo, é construída à medida da necessidade específica de cada cliente. O valor é sempre definido após entendermos a complexidade do que precisa de ser feito.",
   },
   {
     q: "A MOOVIA atende apenas brasileiros?",
@@ -144,7 +144,7 @@ function FAQPage() {
             para as decisões que exigem clareza.
           </h1>
           <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.7] max-w-[720px]">
-            Sobre a MOOVIA, o Strategic Assessment, o mandato completo e o Global Mobility Assurance para empresas.
+            Sobre a MOOVIA, o Human Mobility Assessment, o mandato completo e o Global Mobility Assurance para empresas.
           </p>
         </div>
       </section>

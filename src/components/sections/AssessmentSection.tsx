@@ -22,7 +22,7 @@ export function AssessmentSection() {
               viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              Global Mobility Assurance
+              Human Mobility Assessment
             </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ export function AssessmentSection() {
             className="font-body text-[16px] md:text-[17px] font-[300] text-w35 leading-[1.9] max-w-[500px] space-y-6"
           >
             <p>
-              A Avaliação Global Mobility Success traduz uma decisão complexa e de alto impacto num plano estratégico estruturado e tangível.
+              O Human Mobility Assessment traduz uma decisão complexa e de alto impacto num plano estratégico estruturado e tangível.
             </p>
             <p>
               Nesta sessão de consultoria, conduzimos uma análise exaustiva ao contexto familiar e corporativo, mapeando riscos, prioridades e oportunidades para arquitetar uma transição segura.
@@ -77,7 +77,7 @@ export function AssessmentSection() {
               O que receberá
             </p>
             <h3 className="font-display text-[26px] font-[300] text-white leading-tight mb-2 text-center">
-              Avaliação Global Mobility Success
+              Human Mobility Assessment
             </h3>
             <p className="font-body text-[12px] font-[300] text-w35 uppercase tracking-widest text-center mb-10">
               Sessão de Consultoria Estratégica
@@ -87,7 +87,7 @@ export function AssessmentSection() {
               {/* Human Dimension Assessment */}
               <div className="mb-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
                 <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
-                  Human Strategic Assessment
+                  Human Mobility Assessment
                 </p>
                 <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
                   Uma avaliação integrada da dimensão humana da mobilidade
@@ -163,7 +163,7 @@ export function AssessmentSection() {
               className="block text-center w-full bg-gold text-black font-body font-[600] text-[13px] tracking-[0.22em] uppercase py-6 transition-all hover:bg-gold-xl group overflow-hidden relative"
             >
               <span className="relative z-10 leading-tight">
-                Solicitar Assessment
+                Solicitar Human Mobility Assessment
               </span>
               <div className="absolute inset-0 bg-gold-xl translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             </a>
