@@ -16,7 +16,7 @@ export function ProcessSection() {
       id: "02",
       tag: "Plano Estratégico",
       title: "Converter risco em estratégia.",
-      body: "Combinamos entrevistas estruturadas, metodologias proprietárias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
+      body: "Combinamos entrevistas estruturadas, metodologias próprias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
     },
     {
       id: "03",
