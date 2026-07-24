@@ -12,7 +12,7 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "A MOOVIA aplica a metodologia Human Mobility Assurance, desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
+          "A MOOVIA aplica a metodologia Human Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
       },
       { property: "og:title", content: "Serviços MOOVIA | Human Mobility Assurance" },
       {
@@ -67,8 +67,20 @@ function Servicos() {
                 transition={{ delay: 0.2 }}
                 className="font-display text-[20px] md:text-[22px] font-[300] text-white/90 leading-[1.6] max-w-[760px] border-l-[3px] border-gold pl-6 py-2"
               >
-                A MOOVIA aplica a metodologia Human Mobility Assurance, desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.
+                A MOOVIA aplica a metodologia Human Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.
               </motion.p>
+
+              {/* ISO Footer Seal */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="pt-4 pb-2"
+              >
+                <p className="font-body text-[12px] text-white/40 italic">
+                  Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
+                </p>
+              </motion.div>
               
               <div className="space-y-4 pt-4">
                 <motion.p
