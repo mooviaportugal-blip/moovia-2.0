@@ -22,7 +22,7 @@ export function AssessmentSection() {
               viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              Avaliação Global Mobility Success
+              GMA
             </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
