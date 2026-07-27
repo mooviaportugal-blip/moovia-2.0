@@ -268,7 +268,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "Cobrado em BRL (≈ €1 = R$": { en: "Charged in BRL (≈ €1 = R$" },
   "Colaborador": { en: "Contributor" },
   "Colaboradores a mover (12 meses)": { en: "Employees to be transferred (12 months)" },
-  "Combinamos entrevistas estruturadas, metodologias proprietárias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.": { en: "We combine structured interviews, proprietary methodologies, and technology to transform personal, family, and professional factors into actionable insights. The result is a customized strategic plan that anticipates risks, sets priorities, and increases the likelihood of a successful transition." },
+  "A partir do diagnóstico inicial, desenvolvemos um roadmap estruturado, apoiado em metodologias proprietárias e tecnologia própria da MOOVIA, para mitigar os riscos e maximizar a probabilidade de uma transição fluida.": { en: "Starting from the initial diagnosis, we develop a structured roadmap, supported by MOOVIA's proprietary methodologies and in-house technology, to mitigate risks and maximise the likelihood of a smooth transition." },
   "Como": { en: "How" },
   "Como construímos a": { en: "How we built the" },
   "Como fazemos": { en: "How We Do It" },
