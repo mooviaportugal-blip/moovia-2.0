@@ -787,6 +787,8 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "RR": { en: "RR" },
   "RS": { en: "RS" },
   "Raízes e Asas.": { en: "Roots and Wings." },
+  "de Decisão.": { en: "of Decision." },
+  "Modelos preditivos sem validação estatística prévia": { en: "Predictive models without prior statistical validation" },
   "Real Estate Advisor | Algarve": { en: "Real Estate Advisor | Algarve" },
   "Real Estate Advisor | Grande Porto": { en: "Real Estate Advisor | Greater Porto" },
   "Recolha de Dados": { en: "Data Collection" },
