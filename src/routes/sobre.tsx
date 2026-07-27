@@ -133,6 +133,57 @@ function RaizesEAsas() {
           A arquitetura foi concebida para evoluir continuamente, constituindo um dos principais ativos intelectuais da MOOVIA.
         </p>
 
+      </div>
+
+    </section>
+  );
+}
+
+
+
+/* ─────────────────── COMO CONSTRUÍMOS A INTELIGÊNCIA DA MOOVIA ─────────────────── */
+function ComoConstruimosInteligencia() {
+  const cadeia = [
+    "Conhecimento humano",
+    "Dados estruturados",
+    "Regras e scores",
+    "Aprendizagem estatística",
+    "Modelos preditivos",
+    "Plataforma de decisão",
+  ];
+  return (
+    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Evolução do produto</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
+          Como construímos a <span className="italic text-gold-l">inteligência da MOOVIA.</span>
+        </h2>
+        <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
+          O produto nasce do conhecimento estruturado gerado pelos especialistas e dos dados recolhidos em cada caso.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-14">
+          {cadeia.map((etapa, i) => (
+            <div key={etapa} className="flex items-center gap-3 md:gap-4">
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="inline-block px-4 py-2 border border-gold/40 bg-w05 font-body font-[400] text-[13px] md:text-[14px] text-white/90"
+              >
+                {etapa}
+              </motion.span>
+              {i < cadeia.length - 1 && <span className="text-gold/60 text-lg">→</span>}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
+          <p>
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, experiência de risco e regras de negócio, numa lógica computacional explicável.
+          </p>
+        </div>
         {/* Base de Conhecimento */}
         <div className="mt-24 pt-16 border-t border-b18">
           <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Base de Conhecimento</p>
@@ -267,57 +318,6 @@ function RaizesEAsas() {
               A tecnologia pode ser copiada. O conhecimento organizado, as regras de decisão e a experiência acumulada ao longo de centenas de casos reais são muito mais difíceis de replicar. É isso que construímos desde o primeiro dia.
             </p>
           </div>
-        </div>
-      </div>
-
-    </section>
-  );
-}
-
-
-
-/* ─────────────────── COMO CONSTRUÍMOS A INTELIGÊNCIA DA MOOVIA ─────────────────── */
-function ComoConstruimosInteligencia() {
-  const cadeia = [
-    "Conhecimento humano",
-    "Dados estruturados",
-    "Regras e scores",
-    "Aprendizagem estatística",
-    "Modelos preditivos",
-    "Plataforma de decisão",
-  ];
-  return (
-    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
-      <div className="max-w-[1100px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Evolução do produto</p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
-          Como construímos a <span className="italic text-gold-l">inteligência da MOOVIA.</span>
-        </h2>
-        <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
-          O produto nasce do conhecimento estruturado gerado pelos especialistas e dos dados recolhidos em cada caso.
-        </p>
-
-        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-14">
-          {cadeia.map((etapa, i) => (
-            <div key={etapa} className="flex items-center gap-3 md:gap-4">
-              <motion.span
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="inline-block px-4 py-2 border border-gold/40 bg-w05 font-body font-[400] text-[13px] md:text-[14px] text-white/90"
-              >
-                {etapa}
-              </motion.span>
-              {i < cadeia.length - 1 && <span className="text-gold/60 text-lg">→</span>}
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
-          <p>
-            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, experiência de risco e regras de negócio, numa lógica computacional explicável.
-          </p>
         </div>
 
       </div>
