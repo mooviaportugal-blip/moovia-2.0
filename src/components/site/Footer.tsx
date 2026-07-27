@@ -110,7 +110,7 @@ export function Footer() {
               Guilherme Souza
             </a>
           </span>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
             {legal.map((p) => {
               const to = LEGAL_ROUTES[p.slug];
               if (!to) return null;
@@ -120,7 +120,12 @@ export function Footer() {
                 </Link>
               );
             })}
+            <span className="inline-flex items-center gap-2 text-w35/80">
+              <ShieldCheck size={14} weight="thin" className="text-gold/70" />
+              <span className="text-[11px] tracking-[0.12em] uppercase">RGPD Compliance</span>
+            </span>
           </div>
+
         </div>
 
         {/* LEGAL DISCLAIMER */}
