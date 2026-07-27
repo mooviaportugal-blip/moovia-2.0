@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CommercialModelSection } from "@/components/sections/CommercialModelSection";
+import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
 
 const COLABORADOR = [
   "Acolhimento",
@@ -93,7 +93,7 @@ export function HumanMobilitySection() {
           </p>
         </div>
 
-        <CommercialModelSection variant="compact" className="mt-20" />
+        <BusinessModelSection variant="compact" className="mt-20" />
 
         <div className="mt-14 flex justify-center">
 
