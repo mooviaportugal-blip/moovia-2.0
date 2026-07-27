@@ -3,6 +3,7 @@ import { LinkedinLogo, InstagramLogo, WhatsappLogo, ShieldCheck } from "@phospho
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
+import gdprBadge from "@/assets/gdpr-badge.png.asset.json";
 
 const LEGAL_ROUTES: Record<string, string> = {
   "politica-privacidade": "/privacidade",
