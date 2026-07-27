@@ -53,7 +53,7 @@ function SobrePage() {
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
-      <RaizesEAsas />
+      
       <ComoConstruimosInteligencia />
       <ComoFazemosSection />
       
@@ -64,54 +64,8 @@ function SobrePage() {
   );
 }
 
-/* ─────────────────────── LÓGICA DE DECISÃO ─────────────────────── */
-function RaizesEAsas() {
-  const etapas = [
-    { n: "01", titulo: "Recolha de Dados", texto: "Estruturação do conhecimento humano em variáveis mensuráveis, através de entrevistas conduzidas por especialistas." },
-    { n: "02", titulo: "Máquina de Regras", texto: "Motor computacional que aplica critérios explícitos, evidenciando dependências, conflitos e fatores críticos de sucesso." },
-    { n: "03", titulo: "Dashboard", texto: "Visão executiva integrada dos resultados, com cada recomendação rastreável até à regra que a originou." },
-  ];
-  return (
-    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
-      <div className="max-w-[1100px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Lógica de Decisão</p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
-          Metodologia <span className="italic text-gold-l">de Decisão.</span>
-        </h2>
-        <p className="max-w-[780px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-14">
-          O conhecimento da equipa converte-se numa lógica computacional explicável. A informação percorre um caminho auditável, da entrevista à recomendação, sem passos ocultos.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
-          {etapas.map((e, i) => (
-            <motion.div
-              key={e.n}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative border border-b18 bg-w05 p-8"
-            >
-              <span className="block font-display text-[1.4rem] font-[300] text-gold mb-3">{e.n}</span>
-              <h3 className="font-display text-[1.15rem] text-white mb-3 font-[300]">{e.titulo}</h3>
-              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75]">{e.texto}</p>
-              {i < etapas.length - 1 && (
-                <span className="hidden md:block absolute top-1/2 -right-4 text-gold/60 text-2xl font-thin">→</span>
-              )}
-            </motion.div>
-          ))}
-        </div>
-        <div className="mt-12 border-l-2 border-gold pl-6 max-w-[820px]">
-          <p className="font-body font-[300] italic text-[16px] md:text-[18px] text-white/85 leading-[1.7]">
-            Framework próprio aplicado na fase de Recolha de Dados, estruturando o conhecimento humano em variáveis mensuráveis antes de alimentar o motor de regras.
-          </p>
-          <p className="mt-4 font-display font-[200] text-gold-l text-[clamp(18px,2vw,22px)] leading-[1.4]">
-            Uma abordagem estabelecida e comprovada. Cada resultado é rastreável até à regra que o originou.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
 
 /* ─────────────────── COMO CONSTRUÍMOS A INTELIGÊNCIA DA MOOVIA ─────────────────── */
 function ComoConstruimosInteligencia() {
