@@ -64,7 +64,7 @@ function SobrePage() {
   );
 }
 
-/* ─────────────────────── RAÍZES E ASAS (Lógica de Decisão) ─────────────────────── */
+/* ─────────────────────── LÓGICA DE DECISÃO ─────────────────────── */
 function RaizesEAsas() {
   const etapas = [
     { n: "01", titulo: "Recolha de Dados", texto: "Estruturação do conhecimento humano em variáveis mensuráveis, através de entrevistas conduzidas por especialistas." },
@@ -76,7 +76,7 @@ function RaizesEAsas() {
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Lógica de Decisão</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
-          Metodologia <span className="italic text-gold-l">Raízes e Asas.</span>
+          Metodologia <span className="italic text-gold-l">de Decisão.</span>
         </h2>
         <p className="max-w-[780px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-14">
           O conhecimento da equipa converte-se numa lógica computacional explicável. A informação percorre um caminho auditável, da entrevista à recomendação, sem passos ocultos.
@@ -124,8 +124,8 @@ function ComoConstruimosInteligencia() {
     "Plataforma de decisão",
   ];
   const naoPromessas = [
-    "Uma plataforma completa pronta para comercialização",
     "Machine Learning sem base de dados suficiente",
+    "Modelos preditivos sem validação estatística prévia",
     "Um sistema que substitua psicólogos, consultores ou decisões humanas",
   ];
   return (
