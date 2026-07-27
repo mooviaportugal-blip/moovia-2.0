@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { LinkedinLogo, InstagramLogo, WhatsappLogo } from "@phosphor-icons/react";
+import { LinkedinLogo, InstagramLogo, WhatsappLogo, ShieldCheck } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
