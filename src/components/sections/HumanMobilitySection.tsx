@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { CommercialModelSection } from "@/components/sections/CommercialModelSection";
 
 const COLABORADOR = [
   "Acolhimento",
