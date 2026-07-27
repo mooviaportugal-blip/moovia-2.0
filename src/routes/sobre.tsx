@@ -149,11 +149,6 @@ function ComoConstruimosInteligencia() {
     "Modelos preditivos",
     "Plataforma de decisão",
   ];
-  const naoPromessas = [
-    "Machine Learning sem base de dados suficiente",
-    "Modelos preditivos sem validação estatística prévia",
-    "Um sistema que substitua psicólogos, consultores ou decisões humanas",
-  ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
       <div className="max-w-[1100px] mx-auto">
