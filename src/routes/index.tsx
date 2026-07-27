@@ -13,7 +13,7 @@ import { CasesSection } from "@/components/sections/CasesSection";
 import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
 
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
-import { FamiliesSection } from "@/components/sections/FamiliesSection";
+import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
 
 import { MaiaSection } from "@/components/sections/MaiaSection";
 
@@ -137,7 +137,7 @@ function Home() {
       <AssessmentSection />
       <EcossistemaSection />
       
-      <FamiliesSection />
+      <BusinessModelSection />
       
       <LisboaGallery />
       <BlogTeaserSection />
