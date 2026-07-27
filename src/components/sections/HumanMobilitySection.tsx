@@ -92,7 +92,9 @@ export function HumanMobilitySection() {
           </p>
         </div>
 
-        <div className="mt-14 flex justify-center">
+        <CommercialModelSection variant="compact" className="mt-20" />
+
+
           <Link
             to="/empresas"
             className="group relative inline-flex overflow-hidden border border-gold/50 text-gold hover:text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate transition-colors"
