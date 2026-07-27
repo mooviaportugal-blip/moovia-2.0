@@ -321,7 +321,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "Cruzamos inteligência humana e tecnologia": { en: "We combine human intelligence and technology" },
   "Cultural Adaptation": { en: "Cultural Adaptation" },
   "Cursor": { en: "Cursor" },
-  "Custo total estimado por expatriado": { en: "Estimated total cost per expatriate" },
+  "Custo total estimado por expatriado (por missão)": { en: "Estimated total cost per expatriate (per assignment)" },
   "DANY": { en: "DANY" },
   "DF": { en: "DF" },
   "DNA DA MOOVIA": { en: "MOOVIA'S DNA" },
