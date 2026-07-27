@@ -94,6 +94,7 @@ export function HumanMobilitySection() {
 
         <CommercialModelSection variant="compact" className="mt-20" />
 
+        <div className="mt-14 flex justify-center">
 
           <Link
             to="/empresas"
