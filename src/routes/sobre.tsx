@@ -53,7 +53,8 @@ function SobrePage() {
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
-      
+      <RaizesEAsas />
+
       <ComoConstruimosInteligencia />
       <ComoFazemosSection />
       
