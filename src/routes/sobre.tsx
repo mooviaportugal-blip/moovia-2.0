@@ -53,7 +53,8 @@ function SobrePage() {
       <ComparacaoCategoria />
       <Diferencia />
       <MetodoSection />
-      
+      <RaizesEAsas />
+
       <ComoConstruimosInteligencia />
       <ComoFazemosSection />
       
@@ -63,7 +64,78 @@ function SobrePage() {
     </SiteLayout>
   );
 }
+/* ─────────────────────── RAÍZES E ASAS ─────────────────────── */
+function RaizesEAsas() {
+  const camadas = [
+    {
+      n: "01",
+      titulo: "Aquisição estruturada de dados",
+      texto: "Questionários, entrevistas e evidências documentais que transformam contexto humano em informação organizada.",
+    },
+    {
+      n: "02",
+      titulo: "Validação especializada",
+      texto: "A experiência humana assegura que o contexto específico de cada missão é corretamente interpretado.",
+    },
+  ];
 
+  const escala = [
+    { valor: "18+", label: "Dimensões" },
+    { valor: "74", label: "Subdimensões" },
+    { valor: "800+", label: "Variáveis estruturadas" },
+    { valor: "2.300+", label: "Regras de decisão" },
+    { valor: "147", label: "Fatores de ponderação" },
+  ];
+
+  return (
+    <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Metodologia Própria</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
+          Metodologia <span className="italic text-gold-l">Raízes e Asas®.</span>
+        </h2>
+        <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-6">
+          Um framework proprietário de engenharia do conhecimento que formaliza décadas de experiência em adaptação humana, convertendo conceitos psicológicos, familiares e comportamentais em variáveis estruturadas, indicadores e regras de decisão que alimentam o Motor de Decisão da MOOVIA.
+        </p>
+        <p className="max-w-[820px] font-body font-[300] text-[15px] md:text-[16px] text-w35 leading-[1.9] mb-14">
+          O Motor de Decisão da MOOVIA assenta em camadas complementares que cruzam centenas de variáveis através de metodologias e ponderações proprietárias, sempre com validação especializada.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {camadas.map((c, i) => (
+            <motion.div
+              key={c.n}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="border border-b18 bg-w05 p-8"
+            >
+              <span className="block font-display text-[1.4rem] font-[300] text-gold mb-3">{c.n}</span>
+              <h3 className="font-display text-[1.15rem] text-white mb-3 font-[300]">{c.titulo}</h3>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75]">{c.texto}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-px bg-b18 border border-b18">
+          {escala.map((e) => (
+            <div key={e.label} className="bg-black p-6 text-center">
+              <span className="block font-display font-[200] text-gold-l text-[clamp(22px,2.4vw,30px)] leading-none mb-2">
+                {e.valor}
+              </span>
+              <span className="font-body text-[12px] font-[300] text-w35 leading-[1.5]">{e.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8 font-body text-[13px] font-[300] italic text-w35 leading-[1.8] max-w-[820px]">
+          A arquitetura foi concebida para evoluir continuamente, constituindo um dos principais ativos intelectuais da MOOVIA.
+        </p>
+      </div>
+    </section>
+  );
+}
 
 
 
