@@ -3,6 +3,7 @@ import { LinkedinLogo, InstagramLogo, WhatsappLogo, ShieldCheck } from "@phospho
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
+import gdprBadge from "@/assets/gdpr-badge.png.asset.json";
 
 const LEGAL_ROUTES: Record<string, string> = {
   "politica-privacidade": "/privacidade",
@@ -112,7 +113,7 @@ export function Footer() {
           </span>
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
             <span className="inline-flex items-center gap-2 text-w35/80">
-              <ShieldCheck size={14} weight="thin" className="text-gold/70" />
+              <img src={gdprBadge.url} alt="Selo RGPD / GDPR" className="h-6 w-6 object-contain" loading="lazy" />
               <span className="text-[11px] tracking-[0.12em] uppercase">RGPD Compliance</span>
             </span>
           </div>
