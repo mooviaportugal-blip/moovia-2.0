@@ -188,19 +188,6 @@ function ComoConstruimosInteligencia() {
           </p>
         </div>
 
-        <div className="mt-12 max-w-[860px] p-8 border-l-[3px] border-gold/40 bg-[#0a0d18]">
-          <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-5">
-            O que não prometemos ainda
-          </p>
-          <ul className="space-y-3">
-            {naoPromessas.map((item) => (
-              <li key={item} className="flex items-start gap-3 font-body font-[300] text-[15px] text-white/85 leading-[1.7]">
-                <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   );
