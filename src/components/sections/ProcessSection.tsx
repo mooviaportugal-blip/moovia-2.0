@@ -16,25 +16,25 @@ export function ProcessSection() {
       id: "02",
       tag: "Plano Estratégico",
       title: "Converter risco em estratégia.",
-      body: "A partir do diagnóstico inicial, desenvolvemos um roadmap estruturado, apoiado em metodologias proprietárias e tecnologia própria da MOOVIA, para mitigar os riscos e maximizar a probabilidade de uma transição fluida.",
+      body: "Combinamos entrevistas estruturadas, metodologias próprias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
     },
     {
       id: "03",
       tag: "Orquestração",
       title: "Executar com inteligência.",
-      body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe.",
+      body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe. Esta orquestração pode ser feita através da rede de parceiros já existente do cliente ou da rede de especialistas da própria MOOVIA, consoante o que melhor servir cada mobilidade.",
     },
     {
       id: "04",
       tag: "Integração",
-      title: "Acompanhamento pós-chegada.",
-      body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. É nesta etapa que neutralizamos os principais fatores de turnover.",
+      title: "Assessment de chegada e acompanhamento pós-chegada.",
+      body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. Realizamos o assessment de chegada e acompanhamos de perto esta etapa para neutralizar os principais fatores de turnover.",
     },
     {
       id: "05",
       tag: "Sucesso",
       title: "O foco no longo prazo.",
-      body: "Avaliamos o impacto duradouro da transição: estabilidade, integração efetiva e satisfação, assegurando o retorno final sobre o investimento da mudança.",
+      body: "Avaliamos o impacto duradouro da transição através de marcos estruturados aos 30, 60 e 90 dias, medindo estabilidade, integração efetiva e satisfação, e assegurando o retorno final sobre o investimento da mudança.",
     },
   ];
 
