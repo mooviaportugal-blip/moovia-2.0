@@ -89,7 +89,10 @@ export function HumanMobilitySection() {
 
         <div className="mt-12 bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto text-center">
           <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto">
-            <strong className="text-gold-l font-[500]">Confidencialidade garantida.</strong> O acompanhamento do executivo é integralmente confidencial e realizado em conformidade com o RGPD. A empresa recebe indicadores de evolução, níveis de risco e recomendações de gestão, nunca dados pessoais ou informações protegidas do colaborador.
+            <strong className="text-gold-l font-[500]">Confidencialidade garantida.</strong> O acompanhamento do executivo é integralmente confidencial e realizado em conformidade com o RGPD e com a legislação laboral portuguesa. A empresa recebe indicadores de evolução, níveis de integração e recomendações de gestão, nunca dados pessoais ou informações protegidas do colaborador.
+          </p>
+          <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-4">
+            A participação no programa é totalmente voluntária. A decisão de participar ou não participar, bem como a decisão de autorizar ou não a partilha dos indicadores previstos, não produzirá qualquer consequência laboral, remuneratória, disciplinar ou de avaliação profissional.
           </p>
         </div>
 
