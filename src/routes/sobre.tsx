@@ -410,11 +410,12 @@ function ComparacaoCategoria() {
               
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <p className="text-[9px] uppercase tracking-tighter text-w35">Global Mobility Risk Score</p>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Mission Readiness Index</p>
                   <p className="text-2xl font-display font-[300] text-white">24 <span className="text-sm text-white/40">/ 100</span></p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">Low Risk</span>
+                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">🟢 Healthy Mission</span>
+
                 </div>
               </div>
 
@@ -438,8 +439,9 @@ function ComparacaoCategoria() {
               </div>
 
               <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
-                Nota: "Estes indicadores não contêm dados pessoais. São métricas agregadas para apoio à decisão estratégica."
+                Nota: "Estes indicadores são produzidos a partir da metodologia Global Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
               </p>
+
             </div>
 
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.85]">
