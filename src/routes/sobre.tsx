@@ -439,8 +439,9 @@ function ComparacaoCategoria() {
               </div>
 
               <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
-                Nota: "Estes indicadores não contêm dados pessoais. São métricas agregadas para apoio à decisão estratégica."
+                Nota: "Estes indicadores são produzidos a partir da metodologia Global Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
               </p>
+
             </div>
 
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.85]">
