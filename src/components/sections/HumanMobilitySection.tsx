@@ -12,7 +12,7 @@ const COLABORADOR = [
 
 const EMPRESA = [
   "Monitorização estruturada da mobilidade",
-  "Indicadores de Global Mobility Risk",
+  "Indicadores de Mission Readiness Index",
   "Global Mobility Success Report",
   "Recomendações para RH e liderança",
   "Maior capacidade de intervenção preventiva",
