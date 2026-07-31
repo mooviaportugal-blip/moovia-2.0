@@ -410,11 +410,12 @@ function ComparacaoCategoria() {
               
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <p className="text-[9px] uppercase tracking-tighter text-w35">Global Mobility Risk Score</p>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35">Mission Readiness Index</p>
                   <p className="text-2xl font-display font-[300] text-white">24 <span className="text-sm text-white/40">/ 100</span></p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">Low Risk</span>
+                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">🟢 Healthy Mission</span>
+
                 </div>
               </div>
 
