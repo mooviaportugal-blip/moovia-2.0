@@ -87,14 +87,39 @@ export function HumanMobilitySection() {
           ))}
         </div>
 
-        <div className="mt-12 bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto text-center">
-          <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto">
-            <strong className="text-gold-l font-[500]">Confidencialidade garantida.</strong> O acompanhamento do executivo é integralmente confidencial e realizado em conformidade com o RGPD e com a legislação laboral portuguesa. A empresa recebe indicadores de evolução, níveis de integração e recomendações de gestão, nunca dados pessoais ou informações protegidas do colaborador.
+        <div className="mt-12 bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto">
+          <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6 text-center">
+            Confidencialidade e separação de relatórios
           </p>
-          <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-4">
-            A participação no programa é totalmente voluntária. A decisão de participar ou não participar, bem como a decisão de autorizar ou não a partilha dos indicadores previstos, não produzirá qualquer consequência laboral, remuneratória, disciplinar ou de avaliação profissional.
+          <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto text-center">
+            O acompanhamento do participante é confidencial e realizado em conformidade com a legislação aplicável.
+          </p>
+          <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/80 leading-[1.8] max-w-[900px] mx-auto text-center mt-4">
+            A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao relatório pessoal do colaborador.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[900px] mx-auto">
+            <div className="border border-b18 bg-w05 p-6">
+              <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                Relatório Individual
+              </p>
+              <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                Exclusivo do participante, com o seu roadmap e recomendações pessoais.
+              </p>
+            </div>
+            <div className="border border-b18 bg-w05 p-6">
+              <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                Relatório Corporativo
+              </p>
+              <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
+              </p>
+            </div>
+          </div>
+          <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-6 text-center">
+            Os resultados produzidos pela MOOVIA não constituem instrumento de avaliação de desempenho e não podem, por si só, fundamentar decisões de remuneração, promoção, procedimento disciplinar ou cessação da relação laboral. A participação no programa é voluntária.
           </p>
         </div>
+
 
         <BusinessModelSection variant="compact" className="mt-20" />
 

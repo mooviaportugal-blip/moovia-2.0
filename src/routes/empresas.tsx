@@ -362,7 +362,7 @@ function BeneficioGestaoRisco() {
             A intervenção da MOOVIA obedece a uma lógica estruturalmente idêntica: o colaborador recebe um apoio de imenso valor percebido, enquanto a empresa assegura uma ferramenta estratégica de retenção, integração e proteção do seu capital humano.
           </p>
           <p className="font-body font-[300] text-[12px] leading-[1.7] text-w35/70">
-            A participação no programa é totalmente voluntária. A decisão de participar ou não participar, bem como a decisão de autorizar ou não a partilha dos indicadores previstos, não produzirá qualquer consequência laboral, remuneratória, disciplinar ou de avaliação profissional.
+            A participação no programa é voluntária. A decisão de participar ou de não participar não produzirá qualquer consequência laboral, remuneratória, disciplinar ou de avaliação profissional. Os resultados produzidos pela MOOVIA não constituem instrumento de avaliação de desempenho e não podem, por si só, fundamentar decisões de remuneração, promoção, procedimento disciplinar ou cessação da relação laboral.
           </p>
         </div>
 
