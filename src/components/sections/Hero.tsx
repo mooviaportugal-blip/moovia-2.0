@@ -40,9 +40,9 @@ export function Hero() {
           key={locale}
           className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
-          <span className="text-white/60 font-[200] block mb-2">Ajudamos empresas a reduzir</span>
-          <span className="text-white font-[400] block">o risco humano da</span>
-          <span className="text-gold-l italic font-[300] block">mobilidade internacional.</span>
+          <span className="text-white/60 font-[200] block mb-2">Human Mobility Assurance</span>
+          <span className="text-white font-[400] block">para empresas que investem</span>
+          <span className="text-gold-l italic font-[300] block">em talento internacional.</span>
         </h1>
 
         <motion.div
@@ -52,10 +52,7 @@ export function Hero() {
           className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
           <p>
-            As empresas alocam capital substancial na contratação internacional, mas poucas avaliam o risco sistémico associado à integração, retenção e quebra de produtividade.
-          </p>
-          <p>
-            A MOOVIA implementa uma arquitetura estratégica desenvolvida para antecipar riscos operacionais e garantir o sucesso a longo prazo em cada mudança.
+            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA mede aquilo que realmente determina o sucesso da mobilidade internacional: integração, adaptação familiar, retenção e produtividade.
           </p>
         </motion.div>
 
@@ -65,7 +62,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="font-display italic text-[18px] md:text-[22px] font-[300] text-gold-l/90 leading-[1.5] max-w-[520px] mb-12 mx-auto lg:mx-0 border-l-[3px] border-gold/40 pl-5"
         >
-          "A transição internacional não termina no desembarque.<br className="hidden sm:block" /> É nesse momento que ela verdadeiramente começa."
+          "A chegada é apenas o início.<br className="hidden sm:block" /> O sucesso é o verdadeiro destino."
         </motion.blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
@@ -77,7 +74,7 @@ export function Hero() {
             <span className="relative z-10 transition-colors duration-300 group-hover:text-gold flex flex-col leading-tight items-center text-center">
               <span>Para Empresas</span>
               <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
-                Reduzindo turnover, aumentando retenção e protegendo o ROI da contratação internacional.
+                Proteja o retorno do investimento em talento internacional.
               </span>
             </span>
           </Link>
@@ -96,7 +93,7 @@ export function Hero() {
             <span className="relative z-10 transition-colors duration-300 group-hover:text-[#06091a] flex flex-col leading-tight items-center text-center">
               <span>Para Executivos Internacionais</span>
               <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
-                A metodologia utilizada pelas empresas para apoiar executivos e famílias durante a integração internacional.
+                Uma transição internacional mais previsível para si e para a sua família.
               </span>
             </span>
           </Link>
