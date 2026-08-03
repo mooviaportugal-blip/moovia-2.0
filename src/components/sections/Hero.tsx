@@ -40,7 +40,7 @@ export function Hero() {
           key={locale}
           className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
-          <span className="text-white/60 font-[200] block mb-2">Human Mobility Assurance</span>
+          <span className="text-white/60 font-[200] block mb-2">Global Mobility Strategy</span>
           <span className="text-white font-[400] block">para empresas que investem</span>
           <span className="text-gold-l italic font-[300] block">em talento internacional.</span>
         </h1>
