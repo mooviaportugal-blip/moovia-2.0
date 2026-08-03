@@ -156,7 +156,7 @@ function ComoConstruimosInteligencia() {
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Evolução do produto</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
-          Como construímos a <span className="italic text-gold-l">inteligência da MOOVIA.</span>
+          Como construímos o <span className="italic text-gold-l">Global Mobility Assurance.</span>
         </h2>
         <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
           O produto nasce do conhecimento estruturado gerado pelos especialistas e dos dados recolhidos em cada caso.
