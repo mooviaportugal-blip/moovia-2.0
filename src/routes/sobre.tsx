@@ -156,7 +156,7 @@ function ComoConstruimosInteligencia() {
       <div className="max-w-[1100px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Evolução do produto</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-8">
-          Como construímos o <span className="italic text-gold-l">Global Mobility Assurance.</span>
+          A metodologia foi desenvolvida a partir de <span className="italic text-gold-l">oito pilares.</span>
         </h2>
         <p className="max-w-[820px] font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9] mb-12">
           O produto nasce do conhecimento estruturado gerado pelos especialistas e dos dados recolhidos em cada caso.
@@ -222,11 +222,6 @@ function HowWeBuiltTimeline() {
               className="relative"
             >
               <span className="absolute -left-[42px] md:-left-[50px] top-2 h-2 w-2 rounded-full bg-gold" />
-              {m.destaque && (
-                <p className="font-display font-[300] text-gold text-[clamp(20px,2.4vw,28px)] leading-tight mb-1">
-                  {m.destaque}
-                </p>
-              )}
               <p className="font-body font-[300] text-[15px] md:text-[16px] text-white/85 leading-[1.7]">
                 {m.texto}
               </p>
@@ -235,7 +230,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu de um processo de validação.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e metodologias de Assurance.
         </p>
       </div>
     </section>
