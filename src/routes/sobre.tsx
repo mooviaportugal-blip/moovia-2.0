@@ -193,22 +193,23 @@ function ComoConstruimosInteligencia() {
 /* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSESSMENT ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
-    { destaque: "Experiência como expatriados", texto: "Experiência em Negócios Internacionais" },
-    { texto: "Metodologias de Revenue Assurance" },
-    { texto: "Metodologias psicológicas" },
-    { texto: "Engenharia e motor de regras" },
-    { texto: "Assessments piloto" },
-    { texto: "Refinamento da metodologia" },
-    { texto: "Validação jurídica (RGPD)" },
-    { texto: "Lançamento no mercado" },
+    { texto: "Experiência internacional como expatriados" },
+    { texto: "Liderança em negócios internacionais" },
+    { texto: "Metodologias de Assurance e gestão de risco" },
+    { texto: "Ciência comportamental e metodologias psicológicas" },
+    { texto: "Engenharia de decisão e motor de regras" },
+    { texto: "Estudos de caso e assessments reais" },
+    { texto: "Refinamento metodológico contínuo" },
+    { texto: "Arquitetura jurídica e Privacy by Design" },
   ];
   return (
     <section className="bg-black py-[120px] px-6 lg:px-20 border-t border-b18">
       <div className="max-w-[1000px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Origem e validação</p>
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Origem e método</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14">
-          Como construímos o <span className="italic text-gold-l">Global Mobility Assurance.</span>
+          A metodologia foi desenvolvida a partir de <span className="italic text-gold-l">oito pilares.</span>
         </h2>
+
 
         <ol className="relative border-l border-gold/30 pl-8 md:pl-10 space-y-8">
           {marcos.map((m, i) => (
