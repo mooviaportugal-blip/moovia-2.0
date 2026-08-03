@@ -74,7 +74,7 @@ function RaizesEAsas() {
     },
     {
       n: "02",
-      titulo: "Validação especializada",
+      titulo: "Análise especializada",
       texto: "A experiência humana assegura que o contexto específico de cada missão é corretamente interpretado.",
     },
   ];
@@ -98,7 +98,7 @@ function RaizesEAsas() {
           Um framework proprietário de engenharia do conhecimento que formaliza décadas de experiência em adaptação humana, convertendo conceitos psicológicos, familiares e comportamentais em variáveis estruturadas, indicadores e regras de decisão que alimentam o Motor de Decisão da MOOVIA.
         </p>
         <p className="max-w-[820px] font-body font-[300] text-[15px] md:text-[16px] text-w35 leading-[1.9] mb-14">
-          O Motor de Decisão da MOOVIA assenta em camadas complementares que cruzam centenas de variáveis através de metodologias e ponderações proprietárias, sempre com validação especializada.
+          O Motor de Decisão da MOOVIA assenta em camadas complementares que cruzam centenas de variáveis através de metodologias e ponderações proprietárias, sempre com análise especializada.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">

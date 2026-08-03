@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-// Quote da Dra. Letícia — deixar string vazia até validação final.
+// Quote da Dra. Letícia — deixar string vazia até aprovação final.
 // Enquanto vazia, o bloco de citação NÃO é renderizado em produção.
 const leticiaQuote = "";
 
