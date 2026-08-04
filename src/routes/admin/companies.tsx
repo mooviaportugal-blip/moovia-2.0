@@ -18,7 +18,7 @@ function CompaniesAdmin() {
   }, []);
 
   const fetchCompanies = async () => {
-    const { data } = await supabase.from("companies").select("*").order("created_at", { ascending: false });
+    const { data } = await supabase.from("companies" as any).select("*").order("created_at", { ascending: false });
     setCompanies(data || []);
     setLoading(false);
   };

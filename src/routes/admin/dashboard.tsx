@@ -135,7 +135,7 @@ function KPISection() {
   );
 }
 
-function OverviewTab() {
+function OverviewTab({ displayExpatriates }: { displayExpatriates: any[] }) {
   const [selectedExp, setSelectedExp] = useState<any>(null);
 
   return (
@@ -335,7 +335,7 @@ function OverviewTab() {
   );
 }
 
-function ProcessesTab() {
+function ProcessesTab({ displayProcesses }: { displayProcesses: any[] }) {
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap gap-4 items-center justify-between mb-4">
@@ -495,7 +495,7 @@ export default function DashboardPage() {
         </header>
 
         <main>
-          {activeTab === "overview" ? <OverviewTab /> : <ProcessesTab />}
+          {activeTab === "overview" ? <OverviewTab displayExpatriates={displayExpatriates} /> : <ProcessesTab displayProcesses={displayProcesses} />}
         </main>
       </Reveal>
     </div>
