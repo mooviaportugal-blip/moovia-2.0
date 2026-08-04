@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 import { 
   Users, 
   TrendingUp, 
@@ -210,7 +212,7 @@ function OverviewTab() {
               </tr>
             </thead>
             <tbody>
-              {expatriates.map((exp) => (
+              {displayExpatriates.map((exp) => (
                 <tr 
                   key={exp.id} 
                   onClick={() => setSelectedExp(exp)}
@@ -348,7 +350,7 @@ function ProcessesTab() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {processes.map((p) => (
+        {displayProcesses.map((p) => (
           <Card key={p.id}>
             <div className="flex justify-between items-start mb-6">
               <div>
@@ -410,6 +412,51 @@ function ProcessesTab() {
 
 export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<"overview" | "processes">("overview");
+
+  // Fetch real data for current user's company
+  const { data: expatriatesData, isLoading: loadingExpatriates } = useQuery({
+    queryKey: ["expatriates"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("expatriates" as any)
+        .select("*");
+      if (error) throw error;
+      return data;
+    }
+  });
+
+  const { data: assessmentsData, isLoading: loadingAssessments } = useQuery({
+    queryKey: ["assessments"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("assessments" as any)
+        .select("*, expatriates(*)");
+      if (error) throw error;
+      return data;
+    }
+  });
+
+  // Use real data if available, otherwise fallback to mock for now
+  const displayExpatriates = expatriatesData && expatriatesData.length > 0 ? expatriatesData.map(e => ({
+    id: e.id,
+    name: e.name_masked,
+    city: e.city,
+    role: e.role,
+    score: e.score,
+    risk: e.risk_level.charAt(0).toUpperCase() + e.risk_level.slice(1),
+    lastMeasure: e.last_measurement_date || "N/A"
+  })) : expatriates;
+
+  const displayProcesses = assessmentsData && assessmentsData.length > 0 ? assessmentsData.map(a => ({
+    id: a.id,
+    name: a.expatriates?.name_masked || "N/A",
+    phase: a.phase.replace("_", " "),
+    progress: a.status === "completed" ? 5 : 3, // Logic for progress bar
+    total: 5,
+    nextStep: a.status === "completed" ? "Relatório Final" : "Acompanhamento",
+    scheduledDate: a.scheduled_date,
+    status: a.status === "completed" ? "Concluído" : a.status === "scheduled" ? "Agendado" : "Em curso"
+  })) : processes;
 
   return (
     <div className="min-h-screen bg-black text-white p-2">

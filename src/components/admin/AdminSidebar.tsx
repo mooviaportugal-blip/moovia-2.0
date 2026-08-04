@@ -22,7 +22,8 @@ import {
   Volume2,
   Globe,
   Workflow,
-  ChevronLeftSquare
+  ChevronLeftSquare,
+  Building2
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
@@ -32,6 +33,7 @@ import { useState } from "react";
 
 const menuItems = [
   { label: "Overview", icon: BarChart3, to: "/admin" },
+  { label: "Empresas Clientes", icon: Building2, to: "/admin/companies" },
   { label: "Client Dashboard", icon: LayoutDashboard, to: "/admin/dashboard" },
   { label: "Leads / CRM", icon: Users, to: "/admin/leads" },
   { label: "Assessments", icon: Package, to: "/admin/assessments" },

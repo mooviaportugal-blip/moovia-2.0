@@ -16,9 +16,11 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as EquipaRouteImport } from './routes/equipa'
 import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as Checkout2RouteImport } from './routes/checkout2'
@@ -40,6 +42,7 @@ import { Route as AdminImagesRouteImport } from './routes/admin.images'
 import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
 import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
 import { Route as AdminContentRouteImport } from './routes/admin.content'
+import { Route as AdminCompaniesRouteImport } from './routes/admin/companies'
 import { Route as AdminChatRouteImport } from './routes/admin.chat'
 import { Route as AdminBlogRouteImport } from './routes/admin.blog'
 import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
@@ -88,6 +91,11 @@ const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
   path: '/perguntas-frequentes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HomeRoute = HomeRouteImport.update({
   id: '/home',
   path: '/home',
@@ -101,6 +109,11 @@ const EquipaRoute = EquipaRouteImport.update({
 const EmpresasRoute = EmpresasRouteImport.update({
   id: '/empresas',
   path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CookiesRoute = CookiesRouteImport.update({
@@ -208,6 +221,11 @@ const AdminContentRoute = AdminContentRouteImport.update({
   path: '/content',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminCompaniesRoute = AdminCompaniesRouteImport.update({
+  id: '/companies',
+  path: '/companies',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminChatRoute = AdminChatRouteImport.update({
   id: '/chat',
   path: '/chat',
@@ -279,9 +297,11 @@ export interface FileRoutesByFullPath {
   '/checkout2': typeof Checkout2Route
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
+  '/dashboard': typeof DashboardRoute
   '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -293,6 +313,7 @@ export interface FileRoutesByFullPath {
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
+  '/admin/companies': typeof AdminCompaniesRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -323,9 +344,11 @@ export interface FileRoutesByTo {
   '/checkout2': typeof Checkout2Route
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
+  '/dashboard': typeof DashboardRoute
   '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -337,6 +360,7 @@ export interface FileRoutesByTo {
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
+  '/admin/companies': typeof AdminCompaniesRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -368,9 +392,11 @@ export interface FileRoutesById {
   '/checkout2': typeof Checkout2Route
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
+  '/dashboard': typeof DashboardRoute
   '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -382,6 +408,7 @@ export interface FileRoutesById {
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
+  '/admin/companies': typeof AdminCompaniesRoute
   '/admin/content': typeof AdminContentRoute
   '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -415,9 +442,11 @@ export interface FileRouteTypes {
     | '/checkout2'
     | '/contacto'
     | '/cookies'
+    | '/dashboard'
     | '/empresas'
     | '/equipa'
     | '/home'
+    | '/login'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -429,6 +458,7 @@ export interface FileRouteTypes {
     | '/admin/assessments'
     | '/admin/blog'
     | '/admin/chat'
+    | '/admin/companies'
     | '/admin/content'
     | '/admin/dashboard'
     | '/admin/gallery'
@@ -459,9 +489,11 @@ export interface FileRouteTypes {
     | '/checkout2'
     | '/contacto'
     | '/cookies'
+    | '/dashboard'
     | '/empresas'
     | '/equipa'
     | '/home'
+    | '/login'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -473,6 +505,7 @@ export interface FileRouteTypes {
     | '/admin/assessments'
     | '/admin/blog'
     | '/admin/chat'
+    | '/admin/companies'
     | '/admin/content'
     | '/admin/dashboard'
     | '/admin/gallery'
@@ -503,9 +536,11 @@ export interface FileRouteTypes {
     | '/checkout2'
     | '/contacto'
     | '/cookies'
+    | '/dashboard'
     | '/empresas'
     | '/equipa'
     | '/home'
+    | '/login'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -517,6 +552,7 @@ export interface FileRouteTypes {
     | '/admin/assessments'
     | '/admin/blog'
     | '/admin/chat'
+    | '/admin/companies'
     | '/admin/content'
     | '/admin/dashboard'
     | '/admin/gallery'
@@ -549,9 +585,11 @@ export interface RootRouteChildren {
   Checkout2Route: typeof Checkout2Route
   ContactoRoute: typeof ContactoRoute
   CookiesRoute: typeof CookiesRoute
+  DashboardRoute: typeof DashboardRoute
   EmpresasRoute: typeof EmpresasRoute
   EquipaRoute: typeof EquipaRoute
   HomeRoute: typeof HomeRoute
+  LoginRoute: typeof LoginRoute
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ServicosRoute: typeof ServicosRoute
@@ -617,6 +655,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PerguntasFrequentesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/home': {
       id: '/home'
       path: '/home'
@@ -636,6 +681,13 @@ declare module '@tanstack/react-router' {
       path: '/empresas'
       fullPath: '/empresas'
       preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookies': {
@@ -785,6 +837,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminContentRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/companies': {
+      id: '/admin/companies'
+      path: '/companies'
+      fullPath: '/admin/companies'
+      preLoaderRoute: typeof AdminCompaniesRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/chat': {
       id: '/admin/chat'
       path: '/chat'
@@ -897,6 +956,7 @@ interface AdminRouteChildren {
   AdminAssessmentsRoute: typeof AdminAssessmentsRoute
   AdminBlogRoute: typeof AdminBlogRoute
   AdminChatRoute: typeof AdminChatRoute
+  AdminCompaniesRoute: typeof AdminCompaniesRoute
   AdminContentRoute: typeof AdminContentRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
   AdminGalleryRoute: typeof AdminGalleryRoute
@@ -916,6 +976,7 @@ const AdminRouteChildren: AdminRouteChildren = {
   AdminAssessmentsRoute: AdminAssessmentsRoute,
   AdminBlogRoute: AdminBlogRoute,
   AdminChatRoute: AdminChatRoute,
+  AdminCompaniesRoute: AdminCompaniesRoute,
   AdminContentRoute: AdminContentRoute,
   AdminDashboardRoute: AdminDashboardRoute,
   AdminGalleryRoute: AdminGalleryRoute,
@@ -940,9 +1001,11 @@ const rootRouteChildren: RootRouteChildren = {
   Checkout2Route: Checkout2Route,
   ContactoRoute: ContactoRoute,
   CookiesRoute: CookiesRoute,
+  DashboardRoute: DashboardRoute,
   EmpresasRoute: EmpresasRoute,
   EquipaRoute: EquipaRoute,
   HomeRoute: HomeRoute,
+  LoginRoute: LoginRoute,
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ServicosRoute: ServicosRoute,
