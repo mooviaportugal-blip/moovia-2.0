@@ -81,7 +81,11 @@ function AdminSound() {
     const next = !buttonEnabled;
     const { error } = await supabase
       .from("site_settings")
-      .upsert({ key: "sound_button_enabled", value: String(next), type: "boolean" }, { onConflict: "key" });
+      .upsert({ 
+        key: "sound_button_enabled", 
+        value: String(next), 
+        type: "boolean" as any 
+      } as any, { onConflict: "key" });
     if (error) return toast.error("Erro ao salvar");
     setButtonEnabled(next);
     toast.success(next ? "Botão flutuante habilitado" : "Botão flutuante desabilitado");

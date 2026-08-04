@@ -32,8 +32,12 @@ function NotificationsPage() {
 
   async function save() {
     setSaving(true);
-    const rows = KEYS.map((k) => ({ key: k.key, value: values[k.key] ?? (k.type === "boolean" ? "false" : ""), type: k.type }));
-    const { error } = await supabase.from("site_settings").upsert(rows, { onConflict: "key" });
+    const rows = KEYS.map((k) => ({ 
+      key: k.key, 
+      value: values[k.key] ?? (k.type === "boolean" ? "false" : ""), 
+      type: k.type as any 
+    }));
+    const { error } = await supabase.from("site_settings").upsert(rows as any, { onConflict: "key" });
     setSaving(false);
     if (error) return toast.error(error.message);
     toast.success("Notificações salvas");

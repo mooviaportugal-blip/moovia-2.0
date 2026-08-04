@@ -86,7 +86,13 @@ export function LeadForm() {
       const history = JSON.parse(localStorage.getItem("moovia_history") || "[]");
 
       const { error } = await supabase.from("leads").insert({
-        ...form,
+        name: form.name || "Sem nome",
+        email: form.email,
+        whatsapp: form.whatsapp,
+        objective: form.objective,
+        timing: form.timing,
+        composition: form.composition,
+        decision_phase: form.decision_phase,
         source: "website_form",
         session_id: sid,
         utm_source: utm.source,

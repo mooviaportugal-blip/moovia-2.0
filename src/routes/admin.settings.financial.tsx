@@ -76,8 +76,8 @@ function FinancialPage() {
 
   async function saveMp() {
     setSavingMp(true);
-    const rows = MP_KEYS.map((k) => ({ key: k.key, value: values[k.key] ?? "", type: "text" }));
-    const { error } = await supabase.from("site_settings").upsert(rows, { onConflict: "key" });
+    const rows = MP_KEYS.map((k) => ({ key: k.key, value: values[k.key] ?? "", type: "text" as any }));
+    const { error } = await supabase.from("site_settings").upsert(rows as any, { onConflict: "key" });
     setSavingMp(false);
     if (error) return toast.error(error.message);
     toast.success("Credenciais Mercado Pago salvas");
@@ -87,7 +87,7 @@ function FinancialPage() {
     const next = !sandbox;
     setSandbox(next);
     const { error } = await supabase.from("site_settings").upsert(
-      { key: SANDBOX_KEY, value: String(next), type: "boolean" },
+      { key: SANDBOX_KEY, value: String(next), type: "boolean" as any } as any,
       { onConflict: "key" },
     );
     if (error) {
@@ -102,8 +102,8 @@ function FinancialPage() {
 
   async function save() {
     setSaving(true);
-    const rows = KEYS.map((k) => ({ key: k.key, value: values[k.key] ?? "", type: k.type }));
-    const { error } = await supabase.from("site_settings").upsert(rows, { onConflict: "key" });
+    const rows = KEYS.map((k) => ({ key: k.key, value: values[k.key] ?? "", type: k.type as any }));
+    const { error } = await supabase.from("site_settings").upsert(rows as any, { onConflict: "key" });
     setSaving(false);
     if (error) return toast.error(error.message);
     toast.success("Configurações financeiras salvas");

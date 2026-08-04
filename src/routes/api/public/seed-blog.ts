@@ -120,7 +120,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
 
         const { data, error } = await supabaseAdmin
           .from("posts")
-          .insert(payload)
+          .insert(payload as any)
           .select("id, slug")
           .single();
 

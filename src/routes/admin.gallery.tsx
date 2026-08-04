@@ -68,7 +68,7 @@ function AdminGallery() {
       .order("row_index")
       .order("position");
     if (error) toast.error(error.message);
-    else setItems((data as Img[]) || []);
+    else setItems((data as any[]) || []);
     setLoading(false);
   }
 
@@ -155,8 +155,8 @@ function AdminGallery() {
       after.map((it) => supabase.from("gallery_images").update({ position: it.position + 1 }).eq("id", it.id)),
     );
     const { error } = await supabase.from("gallery_images").insert({
-      gallery: src.gallery, row_index: src.row_index, position: src.position + 1, url: src.url, alt: src.alt,
-    });
+      gallery: src.gallery, row_index: src.row_index, position: (src.position as number) + 1, url: src.url, alt: src.alt,
+    } as any);
     if (error) return toast.error(error.message);
     toast.success("Imagem duplicada");
     load();

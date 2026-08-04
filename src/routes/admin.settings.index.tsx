@@ -26,7 +26,11 @@ function AirplaneToggle() {
     const next = !enabled;
     const { error } = await supabase
       .from("site_settings")
-      .upsert({ key: "airplane_enabled", value: String(next), type: "boolean" }, { onConflict: "key" });
+      .upsert({ 
+        key: "airplane_enabled", 
+        value: String(next), 
+        type: "boolean" as any 
+      } as any, { onConflict: "key" });
     setLoading(false);
     if (error) {
       toast.error("Erro ao salvar");
@@ -94,7 +98,11 @@ function SettingToggle({
     const next = !enabled;
     const { error } = await supabase
       .from("site_settings")
-      .upsert({ key: settingKey, value: String(next), type: "boolean" }, { onConflict: "key" });
+      .upsert({ 
+        key: settingKey, 
+        value: String(next), 
+        type: "boolean" as any 
+      } as any, { onConflict: "key" });
     setLoading(false);
     if (error) {
       toast.error("Erro ao salvar");

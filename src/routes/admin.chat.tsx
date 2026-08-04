@@ -46,7 +46,7 @@ function AdminChat() {
 
   useEffect(() => {
     // Trigger cleanup of chats older than 60 days (admin-only RPC)
-    supabase.rpc("cleanup_old_chat_logs" as any).then(({ data, error }) => {
+    (supabase as any).rpc("cleanup_old_chat_logs", {}).then(({ data, error }: any) => {
       if (!error && typeof data === "number" && data > 0) {
         toast.success(`${data} conversa(s) antigas removidas (>60 dias)`);
       }

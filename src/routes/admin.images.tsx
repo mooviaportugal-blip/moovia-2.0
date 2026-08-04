@@ -53,7 +53,7 @@ function AdminImages() {
       .eq("type", "image")
       .order("key");
     if (error) toast.error(error.message);
-    else setRows((data as any) || []);
+    else setRows((data as any[]) || []);
     setLoading(false);
   }
 
