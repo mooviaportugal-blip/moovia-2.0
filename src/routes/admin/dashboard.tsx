@@ -414,25 +414,25 @@ export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<"overview" | "processes">("overview");
 
   // Fetch real data for current user's company
-  const { data: expatriatesData, isLoading: loadingExpatriates } = useQuery({
+  const { data: expatriatesData } = useQuery({
     queryKey: ["expatriates"],
     queryFn: async () => {
       const { data, error } = await supabase
         .from("expatriates" as any)
         .select("*");
       if (error) throw error;
-      return data;
+      return data as any[];
     }
   });
 
-  const { data: assessmentsData, isLoading: loadingAssessments } = useQuery({
+  const { data: assessmentsData } = useQuery({
     queryKey: ["assessments"],
     queryFn: async () => {
       const { data, error } = await supabase
         .from("assessments" as any)
         .select("*, expatriates(*)");
       if (error) throw error;
-      return data;
+      return data as any[];
     }
   });
 
@@ -457,6 +457,7 @@ export default function DashboardPage() {
     scheduledDate: a.scheduled_date,
     status: a.status === "completed" ? "Concluído" : a.status === "scheduled" ? "Agendado" : "Em curso"
   })) : processes;
+
 
   return (
     <div className="min-h-screen bg-black text-white p-2">
