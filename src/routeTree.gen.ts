@@ -16,6 +16,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as EquipaRouteImport } from './routes/equipa'
@@ -89,6 +90,11 @@ const PrivacidadeRoute = PrivacidadeRouteImport.update({
 const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
   id: '/perguntas-frequentes',
   path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeuDashboardRoute = MeuDashboardRouteImport.update({
+  id: '/meu-dashboard',
+  path: '/meu-dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -302,6 +308,7 @@ export interface FileRoutesByFullPath {
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -349,6 +356,7 @@ export interface FileRoutesByTo {
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -397,6 +405,7 @@ export interface FileRoutesById {
   '/equipa': typeof EquipaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
+  '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
@@ -447,6 +456,7 @@ export interface FileRouteTypes {
     | '/equipa'
     | '/home'
     | '/login'
+    | '/meu-dashboard'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -494,6 +504,7 @@ export interface FileRouteTypes {
     | '/equipa'
     | '/home'
     | '/login'
+    | '/meu-dashboard'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -541,6 +552,7 @@ export interface FileRouteTypes {
     | '/equipa'
     | '/home'
     | '/login'
+    | '/meu-dashboard'
     | '/perguntas-frequentes'
     | '/privacidade'
     | '/servicos'
@@ -590,6 +602,7 @@ export interface RootRouteChildren {
   EquipaRoute: typeof EquipaRoute
   HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
+  MeuDashboardRoute: typeof MeuDashboardRoute
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ServicosRoute: typeof ServicosRoute
@@ -653,6 +666,13 @@ declare module '@tanstack/react-router' {
       path: '/perguntas-frequentes'
       fullPath: '/perguntas-frequentes'
       preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meu-dashboard': {
+      id: '/meu-dashboard'
+      path: '/meu-dashboard'
+      fullPath: '/meu-dashboard'
+      preLoaderRoute: typeof MeuDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -1006,6 +1026,7 @@ const rootRouteChildren: RootRouteChildren = {
   EquipaRoute: EquipaRoute,
   HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
+  MeuDashboardRoute: MeuDashboardRoute,
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ServicosRoute: ServicosRoute,

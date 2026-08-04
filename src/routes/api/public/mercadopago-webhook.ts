@@ -158,10 +158,10 @@ export const Route = createFileRoute("/api/public/mercadopago-webhook")({
                 .from("assessments")
                 .update({
                   payment_status: paymentStatus,
-                  status: paymentStatus === "pago" ? "agendado" : "pendente",
+                  status: (paymentStatus === "pago" ? "agendado" : "pendente") as any,
                   payment_method: String(payment.payment_type_id ?? ""),
                   updated_at: new Date().toISOString(),
-                })
+                } as any)
                 .eq("mp_payment_id", String(payment.id))
                 .select("lead_id")
                 .maybeSingle();

@@ -31,7 +31,7 @@ function AdminLegal() {
       .order("title")
       .then(({ data, error }) => {
         if (error) toast.error(error.message);
-        setPages((data as LegalRow[]) || []);
+        setPages((data as any[]) || []);
         setLoading(false);
       });
   };
@@ -135,7 +135,7 @@ function LegalEditor({ page, onBack }: { page: LegalRow; onBack: () => void }) {
         title,
         content,
         updated_by: user?.email ?? null,
-      })
+      } as any)
       .eq("slug", page.slug);
     setSaving(false);
     if (error) {

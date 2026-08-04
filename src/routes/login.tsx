@@ -29,14 +29,30 @@ function LoginPage() {
       setError(error.message);
       setLoading(false);
     } else {
-      // Check if user is admin or company_user to redirect accordingly
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      
+      // 1. Check if user is Global Admin
       const { data: adminData } = await supabase
         .from("admin_users")
         .select("role")
-        .single();
+        .eq("id", user.id)
+        .maybeSingle();
 
       if (adminData) {
         navigate({ to: "/admin" });
+        return;
+      }
+
+      // 2. Check Role in company_users
+      const { data: roleData } = await supabase
+        .from("company_users" as any)
+        .select("role")
+        .eq("user_id", user.id)
+        .maybeSingle();
+
+      if ((roleData as any)?.role === "expatriate") {
+        navigate({ to: "/meu-dashboard" });
       } else {
         navigate({ to: "/dashboard" });
       }

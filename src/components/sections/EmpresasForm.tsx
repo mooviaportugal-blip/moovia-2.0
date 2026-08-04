@@ -80,7 +80,8 @@ export function EmpresasForm() {
             phone: form.phone,
             description,
             source: "empresas",
-          } as any,
+            whatsapp: form.phone,
+          },
         ]);
 
       await notifyTeam("empresas_lead", { ...form, description });
