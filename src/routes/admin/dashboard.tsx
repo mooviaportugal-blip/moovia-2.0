@@ -418,10 +418,10 @@ export default function DashboardPage() {
     queryKey: ["expatriates"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("expatriates" as any)
+        .from("expatriates")
         .select("*");
       if (error) throw error;
-      return data as any[];
+      return data || [];
     }
   });
 
@@ -429,15 +429,15 @@ export default function DashboardPage() {
     queryKey: ["assessments"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("assessments" as any)
+        .from("assessments")
         .select("*, expatriates(*)");
       if (error) throw error;
-      return data as any[];
+      return data || [];
     }
   });
 
-  // Use real data if available, otherwise fallback to mock for now
-  const displayExpatriates = expatriatesData && expatriatesData.length > 0 ? expatriatesData.map(e => ({
+  // Data processing
+  const displayExpatriates = expatriatesData && expatriatesData.length > 0 ? expatriatesData.map((e: any) => ({
     id: e.id,
     name: e.name_masked,
     city: e.city,
@@ -447,7 +447,7 @@ export default function DashboardPage() {
     lastMeasure: e.last_measurement_date || "N/A"
   })) : expatriates;
 
-  const displayProcesses = assessmentsData && assessmentsData.length > 0 ? assessmentsData.map(a => ({
+  const displayProcesses = assessmentsData && assessmentsData.length > 0 ? assessmentsData.map((a: any) => ({
     id: a.id,
     name: a.expatriates?.name_masked || "N/A",
     phase: a.phase.replace("_", " "),
