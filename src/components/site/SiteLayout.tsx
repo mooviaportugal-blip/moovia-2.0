@@ -10,7 +10,15 @@ import { CustomCursor } from "../ui/CustomCursor";
 import { startUxTracker } from "@/lib/uxTracker";
 import { useMooviaPlayer } from "@/hooks/useMooviaPlayer";
 
-export function SiteLayout({ children }: { children: ReactNode }) {
+export function SiteLayout({ 
+  children, 
+  showNav = true, 
+  showFooter = true 
+}: { 
+  children: ReactNode;
+  showNav?: boolean;
+  showFooter?: boolean;
+}) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const player = useMooviaPlayer();
 
@@ -26,9 +34,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <>
       <div className="grain" />
       <CustomCursor />
-      <Nav />
+      {showNav && <Nav />}
       <main className="relative z-10 overflow-x-clip">{children}</main>
-      <Footer />
+      {showFooter && <Footer />}
       
       <ChatAssistant />
       {player.buttonEnabled && player.tracks.length > 0 && (
