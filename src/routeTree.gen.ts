@@ -38,6 +38,7 @@ import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as AdminLanguagesRouteImport } from './routes/admin.languages'
 import { Route as AdminImagesRouteImport } from './routes/admin.images'
 import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
+import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
 import { Route as AdminContentRouteImport } from './routes/admin.content'
 import { Route as AdminChatRouteImport } from './routes/admin.chat'
 import { Route as AdminBlogRouteImport } from './routes/admin.blog'
@@ -197,6 +198,11 @@ const AdminGalleryRoute = AdminGalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminContentRoute = AdminContentRouteImport.update({
   id: '/content',
   path: '/content',
@@ -288,6 +294,7 @@ export interface FileRoutesByFullPath {
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
   '/admin/images': typeof AdminImagesRoute
   '/admin/languages': typeof AdminLanguagesRoute
@@ -331,6 +338,7 @@ export interface FileRoutesByTo {
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
   '/admin/images': typeof AdminImagesRoute
   '/admin/languages': typeof AdminLanguagesRoute
@@ -375,6 +383,7 @@ export interface FileRoutesById {
   '/admin/blog': typeof AdminBlogRoute
   '/admin/chat': typeof AdminChatRoute
   '/admin/content': typeof AdminContentRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/admin/gallery': typeof AdminGalleryRoute
   '/admin/images': typeof AdminImagesRoute
   '/admin/languages': typeof AdminLanguagesRoute
@@ -421,6 +430,7 @@ export interface FileRouteTypes {
     | '/admin/blog'
     | '/admin/chat'
     | '/admin/content'
+    | '/admin/dashboard'
     | '/admin/gallery'
     | '/admin/images'
     | '/admin/languages'
@@ -464,6 +474,7 @@ export interface FileRouteTypes {
     | '/admin/blog'
     | '/admin/chat'
     | '/admin/content'
+    | '/admin/dashboard'
     | '/admin/gallery'
     | '/admin/images'
     | '/admin/languages'
@@ -507,6 +518,7 @@ export interface FileRouteTypes {
     | '/admin/blog'
     | '/admin/chat'
     | '/admin/content'
+    | '/admin/dashboard'
     | '/admin/gallery'
     | '/admin/images'
     | '/admin/languages'
@@ -759,6 +771,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminGalleryRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/content': {
       id: '/admin/content'
       path: '/content'
@@ -879,6 +898,7 @@ interface AdminRouteChildren {
   AdminBlogRoute: typeof AdminBlogRoute
   AdminChatRoute: typeof AdminChatRoute
   AdminContentRoute: typeof AdminContentRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
   AdminGalleryRoute: typeof AdminGalleryRoute
   AdminImagesRoute: typeof AdminImagesRoute
   AdminLanguagesRoute: typeof AdminLanguagesRoute
@@ -897,6 +917,7 @@ const AdminRouteChildren: AdminRouteChildren = {
   AdminBlogRoute: AdminBlogRoute,
   AdminChatRoute: AdminChatRoute,
   AdminContentRoute: AdminContentRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
   AdminGalleryRoute: AdminGalleryRoute,
   AdminImagesRoute: AdminImagesRoute,
   AdminLanguagesRoute: AdminLanguagesRoute,
