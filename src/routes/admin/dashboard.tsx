@@ -418,7 +418,7 @@ export default function DashboardPage() {
     queryKey: ["expatriates"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("expatriates")
+        .from("expatriates" as any)
         .select("*");
       if (error) throw error;
       return data || [];
@@ -429,7 +429,7 @@ export default function DashboardPage() {
     queryKey: ["assessments"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("assessments")
+        .from("assessments" as any)
         .select("*, expatriates(*)");
       if (error) throw error;
       return data || [];
