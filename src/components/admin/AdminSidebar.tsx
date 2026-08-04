@@ -15,7 +15,12 @@ import {
   Scale,
   Music,
   Languages,
-  Image as ImageIcon
+  Image as ImageIcon,
+  LineChart,
+  Shield,
+  Volume2,
+  Globe,
+  Workflow
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
@@ -23,7 +28,8 @@ import { useNavigate } from "@tanstack/react-router";
 import { useAdminMe } from "@/hooks/useAdminPermissions";
 
 const menuItems = [
-  { label: "Dashboard", icon: LayoutDashboard, to: "/admin" },
+  { label: "Overview", icon: BarChart3, to: "/admin" },
+  { label: "Client Dashboard", icon: LayoutDashboard, to: "/admin/dashboard" },
   { label: "Leads / CRM", icon: Users, to: "/admin/leads" },
   { label: "Assessments", icon: Package, to: "/admin/assessments" },
   { label: "Blog", icon: FileText, to: "/admin/blog" },
@@ -33,7 +39,7 @@ const menuItems = [
   { label: "Páginas Legais", icon: Scale, to: "/admin/legal" },
   { label: "MAIA / IA", icon: Brain, to: "/admin/maia" },
   { label: "Chatbot", icon: MessageSquare, to: "/admin/chat" },
-  { label: "Analytics", icon: BarChart3, to: "/admin/analytics" },
+  { label: "Analytics", icon: LineChart, to: "/admin/analytics" },
   { label: "UX Insights", icon: Activity, to: "/admin/ux" },
   { label: "Sound", icon: Music, to: "/admin/sound" },
   { label: "Linguagens", icon: Languages, to: "/admin/languages" },
@@ -68,7 +74,7 @@ export function AdminSidebar() {
         </div>
       </div>
 
-      <nav className="flex-1 p-4 py-8 space-y-2 overflow-y-auto">
+      <nav className="flex-1 p-4 py-8 space-y-2 overflow-y-auto custom-scrollbar">
         {visibleItems.map((item) => {
           const isActive = location.pathname === item.to || (item.to !== "/admin" && location.pathname.startsWith(item.to));
           
