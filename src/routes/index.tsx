@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
+import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
@@ -107,6 +108,7 @@ function Home() {
     <SiteLayout>
       {airplaneEnabled && <AirplaneScene />}
       <Hero />
+      <WhoWeAreSection />
       
       {/* Marquee */}
       <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
