@@ -108,7 +108,7 @@ function Home() {
     <SiteLayout>
       {airplaneEnabled && <AirplaneScene />}
       <Hero />
-      <WhoWeAreSection />
+      
       
       {/* Marquee */}
       <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
@@ -131,6 +131,7 @@ function Home() {
         </motion.div>
       </div>
 
+      <WhoWeAreSection />
       <ProblemSection />
       <MarketResearchSection />
       <B2BRiskSection />
