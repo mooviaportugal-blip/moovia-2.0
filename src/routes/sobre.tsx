@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { MethodologySection } from "@/components/sections/MethodologySection";
+import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/sobre")({
 function SobrePage() {
   return (
     <SiteLayout>
+      <WhoWeAreSection />
       <Hero />
       <OrigemMercado />
       <EquacaoMoovia />
