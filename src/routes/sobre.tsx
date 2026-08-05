@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { MethodologySection } from "@/components/sections/MethodologySection";
+import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/sobre")({
 function SobrePage() {
   return (
     <SiteLayout>
+      <WhoWeAreSection />
       <Hero />
       <OrigemMercado />
       <EquacaoMoovia />
@@ -577,14 +579,6 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#06091a]/95 via-[#06091a]/70 to-[#06091a]/30" />
 
       <div className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-20 pb-24 pt-[180px]">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8 flex items-center gap-3"
-        >
-          <span className="w-6 h-px bg-gold" /> Sobre a MOOVIA Portugal
-        </motion.p>
 
         {/* Split "Success / Strategy" */}
         <motion.div
