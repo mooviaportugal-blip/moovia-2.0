@@ -14,17 +14,24 @@ export const createTenantUser = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: unknown) => CreateTenantSchema.parse(d))
   .handler(async ({ data, context }) => {
-    // 1. Verificação de permissões do administrador
+    console.log("[createTenantUser] Início para:", data.email);
+    
+    // 1. Verificação de permissões do administrador usando o cliente autenticado (context.supabase)
     const { data: adminData, error: adminCheckError } = await context.supabase
       .from("admin_users")
       .select("role")
       .eq("id", context.userId)
       .maybeSingle();
 
-    console.log("[createTenantUser] Admin check for user:", context.userId, "Result:", adminData, "Error:", adminCheckError);
-
-    if (adminCheckError) throw new Error("Erro na base de dados ao validar administrador.");
-    if (!adminData) throw new Error("Acesso negado: apenas administradores podem criar utilizadores.");
+    if (adminCheckError) {
+      console.error("[createTenantUser] Erro ao validar admin:", adminCheckError);
+      throw new Error("Erro na base de dados ao validar administrador.");
+    }
+    
+    if (!adminData) {
+      console.warn("[createTenantUser] Acesso negado para:", context.userId);
+      throw new Error("Acesso negado: apenas administradores podem criar utilizadores.");
+    }
 
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
@@ -36,13 +43,13 @@ export const createTenantUser = createServerFn({ method: "POST" })
       user_metadata: { name: data.name },
     });
 
-    console.log("[createTenantUser] Auth user creation result:", authUser?.user?.id, "Error:", authError);
-
     if (authError || !authUser.user) {
+      console.error("[createTenantUser] Erro no Auth.createUser:", authError);
       throw new Error(authError?.message || "Erro ao criar utilizador no sistema de autenticação.");
     }
 
     const userId = authUser.user.id;
+    console.log("[createTenantUser] Utilizador Auth criado:", userId);
 
     try {
       if (data.type === "company") {
@@ -64,42 +71,27 @@ export const createTenantUser = createServerFn({ method: "POST" })
           });
 
         if (roleErr) throw roleErr;
+        console.log("[createTenantUser] Empresa e Admin vinculados.");
       } else {
         // Fluxo de criação de colaborador (expatriado)
-        // Como não existe tabela 'expatriates', associamos apenas via company_users se tivermos um assessment
-        let companyId = null;
-        
-        if (data.expatriateId) {
-          const { data: assessmentData, error: assErr } = await supabaseAdmin
-            .from("assessments")
-            .select("lead_id")
-            .eq("id", data.expatriateId)
-            .maybeSingle();
-
-          if (assErr) throw assErr;
-          
-          // Nota: assessments não tem company_id diretamente no schema lido.
-          // Pode ser necessário buscar no lead se houver relação com empresa lá, 
-          // ou simplesmente deixar nulo se for um colaborador 'solto' inicialmente.
-          // Por agora, associamos o assessment_id como expatriate_id no company_users
-        }
-
         const { error: roleErr } = await supabaseAdmin
           .from("company_users")
           .insert({
-            company_id: null, // Pode ser preenchido se descobrirmos a relação
+            company_id: null, 
             user_id: userId,
             role: "expatriate",
             expatriate_id: data.expatriateId || null
           });
 
         if (roleErr) throw roleErr;
+        console.log("[createTenantUser] Colaborador vinculado.");
       }
 
       return { success: true, userId };
     } catch (err: any) {
+      console.error("[createTenantUser] Erro no fluxo de BD, revertendo Auth:", err);
       // Reverter criação do utilizador se o setup da base de dados falhar
       await supabaseAdmin.auth.admin.deleteUser(userId);
-      throw new Error(err.message || "Erro ao configurar perfil de utilizador.");
+      throw new Error(err.message || "Erro ao configurar perfil de utilizador na base de dados.");
     }
   });
