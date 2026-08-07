@@ -14,9 +14,9 @@ export const createTenantUser = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: unknown) => CreateTenantSchema.parse(d))
   .handler(async ({ data, context }) => {
-    console.log("Starting createTenantUser handler", { type: data.type, email: data.email });
+    console.log("[createTenantUser] Starting handler", { type: data.type, email: data.email });
     
-    // 1. Verificar se quem chama é admin
+    // 1. Check if caller is admin
     const { data: adminData, error: adminCheckError } = await context.supabase
       .from("admin_users")
       .select("role")
@@ -24,18 +24,18 @@ export const createTenantUser = createServerFn({ method: "POST" })
       .maybeSingle();
 
     if (adminCheckError) {
-      console.error("Admin check query error:", adminCheckError);
+      console.error("[createTenantUser] Admin check error:", adminCheckError);
       throw new Error("Erro ao validar permissões de administrador");
     }
 
     if (!adminData) {
-      console.error("User is not an admin", { userId: context.userId });
+      console.error("[createTenantUser] User is not an admin", { userId: context.userId });
       throw new Error("Apenas administradores podem criar acessos");
     }
 
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-    // 2. Criar utilizador no Auth
+    // 2. Create Auth User
     const { data: authUser, error: authError } = await supabaseAdmin.auth.admin.createUser({
       email: data.email,
       password: data.password,
@@ -44,16 +44,16 @@ export const createTenantUser = createServerFn({ method: "POST" })
     });
 
     if (authError || !authUser.user) {
-      console.error("Auth user creation error:", authError);
+      console.error("[createTenantUser] Auth user creation error:", authError);
       throw new Error(authError?.message || "Erro ao criar utilizador no Auth");
     }
 
     const userId = authUser.user.id;
-    console.log("Auth user created successfully", { userId });
+    console.log("[createTenantUser] Auth user created", { userId });
 
     try {
       if (data.type === "company") {
-        // Criar Empresa
+        console.log("[createTenantUser] Creating company", { name: data.name });
         const { data: company, error: companyErr } = await supabaseAdmin
           .from("companies")
           .insert({ name: data.name })
@@ -61,11 +61,11 @@ export const createTenantUser = createServerFn({ method: "POST" })
           .single();
 
         if (companyErr) {
-          console.error("Company creation error:", companyErr);
+          console.error("[createTenantUser] Company creation error:", companyErr);
           throw companyErr;
         }
 
-        // Associar como Admin da Empresa
+        console.log("[createTenantUser] Associating company admin", { companyId: (company as any).id, userId });
         const { error: roleErr } = await supabaseAdmin
           .from("company_users")
           .insert({
@@ -75,46 +75,31 @@ export const createTenantUser = createServerFn({ method: "POST" })
           });
 
         if (roleErr) {
-          console.error("Company user role association error:", roleErr);
+          console.error("[createTenantUser] Company user role error:", roleErr);
           throw roleErr;
         }
       } else {
-        // É Expatriado
+        // Expatriate path
         if (!data.expatriateId) throw new Error("ID do expatriado é obrigatório");
-
-        // Buscar a empresa do expatriado (assumindo que já existe)
-        // Nota: se a tabela expatriates não existir, este passo falhará propositadamente 
-        // para alertar sobre a falta da tabela ou má configuração.
-        const { data: expData, error: expFetchErr } = await supabaseAdmin
-          .from("assessments") // Fallback para assessments se expatriates for uma view ou não estiver clara
-          .select("id")
-          .eq("id", data.expatriateId)
-          .maybeSingle();
-
-        if (expFetchErr) {
-          console.error("Expatriate/Assessment fetch error:", expFetchErr);
-          throw expFetchErr;
-        }
-
-        // Se não conseguirmos validar a empresa via expatriates, associamos a uma empresa padrão ou pedimos mais dados
-        // Por agora, vamos assumir que o fluxo de empresa é o principal que o utilizador está a testar.
         
+        console.log("[createTenantUser] Associating expatriate role", { userId });
         const { error: roleErr } = await supabaseAdmin
           .from("company_users")
           .insert({
-            company_id: null, // Pode ser nulo se for um colaborador sem empresa fixa ainda ou erro de esquema
             user_id: userId,
             role: "expatriate"
           });
 
-        if (roleErr) throw roleErr;
+        if (roleErr) {
+          console.error("[createTenantUser] Expatriate role error:", roleErr);
+          throw roleErr;
+        }
       }
 
-      console.log("Tenant user configuration completed successfully");
+      console.log("[createTenantUser] Success");
       return { success: true, userId };
     } catch (err: any) {
-      console.error("Database configuration error, rolling back auth user:", err);
-      // Rollback Auth user if database steps fail
+      console.error("[createTenantUser] Database error, rolling back auth user:", err);
       await supabaseAdmin.auth.admin.deleteUser(userId);
       throw new Error(err.message || "Erro ao configurar perfil do utilizador");
     }
