@@ -164,6 +164,7 @@ function CompaniesAdmin() {
 
               <Button 
                 onClick={async () => {
+                  console.log("Submit button clicked", formData);
                   const { email, password, name: compName, expatriateId } = formData;
                   const name = userType === 'company' ? compName : 'Colaborador';
                   
