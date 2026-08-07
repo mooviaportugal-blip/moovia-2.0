@@ -60,7 +60,7 @@ function CompaniesAdmin() {
   const fetchData = async () => {
     const [companiesRes, expatriatesRes] = await Promise.all([
       supabase.from("companies" as any).select("*").order("created_at", { ascending: false }),
-      supabase.from("assessments" as any).select("*").order("name_masked", { ascending: true })
+      supabase.from("assessments" as any).select("*").order("created_at", { ascending: false })
     ]);
     
     setCompanies(companiesRes.data || []);
@@ -129,7 +129,7 @@ function CompaniesAdmin() {
                       <SelectContent className="bg-black-2 border-b18 text-white">
                         {expatriates.map(exp => (
                           <SelectItem key={exp.id || exp.email} value={exp.id || exp.email} className="focus:bg-gold focus:text-black">
-                            {exp.name_masked || exp.email || "Sem nome"}
+                            {exp.payer_name || exp.payer_email || "Sem nome"}
                           </SelectItem>
                         ))}
                       </SelectContent>
