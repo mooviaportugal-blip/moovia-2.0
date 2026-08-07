@@ -32,24 +32,31 @@ function LoginPage() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
       
+      console.log("User logged in:", user.id);
+
       // 1. Check if user is Global Admin
-      const { data: adminData } = await supabase
+      const { data: adminData, error: adminError } = await supabase
         .from("admin_users")
         .select("role")
         .eq("id", user.id)
         .maybeSingle();
 
+      console.log("Admin check result:", adminData, adminError);
+
       if (adminData) {
+        console.log("Redirecting to /admin");
         navigate({ to: "/admin" });
         return;
       }
 
       // 2. Check Role in company_users
-      const { data: roleData } = await supabase
+      const { data: roleData, error: roleError } = await supabase
         .from("company_users" as any)
         .select("role")
         .eq("user_id", user.id)
         .maybeSingle();
+      
+      console.log("Company user check result:", roleData, roleError);
 
       if ((roleData as any)?.role === "expatriate") {
         navigate({ to: "/meu-dashboard" });
