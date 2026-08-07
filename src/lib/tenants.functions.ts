@@ -21,6 +21,8 @@ export const createTenantUser = createServerFn({ method: "POST" })
       .eq("id", context.userId)
       .maybeSingle();
 
+    console.log("[createTenantUser] Admin check for user:", context.userId, "Result:", adminData, "Error:", adminCheckError);
+
     if (adminCheckError) throw new Error("Erro na base de dados ao validar administrador.");
     if (!adminData) throw new Error("Acesso negado: apenas administradores podem criar utilizadores.");
 
@@ -33,6 +35,8 @@ export const createTenantUser = createServerFn({ method: "POST" })
       email_confirm: true,
       user_metadata: { name: data.name },
     });
+
+    console.log("[createTenantUser] Auth user creation result:", authUser?.user?.id, "Error:", authError);
 
     if (authError || !authUser.user) {
       throw new Error(authError?.message || "Erro ao criar utilizador no sistema de autenticação.");
