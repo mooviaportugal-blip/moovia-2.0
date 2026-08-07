@@ -117,8 +117,8 @@ function CompaniesAdmin() {
                       </SelectTrigger>
                       <SelectContent className="bg-black-2 border-b18 text-white">
                         {expatriates.map(exp => (
-                          <SelectItem key={exp.id} value={exp.id} className="focus:bg-gold focus:text-black">
-                            {exp.name_masked} ({exp.city})
+                          <SelectItem key={exp.id || exp.email} value={exp.id || exp.email} className="focus:bg-gold focus:text-black">
+                            {exp.name_masked || exp.email || "Sem nome"}
                           </SelectItem>
                         ))}
                       </SelectContent>
