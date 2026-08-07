@@ -33,14 +33,16 @@ function LoginPage() {
       if (!user) return;
       
       // 1. Check if user is Global Admin
-      const { data: adminData } = await supabase
+      const { data: adminData, error: adminError } = await supabase
         .from("admin_users")
         .select("role")
         .eq("id", user.id)
         .maybeSingle();
 
+      console.log("Admin check:", { adminData, adminError });
+
       if (adminData) {
-        navigate({ to: "/admin" });
+        navigate({ to: "/admin/dashboard" });
         return;
       }
 

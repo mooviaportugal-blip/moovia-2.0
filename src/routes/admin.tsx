@@ -84,7 +84,7 @@ function AdminLogin() {
       if (error) throw error;
 
       toast.success("Login realizado com sucesso");
-      navigate({ to: "/admin/leads" });
+      navigate({ to: "/admin/dashboard" });
     } catch (error: any) {
       toast.error(error.message || "Erro ao realizar login");
     } finally {
