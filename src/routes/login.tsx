@@ -50,8 +50,6 @@ function LoginPage() {
         .select("role")
         .eq("user_id", user.id)
         .maybeSingle();
-      
-      console.log("Company user check result:", roleData, roleError);
 
       if ((roleData as any)?.role === "expatriate") {
         navigate({ to: "/meu-dashboard" });
