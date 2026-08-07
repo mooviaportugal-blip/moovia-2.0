@@ -164,8 +164,42 @@ function CompaniesAdmin() {
 
               <Button 
                 onClick={async () => {
-                  console.log("Submit button clicked", formData);
                   const { email, password, name: compName, expatriateId } = formData;
+                  const name = userType === 'company' ? compName : 'Colaborador';
+                  
+                  if (!email || !password) {
+                    toast.error("E-mail e password obrigatórios.");
+                    return;
+                  }
+
+                  if (userType === 'company' && !compName) {
+                    toast.error("Nome da empresa é obrigatório.");
+                    return;
+                  }
+
+                  try {
+                    toast.loading("A processar registo...", { id: "create-tenant" });
+                    
+                    const result = await createTenant({
+                      data: {
+                        type: userType,
+                        email,
+                        password,
+                        name,
+                        expatriateId: userType === 'expatriate' ? expatriateId : undefined
+                      }
+                    });
+                    
+                    if (result.success) {
+                      toast.success("Acesso configurado com sucesso.", { id: "create-tenant" });
+                      setFormData({ name: "", email: "", password: "", expatriateId: "" });
+                      setIsDialogOpen(false);
+                      fetchData();
+                    }
+                  } catch (e: any) {
+                    toast.error(e.message || "Erro na criação do acesso.", { id: "create-tenant" });
+                  }
+                }}
                   const name = userType === 'company' ? compName : 'Colaborador';
                   
                   if (!email || !password) {
