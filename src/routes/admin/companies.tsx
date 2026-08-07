@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { createTenantUser } from "@/lib/tenants.functions";
+import { useServerFn } from "@tanstack/react-start";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -42,6 +44,8 @@ function CompaniesAdmin() {
   const [loading, setLoading] = useState(true);
   const [userType, setUserType] = useState<"company" | "expatriate">("company");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const createTenant = useServerFn(createTenantUser);
 
   useEffect(() => {
     fetchData();
@@ -107,7 +111,7 @@ function CompaniesAdmin() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label className="text-[10px] uppercase tracking-widest text-w35">Associar a expatriado existente</Label>
-                    <Select>
+                    <Select onValueChange={(v) => (window as any)._selectedExpId = v}>
                       <SelectTrigger className="bg-black-3 border-b18 text-white">
                         <SelectValue placeholder="Selecionar expatriado" />
                       </SelectTrigger>
@@ -137,19 +141,42 @@ function CompaniesAdmin() {
                 onClick={async () => {
                   const email = (document.getElementById('email') as HTMLInputElement).value;
                   const password = (document.getElementById('pass') as HTMLInputElement).value;
-                  const name = userType === 'company' ? (document.getElementById('companyName') as HTMLInputElement).value : 'Colaborador';
+                  const nameInput = document.getElementById('companyName') as HTMLInputElement;
+                  const name = userType === 'company' ? nameInput?.value : 'Colaborador';
+                  const expatriateId = (window as any)._selectedExpId;
                   
                   if (!email || !password) {
                     toast.error("Email e password obrigatórios");
                     return;
                   }
 
+                  if (userType === 'company' && !name) {
+                    toast.error("Nome da empresa obrigatório");
+                    return;
+                  }
+
+                  if (userType === 'expatriate' && !expatriateId) {
+                    toast.error("Selecione um expatriado");
+                    return;
+                  }
+
                   try {
-                    // Aqui chamaremos a server function para criar o user via admin auth
-                    toast.success("A criar acesso...");
-                    // Implementação seguirá no próximo passo com server function
+                    toast.loading("A criar acesso...", { id: "create-tenant" });
+                    await createTenant({
+                      data: {
+                        type: userType,
+                        email,
+                        password,
+                        name,
+                        expatriateId: userType === 'expatriate' ? expatriateId : undefined
+                      }
+                    });
+                    
+                    toast.success("Acesso criado com sucesso", { id: "create-tenant" });
+                    setIsDialogOpen(false);
+                    fetchData();
                   } catch (e: any) {
-                    toast.error(e.message);
+                    toast.error(e.message || "Erro ao criar acesso", { id: "create-tenant" });
                   }
                 }}
                 className="w-full bg-gold text-black hover:bg-gold-l font-bold uppercase tracking-widest py-6"
