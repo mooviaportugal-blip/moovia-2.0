@@ -44,6 +44,12 @@ function CompaniesAdmin() {
   const [loading, setLoading] = useState(true);
   const [userType, setUserType] = useState<"company" | "expatriate">("company");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    expatriateId: ""
+  });
 
   const createTenant = useServerFn(createTenantUser);
 
@@ -104,14 +110,19 @@ function CompaniesAdmin() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="companyName" className="text-[10px] uppercase tracking-widest text-w35">Nome da Empresa</Label>
-                    <Input id="companyName" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                    <Input 
+                      id="companyName" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="bg-black-3 border-b18 text-white focus:border-gold" 
+                    />
                   </div>
                 </div>
               ) : (
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label className="text-[10px] uppercase tracking-widest text-w35">Associar a expatriado existente</Label>
-                    <Select onValueChange={(v) => (window as any)._selectedExpId = v}>
+                    <Select onValueChange={(v) => setFormData({...formData, expatriateId: v})}>
                       <SelectTrigger className="bg-black-3 border-b18 text-white">
                         <SelectValue placeholder="Selecionar expatriado" />
                       </SelectTrigger>
@@ -129,21 +140,32 @@ function CompaniesAdmin() {
 
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-[10px] uppercase tracking-widest text-w35">E-mail de Login</Label>
-                <Input id="email" type="email" placeholder="exemplo@empresa.com" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  placeholder="exemplo@empresa.com" 
+                  className="bg-black-3 border-b18 text-white focus:border-gold" 
+                />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="pass" className="text-[10px] uppercase tracking-widest text-w35">Password Temporária</Label>
-                <Input id="pass" type="password" placeholder="••••••••" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                <Input 
+                  id="pass" 
+                  type="password" 
+                  value={formData.password}
+                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  placeholder="••••••••" 
+                  className="bg-black-3 border-b18 text-white focus:border-gold" 
+                />
               </div>
 
               <Button 
                 onClick={async () => {
-                  const email = (document.getElementById('email') as HTMLInputElement).value;
-                  const password = (document.getElementById('pass') as HTMLInputElement).value;
-                  const nameInput = document.getElementById('companyName') as HTMLInputElement;
-                  const name = userType === 'company' ? nameInput?.value : 'Colaborador';
-                  const expatriateId = (window as any)._selectedExpId;
+                  const { email, password, name: compName, expatriateId } = formData;
+                  const name = userType === 'company' ? compName : 'Colaborador';
                   
                   if (!email || !password) {
                     toast.error("Email e password obrigatórios");
