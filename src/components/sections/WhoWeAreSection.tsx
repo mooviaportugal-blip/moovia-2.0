@@ -96,7 +96,7 @@ export const WhoWeAreSection = () => {
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
-            className="relative z-20 h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 rounded-full border border-gold/20 bg-black/40 flex items-center justify-center p-12 backdrop-blur-xl"
+            className="relative z-20 h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 rounded-full border border-gold/20 bg-black/40 flex items-center justify-center p-12 pt-16 backdrop-blur-xl"
           >
             <img 
               src="/mooviagold.svg" 
