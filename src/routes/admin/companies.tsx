@@ -44,6 +44,12 @@ function CompaniesAdmin() {
   const [loading, setLoading] = useState(true);
   const [userType, setUserType] = useState<"company" | "expatriate">("company");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    expatriateId: ""
+  });
 
   const createTenant = useServerFn(createTenantUser);
 
@@ -54,7 +60,7 @@ function CompaniesAdmin() {
   const fetchData = async () => {
     const [companiesRes, expatriatesRes] = await Promise.all([
       supabase.from("companies" as any).select("*").order("created_at", { ascending: false }),
-      supabase.from("expatriates" as any).select("*").order("name_masked", { ascending: true })
+      supabase.from("assessments" as any).select("*").order("created_at", { ascending: false })
     ]);
     
     setCompanies(companiesRes.data || []);
@@ -104,21 +110,26 @@ function CompaniesAdmin() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="companyName" className="text-[10px] uppercase tracking-widest text-w35">Nome da Empresa</Label>
-                    <Input id="companyName" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                    <Input 
+                      id="companyName" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="bg-black-3 border-b18 text-white focus:border-gold" 
+                    />
                   </div>
                 </div>
               ) : (
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label className="text-[10px] uppercase tracking-widest text-w35">Associar a expatriado existente</Label>
-                    <Select onValueChange={(v) => (window as any)._selectedExpId = v}>
+                    <Select onValueChange={(v) => setFormData({...formData, expatriateId: v})}>
                       <SelectTrigger className="bg-black-3 border-b18 text-white">
                         <SelectValue placeholder="Selecionar expatriado" />
                       </SelectTrigger>
                       <SelectContent className="bg-black-2 border-b18 text-white">
                         {expatriates.map(exp => (
-                          <SelectItem key={exp.id} value={exp.id} className="focus:bg-gold focus:text-black">
-                            {exp.name_masked} ({exp.city})
+                          <SelectItem key={exp.id || exp.email} value={exp.id || exp.email} className="focus:bg-gold focus:text-black">
+                            {exp.payer_name || exp.payer_email || "Sem nome"}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -129,40 +140,52 @@ function CompaniesAdmin() {
 
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-[10px] uppercase tracking-widest text-w35">E-mail de Login</Label>
-                <Input id="email" type="email" placeholder="exemplo@empresa.com" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  placeholder="exemplo@empresa.com" 
+                  className="bg-black-3 border-b18 text-white focus:border-gold" 
+                />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="pass" className="text-[10px] uppercase tracking-widest text-w35">Password Temporária</Label>
-                <Input id="pass" type="password" placeholder="••••••••" className="bg-black-3 border-b18 text-white focus:border-gold" />
+                <Input 
+                  id="pass" 
+                  type="password" 
+                  value={formData.password}
+                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  placeholder="••••••••" 
+                  className="bg-black-3 border-b18 text-white focus:border-gold" 
+                />
               </div>
 
               <Button 
                 onClick={async () => {
-                  const email = (document.getElementById('email') as HTMLInputElement).value;
-                  const password = (document.getElementById('pass') as HTMLInputElement).value;
-                  const nameInput = document.getElementById('companyName') as HTMLInputElement;
-                  const name = userType === 'company' ? nameInput?.value : 'Colaborador';
-                  const expatriateId = (window as any)._selectedExpId;
+                  const { email, password, name: compName, expatriateId } = formData;
+                  const name = userType === 'company' ? compName : 'Colaborador';
                   
                   if (!email || !password) {
-                    toast.error("Email e password obrigatórios");
+                    toast.error("E-mail e password obrigatórios.");
                     return;
                   }
 
-                  if (userType === 'company' && !name) {
-                    toast.error("Nome da empresa obrigatório");
+                  if (userType === 'company' && !compName) {
+                    toast.error("Nome da empresa é obrigatório.");
                     return;
                   }
 
                   if (userType === 'expatriate' && !expatriateId) {
-                    toast.error("Selecione um expatriado");
+                    toast.error("Selecione um colaborador.");
                     return;
                   }
 
                   try {
-                    toast.loading("A criar acesso...", { id: "create-tenant" });
-                    await createTenant({
+                    toast.loading("A processar registo...", { id: "create-tenant" });
+                    
+                    const result = await createTenant({
                       data: {
                         type: userType,
                         email,
@@ -172,11 +195,14 @@ function CompaniesAdmin() {
                       }
                     });
                     
-                    toast.success("Acesso criado com sucesso", { id: "create-tenant" });
-                    setIsDialogOpen(false);
-                    fetchData();
+                    if (result.success) {
+                      toast.success("Acesso configurado com sucesso.", { id: "create-tenant" });
+                      setFormData({ name: "", email: "", password: "", expatriateId: "" });
+                      setIsDialogOpen(false);
+                      fetchData();
+                    }
                   } catch (e: any) {
-                    toast.error(e.message || "Erro ao criar acesso", { id: "create-tenant" });
+                    toast.error(e.message || "Erro na criação do acesso.", { id: "create-tenant" });
                   }
                 }}
                 className="w-full bg-gold text-black hover:bg-gold-l font-bold uppercase tracking-widest py-6"
