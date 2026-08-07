@@ -72,7 +72,9 @@ function AdminLogin() {
       // Aceita "admin" como usuário, ou um e-mail completo
       const email = username.includes("@")
         ? username.trim()
-        : `${username.trim().toLowerCase()}@moovia.local`;
+        : username.trim().toLowerCase() === "admin" 
+          ? "admin@mooviaportugal.com"
+          : `${username.trim().toLowerCase()}@moovia.local`;
 
       const { error } = await supabase.auth.signInWithPassword({
         email,
