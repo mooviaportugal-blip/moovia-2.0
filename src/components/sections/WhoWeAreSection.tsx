@@ -101,7 +101,7 @@ export const WhoWeAreSection = () => {
             <img 
               src="/mooviagold.svg" 
               alt="MOOVIA" 
-              className="w-full h-full object-contain brightness-0 invert opacity-90" 
+              className="w-full h-full object-contain brightness-0 invert opacity-90 mt-4" 
             />
             {/* Pulsing light rings around the icon */}
             <div className="absolute inset-0 rounded-full border border-gold/5 scale-110" />
