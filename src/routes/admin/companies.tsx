@@ -60,7 +60,7 @@ function CompaniesAdmin() {
   const fetchData = async () => {
     const [companiesRes, expatriatesRes] = await Promise.all([
       supabase.from("companies" as any).select("*").order("created_at", { ascending: false }),
-      supabase.from("expatriates" as any).select("*").order("name_masked", { ascending: true })
+      supabase.from("assessments" as any).select("*").order("name_masked", { ascending: true })
     ]);
     
     setCompanies(companiesRes.data || []);
@@ -177,6 +177,11 @@ function CompaniesAdmin() {
                     return;
                   }
 
+                  if (userType === 'expatriate' && !expatriateId) {
+                    toast.error("Selecione um colaborador.");
+                    return;
+                  }
+
                   try {
                     toast.loading("A processar registo...", { id: "create-tenant" });
                     
@@ -198,42 +203,6 @@ function CompaniesAdmin() {
                     }
                   } catch (e: any) {
                     toast.error(e.message || "Erro na criação do acesso.", { id: "create-tenant" });
-                  }
-                }}
-                  const name = userType === 'company' ? compName : 'Colaborador';
-                  
-                  if (!email || !password) {
-                    toast.error("Email e password obrigatórios");
-                    return;
-                  }
-
-                  if (userType === 'company' && !name) {
-                    toast.error("Nome da empresa obrigatório");
-                    return;
-                  }
-
-                  if (userType === 'expatriate' && !expatriateId) {
-                    toast.error("Selecione um expatriado");
-                    return;
-                  }
-
-                  try {
-                    toast.loading("A criar acesso...", { id: "create-tenant" });
-                    await createTenant({
-                      data: {
-                        type: userType,
-                        email,
-                        password,
-                        name,
-                        expatriateId: userType === 'expatriate' ? expatriateId : undefined
-                      }
-                    });
-                    
-                    toast.success("Acesso criado com sucesso", { id: "create-tenant" });
-                    setIsDialogOpen(false);
-                    fetchData();
-                  } catch (e: any) {
-                    toast.error(e.message || "Erro ao criar acesso", { id: "create-tenant" });
                   }
                 }}
                 className="w-full bg-gold text-black hover:bg-gold-l font-bold uppercase tracking-widest py-6"
