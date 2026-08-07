@@ -62,23 +62,31 @@ export const createTenantUser = createServerFn({ method: "POST" })
         if (roleErr) throw roleErr;
       } else {
         // Fluxo de criação de colaborador (expatriado)
-        if (!data.expatriateId) throw new Error("ID do expatriado é obrigatório.");
+        // Como não existe tabela 'expatriates', associamos apenas via company_users se tivermos um assessment
+        let companyId = null;
+        
+        if (data.expatriateId) {
+          const { data: assessmentData, error: assErr } = await supabaseAdmin
+            .from("assessments")
+            .select("lead_id")
+            .eq("id", data.expatriateId)
+            .maybeSingle();
 
-        // Obter empresa associada ao assessment/expatriado
-        const { data: assessmentData, error: assErr } = await supabaseAdmin
-          .from("assessments")
-          .select("company_id")
-          .eq("id", data.expatriateId)
-          .maybeSingle();
-
-        if (assErr) throw assErr;
+          if (assErr) throw assErr;
+          
+          // Nota: assessments não tem company_id diretamente no schema lido.
+          // Pode ser necessário buscar no lead se houver relação com empresa lá, 
+          // ou simplesmente deixar nulo se for um colaborador 'solto' inicialmente.
+          // Por agora, associamos o assessment_id como expatriate_id no company_users
+        }
 
         const { error: roleErr } = await supabaseAdmin
           .from("company_users")
           .insert({
-            company_id: assessmentData?.company_id || null,
+            company_id: null, // Pode ser preenchido se descobrirmos a relação
             user_id: userId,
-            role: "expatriate"
+            role: "expatriate",
+            expatriate_id: data.expatriateId || null
           });
 
         if (roleErr) throw roleErr;
