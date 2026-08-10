@@ -33,7 +33,7 @@ export function Footer() {
             <Link to="/" className="flex flex-col items-center lg:items-start mb-6">
               <img src="/moovia-logotype.png" alt="MOOVIA Portugal" className="h-[40px] w-auto object-contain" />
               <span className="font-urbanist text-[9px] tracking-[0.24em] uppercase text-gold/80 mt-1">
-                Global Mobility Assurance
+                Global Mobility
               </span>
             </Link>
             <p className="font-urbanist text-[12px] font-[400] tracking-[0.28em] uppercase text-w35 mb-6">Planear · Decidir · Integrar</p>
