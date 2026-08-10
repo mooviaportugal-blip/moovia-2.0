@@ -52,9 +52,9 @@ export function Nav() {
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-3 mr-auto group">
         <img src={logoIcon} alt="MOOVIA" className="w-10 h-10 lg:w-12 lg:h-12 object-contain group-hover:rotate-[360deg] transition-transform duration-1000 ease-in-out" />
-        <div className="hidden lg:flex flex-col items-start justify-center pt-1">
+        <div className="hidden lg:flex flex-col items-center justify-center pt-1">
           <img src={logoWord} alt="MOOVIA Portugal" className="h-[32px] lg:h-[38px] w-auto object-contain brightness-110" />
-          <span className="font-urbanist text-[8px] tracking-[0.24em] uppercase text-gold/80 mt-1 ml-px">
+          <span className="font-urbanist text-[8px] tracking-[0.24em] uppercase text-gold/80 mt-1">
             Global Mobility
           </span>
         </div>
