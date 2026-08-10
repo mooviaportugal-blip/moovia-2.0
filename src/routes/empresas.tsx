@@ -265,6 +265,31 @@ function EmpresasPage() {
           </div>
         </div>
       </section>
+      
+      {/* SELO DE VALIDAÇÃO JURÍDICA */}
+      <section className="bg-[#06091a] pb-20 md:pb-28 px-6 lg:px-20 relative overflow-hidden">
+        <div className="mx-auto max-w-[900px]">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative p-8 md:p-12 border-l-2 border-gold/40 bg-w05/40"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <svg className="w-5 h-5 text-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04a11.352 11.352 0 00-1.23 4.747c0 6.921 4.066 12.711 9.848 15.466a10.455 10.455 0 005.216-1.556c5.782-2.755 9.848-8.545 9.848-15.466a11.352 11.352 0 00-1.23-4.747z" />
+              </svg>
+              <span className="font-body text-[10px] tracking-[0.32em] uppercase text-gold/80">Validação Jurídica</span>
+            </div>
+            <blockquote className="font-display italic text-[18px] md:text-[22px] font-[300] text-w85 leading-[1.6]">
+              "O modelo jurídico da MOOVIA foi objeto de análise por uma sociedade 
+              de advogados de referência em Portugal, tendo sido considerado 
+              juridicamente viável, encontrando-se atualmente em fase de 
+              implementação das recomendações identificadas."
+            </blockquote>
+          </motion.div>
+        </div>
+      </section>
 
       {/* NOSSA TESE (reaproveitada) */}
       <NossaTeseSection />
