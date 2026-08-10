@@ -277,7 +277,7 @@ function EmpresasPage() {
           >
             <div className="flex items-center gap-3 mb-6">
               <svg className="w-5 h-5 text-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04a11.352 11.352 0 00-1.23 4.747c0 6.921 4.066 12.711 9.848 15.466a10.455 10.455 0 005.216-1.556c5.782-2.755 9.848-8.545 9.848-15.466a11.352 11.352 0 00-1.23-4.747z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               <span className="font-body text-[10px] tracking-[0.32em] uppercase text-gold/80">Validação Jurídica</span>
             </div>
