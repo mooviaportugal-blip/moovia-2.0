@@ -55,7 +55,7 @@ export function Nav() {
         <div className="hidden lg:flex flex-col items-start justify-center pt-1">
           <img src={logoWord} alt="MOOVIA Portugal" className="h-[32px] lg:h-[38px] w-auto object-contain brightness-110" />
           <span className="font-urbanist text-[8px] tracking-[0.24em] uppercase text-gold/80 -mt-1 ml-px">
-            Global Mobility Assurance
+            Global Mobility
           </span>
         </div>
       </Link>
