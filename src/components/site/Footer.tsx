@@ -30,9 +30,9 @@ export function Footer() {
           
           {/* ESQUERDA */}
           <div className="flex flex-col items-center lg:items-start">
-            <Link to="/" className="flex flex-col items-center lg:items-start mb-6">
+            <Link to="/" className="flex flex-col items-center lg:items-start mb-6 w-fit">
               <img src="/moovia-logotype.png" alt="MOOVIA Portugal" className="h-[40px] w-auto object-contain" />
-              <span className="font-urbanist text-[9px] tracking-[0.24em] uppercase text-gold/80 mt-2">
+              <span className="font-urbanist text-[9px] tracking-[0.24em] uppercase text-gold/80 mt-2 w-full text-center lg:text-left">
                 Global Mobility
               </span>
             </Link>
