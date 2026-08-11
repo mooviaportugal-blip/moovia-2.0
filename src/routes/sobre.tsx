@@ -192,7 +192,7 @@ function ComoConstruimosInteligencia() {
   );
 }
 
-/* ─────────────────── HOW WE BUILT HUMAN MOBILITY ASSESSMENT ─────────────────── */
+/* ─────────────────── HOW WE BUILT GLOBAL MOBILITY ASSESSMENT ─────────────────── */
 function HowWeBuiltTimeline() {
   const marcos = [
     { texto: "Experiência internacional como expatriados" },
