@@ -215,7 +215,7 @@ function EmpresasPage() {
             <span className="text-gold-l italic">Um retorno para a empresa.</span>
           </h2>
           <p className="font-body text-[14px] md:text-[15px] font-[300] italic text-white/60 leading-[1.7] text-center max-w-[720px] mx-auto mb-16">
-            Atendemos particulares e empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
+            Atendemos empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
           </p>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {[
