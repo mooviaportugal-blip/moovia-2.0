@@ -59,7 +59,7 @@ export const Route = createFileRoute("/")({
               name: "Quanto custa se mudar para Portugal saindo do Brasil?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Human Mobility Assessment (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
+                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Global Mobility Assessment (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
               },
             },
             {
