@@ -72,7 +72,7 @@ export function MethodologySection() {
             className="font-sora font-[200] text-white text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight"
           >
             Um símbolo.
-            <span className="block italic text-gold/90 mt-2">Planejar · Chegar · Permanecer.</span>
+            <span className="block italic text-gold/90 mt-2">Identificar · Medir · Mitigar</span>
           </motion.h2>
         </div>
 

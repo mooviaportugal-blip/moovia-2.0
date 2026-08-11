@@ -421,8 +421,8 @@ export const PHRASES: Record<string, Phrase> = {
     en: "MOOVIA Portugal doesn't handle isolated tasks. End-to-end coordination, from the first diagnosis to integration.",
   },
   "Ver como funciona": { "pt-BR": "Ver como funciona", es: "Ver cómo funciona", en: "See how it works" },
-  "Planejar · Chegar · Ficar": {
-    "pt-BR": "Planejar · Chegar · Ficar", es: "Planejar · Llegar · Quedarse", en: "Planejar · Chegar · Ficar",
+  "Identificar · Medir · Mitigar": {
+    "pt-BR": "Identificar · Medir · Mitigar", es: "Identificar · Medir · Mitigar", en: "Identify · Measure · Mitigate",
   },
   "Lisboa · Cascais · Estoril, 38.7223° N": {
     "pt-BR": "Lisboa · Cascais · Estoril, 38.7223° N",
