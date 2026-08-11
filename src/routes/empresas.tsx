@@ -96,6 +96,9 @@ function EmpresasPage() {
             className="font-display text-[clamp(32px,5vw,68px)] font-[300] text-white leading-[1.05] tracking-[-0.03em] mb-4 max-w-[900px]"
           >
             Global Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
+            <span className="block text-[0.45em] mt-4 tracking-normal leading-tight font-body font-[400] text-white/90">
+              para empresas que reduzem o risco humano da mobilidade internacional.
+            </span>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,31 +106,23 @@ function EmpresasPage() {
             transition={{ delay: 0.15 }}
             className="space-y-8 mb-10"
           >
-            <p className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px]">
-              A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
-            </p>
+            <div className="space-y-2">
+              <p className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 border-l-2 border-gold/50 pl-6 py-1 italic">
+                Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
+              </p>
+              <p className="font-body text-[14px] md:text-[15px] tracking-[0.1em] text-gold-l/80 pl-6">
+                Um benefício para o colaborador que representa um investimento mensurável para a empresa.
+              </p>
+            </div>
             
-            <p className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 border-l-2 border-gold/50 pl-6 py-2 italic">
-              Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
-            </p>
-
             <div className="space-y-6 max-w-[800px]">
-              <p className="font-body text-[16px] md:text-[18px] font-[600] text-white">
-                Um benefício para o colaborador. Um investimento mensurável para a empresa.
+              <p className="font-display italic text-[20px] md:text-[24px] font-[300] text-white leading-relaxed border-l-2 border-gold pl-6">
+                "O maior risco de uma missão internacional não está na viagem. Está no que acontece depois da chegada."
               </p>
               
               <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
                 <p className="text-white/90">
-                  Reduzimos Human Mobility Risk para aumentar a probabilidade de Global Mobility Success.
-                </p>
-                <p>
-                  Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, a MOOVIA mede aquilo que realmente determina o sucesso de uma mobilidade internacional: o fator humano.
-                </p>
-                <p>
-                  Através da metodologia Global Mobility Assurance, identificamos, avaliamos, mitigamos e acompanhamos os fatores humanos que influenciam a adaptação, o bem-estar e o desempenho do executivo e da sua família ao longo de toda a jornada internacional.
-                </p>
-                <p>
-                  Esta abordagem transforma fatores humanos em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para o RH, para o CFO e para o negócio.
+                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Human Mobility Assurance, identificando, medindo e ajudando a mitigar os riscos humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de fatores como integração, adaptação familiar, retenção e produtividade.
                 </p>
               </div>
             </div>
@@ -141,7 +136,7 @@ function EmpresasPage() {
             className="mt-12 pt-6 border-t border-white/5"
           >
             <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-              A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional.
+              Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
             </p>
           </motion.div>
           
