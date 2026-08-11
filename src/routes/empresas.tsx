@@ -136,7 +136,7 @@ function EmpresasPage() {
             className="mt-12 pt-6 border-t border-white/5"
           >
             <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-              A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional.
+              Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
             </p>
           </motion.div>
           
