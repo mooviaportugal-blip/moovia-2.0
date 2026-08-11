@@ -122,7 +122,7 @@ function Home() {
               Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
               Global Mobility Strategy <span className="text-gold text-[10px]">♦</span>
               Global Mobility Success <span className="text-gold text-[10px]">♦</span>
-              Human Mobility Assessment <span className="text-gold text-[10px]">♦</span>
+              Global Mobility Assessment <span className="text-gold text-[10px]">♦</span>
               ROI <span className="text-gold text-[10px]">♦</span>
               Produtividade <span className="text-gold text-[10px]">♦</span>
               Integração <span className="text-gold text-[10px]">♦</span>
