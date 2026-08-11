@@ -110,7 +110,7 @@ export function Hero() {
               className="absolute inset-0 bg-gold"
             />
           </div>
-          <span className="opacity-80">Planejar · Chegar · Ficar</span>
+          <span className="opacity-80">Identificar · Medir · Mitigar</span>
         </div>
       </div>
 
