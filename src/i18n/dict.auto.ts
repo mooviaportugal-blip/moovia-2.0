@@ -216,7 +216,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   "Atendemos clientes em Portugal e internacionalmente,": { en: "We serve clients in Portugal and internationally," },
   "Atendemos executivos(as) e as suas famílias em todas as suas formas.": { en: "We serve executives and their families in every way." },
   "Atendemos famílias internacionais em todas as suas formas.": { en: "We serve international families of all kinds." },
-  "Atendemos particulares e empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.": { en: "We serve individuals and businesses of all sizes. Each proposal is tailored to the specific profile and complexity of each transition." },
+  "Atendemos empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.": { en: "We serve businesses of all sizes. Each proposal is tailored to the specific profile and complexity of each transition." },
   "Até 1 ano": { en: "Up to 1 year" },
   "Até 12 meses": { en: "Up to 12 months" },
   "Até 2 anos": { en: "Up to 2 years" },
