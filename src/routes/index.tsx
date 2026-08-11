@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "Como funciona o Human Mobility Assessment da MOOVIA?",
+              name: "Como funciona o Global Mobility Assessment da MOOVIA?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Sessão de 60 minutos conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos, riscos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. €250, abatidos no Mandato caso a família avance.",
