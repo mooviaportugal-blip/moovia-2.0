@@ -45,6 +45,7 @@ function SobrePage() {
     <SiteLayout>
       <WhoWeAreSection />
       <Hero />
+      <Historia />
       <OrigemMercado />
       <EquacaoMoovia />
       
