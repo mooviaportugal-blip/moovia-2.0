@@ -82,24 +82,6 @@ const LINES = [
         img: "/images/guilherme.png",
         tags: ["Branding", "Estratégia de Posicionamento", "Comunicação Institucional"],
         type: "person" as const
-      },
-      {
-        id: "dany",
-        number: "07",
-        name: "DANY",
-        role: "Especialista em Educação",
-        img: "/images/dany.png",
-        tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
-        type: "person" as const
-      },
-      {
-        id: "laura",
-        number: "08",
-        name: "DRA. LAURA COSTA",
-        role: "Advogada de Imigração",
-        img: "/images/laura.png",
-        tags: ["Vistos", "Residência", "Nacionalidade"],
-        type: "person" as const
       }
     ]
   },
@@ -125,6 +107,24 @@ const LINES = [
     title: "REDE DE ESPECIALISTAS",
     subtitle: "ECOSSISTEMA MULTIDISCIPLINAR",
     members: [
+      {
+        id: "dany",
+        number: "07",
+        name: "DANY",
+        role: "Especialista em Educação",
+        img: "/images/dany.png",
+        tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
+        type: "person" as const
+      },
+      {
+        id: "laura",
+        number: "08",
+        name: "DRA. LAURA COSTA",
+        role: "Advogada de Imigração",
+        img: "/images/laura.png",
+        tags: ["Vistos", "Residência", "Nacionalidade"],
+        type: "person" as const
+      },
       {
         id: "sara",
         number: "09",
