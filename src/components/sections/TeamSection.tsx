@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+
 
 
 type HomeMember = {
@@ -22,7 +24,7 @@ const FUNDADORES: HomeMember[] = [
     id: "frederico",
     name: "Frederico Prado",
     role: "Founder & CEO",
-    img: "/images/frederico.png",
+    img: fredericoNewAsset.url,
     linkedin: "https://www.linkedin.com/in/fredericoprado/",
     chips: ["29 anos", "Tampa (EUA)", "Lisboa, 2018"],
     bio: "Founder & CEO da MOOVIA. 29 anos como executivo internacional. Viveu a mudança para Portugal em 2018.",

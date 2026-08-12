@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
-const fredericoAsset = { url: "/images/frederico.png" };
+import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+const fredericoAsset = { url: fredericoNewAsset.url };
 import leticiaAsset from "@/assets/leticia.png.asset.json";
 
 export function ProcessSection() {
