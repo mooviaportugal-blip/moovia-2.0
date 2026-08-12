@@ -23,11 +23,11 @@ export function FormSection() {
             viewport={{ once: true }}
             className="font-sora text-[clamp(28px,3.5vw,44px)] font-[200] text-white leading-tight mb-8"
           >
-            O primeiro passo consiste em proteger o seu investimento.
+            O primeiro passo consiste na conversa certa.
           </motion.h2>
           <div className="space-y-6 max-w-lg mb-10">
             <p className="font-urbanist text-[16px] font-[300] text-w35 leading-[1.9]">
-              Quer pretenda proteger o ROI das contratações internacionais da sua empresa ou planear a mobilidade corporativa com segurança, a nossa equipa ajuda a identificar e avaliar os fatores humanos e a definir a melhor estratégia.
+              Uma conversa direta para entender o seu caso e mostrar como a MOOVIA pensa. Quer pretenda conhecer o Global Mobility Assurance para a sua empresa ou planear a sua própria transição com segurança, a nossa equipa ajuda a identificar e avaliar os fatores humanos e a definir a melhor estratégia.
             </p>
           </div>
 
