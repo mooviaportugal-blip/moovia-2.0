@@ -18,8 +18,8 @@ const LINES = [
   {
     id: "L1",
     label: "LINHA 1",
-    title: "FOUNDERS",
-    subtitle: "DNA DA MOOVIA",
+    title: "FUNDADORES",
+    subtitle: "LIDERANÇA & ESTRATÉGIA",
     members: [
       {
         id: "frederico",
@@ -62,8 +62,8 @@ const LINES = [
   {
     id: "L2",
     label: "LINHA 2",
-    title: "CORE TEAM",
-    subtitle: "EQUIPA MOOVIA",
+    title: "EQUIPA PRINCIPAL",
+    subtitle: "TECNOLOGIA & ESPECIALISTAS",
     members: [
       {
         id: "eduardo",
@@ -106,14 +106,14 @@ const LINES = [
   {
     id: "L3",
     label: "LINHA 3",
-    title: "MOOVIA ORQUESTRAÇÃO",
-    subtitle: "COORDENAMOS A EXCELÊNCIA",
+    title: "GLOBAL MOBILITY ASSURANCE",
+    subtitle: "INTELIGÊNCIA & COORDENAÇÃO",
     members: [
       {
         id: "hub",
         number: "HUB",
-        name: "MOOVIA ORQUESTRAÇÃO",
-        role: "Hub de Coordenação",
+        name: "GLOBAL MOBILITY ASSURANCE",
+        role: "Inteligência & Coordenação",
         tags: ["Coordenamos os melhores especialistas no momento certo para cada cliente."],
         type: "hub" as const
       }
@@ -122,8 +122,8 @@ const LINES = [
   {
     id: "L4",
     label: "LINHA 4",
-    title: "TRUSTED PARTNERS",
-    subtitle: "A NOSSA REDE DE ESPECIALISTAS",
+    title: "REDE DE ESPECIALISTAS",
+    subtitle: "ECOSSISTEMA MULTIDISCIPLINAR",
     members: [
       {
         id: "sara",
@@ -167,9 +167,9 @@ const LINES = [
         name: "+ PARCEIROS",
         role: "Ecossistema",
         tags: [
-          "Seguros · Banca · Fiscalidade",
-          "Saúde · Tradução · Outros",
-          "Serviços Locais"
+          "Jurídico · Fiscalidade · Imigração",
+          "Integração · Educação · Habitação",
+          "Bem-estar"
         ],
         type: "entity" as const
       }
