@@ -62,7 +62,7 @@ export function B2BRiskSection() {
           >
             <span className="block font-[200] text-[clamp(28px,4vw,52px)]">Global Mobility Assurance</span>
             <span className="block text-[clamp(18px,2.5vw,28px)] font-body font-[300] tracking-normal text-gold-l mt-4">
-              Reduzindo o Global Mobility Risk.
+              Identificar e avaliar os fatores humanos.
             </span>
           </motion.h2>
 
@@ -76,7 +76,7 @@ export function B2BRiskSection() {
               Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
             </p>
             <p>
-              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para reduzir o Global Mobility Risk através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
+              Metodologia desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, para identificar e avaliar os fatores humanos através de Risk Intelligence, aumentando a retenção, acelerando a integração e transformando a mobilidade internacional em Global Mobility Success.
             </p>
           </motion.div>
         </div>
@@ -161,7 +161,7 @@ export function B2BRiskSection() {
           className="mt-20 pt-8 border-t border-white/5"
         >
           <p className="text-[12px] font-body italic text-white/40 tracking-wide">
-            A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional.
+            A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional para identificar e avaliar os fatores humanos de forma estruturada.
           </p>
         </motion.div>
       </div>
