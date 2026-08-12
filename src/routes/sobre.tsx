@@ -6,7 +6,7 @@ import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
-import problemLisboa from "@/assets/problem-lisboa-planning.jpg";
+import problemLisboa from "/images/problem-frederico.avif";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -706,7 +706,7 @@ function Historia() {
             <img
               src={problemLisboa}
               alt="Frederico em Lisboa, 2018"
-              className="w-full h-[560px] object-cover grayscale-[0.4] contrast-[1.1] brightness-[0.92]"
+              className="w-full h-[560px] object-cover "
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06091a]/30 to-transparent" />
           </div>
