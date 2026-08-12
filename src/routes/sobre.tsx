@@ -224,7 +224,7 @@ function ComoConstruimosInteligencia() {
 
         <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
           <p>
-            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, experiência de risco e regras de negócio, numa lógica computacional explicável.
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, inteligência de fatores humanos e regras de negócio, numa lógica computacional explicável.
           </p>
         </div>
 
