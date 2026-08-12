@@ -9,7 +9,7 @@ export const WhoWeAreSection = () => {
   ];
 
   return (
-    <section className="bg-black py-24 px-6 md:px-12 lg:px-24 border-b border-white/5 relative overflow-hidden z-10">
+    <section className="bg-black py-24 px-6 md:px-12 lg:px-24 border-b border-white/5 relative overflow-hidden z-10 pt-32 lg:pt-40">
       {/* Background Glow */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
       

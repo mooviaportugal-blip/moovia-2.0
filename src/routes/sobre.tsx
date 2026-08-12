@@ -43,8 +43,8 @@ export const Route = createFileRoute("/sobre")({
 function SobrePage() {
   return (
     <SiteLayout>
-      <WhoWeAreSection />
       <Hero />
+      <WhoWeAreSection />
       <Historia />
       <OrigemMercado />
       <EquacaoMoovia />
