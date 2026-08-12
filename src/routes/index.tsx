@@ -134,7 +134,7 @@ function Home() {
       <WhoWeAreSection />
       <ProblemSection />
       <MarketResearchSection />
-      <B2BRiskSection />
+      
       <NossaTeseSection />
       
       
