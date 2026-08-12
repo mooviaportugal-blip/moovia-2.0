@@ -49,7 +49,7 @@ export function ProblemSection() {
               viewport={{ once: true }}
               className="font-display text-[clamp(32px,4vw,64px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10"
             >
-              <span className="block mb-1">O maior risco</span>
+              <span className="block mb-1">Um dos maiores desafios</span>
               <span className="block font-[300] mb-1">da mobilidade internacional</span>
               <span className="block mb-6 text-white/60">não está no visto.</span>
               <span className="text-gold-l italic font-[300] block">
