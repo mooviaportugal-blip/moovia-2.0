@@ -10,13 +10,13 @@ export const Route = createFileRoute("/equipa")({
   head: () => ({
     meta: [
       { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
-      { name: "description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso. A MOOVIA integra estratégia, direito, fiscalidade, tecnologia e a dimensão humana." },
+      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional." },
       { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
-      { property: "og:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso." },
+      { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
       { property: "og:url", content: "https://mooviaportugal.com/equipa" },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Equipa e Rede MOOVIA" },
-      { name: "twitter:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa." },
+      { name: "twitter:description", content: "Diferentes competências. Uma única camada de Assurance." },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/equipa" }],
     scripts: [
