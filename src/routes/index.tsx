@@ -147,7 +147,7 @@ function Home() {
       <BlogTeaserSection />
       <MaiaSection />
       
-      <FormSection />
+      
     </SiteLayout>
   );
 }
