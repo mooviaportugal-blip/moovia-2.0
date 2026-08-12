@@ -10,13 +10,13 @@ export const Route = createFileRoute("/equipa")({
   head: () => ({
     meta: [
       { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
-      { name: "description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso. A MOOVIA integra estratégia, direito, fiscalidade, tecnologia e a dimensão humana." },
+      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional." },
       { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
-      { property: "og:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa quando é preciso." },
+      { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
       { property: "og:url", content: "https://mooviaportugal.com/equipa" },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Equipa e Rede MOOVIA" },
-      { name: "twitter:description", content: "Oito pessoas coordenam. Uma rede de parceiros executa." },
+      { name: "twitter:description", content: "Diferentes competências. Uma única camada de Assurance." },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/equipa" }],
     scripts: [
@@ -70,21 +70,24 @@ function Equipa() {
             transition={{ delay: 0.1 }}
             className="font-display text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-0.03em] mb-14"
           >
-            <span className="block font-[200] text-white mb-2">Oito pessoas coordenam.</span>
-            <span className="block font-[300] italic text-gold-l">Uma rede executa quando é preciso.</span>
+            <span className="block font-[200] text-white mb-2">Diferentes competências.</span>
+            <span className="block font-[300] italic text-gold-l">Uma única camada de Assurance.</span>
           </motion.h1>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="max-w-[720px] border-l-[3px] border-gold/40 pl-6 space-y-6"
+            className="max-w-[760px] border-l-[3px] border-gold/40 pl-6 space-y-6"
           >
             <p className="font-display text-[20px] md:text-[24px] font-[300] text-white/90 leading-[1.5]">
-              O Global Mobility Success Framework integra estratégia, direito, fiscalidade, tecnologia e a dimensão humana dentro da MOOVIA.
+              O Global Mobility Assurance integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional.
             </p>
             <p className="font-body text-[16px] md:text-[18px] font-[300] text-white/60 leading-[1.8]">
-              E quando surgem as necessidades operacionais de cada mobilidade, orquestramos uma rede de parceiros especializados para executar com precisão.
+              A MOOVIA identifica, mede e acompanha os fatores que podem afetar integração, adaptação familiar, produtividade, retenção e sucesso da missão, apoiando empresas e executivos ao longo de toda a jornada.
+            </p>
+            <p className="font-body text-[13px] md:text-[14px] font-[300] text-white/50 leading-[1.8]">
+              Quando uma necessidade específica é identificada, a MOOVIA pode conectar a organização à sua rede de especialistas, mantendo o foco na medição, acompanhamento e evolução dos indicadores.
             </p>
           </motion.div>
         </div>
