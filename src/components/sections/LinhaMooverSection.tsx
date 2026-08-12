@@ -189,7 +189,7 @@ export function LinhaMooverSection() {
           <div className="relative inline-flex items-center gap-3 border border-gold/40 bg-gradient-to-b from-[#1a1308] to-black px-6 py-3 shadow-[0_0_24px_rgba(173,137,87,0.18)] rounded-sm">
             <span className="h-8 w-8 rounded-full bg-gold text-black flex items-center justify-center font-sora font-bold text-sm">M</span>
             <span className="font-urbanist uppercase text-gold tracking-[0.32em] text-sm">
-              <span className="opacity-70">Linha</span> <span className="font-semibold">Moovers</span>
+              <span className="font-semibold">ECOSSISTEMA MOOVIA</span>
             </span>
           </div>
         </div>
