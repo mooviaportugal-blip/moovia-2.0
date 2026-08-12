@@ -108,7 +108,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
           ],
           published: true,
           featured_image: null,
-          banner_image: null,
+          featured_image: null,
           og_image: null,
           meta_title: "Custo invisível da mobilidade internacional | MOOVIA",
           meta_description:
