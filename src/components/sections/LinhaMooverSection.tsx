@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { TrainFront } from "lucide-react";
+import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
 
 type Member = {
   id: string;
@@ -26,7 +27,7 @@ const LINES = [
         number: "01",
         name: "FREDERICO PRADO",
         role: "CEO & Founder",
-        img: "/images/frederico.png",
+        img: fredericoNewAsset.url,
         tags: ["Revenue Assurance", "Business Intelligence", "Global Mobility Assurance"],
         type: "person" as const
       },

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+
 const Linkedin = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -29,7 +31,7 @@ const ALL: Record<string, Member> = {
     name: "Frederico Prado",
     initials: "FP",
     role: "Founder & CEO",
-    img: "/images/frederico.png",
+    img: fredericoNewAsset.url,
     linkedin: "https://www.linkedin.com/in/fredericoprado/",
     chips: ["29 anos", "Tampa (EUA)", "Lisboa, 2018"],
     bio: [

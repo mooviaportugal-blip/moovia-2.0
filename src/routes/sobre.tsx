@@ -6,7 +6,8 @@ import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
-import problemLisboa from "/images/problem-frederico.avif";
+import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+const problemLisboa = fredericoNewAsset.url;
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
