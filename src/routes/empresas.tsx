@@ -306,7 +306,6 @@ function EmpresasPage() {
       </section>
       <ProcessSection />
 
-
       {/* FORMULÁRIO UNIFICADO */}
       <section id="empresas-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
         <UnifiedLeadForm context="empresas" />
