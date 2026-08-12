@@ -1,0 +1,1 @@
+DELETE FROM public.chat_logs WHERE session_id LIKE 'sectest-%';
