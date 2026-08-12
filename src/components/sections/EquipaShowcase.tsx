@@ -57,7 +57,7 @@ const ALL: Record<string, Member> = {
     id: "joao",
     name: "João Gabriel Prado",
     initials: "JG",
-    role: "Corporate & M&A | Universidade de Lisboa",
+    role: "Co-Founder & Legal | Universidade de Lisboa",
     img: "/images/joao.png",
     linkedin: "https://www.linkedin.com/in/joaogabrielprado/",
     chips: ["Abreu Advogados", "ULisboa", "CIDP"],
