@@ -83,7 +83,7 @@ export const Route = createFileRoute("/")({
               name: "O que é um Mandato MOOVIA?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: PLANEJAMOS (antes da mudança), INSTALAMOS (na chegada), INTEGRAMOS (primeiros meses) e ESTRUTURAMOS (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após o Global Mobility Assessment.",
+                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: Identificar (antes da mudança), Medir (na chegada), Mitigar (primeiros meses) e Estruturar (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após o Global Mobility Assessment.",
               },
             },
             {

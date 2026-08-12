@@ -25,7 +25,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.":
     { en: "MOOVIA Portugal doesn't solve isolated tasks. Complete coordination, from the initial diagnostic to integration.", es: "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración." },
   "Ver como funciona": { en: "See how it works", es: "Ver cómo funciona" },
-  "Identificar · Medir · Mitigar": { en: "Identify · Measure · Mitigate", es: "Identificar · Medir · Mitigate" },
+  "Identificar · Medir · Mitigar": { en: "Identify · Measure · Mitigate", es: "Identificar · Medir · Mitigar" },
   "Capítulo 01": { en: "Chapter 01", es: "Capítulo 01" },
   "Mandato de transição": { en: "Transition Mandate", es: "Mandato de transición" },
   "Transição Internacional": { en: "International Transition", es: "Transición Internacional" },
@@ -161,3 +161,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Global Mobility Success": { en: "Global Mobility Success", es: "Global Mobility Success" },
   "Global Mobility Strategy": { en: "Global Mobility Strategy", es: "Global Mobility Strategy" },
 };
+
+export function translate(text: string, lang: "en" | "es"): string | undefined {
+  return DICT[text]?.[lang];
+}
