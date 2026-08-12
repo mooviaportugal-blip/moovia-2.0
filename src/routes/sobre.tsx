@@ -6,7 +6,7 @@ import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
-import problemLisboa from "@/assets/problem-lisboa-planning.jpg";
+import problemLisboa from "/images/problem-frederico.avif";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -45,6 +45,7 @@ function SobrePage() {
     <SiteLayout>
       <WhoWeAreSection />
       <Hero />
+      <Historia />
       <OrigemMercado />
       <EquacaoMoovia />
       
@@ -588,17 +589,17 @@ function Hero() {
           className="mb-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-8 items-center max-w-[1100px] border-y border-b18 py-8"
         >
           <div className="text-center md:text-left">
-            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Assurance</p>
-            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a categoria que o torna mensurável.</p>
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Assurance</p>
+            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a categoria.</p>
           </div>
           <div className="hidden md:block w-px h-16 bg-b30" />
           <div className="text-center md:text-left">
-            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Strategy</p>
-            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a disciplina que o torna possível.</p>
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Strategy</p>
+            <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é a disciplina.</p>
           </div>
           <div className="hidden md:block w-px h-16 bg-b30" />
           <div className="text-center md:text-left">
-            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Global Mobility Success</p>
+            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-2">Success</p>
             <p className="font-display font-[200] text-white text-[clamp(18px,2vw,24px)] leading-[1.3]">é o resultado.</p>
           </div>
         </motion.div>
@@ -706,7 +707,7 @@ function Historia() {
             <img
               src={problemLisboa}
               alt="Frederico em Lisboa, 2018"
-              className="w-full h-[560px] object-cover grayscale-[0.4] contrast-[1.1] brightness-[0.92]"
+              className="w-full h-[560px] object-cover "
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06091a]/30 to-transparent" />
           </div>
