@@ -112,7 +112,6 @@ export const Route = createFileRoute("/api/public/seed-blog")({
           meta_title: "Custo invisível da mobilidade internacional | MOOVIA",
           meta_description:
             "O verdadeiro risco da mobilidade internacional começa depois da chegada. Saiba como antecipar custos ocultos de turnover, integração e retenção de talentos.",
-          focus_keyword: "mobilidade internacional",
           read_time: 3,
           published_at: new Date().toISOString(),
         };
