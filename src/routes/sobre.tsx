@@ -1016,14 +1016,15 @@ function Cta() {
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <span className="relative z-10 transition-colors group-hover:text-gold">Solicitar Global Mobility Assessment</span>
+            <span className="relative z-10 transition-colors group-hover:text-gold">Conhecer Global Mobility Assurance</span>
           </Link>
           <Link
-            to="/equipa"
+            to="/home"
+            hash="lead-form"
             className="group relative overflow-hidden border border-b30 text-gold font-body font-[500] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate hover:border-gold"
           >
             <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <span className="relative z-10 transition-colors group-hover:text-[#06091a]">Ver a equipa</span>
+            <span className="relative z-10 transition-colors group-hover:text-[#06091a]">Como funciona</span>
           </Link>
         </div>
       </div>
