@@ -65,6 +65,7 @@ function SobrePage() {
       <MethodologySection />
       <GlossarioConceitual />
       <HowWeBuiltTimeline />
+      <Cta />
     </SiteLayout>
   );
 }
