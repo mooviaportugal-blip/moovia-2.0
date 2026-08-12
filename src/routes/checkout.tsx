@@ -30,7 +30,7 @@ export const Route = createFileRoute("/checkout")({
       {
         name: "description",
         content:
-          "Finalize o pagamento da Avaliação Estratégica MOOVIA (€250 + IVA) com cartão ou Pix.",
+          "Finalize o pagamento da Avaliação Estratégica MOOVIA com cartão ou Pix.",
       },
       { name: "robots", content: "noindex,nofollow" },
     ],
