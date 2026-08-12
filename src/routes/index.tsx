@@ -11,7 +11,7 @@ import { MethodologySection } from "@/components/sections/MethodologySection";
 
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 import { CasesSection } from "@/components/sections/CasesSection";
-import { MandatoRedeSection } from "@/components/sections/MandatoRedeSection";
+
 
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
@@ -137,7 +137,7 @@ function Home() {
       <B2BRiskSection />
       <NossaTeseSection />
       
-      <MandatoRedeSection />
+      
       <AssessmentSection />
       <EcossistemaSection />
       
