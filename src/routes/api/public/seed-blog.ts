@@ -96,24 +96,8 @@ export const Route = createFileRoute("/api/public/seed-blog")({
 <li>AXA Global Healthcare (2026) — dados sobre mobilidade internacional e desafios de adaptação.</li>
 </ul>`,
           category: "Global Mobility Assurance",
-          tags: [
-            "mobilidade internacional",
-            "turnover",
-            "integração",
-            "ROI",
-            "gestão de risco",
-            "expatriação",
-            "retenção de talentos",
-            "MOOVIA",
-          ],
           published: true,
           featured_image: null,
-          banner_image: null,
-          og_image: null,
-          meta_title: "Custo invisível da mobilidade internacional | MOOVIA",
-          meta_description:
-            "O verdadeiro risco da mobilidade internacional começa depois da chegada. Saiba como antecipar custos ocultos de turnover, integração e retenção de talentos.",
-          focus_keyword: "mobilidade internacional",
           read_time: 3,
           published_at: new Date().toISOString(),
         };

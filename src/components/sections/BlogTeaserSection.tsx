@@ -10,6 +10,7 @@ import blogVistoLisboa from "@/assets/blog-visto-lisboa.jpg";
 function toLocale(lang: string): Locale {
   if (lang.startsWith("en")) return "en";
   if (lang.startsWith("es")) return "es";
+  if (lang.startsWith("pt")) return "pt";
   return "pt";
 }
 
