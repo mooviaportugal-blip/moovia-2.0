@@ -145,7 +145,10 @@ function Home() {
       
       <LisboaGallery />
       <BlogTeaserSection />
+      <BlogTeaserSection />
+      <LisboaGallery />
       <MaiaSection />
+      <FormSection />
       
       
     </SiteLayout>

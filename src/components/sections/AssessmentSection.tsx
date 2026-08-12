@@ -163,7 +163,7 @@ export function AssessmentSection() {
               className="block text-center w-full bg-gold text-black font-body font-[600] text-[13px] tracking-[0.22em] uppercase py-6 transition-all hover:bg-gold-xl group overflow-hidden relative"
             >
               <span className="relative z-10 leading-tight">
-                Solicitar Global Mobility Assessment
+                Conhecer Global Mobility Assurance
               </span>
               <div className="absolute inset-0 bg-gold-xl translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             </a>
