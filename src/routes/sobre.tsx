@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre a MOOVIA, Global Mobility Success" },
-      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e adaptação humana." },
+      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e inteligência de fatores humanos." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
       { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
       { property: "og:url", content: "https://mooviaportugal.com/sobre" },

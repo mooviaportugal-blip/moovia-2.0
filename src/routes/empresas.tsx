@@ -403,9 +403,9 @@ function BeneficioGestaoRisco() {
 /* ─────────────────────────── O QUE ESTAMOS ASSEGURANDO ─────────────────────────── */
 function OqueAsseguramos() {
   const itens = [
-    "Identificar riscos que normalmente ficam invisíveis",
-    "Reduzir decisões baseadas apenas em perceção",
-    "Tratar os fatores identificados",
+    "Identificar fatores humanos que normalmente ficam invisíveis",
+    "Reduzir decisões baseadas apenas em percepção",
+    "Compreender e avaliar os fatores identificados",
     "Coordenar diferentes especialistas",
     "Acompanhar a adaptação",
     "Produzir evidências sobre a evolução da mobilidade",
@@ -445,10 +445,10 @@ function OqueAsseguramos() {
 /* ─────────────────────────── COMO GERAMOS VALOR (3 PÚBLICOS) ─────────────────────────── */
 function ComoGeramosValor() {
   const empresa = [
-    "Redução dos riscos humanos associados à mobilidade internacional",
+    "Identificação e avaliação dos fatores humanos associados à mobilidade internacional",
     "Maior probabilidade de retenção do talento",
     "Integração mais rápida e estruturada",
-    "Redução do risco de retorno antecipado",
+    "Redução da probabilidade de retorno antecipado",
     "Maior produtividade durante os primeiros meses",
     "Melhor retorno sobre o investimento realizado",
     "Apoio às equipas de RH e Global Mobility",
@@ -530,7 +530,7 @@ function EverybodyWins() {
       items: [
         "Talento retido",
         "Produtividade mais rápida",
-        "Menor risco de mobilidade",
+        "Menor exposição a imprevistos de mobilidade",
         "Melhor ROI",
       ],
     },

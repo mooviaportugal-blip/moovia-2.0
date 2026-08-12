@@ -30,13 +30,13 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "MOOVIA Portugal | Global Mobility Assurance" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA Global Mobility Assurance e Global Mobility Success Framework." },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Global Mobility Assurance e Global Mobility Success Framework." },
       { property: "og:title", content: "MOOVIA Portugal | Global Mobility Assurance" },
-      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. MOOVIA Global Mobility Assurance e Global Mobility Success Framework." },
+      { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Global Mobility Assurance e Global Mobility Success Framework." },
       { property: "og:url", content: "https://mooviaportugal.com/" },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "MOOVIA Portugal | Global Mobility Assurance" },
-      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA Global Mobility Assurance e Global Mobility Success Framework." },
+      { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. Global Mobility Assurance e Global Mobility Success Framework." },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
     scripts: [
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
               name: "O que é a MOOVIA Portugal?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "A MOOVIA Portugal é uma empresa de coordenação de transição internacional de vida e património, especializada no corredor Brasil → Portugal. Diferente de agências de imigração ou imobiliárias, a MOOVIA coordena toda a jornada, visto, moradia, escola, fiscalidade e adaptação familiar, através de uma equipa multidisciplinar integrada.",
+                text: "A MOOVIA Portugal é uma empresa de coordenação de transição internacional de vida e património, especializada no corredor Brasil → Portugal. Diferente de agências de imigração ou imobiliárias, a MOOVIA coordena toda a jornada: visto, moradia, escola, fiscalidade e adaptação familiar, através de uma equipa multidisciplinar integrada.",
               },
             },
             {
@@ -59,7 +59,7 @@ export const Route = createFileRoute("/")({
               name: "Quanto custa se mudar para Portugal saindo do Brasil?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Global Mobility Assessment (€250, 60 minutos) que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
+                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Global Mobility Assessment que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
               },
             },
             {
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/")({
               name: "Como funciona o Global Mobility Assessment da MOOVIA?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sessão de 60 minutos conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos, riscos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. €250, abatidos no Mandato caso a família avance.",
+                text: "Sessão conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. Valor abatido no Mandato caso a família avance.",
               },
             },
             {
