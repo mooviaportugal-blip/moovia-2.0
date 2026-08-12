@@ -76,7 +76,7 @@ export function Hero() {
             </span>
           </Link>
           <Link
-            to="/home"
+            to="/"
             hash="lead-form"
             onClick={(e) => {
               if (typeof window !== "undefined" && window.location.pathname === "/home") {
