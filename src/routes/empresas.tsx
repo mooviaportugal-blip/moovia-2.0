@@ -122,7 +122,7 @@ function EmpresasPage() {
               
               <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
                 <p className="text-white/90">
-                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Global Mobility Assurance, identificando, medindo e ajudando a mitigar os riscos humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de fatores como integração, adaptação familiar, retenção e produtividade.
+                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Global Mobility Assurance, identificando e avaliando os fatores humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de indicadores como integração, adaptação familiar, retenção e produtividade.
                 </p>
               </div>
             </div>
