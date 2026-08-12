@@ -52,7 +52,7 @@ export function Hero() {
           className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
           <p>
-            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA mede aquilo que realmente determina o sucesso da mobilidade internacional: integração, adaptação familiar, retenção e produtividade.
+            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engagement, retenção e produtividade.
           </p>
         </motion.div>
 
@@ -67,15 +67,12 @@ export function Hero() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
           <Link
-            to="/empresas"
+            to="/sobre"
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[96px] flex flex-col items-center justify-center"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
             <span className="relative z-10 transition-colors duration-300 group-hover:text-gold flex flex-col leading-tight items-center text-center">
-              <span>Para Empresas</span>
-              <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
-                Proteja o retorno do investimento em talento internacional.
-              </span>
+              <span>Conhecer Global Mobility Assurance</span>
             </span>
           </Link>
           <Link
@@ -91,10 +88,7 @@ export function Hero() {
           >
             <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
             <span className="relative z-10 transition-colors duration-300 group-hover:text-[#06091a] flex flex-col leading-tight items-center text-center">
-              <span>Para Executivos Internacionais</span>
-              <span className="text-[9px] tracking-[0.1em] opacity-80 mt-1.5 font-[400] normal-case leading-relaxed">
-                Uma transição internacional mais previsível para si e para a sua família.
-              </span>
+              <span>Como funciona</span>
             </span>
           </Link>
         </div>

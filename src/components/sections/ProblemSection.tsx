@@ -18,7 +18,7 @@ export function ProblemSection() {
     },
     {
       icon: AlertIcon,
-      title: "Riscos Invisíveis",
+      title: "Fatores Humanos Invisíveis",
       body: "Os fatores determinantes para o sucesso de uma mobilidade dificilmente constam dos indicadores tradicionais. O contexto familiar e a adaptação cultural revelam-se fundamentais para a estabilidade do processo.",
       fullBody: "Os fatores determinantes para o sucesso de uma mobilidade dificilmente constam dos indicadores tradicionais. O contexto familiar e a adaptação cultural revelam-se fundamentais para a estabilidade do processo."
     },
@@ -49,7 +49,7 @@ export function ProblemSection() {
               viewport={{ once: true }}
               className="font-display text-[clamp(32px,4vw,64px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10"
             >
-              <span className="block mb-1">O maior risco</span>
+              <span className="block mb-1">Um dos maiores desafios</span>
               <span className="block font-[300] mb-1">da mobilidade internacional</span>
               <span className="block mb-6 text-white/60">não está no visto.</span>
               <span className="text-gold-l italic font-[300] block">
@@ -147,7 +147,7 @@ export function ProblemSection() {
             className="font-display text-[clamp(26px,3vw,38px)] font-[200] text-white leading-[1.1] tracking-[-0.02em] max-w-[700px]"
           >
             <span className="text-white/60">Porque a mobilidade internacional continua a ser</span><br className="hidden md:block" />
-            <span className="font-[300] text-gold-l">um investimento de alto risco.</span>
+            <span className="font-[300] text-gold-l">um investimento significativo em talento internacional.</span>
           </motion.h3>
         </div>
 

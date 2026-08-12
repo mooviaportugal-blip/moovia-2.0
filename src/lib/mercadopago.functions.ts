@@ -368,10 +368,10 @@ export const createMercadoPagoAssessmentPreference = createServerFn({ method: "P
     const body = {
       items: [
         {
-          id: "moovia-assessment-strategic-250",
+          id: "moovia-assessment-strategic",
           title: "Avaliação Estratégica MOOVIA",
           description:
-            "Sessão de 60 min com Frederico Prado e Dra. Letícia de Mello + Relatório Estratégico Personalizado. Valor abatido no Mandato.",
+            "Sessão com Frederico Prado e Dra. Letícia de Mello + Relatório Estratégico Personalizado. Valor investido é abatido no Mandato.",
           quantity: 1,
           currency_id: currency,
           unit_price: unitPriceGross,

@@ -12,7 +12,7 @@ export function FAQSection() {
     },
     {
       q: "O que é a Avaliação Estratégica de €250 (+IVA)?",
-      a: "É o primeiro produto da MOOVIA: não uma consulta, mas um trabalho estratégico real com entregável físico. 60 minutos com 1 founder, mapeamento completo de perfil, riscos, estratégias e cronograma. Os €250 (+IVA) são abatidos integralmente no mandato se decidir seguir com a MOOVIA."
+      a: "É o primeiro produto da MOOVIA: não uma consulta, mas um trabalho estratégico real com entregável físico. 60 minutos com 1 founder, mapeamento completo de perfil, fatores humanos, estratégias e cronograma. O valor investido é abatido integralmente no mandato se decidir seguir com a MOOVIA."
     },
     {
       q: "Qual a diferença entre a MOOVIA e uma empresa de imigração?",
@@ -28,7 +28,7 @@ export function FAQSection() {
     },
     {
       q: "Quanto custa a transição completa com a MOOVIA?",
-      a: "Não publicamos tabela de preços porque não existem pacotes. A Avaliação Estratégica custa €250 (+IVA), abatidos no mandato. O mandato completo varia entre €3.000 e €10.000 dependendo do perfil, do corredor e da complexidade."
+      a: "Não publicamos tabela de preços porque não existem pacotes. A Avaliação Estratégica tem um valor fixo, abatido no mandato. O mandato completo varia entre €3.000 e €10.000 dependendo do perfil, do corredor e da complexidade."
     },
     {
       q: "A MOOVIA atende apenas brasileiros?",

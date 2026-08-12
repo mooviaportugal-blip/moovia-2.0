@@ -10,12 +10,12 @@ export function ProcessSection() {
       id: "01",
       tag: "Avaliação",
       title: "Compreender antes de agir.",
-      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os riscos e as prioridades antes de avançarmos para qualquer decisão logística.",
+      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os fatores humanos e as prioridades antes de avançarmos para qualquer decisão logística.",
     },
     {
       id: "02",
       tag: "Plano Estratégico",
-      title: "Converter risco em estratégia.",
+      title: "Converter desafios em estratégia.",
       body: "Combinamos entrevistas estruturadas, metodologias próprias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
     },
     {
@@ -65,7 +65,7 @@ export function ProcessSection() {
               The MOOVIA Framework
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
-              Cinco etapas. Uma metodologia para reduzir o Global Mobility Risk através de Risk Intelligence.
+              Cinco etapas. Uma metodologia para identificar e avaliar os fatores humanos através de Risk Intelligence.
             </span>
           </motion.h2>
 

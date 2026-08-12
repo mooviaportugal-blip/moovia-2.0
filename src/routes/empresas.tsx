@@ -12,13 +12,13 @@ export const Route = createFileRoute("/empresas")({
       {
         name: "description",
         content:
-          "Transformamos Global Mobility Risk em Global Mobility Success. Reduza o risco humano da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
+          "Transformamos o Human Mobility Risk em Global Mobility Success. Identifique e avalie os fatores humanos da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
       },
       { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
-          "Programa B2B da MOOVIA para reduzir o Global Mobility Risk da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
+          "Programa B2B da MOOVIA para identificar e avaliar os fatores humanos da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
       },
     ],
   }),
@@ -60,7 +60,7 @@ function EmpresasPage() {
     "Melhor experiência",
   ];
   const empresa = [
-    "Redução do risco humano da mobilidade",
+    "Identificar e avaliar os fatores humanos da mobilidade",
     "Melhor integração",
     "Maior retenção",
     "Redução do turnover",
@@ -97,7 +97,7 @@ function EmpresasPage() {
           >
             Global Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
             <span className="block text-[0.45em] mt-4 tracking-normal leading-tight font-body font-[400] text-white/90">
-              para empresas que reduzem o risco humano da mobilidade internacional.
+              para empresas que investem em talento internacional.
             </span>
           </motion.h1>
           <motion.div
@@ -117,12 +117,12 @@ function EmpresasPage() {
             
             <div className="space-y-6 max-w-[800px]">
               <p className="font-display italic text-[20px] md:text-[24px] font-[300] text-white leading-relaxed border-l-2 border-gold pl-6">
-                "O maior risco de uma missão internacional não está na viagem. Está no que acontece depois da chegada."
+                "Um dos maiores desafios de uma missão internacional não está na viagem. Está no que acontece depois da chegada."
               </p>
               
               <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
                 <p className="text-white/90">
-                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Global Mobility Assurance, identificando, medindo e ajudando a mitigar os riscos humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de fatores como integração, adaptação familiar, retenção e produtividade.
+                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Global Mobility Assurance, identificando e avaliando os fatores humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de indicadores como integração, adaptação familiar, retenção e produtividade.
                 </p>
               </div>
             </div>
@@ -151,7 +151,7 @@ function EmpresasPage() {
             Para Empresas
           </p>
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10 max-w-[900px]">
-            <span className="block">O investimento em talento internacional está exposto.</span>
+            <span className="block">O investimento em talento internacional exige atenção.</span>
             <span className="text-gold-l italic block mt-2">A maioria das empresas não avalia esta exposição.</span>
           </h2>
           <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.85] space-y-6 max-w-[820px]">
@@ -189,7 +189,7 @@ function EmpresasPage() {
               ))}
             </ul>
             <p className="text-white/90 pt-4 border-l-2 border-gold pl-6 italic font-display text-[18px] md:text-[20px] font-[300]">
-              O mercado já entende esse problema. O que ainda não existe é uma solução desenhada especificamente para reduzi-lo.
+              O mercado já entende esse problema. O que ainda não existe é uma solução desenhada especificamente para atuar antecipadamente.
             </p>
           </div>
           <div className="mt-12">
@@ -326,7 +326,7 @@ function EmpresasPage() {
       <section className="bg-[#06091a] py-24 md:py-32 px-6 lg:px-20">
         <div className="mx-auto max-w-[1000px] text-center">
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-8">
-            <span className="block">Pretende reduzir o risco da sua</span>
+            <span className="block">Pretende melhorar os resultados da sua</span>
             <span className="text-gold-l italic block mt-1">próxima contratação internacional?</span>
           </h2>
           <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto mb-6">
@@ -403,9 +403,9 @@ function BeneficioGestaoRisco() {
 /* ─────────────────────────── O QUE ESTAMOS ASSEGURANDO ─────────────────────────── */
 function OqueAsseguramos() {
   const itens = [
-    "Identificar riscos que normalmente ficam invisíveis",
-    "Reduzir decisões baseadas apenas em perceção",
-    "Tratar os fatores identificados",
+    "Identificar fatores humanos que normalmente ficam invisíveis",
+    "Reduzir decisões baseadas apenas em percepção",
+    "Compreender e avaliar os fatores identificados",
     "Coordenar diferentes especialistas",
     "Acompanhar a adaptação",
     "Produzir evidências sobre a evolução da mobilidade",
@@ -445,10 +445,10 @@ function OqueAsseguramos() {
 /* ─────────────────────────── COMO GERAMOS VALOR (3 PÚBLICOS) ─────────────────────────── */
 function ComoGeramosValor() {
   const empresa = [
-    "Redução dos riscos humanos associados à mobilidade internacional",
+    "Identificação e avaliação dos fatores humanos associados à mobilidade internacional",
     "Maior probabilidade de retenção do talento",
     "Integração mais rápida e estruturada",
-    "Redução do risco de retorno antecipado",
+    "Redução da probabilidade de retorno antecipado",
     "Maior produtividade durante os primeiros meses",
     "Melhor retorno sobre o investimento realizado",
     "Apoio às equipas de RH e Global Mobility",
@@ -530,7 +530,7 @@ function EverybodyWins() {
       items: [
         "Talento retido",
         "Produtividade mais rápida",
-        "Menor risco de mobilidade",
+        "Menor exposição a imprevistos de mobilidade",
         "Melhor ROI",
       ],
     },

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre a MOOVIA, Global Mobility Success" },
-      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e adaptação humana." },
+      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e inteligência de fatores humanos." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
       { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
       { property: "og:url", content: "https://mooviaportugal.com/sobre" },
@@ -63,8 +63,48 @@ function SobrePage() {
       
       <PosicaoMarca />
       <MethodologySection />
+      <GlossarioConceitual />
       <HowWeBuiltTimeline />
     </SiteLayout>
+  );
+}
+
+/* ─────────────────────── GLOSSÁRIO CONCEITUAL ─────────────────────── */
+function GlossarioConceitual() {
+  const itens = [
+    { termo: "Global Mobility Assurance", desc: "A disciplina de gestão." },
+    { termo: "Fatores Humanos", desc: "Aquilo que identificamos, avaliamos e acompanhamos." },
+    { termo: "Sinais Humanos", desc: "Indicadores e sinais observados ao longo da mobilidade." },
+    { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação de dados, metodologias preditivas, tecnologia e interpretação humana." },
+    { termo: "Inteligência acionável", desc: "Informação estruturada que apoia a tomada de decisão." },
+    { termo: "Resultados da Mobilidade Internacional", desc: "Integração, adaptação, engajamento, produtividade, retenção, etc." },
+    { termo: "Global Mobility Success", desc: "O resultado desejado." },
+  ];
+
+  return (
+    <section className="bg-[#06091a] py-24 px-6 lg:px-20 border-t border-b18">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">Glossário Conceitual</p>
+        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-14">
+          Como tudo se <span className="italic text-gold-l">conecta.</span>
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {itens.map((item, i) => (
+            <motion.div
+              key={item.termo}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="border border-b18 bg-w05 p-6"
+            >
+              <h3 className="font-display text-[16px] text-gold-l mb-2 font-[400]">{item.termo}</h3>
+              <p className="font-body text-[14px] font-[300] text-w35 leading-[1.6]">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 /* ─────────────────────── RAÍZES E ASAS ─────────────────────── */
@@ -184,7 +224,7 @@ function ComoConstruimosInteligencia() {
 
         <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
           <p>
-            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, experiência de risco e regras de negócio, numa lógica computacional explicável.
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, inteligência de fatores humanos e regras de negócio, numa lógica computacional explicável.
           </p>
         </div>
 
@@ -198,7 +238,7 @@ function HowWeBuiltTimeline() {
   const marcos = [
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
-    { texto: "Metodologias de Assurance e gestão de risco" },
+    { texto: "Metodologias de Risk Intelligence" },
     { texto: "Ciência comportamental e metodologias psicológicas" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
@@ -233,7 +273,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e metodologias de Assurance.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Risk Intelligence.
         </p>
       </div>
     </section>
@@ -273,10 +313,10 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender, reduzir e acompanhar os riscos humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de uma mobilidade internacional.
           </p>
           <p>
-            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar riscos invisíveis dentro da mobilidade internacional.
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro da mobilidade internacional.
           </p>
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
@@ -314,7 +354,7 @@ function OqueSomos() {
           <div className="bg-w05 border border-b18 p-8 md:p-10">
             <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold/60 mb-4">Para a empresa</p>
             <p className="font-body font-[300] text-[17px] text-white/85 leading-[1.8]">
-              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility. Somos a camada de avaliação e mitigação de risco que protege o investimento feito em cada talento internacional.
+              A MOOVIA é um <strong className="font-[500] text-gold-l">parceiro estratégico</strong> em Global Mobility. Somos a camada de avaliação dos fatores humanos que protege o investimento feito em cada talento internacional.
             </p>
           </div>
         </div>
@@ -481,7 +521,7 @@ function ComoFazemosSection() {
     },
     {
       n: "04",
-      titulo: "Entregamos diagnóstico e plano de mitigação",
+      titulo: "Entregamos diagnóstico e avaliação",
       texto: "Para o colaborador, recomendações práticas e personalizadas. Para a empresa, respeitando o RGPD, uma visão executiva sem dados pessoais ou sensíveis.",
     },
     {
@@ -527,10 +567,10 @@ function ComoFazemosSection() {
 /* ─────────────────────────── O NOSSO MÉTODO ─────────────────────────── */
 function MetodoSection() {
   const blocos = [
-    { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos, riscos e variáveis da mobilidade." },
-    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando riscos, dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
+    { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos e variáveis da mobilidade." },
+    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
-    { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com riscos identificados, prioridades, recomendações e roadmap de implementação." },
+    { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
   ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
@@ -542,7 +582,7 @@ function MetodoSection() {
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
           <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
-          <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que mitiga riscos, introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
+          <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {blocos.map((b, i) => (

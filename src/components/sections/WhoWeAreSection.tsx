@@ -48,7 +48,7 @@ export const WhoWeAreSection = () => {
               transition={{ delay: 0.2 }}
               className="text-w35 font-urbanist text-lg leading-relaxed font-light"
             >
-              Através de uma metodologia própria, indicadores específicos e acompanhamento contínuo, ajudamos as organizações a identificar, medir e mitigar riscos antes que estes impactem o colaborador, a família ou o negócio.
+              Através de uma metodologia própria, indicadores específicos e acompanhamento contínuo, ajudamos as organizações a identificar e avaliar os fatores humanos antes que estes impactem o colaborador, a família ou o negócio.
             </motion.p>
 
             <motion.p 
