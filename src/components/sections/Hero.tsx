@@ -52,7 +52,7 @@ export function Hero() {
           className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
           <p>
-            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engagement, retenção e produtividade.
+            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engajamento, retenção e produtividade.
           </p>
         </motion.div>
 

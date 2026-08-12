@@ -30,7 +30,7 @@ export const Route = createFileRoute("/equipa")({
             { "@type": "ListItem", position: 1, item: { "@type": "Person", name: "Frederico Prado", jobTitle: "Founder & CEO", worksFor: { "@type": "Organization", name: "MOOVIA Portugal" }, url: "https://www.linkedin.com/in/fredericoprado/" } },
             { "@type": "ListItem", position: 2, item: { "@type": "Person", name: "Pablo Alejandro Saco Paim", jobTitle: "Co-Founder & CPTO", worksFor: { "@type": "Organization", name: "MOOVIA Portugal" } } },
             { "@type": "ListItem", position: 3, item: { "@type": "Person", name: "Dra. Letícia de Mello", jobTitle: "Co-Founder & CSO", worksFor: { "@type": "Organization", name: "MOOVIA Portugal" } } },
-            { "@type": "ListItem", position: 4, item: { "@type": "Person", name: "João Gabriel Prado", jobTitle: "Co-Founder & Legal Counsel", worksFor: { "@type": "Organization", name: "MOOVIA Portugal" } } },
+            { "@type": "ListItem", position: 4, item: { "@type": "Person", name: "João Gabriel Prado", jobTitle: "Co-Founder & Legal", worksFor: { "@type": "Organization", name: "MOOVIA Portugal" } } },
           ],
         }),
       },

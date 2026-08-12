@@ -52,7 +52,7 @@ const LINES = [
         id: "joao",
         number: "04",
         name: "JOÃO GABRIEL PRADO",
-        role: "Legal & Governance",
+        role: "Co-Founder & Legal",
         img: "/images/joao.png",
         tags: ["Governança Corporativa", "Compliance", "Inteligência Legal"],
         type: "person" as const

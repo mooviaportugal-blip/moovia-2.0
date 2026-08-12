@@ -114,6 +114,7 @@ function AdminLanguages() {
             "Lead Strategist",
             "Co-Founder & CPTO",
             "Co-Founder & CSO",
+            "Co-Founder & Legal",
             "Trusted Partners",
           ].map((term) => (
             <div key={term} className="flex items-center gap-2 text-white/70">
