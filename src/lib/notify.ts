@@ -83,7 +83,7 @@ function build(type: NotifyType, data: Record<string, any>): { subject: string; 
         row("Timing", data.timing),
         row("Composição", data.composition),
         row("Contexto", data.context || data.message),
-        row("Interesse", "Avaliação Estratégica · €250"),
+        row("Interesse", "Avaliação Estratégica"),
         row("Status", "Aguardando contacto do founder"),
       ])}</div>${footer}</div>`,
     };
