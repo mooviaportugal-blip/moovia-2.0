@@ -134,7 +134,7 @@ function Home() {
       <WhoWeAreSection />
       <ProblemSection />
       <MarketResearchSection />
-      <B2BRiskSection />
+      
       <NossaTeseSection />
       
       
@@ -145,9 +145,12 @@ function Home() {
       
       <LisboaGallery />
       <BlogTeaserSection />
+      <BlogTeaserSection />
+      <LisboaGallery />
       <MaiaSection />
-      
       <FormSection />
+      
+      
     </SiteLayout>
   );
 }
