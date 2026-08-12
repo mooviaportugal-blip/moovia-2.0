@@ -322,22 +322,6 @@ function EmpresasPage() {
       {/* EVERYBODY WINS — Global Mobility Success outcomes */}
       <EverybodyWins />
 
-      {/* CTA FINAL */}
-      <section className="bg-[#06091a] py-24 md:py-32 px-6 lg:px-20">
-        <div className="mx-auto max-w-[1000px] text-center">
-          <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.1] tracking-[-0.03em] mb-8">
-            <span className="block">Pretende melhorar os resultados da sua</span>
-            <span className="text-gold-l italic block mt-1">próxima contratação internacional?</span>
-          </h2>
-          <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto mb-6">
-            Agende uma Strategic Discovery Call para entendermos o perfil da sua equipa, os países envolvidos e como o Global Mobility Assurance pode ser estruturado para a sua empresa.
-          </p>
-          <p className="font-body text-[13px] md:text-[14px] font-[400] text-gold/90 leading-[1.6] max-w-[780px] mx-auto mb-12 italic">
-            Agende e a equipa MOOVIA entrará em contacto.
-          </p>
-          <CTALink label="Agendar Strategic Discovery Call" sublabel="Empresas" />
-        </div>
-      </section>
     </SiteLayout>
   );
 }
