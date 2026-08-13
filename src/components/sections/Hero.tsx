@@ -66,15 +66,19 @@ export function Hero() {
         </motion.blockquote>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
-          <Link
-            to="/sobre"
+          <a
+            href="#lead-form"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:scale-[1.02]"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
             <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
               Conhecer Global Mobility Assurance
             </span>
-          </Link>
+          </a>
         </div>
 
 

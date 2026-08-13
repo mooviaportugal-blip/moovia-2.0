@@ -1,10 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 import { EverybodyWins } from "@/components/sections/EverybodyWins";
+import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
+import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 
 export const Route = createFileRoute("/empresas")({
   head: () => ({
@@ -26,115 +28,138 @@ export const Route = createFileRoute("/empresas")({
   component: EmpresasPage,
 });
 
-function CTALink({ label, sublabel }: { label: string; sublabel?: string }) {
-  return (
-    <Link
-      to="/home"
-      hash="lead-form"
-      onClick={(e) => {
-        if (typeof window !== "undefined" && window.location.pathname === "/home") {
-          e.preventDefault();
-          document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }}
-      className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center inline-flex flex-col"
-    >
-      <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-      <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-        {label}
-      </span>
-      {sublabel && (
-        <span className="relative z-10 text-[9px] tracking-[0.2em] opacity-70 mt-1 font-[400] transition-colors duration-300 group-hover:text-gold">
-          {sublabel}
-        </span>
-      )}
-    </Link>
-  );
-}
-
 function EmpresasPage() {
   const colaborador = [
+    "Assessment inicial",
+    "Roadmap personalizado",
+    "Acompanhamento 30 dias",
+    "Acompanhamento 60 dias",
+    "Acompanhamento 90 dias",
+    "Executive Mobility Success Report",
+  ];
+  const empresa = [
+    "Monitorização estruturada da mobilidade",
+    "Global Mobility Success Report",
+    "Recomendações para RH e liderança",
+    "Maior capacidade de intervenção preventiva",
+    "Identificar e avaliar os fatores humanos da mobilidade",
+    "Maior retenção e redução do turnover",
+    "Fortalecimento da marca empregadora",
+    "Maior retorno sobre o investimento em talento internacional",
+  ];
+  const familia = [
     "Acolhimento",
     "Integração",
     "Apoio à família",
     "Redução da ansiedade",
     "Melhor experiência",
   ];
-  const empresa = [
-    "Identificar e avaliar os fatores humanos da mobilidade",
-    "Melhor integração",
-    "Maior retenção",
-    "Redução do turnover",
-    "Fortalecimento da marca empregadora",
-    "Maior retorno sobre o investimento em talento internacional",
-  ];
+
+  const handleScrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <SiteLayout>
-      {/* HERO */}
-      <section className="relative bg-[#06091a] pt-36 pb-24 md:pt-44 md:pb-32 px-6 lg:px-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 90% 70% at 70% 40%, rgba(15,31,65,0.4) 0%, transparent 70%)",
-            }}
-          />
-        </div>
-        <div className="relative z-10 mx-auto max-w-[1200px]">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
-          >
-            Para Empresas
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-display text-[clamp(32px,5vw,68px)] font-[300] text-white leading-[1.05] tracking-[-0.03em] mb-4 max-w-[900px]"
-          >
-            Global Mobility <span className="text-gold-l italic font-[400]">Assurance</span>
-            <span className="block text-[0.45em] mt-4 tracking-normal leading-tight font-body font-[400] text-white/90">
-              para empresas que investem em talento internacional.
-            </span>
-          </motion.h1>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
-            className="space-y-8 mb-10"
-          >
-            <div className="space-y-2">
-              <p className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 border-l-2 border-gold/50 pl-6 py-1 italic">
-                Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
-              </p>
-              <p className="font-body text-[14px] md:text-[15px] tracking-[0.1em] text-gold-l/80 pl-6">
-                Um benefício para o colaborador que representa um investimento mensurável para a empresa.
-              </p>
-            </div>
+      {/* 1. HERO */}
+      <section className="relative bg-[#06091a] pt-36 pb-20 md:pt-44 md:pb-28 px-6 lg:px-20 overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 90% 70% at 70% 40%, rgba(15,31,65,0.4) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-[1200px] grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
+            >
+              A nossa metodologia
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
+            >
+              <span className="block font-[200] text-white mb-2 italic">Global Mobility Assurance</span>
+              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso da mobilidade internacional.</span>
+            </motion.h1>
             
-            <div className="space-y-6 max-w-[800px]">
-              <p className="font-display italic text-[20px] md:text-[24px] font-[300] text-white leading-relaxed border-l-2 border-gold pl-6">
-                "Um dos maiores desafios de uma missão internacional não está na viagem. Está no que acontece depois da chegada."
-              </p>
+            <div className="space-y-8">
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px]"
+              >
+                A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
+              </motion.p>
               
-              <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
-                <p className="text-white/90">
-                  A maioria das empresas gere vistos, fiscalidade e processos administrativos. A MOOVIA acrescenta uma camada de Global Mobility Assurance, identificando e avaliando os fatores humanos que influenciam o sucesso da mobilidade internacional, através da avaliação de indicadores como integração, adaptação familiar, retenção e produtividade.
-                </p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 }}
+                className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 border-l-2 border-gold/50 pl-6 py-2 italic"
+              >
+                Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
+              </motion.p>
+
+              <div className="space-y-6 max-w-[800px]">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="font-body text-[16px] md:text-[18px] font-[600] text-white"
+                >
+                  Um benefício para o colaborador. Um investimento mensurável para a empresa.
+                </motion.p>
+                
+                <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.35 }}
+                    className="text-white/90"
+                  >
+                    Reduzimos Human Mobility Risk para aumentar a probabilidade de Global Mobility Success.
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    Através da metodologia Global Mobility Assurance, identificamos, avaliamos, mitigamos e acompanhamos os fatores humanos que influenciam a adaptação, o bem-estar e o desempenho do executivo e da sua família ao longo de toda a jornada internacional.
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                  >
+                    Esta abordagem transforma fatores humanos em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para a Diretoria de Mobilidade Global, para o RH, para o CFO e para o negócio.
+                  </motion.p>
+                </div>
               </div>
             </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            <ConstellationLogo size={360} />
           </motion.div>
-          
-          
-          
         </div>
       </section>
 
-      {/* PROBLEMA B2B */}
+      {/* 2. O INVESTIMENTO EM TALENTO INTERNACIONAL EXIGE ATENÇÃO */}
       <section className="bg-black py-20 md:py-28 px-6 lg:px-20">
         <div className="mx-auto max-w-[1100px]">
           <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
@@ -182,23 +207,44 @@ function EmpresasPage() {
               O mercado já entende esse problema. O que ainda não existe é uma solução desenhada especificamente para atuar antecipadamente.
             </p>
           </div>
-          <div className="mt-12">
-            <Link
-              to="/servicos"
-              className="group relative overflow-hidden inline-flex bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center"
-            >
-              <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-gold leading-tight">
-                Conhecer o Global Mobility Assurance
-              </span>
-            </Link>
-          </div>
-
         </div>
       </section>
 
-      {/* DUAS COLUNAS */}
+      {/* 3. TRÊS INTERVENIENTES */}
       <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center"
+          >
+            Três intervenientes
+          </motion.p>
+          <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[1000px] mx-auto">
+            <span className="block font-[200] text-white italic">Um programa desenhado para quem decide,</span>
+            <span className="block text-gold-l font-[300] mt-2">quem coordena e quem vive a mobilidade.</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-[900px] mx-auto">
+            {[
+              { label: "EMPRESA", desc: "ROI e Governança", icon: "briefcase" },
+              { label: "EXECUTIVO", desc: "Foco e Performance", icon: "user" },
+              { label: "FAMÍLIA", desc: "Bem-estar e Adaptação", icon: "users" }
+            ].map((item) => (
+              <div key={item.label} className="text-center p-6 border border-white/5 bg-white/5">
+                <p className="text-gold font-body text-[11px] tracking-widest mb-2">{item.label}</p>
+                <p className="text-white/70 font-display text-[14px]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.8] max-w-[850px] mx-auto text-center mb-20">
+            O sucesso de uma mobilidade internacional não é um evento isolado, mas o resultado da harmonia entre os objetivos da organização, a carreira do talento e a estabilidade do núcleo familiar.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. PARA A EMPRESA · PARA O EXECUTIVO · PARA A FAMÍLIA (fundido) */}
+      <section className="bg-[#06091a] pb-20 md:pb-28 px-6 lg:px-20">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-6 text-center max-w-[900px] mx-auto">
             Um benefício para o colaborador.{" "}
@@ -207,10 +253,11 @@ function EmpresasPage() {
           <p className="font-body text-[14px] md:text-[15px] font-[300] italic text-white/60 leading-[1.7] text-center max-w-[720px] mx-auto mb-16">
             Atendemos empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             {[
-              { title: "Para o colaborador", items: colaborador },
               { title: "Para a empresa", items: empresa },
+              { title: "Para o executivo", items: colaborador },
+              { title: "Para a família", items: familia },
             ].map((col) => (
               <div
                 key={col.title}
@@ -234,7 +281,7 @@ function EmpresasPage() {
             ))}
           </div>
 
-          {/* REFORÇO — Velocidade de onboarding via rede */}
+          {/* 5. VELOCIDADE DE EXECUÇÃO */}
           <div className="mt-14 md:mt-16 mx-auto max-w-[880px] border-l-2 border-gold pl-6 md:pl-8">
             <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-3">
               Velocidade de execução
@@ -251,7 +298,7 @@ function EmpresasPage() {
         </div>
       </section>
       
-      {/* SELO DE VALIDAÇÃO JURÍDICA */}
+      {/* 6. VALIDAÇÃO JURÍDICA */}
       <section className="bg-[#06091a] pb-20 md:pb-28 px-6 lg:px-20 relative overflow-hidden">
         <div className="mx-auto max-w-[900px]">
           <motion.div 
@@ -276,10 +323,48 @@ function EmpresasPage() {
         </div>
       </section>
 
-      {/* NOSSA TESE (reaproveitada) */}
+      {/* 7. NOSSO INSIGHT */}
       <NossaTeseSection />
 
-      {/* COMO FUNCIONA — B2B intro + framework */}
+      {/* 8. CONFIDENCIALIDADE E SEPARAÇÃO DE RELATÓRIOS */}
+      <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto">
+            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6 text-center">
+              Confidencialidade e separação de relatórios
+            </p>
+            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto text-center">
+              O acompanhamento do participante é confidencial e realizado em conformidade com a legislação aplicável.
+            </p>
+            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/80 leading-[1.8] max-w-[900px] mx-auto text-center mt-4">
+              A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao relatório pessoal do colaborador.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[900px] mx-auto">
+              <div className="border border-b18 bg-w05 p-6">
+                <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                  Relatório Individual
+                </p>
+                <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                  Exclusivo do participante, com o seu roadmap e recomendações pessoais.
+                </p>
+              </div>
+              <div className="border border-b18 bg-w05 p-6">
+                <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                  Relatório Corporativo
+                </p>
+                <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                  Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
+                </p>
+              </div>
+            </div>
+            <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-6 text-center">
+              Os resultados produzidos pela MOOVIA não constituem instrumento de avaliação de desempenho e não podem, por si só, fundamentar decisões de remuneração, promoção, procedimento disciplinar ou cessação da relação laboral. A participação no programa é voluntária.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. COMO FUNCIONA — O MOOVIA FRAMEWORK */}
       <section className="bg-black pt-20 md:pt-28 px-6 lg:px-20">
         <div className="mx-auto max-w-[1100px] text-center">
           <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
@@ -296,11 +381,14 @@ function EmpresasPage() {
       </section>
       <ProcessSection />
 
-      {/* EVERYBODY WINS — Global Mobility Success outcomes */}
+      {/* 10. GLOBAL MOBILITY SUCCESS — EVERYBODY WINS */}
       <EverybodyWins />
 
-      {/* FORMULÁRIO UNIFICADO */}
-      <section id="empresas-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
+      {/* 11. MODELO DE NEGÓCIO MOOVIA */}
+      <BusinessModelSection />
+
+      {/* 12. FORMULÁRIO */}
+      <section id="lead-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
         <UnifiedLeadForm context="empresas" />
       </section>
     </SiteLayout>
