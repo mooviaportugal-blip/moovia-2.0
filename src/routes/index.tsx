@@ -68,7 +68,7 @@ export const Route = createFileRoute("/")({
               name: "Qual o visto mais adequado para brasileiros que querem morar em Portugal?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "A escolha do visto depende do perfil do candidato: D7 para renda passiva ou trabalho remoto, D8 para nómadas digitais, D2 para empreendedores, e Reagrupamento Familiar para quem tem familiar com residência legal em Portugal. A MOOVIA conta com a Dra. Laura Costa, especialista em mobilidade internacional, para definir a estratégia migratória correta para cada perfil.",
+                text: "A escolha do visto depende do perfil do candidato: D7 para renda passiva ou trabalho remoto, D8 para nómadas digitais, D2 para empreendedores, e Reagrupamento Familiar para quem tem familiar com residência legal em Portugal. A MOOVIA conta com a Dra. Laura Costa, especialista em sucesso humano, para definir a estratégia migratória correta para cada perfil.",
               },
             },
             {
