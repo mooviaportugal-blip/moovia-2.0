@@ -56,8 +56,8 @@ export function MaintenancePage() {
         </div>
 
         <p className="font-body text-[15px] font-[300] text-w35 leading-[1.7] mb-10 max-w-lg mx-auto">
-          Global Mobility Assurance. Estamos a melhorar a sua experiência.<br />
-          Uma nova fase da MOOVIA está a chegar.
+          Global Mobility Assurance. Estamos a preparar uma nova fase da<br />
+          MOOVIA. Voltamos em breve.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[12px] tracking-[0.15em] uppercase">
