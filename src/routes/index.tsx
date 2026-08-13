@@ -132,7 +132,7 @@ function Home() {
       </div>
 
       <WhoWeAreSection />
-      <ProblemSection />
+      
       <MarketResearchSection />
       <NossaTeseSection />
       <AssessmentSection />
