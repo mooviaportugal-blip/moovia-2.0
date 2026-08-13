@@ -42,7 +42,7 @@ export function MaintenancePage() {
             className="relative"
           >
             <img 
-              src="https://gentle-nuzzle-api.lovable.app/api/public/i/p75x9l0f6e.avif" 
+              src="/mooviagold.png" 
               alt="MOOVIA Logo" 
               className="w-24 h-24 object-contain brightness-110"
             />
