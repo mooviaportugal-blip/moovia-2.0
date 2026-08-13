@@ -424,7 +424,7 @@ function ComparacaoCategoria() {
           <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Assurance</p>
             
-            {/* Mockup visual de relatório */}
+            {/* Mockup visual de dashboard */}
             <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl">
               <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-4 border-b border-gold/10 pb-2">
                 EXEMPLO DE ENTREGÁVEL PARA EMPRESAS<br/>

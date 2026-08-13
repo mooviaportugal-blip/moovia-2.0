@@ -13,7 +13,7 @@ const COLABORADOR = [
 const EMPRESA = [
   "Monitorização estruturada da mobilidade",
   "Indicadores de Mission Readiness Index",
-  "Global Mobility Success Report",
+  "Global Mobility Success Dashboard",
   "Recomendações para RH e liderança",
   "Maior capacidade de intervenção preventiva",
   "Mais informação para decisões de mobilidade",
@@ -25,7 +25,7 @@ const MEDIDA = [
   "Acompanhamento 30 dias",
   "Acompanhamento 60 dias",
   "Acompanhamento 90 dias",
-  "Executive Mobility Success Report",
+  "Executive Mobility Success Dashboard",
 ];
 
 export function HumanMobilitySection() {
@@ -89,18 +89,18 @@ export function HumanMobilitySection() {
 
         <div className="mt-12 bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto">
           <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6 text-center">
-            Confidencialidade e separação de relatórios
+            Confidencialidade e separação de visões
           </p>
           <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto text-center">
             O acompanhamento do participante é confidencial e realizado em conformidade com a legislação aplicável.
           </p>
           <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/80 leading-[1.8] max-w-[900px] mx-auto text-center mt-4">
-            A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao relatório pessoal do colaborador.
+            A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao dashboard pessoal do colaborador.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[900px] mx-auto">
             <div className="border border-b18 bg-w05 p-6">
               <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                Relatório Individual
+                Dashboard Individual
               </p>
               <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
                 Exclusivo do participante, com o seu roadmap e recomendações pessoais.
@@ -108,7 +108,7 @@ export function HumanMobilitySection() {
             </div>
             <div className="border border-b18 bg-w05 p-6">
               <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                Relatório Corporativo
+                Dashboard Corporativo
               </p>
               <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
                 Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
