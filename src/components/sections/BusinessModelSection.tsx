@@ -99,29 +99,6 @@ export function BusinessModelSection({
         ))}
       </div>
 
-      {isFull && (
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mt-8">
-          <div className="border border-b18 bg-w05 p-8">
-            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-4">
-              O Retorno do Investimento
-            </p>
-            <p className="font-body text-[15px] font-[300] text-white/85 leading-[1.7]">
-              Com o acompanhamento da MOOVIA, o executivo atinge a sua
-              capacidade máxima de trabalho até 2 vezes mais rápido,
-              amortizando o investimento logo nos primeiros 3 meses.
-            </p>
-          </div>
-          <div className="border border-b18 bg-w05 p-8">
-            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-4">
-              Ciclo Operacional
-            </p>
-            <p className="font-body text-[15px] font-[300] text-white/85 leading-[1.7]">
-              Onboarding e medição operacional em 2 semanas por expatriado, com
-              capacidade de escala simultânea até 20 processos em paralelo.
-            </p>
-          </div>
-        </div>
-      )}
 
       <p className="mt-8 font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[820px] mx-auto text-center">
         {BUSINESS_MODEL_CLOSING}
