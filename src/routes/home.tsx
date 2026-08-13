@@ -69,7 +69,7 @@ function HomeReal() {
       
       <BlogTeaserSection />
       
-      <FormSection />
+      
     </SiteLayout>
   );
 }
