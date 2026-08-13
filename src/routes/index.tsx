@@ -138,7 +138,6 @@ function Home() {
       <EcossistemaSection />
       <LisboaGallery />
       <BlogTeaserSection />
-      <MaiaSection />
       <FormSection />
     </SiteLayout>
   );
