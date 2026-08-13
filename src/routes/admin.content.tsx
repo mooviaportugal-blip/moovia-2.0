@@ -16,6 +16,7 @@ const SECTION_META: Record<string, { label: string; icon: any }> = {
   brand: { label: "Identidade da marca", icon: ImageIcon },
   nav: { label: "Menu / Navegação", icon: Menu },
   hero: { label: "Homepage · Hero", icon: Layout },
+  sections: { label: "Seções (Visibilidade)", icon: Layout },
   footer: { label: "Rodapé / Contacto", icon: Type },
   sobre: { label: "Página Sobre", icon: Layout },
 };

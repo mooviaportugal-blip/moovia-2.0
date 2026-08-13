@@ -79,7 +79,7 @@ export function Hero() {
             to="/"
             hash="lead-form"
             onClick={(e) => {
-              if (typeof window !== "undefined" && window.location.pathname === "/home") {
+              if (typeof window !== "undefined" && (window.location.pathname === "/home" || window.location.pathname === "/")) {
                 e.preventDefault();
                 document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
               }
