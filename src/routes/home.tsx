@@ -22,7 +22,7 @@ export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
       { title: "MOOVIA Portugal — Global Mobility Assurance" },
-      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Global Mobility Assurance | Global Mobility Success Framework" },
+      { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Global Mobility Assurance | Global Mobility Success Dashboard" },
       { name: "robots", content: "index, follow" },
     ],
   }),
