@@ -109,12 +109,12 @@ const LINES = [
     subtitle: "ECOSSISTEMA MULTIDISCIPLINAR",
     members: [
       {
-        id: "dany",
-        number: "07",
-        name: "DANY",
-        role: "Especialista em Educação",
-        img: "/images/dany.png",
-        tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
+        id: "sara",
+        number: "09",
+        name: "SARA RUSSO",
+        role: "Consultora Imobiliária",
+        img: "/images/sara.png",
+        tags: ["Habitação", "Mercado Imobiliário", "Aconselhamento local"],
         type: "person" as const
       },
       {
@@ -127,12 +127,12 @@ const LINES = [
         type: "person" as const
       },
       {
-        id: "sara",
-        number: "09",
-        name: "SARA",
-        role: "Consultora Imobiliária",
-        img: "/images/sara.png",
-        tags: ["Habitação", "Mercado Imobiliário", "Aconselhamento local"],
+        id: "dany",
+        number: "07",
+        name: "DANY",
+        role: "Especialista em Educação",
+        img: "/images/dany.png",
+        tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
         type: "person" as const
       },
       {
