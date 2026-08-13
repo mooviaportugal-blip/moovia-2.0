@@ -14,8 +14,8 @@ export interface BusinessModelItem {
 
 export const BUSINESS_MODEL_ITEMS: readonly BusinessModelItem[] = [
   {
-    title: "Setup e Onboarding de Entrada",
-    description: "Taxa de setup associada ao início do processo.",
+    title: "Setup de Implementação",
+    description: "Configuração inicial da metodologia Global Mobility Assurance para cada nova mobilidade.",
   },
   {
     title: "Acompanhamento e Medição Contínua",
