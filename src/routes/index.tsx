@@ -25,6 +25,7 @@ import { AirplaneScene } from "@/components/AirplaneScene";
 import { useAirplaneEnabled } from "@/hooks/useAirplaneEnabled";
 import { motion } from "framer-motion";
 import { MaintenancePage } from "@/components/site/MaintenancePage";
+import { EverybodyWins } from "@/components/sections/EverybodyWins";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -138,6 +139,7 @@ function Home() {
       
       <LisboaGallery />
       <BlogTeaserSection />
+      <EverybodyWins />
       <FormSection />
     </SiteLayout>
   );
