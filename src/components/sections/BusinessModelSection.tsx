@@ -31,7 +31,7 @@ export const BUSINESS_MODEL_ITEMS: readonly BusinessModelItem[] = [
 ] as const;
 
 export const BUSINESS_MODEL_CLOSING =
-  "Um modelo transparente, sem taxas ocultas, ancorado na remuneração de entrada e no acompanhamento contínuo até à estabilização completa do colaborador.";
+  "Um modelo transparente, sem taxas ocultas, ancorado no acompanhamento contínuo até à estabilização completa do colaborador.";
 
 export interface BusinessModelSectionProps {
   /**
@@ -60,8 +60,8 @@ export function BusinessModelSection({
         </span>
       </h2>
       <p className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[820px] mx-auto text-center mb-12">
-        Substituir um expatriado que não se adaptou custa milhares de euros.
-        Garantir a sua adaptação custa uma fração do primeiro salário.
+        Substituir um talento internacional que não se adaptou custa milhares de euros.
+        Garantir a sua adaptação custa uma fração do investimento total na mobilidade.
       </p>
 
       {isFull && (
