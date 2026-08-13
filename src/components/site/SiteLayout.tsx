@@ -38,7 +38,7 @@ export function SiteLayout({
       <main className="relative z-10 overflow-x-clip">{children}</main>
       {showFooter && <Footer />}
       
-      <ChatAssistant />
+    </>
       {player.buttonEnabled && player.tracks.length > 0 && (
         <>
           <SoundModal
