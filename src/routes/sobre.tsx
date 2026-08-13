@@ -297,10 +297,10 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro do sucesso humano. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre o sucesso humano. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de um sucesso humano.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de uma mobilidade internacional.
           </p>
           <p>
-            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro do sucesso humano.
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro da mobilidade internacional.
           </p>
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
@@ -552,7 +552,7 @@ function ComoFazemosSection() {
 function MetodoSection() {
   const blocos = [
     { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos e variáveis da mobilidade." },
-    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para um sucesso humano bem-sucedido." },
+    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
     { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
   ];
@@ -564,8 +564,8 @@ function MetodoSection() {
           O <span className="italic text-gold-l">Global Mobility Success Framework</span>
         </h2>
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
-          <p>O sucesso humano tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
-          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de sucesso humano.</p>
+          <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
+          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
           <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
@@ -750,14 +750,14 @@ function Historia() {
 /* ─────────────────────────── ORIGEM (MERCADO) ─────────────────────────── */
 function OrigemMercado() {
   const paragraphs = [
-    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de um sucesso humano.",
+    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de uma mobilidade internacional.",
     "Ao longo de mais de 30 anos, a liderança da MOOVIA acompanhou projetos de expansão internacional, desenvolvimento de negócios e parcerias estratégicas em diferentes países, trabalhando com empresas e equipas em ambientes multiculturais e de elevada complexidade.",
     "Essa vivência, somada ao processo pessoal de mudança para Portugal, revelou um problema que o mercado ainda não tinha resolvido.",
     "A Global Mobility evoluiu na execução, mas continuava fragmentada na coordenação.",
     "Especialistas altamente competentes atuavam de forma independente, enquanto empresas e famílias permaneciam responsáveis por integrar decisões críticas que eram, por natureza, interdependentes.",
     "Foi dessa constatação que nasceu a MOOVIA.",
-    "Não como mais uma empresa de sucesso humano.",
-    "Mas como uma consultoria dedicada a coordenar decisões, reduzir riscos e aumentar a probabilidade de sucesso de cada sucesso humano.",
+    "Não como mais uma empresa de mobilidade internacional.",
+    "Mas como uma consultoria dedicada a coordenar decisões, reduzir riscos e aumentar a probabilidade de sucesso de cada mobilidade internacional.",
   ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
@@ -788,7 +788,7 @@ function OrigemMercado() {
           transition={{ duration: 0.7 }}
           className="mt-12 border-l-2 border-gold bg-[rgba(173,137,87,0.04)] py-7 px-7 font-display font-[200] text-[20px] text-gold-l leading-[1.6] italic"
         >
-          "A MOOVIA não nasceu para fazer sucesso humano. Nasceu para aumentar a probabilidade de sucesso de cada sucesso humano."
+          "A MOOVIA não nasceu para fazer mobilidade internacional. Nasceu para aumentar a probabilidade de sucesso de cada mobilidade internacional."
         </motion.blockquote>
       </div>
     </section>
