@@ -400,7 +400,7 @@ function ProcessesTab({ displayProcesses }: { displayProcesses: any[] }) {
               </div>
 
               <button className="w-full border border-b18 text-w35 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-gold/10 hover:text-gold transition-all group">
-                Ver relatório mais recente <ArrowUpRight size={12} className="inline ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                Ver dashboard mais recente <ArrowUpRight size={12} className="inline ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
             </div>
           </Card>
