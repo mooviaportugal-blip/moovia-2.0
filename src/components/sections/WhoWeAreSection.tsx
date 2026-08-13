@@ -39,8 +39,6 @@ export const WhoWeAreSection = () => {
               A MOOVIA Portugal está a definir a categoria <span className="text-gold-l font-normal italic">Global Mobility Assurance</span>, uma disciplina dedicada à gestão dos fatores humanos que determinam o sucesso de uma mobilidade internacional.
             </motion.p>
 
-            <div className="h-px w-full bg-white/5 my-8" />
-
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
