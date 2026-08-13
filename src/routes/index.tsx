@@ -100,48 +100,5 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: Home,
+  component: () => <MaintenancePage />,
 });
-
-function Home() {
-  const airplaneEnabled = useAirplaneEnabled();
-  return (
-    <SiteLayout>
-      {airplaneEnabled && <AirplaneScene />}
-      <Hero />
-      
-      {/* Marquee */}
-      <div className="bg-black/80 border-y border-b18 h-[46px] flex items-center overflow-hidden relative z-20">
-        <motion.div 
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-          className="flex whitespace-nowrap"
-        >
-          {[1, 2].map((i) => (
-            <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
-              Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Strategy <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Success <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Assessment <span className="text-gold text-[10px]">♦</span>
-              ROI <span className="text-gold text-[10px]">♦</span>
-              Produtividade <span className="text-gold text-[10px]">♦</span>
-              Integração <span className="text-gold text-[10px]">♦</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <WhoWeAreSection />
-      
-      <MarketResearchSection />
-      <NossaTeseSection />
-      <AssessmentSection />
-      <BusinessModelSection />
-      
-      <LisboaGallery />
-      <BlogTeaserSection />
-      <EverybodyWins />
-      <FormSection />
-    </SiteLayout>
-  );
-}
