@@ -140,7 +140,7 @@ function EmpresasPage() {
             </p>
           </motion.div>
           
-          <CTALink label="Agendar Strategic Discovery Call" sublabel="Empresas" />
+          
         </div>
       </section>
 
