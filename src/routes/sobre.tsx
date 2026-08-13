@@ -50,7 +50,7 @@ function SobrePage() {
     <SiteLayout>
       <WhoWeAreSection />
       <Hero />
-      {historiaVisible && <Historia />}
+      
       <OrigemMercado />
       <EquacaoMoovia />
       
