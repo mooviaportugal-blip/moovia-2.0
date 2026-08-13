@@ -45,7 +45,7 @@ const FUNDADORES: HomeMember[] = [
     img: "/images/joao.png",
     linkedin: "https://www.linkedin.com/in/joaogabrielprado/",
     chips: ["Abreu Advogados", "ULisboa", "CIDP", "Corporate & M&A"],
-    bio: "Pós-Graduado em Corporate Finance e em Mergers & Acquisitions (CIDP). Profissional da Abreu Advogados, integra a área de Corporate e M&A. Na MOOVIA, é responsável pela coordenação jurídica e societária do ecossistema português.",
+    bio: "Pós-Graduado em Corporate Finance e em Mergers & Acquisitions (CIDP). Advogado Associado da Abreu Advogados, integra a área de Corporate e M&A. Na MOOVIA, é responsável pela coordenação jurídica e societária do ecossistema português.",
   },
 ];
 

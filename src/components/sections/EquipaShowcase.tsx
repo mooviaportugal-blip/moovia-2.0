@@ -65,7 +65,7 @@ const ALL: Record<string, Member> = {
     chips: ["Abreu Advogados", "ULisboa", "CIDP"],
     bio: [
       "Pós-Graduado em Corporate Finance e em Mergers & Acquisitions (CIDP).",
-      "Profissional da Abreu Advogados, integra a área de Corporate e M&A. Na MOOVIA, é responsável pela coordenação jurídica e societária do ecossistema português.",
+      "Advogado Associado da Abreu Advogados, integra a área de Corporate e M&A. Na MOOVIA, é responsável pela coordenação jurídica e societária do ecossistema português.",
     ],
     quote: "O conhecimento do sistema jurídico português de dentro é o que diferencia uma boa decisão de uma decisão cara.",
   },
