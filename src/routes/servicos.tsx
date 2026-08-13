@@ -117,7 +117,7 @@ function Servicos() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    Esta abordagem transforma fatores humanos em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para o RH, para o CFO e para o negócio.
+                    Esta abordagem transforma fatores humanos em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para a Diretoria de Mobilidade Global, para o RH, para o CFO e para o negócio.
                   </motion.p>
                 </div>
               </div>
