@@ -8,33 +8,27 @@ export function ProcessSection() {
   const steps = [
     {
       id: "01",
-      tag: "Assessment Dashboard",
-      title: "Identificamos fatores humanos relevantes.",
-      body: "",
+      tag: "Medir",
+      title: "Coleta estruturada de dados humanos.",
+      body: "Transformamos o contexto subjetivo do executivo e da família em indicadores objetivos de prontidão e risco.",
     },
     {
       id: "02",
-      tag: "Human Mobility Intelligence",
-      title: "Transformamos esses fatores em indicadores estruturados.",
-      body: "Permitindo identificar níveis de exposição, prioridades e sinais de atenção.",
+      tag: "Compreender",
+      title: "Análise multidimensional profunda.",
+      body: "Cruzamos sinais humanos com o contexto da missão para identificar as causas raiz de qualquer fricção na adaptação.",
     },
     {
       id: "03",
-      tag: "Decision",
-      title: "O motor de decisão transforma inteligência em recomendações.",
-      body: "Definição de estratégias de mitigação baseadas em dados.",
+      tag: "Acompanhar",
+      title: "Monitorização contínua do progresso.",
+      body: "Acompanhamento estruturado ao longo dos marcos críticos da jornada para garantir que a integração permanece no rumo certo.",
     },
     {
       id: "04",
-      tag: "Monitoring",
-      title: "Acompanhamos a evolução dos indicadores.",
-      body: "Monitorização contínua ao longo de toda a jornada de mobilidade.",
-    },
-    {
-      id: "05",
-      tag: "Assurance",
-      title: "Gestão estruturada do sucesso.",
-      body: "A organização passa a gerir os fatores humanos que podem comprometer integração, retenção, produtividade e sucesso.",
+      tag: "Agir",
+      title: "Intervenção coordenada e precisa.",
+      body: "Quando a inteligência identifica uma necessidade, acionamos as soluções e especialistas certos para mitigar desvios.",
     },
   ];
 
@@ -50,7 +44,7 @@ export function ProcessSection() {
             viewport={{ once: true }}
             className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
           >
-            Global Mobility Assurance
+            Human Mobility Assurance
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -59,13 +53,13 @@ export function ProcessSection() {
             className="font-display leading-[1.05] tracking-[-0.03em]"
           >
             <span className="block text-[clamp(32px,5vw,64px)] font-[200] text-white mb-1">
-              Global Mobility Success
+              HUMAN MOBILITY ASSURANCE
             </span>
             <span className="block text-[clamp(28px,4.5vw,56px)] font-[300] text-gold-l italic mb-8">
-              O MOOVIA Framework
+              Medir · Compreender · Acompanhar · Agir
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
-              Cinco etapas. Uma metodologia para identificar, avaliar e acompanhar os fatores humanos através do nosso dashboard de mobilidade internacional.
+              Quatro etapas. Uma metodologia para medir, compreender e acompanhar os fatores humanos através do nosso dashboard de mobilidade internacional.
             </span>
           </motion.h2>
 
@@ -76,7 +70,7 @@ export function ProcessSection() {
           {/* connecting line */}
           <div className="hidden lg:block absolute top-6 left-0 right-0 h-px bg-b18" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 relative">
             {steps.map((step, i) => (
               <motion.div
                 key={step.id}

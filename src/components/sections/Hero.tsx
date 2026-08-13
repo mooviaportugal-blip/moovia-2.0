@@ -62,7 +62,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="font-display italic text-[18px] md:text-[22px] font-[300] text-gold-l/90 leading-[1.5] max-w-[520px] mb-12 mx-auto lg:mx-0 border-l-[3px] border-gold/40 pl-5"
         >
-          "A chegada é apenas o início.<br className="hidden sm:block" /> O sucesso é o verdadeiro destino."
+          "A mobilidade acontece.<br className="hidden sm:block" /> O sucesso precisa ser medido."
         </motion.blockquote>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">

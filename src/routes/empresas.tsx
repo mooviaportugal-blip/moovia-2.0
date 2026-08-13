@@ -46,7 +46,7 @@ function EmpresasPage() {
     "Identificar e avaliar os fatores humanos da mobilidade",
     "Maior retenção e redução do turnover",
     "Fortalecimento da marca empregadora",
-    "Maior retorno sobre o investimento em talento internacional",
+    "produzindo indicadores que permitem acompanhar a evolução da mobilidade e apoiar a avaliação do retorno sobre o investimento realizado",
   ];
   const familia = [
     "Acolhimento",
@@ -88,8 +88,8 @@ function EmpresasPage() {
               transition={{ delay: 0.1 }}
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
-              <span className="block font-[200] text-white mb-2 italic">Global Mobility Assurance</span>
-              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso da mobilidade internacional.</span>
+              <span className="block font-[200] text-white mb-2 italic">GLOBAL MOBILITY ASSURANCE</span>
+              <span className="block text-gold-l italic font-[300]">A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional.</span>
             </motion.h1>
             
             <div className="space-y-8">
@@ -99,7 +99,7 @@ function EmpresasPage() {
                 transition={{ delay: 0.2 }}
                 className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px]"
               >
-                A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
+                Um benefício para o colaborador. Um investimento mensurável para a empresa.
               </motion.p>
               
               <motion.p
@@ -118,7 +118,7 @@ function EmpresasPage() {
                   transition={{ delay: 0.3 }}
                   className="font-body text-[16px] md:text-[18px] font-[600] text-white"
                 >
-                  Um benefício para o colaborador. Um investimento mensurável para a empresa.
+                  A mobilidade internacional já é medida. Mas não onde mais importa.
                 </motion.p>
                 
                 <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
@@ -128,21 +128,21 @@ function EmpresasPage() {
                     transition={{ delay: 0.35 }}
                     className="text-white/90"
                   >
-                    Reduzimos Human Mobility Risk para aumentar a probabilidade de Global Mobility Success.
+                    As empresas acompanham vistos, custos, prazos e processos. A MOOVIA acrescenta uma nova camada de inteligência: mede e acompanha os fatores humanos que podem determinar o sucesso de uma mobilidade internacional.
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    Através da metodologia Human Mobility Assurance, identificamos, avaliamos, mitigamos e acompanhamos os fatores humanos que influenciam a adaptação, o bem-estar e o desempenho do executivo e da sua família ao longo de toda a jornada internacional.
+                    Através da metodologia Human Mobility Assurance, transformamos fatores como integração, adaptação familiar, bem-estar e prontidão em indicadores estruturados para apoiar decisões de Global Mobility.
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45 }}
                   >
-                    Esta abordagem transforma fatores humanos em inteligência para reduzir o turnover, acelerar a integração, aumentar a retenção e melhorar os resultados para a Diretoria de Mobilidade Global, para o RH, para o CFO e para o negócio.
+                    A metodologia Human Mobility Assurance foi desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de risco, adaptados ao contexto da mobilidade internacional.
                   </motion.p>
                 </div>
               </div>
@@ -249,7 +249,7 @@ function EmpresasPage() {
         <div className="mx-auto max-w-[1200px]">
           <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-6 text-center max-w-[900px] mx-auto">
             Um benefício para o colaborador.{" "}
-            <span className="text-gold-l italic">Um retorno para a empresa.</span>
+            <span className="text-gold-l italic">Inteligência para a empresa.</span>
           </h2>
           <p className="font-body text-[14px] md:text-[15px] font-[300] italic text-white/60 leading-[1.7] text-center max-w-[720px] mx-auto mb-16">
             Atendemos empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
@@ -285,15 +285,14 @@ function EmpresasPage() {
           {/* 5. VELOCIDADE DE EXECUÇÃO */}
           <div className="mt-14 md:mt-16 mx-auto max-w-[880px] border-l-2 border-gold pl-6 md:pl-8">
             <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-3">
-              Velocidade de execução
+              Ação coordenada
             </p>
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.85]">
-              A velocidade de onboarding do talento contratado depende tanto da
-              qualidade da estratégia quanto da capacidade de execução. O
-              mandato MOOVIA aciona uma rede de especialistas credenciados em áreas como
-              imobiliário, jurídico ou integração escolar. Esta ativação ocorre sob demanda, sem
-              custo fixo de equipa própria em cada área operacional para a
-              empresa contratante.
+              A Human Mobility Assurance não termina no diagnóstico. Quando os
+              indicadores identificam uma necessidade específica, a MOOVIA pode
+              ativar e coordenar especialistas qualificados para apoiar o
+              executivo e a família, mantendo a intervenção alinhada aos
+              fatores identificados.
             </p>
           </div>
         </div>
