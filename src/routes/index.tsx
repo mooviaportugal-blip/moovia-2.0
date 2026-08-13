@@ -135,7 +135,7 @@ function Home() {
       <MarketResearchSection />
       <NossaTeseSection />
       <AssessmentSection />
-      <EcossistemaSection />
+      
       <LisboaGallery />
       <BlogTeaserSection />
       <FormSection />
