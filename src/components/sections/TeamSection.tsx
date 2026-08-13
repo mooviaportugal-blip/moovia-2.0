@@ -41,7 +41,7 @@ const FUNDADORES: HomeMember[] = [
   {
     id: "joao",
     name: "João Gabriel Prado",
-    role: "Co-Founder & Legal | Universidade de Lisboa",
+    role: "Co-Founder & Legal | Advogado Associado da Abreu",
     img: "/images/joao.png",
     linkedin: "https://www.linkedin.com/in/joaogabrielprado/",
     chips: ["Abreu Advogados", "ULisboa", "CIDP", "Corporate & M&A"],
