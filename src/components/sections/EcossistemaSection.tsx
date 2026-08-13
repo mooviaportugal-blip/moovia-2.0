@@ -39,8 +39,8 @@ export function EcossistemaSection() {
             viewport={{ once: true }}
             className="font-display font-[200] text-white leading-[1.08] tracking-[-0.03em] text-[clamp(26px,4vw,48px)] mb-8"
           >
-            Uma rede multidisciplinar.{" "}
-            <span className="text-gold-l italic font-[300]">Uma única estratégia.</span>
+            Benefício para o colaborador.{" "}
+            <span className="text-gold-l italic font-[300]">Inteligência para a empresa.</span>
           </motion.h2>
 
           <motion.p
@@ -60,7 +60,7 @@ export function EcossistemaSection() {
             É exatamente esse o papel da MOOVIA.
             <br />
             <br />
-            Muitas empresas já trabalham com parceiros de relocation, imobiliário ou fiscalidade de confiança. A MOOVIA não substitui essas relações: orquestra-as. Coordenamos tanto a nossa rede de especialistas como os parceiros já existentes do cliente, sempre dentro da mesma estratégia integrada.
+            Muitas empresas já trabalham com parceiros de relocation, imobiliário ou fiscalidade de confiança. A Human Mobility Assurance não termina no diagnóstico. Quando os indicadores identificam uma necessidade específica, a MOOVIA pode ativar e coordenar especialistas qualificados para apoiar o executivo e a família, mantendo a intervenção alinhada aos fatores identificados.
           </motion.p>
         </div>
 

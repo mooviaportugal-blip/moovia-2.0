@@ -14,8 +14,7 @@ export function EverybodyWins() {
       title: "EMPRESA",
       items: [
         "Talento retido",
-        "Produtividade mais rápida",
-        "Menor exposição a imprevistos de mobilidade",
+        "Para a empresa, é uma ferramenta estruturada para acompanhar fatores humanos que podem afetar integração, retenção, produtividade e retorno sobre o investimento.",
       ],
     },
   ];
