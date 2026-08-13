@@ -1013,7 +1013,7 @@ function Cta() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            to="/home"
+            to="/"
             hash="lead-form"
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate"
           >
