@@ -28,6 +28,11 @@ import { MaintenancePage } from "@/components/site/MaintenancePage";
 import { EverybodyWins } from "@/components/sections/EverybodyWins";
 
 export const Route = createFileRoute("/")({
+  beforeLoad: () => {
+    throw redirect({
+      to: "/home",
+    });
+  },
   head: () => ({
     meta: [
       { title: "MOOVIA Portugal | Global Mobility Assurance" },

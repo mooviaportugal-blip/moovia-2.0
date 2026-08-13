@@ -60,7 +60,7 @@ function HomeReal() {
 
       <ProblemSection />
       <MarketResearchSection />
-      <B2BRiskSection />
+      <NossaTeseSection />
       <ProcessSection />
 
       <AssessmentSection />
