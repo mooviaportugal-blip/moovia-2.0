@@ -1,41 +1,40 @@
 import { motion } from "framer-motion";
 
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
-import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
-const fredericoAsset = { url: fredericoNewAsset.url };
-import leticiaAsset from "@/assets/leticia.png.asset.json";
+// Autoria das fotos removida conforme solicitado
+
 
 export function ProcessSection() {
   const steps = [
     {
       id: "01",
-      tag: "Avaliação",
-      title: "Compreender antes de agir.",
-      body: "Mapeamos os objetivos corporativos ou familiares, o contexto, os fatores humanos e as prioridades antes de avançarmos para qualquer decisão logística.",
+      tag: "Assessment",
+      title: "Identificamos fatores humanos relevantes.",
+      body: "",
     },
     {
       id: "02",
-      tag: "Plano Estratégico",
-      title: "Converter desafios em estratégia.",
-      body: "Combinamos entrevistas estruturadas, metodologias próprias e tecnologia para transformar fatores humanos, familiares e profissionais em inteligência acionável. O resultado é um plano estratégico personalizado que antecipa riscos, define prioridades e aumenta a probabilidade de uma transição bem-sucedida.",
+      tag: "Human Mobility Intelligence",
+      title: "Transformamos esses fatores em indicadores estruturados.",
+      body: "Permitindo identificar níveis de exposição, prioridades e sinais de atenção.",
     },
     {
       id: "03",
-      tag: "Orquestração",
-      title: "Executar com inteligência.",
-      body: "A MOOVIA atua como o hub estratégico que coordena advogados, especialistas e mercado imobiliário para garantir coesão em cada detalhe. Esta orquestração pode ser feita através da rede de parceiros já existente do cliente ou da rede de especialistas da própria MOOVIA, consoante o que melhor servir cada mobilidade.",
+      tag: "Decision",
+      title: "O motor de decisão transforma inteligência em recomendações.",
+      body: "Definição de estratégias de mitigação baseadas em dados.",
     },
     {
       id: "04",
-      tag: "Integração",
-      title: "Assessment de chegada e acompanhamento pós-chegada.",
-      body: "A fase de adaptação e integração nos primeiros meses determina o sucesso do processo. Realizamos o assessment de chegada e acompanhamos de perto esta etapa para neutralizar os principais fatores de turnover.",
+      tag: "Monitoring",
+      title: "Acompanhamos a evolução dos indicadores.",
+      body: "Monitorização contínua ao longo de toda a jornada de mobilidade.",
     },
     {
       id: "05",
-      tag: "Sucesso",
-      title: "O foco no longo prazo.",
-      body: "Avaliamos o impacto duradouro da transição através de marcos estruturados aos 30, 60 e 90 dias, medindo estabilidade, integração efetiva e satisfação, e assegurando o retorno final sobre o investimento da mudança.",
+      tag: "Assurance",
+      title: "Gestão estruturada do sucesso.",
+      body: "A organização passa a gerir os fatores humanos que podem comprometer integração, retenção, produtividade e sucesso.",
     },
   ];
 
@@ -66,7 +65,7 @@ export function ProcessSection() {
               The MOOVIA Framework
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
-              Cinco etapas. Uma metodologia para identificar e avaliar os fatores humanos através de Risk Intelligence.
+              Cinco etapas. Uma metodologia para identificar, avaliar e acompanhar os fatores humanos da mobilidade internacional.
             </span>
           </motion.h2>
 
@@ -107,25 +106,7 @@ export function ProcessSection() {
                 <h3 className="font-display text-[22px] font-[300] text-white mb-4 leading-tight">
                   {step.title}
                 </h3>
-                {i === 1 && (
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex -space-x-2">
-                      <img
-                        src={fredericoAsset.url}
-                        alt="Frederico Prado"
-                        className="w-10 h-10 rounded-full object-cover border border-gold/40"
-                      />
-                      <img
-                        src={leticiaAsset.url}
-                        alt="Dra. Letícia de Mello"
-                        className="w-10 h-10 rounded-full object-cover border border-gold/40"
-                      />
-                    </div>
-                    <span className="font-body text-[11px] text-w35 leading-tight">
-                      Frederico Prado<br />Dra. Letícia de Mello
-                    </span>
-                  </div>
-                )}
+                {/* Autoria e fotos removidas conforme solicitado */}
                 <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-6">
                   {step.body}
                 </p>
