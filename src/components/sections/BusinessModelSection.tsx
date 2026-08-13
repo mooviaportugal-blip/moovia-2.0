@@ -68,7 +68,7 @@ export function BusinessModelSection({
           <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-4">
             A Equação de Custo e Retorno
           </p>
-          <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.8]">
+        <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.8]">
             O custo médio de uma expatriação malsucedida ou com adaptação lenta
             é de 2 a 3 vezes o salário anual do executivo, somando perda de
             produtividade, fricção familiar e risco de substituição. O nosso

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import heroGif from "@/assets/moovia-pt.gif.asset.json";
@@ -52,7 +52,7 @@ export function Hero() {
           className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
           <p>
-            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso do sucesso humano: integração, adaptação familiar, engajamento, retenção e produtividade.
+            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engajamento, retenção e produtividade.
           </p>
         </motion.div>
 
@@ -67,7 +67,15 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
           <Link
-            to="/sobre"
+            to="/empresas"
+            hash="lead-form"
+            onClick={(e) => {
+              const { pathname } = window.location;
+              if (pathname === "/empresas") {
+                e.preventDefault();
+                document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:scale-[1.02]"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
