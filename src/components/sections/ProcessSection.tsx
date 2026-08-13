@@ -62,7 +62,7 @@ export function ProcessSection() {
               Global Mobility Success
             </span>
             <span className="block text-[clamp(28px,4.5vw,56px)] font-[300] text-gold-l italic mb-8">
-              The MOOVIA Framework
+              O MOOVIA Framework
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
               Cinco etapas. Uma metodologia para identificar, avaliar e acompanhar os fatores humanos da mobilidade internacional.
