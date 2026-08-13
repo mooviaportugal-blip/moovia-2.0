@@ -8,7 +8,7 @@ export function ProcessSection() {
   const steps = [
     {
       id: "01",
-      tag: "Assessment",
+      tag: "Assessment Dashboard",
       title: "Identificamos fatores humanos relevantes.",
       body: "",
     },
@@ -65,7 +65,7 @@ export function ProcessSection() {
               O MOOVIA Framework
             </span>
             <span className="block text-[16px] md:text-[20px] font-body font-[300] tracking-normal text-w35 leading-[1.6] max-w-[500px] md:max-w-none">
-              Cinco etapas. Uma metodologia para identificar, avaliar e acompanhar os fatores humanos da mobilidade internacional.
+              Cinco etapas. Uma metodologia para identificar, avaliar e acompanhar os fatores humanos através do nosso dashboard de mobilidade internacional.
             </span>
           </motion.h2>
 
