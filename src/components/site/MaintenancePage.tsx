@@ -1,52 +1,8 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 export function MaintenancePage() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    // Definir a próxima sexta-feira (horário de Lisboa/GMT)
-    const getNextFriday = () => {
-      const now = new Date();
-      const nextFriday = new Date(now);
-      nextFriday.setDate(now.getDate() + ((5 + 7 - now.getDay()) % 7));
-      nextFriday.setHours(10, 0, 0, 0); // 10:00 da manhã
-      
-      // Se hoje já for sexta e já passou das 10h, move para a próxima sexta
-      if (now.getTime() > nextFriday.getTime()) {
-        nextFriday.setDate(nextFriday.getDate() + 7);
-      }
-      return nextFriday;
-    };
-
-    const target = getNextFriday();
-
-    const interval = setInterval(() => {
-      const now = new Date();
-      const difference = target.getTime() - now.getTime();
-
-      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days: d, hours: h, minutes: m, seconds: s });
-
-      if (difference < 0) {
-        clearInterval(interval);
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-[#06091a] text-white flex items-center justify-center px-6 relative overflow-hidden">
+    <div className="min-h-screen bg-[#06091a] text-white flex items-center justify-center px-6 relative overflow-hidden font-body">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -68,26 +24,35 @@ export function MaintenancePage() {
           <div className="w-8 h-px bg-gold" />
         </div>
 
-        <h1 className="font-display text-[clamp(32px,5vw,54px)] leading-[1.05] tracking-[-0.02em] mb-8">
+        <h1 className="font-display text-[clamp(32px,5vw,54px)] leading-[1.05] tracking-[-0.02em] mb-12">
           <span className="font-[400] text-gold-l italic block underline decoration-gold/30">Global Mobility Assurance</span>
         </h1>
 
-        <div className="grid grid-cols-4 gap-4 mb-12 max-w-md mx-auto">
-          {[
-            { label: "Dias", value: timeLeft.days },
-            { label: "Horas", value: timeLeft.hours },
-            { label: "Min", value: timeLeft.minutes },
-            { label: "Seg", value: timeLeft.seconds },
-          ].map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <span className="text-[clamp(24px,4vw,36px)] font-display text-white font-[400]">
-                {String(item.value).padStart(2, '0')}
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.2em] text-gold mt-1">
-                {item.label}
-              </span>
-            </div>
-          ))}
+        <div className="flex justify-center mb-12">
+          <motion.div
+            animate={{ 
+              opacity: [0.4, 1, 0.4],
+              scale: [0.98, 1, 0.98]
+            }}
+            transition={{ 
+              duration: 3, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="relative"
+          >
+            <img 
+              src="https://gentle-nuzzle-api.lovable.app/api/public/i/p75x9l0f6e.avif" 
+              alt="MOOVIA Logo" 
+              className="w-24 h-24 object-contain brightness-110"
+            />
+            {/* Spinning ring around the logo */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-4 border border-gold/10 rounded-full border-t-gold/40"
+            />
+          </motion.div>
         </div>
 
         <p className="font-body text-[15px] font-[300] text-w35 leading-[1.7] mb-10 max-w-lg mx-auto">
