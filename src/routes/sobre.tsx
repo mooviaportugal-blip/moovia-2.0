@@ -565,7 +565,7 @@ function MetodoSection() {
         </h2>
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
-          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
+          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, o modelo de inteligência que utiliza a metodologia Human Mobility Assurance para apoiar decisões críticas de mobilidade internacional.</p>
           <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão de dashboard única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
