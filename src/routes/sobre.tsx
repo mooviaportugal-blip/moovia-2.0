@@ -48,9 +48,8 @@ function SobrePage() {
 
   return (
     <SiteLayout>
-      <WhoWeAreSection />
       <Hero />
-      
+      <WhoWeAreSection />
       <OrigemMercado />
       <EquacaoMoovia />
       
