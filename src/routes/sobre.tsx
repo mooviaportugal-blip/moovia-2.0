@@ -327,13 +327,13 @@ function NossaCategoria() {
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Success é o resultado.
+            <span className="text-gold-l font-normal">Assurance</span> é a categoria.
           </p>
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Strategy é a disciplina que o torna possível.
+            <span className="text-gold-l font-normal">Strategy</span> é a disciplina.
           </p>
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Assurance é a categoria que o torna mensurável.
+            <span className="text-gold-l font-normal">Success</span> é o resultado.
           </p>
         </div>
       </div>
@@ -694,50 +694,53 @@ function Hero() {
 
 /* ─────────────────────────── HISTÓRIA ─────────────────────────── */
 function Historia() {
-  const paragraphs = [
-    "Em 2018, Frederico Prado veio para Lisboa com a família. Depois de quase três décadas liderando projetos e negócios internacionais, sabia navegar ambientes corporativos complexos. Mas não estava preparado para o que encontrou: dez decisões simultâneas, fornecedores desconectados e ninguém que coordenasse o todo.",
-    "Escola para os filhos. Apartamento no bairro certo. NIF, NISS, conta bancária. Fiscalidade em dois países. Cônjuge reinventando a carreira do zero. Cada profissional resolvia a sua parte, e ninguém integrava a decisão inteira. A família ficou no centro de uma transição complexa, tentando coordenar decisões que eram interdependentes, mas estavam distribuídas entre diferentes fornecedores.",
-    "A MOOVIA nasceu dessa experiência. Não como uma empresa de imigração, não como uma agência de relocation, não como um despachante com site bonito. Como uma consultoria que coordena a jornada inteira, do primeiro diagnóstico à integração. Com o cuidado que uma das decisões mais importantes da vida de uma família merece.",
-  ];
   return (
     <section className="bg-black py-[120px] px-6 lg:px-20">
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
         <div>
           <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">A origem</p>
           <h2 className="font-display font-[200] text-white leading-[1.02] tracking-[-0.03em] text-[clamp(32px,4vw,52px)] mb-12">
-            Uma empresa criada<br />de dentro para fora.
+            Antes de desenvolvermos<br />uma metodologia,<br /><span className="italic text-gold-l">vivemos a experiência.</span>
           </h2>
           <div className="space-y-8">
-            {paragraphs.map((p, i) => (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ delay: i * 0.1, duration: 0.7 }}
-                className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
-              >
-                {p}
-              </motion.p>
-            ))}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7 }}
+              className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
+            >
+              A MOOVIA não foi criada num escritório. Foi criada numa mudança de país com a família, com os mesmos erros, medos e decisões simultâneas que hoje coordenamos para os nossos clientes.
+            </motion.p>
+            
             <motion.blockquote
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ delay: 0.4, duration: 0.7 }}
-              className="border-l-2 border-gold bg-[rgba(173,137,87,0.04)] py-6 px-7 font-body font-[300] text-[17px] text-white/85 leading-[1.85] italic"
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="border-l-2 border-gold bg-[rgba(173,137,87,0.04)] py-6 px-7 font-display font-[300] text-[22px] md:text-[26px] text-gold-l leading-[1.45] italic"
             >
-              "O produto principal da MOOVIA não é o mandato. É o cuidado com que cada mandato é
-              conduzido. Isso não se escala sem critério."
+              "O problema nunca foi mudar de país. Foi medir o sucesso da mudança."
             </motion.blockquote>
+
             <motion.p
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-              className="mt-8 text-center font-body font-[300] text-[16px] text-w35"
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
             >
-              Atendemos famílias internacionais em todas as suas formas.
+              Em 2018, Frederico Prado veio para Lisboa com a família. Depois de quase três décadas liderando projetos e negócios internacionais, sabia navegar ambientes corporativos complexos. Mas não estava preparado para o que encontrou: dez decisões simultâneas, fornecedores desconectados e ninguém que coordenasse o todo.
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ delay: 0.6, duration: 0.7 }}
+              className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
+            >
+              A MOOVIA nasceu dessa experiência. Não como uma empresa de imigração ou relocation, mas como uma consultoria que coordena a jornada inteira, protegendo o sucesso de cada missão internacional ao longo do tempo.
             </motion.p>
           </div>
         </div>
