@@ -22,7 +22,7 @@ export function AssessmentSection() {
               viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              Global Mobility Assessment
+              Global Mobility Assessment Dashboard
             </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ export function AssessmentSection() {
               O que receberá
             </p>
             <h3 className="font-display text-[26px] font-[300] text-white leading-tight mb-2 text-center">
-              Global Mobility Assessment
+              Global Mobility Assessment Dashboard
             </h3>
             <p className="font-body text-[12px] font-[300] text-w35 uppercase tracking-widest text-center mb-10">
               Sessão de Consultoria Estratégica
@@ -87,7 +87,7 @@ export function AssessmentSection() {
               {/* Human Dimension Assessment */}
               <div className="mb-8 rounded-[10px] border border-gold/20 bg-white/[0.02] p-5">
                 <p className="font-body text-[15px] font-[600] text-white/95 mb-2">
-                  Global Mobility Assessment
+                  Global Mobility Assessment Dashboard
                 </p>
                 <p className="font-body text-[13px] font-[300] italic text-white/75 leading-[1.7] mb-3">
                   Uma avaliação integrada da dimensão humana da mobilidade
@@ -110,7 +110,7 @@ export function AssessmentSection() {
             {/* Assessment Methodology Quote - Expanded Version */}
             <div className="mb-8 font-body text-[13px] font-[300] text-w35 leading-[1.7] border-l border-gold/20 pl-4 py-2 space-y-3">
               <p>
-                O Assessment é conduzido, sempre que possível, na língua emocional do participante.
+                O Assessment Dashboard é conduzido, sempre que possível, na língua emocional do participante.
               </p>
               <p>
                 Falar numa segunda língua exige esforço cognitivo. A pessoa está, ao mesmo tempo, a pensar, traduzir e escolher palavras. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
@@ -128,7 +128,7 @@ export function AssessmentSection() {
                 Entregável
               </p>
               <p className="font-body text-[14px] font-[400] text-white mb-1">
-                Relatório Estratégico Personalizado
+                Dashboard Estratégico Personalizado
               </p>
               <p className="font-body text-[13px] font-[300] text-w35 leading-[1.6]">
                 Documento executivo com recomendações, prioridades e plano de
@@ -142,7 +142,7 @@ export function AssessmentSection() {
                 <p className="font-body text-[11px] text-white/50 uppercase tracking-tighter">Tecnologia</p>
               </div>
               <p className="font-body italic text-[14px] text-white/90 leading-[1.6] mb-3">
-                "A experiência com o Assessment da MOOVIA superou as nossas expectativas."
+                "A experiência com o Assessment Dashboard da MOOVIA superou as nossas expectativas."
               </p>
               <p className="font-body text-[11px] text-white/40">
                 Cliente MOOVIA, Brasil → Portugal

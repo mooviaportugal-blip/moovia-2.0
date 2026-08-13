@@ -7,6 +7,7 @@ import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
 import { EverybodyWins } from "@/components/sections/EverybodyWins";
 import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
 import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
+import dashboardMock from "@/assets/dashboard-mock.png.asset.json";
 
 export const Route = createFileRoute("/empresas")({
   head: () => ({
@@ -35,11 +36,11 @@ function EmpresasPage() {
     "Acompanhamento 30 dias",
     "Acompanhamento 60 dias",
     "Acompanhamento 90 dias",
-    "Executive Mobility Success Report",
+    "Executive Mobility Success Dashboard",
   ];
   const empresa = [
     "Monitorização estruturada da mobilidade",
-    "Global Mobility Success Report",
+    "Global Mobility Success Dashboard",
     "Recomendações para RH e liderança",
     "Maior capacidade de intervenção preventiva",
     "Identificar e avaliar os fatores humanos da mobilidade",
@@ -326,38 +327,63 @@ function EmpresasPage() {
       {/* 7. NOSSO INSIGHT */}
       <NossaTeseSection />
 
-      {/* 8. CONFIDENCIALIDADE E SEPARAÇÃO DE RELATÓRIOS */}
+      {/* 8. CONFIDENCIALIDADE E SEPARAÇÃO DE VISÕES */}
       <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6 text-center">
-              Confidencialidade e separação de relatórios
+              Confidencialidade e separação de visões
             </p>
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto text-center">
               O acompanhamento do participante é confidencial e realizado em conformidade com a legislação aplicável.
             </p>
             <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/80 leading-[1.8] max-w-[900px] mx-auto text-center mt-4">
-              A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao relatório pessoal do colaborador.
+              A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao dashboard pessoal do colaborador.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[900px] mx-auto">
-              <div className="border border-b18 bg-w05 p-6">
-                <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                  Relatório Individual
-                </p>
-                <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
-                  Exclusivo do participante, com o seu roadmap e recomendações pessoais.
-                </p>
+            
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 mt-12 max-w-[1100px] mx-auto items-center">
+              <div className="space-y-6">
+                <div className="border border-b18 bg-w05 p-6">
+                  <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                    Dashboard Individual
+                  </p>
+                  <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                    Exclusivo do participante, com o seu roadmap e recomendações pessoais.
+                  </p>
+                </div>
+                <div className="border border-b18 bg-w05 p-6">
+                  <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
+                    Dashboard Corporativo
+                  </p>
+                  <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
+                    Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
+                  </p>
+                </div>
               </div>
-              <div className="border border-b18 bg-w05 p-6">
-                <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                  Relatório Corporativo
-                </p>
-                <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
-                  Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
-                </p>
-              </div>
+
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-2 bg-gold/10 rounded-lg blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
+                <div className="relative rounded-lg overflow-hidden border border-gold/30 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.7)]">
+                  <img 
+                    src={dashboardMock.url} 
+                    alt="Mock do Dashboard Corporativo MOOVIA" 
+                    className="w-full h-auto grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+                <div className="mt-4 flex items-center justify-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                  <span className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80">Visualização de Dashboard Corporativo</span>
+                </div>
+              </motion.div>
             </div>
-            <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-6 text-center">
+
+            <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-12 text-center">
               Os resultados produzidos pela MOOVIA não constituem instrumento de avaliação de desempenho e não podem, por si só, fundamentar decisões de remuneração, promoção, procedimento disciplinar ou cessação da relação laboral. A participação no programa é voluntária.
             </p>
           </div>

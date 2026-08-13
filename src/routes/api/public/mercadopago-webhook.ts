@@ -15,7 +15,7 @@ function buildApprovedClientEmail(name: string) {
     <tr><td style="padding:0 40px;"><p style="margin:0 0 16px;font-size:12px;letter-spacing:0.15em;color:#ad8957;text-transform:uppercase;font-weight:600;">O que acontece agora</p>
       ${stepRow(1, "Um founder entra em contacto", "Frederico Prado vai enviar uma mensagem pessoal para confirmar disponibilidade e agendar a sessão.")}
       ${stepRow(2, "Sessão de 60 minutos agendada", "Por videochamada (Zoom ou Google Meet), no horário que melhor funcionar para a sua família.")}
-      ${stepRow(3, "Relatório Estratégico Personalizado", "Após a sessão, recebe o seu relatório com diagnóstico, estratégias e roadmap — e o Parecer Emocional Familiar da Dra. Letícia de Mello.")}
+      ${stepRow(3, "Dashboard Estratégico Personalizado", "Após a sessão, recebe o seu dashboard com diagnóstico, estratégias e roadmap — e o Parecer Emocional Familiar da Dra. Letícia de Mello.")}
     </td></tr>
     <tr><td style="padding:24px 40px;"><div style="height:1px;background:rgba(173,137,87,0.2);"></div></td></tr>
     <tr><td style="padding:0 40px 24px;"><p style="margin:0 0 12px;font-size:12px;letter-spacing:0.15em;color:#ad8957;text-transform:uppercase;font-weight:600;">Resumo do pagamento</p>

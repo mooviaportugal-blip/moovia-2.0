@@ -14,7 +14,7 @@ const problemLisboa = fredericoNewAsset.url;
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre a MOOVIA, Global Mobility Success" },
+      { title: "Sobre a MOOVIA | Global Mobility Success Dashboard" },
       { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e inteligência de fatores humanos." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
       { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
@@ -424,7 +424,7 @@ function ComparacaoCategoria() {
           <div className="border border-gold/40 bg-[rgba(173,137,87,0.04)] p-8 md:p-10 flex flex-col">
             <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-3">Global Mobility Assurance</p>
             
-            {/* Mockup visual de relatório */}
+            {/* Mockup visual de dashboard */}
             <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl">
               <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-4 border-b border-gold/10 pb-2">
                 EXEMPLO DE ENTREGÁVEL PARA EMPRESAS<br/>
@@ -516,7 +516,7 @@ function ComoFazemosSection() {
     {
       n: "06",
       titulo: "Acompanhamos e medimos",
-      texto: "Marcos aos 30, 60 e 90 dias, com relatórios executivos sobre evolução e opções de intervenção.",
+      texto: "Marcos aos 30, 60 e 90 dias, com dashboards executivos sobre evolução e opções de intervenção.",
     },
   ];
   return (
@@ -554,7 +554,7 @@ function MetodoSection() {
     { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos e variáveis da mobilidade." },
     { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
-    { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
+    { n: "04", titulo: "Global Mobility Success Dashboard", texto: "Um dashboard estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
   ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
@@ -566,7 +566,7 @@ function MetodoSection() {
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
           <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
-          <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
+          <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão de dashboard única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {blocos.map((b, i) => (
