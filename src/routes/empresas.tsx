@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
+import { EverybodyWins } from "@/components/sections/EverybodyWins";
 
 export const Route = createFileRoute("/empresas")({
   head: () => ({
