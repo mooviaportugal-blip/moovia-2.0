@@ -77,6 +77,52 @@ export const WhoWeAreSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* NEW - Story Integration */}
+            <div className="pt-16 space-y-8 border-t border-white/5 mt-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="flex flex-col"
+              >
+                <span className="text-gold font-urbanist text-[11px] font-bold tracking-[0.3em] uppercase block mb-4">
+                  A História que Precede a Equipa
+                </span>
+                <div className="h-px w-12 bg-gold/60 mb-8" />
+              </motion.div>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-w35 font-urbanist text-lg leading-relaxed font-light"
+              >
+                A MOOVIA não nasce de uma ideia isolada. Nasce da amizade de décadas e de duas trajetórias que se cruzaram no mundo corporativo internacional, entre Revenue Assurance, grandes consultorias e tecnologia empresarial, e que viveram na pele os desafios humanos da mobilidade internacional.
+              </motion.p>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-w35 font-urbanist text-lg leading-relaxed font-light"
+              >
+                Depois de anos a proteger o investimento das empresas em processos e receita, decidimos aplicar a mesma disciplina de rigor, evidência e rastreabilidade a algo que nunca teve essa proteção: o investimento humano da mobilidade internacional.
+              </motion.p>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-gold-l font-urbanist text-xl leading-relaxed font-normal italic"
+              >
+                Dessa convicção, de que os fatores que mais determinam o sucesso de uma mobilidade raramente são medidos, nasce a MOOVIA.
+              </motion.p>
+            </div>
           </div>
         </div>
 
