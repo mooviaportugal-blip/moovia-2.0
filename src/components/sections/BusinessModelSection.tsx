@@ -16,12 +16,12 @@ export const BUSINESS_MODEL_ITEMS: readonly BusinessModelItem[] = [
   {
     title: "Setup e Onboarding de Entrada",
     description:
-      "20% do primeiro salário bruto do colaborador, taxa única associada ao sucesso do início do processo.",
+      "Taxa única associada ao sucesso do início do processo, proporcional à remuneração do colaborador.",
   },
   {
     title: "Acompanhamento e Medição Contínua",
     description:
-      "250€ por marco de medição, com um mínimo de 3 medições ao longo do ciclo de 3 a 6 meses, para garantir a estabilização completa.",
+      "Medições mensais estruturadas ao longo do ciclo de acompanhamento, para garantir a estabilização completa.",
   },
   {
     title: "Orquestração Integrada",
@@ -73,7 +73,7 @@ export function BusinessModelSection({
             O custo médio de uma expatriação malsucedida ou com adaptação lenta
             é de 2 a 3 vezes o salário anual do executivo, somando perda de
             produtividade, fricção familiar e risco de substituição. O nosso
-            modelo foi desenhado para mitigar os impactos desses fatores com um investimento
+            modelo foi desenhado para eliminar esse risco com um investimento
             proporcional e transparente.
           </p>
         </div>
