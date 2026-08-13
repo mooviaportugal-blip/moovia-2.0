@@ -139,6 +139,7 @@ function Home() {
       
       <LisboaGallery />
       <BlogTeaserSection />
+      <EverybodyWins />
       <FormSection />
     </SiteLayout>
   );
