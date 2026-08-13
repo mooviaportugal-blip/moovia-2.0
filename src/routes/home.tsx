@@ -7,7 +7,7 @@ import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
 
-
+import { useText } from "@/lib/useSiteContent";
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
 
@@ -33,6 +33,7 @@ export const Route = createFileRoute("/home")({
 
 function HomeReal() {
   const airplaneEnabled = useAirplaneEnabled();
+  const ecossistemaVisible = useText("section.ecossistema.visible", "true") === "true";
   return (
     <SiteLayout>
       {airplaneEnabled && <AirplaneScene />}
@@ -63,7 +64,7 @@ function HomeReal() {
       <ProcessSection />
 
       <AssessmentSection />
-      <EcossistemaSection />
+      {ecossistemaVisible && <EcossistemaSection />}
       
       <BusinessModelSection />
       <LisboaGallery />
