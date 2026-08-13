@@ -3,15 +3,13 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
-import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { AssessmentSection } from "@/components/sections/AssessmentSection";
+import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 
 import { useText } from "@/lib/useSiteContent";
 import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
-
-import { MaiaSection } from "@/components/sections/MaiaSection";
 
 import { FormSection } from "@/components/sections/FormSection";
 import { BlogTeaserSection } from "@/components/sections/BlogTeaserSection";

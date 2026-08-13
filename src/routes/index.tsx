@@ -1,31 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout } from "@/components/site/SiteLayout";
-import { Hero } from "@/components/sections/Hero";
-import { WhoWeAreSection } from "@/components/sections/WhoWeAreSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
-import { MarketResearchSection } from "@/components/sections/MarketResearchSection";
-import { B2BRiskSection } from "@/components/sections/B2BRiskSection";
-
-import { MethodologySection } from "@/components/sections/MethodologySection";
-
-import { AssessmentSection } from "@/components/sections/AssessmentSection";
-import { CasesSection } from "@/components/sections/CasesSection";
-
-
-import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
-import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
-
-import { MaiaSection } from "@/components/sections/MaiaSection";
-
-import { FormSection } from "@/components/sections/FormSection";
-import { BlogTeaserSection } from "@/components/sections/BlogTeaserSection";
-import { LisboaGallery } from "@/components/sections/LisboaGallery";
-import { AirplaneScene } from "@/components/AirplaneScene";
-import { useAirplaneEnabled } from "@/hooks/useAirplaneEnabled";
-import { motion } from "framer-motion";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { MaintenancePage } from "@/components/site/MaintenancePage";
-import { EverybodyWins } from "@/components/sections/EverybodyWins";
 
 export const Route = createFileRoute("/")({
   beforeLoad: () => {
@@ -45,65 +19,6 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. Global Mobility Assurance e Global Mobility Success Framework." },
     ],
     links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "O que é a MOOVIA Portugal?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "A MOOVIA Portugal é uma empresa de coordenação de transição internacional de vida e património, especializada no corredor Brasil → Portugal. Diferente de agências de imigração ou imobiliárias, a MOOVIA coordena toda a jornada: visto, moradia, escola, fiscalidade e adaptação familiar, através de uma equipa multidisciplinar integrada.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Quanto custa se mudar para Portugal saindo do Brasil?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "O custo de uma mudança do Brasil para Portugal varia significativamente dependendo do perfil familiar, cidade de destino, tipo de visto e estratégia patrimonial. A MOOVIA realiza um Global Mobility Assessment que mapeia o perfil específico de cada família e entrega um Plano Estratégico de Transição Internacional personalizado.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Qual o visto mais adequado para brasileiros que querem morar em Portugal?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "A escolha do visto depende do perfil do candidato: D7 para renda passiva ou trabalho remoto, D8 para nómadas digitais, D2 para empreendedores, e Reagrupamento Familiar para quem tem familiar com residência legal em Portugal. A MOOVIA conta com a Dra. Laura Costa, especialista em sucesso humano, para definir a estratégia migratória correta para cada perfil.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Como funciona o Global Mobility Assessment da MOOVIA?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Sessão conduzida por Frederico Prado (Founder & CEO) e Dra. Letícia de Mello (psicóloga, adaptação familiar internacional), que mapeia perfil, objetivos e prontidão emocional da família. Entrega um Relatório Estratégico Personalizado com diagnóstico, mapa de prioridades, e estratégia educacional, habitacional e patrimonial. Valor abatido no Mandato caso a família avance.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "O que é um Mandato MOOVIA?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Contrato de acompanhamento completo da transição internacional, cobrindo os 4 Pilares da metodologia MOOVIA: Identificar (antes da mudança), Medir (na chegada), Mitigar (primeiros meses) e Estruturar (para a vida toda). Cada Mandato é construído sob medida para o perfil da família, com escopo e valor definidos após o Global Mobility Assessment.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Qual a diferença entre a MOOVIA e uma agência de imigração?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Uma agência de imigração resolve a parte documental. A MOOVIA coordena tudo o que acontece antes, durante e depois: estratégia de mudança, processo migratório, busca de moradia, matrícula dos filhos, abertura de contas, adaptação emocional e estruturação patrimonial em Portugal. O problema de uma mudança internacional nunca é a burocracia, é que ninguém coordena o todo.",
-              },
-            },
-          ],
-        }),
-      },
-    ],
   }),
   component: () => <MaintenancePage />,
 });

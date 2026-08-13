@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import heroGif from "@/assets/moovia-pt.gif.asset.json";
@@ -66,11 +66,15 @@ export function Hero() {
         </motion.blockquote>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
-          <a
-            href="#lead-form"
+          <Link
+            to="/empresas"
+            hash="lead-form"
             onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              const { pathname } = window.location;
+              if (pathname === "/empresas") {
+                e.preventDefault();
+                document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
             }}
             className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:scale-[1.02]"
           >
@@ -78,7 +82,7 @@ export function Hero() {
             <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
               Conhecer Global Mobility Assurance
             </span>
-          </a>
+          </Link>
         </div>
 
 
