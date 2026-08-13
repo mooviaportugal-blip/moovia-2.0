@@ -135,7 +135,7 @@ function EmpresasPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    Através da metodologia Global Mobility Assurance, identificamos, avaliamos, mitigamos e acompanhamos os fatores humanos que influenciam a adaptação, o bem-estar e o desempenho do executivo e da sua família ao longo de toda a jornada internacional.
+                    Através da metodologia Human Mobility Assurance, identificamos, avaliamos, mitigamos e acompanhamos os fatores humanos que influenciam a adaptação, o bem-estar e o desempenho do executivo e da sua família ao longo de toda a jornada internacional.
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}

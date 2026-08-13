@@ -80,7 +80,7 @@ function GlossarioConceitual() {
     { termo: "Global Mobility Assurance", desc: "A disciplina de gestão." },
     { termo: "Fatores Humanos", desc: "Aquilo que identificamos, avaliamos e acompanhamos." },
     { termo: "Sinais Humanos", desc: "Indicadores e sinais observados ao longo da mobilidade." },
-    { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação de dados, metodologias preditivas, tecnologia e interpretação humana." },
+    { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação da metodologia Human Mobility Assurance, dados, tecnologia e interpretação humana." },
     { termo: "Inteligência acionável", desc: "Informação estruturada que apoia a tomada de decisão." },
     { termo: "Resultados da Mobilidade Internacional", desc: "Integração, adaptação, engajamento, produtividade, retenção, etc." },
     { termo: "Global Mobility Success", desc: "O resultado desejado." },
@@ -462,7 +462,7 @@ function ComparacaoCategoria() {
               </div>
 
               <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
-                Nota: "Estes indicadores são produzidos a partir da metodologia Global Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
+                Nota: "Estes indicadores são produzidos a partir da metodologia Human Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
               </p>
 
             </div>
@@ -565,7 +565,7 @@ function MetodoSection() {
         </h2>
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
           <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
-          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
+          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, o modelo de inteligência que utiliza a metodologia Human Mobility Assurance para apoiar decisões críticas de mobilidade internacional.</p>
           <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão de dashboard única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
@@ -650,20 +650,27 @@ function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.7 }}
-          className="mt-6 max-w-[520px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
+          className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
         >
-          A MOOVIA não foi criada num escritório. Foi criada numa mudança de país com a família,
-          com os mesmos erros, medos e decisões simultâneas que hoje coordenamos para os nossos
-          clientes.
+          A MOOVIA não nasceu num escritório. Nasceu de uma mudança de país em família, das decisões, incertezas e desafios humanos que uma mobilidade internacional traz consigo.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.05, duration: 0.7 }}
+          className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
+        >
+          Foi dessa experiência que surgiu uma pergunta que acabaria por definir a MOOVIA: como medir aquilo que realmente determina o sucesso de uma mobilidade internacional?
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.7 }}
           className="mt-10 max-w-[640px] font-display font-[200] italic text-gold-l text-[clamp(18px,2vw,24px)] leading-[1.4]"
         >
-          O problema nunca foi mudar de país. Foi medir o sucesso da mudança.
+          O desafio nunca foi apenas mudar de país. Foi perceber o que determina o sucesso depois da chegada.
         </motion.p>
       </div>
     </section>
@@ -688,7 +695,17 @@ function Historia() {
               transition={{ duration: 0.7 }}
               className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
             >
-              A MOOVIA não foi criada num escritório. Foi criada numa mudança de país com a família, com os mesmos erros, medos e decisões simultâneas que hoje coordenamos para os nossos clientes.
+              A MOOVIA não nasceu num escritório. Nasceu de uma mudança de país em família, das decisões, incertezas e desafios humanos que uma mobilidade internacional traz consigo.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="font-body font-[300] text-[17px] text-w35 leading-[1.95]"
+            >
+              Foi dessa experiência que surgiu uma pergunta que acabaria por definir a MOOVIA: como medir aquilo que realmente determina o sucesso de uma mobilidade internacional?
             </motion.p>
             
             <motion.blockquote
@@ -698,7 +715,7 @@ function Historia() {
               transition={{ delay: 0.2, duration: 0.7 }}
               className="border-l-2 border-gold bg-[rgba(173,137,87,0.04)] py-6 px-7 font-display font-[300] text-[22px] md:text-[26px] text-gold-l leading-[1.45] italic"
             >
-              "O problema nunca foi mudar de país. Foi medir o sucesso da mudança."
+              "O desafio nunca foi apenas mudar de país. Foi perceber o que determina o sucesso depois da chegada."
             </motion.blockquote>
 
             <motion.p
