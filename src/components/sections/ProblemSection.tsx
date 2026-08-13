@@ -41,7 +41,7 @@ export function ProblemSection() {
               viewport={{ once: true }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              O mercado resolve tarefas
+              O mercado gere a mobilidade
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -182,9 +182,9 @@ export function ProblemSection() {
           className="mt-1 bg-black p-6 sm:p-16 md:p-20 text-center"
         >
           <div className="font-display text-[15px] sm:text-[28px] md:text-[clamp(28px,3.6vw,46px)] font-[200] text-white leading-[1.1] tracking-[-0.02em]">
-            <span className="text-white/60 block mb-3">O mercado resolve tarefas.</span>
+            <span className="text-white/60 block mb-3">O mercado gere a mobilidade.</span>
             <span className="text-gold-l italic font-[300] block">
-              A MOOVIA coordena o sucesso<br className="hidden sm:block" /> da mobilidade internacional.
+              A MOOVIA mede o que determina<br className="hidden sm:block" /> o seu sucesso.
             </span>
           </div>
 
