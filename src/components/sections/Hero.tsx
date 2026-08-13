@@ -40,9 +40,9 @@ export function Hero() {
           key={locale}
           className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
-          <span className="text-gold-l font-[200] block mb-2 underline decoration-gold/20 underline-offset-8">Global Mobility Assurance Dashboard</span>
-          <span className="text-white font-[400] block">para empresas que investem</span>
-          <span className="text-gold-l italic font-[300] block">em talento internacional.</span>
+          <span className="text-gold-l font-[200] block mb-2 underline decoration-gold/20 underline-offset-8 uppercase tracking-wider">GLOBAL MOBILITY ASSURANCE</span>
+          <span className="text-white font-[400] block">A nova categoria para tornar mensurável</span>
+          <span className="text-gold-l italic font-[300] block">a dimensão humana da mobilidade internacional.</span>
         </h1>
 
         <motion.div
@@ -52,7 +52,10 @@ export function Hero() {
           className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
         >
           <p>
-            A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engajamento, retenção e produtividade.
+            Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
+          </p>
+          <p className="font-[600] text-white">
+            Um benefício para o colaborador. Um investimento mensurável para a empresa.
           </p>
         </motion.div>
 

@@ -30,8 +30,8 @@ export function AssessmentSection() {
             viewport={{ once: true }}
             className="font-display text-white leading-[1.05] tracking-[-0.03em] mb-10 text-[clamp(28px,3.5vw,48px)]"
           >
-            <span className="block font-[200]">O sucesso de uma mudança internacional</span>
-            <span className="block font-[400] text-white/50 mt-2">define-se muito antes da partida.</span>
+            <span className="block font-[200]">O investimento em talento</span>
+            <span className="block font-[400] text-white/50 mt-2">internacional está exposto.</span>
           </motion.h2>
 
           <motion.p
@@ -40,9 +40,7 @@ export function AssessmentSection() {
             viewport={{ once: true }}
             className="font-display text-[clamp(18px,2vw,24px)] font-[300] text-gold-l italic leading-[1.5] mb-12 border-l-[3px] border-gold/30 pl-5"
           >
-            O objetivo não se resume a escolher um destino.
-            <br className="hidden md:block" />
-            O foco é garantir que essa transição protege a estabilidade da família, a carreira e o património.
+            A maioria das empresas não avalia esta exposição.
           </motion.p>
 
           <motion.div
