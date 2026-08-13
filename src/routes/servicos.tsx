@@ -57,7 +57,7 @@ function Servicos() {
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
               <span className="block font-[200] text-white mb-2 italic">Global Mobility Assurance</span>
-              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso da mobilidade internacional.</span>
+              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso do sucesso humano.</span>
             </motion.h1>
             
             <div className="space-y-8">
