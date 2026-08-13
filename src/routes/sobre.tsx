@@ -80,7 +80,7 @@ function GlossarioConceitual() {
     { termo: "Global Mobility Assurance", desc: "A disciplina de gestão." },
     { termo: "Fatores Humanos", desc: "Aquilo que identificamos, avaliamos e acompanhamos." },
     { termo: "Sinais Humanos", desc: "Indicadores e sinais observados ao longo da mobilidade." },
-    { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação de dados, metodologias preditivas, tecnologia e interpretação humana." },
+    { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação da metodologia Human Mobility Assurance, dados, tecnologia e interpretação humana." },
     { termo: "Inteligência acionável", desc: "Informação estruturada que apoia a tomada de decisão." },
     { termo: "Resultados da Mobilidade Internacional", desc: "Integração, adaptação, engajamento, produtividade, retenção, etc." },
     { termo: "Global Mobility Success", desc: "O resultado desejado." },
