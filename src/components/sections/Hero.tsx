@@ -65,30 +65,14 @@ export function Hero() {
           "A chegada é apenas o início.<br className="hidden sm:block" /> O sucesso é o verdadeiro destino."
         </motion.blockquote>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
           <Link
             to="/sobre"
-            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[96px] flex flex-col items-center justify-center"
+            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:scale-[1.02]"
           >
             <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold flex flex-col leading-tight items-center text-center">
-              <span>Conhecer Global Mobility Assurance</span>
-            </span>
-          </Link>
-          <Link
-            to="/"
-            hash="lead-form"
-            onClick={(e) => {
-              if (typeof window !== "undefined" && (window.location.pathname === "/home" || window.location.pathname === "/")) {
-                e.preventDefault();
-                document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }}
-            className="group relative overflow-hidden border border-b35 text-gold font-body font-[500] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-6 py-4 rounded-[2px] isolate hover:border-gold text-center min-h-[96px] flex flex-col items-center justify-center"
-          >
-            <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-[#06091a] flex flex-col leading-tight items-center text-center">
-              <span>Como funciona</span>
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
+              Conhecer Global Mobility Assurance
             </span>
           </Link>
         </div>
