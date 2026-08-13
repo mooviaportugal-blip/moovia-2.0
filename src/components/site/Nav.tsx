@@ -66,7 +66,7 @@ export function Nav() {
           <Link
             key={link.name}
             to={link.to}
-            className="font-body font-[400] text-[12px] tracking-[0.14em] uppercase text-w35 hover:text-white transition-colors relative group"
+            className="font-body font-[400] text-[12px] tracking-[0.14em] uppercase text-gold hover:text-gold-l transition-colors relative group"
           >
             {link.name}
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
@@ -125,7 +125,7 @@ export function Nav() {
                 <Link
                   to={link.to}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display font-[200] text-[22px] text-white hover:text-gold transition-colors"
+                  className="font-display font-[200] text-[22px] text-gold hover:text-gold-l transition-colors"
                 >
                   {link.name}
                 </Link>
