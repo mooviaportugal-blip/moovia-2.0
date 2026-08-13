@@ -16,13 +16,13 @@ export const Route = createFileRoute("/empresas")({
       {
         name: "description",
         content:
-          "Transformamos o Human Mobility Risk em Global Mobility Success. Identifique e avalie os fatores humanos da mobilidade internacional dos seus talentos e aumente o retorno sobre o investimento em contratação global.",
+          "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance.",
       },
       { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
-          "Programa B2B da MOOVIA para identificar e avaliar os fatores humanos da mobilidade internacional e aumentar a retenção de talentos através do Global Mobility Success.",
+          "Programa B2B da MOOVIA para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance.",
       },
     ],
   }),
