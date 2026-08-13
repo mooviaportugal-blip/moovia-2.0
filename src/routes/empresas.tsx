@@ -129,17 +129,6 @@ function EmpresasPage() {
             </div>
           </motion.div>
           
-          {/* ISO Footer Seal */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mt-12 pt-6 border-t border-white/5"
-          >
-            <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-              Metodologia baseada em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000.
-            </p>
-          </motion.div>
           
           
         </div>

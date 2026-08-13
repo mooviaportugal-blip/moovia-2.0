@@ -153,17 +153,6 @@ export function B2BRiskSection() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-20 pt-8 border-t border-white/5"
-        >
-          <p className="text-[12px] font-body italic text-white/40 tracking-wide">
-            A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional para identificar e avaliar os fatores humanos de forma estruturada.
-          </p>
-        </motion.div>
       </div>
     </section>
   );
