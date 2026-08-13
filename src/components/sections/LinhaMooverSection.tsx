@@ -129,7 +129,7 @@ const LINES = [
       {
         id: "sara",
         number: "09",
-        name: "SARA",
+        name: "SARA RUSSO",
         role: "Consultora Imobiliária",
         img: "/images/sara.png",
         tags: ["Habitação", "Mercado Imobiliário", "Aconselhamento local"],
@@ -138,7 +138,7 @@ const LINES = [
       {
         id: "sandra",
         number: "10",
-        name: "SANDRA",
+        name: "SANDRA SANTOS",
         role: "Consultora Imobiliária",
         img: "/images/sandra.png",
         tags: ["Acompanhamento", "Integração", "Apoio à Família"],
@@ -147,7 +147,7 @@ const LINES = [
       {
         id: "cristina",
         number: "11",
-        name: "CRISTINA",
+        name: "CRISTINA SOUSA",
         role: "Consultora Imobiliária",
         img: "/images/cristina.png",
         tags: ["Relocation Support", "Integração Cultural", "Apoio à Família"],
