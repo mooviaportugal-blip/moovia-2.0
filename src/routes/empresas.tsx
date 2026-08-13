@@ -316,8 +316,9 @@ function EmpresasPage() {
             <blockquote className="font-display italic text-[18px] md:text-[22px] font-[300] text-w85 leading-[1.6]">
               "O modelo jurídico da MOOVIA foi objeto de análise por uma sociedade 
               de advogados de referência em Portugal, tendo sido considerado 
-              juridicamente viável, encontrando-se atualmente em fase de 
-              implementação das recomendações identificadas."
+              juridicamente viável, produzindo indicadores que permitem acompanhar 
+              a evolução da mobilidade e apoiar a avaliação do retorno sobre o 
+              investimento realizado."
             </blockquote>
           </motion.div>
         </div>
