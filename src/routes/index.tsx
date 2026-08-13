@@ -136,7 +136,6 @@ function Home() {
       <NossaTeseSection />
       <AssessmentSection />
       <EcossistemaSection />
-      <BusinessModelSection />
       <LisboaGallery />
       <BlogTeaserSection />
       <MaiaSection />
