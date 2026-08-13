@@ -46,7 +46,7 @@ const LINES = [
         name: "DRA. LETÍCIA MELLO",
         role: "Co-Founder & CSO",
         img: "/images/leticia.jpg",
-        tags: ["Global Mobility Assurance", "Metodologias Preditivas", "Inteligência Humana"],
+        tags: ["Global Mobility Assurance", "Human Mobility Assurance", "Inteligência Humana"],
         type: "person" as const
       },
       {
