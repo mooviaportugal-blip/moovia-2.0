@@ -122,17 +122,6 @@ function Servicos() {
                 </div>
               </div>
 
-              {/* ISO Footer Seal */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="mt-12 pt-6 border-t border-white/5"
-              >
-                <p className="font-body text-[12px] text-white/40 italic tracking-wide">
-                  A metodologia Global Mobility Assurance é desenvolvida com base em princípios internacionalmente reconhecidos de gestão de riscos, incluindo a ISO 31000, adaptados ao contexto da mobilidade internacional.
-                </p>
-              </motion.div>
             </div>
           </div>
 
