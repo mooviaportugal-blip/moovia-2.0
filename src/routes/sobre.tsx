@@ -15,9 +15,9 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre a MOOVIA, Global Mobility Success" },
-      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e inteligência de fatores humanos." },
+      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada sucesso humano, através de estratégia, coordenação e inteligência de fatores humanos." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
-      { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
+      { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada sucesso humano." },
       { property: "og:url", content: "https://mooviaportugal.com/sobre" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: sobreHero },
@@ -278,7 +278,7 @@ function NossaCategoria() {
       <div className="max-w-[900px] mx-auto">
         <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">A nossa categoria</p>
         <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-10">
-          Criámos uma nova <span className="italic text-gold-l">camada de assurance</span> sobre a mobilidade internacional.
+          Criámos uma nova <span className="italic text-gold-l">camada de assurance</span> sobre o sucesso humano.
         </h2>
         <div className="space-y-6 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
           <p>
@@ -294,13 +294,13 @@ function NossaCategoria() {
             ))}
           </ul>
           <p>
-            Todas estas empresas desempenham um papel importante dentro da mobilidade internacional. Nós atuamos num espaço diferente.
+            Todas estas empresas desempenham um papel importante dentro do sucesso humano. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre o sucesso humano. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de um sucesso humano.
           </p>
           <p>
-            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro da mobilidade internacional.
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro do sucesso humano.
           </p>
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
@@ -552,7 +552,7 @@ function ComoFazemosSection() {
 function MetodoSection() {
   const blocos = [
     { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos e variáveis da mobilidade." },
-    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
+    { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para um sucesso humano bem-sucedido." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
     { n: "04", titulo: "Global Mobility Success Report", texto: "Um relatório estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
   ];
@@ -564,8 +564,8 @@ function MetodoSection() {
           O <span className="italic text-gold-l">Global Mobility Success Framework</span>
         </h2>
         <div className="max-w-[780px] space-y-4 font-body font-[300] text-[17px] text-w35 leading-[1.9] mb-14">
-          <p>A mobilidade internacional tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
-          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de mobilidade internacional.</p>
+          <p>O sucesso humano tornou-se demasiado complexa para depender apenas da experiência ou de decisões isoladas.</p>
+          <p>Por isso, a MOOVIA desenvolveu o Global Mobility Success Framework, uma metodologia própria que combina inteligência artificial, análise multidisciplinar e avaliação humana para apoiar decisões críticas de sucesso humano.</p>
           <p className="text-gold-l italic pt-2">O resultado é um diagnóstico estratégico profundo que introduz previsibilidade e orquestra todas as variáveis da mobilidade numa visão executiva única.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
@@ -750,14 +750,14 @@ function Historia() {
 /* ─────────────────────────── ORIGEM (MERCADO) ─────────────────────────── */
 function OrigemMercado() {
   const paragraphs = [
-    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de uma mobilidade internacional.",
+    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de um sucesso humano.",
     "Ao longo de mais de 30 anos, a liderança da MOOVIA acompanhou projetos de expansão internacional, desenvolvimento de negócios e parcerias estratégicas em diferentes países, trabalhando com empresas e equipas em ambientes multiculturais e de elevada complexidade.",
     "Essa vivência, somada ao processo pessoal de mudança para Portugal, revelou um problema que o mercado ainda não tinha resolvido.",
     "A Global Mobility evoluiu na execução, mas continuava fragmentada na coordenação.",
     "Especialistas altamente competentes atuavam de forma independente, enquanto empresas e famílias permaneciam responsáveis por integrar decisões críticas que eram, por natureza, interdependentes.",
     "Foi dessa constatação que nasceu a MOOVIA.",
-    "Não como mais uma empresa de mobilidade internacional.",
-    "Mas como uma consultoria dedicada a coordenar decisões, reduzir riscos e aumentar a probabilidade de sucesso de cada mobilidade internacional.",
+    "Não como mais uma empresa de sucesso humano.",
+    "Mas como uma consultoria dedicada a coordenar decisões, reduzir riscos e aumentar a probabilidade de sucesso de cada sucesso humano.",
   ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
@@ -788,7 +788,7 @@ function OrigemMercado() {
           transition={{ duration: 0.7 }}
           className="mt-12 border-l-2 border-gold bg-[rgba(173,137,87,0.04)] py-7 px-7 font-display font-[200] text-[20px] text-gold-l leading-[1.6] italic"
         >
-          "A MOOVIA não nasceu para fazer mobilidade internacional. Nasceu para aumentar a probabilidade de sucesso de cada mobilidade internacional."
+          "A MOOVIA não nasceu para fazer sucesso humano. Nasceu para aumentar a probabilidade de sucesso de cada sucesso humano."
         </motion.blockquote>
       </div>
     </section>
@@ -822,7 +822,7 @@ function Diferencia() {
         </h2>
         <div className="font-body font-[300] text-[17px] text-w35 leading-[1.85] max-w-[720px] mb-14 space-y-4">
           <p>Não estamos apenas a construir uma empresa.</p>
-          <p>Estamos a desafiar a forma como a mobilidade internacional é pensada.</p>
+          <p>Estamos a desafiar a forma como o sucesso humano é pensada.</p>
           <p>Durante décadas, o setor concentrou-se em executar processos.</p>
           <p>A MOOVIA parte de uma pergunta diferente:</p>
           <p className="text-gold-l italic font-display text-[22px] leading-[1.4] pt-2">
@@ -876,7 +876,7 @@ function EquacaoMoovia() {
     },
     {
       title: "RAÍZES E ASAS — DRA. LETÍCIA DE MELLO",
-      text: "A metodologia que estrutura a dimensão humana da mobilidade internacional, traduzindo adaptação, integração e bem-estar em variáveis mensuráveis.",
+      text: "A metodologia que estrutura a dimensão humana do sucesso humano, traduzindo adaptação, integração e bem-estar em variáveis mensuráveis.",
     },
     {
       title: "TECNOLOGIA — PABLO ALEJANDRO",
@@ -948,7 +948,7 @@ function PosicaoMarca() {
     ["Não estamos a reinventar a Global Mobility.", "Estamos a redefinir a forma como o seu sucesso é medido."],
     ["Durante anos, a indústria concentrou-se na execução da mobilidade.", "A MOOVIA concentra-se no resultado dessa mobilidade."],
     ["Acreditamos que o sucesso não se mede pela chegada ao destino.", "Mede-se pela integração, retenção, adaptação e geração de valor para empresas e pessoas."],
-    ["Não coordenamos apenas mobilidades internacionais.", "Coordenamos o sucesso da mobilidade internacional."],
+    ["Não coordenamos apenas sucessos humanos.", "Coordenamos o sucesso do sucesso humano."],
   ];
   return (
     <section className="relative bg-black py-[160px] px-6 lg:px-20 overflow-hidden">
