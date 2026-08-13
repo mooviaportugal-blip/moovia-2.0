@@ -136,6 +136,7 @@ function Home() {
       <MarketResearchSection />
       <NossaTeseSection />
       <AssessmentSection />
+      <BusinessModelSection />
       
       <LisboaGallery />
       <BlogTeaserSection />
