@@ -12,13 +12,13 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "A MOOVIA aplica a metodologia Global Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso da mobilidade internacional.",
+          "A MOOVIA aplica a metodologia Global Mobility Assurance para identificar, avaliar, mitigar e acompanhar os fatores humanos que influenciam o sucesso do sucesso humano.",
       },
       { property: "og:title", content: "Serviços MOOVIA | Global Mobility Assurance" },
       {
         property: "og:description",
         content:
-          "Uma metodologia. Três intervenientes. Um único objetivo: aumentar a probabilidade de sucesso da mobilidade internacional.",
+          "Uma metodologia. Três intervenientes. Um único objetivo: aumentar a probabilidade de sucesso do sucesso humano.",
       },
       { property: "og:url", content: "https://mooviaportugal.com/servicos" },
       { property: "og:type", content: "website" },
@@ -57,7 +57,7 @@ function Servicos() {
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
               <span className="block font-[200] text-white mb-2 italic">Global Mobility Assurance</span>
-              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso da mobilidade internacional.</span>
+              <span className="block text-gold-l italic font-[300]">Aumentar a probabilidade de sucesso do sucesso humano.</span>
             </motion.h1>
             
             <div className="space-y-8">
@@ -67,7 +67,7 @@ function Servicos() {
                 transition={{ delay: 0.2 }}
                 className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px]"
               >
-                A nova categoria para reduzir o Human Mobility Risk e transformar a mobilidade internacional numa vantagem competitiva para empresas e colaboradores.
+                A nova categoria para reduzir o Human Mobility Risk e transformar o sucesso humano numa vantagem competitiva para empresas e colaboradores.
               </motion.p>
               
               <motion.p
@@ -103,7 +103,7 @@ function Servicos() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, a MOOVIA mede aquilo que realmente determina o sucesso de uma mobilidade internacional: o fator humano.
+                    Enquanto o mercado mede vistos emitidos, mudanças concluídas e processos administrativos, a MOOVIA mede aquilo que realmente determina o sucesso de um sucesso humano: o fator humano.
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}

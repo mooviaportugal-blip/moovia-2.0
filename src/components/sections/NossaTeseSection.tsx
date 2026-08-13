@@ -19,7 +19,7 @@ export function NossaTeseSection() {
           viewport={{ once: true }}
           className="font-display text-[clamp(26px,3.6vw,52px)] font-[200] text-white leading-[1.15] tracking-[-0.03em] mb-6"
         >
-          <span className="block">A avaliação da mobilidade internacional</span>
+          <span className="block">A avaliação do sucesso humano</span>
           <span className="block text-white/60 font-[300]">continua focada no momento da chegada.</span>
         </motion.h2>
 

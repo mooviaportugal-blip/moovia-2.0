@@ -48,7 +48,7 @@ const faqs: QA[] = [
   },
   {
     q: "A MOOVIA atende apenas brasileiros?",
-    a: "Não. A MOOVIA atende qualquer pessoa, família ou empresa que esteja a coordenar uma mobilidade internacional para Portugal, independentemente da nacionalidade de origem. A nossa metodologia foi desenhada para ser replicada internacionalmente, e Portugal continua a ser o nosso mercado principal.",
+    a: "Não. A MOOVIA atende qualquer pessoa, família ou empresa que esteja a coordenar um sucesso humano para Portugal, independentemente da nacionalidade de origem. A nossa metodologia foi desenhada para ser replicada internacionalmente, e Portugal continua a ser o nosso mercado principal.",
   },
   {
     q: "O que é o Global Mobility Assurance?",
@@ -66,7 +66,7 @@ const faqs: QA[] = [
   },
   {
     q: "Como funciona a MAIA?",
-    a: "A MAIA é a assistente inteligente da MOOVIA. Responde questões sobre mobilidade internacional, explica a nossa metodologia e ajuda a identificar qual programa é mais adequado ao seu caso. Quando fizer sentido, um especialista da MOOVIA dá continuidade ao processo.",
+    a: "A MAIA é a assistente inteligente da MOOVIA. Responde questões sobre sucesso humano, explica a nossa metodologia e ajuda a identificar qual programa é mais adequado ao seu caso. Quando fizer sentido, um especialista da MOOVIA dá continuidade ao processo.",
   },
 ];
 

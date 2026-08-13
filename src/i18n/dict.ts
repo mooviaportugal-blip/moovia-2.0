@@ -52,7 +52,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
     { en: "WhatsApp groups, YouTube, lawyers and agents all say different things. The volume of information doesn't help the decision-making process; it creates more uncertainty.", es: "Grupos de WhatsApp, YouTube, abogados y corredores dicen cosas diferentes. El volumen de información no resuelve la decisión, crea más dudas." },
   "Fatores Humanos Invisíveis": { en: "Invisible Human Factors", es: "Factores humanos invisibles" },
   "Erros que custam": { en: "Costly Mistakes", es: "Errores que cuestan" },
-  "A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso da mobilidade internacional: integração, adaptação familiar, engajamento, retenção e produtividade.":
+  "A maioria das empresas mede vistos, datas de chegada e processos administrativos. A MOOVIA acrescenta uma nova camada de inteligência, medindo os fatores humanos que influenciam o sucesso do sucesso humano: integração, adaptação familiar, engajamento, retenção e produtividade.":
     { en: "Most companies measure visas, arrival dates and administrative processes. MOOVIA adds a new layer of intelligence, measuring the human factors that influence the success of international mobility: integration, family adaptation, engagement, retention and productivity.", es: "La mayoría de las empresas miden visados, fechas de llegada y procesos administrativos. MOOVIA añade una nueva capa de inteligencia, midiendo los factores humanos que influyen en el éxito de la movilidad internacional: integración, adaptación familiar, compromiso, retención y productividad." },
   "Adaptação estruturada": { en: "Structured Integration", es: "Adaptación estructurada" },
   "O depois que ninguém resolve": { en: "The 'after' that no one addresses", es: "El después que nadie resuelve" },
@@ -125,7 +125,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
   // ---------- PROCESS ----------
   "Como trabalhamos": { en: "How we work", es: "Cómo trabajamos" },
   "Uma metodologia. Três dimensões. Um único objetivo.": { en: "One methodology. Three dimensions. One single goal.", es: "Una metodología. Tres dimensiones. Un único objetivo." },
-  "Aumentar a probabilidade de sucesso de mobilidade internacional.": { en: "Increasing the likelihood of success of international mobility.", es: "Aumentar la probabilidad de éxito de la movilidad internacional." },
+  "Aumentar a probabilidade de sucesso do sucesso humano.": { en: "Increasing the likelihood of success of international mobility.", es: "Aumentar la probabilidad de éxito de la movilidad internacional." },
   "\"Um processo.": { en: "\"One process.", es: "\"Un proceso." },
   "Do diagnóstico ao destino.\"": { en: "From diagnostic to destination.\"", es: "Del diagnóstico al destino." },
   "Conversa com um dos Fundadores": { en: "Conversation with a founder", es: "Conversación con un fundador" },

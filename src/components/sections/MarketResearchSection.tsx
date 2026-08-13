@@ -214,7 +214,7 @@ export function MarketResearchSection() {
 
             <p className="font-body text-[14px] font-[300] text-w35 leading-[1.75] mb-6">
               Em pesquisas com empresas multinacionais, os principais fatores associados ao
-              insucesso da mobilidade internacional são:
+              insucesso do sucesso humano são:
             </p>
 
             <div className="flex flex-col gap-5 mb-6">
