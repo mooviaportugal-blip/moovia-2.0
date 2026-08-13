@@ -462,7 +462,7 @@ function ComparacaoCategoria() {
               </div>
 
               <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4">
-                Nota: "Estes indicadores são produzidos a partir da metodologia Global Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
+                Nota: "Estes indicadores são produzidos a partir da metodologia Human Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
               </p>
 
             </div>
@@ -650,20 +650,27 @@ function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.7 }}
-          className="mt-6 max-w-[520px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
+          className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
         >
-          A MOOVIA não foi criada num escritório. Foi criada numa mudança de país com a família,
-          com os mesmos erros, medos e decisões simultâneas que hoje coordenamos para os nossos
-          clientes.
+          A MOOVIA não nasceu num escritório. Nasceu de uma mudança de país em família, das decisões, incertezas e desafios humanos que uma mobilidade internacional traz consigo.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.05, duration: 0.7 }}
+          className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
+        >
+          Foi dessa experiência que surgiu uma pergunta que acabaria por definir a MOOVIA: como medir aquilo que realmente determina o sucesso de uma mobilidade internacional?
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.7 }}
           className="mt-10 max-w-[640px] font-display font-[200] italic text-gold-l text-[clamp(18px,2vw,24px)] leading-[1.4]"
         >
-          O problema nunca foi mudar de país. Foi medir o sucesso da mudança.
+          O desafio nunca foi apenas mudar de país. Foi perceber o que determina o sucesso depois da chegada.
         </motion.p>
       </div>
     </section>
