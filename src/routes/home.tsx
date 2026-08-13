@@ -69,7 +69,7 @@ function HomeReal() {
       <LisboaGallery />
       
       <BlogTeaserSection />
-      <MaiaSection />
+      {/* MaiaSection removed per request */}
       
       <FormSection />
     </SiteLayout>
