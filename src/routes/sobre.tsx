@@ -327,13 +327,13 @@ function NossaCategoria() {
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Success é o resultado.
+            <span className="text-gold-l font-normal">Assurance</span> é a categoria.
           </p>
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Strategy é a disciplina que o torna possível.
+            <span className="text-gold-l font-normal">Strategy</span> é a disciplina.
           </p>
           <p className="font-display font-[200] text-white text-[clamp(20px,2.4vw,28px)] leading-[1.4]">
-            Global Mobility Assurance é a categoria que o torna mensurável.
+            <span className="text-gold-l font-normal">Success</span> é o resultado.
           </p>
         </div>
       </div>
