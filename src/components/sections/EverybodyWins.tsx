@@ -14,8 +14,7 @@ export function EverybodyWins() {
       title: "EMPRESA",
       items: [
         "Talento retido",
-        "Produtividade mais rápida",
-        "Menor exposição a imprevistos de mobilidade",
+        "Para a empresa, é uma ferramenta estruturada para acompanhar fatores humanos que podem afetar integração, retenção, produtividade e retorno sobre o investimento.",
       ],
     },
   ];
@@ -28,7 +27,7 @@ export function EverybodyWins() {
             GLOBAL MOBILITY SUCCESS
           </span>
           <h2 className="font-urbanist text-4xl md:text-5xl font-[300] tracking-tight text-white">
-            Everybody <span className="text-gold italic">wins.</span>
+            Benefício para o colaborador. <span className="text-gold italic">Inteligência para a empresa.</span>
           </h2>
         </div>
 

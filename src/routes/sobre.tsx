@@ -14,8 +14,8 @@ const problemLisboa = fredericoNewAsset.url;
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre a MOOVIA | Global Mobility Success Dashboard" },
-      { name: "description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional, através de estratégia, coordenação e inteligência de fatores humanos." },
+      { title: "Sobre a MOOVIA | Global Mobility Assurance" },
+      { name: "description", content: "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
       { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
       { property: "og:url", content: "https://mooviaportugal.com/sobre" },
@@ -297,10 +297,10 @@ function NossaCategoria() {
             Todas estas empresas desempenham um papel importante dentro do sucesso humano. Nós atuamos num espaço diferente.
           </p>
           <p>
-            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de uma mobilidade internacional.
+            Criámos uma camada de <strong className="font-[500] text-gold-l">Global Mobility Assurance</strong> sobre a mobilidade internacional. O nosso objetivo é claro: identificar, compreender e avaliar os fatores humanos que podem comprometer o sucesso de uma mobilidade internacional através da metodologia <strong className="font-[500] text-gold-l">Human Mobility Assurance</strong>.
           </p>
           <p>
-            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para identificar fatores humanos invisíveis dentro da mobilidade internacional.
+            Assim como Revenue Assurance surgiu para identificar perdas invisíveis dentro das telecomunicações, acreditamos que Global Mobility Assurance surge para tornar mensurável a dimensão humana da mobilidade internacional.
           </p>
         </div>
         <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8 py-4 space-y-4">
@@ -631,9 +631,9 @@ function Hero() {
 
         <h1 className="font-display font-[200] text-white leading-[1.02] tracking-[-0.03em] text-[clamp(52px,7vw,96px)]">
           {[
-            { t: "Antes de desenvolvermos", cls: "" },
-            { t: "uma metodologia,", cls: "" },
-            { t: "vivemos a experiência.", cls: "text-gold-l italic font-[300]" },
+            { t: "Os desafios humanos", cls: "" },
+            { t: "estão no que acontece", cls: "" },
+            { t: "depois da chegada.", cls: "text-gold-l italic font-[300]" },
           ].map((l, i) => (
             <motion.span
               key={i}
@@ -652,7 +652,7 @@ function Hero() {
           transition={{ delay: 0.9, duration: 0.7 }}
           className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
         >
-          A MOOVIA não nasceu num escritório. Nasceu de uma mudança de país em família, das decisões, incertezas e desafios humanos que uma mobilidade internacional traz consigo.
+          As empresas gerem vistos e processos. Mas uma mobilidade internacional bem-sucedida depende de fatores que normalmente ficam fora do onboarding tradicional.
         </motion.p>
 
         <motion.p
@@ -661,7 +661,7 @@ function Hero() {
           transition={{ delay: 1.05, duration: 0.7 }}
           className="mt-6 max-w-[620px] font-body font-[300] text-[18px] text-w35 leading-[1.7]"
         >
-          Foi dessa experiência que surgiu uma pergunta que acabaria por definir a MOOVIA: como medir aquilo que realmente determina o sucesso de uma mobilidade internacional?
+          A MOOVIA acrescenta uma camada de inteligência e acompanhamento para identificar, compreender e mitigar os riscos humanos da mobilidade.
         </motion.p>
 
         <motion.p
@@ -670,7 +670,7 @@ function Hero() {
           transition={{ delay: 1.2, duration: 0.7 }}
           className="mt-10 max-w-[640px] font-display font-[200] italic text-gold-l text-[clamp(18px,2vw,24px)] leading-[1.4]"
         >
-          O desafio nunca foi apenas mudar de país. Foi perceber o que determina o sucesso depois da chegada.
+          A mobilidade acontece. O sucesso precisa ser medido.
         </motion.p>
       </div>
     </section>

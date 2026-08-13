@@ -21,8 +21,8 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal | Global Mobility Assurance Dashboard" },
-      { name: "description", content: "A MOOVIA coordena a mobilidade internacional com foco em resultados. Global Mobility Assurance Dashboard | Global Mobility Success Framework" },
+      { title: "MOOVIA Portugal | Global Mobility Assurance" },
+      { name: "description", content: "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional. Human Mobility Assurance e Global Mobility Success Framework." },
       { name: "robots", content: "index, follow" },
     ],
   }),
@@ -46,7 +46,7 @@ function HomeReal() {
           {[1, 2].map((i) => (
             <div key={i} className="flex items-center gap-16 px-16 font-urbanist text-[11px] font-[400] tracking-[0.24em] uppercase text-w35">
               Global Mobility Assurance <span className="text-gold text-[10px]">♦</span>
-              Global Mobility Assessment <span className="text-gold text-[10px]">♦</span>
+              Human Mobility Assurance <span className="text-gold text-[10px]">♦</span>
               Coordenação de Vida, Carreira e Património <span className="text-gold text-[10px]">♦</span>
               Transição de Vida <span className="text-gold text-[10px]">♦</span>
               Orquestração <span className="text-gold text-[10px]">♦</span>

@@ -49,11 +49,11 @@ export function ProblemSection() {
               viewport={{ once: true }}
               className="font-display text-[clamp(32px,4vw,64px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10"
             >
-              <span className="block mb-1">Um dos maiores desafios</span>
-              <span className="block font-[300] mb-1">da mobilidade internacional</span>
-              <span className="block mb-6 text-white/60">não está no visto.</span>
+              <span className="block mb-1">O investimento em talento</span>
+              <span className="block font-[300] mb-1">internacional está exposto.</span>
+              <span className="block mb-6 text-white/60">A maioria das empresas</span>
               <span className="text-gold-l italic font-[300] block">
-                Está no que <br className="hidden sm:block" />acontece depois.
+                não avalia esta exposição.
               </span>
             </motion.h2>
             <motion.div
@@ -63,13 +63,13 @@ export function ProblemSection() {
               className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.9] max-w-[540px] space-y-6"
             >
               <p>
-                As empresas estruturam contratações internacionais focadas na previsibilidade e no rigor operacional. A maioria dos programas permanece centrada quase em exclusivo na componente logística e documental.
+                As empresas investem milhares de euros para contratar talentos internacionais. Mas uma parte significativa desse investimento é colocada em risco por fatores que normalmente ficam fora do processo tradicional de onboarding: dificuldade de adaptação da família, problemas com habitação, integração cultural ou isolamento social.
               </p>
               <p>
-                O ponto crítico surge na fase posterior à chegada: a integração corporativa e a adaptação familiar ditam o verdadeiro retorno sobre o investimento.
+                O resultado é conhecido por qualquer diretor de RH: menor produtividade, menor satisfação e maior risco de turnover.
               </p>
               <p className="text-gold font-[400] pt-4">
-                A intervenção da MOOVIA protege o valor deste ciclo completo.
+                O mercado já entende este problema. O que ainda não existe é uma solução desenhada especificamente para atuar antecipadamente.
               </p>
             </motion.div>
           </div>
