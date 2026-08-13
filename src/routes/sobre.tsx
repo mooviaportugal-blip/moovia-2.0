@@ -7,6 +7,8 @@ import { MarketResearchSection } from "@/components/sections/MarketResearchSecti
 import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import sobreHero from "@/assets/sobre-hero.jpg";
 import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+import { useText } from "@/lib/useSiteContent";
+
 const problemLisboa = fredericoNewAsset.url;
 
 export const Route = createFileRoute("/sobre")({
@@ -42,11 +44,13 @@ export const Route = createFileRoute("/sobre")({
 });
 
 function SobrePage() {
+  const historiaVisible = useText("section.historia.visible", "true") === "true";
+
   return (
     <SiteLayout>
       <WhoWeAreSection />
       <Hero />
-      <Historia />
+      {historiaVisible && <Historia />}
       <OrigemMercado />
       <EquacaoMoovia />
       
