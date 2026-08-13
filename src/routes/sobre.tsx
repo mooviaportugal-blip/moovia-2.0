@@ -44,11 +44,13 @@ export const Route = createFileRoute("/sobre")({
 });
 
 function SobrePage() {
+  const historiaVisible = useText("section.historia.visible", "true") === "true";
+
   return (
     <SiteLayout>
       <WhoWeAreSection />
       <Hero />
-      <Historia />
+      {historiaVisible && <Historia />}
       <OrigemMercado />
       <EquacaoMoovia />
       
