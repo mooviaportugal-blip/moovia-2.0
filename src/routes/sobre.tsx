@@ -516,7 +516,7 @@ function ComoFazemosSection() {
     {
       n: "06",
       titulo: "Acompanhamos e medimos",
-      texto: "Marcos aos 30, 60 e 90 dias, com relatórios executivos sobre evolução e opções de intervenção.",
+      texto: "Marcos aos 30, 60 e 90 dias, com dashboards executivos sobre evolução e opções de intervenção.",
     },
   ];
   return (
