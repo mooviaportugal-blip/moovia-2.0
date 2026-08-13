@@ -69,8 +69,7 @@ export function MaintenancePage() {
         </div>
 
         <h1 className="font-display text-[clamp(32px,5vw,54px)] leading-[1.05] tracking-[-0.02em] mb-8">
-          <span className="font-[300] block text-white/70">Aguarde até</span>
-          <span className="font-[400] text-gold-l italic block underline decoration-gold/30">sexta-feira</span>
+          <span className="font-[400] text-gold-l italic block underline decoration-gold/30">Global Mobility Assurance</span>
         </h1>
 
         <div className="grid grid-cols-4 gap-4 mb-12 max-w-md mx-auto">
@@ -92,8 +91,8 @@ export function MaintenancePage() {
         </div>
 
         <p className="font-body text-[15px] font-[300] text-w35 leading-[1.7] mb-10 max-w-lg mx-auto">
-          Estamos a finalizar a nova infraestrutura digital da MOOVIA. 
-          A contagem regressiva para a Global Mobility Assurance começou.
+          Global Mobility Assurance. Estamos a melhorar a sua experiência.<br />
+          Uma nova fase da MOOVIA está a chegar.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[12px] tracking-[0.15em] uppercase">
@@ -101,7 +100,7 @@ export function MaintenancePage() {
             href="mailto:contato@mooviaglobal.com"
             className="text-gold hover:text-gold-l transition-colors border-b border-gold/30 pb-1"
           >
-            contato@mooviaglobal.com
+            contacto@mooviaglobal.com
           </a>
         </div>
       </motion.div>

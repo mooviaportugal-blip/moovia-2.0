@@ -25,7 +25,7 @@ export const Route = createFileRoute("/home")({
     meta: [
       { title: "MOOVIA Portugal — Global Mobility Assurance" },
       { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. MOOVIA — Global Mobility Assurance | Global Mobility Success Framework" },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "index, follow" },
     ],
   }),
   component: HomeReal,
