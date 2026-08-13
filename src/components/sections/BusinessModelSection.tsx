@@ -16,12 +16,12 @@ export const BUSINESS_MODEL_ITEMS: readonly BusinessModelItem[] = [
   {
     title: "Setup e Onboarding de Entrada",
     description:
-      "Taxa única associada ao sucesso do início do processo, proporcional à remuneração do colaborador.",
+      "Taxa única cobrada para o setup técnico e processual do colaborador na plataforma MOOVIA, associada ao arranque do acompanhamento.",
   },
   {
     title: "Acompanhamento e Medição Contínua",
     description:
-      "Medições mensais estruturadas ao longo do ciclo de acompanhamento, para garantir a estabilização completa.",
+      "Medições estruturadas ao longo do ciclo de acompanhamento, garantindo a evolução e a estabilização completa da adaptação.",
   },
   {
     title: "Orquestração Integrada",
