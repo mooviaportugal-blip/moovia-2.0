@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguageSwitcherEnabled } from "@/hooks/useLanguageSwitcherEnabled";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { useSiteContent } from "@/lib/useSiteContent";
-import logoNavAsset from "@/assets/logo-moovia-nav.png.asset.json";
+import logoNavAsset from "@/assets/logo-moovia-nav-v2.png.asset.json";
 
 export function Nav() {
   const langEnabled = useLanguageSwitcherEnabled();
