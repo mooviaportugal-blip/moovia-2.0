@@ -41,8 +41,8 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params, loaderData }) => {
     const post: any = loaderData?.post;
     const url = `https://moovia.global/blog/${params.slug}`;
-    const title = post?.meta_title || (post ? `${post.title}, MOOVIA Portugal` : "Artigo, MOOVIA Portugal");
-    const description = post?.meta_description || post?.excerpt || "Artigo MOOVIA Portugal sobre transição internacional.";
+    const title = post?.meta_title || (post ? `${post.title}, MOOVIA` : "Artigo, MOOVIA");
+    const description = post?.meta_description || post?.excerpt || "Artigo MOOVIA sobre transição internacional.";
     const image = post?.og_image || post?.banner_image || post?.featured_image;
     return {
       meta: [
@@ -197,7 +197,7 @@ function Post() {
                 <Link to="/blog" className="font-urbanist text-[11px] uppercase tracking-[0.22em] text-w35 hover:text-gold transition-colors">
                   ← Todos os artigos
                 </Link>
-                <span className="font-urbanist text-[11px] uppercase tracking-[0.22em] text-w35">MOOVIA · Portugal</span>
+                <span className="font-urbanist text-[11px] uppercase tracking-[0.22em] text-w35">MOOVIA</span>
               </div>
 
               <div className="mt-16 p-10 md:p-14 border border-b18 bg-black-2 relative overflow-hidden group rounded-sm">
