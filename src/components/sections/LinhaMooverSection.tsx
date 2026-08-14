@@ -111,7 +111,7 @@ const LINES = [
       {
         id: "dany",
         number: "07",
-        name: "DANY ZUKERMAN",
+        name: "Dany Zukerman",
         role: "School Hunter",
         img: "/images/dany.png",
         tags: ["School Hunting", "Apoio à Integração Familiar", "Relação com Escolas"],
@@ -120,7 +120,7 @@ const LINES = [
       {
         id: "laura",
         number: "08",
-        name: "LAURA COSTA, LL.M.",
+        name: "Laura Costa, LL.M.",
         role: "Immigration Legal Specialist para a rede de parceiros abaixo",
         img: "/images/laura.png",
         tags: ["Vistos", "Residência", "Nacionalidade"],
