@@ -587,7 +587,7 @@ export function ChatAssistant() {
       try {
         await (supabase as any).rpc('save_chat_log', {
           p_session_id: q.session_id,
-          p_history: messagesRef.current ?? [],
+          p_history: messages ?? [],
           p_lead_captured: true,
         })
       } catch {}
