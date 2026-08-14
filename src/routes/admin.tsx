@@ -98,8 +98,8 @@ function AdminLogin() {
         <Reveal>
           <div className="w-full max-w-md bg-black-2 border border-border p-10 lg:p-12">
             <div className="flex flex-col items-center mb-10">
-              <img src="/moovia-logotype.png" alt="MOOVIA Portugal" className="h-16 w-auto object-contain mb-3" />
-              <p className="font-urbanist text-[13px] tracking-widest uppercase text-gold">MOOVIA Portugal</p>
+              <img src="/moovia-logotype.png" alt="MOOVIA" className="h-16 w-auto object-contain mb-3" />
+              <p className="font-urbanist text-[13px] tracking-widest uppercase text-gold">MOOVIA</p>
             </div>
             
             <form onSubmit={handleLogin} className="space-y-6">

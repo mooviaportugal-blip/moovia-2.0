@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal | Global Mobility Assurance" },
+      { title: "MOOVIA | Global Mobility Assurance" },
       { name: "description", content: "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional. Human Mobility Assurance e Global Mobility Success Framework." },
       { name: "robots", content: "index, follow" },
     ],

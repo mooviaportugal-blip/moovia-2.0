@@ -6,13 +6,13 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 export const Route = createFileRoute("/soundbrand")({
   head: () => ({
     meta: [
-      { title: "Sound Branding · MOOVIA Portugal" },
+      { title: "Sound Branding · MOOVIA" },
       {
         name: "description",
         content:
           "Cinco faixas instrumentais criadas para acompanhar a jornada de quem decide, parte e chega a Portugal.",
       },
-      { property: "og:title", content: "Sound Branding · MOOVIA Portugal" },
+      { property: "og:title", content: "Sound Branding · MOOVIA" },
       {
         property: "og:description",
         content: "Rádio MOOVIA: trilha original para uma transição internacional.",
@@ -196,12 +196,12 @@ function SoundBrandPage() {
 
           <footer className="mt-16 text-center">
             <p className="font-body text-[13px] font-[300] text-w35 leading-[1.7] max-w-lg mx-auto mb-4">
-              Todas as faixas foram compostas exclusivamente para a MOOVIA Portugal.
+              Todas as faixas foram compostas exclusivamente para a MOOVIA.
               Instrumental, sem letra, pensadas para acompanhar uma das decisões mais
               importantes da sua vida sem interferir no pensamento.
             </p>
             <span className="font-body text-[11px] tracking-[0.25em] uppercase text-gold/60">
-              © MOOVIA Portugal · Sound Branding
+              © MOOVIA · Sound Branding
             </span>
           </footer>
         </div>

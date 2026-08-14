@@ -19,7 +19,7 @@ export function MaintenancePage() {
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="w-8 h-px bg-gold" />
           <span className="font-body text-[11px] tracking-[0.32em] uppercase text-gold">
-            MOOVIA Portugal
+            MOOVIA
           </span>
           <div className="w-8 h-px bg-gold" />
         </div>

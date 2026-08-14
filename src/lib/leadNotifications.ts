@@ -17,7 +17,7 @@ function buildLeadHtml(lead: LeadPayload) {
     .join("");
   return `
     <div style="background:#0b1225;padding:32px;color:#fff;font-family:Arial,sans-serif;">
-      <h2 style="color:#cead84;font-weight:200;margin:0 0 16px;">Novo lead — MOOVIA Portugal</h2>
+      <h2 style="color:#cead84;font-weight:200;margin:0 0 16px;">Novo lead — MOOVIA</h2>
       <p style="color:#c9c9c9;margin:0 0 24px;">Um novo formulário foi preenchido no site.</p>
       <table style="background:#fff;border-collapse:collapse;width:100%;max-width:560px;">${rows}</table>
     </div>`;
@@ -31,7 +31,7 @@ function buildThankYouHtml(name?: string) {
       <p style="color:#e6e6e6;font-size:16px;line-height:1.7;margin:0 0 12px;">
         Recebemos o seu caso. Em breve um dos <strong style="color:#cead84;">founders</strong> da MOOVIA irá entrar em contacto com você pessoalmente.
       </p>
-      <p style="color:#9a9a9a;font-size:13px;margin-top:32px;">MOOVIA Portugal · Transição de Vida e Património</p>
+      <p style="color:#9a9a9a;font-size:13px;margin-top:32px;">MOOVIA · Transição de Vida e Património</p>
     </div>`;
 }
 
@@ -65,7 +65,7 @@ export async function notifyLead(lead: LeadPayload) {
         body: {
           mode: "custom",
           to: lead.email,
-          subject: "Recebemos o seu caso — MOOVIA Portugal",
+          subject: "Recebemos o seu caso — MOOVIA",
           html: buildThankYouHtml(lead.name),
         },
       }),

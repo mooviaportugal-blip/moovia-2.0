@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 // ─── Emails para o CLIENTE ────────────────────────────────────────
-const shell = (bodyInner: string) => `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:32px 16px;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#06091a;border-radius:12px;overflow:hidden;">${bodyInner}<tr><td style="padding:20px 40px;border-top:1px solid rgba(173,137,87,0.15);text-align:center;"><p style="margin:0;font-size:11px;color:rgba(249,245,236,0.3);">MOOVIA Portugal · contacto@mooviaportugal.com<br/>Rua Visconde de Santarém · Lisboa, Portugal</p></td></tr></table></td></tr></table></body></html>`;
+const shell = (bodyInner: string) => `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:32px 16px;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#06091a;border-radius:12px;overflow:hidden;">${bodyInner}<tr><td style="padding:20px 40px;border-top:1px solid rgba(173,137,87,0.15);text-align:center;"><p style="margin:0;font-size:11px;color:rgba(249,245,236,0.3);">MOOVIA · contacto@mooviaportugal.com<br/>Rua Visconde de Santarém · Lisboa, Portugal</p></td></tr></table></td></tr></table></body></html>`;
 
 const stepRow = (n: number, title: string, desc: string) => `<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;"><tr><td width="36" valign="top"><div style="width:28px;height:28px;background:rgba(173,137,87,0.15);border:1px solid rgba(173,137,87,0.4);border-radius:50%;text-align:center;line-height:28px;font-size:12px;color:#ad8957;font-weight:700;">${n}</div></td><td valign="top" style="padding-left:12px;"><p style="margin:0;font-size:14px;color:#f9f5ec;font-weight:600;line-height:1.4;">${title}</p><p style="margin:4px 0 0;font-size:13px;color:rgba(249,245,236,0.6);line-height:1.6;">${desc}</p></td></tr></table>`;
 
 function buildApprovedClientEmail(name: string) {
   const first = name.split(" ")[0];
   return shell(`
-    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA Portugal</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Avaliação Estratégica<br/><strong style="font-weight:600;color:#ad8957;">confirmada.</strong></h1></td></tr>
+    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Avaliação Estratégica<br/><strong style="font-weight:600;color:#ad8957;">confirmada.</strong></h1></td></tr>
     <tr><td style="padding:32px 40px 0;text-align:center;"><div style="display:inline-block;background:#1E7E34;color:#fff;font-size:13px;font-weight:600;padding:8px 20px;border-radius:100px;letter-spacing:0.05em;">✅ Pagamento aprovado</div></td></tr>
     <tr><td style="padding:24px 40px 0;"><p style="margin:0;font-size:16px;color:#f9f5ec;line-height:1.7;">Olá, <strong>${first}</strong>.</p><p style="margin:12px 0 0;font-size:15px;color:rgba(249,245,236,0.75);line-height:1.8;">O pagamento da sua Avaliação Estratégica foi confirmado. Um dos nossos founders vai entrar em contacto pessoalmente nas próximas horas para confirmar a data e os detalhes da sua sessão.</p></td></tr>
     <tr><td style="padding:24px 40px;"><div style="height:1px;background:rgba(173,137,87,0.2);"></div></td></tr>
@@ -31,7 +31,7 @@ function buildApprovedClientEmail(name: string) {
 function buildPendingClientEmail(name: string) {
   const first = name.split(" ")[0];
   return shell(`
-    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA Portugal</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Seu pagamento está<br/><strong style="font-weight:600;color:#B7590A;">pendente.</strong></h1></td></tr>
+    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Seu pagamento está<br/><strong style="font-weight:600;color:#B7590A;">pendente.</strong></h1></td></tr>
     <tr><td style="padding:32px 40px 0;text-align:center;"><div style="display:inline-block;background:#B7590A;color:#fff;font-size:13px;font-weight:600;padding:8px 20px;border-radius:100px;letter-spacing:0.05em;">⏳ Aguardando confirmação</div></td></tr>
     <tr><td style="padding:24px 40px 0;"><p style="margin:0;font-size:16px;color:#f9f5ec;line-height:1.7;">Olá, <strong>${first}</strong>.</p><p style="margin:12px 0 0;font-size:15px;color:rgba(249,245,236,0.75);line-height:1.8;">Recebemos a sua solicitação de Avaliação Estratégica, mas o pagamento ainda não foi confirmado pelo MercadoPago.</p><p style="margin:12px 0 0;font-size:15px;color:rgba(249,245,236,0.75);line-height:1.8;">Isso pode acontecer quando o PIX demora alguns minutos para ser processado. Assim que o banco confirmar, você receberá automaticamente o email de confirmação.</p></td></tr>
     <tr><td style="padding:24px 40px;"><div style="height:1px;background:rgba(173,137,87,0.2);"></div></td></tr>
@@ -46,7 +46,7 @@ function buildPendingClientEmail(name: string) {
 function buildRejectedClientEmail(name: string) {
   const first = name.split(" ")[0];
   return shell(`
-    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA Portugal</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Não conseguimos confirmar<br/><strong style="font-weight:600;color:#8B1E1E;">seu pagamento.</strong></h1></td></tr>
+    <tr><td style="background:#06091a;padding:32px 40px 24px;text-align:center;border-bottom:1px solid rgba(173,137,87,0.3);"><p style="margin:0 0 8px;font-size:11px;letter-spacing:0.2em;color:#ad8957;text-transform:uppercase;">MOOVIA</p><h1 style="margin:0;font-size:22px;font-weight:300;color:#f9f5ec;line-height:1.4;">Não conseguimos confirmar<br/><strong style="font-weight:600;color:#8B1E1E;">seu pagamento.</strong></h1></td></tr>
     <tr><td style="padding:32px 40px 0;text-align:center;"><div style="display:inline-block;background:#8B1E1E;color:#fff;font-size:13px;font-weight:600;padding:8px 20px;border-radius:100px;letter-spacing:0.05em;">❌ Pagamento não aprovado</div></td></tr>
     <tr><td style="padding:24px 40px 0;"><p style="margin:0;font-size:16px;color:#f9f5ec;line-height:1.7;">Olá, <strong>${first}</strong>.</p><p style="margin:12px 0 0;font-size:15px;color:rgba(249,245,236,0.75);line-height:1.8;">Infelizmente o seu pagamento não pôde ser aprovado. Nenhum valor foi cobrado. Pode tentar novamente com outro método ou falar connosco para ajudarmos.</p></td></tr>
     <tr><td style="padding:24px 40px 32px;text-align:center;"><a href="https://mooviaportugal.com/checkout" style="display:inline-block;background:#ad8957;color:#06091a;font-size:14px;font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none;margin-bottom:12px;letter-spacing:0.03em;">Tentar novamente →</a><br/><a href="https://wa.me/351910388877" style="display:inline-block;font-size:13px;color:rgba(249,245,236,0.5);padding:8px;text-decoration:none;">Precisa de ajuda? Fale no WhatsApp</a></td></tr>
@@ -64,7 +64,7 @@ function buildPaymentEmail(d: Record<string, any>) {
     <table style="width:100%;border-collapse:collapse;border-top:1px solid rgba(173,137,87,0.2);">
       ${row("Nome", d.name)}${row("Email", d.email)}${row("WhatsApp", d.whatsapp)}${row("Produto", d.product)}${row("Valor", d.amount)}${row("Meio", d.payment_method)}${row("Status", label)}${row("ID pagamento", d.payment_id)}${row("ID pedido", d.order_id)}${row("Pago em", ts)}
     </table>
-    <div style="padding:16px 24px;border-top:1px solid rgba(173,137,87,0.2);font-size:11px;color:rgba(249,245,236,0.3);text-align:center;">MOOVIA Portugal · Sistema de Notificações</div>
+    <div style="padding:16px 24px;border-top:1px solid rgba(173,137,87,0.2);font-size:11px;color:rgba(249,245,236,0.3);text-align:center;">MOOVIA · Sistema de Notificações</div>
   </div>`;
 }
 
@@ -240,7 +240,7 @@ export const Route = createFileRoute("/api/public/mercadopago-webhook")({
                   subject = `⏳ Seu pagamento ainda está pendente — Avaliação Estratégica MOOVIA`;
                   html = buildPendingClientEmail(clientName);
                 } else if (mpStatus === "rejected" || mpStatus === "cancelled") {
-                  subject = `❌ Não conseguimos confirmar seu pagamento — MOOVIA Portugal`;
+                  subject = `❌ Não conseguimos confirmar seu pagamento — MOOVIA`;
                   html = buildRejectedClientEmail(clientName);
                 }
                 if (subject && html) {

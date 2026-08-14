@@ -4,9 +4,9 @@ import { LegalPage } from "@/components/site/LegalPage";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade, MOOVIA Portugal" },
+      { title: "Política de Privacidade, MOOVIA Portugal Portugal" },
       { name: "description", content: "Como a MOOVIA Portugal recolhe, trata e protege os seus dados pessoais, em conformidade com o RGPD." },
-      { property: "og:title", content: "Política de Privacidade, MOOVIA Portugal" },
+      { property: "og:title", content: "Política de Privacidade, MOOVIA Portugal Portugal" },
       { property: "og:url", content: "https://mooviaportugal.com/privacidade" },
       { name: "robots", content: "index,follow" },
     ],
