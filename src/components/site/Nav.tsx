@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguageSwitcherEnabled } from "@/hooks/useLanguageSwitcherEnabled";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { useSiteContent } from "@/lib/useSiteContent";
-import logoWordmarkAsset from "@/assets/logo-moovia.png";
+import logoWordmarkAsset from "@/assets/logo-moovia-global-mobility-assurance.png.asset.json";
 
 export function Nav() {
   const langEnabled = useLanguageSwitcherEnabled();
@@ -17,7 +17,7 @@ export function Nav() {
   const cmsText = (k: string, fb: string) => (isPt && cms && cms[k]) || fb;
 
   const logoIcon = cmsText("brand.logo_icon", "/mooviagold.png");
-  const logoWord = cmsText("brand.logo_wordmark", logoWordmarkAsset);
+  const logoWord = cmsText("brand.logo_wordmark", logoWordmarkAsset.url);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
