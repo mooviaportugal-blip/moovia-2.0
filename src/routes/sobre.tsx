@@ -222,7 +222,7 @@ function HowWeBuiltTimeline() {
   const marcos = [
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
-    { texto: "Metodologias de Risk Intelligence" },
+    { texto: "Metodologias de Revenue Assurance adaptadas a Global Mobility Assurance" },
     { texto: "Ciência comportamental e metodologias psicológicas" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
@@ -257,7 +257,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Risk Intelligence.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance.
         </p>
       </div>
     </section>
