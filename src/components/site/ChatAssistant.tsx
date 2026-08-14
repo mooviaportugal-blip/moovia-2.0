@@ -582,30 +582,29 @@ export function ChatAssistant() {
       } catch {}
     }
 
-    // Link chat_logs to this lead
+    // Mark this session's chat log as converted (server-side scoped write)
     if (leadId && q.session_id) {
       try {
-        await (supabase.from('chat_logs') as any)
-          .update({ lead_id: leadId, lead_captured: true })
-          .eq('session_id', q.session_id)
+        await (supabase as any).rpc('save_chat_log', {
+          p_session_id: q.session_id,
+          p_history: messagesRef.current ?? [],
+          p_lead_captured: true,
+        })
       } catch {}
     }
   }
 
   async function saveHistory(msgs: Message[]) {
+    if (!qual.session_id) return
     try {
-      await (supabase.from('chat_logs') as any).upsert(
-        {
-          session_id: qual.session_id,
-          messages: msgs,
-          lead_captured: qual.step === 'done',
-          page_url: typeof window !== 'undefined' ? window.location.href : null,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: 'session_id' },
-      )
+      await (supabase as any).rpc('save_chat_log', {
+        p_session_id: qual.session_id,
+        p_history: msgs,
+        p_lead_captured: qual.step === 'done',
+      })
     } catch {}
   }
+
 
   function runFSM(text: string): { reply: string; update: Partial<QualState> } | null {
     if (qual.step === 'done') return null
