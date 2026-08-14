@@ -150,7 +150,7 @@ const ALL: Record<string, Member> = {
   },
   dany: {
     id: "dany",
-    name: "Dany Zukerman",
+    name: "DANY ZUKERMAN",
     initials: "DZ",
     role: "School Hunter",
     img: "/images/dany.png",
