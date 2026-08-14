@@ -105,16 +105,45 @@ export function AssessmentSection() {
               </div>
             </div>
 
-            {/* Assessment Methodology Quote - Expanded Version */}
-            <div className="mb-8 font-body text-[13px] font-[300] text-w35 leading-[1.7] border-l border-gold/20 pl-4 py-2 space-y-3">
-              <p>
-                O Assessment Dashboard é conduzido, sempre que possível, na língua emocional do participante.
+            {/* Mockup visual de dashboard - EXEMPLO DE ENTREGÁVEL PARA EMPRESAS */}
+            <div className="mb-8 rounded-lg border border-gold/20 bg-black/40 p-6 shadow-xl overflow-hidden relative">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gold/10" />
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80 mb-4 border-b border-gold/10 pb-2">
+                EXEMPLO DE ENTREGÁVEL PARA EMPRESAS<br/>
+                <span className="text-[9px] normal-case opacity-60">(Dados agregados e anonimizados)</span>
               </p>
-              <p>
-                Falar numa segunda língua exige esforço cognitivo. A pessoa está, ao mesmo tempo, a pensar, traduzir e escolher palavras. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
-              </p>
-              <p>
-                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível: o que é lido deve ser a pessoa, não o esforço de falar noutra língua.
+              
+              <div className="flex justify-between items-end mb-6">
+                <div>
+                  <p className="text-[9px] uppercase tracking-tighter text-w35 mb-1">Mission Readiness Index</p>
+                  <p className="text-2xl font-display font-[300] text-white">24 <span className="text-sm text-white/40">/ 100</span></p>
+                </div>
+                <div className="text-right">
+                  <span className="inline-block px-2 py-0.5 bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-[9px] uppercase tracking-widest rounded-full">🟢 Healthy Mission</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  { label: "Family Alignment", score: 82, color: "bg-emerald-500/50" },
+                  { label: "Financial Preparedness", score: 76, color: "bg-emerald-500/50" },
+                  { label: "Cultural Adaptation", score: 81, color: "bg-emerald-500/50" },
+                  { label: "Career Continuity", score: 88, color: "bg-emerald-500/50" },
+                ].map((item) => (
+                  <div key={item.label} className="space-y-1">
+                    <div className="flex justify-between text-[10px] text-w70 font-[300]">
+                      <span className="font-body">{item.label}</span>
+                      <span className="font-display">{item.score}</span>
+                    </div>
+                    <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                      <div className={`h-full ${item.color}`} style={{ width: `${item.score}%` }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-[9px] text-white/30 italic leading-relaxed text-center border-t border-white/5 pt-4 font-body">
+                Nota: "Estes indicadores são produzidos a partir da metodologia Human Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
               </p>
             </div>
 
