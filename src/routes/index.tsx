@@ -2,11 +2,6 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 import { MaintenancePage } from "@/components/site/MaintenancePage";
 
 export const Route = createFileRoute("/")({
-  beforeLoad: () => {
-    throw redirect({
-      to: "/home",
-    });
-  },
   head: () => ({
     meta: [
       { title: "MOOVIA | Global Mobility Assurance" },

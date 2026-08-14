@@ -62,7 +62,7 @@ export function MaintenancePage() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[12px] tracking-[0.15em] uppercase">
           <a
-            href="mailto:contato@mooviaglobal.com"
+            href="mailto:contacto@mooviaglobal.com"
             className="text-gold hover:text-gold-l transition-colors border-b border-gold/30 pb-1"
           >
             contacto@mooviaglobal.com
