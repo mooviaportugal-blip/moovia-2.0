@@ -174,8 +174,8 @@ const ALL: Record<string, Member> = {
   },
 };
 
-const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme, ALL.dany, ALL.laura];
-const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra];
+const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme];
+const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra, ALL.dany, ALL.laura];
 
 function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen: () => void; index: number; isPartner?: boolean }) {
   return (
@@ -338,7 +338,7 @@ export function EquipaShowcase() {
         {/* SECÇÃO A: EQUIPA MOOVIA */}
         <div className="mb-12 text-center md:text-left">
           <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Equipa MOOVIA</h2>
-          <p className="mt-2 font-body text-[14px] md:text-[16px] text-white/60">A consultoria que coordena. Enxuta, multidisciplinar, por desenho.</p>
+          <p className="mt-2 font-body text-[14px] md:text-[16px] text-white/60">A equipa que coordena. Enxuta, multidisciplinar, por desenho.</p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8 mb-24">
