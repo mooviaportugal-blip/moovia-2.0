@@ -26,7 +26,7 @@ export const DICT_AUTO: Record<string, { en: string }> = {
   ", permite escolher categoria a categoria": { en: ", allows you to select category by category" },
   ". O benefício para o colaborador é uma consequência do nosso trabalho. O valor para a empresa está na identificação e avaliação dos fatores humanos do sucesso humano.": { en: ". The benefit to the employee is a result of our work. The value to the company lies in identifying and evaluating the human factors associated with international mobility." },
   ". Tem ainda o direito de reclamar junto da CNPD.": { en: ". You also have the right to file a complaint with the CNPD." },
-  "/company/moovia-portugal": { en: "/company/MOOVIA-portugal" },
+  "/company/moovia": { en: "/company/MOOVIA" },
   "/in/frederico-prado": { en: "/in/frederico-prado" },
   "09h00 às 18h00": { en: "9:00 a.m. to 6:00 p.m." },
   "1 EM 3": { en: "1 of 3" },

@@ -18,14 +18,14 @@ export const Route = createFileRoute("/sobre")({
       { name: "description", content: "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance." },
       { property: "og:title", content: "Sobre a MOOVIA, Global Mobility Success" },
       { property: "og:description", content: "A MOOVIA existe para aumentar a probabilidade de sucesso de cada mobilidade internacional." },
-      { property: "og:url", content: "https://mooviaportugal.com/sobre" },
+      { property: "og:url", content: "https://moovia.global/sobre" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: sobreHero },
       { name: "twitter:title", content: "Sobre a MOOVIA" },
       { name: "twitter:description", content: "Antes de coordenar transições internacionais, vivemos as nossas." },
       { name: "twitter:image", content: sobreHero },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/sobre" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/sobre" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -33,8 +33,8 @@ export const Route = createFileRoute("/sobre")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://mooviaportugal.com/" },
-            { "@type": "ListItem", position: 2, name: "Sobre", item: "https://mooviaportugal.com/sobre" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://moovia.global/" },
+            { "@type": "ListItem", position: 2, name: "Sobre", item: "https://moovia.global/sobre" },
           ],
         }),
       },
