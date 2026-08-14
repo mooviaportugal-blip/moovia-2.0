@@ -52,8 +52,8 @@ const FUNDADORES: HomeMember[] = [
 const ESPECIALISTAS: HomeMember[] = [
   {
     id: "laura",
-    name: "Laura Costa, LL.M.",
-    role: "Immigration Legal Specialist",
+    name: "LAURA COSTA, LL.M.",
+    role: "Immigration Legal Specialist para a rede de parceiros abaixo",
     img: "/images/laura.png",
     linkedin: "https://www.linkedin.com/in/laura-costa-334bab2a3",
     chips: ["Mestrado ULisboa", "Imigração", "Nacionalidade"],
@@ -105,7 +105,7 @@ const COMUNIDADE: HomeMember[] = [
   {
     id: "dany",
     name: "Dany Zukerman",
-    role: "Jewish Community Advisor",
+    role: "School Hunter",
     img: "/images/dany.png",
     chips: ["Direito UCAM", "18 anos CLO", "Hebraico"],
     bio: "Lidera a integração comunitária e familiar, conectando clientes à comunidade judaica e às redes de apoio em Portugal.",
