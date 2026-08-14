@@ -17,7 +17,6 @@ export function Nav() {
   const cmsText = (k: string, fb: string) => (isPt && cms && cms[k]) || fb;
 
   const logoNav = cmsText("brand.logo_nav", logoNavAsset.url);
-  const logoIcon = cmsText("brand.logo_icon", "/mooviagold.png");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
