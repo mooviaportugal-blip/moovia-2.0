@@ -223,7 +223,7 @@ function HowWeBuiltTimeline() {
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
     { texto: "Metodologias de Revenue Assurance adaptadas a Global Mobility Assurance" },
-    { texto: "Ciência comportamental e metodologias psicológicas" },
+    { texto: "Ciência comportamental e Revenue Assurance adaptada para GMAssurance" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
     { texto: "Refinamento metodológico contínuo" },
