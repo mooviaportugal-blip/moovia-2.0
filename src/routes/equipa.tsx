@@ -10,7 +10,7 @@ export const Route = createFileRoute("/equipa")({
   head: () => ({
     meta: [
       { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
-      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
+      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental e Revenue Assurance adaptada para GMAssurance, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
       { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
       { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
       { property: "og:url", content: "https://moovia.global/equipa" },
@@ -81,7 +81,7 @@ function Equipa() {
             className="max-w-[760px] border-l-[3px] border-gold/40 pl-6 space-y-6"
           >
             <p className="font-display text-[20px] md:text-[24px] font-[300] text-white/90 leading-[1.5]">
-              O Global Mobility Assurance integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional.
+              O Global Mobility Assurance integra experiência internacional, ciência comportamental e Revenue Assurance adaptada para GMAssurance, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional.
             </p>
             <p className="font-body text-[16px] md:text-[18px] font-[300] text-white/60 leading-[1.8]">
               A MOOVIA identifica, mede e acompanha os fatores que podem afetar integração, adaptação familiar, produtividade, retenção e sucesso da missão, apoiando empresas e executivos ao longo de toda a jornada.

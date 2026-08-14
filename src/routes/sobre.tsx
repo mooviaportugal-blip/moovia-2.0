@@ -208,7 +208,7 @@ function ComoConstruimosInteligencia() {
 
         <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
           <p>
-            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, inteligência de fatores humanos e regras de negócio, numa lógica computacional explicável.
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, ciência comportamental e Revenue Assurance adaptada para GMAssurance, numa lógica computacional explicável.
           </p>
         </div>
 
@@ -223,7 +223,7 @@ function HowWeBuiltTimeline() {
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
     { texto: "Metodologias de Revenue Assurance adaptadas a Global Mobility Assurance" },
-    { texto: "Ciência comportamental e metodologias psicológicas" },
+    { texto: "Ciência comportamental e Revenue Assurance adaptada para GMAssurance" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
     { texto: "Refinamento metodológico contínuo" },
@@ -257,7 +257,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance adaptada para GMAssurance.
         </p>
       </div>
     </section>
