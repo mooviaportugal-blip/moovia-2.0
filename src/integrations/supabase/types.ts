@@ -611,7 +611,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      save_chat_log: {
+        Args: {
+          p_history?: Json
+          p_lead_captured?: boolean
+          p_session_id: string
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
