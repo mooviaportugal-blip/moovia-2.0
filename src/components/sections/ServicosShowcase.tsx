@@ -28,7 +28,7 @@ const PILLARS: Pillar[] = [
     groups: [
       {
         items: [
-          { name: "Avaliação Estratégica", desc: "Sessão de 60 minutos com 1 founder. Diagnóstico completo do perfil familiar, financeiro e migratório. Entregável físico com mapa de decisão, estratégias e cronograma. É o primeiro trabalho real da MOOVIA." },
+          { name: "Avaliação Estratégica", desc: "Sessão de 60 minutos com 1 founder. Diagnóstico completo do perfil familiar, financeiro e migratório. Documento executivo com recomendações e plano de ação. (Disponibilizado por Dashboard da Missão). É o primeiro trabalho real da MOOVIA." },
           { name: "Diagnóstico Habitacional", desc: "Análise das opções de habitação alinhadas ao perfil, orçamento e zona pretendida. Define estratégia de arrendamento ou compra, bairros prioritários e próximos passos concretos." },
           { name: "Diagnóstico Educacional", desc: "Levantamento das opções de escolas, públicas, privadas e internacionais, em função da idade, língua, currículo e zona de residência pretendida. Define timeline de matrícula." },
           { name: "Diagnóstico Documental", desc: "Mapeamento de todos os documentos necessários para a transição: passaportes, certidões, apostilas, contratos, diplomas e equivalências. Cronograma de obtenção antes da partida." },

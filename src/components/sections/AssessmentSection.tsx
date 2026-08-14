@@ -126,11 +126,14 @@ export function AssessmentSection() {
                 Entregável
               </p>
               <p className="font-body text-[14px] font-[400] text-white mb-1">
-                Dashboard Estratégico Personalizado
+                Relatório Estratégico Personalizado
               </p>
               <p className="font-body text-[13px] font-[300] text-w35 leading-[1.6]">
                 Documento executivo com recomendações, prioridades e plano de
                 ação.
+              </p>
+              <p className="font-body text-[11px] font-[300] text-white/50 mt-1">
+                (Disponibilizado por Dashboard da Missão)
               </p>
             </div>
 

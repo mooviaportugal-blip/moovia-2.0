@@ -554,7 +554,7 @@ function MetodoSection() {
     { n: "01", titulo: "Inteligência de Dados", texto: "Análise estruturada do contexto, objetivos e variáveis da mobilidade." },
     { n: "02", titulo: "Motor de Decisão Inteligente", texto: "O nosso framework tecnológico integra metodologia proprietária, regras de decisão e inteligência analítica para transformar milhares de pontos de informação em recomendações estruturadas, identificando dependências e fatores críticos para uma mobilidade internacional bem-sucedida." },
     { n: "03", titulo: "Avaliação Estratégica Humana", texto: "O diagnóstico é validado e aprofundado através de entrevistas conduzidas por especialistas em estratégia de mobilidade e adaptação humana." },
-    { n: "04", titulo: "Global Mobility Success Dashboard", texto: "Um dashboard estratégico personalizado com indicadores identificados, prioridades, recomendações e roadmap de implementação." },
+    { n: "04", titulo: "Global Mobility Success Dashboard", texto: "Relatório Estratégico Personalizado com indicadores identificados, prioridades, recomendações e plano de ação. (Disponibilizado por Dashboard da Missão)." },
   ];
   return (
     <section className="bg-black-2 py-[120px] px-6 lg:px-20">
