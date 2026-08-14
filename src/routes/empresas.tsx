@@ -80,7 +80,7 @@ function EmpresasPage() {
               animate={{ opacity: 1, y: 0 }}
               className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
             >
-              A nossa metodologia
+              GLOBAL MOBILITY ASSURANCE
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -88,8 +88,12 @@ function EmpresasPage() {
               transition={{ delay: 0.1 }}
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
-              <span className="block font-[200] text-white mb-2 italic">GLOBAL MOBILITY ASSURANCE</span>
-              <span className="block text-gold-l italic font-[300]">A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional.</span>
+              <span className="block font-[200] text-white mb-2">
+                A nova categoria para tornar mensurável
+              </span>
+              <span className="block text-[clamp(22px,3vw,38px)] text-gold-l italic font-[300] leading-[1.2]">
+                a dimensão humana da mobilidade internacional.
+              </span>
             </motion.h1>
             
             <div className="space-y-8">
