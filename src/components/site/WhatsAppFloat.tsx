@@ -1,7 +1,7 @@
 export function WhatsAppFloat() {
   return (
     <a 
-      href="https://wa.me/351910388877?text=Olá! Vim pelo site da MOOVIA Portugal." 
+      href="https://wa.me/351910388877?text=Olá! Vim pelo site da MOOVIA." 
       target="_blank" 
       rel="noopener"
       className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-[800] w-14 h-14 bg-gold rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(173,137,87,0.3)] transition-all hover:scale-110 hover:bg-gold-l group"

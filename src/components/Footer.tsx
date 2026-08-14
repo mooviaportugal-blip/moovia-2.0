@@ -9,7 +9,7 @@ export const Footer = () => {
   const email = cx("footer.email", "contacto@mooviaglobal.com");
   const phone = cx("footer.phone", "+351 910 388 877");
   const whatsapp = cx("footer.whatsapp", "351910388877");
-  const linkedin = cx("footer.linkedin", "https://www.linkedin.com/company/moovia-portugal");
+  const linkedin = cx("footer.linkedin", "https://www.linkedin.com/company/moovia");
   const address = cx("footer.address", "Rua Visconde de Santarém · 1009-287 Lisboa · PT");
   const rights = cx("footer.rights", t("footer.rights"));
   const tagline = cx("footer.tagline", t("footer.tagline"));

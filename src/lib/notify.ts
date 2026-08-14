@@ -2,14 +2,14 @@ import { supabase } from "@/integrations/supabase/client";
 
 /**
  * Notificação para o time — enviada SEMPRE para os dois destinatários:
- *   - frederico@mooviaportugal.com
+ *   - frederico@moovia.global
  *   - contacto@mooviaglobal.com
  *
  * Erros são silenciados para não bloquear o fluxo do usuário.
  */
 
 const RECIPIENTS = [
-  "frederico@mooviaportugal.com",
+  "frederico@moovia.global",
   "contacto@mooviaglobal.com",
 ];
 
@@ -50,7 +50,7 @@ function table(rows: string[]) {
   return `<table style="width:100%;border-collapse:collapse;border-top:1px solid rgba(173,137,87,0.2);">${rows.join("")}</table>`;
 }
 
-const footer = `<div style="padding:16px 24px;border-top:1px solid rgba(173,137,87,0.2);font-size:11px;color:rgba(249,245,236,0.3);text-align:center;">MOOVIA Portugal · Sistema de Notificações</div>`;
+const footer = `<div style="padding:16px 24px;border-top:1px solid rgba(173,137,87,0.2);font-size:11px;color:rgba(249,245,236,0.3);text-align:center;">MOOVIA · Sistema de Notificações</div>`;
 
 function build(type: NotifyType, data: Record<string, any>): { subject: string; html: string } {
   if (type === "form_lead" || type === "form_contact") {

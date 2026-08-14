@@ -7,20 +7,20 @@ import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto, MOOVIA Portugal | Lisboa" },
-      { name: "description", content: "Fale com a MOOVIA Portugal em Lisboa. Formulário, e-mail, WhatsApp e LinkedIn. Cada contacto é respondido pessoalmente." },
-      { property: "og:title", content: "Contacto MOOVIA Portugal" },
+      { title: "Contacto, MOOVIA | Lisboa" },
+      { name: "description", content: "Fale com a MOOVIA em Lisboa. Formulário, e-mail, WhatsApp e LinkedIn. Cada contacto é respondido pessoalmente." },
+      { property: "og:title", content: "Contacto MOOVIA" },
       { property: "og:description", content: "Sediados em Lisboa. O primeiro passo é a conversa certa." },
-      { property: "og:url", content: "https://mooviaportugal.com/contacto" },
+      { property: "og:url", content: "https://moovia.global/contacto" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/contacto" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/contacto" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "MOOVIA Portugal",
-        url: "https://mooviaportugal.com",
+        name: "MOOVIA",
+        url: "https://moovia.global",
         email: "contacto@mooviaglobal.com",
         address: {
           "@type": "PostalAddress",
@@ -104,7 +104,7 @@ function Contacto() {
             </p>
             <div className="aspect-[16/10] border border-b18 overflow-hidden">
               <iframe
-                title="MOOVIA Portugal, Lisboa"
+                title="MOOVIA, Lisboa"
                 src="https://www.google.com/maps?q=Rua+Visconde+de+Santar%C3%A9m+32,+1009-287+Lisboa,+Portugal&output=embed"
                 loading="lazy"
                 className="w-full h-full grayscale-[0.6] contrast-110"

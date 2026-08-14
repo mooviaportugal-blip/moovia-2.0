@@ -3,7 +3,7 @@ export function renderErrorPage(): string {
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <title>MOOVIA Portugal, Ocorreu um erro</title>
+    <title>MOOVIA, Ocorreu um erro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body { font-family: 'Urbanist', system-ui, sans-serif; background: #0e0f12; color: #f9f5ec; display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 1.5rem; }

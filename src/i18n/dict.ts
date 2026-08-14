@@ -22,8 +22,8 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Precisa de alguém": { en: "You need someone", es: "Necesitas a alguien" },
   "que coordene": { en: "to coordinate", es: "que coordine" },
   "a decisão.": { en: "the decision.", es: "la decisión." },
-  "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.":
-    { en: "MOOVIA Portugal doesn't solve isolated tasks. Complete coordination, from the initial diagnostic to integration.", es: "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración." },
+  "A MOOVIA não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.":
+    { en: "MOOVIA doesn't solve isolated tasks. Complete coordination, from the initial diagnostic to integration.", es: "MOOVIA no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración." },
   "Ver como funciona": { en: "See how it works", es: "Ver cómo funciona" },
   "Identificar · Medir · Mitigar": { en: "Identify · Measure · Mitigate", es: "Identificar · Medir · Mitigar" },
   "Capítulo 01": { en: "Chapter 01", es: "Capítulo 01" },

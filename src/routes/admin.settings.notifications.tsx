@@ -9,7 +9,7 @@ export const Route = createFileRoute("/admin/settings/notifications")({
 });
 
 const KEYS = [
-  { key: "notify_email", label: "E-mail de notificação", type: "email", placeholder: "contacto@mooviaportugal.com" },
+  { key: "notify_email", label: "E-mail de notificação", type: "email", placeholder: "contacto@moovia.global" },
   { key: "notify_on_new_lead", label: "Notificar em novo lead", type: "boolean" },
   { key: "notify_on_hot_lead", label: "Notificar apenas leads quentes", type: "boolean" },
   { key: "notify_on_payment", label: "Notificar em pagamento confirmado", type: "boolean" },

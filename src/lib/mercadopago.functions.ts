@@ -165,7 +165,7 @@ export const processMercadoPagoPayment = createServerFn({ method: "POST" })
     if (!accessToken) throw new Error("MERCADOPAGO_ACCESS_TOKEN não configurado.");
 
     const amount = getAmountBRL();
-    const origin = process.env.PUBLIC_SITE_URL ?? "https://mooviaportugal.com";
+    const origin = process.env.PUBLIC_SITE_URL ?? "https://moovia.global";
     const identification = normalizeIdentification(data.payer.fiscalId);
 
     if (!identification) {
@@ -344,7 +344,7 @@ export const createMercadoPagoAssessmentPreference = createServerFn({ method: "P
 
 
     const origin =
-      process.env.PUBLIC_SITE_URL ?? "https://mooviaportugal.com";
+      process.env.PUBLIC_SITE_URL ?? "https://moovia.global";
     const identification = normalizeIdentification(data.payer.fiscalId);
 
     if (!identification) {
@@ -444,7 +444,7 @@ export const createMercadoPagoTestPreference = createServerFn({ method: "POST" }
       throw new Error("O Access Token salvo não é de produção (deve começar com APP_USR-).");
     }
 
-    const origin = process.env.PUBLIC_SITE_URL ?? "https://mooviaportugal.com";
+    const origin = process.env.PUBLIC_SITE_URL ?? "https://moovia.global";
     const body = {
       items: [
         {
@@ -524,7 +524,7 @@ export const processMercadoPagoPaymentTest050 = createServerFn({ method: "POST" 
     if (!accessToken) throw new Error("MERCADOPAGO_ACCESS_TOKEN (produção) não configurado.");
     if (!accessToken.startsWith("APP_USR-")) throw new Error("Access Token não é de produção (APP_USR-).");
 
-    const origin = process.env.PUBLIC_SITE_URL ?? "https://mooviaportugal.com";
+    const origin = process.env.PUBLIC_SITE_URL ?? "https://moovia.global";
     const identification = normalizeIdentification(data.payer.fiscalId);
     if (!identification) throw new Error("Informe um CPF ou CNPJ válido.");
 

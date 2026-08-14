@@ -9,16 +9,16 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "MOOVIA Portugal | Global Mobility Assurance" },
+      { title: "MOOVIA | Global Mobility Assurance" },
       { name: "description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Global Mobility Assurance e Global Mobility Success Framework." },
-      { property: "og:title", content: "MOOVIA Portugal | Global Mobility Assurance" },
+      { property: "og:title", content: "MOOVIA | Global Mobility Assurance" },
       { property: "og:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal: visto, moradia, escola, fiscalidade e adaptação familiar. Global Mobility Assurance e Global Mobility Success Framework." },
-      { property: "og:url", content: "https://mooviaportugal.com/" },
+      { property: "og:url", content: "https://moovia.global/" },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "MOOVIA Portugal | Global Mobility Assurance" },
+      { name: "twitter:title", content: "MOOVIA | Global Mobility Assurance" },
       { name: "twitter:description", content: "A MOOVIA coordena sua mudança do Brasil para Portugal. Global Mobility Assurance e Global Mobility Success Framework." },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/" }],
   }),
   component: () => <MaintenancePage />,
 });

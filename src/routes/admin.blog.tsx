@@ -554,7 +554,7 @@ function PostEditor({ post, onCancel, onSaved }: { post: Post; onCancel: () => v
             {/* Google preview */}
             <div className="border border-border bg-black p-5 rounded">
               <p className="text-[11px] uppercase tracking-widest text-white/30 font-urbanist mb-3">Pré-visualização Google</p>
-              <p className="text-xs text-white/40 font-urbanist">mooviaportugal.com › blog › {form.slug || "url"}</p>
+              <p className="text-xs text-white/40 font-urbanist">moovia.global › blog › {form.slug || "url"}</p>
               <p className="text-lg text-blue-400 mt-1 truncate">{form.meta_title || form.title || "Título do artigo"}</p>
               <p className="text-sm text-white/50 mt-1 line-clamp-2">{form.meta_description || form.excerpt || "Descrição do artigo aparecerá aqui."}</p>
             </div>

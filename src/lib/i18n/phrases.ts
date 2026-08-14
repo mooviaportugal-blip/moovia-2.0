@@ -307,7 +307,7 @@ export const PHRASES: Record<string, Phrase> = {
   "Ver todos os artigos": { "pt-BR": "Ver todos os artigos", es: "Ver todos los artículos", en: "View all articles" },
   "Perguntas frequentes": { "pt-BR": "Perguntas frequentes", es: "Preguntas frecuentes", en: "Frequently asked questions" },
   "O que as pessoas perguntam antes de decidir.": { "pt-BR": "O que as pessoas perguntam antes de decidir.", es: "Lo que las personas preguntan antes de decidir.", en: "What people ask before deciding." },
-  "O que exatamente a MOOVIA Portugal faz?": { "pt-BR": "O que exatamente a MOOVIA Portugal faz?", es: "¿Qué hace exactamente MOOVIA Portugal?", en: "What exactly does MOOVIA Portugal do?" },
+  "O que exatamente a MOOVIA faz?": { "pt-BR": "O que exatamente a MOOVIA faz?", es: "¿Qué hace exactamente MOOVIA?", en: "What exactly does MOOVIA do?" },
   "O que é o Strategic Assessment de €250?": { "pt-BR": "O que é a Avaliação Estratégica de €250?", es: "¿Qué es la Evaluación Estratégica de 250 €?", en: "What is the €250 Strategic Assessment?" },
   "Qual a diferença entre a MOOVIA e uma empresa de imigração?": { "pt-BR": "Qual a diferença entre a MOOVIA e uma empresa de imigração?", es: "¿Cuál es la diferencia entre MOOVIA y una empresa de inmigración?", en: "What is the difference between MOOVIA and an immigration company?" },
   "A MOOVIA trabalha com pacotes ou planos de serviço?": { "pt-BR": "A MOOVIA trabalha com pacotes ou planos de serviço?", es: "¿MOOVIA trabaja con paquetes o planes de servicio?", en: "Does MOOVIA work with packages or service plans?" },
@@ -395,8 +395,8 @@ export const PHRASES: Record<string, Phrase> = {
   },
 
   // Footer / contact
-  "Contacto MOOVIA Portugal": {
-    "pt-BR": "Contacto MOOVIA Portugal", es: "Contacto MOOVIA Portugal", en: "Contact MOOVIA Portugal",
+  "Contacto MOOVIA": {
+    "pt-BR": "Contacto MOOVIA", es: "Contacto MOOVIA", en: "Contact MOOVIA",
   },
 
   // Hero
@@ -415,10 +415,10 @@ export const PHRASES: Record<string, Phrase> = {
     es: "No necesita más información. Necesita a alguien que coordine la decisión.",
     en: "You don't need more information. You need someone who coordinates the decision.",
   },
-  "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.": {
-    "pt-BR": "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.",
-    es: "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración.",
-    en: "MOOVIA Portugal doesn't handle isolated tasks. End-to-end coordination, from the first diagnosis to integration.",
+  "A MOOVIA não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.": {
+    "pt-BR": "A MOOVIA não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.",
+    es: "MOOVIA no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración.",
+    en: "MOOVIA doesn't handle isolated tasks. End-to-end coordination, from the first diagnosis to integration.",
   },
   "Ver como funciona": { "pt-BR": "Ver como funciona", es: "Ver cómo funciona", en: "See how it works" },
   "Identificar · Medir · Mitigar": {

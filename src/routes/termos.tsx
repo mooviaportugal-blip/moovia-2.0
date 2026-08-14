@@ -7,9 +7,9 @@ export const Route = createFileRoute("/termos")({
       { title: "Termos e Condições, MOOVIA Portugal" },
       { name: "description", content: "Termos e condições de utilização do site e dos serviços de consultoria boutique da MOOVIA Portugal." },
       { property: "og:title", content: "Termos e Condições, MOOVIA Portugal" },
-      { property: "og:url", content: "https://mooviaportugal.com/termos" },
+      { property: "og:url", content: "https://moovia.global/termos" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/termos" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/termos" }],
   }),
   component: () => <LegalPage slug="termos-condicoes" />,
 });

@@ -19,7 +19,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
             already_existed: true,
             id: existing.id,
             slug: existing.slug,
-            url: `https://mooviaportugal.com/blog/${existing.slug}`,
+            url: `https://moovia.global/blog/${existing.slug}`,
           });
         }
 
@@ -116,7 +116,7 @@ export const Route = createFileRoute("/api/public/seed-blog")({
           ok: true,
           id: data.id,
           slug: data.slug,
-          url: `https://mooviaportugal.com/blog/${data.slug}`,
+          url: `https://moovia.global/blog/${data.slug}`,
         });
       },
     },
