@@ -7,8 +7,8 @@ export function FAQSection() {
 
   const faqs = [
     {
-      q: "O que exatamente a MOOVIA Portugal faz?",
-      a: "A MOOVIA Portugal coordena a jornada completa de transição internacional, do diagnóstico estratégico à integração. Não somos uma empresa de imigração, não somos uma imobiliária, não somos uma escola. Somos o único ponto de responsabilidade para uma decisão que normalmente exige coordenar dez fornecedores diferentes ao mesmo tempo."
+      q: "O que exatamente a MOOVIA faz?",
+      a: "A MOOVIA coordena a jornada completa de transição internacional, do diagnóstico estratégico à integração. Não somos uma empresa de imigração, não somos uma imobiliária, não somos uma escola. Somos o único ponto de responsabilidade para uma decisão que normalmente exige coordenar dez fornecedores diferentes ao mesmo tempo."
     },
     {
       q: "O que é a Avaliação Estratégica de €250 (+IVA)?",

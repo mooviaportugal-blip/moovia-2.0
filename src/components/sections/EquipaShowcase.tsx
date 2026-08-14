@@ -35,7 +35,7 @@ const ALL: Record<string, Member> = {
     linkedin: "https://www.linkedin.com/in/fredericoprado/",
     chips: ["29 anos", "Tampa (EUA)", "Lisboa, 2018"],
     bio: [
-      "Frederico Prado é Founder & CEO da MOOVIA Portugal. Desenvolveu a sua formação em Comunicação na University of Tampa, nos Estados Unidos, onde viveu durante 4 anos e iniciou a sua trajetória internacional.",
+      "Frederico Prado é Founder & CEO da MOOVIA. Desenvolveu a sua formação em Comunicação na University of Tampa, nos Estados Unidos, onde viveu durante 4 anos e iniciou a sua trajetória internacional.",
       "Com 29 anos de experiência como executivo em empresas multinacionais de tecnologia e serviços, construiu uma carreira sólida em desenvolvimento de negócios, vendas consultivas e expansão internacional, liderando projetos estratégicos e relações de alto nível entre América Latina, Europa e África.",
       "Ao viver processos de transição internacional em diferentes momentos da vida, como estudante, executivo, investidor e pai de família, passou a conhecer de perto os desafios humanos, financeiros e emocionais envolvidos numa mudança internacional.",
     ],
@@ -50,7 +50,7 @@ const ALL: Record<string, Member> = {
     linkedin: "https://www.linkedin.com/in/pablo-alejandro-bbb4681a6/",
     chips: ["IST", "SeaRider", "AXL MOTORS", "Digital Assets"],
     bio: [
-      "Pablo Alejandro Saco Paim é Co-Founder e Estrategista de Ativos Digitais da MOOVIA Portugal, atuando na interseção entre investimentos, tecnologia e novas dinâmicas globais de alocação patrimonial e mobilidade internacional.",
+      "Pablo Alejandro Saco Paim é Co-Founder e Estrategista de Ativos Digitais da MOOVIA, atuando na interseção entre investimentos, tecnologia e novas dinâmicas globais de alocação patrimonial e mobilidade internacional.",
       "Vive na Europa desde os 17 anos. Atualmente trabalha como engenheiro e está concluindo o seu Mestrado em Engenharia Mecânica no Instituto Superior Técnico.",
     ],
     quote: "Rigor analítico e visão internacional aplicados a cada decisão que a MOOVIA toma.",
@@ -79,7 +79,7 @@ const ALL: Record<string, Member> = {
     linkedin: "https://www.linkedin.com/in/laura-costa-334bab2a3",
     chips: ["Mestrado ULisboa", "Imigração"],
     bio: [
-      "Laura Costa é especialista em mobilidade internacional, imigração e documentação transfronteiriça na MOOVIA Portugal.",
+      "Laura Costa é especialista em mobilidade internacional, imigração e documentação transfronteiriça na MOOVIA.",
       "Mestre em Direito Penal e Ciências Criminais pela Faculdade de Direito da Universidade de Lisboa, com formação internacional em Itália e República Tcheca.",
     ],
     quote: "Documentação não é burocracia. É a base que permite que a vida em Portugal comece com segurança.",
@@ -93,7 +93,7 @@ const ALL: Record<string, Member> = {
     linkedin: "https://www.linkedin.com/in/sararussoesteves/",
     chips: ["RE/MAX Collection", "Luxo", "10+ anos"],
     bio: [
-      "Sara Russo é Real Estate Specialist da MOOVIA Portugal, com mais de 10 anos de experiência no mercado imobiliário português.",
+      "Sara Russo é Real Estate Specialist da MOOVIA, com mais de 10 anos de experiência no mercado imobiliário português.",
       "Especializada no atendimento a clientes nacionais e internacionais, atua com foco em aquisição imobiliária, investimento e relocation residencial.",
     ],
     quote: "Encontrar o lugar certo não é só sobre metros quadrados. É sobre entender onde cada família vai ser feliz.",
