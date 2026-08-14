@@ -30,6 +30,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "@tanstack/react-router";
 import { useAdminMe } from "@/hooks/useAdminPermissions";
 import { useState } from "react";
+import logoFooterAsset from "@/assets/logo-moovia-footer.png.asset.json";
 
 const menuItems = [
   { label: "Overview", icon: BarChart3, to: "/admin" },
@@ -77,12 +78,9 @@ export function AdminSidebar() {
         "p-6 border-b border-border flex items-center relative",
         isCollapsed ? "justify-center" : "justify-between"
       )}>
-        <div className={cn("flex items-center gap-3 overflow-hidden transition-all duration-300", isCollapsed ? "w-0 opacity-0" : "w-full opacity-100")}>
-          <img src="/mooviagold.svg" alt="MOOVIA" className="w-8 h-8" />
-          <div className="whitespace-nowrap">
-            <h2 className="font-amotha text-xl text-white leading-none">MOOVIA</h2>
-            <p className="font-urbanist text-[9px] uppercase tracking-[0.2em] text-gold mt-1">Admin Panel</p>
-          </div>
+        <div className={cn("flex flex-col gap-2 overflow-hidden transition-all duration-300", isCollapsed ? "w-0 opacity-0" : "w-full opacity-100")}>
+          <img src={logoFooterAsset.url} alt="MOOVIA Global Mobility Assurance" className="h-8 w-auto object-contain" />
+          <p className="font-urbanist text-[9px] uppercase tracking-[0.2em] text-gold whitespace-nowrap">Admin Panel</p>
         </div>
 
         {isCollapsed && (
