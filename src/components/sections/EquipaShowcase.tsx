@@ -174,8 +174,8 @@ const ALL: Record<string, Member> = {
   },
 };
 
-const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme, ALL.dany, ALL.laura];
-const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra];
+const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme];
+const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra, ALL.dany, ALL.laura];
 
 function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen: () => void; index: number; isPartner?: boolean }) {
   return (
