@@ -25,7 +25,7 @@ export function MaintenancePage() {
         </div>
 
         <h1 className="font-display text-[clamp(32px,5vw,54px)] leading-[1.05] tracking-[-0.02em] mb-12">
-          <span className="font-[400] text-gold-l italic block underline decoration-gold/30">Assurance</span>
+          <span className="font-[400] text-gold-l italic block underline decoration-gold/30">Global Mobility Assurance</span>
         </h1>
 
         <div className="flex justify-center mb-12">

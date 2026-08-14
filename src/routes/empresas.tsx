@@ -88,7 +88,7 @@ function EmpresasPage() {
               transition={{ delay: 0.1 }}
               className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
             >
-              <span className="block font-[200] text-white mb-2 italic">ASSURANCE</span>
+              <span className="block font-[200] text-white mb-2 italic">GLOBAL MOBILITY ASSURANCE</span>
               <span className="block text-gold-l italic font-[300]">A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional.</span>
             </motion.h1>
             

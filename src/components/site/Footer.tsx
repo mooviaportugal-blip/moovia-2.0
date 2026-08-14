@@ -33,6 +33,9 @@ export function Footer() {
           <div className="flex flex-col items-center lg:items-start">
             <Link to="/" className="flex flex-col items-center lg:items-start mb-6 w-fit">
               <img src={logoWordmarkAsset.url} alt="MOOVIA" className="h-[40px] w-auto object-contain" />
+              <span className="font-urbanist text-[9px] tracking-[0.24em] uppercase text-gold/80 mt-2 w-full text-center lg:text-left">
+                Global Mobility
+              </span>
             </Link>
             <p className="font-urbanist text-[12px] font-[400] tracking-[0.28em] uppercase text-w35 mb-6">Identificar · Medir · Mitigar</p>
             <p className="font-urbanist text-[13px] font-[300] text-w35 max-w-[320px] leading-relaxed mx-auto lg:mx-0">

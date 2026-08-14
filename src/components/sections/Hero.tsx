@@ -40,7 +40,7 @@ export function Hero() {
           key={locale}
           className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
         >
-          <span className="text-gold-l font-[200] block mb-2 underline decoration-gold/20 underline-offset-8 uppercase tracking-wider">ASSURANCE</span>
+          <span className="text-gold-l font-[200] block mb-2 underline decoration-gold/20 underline-offset-8 uppercase tracking-wider">GLOBAL MOBILITY ASSURANCE</span>
           <span className="text-white font-[400] block">A nova categoria para tornar mensurável</span>
           <span className="text-gold-l italic font-[300] block">a dimensão humana da mobilidade internacional.</span>
         </h1>
