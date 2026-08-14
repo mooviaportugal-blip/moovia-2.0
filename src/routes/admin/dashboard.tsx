@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import logoWordmarkAsset from "@/assets/logo-moovia-global-mobility-assurance.png.asset.json";
 
 export const Route = createFileRoute("/admin/dashboard")({
   component: DashboardPage,
