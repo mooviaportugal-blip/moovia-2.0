@@ -767,7 +767,7 @@ function Historia() {
 /* ─────────────────────────── ORIGEM (MERCADO) ─────────────────────────── */
 function OrigemMercado() {
   const paragraphs = [
-    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de uma mobilidade internacional.",
+    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, entre Revenue Assurance, consultoria e tecnologia empresarial, vivendo na pele os desafios humanos da mobilidade internacional.",
     "Ao longo de mais de 30 anos, a liderança da MOOVIA acompanhou projetos de expansão internacional, desenvolvimento de negócios e parcerias estratégicas em diferentes países, trabalhando com empresas e equipas em ambientes multiculturais e de elevada complexidade.",
     "Essa vivência, somada ao processo pessoal de mudança para Portugal, revelou um problema que o mercado ainda não tinha resolvido.",
     "A Global Mobility evoluiu na execução, mas continuava fragmentada na coordenação.",
