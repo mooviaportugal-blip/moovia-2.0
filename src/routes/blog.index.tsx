@@ -30,9 +30,9 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: "Insights sobre transição internacional, fiscalidade, habitação, escolas e adaptação. Brasil → Portugal." },
       { property: "og:title", content: "Insights MOOVIA Portugal" },
       { property: "og:description", content: "Estratégia para quem está a coordenar uma transição internacional." },
-      { property: "og:url", content: "https://mooviaportugal.com/blog" },
+      { property: "og:url", content: "https://moovia.global/blog" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/blog" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/blog" }],
   }),
   component: Blog,
 });

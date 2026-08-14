@@ -34,7 +34,7 @@ export const Route = createFileRoute("/checkout2")({
       },
       { name: "robots", content: "noindex,nofollow" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/checkout2" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/checkout2" }],
   }),
   component: CheckoutAssessmentPage,
 });

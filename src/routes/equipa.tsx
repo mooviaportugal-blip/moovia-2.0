@@ -13,12 +13,12 @@ export const Route = createFileRoute("/equipa")({
       { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
       { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
       { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
-      { property: "og:url", content: "https://mooviaportugal.com/equipa" },
+      { property: "og:url", content: "https://moovia.global/equipa" },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Equipa e Rede MOOVIA" },
       { name: "twitter:description", content: "Diferentes competências. Uma única camada de Assurance." },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/equipa" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/equipa" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -40,8 +40,8 @@ export const Route = createFileRoute("/equipa")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://mooviaportugal.com/" },
-            { "@type": "ListItem", position: 2, name: "Equipa", item: "https://mooviaportugal.com/equipa" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://moovia.global/" },
+            { "@type": "ListItem", position: 2, name: "Equipa", item: "https://moovia.global/equipa" },
           ],
         }),
       },

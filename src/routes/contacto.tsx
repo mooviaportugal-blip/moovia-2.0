@@ -11,16 +11,16 @@ export const Route = createFileRoute("/contacto")({
       { name: "description", content: "Fale com a MOOVIA em Lisboa. Formulário, e-mail, WhatsApp e LinkedIn. Cada contacto é respondido pessoalmente." },
       { property: "og:title", content: "Contacto MOOVIA" },
       { property: "og:description", content: "Sediados em Lisboa. O primeiro passo é a conversa certa." },
-      { property: "og:url", content: "https://mooviaportugal.com/contacto" },
+      { property: "og:url", content: "https://moovia.global/contacto" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/contacto" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/contacto" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "MOOVIA",
-        url: "https://mooviaportugal.com",
+        url: "https://moovia.global",
         email: "contacto@mooviaglobal.com",
         address: {
           "@type": "PostalAddress",

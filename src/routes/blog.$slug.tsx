@@ -40,7 +40,7 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ params, loaderData }) => {
     const post: any = loaderData?.post;
-    const url = `https://mooviaportugal.com/blog/${params.slug}`;
+    const url = `https://moovia.global/blog/${params.slug}`;
     const title = post?.meta_title || (post ? `${post.title}, MOOVIA Portugal` : "Artigo, MOOVIA Portugal");
     const description = post?.meta_description || post?.excerpt || "Artigo MOOVIA Portugal sobre transição internacional.";
     const image = post?.og_image || post?.banner_image || post?.featured_image;
@@ -77,7 +77,7 @@ export const Route = createFileRoute("/blog/$slug")({
               publisher: {
                 "@type": "Organization",
                 name: "MOOVIA Portugal",
-                logo: { "@type": "ImageObject", url: "https://mooviaportugal.com/mooviagold.png" },
+                logo: { "@type": "ImageObject", url: "https://moovia.global/mooviagold.png" },
               },
             }),
           }]

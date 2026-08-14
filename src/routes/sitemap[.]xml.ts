@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://mooviaportugal.com";
+const BASE_URL = "https://moovia.global";
 
 interface SitemapEntry {
   path: string;

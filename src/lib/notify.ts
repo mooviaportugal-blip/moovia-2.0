@@ -2,14 +2,14 @@ import { supabase } from "@/integrations/supabase/client";
 
 /**
  * Notificação para o time — enviada SEMPRE para os dois destinatários:
- *   - frederico@mooviaportugal.com
+ *   - frederico@moovia.global
  *   - contacto@mooviaglobal.com
  *
  * Erros são silenciados para não bloquear o fluxo do usuário.
  */
 
 const RECIPIENTS = [
-  "frederico@mooviaportugal.com",
+  "frederico@moovia.global",
   "contacto@mooviaglobal.com",
 ];
 

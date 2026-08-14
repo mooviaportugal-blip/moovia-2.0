@@ -73,7 +73,7 @@ function AdminLogin() {
       const email = username.includes("@")
         ? username.trim()
         : username.trim().toLowerCase() === "admin" 
-          ? "admin@mooviaportugal.com"
+          ? "admin@moovia.global"
           : `${username.trim().toLowerCase()}@moovia.local`;
 
       const { error } = await supabase.auth.signInWithPassword({

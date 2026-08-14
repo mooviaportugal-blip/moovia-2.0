@@ -7,9 +7,9 @@ export const Route = createFileRoute("/cookies")({
       { title: "Política de Cookies, MOOVIA Portugal Portugal" },
       { name: "description", content: "Como a MOOVIA Portugal utiliza cookies e tecnologias semelhantes neste site." },
       { property: "og:title", content: "Política de Cookies, MOOVIA Portugal Portugal" },
-      { property: "og:url", content: "https://mooviaportugal.com/cookies" },
+      { property: "og:url", content: "https://moovia.global/cookies" },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaportugal.com/cookies" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/cookies" }],
   }),
   component: () => <LegalPage slug="politica-cookies" />,
 });

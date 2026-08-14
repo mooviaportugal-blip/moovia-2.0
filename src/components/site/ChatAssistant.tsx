@@ -90,7 +90,7 @@ function newSessionId(): string {
   return Math.random().toString(36).slice(2) + Date.now().toString(36)
 }
 
-const CHECKOUT_URL = 'https://mooviaportugal.com/checkout'
+const CHECKOUT_URL = 'https://moovia.global/checkout'
 const CHECKOUT_RE = /https?:\/\/[^\s)]*mooviaportugal\.com\/checkout\/?/gi
 const HANDOFF_TRIGGER_RE = /\b(atendimento|atendido|atendida|conversa gratuita|conversar com humano|falar com humano|falar com um humano|falar com consultor|falar com fundador|marcar reunião|marcar reuniao|quero ser atendido|quero ser atendida|humano|agendar|marcar|contratar|quero uma proposta|proposta comercial|discovery call|saber mais sobre contratar|avançar)\b/i
 
