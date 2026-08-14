@@ -151,6 +151,10 @@ export function AssessmentSection() {
 
             {/* Entregável */}
             <div className="mb-6">
+              <p className="font-body text-[13px] font-[300] text-w35 leading-[1.6] mb-6">
+                Avalia se as condições humanas, familiares, financeiras e territoriais estão alinhadas para que essa mobilidade produza o resultado esperado.
+              </p>
+
               <p className="font-body text-[11px] font-[400] tracking-[0.24em] uppercase text-gold mb-2">
                 Entregável
               </p>
@@ -163,6 +167,19 @@ export function AssessmentSection() {
               </p>
               <p className="font-body text-[11px] font-[300] text-white/50 mt-1">
                 (Disponibilizado por Dashboard da Missão)
+              </p>
+            </div>
+
+            {/* Assessment Methodology Details */}
+            <div className="mb-8 font-body text-[13px] font-[300] text-w35 leading-[1.7] border-l border-gold/20 pl-4 py-2 space-y-3">
+              <p>
+                O Assessment Dashboard é conduzido, sempre que possível, na língua emocional do participante.
+              </p>
+              <p>
+                Falar numa segunda língua exige esforço cognitivo. A pessoa está, ao mesmo tempo, a pensar, traduzir e escolher palavras. Esse esforço tem um efeito observável com menos gestos, mais pausas e um olhar menos espontâneo. Não porque a pessoa seja diferente, mas porque está ocupada a processar a língua.
+              </p>
+              <p>
+                Isso contamina exatamente os sinais que uma avaliação comportamental precisa de captar. Por isso reduzimos essa interferência sempre que possível: o que é lido deve ser a pessoa, não o esforço de falar noutra língua.
               </p>
             </div>
 
