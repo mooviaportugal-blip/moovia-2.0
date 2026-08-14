@@ -6,7 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Eye, EyeOff, Loader2, ShieldAlert } from "lucide-react";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
-import logoWordmarkAsset from "@/assets/logo-moovia-global-mobility-assurance.png.asset.json";
+import logoWordmarkAsset from "@/assets/logo-moovia.png";
 
 export const Route = createFileRoute("/admin")({
   component: AdminLayout,
@@ -99,7 +99,7 @@ function AdminLogin() {
         <Reveal>
           <div className="w-full max-w-md bg-black-2 border border-border p-10 lg:p-12">
             <div className="flex flex-col items-center mb-10">
-              <img src={logoWordmarkAsset.url} alt="MOOVIA" className="h-16 w-auto object-contain mb-3" />
+              <img src={logoWordmarkAsset} alt="MOOVIA" className="h-16 w-auto object-contain mb-3" />
               <p className="font-urbanist text-[13px] tracking-widest uppercase text-gold">MOOVIA</p>
             </div>
             

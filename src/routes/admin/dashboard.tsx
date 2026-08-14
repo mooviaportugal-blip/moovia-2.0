@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import logoWordmarkAsset from "@/assets/logo-moovia-global-mobility-assurance.png.asset.json";
+import logoWordmarkAsset from "@/assets/logo-moovia.png";
 
 export const Route = createFileRoute("/admin/dashboard")({
   component: DashboardPage,
@@ -465,7 +465,7 @@ export default function DashboardPage() {
       <Reveal>
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 pb-8 border-b border-b18">
           <div className="flex items-center gap-8">
-            <img src={logoWordmarkAsset.url} alt="MOOVIA" className="h-10 w-auto opacity-90" />
+            <img src={logoWordmarkAsset} alt="MOOVIA" className="h-10 w-auto opacity-90" />
             <div className="h-10 w-px bg-b18 hidden md:block" />
             <div>
               <h1 className="text-white font-display text-xl tracking-tight mb-1">TechCorp Lda</h1>
