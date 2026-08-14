@@ -72,7 +72,7 @@ const ALL: Record<string, Member> = {
 
   laura: {
     id: "laura",
-    name: "LAURA COSTA, LL.M.",
+    name: "Laura Costa, LL.M.",
     initials: "LC",
     role: "Immigration Legal Specialist para a rede de parceiros abaixo",
     img: "/images/laura.png",
@@ -150,7 +150,7 @@ const ALL: Record<string, Member> = {
   },
   dany: {
     id: "dany",
-    name: "DANY ZUKERMAN",
+    name: "Dany Zukerman",
     initials: "DZ",
     role: "School Hunter",
     img: "/images/dany.png",
