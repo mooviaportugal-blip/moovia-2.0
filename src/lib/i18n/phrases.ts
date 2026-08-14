@@ -417,8 +417,8 @@ export const PHRASES: Record<string, Phrase> = {
   },
   "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.": {
     "pt-BR": "A MOOVIA Portugal não resolve tarefas isoladas. Coordenação completa, do primeiro diagnóstico à integração.",
-    es: "MOOVIA Portugal no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración.",
-    en: "MOOVIA Portugal doesn't handle isolated tasks. End-to-end coordination, from the first diagnosis to integration.",
+    es: "MOOVIA no resuelve tareas aisladas. Coordinación completa, desde el primer diagnóstico hasta la integración.",
+    en: "MOOVIA doesn't handle isolated tasks. End-to-end coordination, from the first diagnosis to integration.",
   },
   "Ver como funciona": { "pt-BR": "Ver como funciona", es: "Ver cómo funciona", en: "See how it works" },
   "Identificar · Medir · Mitigar": {
