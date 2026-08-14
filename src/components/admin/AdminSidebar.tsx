@@ -81,7 +81,6 @@ export function AdminSidebar() {
           <img src="/mooviagold.svg" alt="MOOVIA" className="w-8 h-8" />
           <div className="whitespace-nowrap">
             <h2 className="font-amotha text-xl text-white leading-none">MOOVIA</h2>
-            <p className="font-urbanist text-[9px] uppercase tracking-[0.2em] text-gold mt-1">Admin Panel</p>
           </div>
         </div>
 
