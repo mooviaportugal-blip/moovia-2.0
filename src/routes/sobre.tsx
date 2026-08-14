@@ -77,7 +77,7 @@ function SobrePage() {
 /* ─────────────────────── GLOSSÁRIO CONCEITUAL ─────────────────────── */
 function GlossarioConceitual() {
   const itens = [
-    { termo: "Global Mobility Assurance", desc: "A disciplina de gestão." },
+    { termo: "Assurance", desc: "A disciplina de gestão." },
     { termo: "Fatores Humanos", desc: "Aquilo que identificamos, avaliamos e acompanhamos." },
     { termo: "Sinais Humanos", desc: "Indicadores e sinais observados ao longo da mobilidade." },
     { termo: "Human Mobility Intelligence", desc: "A inteligência produzida pela combinação da metodologia Human Mobility Assurance, dados, tecnologia e interpretação humana." },
