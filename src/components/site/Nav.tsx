@@ -5,7 +5,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguageSwitcherEnabled } from "@/hooks/useLanguageSwitcherEnabled";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { useSiteContent } from "@/lib/useSiteContent";
-import logoWordmarkAsset from "@/assets/logo-moovia-global-mobility-assurance.png.asset.json";
+import logoWordmarkAsset from "@/assets/logo-moovia.png";
 
 export function Nav() {
   const langEnabled = useLanguageSwitcherEnabled();
@@ -17,7 +17,7 @@ export function Nav() {
   const cmsText = (k: string, fb: string) => (isPt && cms && cms[k]) || fb;
 
   const logoIcon = cmsText("brand.logo_icon", "/mooviagold.png");
-  const logoWord = cmsText("brand.logo_wordmark", logoWordmarkAsset.url);
+  const logoWord = cmsText("brand.logo_wordmark", logoWordmarkAsset);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -52,11 +52,8 @@ export function Nav() {
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-3 mr-auto group">
         <img src={logoIcon} alt="MOOVIA" className="w-10 h-10 lg:w-12 lg:h-12 object-contain group-hover:rotate-[360deg] transition-transform duration-1000 ease-in-out" />
-        <div className="hidden lg:flex flex-col items-center justify-center pt-1">
+        <div className="hidden lg:flex flex-col items-center justify-center">
           <img src={logoWord} alt="MOOVIA" className="h-[32px] lg:h-[38px] w-auto object-contain brightness-110" />
-          <span className="font-urbanist text-[8px] tracking-[0.24em] uppercase text-gold/80 mt-1">
-            Global Mobility
-          </span>
         </div>
       </Link>
 
