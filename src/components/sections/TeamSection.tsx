@@ -105,7 +105,7 @@ const COMUNIDADE: HomeMember[] = [
   {
     id: "dany",
     name: "Dany Zukerman",
-    role: "Jewish Community Advisor",
+    role: "School Hunter",
     img: "/images/dany.png",
     chips: ["Direito UCAM", "18 anos CLO", "Hebraico"],
     bio: "Lidera a integração comunitária e familiar, conectando clientes à comunidade judaica e às redes de apoio em Portugal.",
