@@ -222,7 +222,7 @@ function HowWeBuiltTimeline() {
   const marcos = [
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
-    { texto: "Metodologias de Risk Intelligence" },
+    { texto: "Metodologias de Revenue Assurance adaptadas a Global Mobility Assurance" },
     { texto: "Ciência comportamental e metodologias psicológicas" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
@@ -257,7 +257,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Risk Intelligence.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance.
         </p>
       </div>
     </section>
@@ -405,7 +405,7 @@ function ComparacaoCategoria() {
           A diferença para <span className="italic text-gold-l">Global Mobility Management.</span>
         </h2>
         <p className="font-body text-[12px] font-[400] tracking-[0.2em] uppercase text-gold/60 mb-14 text-center">
-          Risk Intelligence. Human Success.
+          Revenue Assurance. Human Success.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
@@ -767,7 +767,7 @@ function Historia() {
 /* ─────────────────────────── ORIGEM (MERCADO) ─────────────────────────── */
 function OrigemMercado() {
   const paragraphs = [
-    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, e da vivência direta dos desafios de uma mobilidade internacional.",
+    "A MOOVIA nasceu da combinação entre quase três décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em diferentes continentes, entre Revenue Assurance, consultoria e tecnologia empresarial, vivendo na pele os desafios humanos da mobilidade internacional.",
     "Ao longo de mais de 30 anos, a liderança da MOOVIA acompanhou projetos de expansão internacional, desenvolvimento de negócios e parcerias estratégicas em diferentes países, trabalhando com empresas e equipas em ambientes multiculturais e de elevada complexidade.",
     "Essa vivência, somada ao processo pessoal de mudança para Portugal, revelou um problema que o mercado ainda não tinha resolvido.",
     "A Global Mobility evoluiu na execução, mas continuava fragmentada na coordenação.",
