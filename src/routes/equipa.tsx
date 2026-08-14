@@ -10,7 +10,7 @@ export const Route = createFileRoute("/equipa")({
   head: () => ({
     meta: [
       { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
-      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
+      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental e Revenue Assurance adaptada para GMAssurance, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
       { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
       { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
       { property: "og:url", content: "https://moovia.global/equipa" },
