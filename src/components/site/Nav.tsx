@@ -51,6 +51,12 @@ export function Nav() {
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-3 mr-auto group">
         <img
+          src="/mooviagold.png"
+          alt=""
+          aria-hidden="true"
+          className="h-[36px] lg:h-[44px] w-auto object-contain transition-transform duration-1000 ease-in-out group-hover:rotate-[360deg]"
+        />
+        <img
           src={logoNav}
           alt="MOOVIA"
           className="h-[52px] lg:h-[64px] w-auto object-contain brightness-110 transition-transform duration-300 group-hover:scale-[1.02]"
