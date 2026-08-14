@@ -405,7 +405,7 @@ function ComparacaoCategoria() {
           A diferença para <span className="italic text-gold-l">Global Mobility Management.</span>
         </h2>
         <p className="font-body text-[12px] font-[400] tracking-[0.2em] uppercase text-gold/60 mb-14 text-center">
-          Risk Intelligence. Human Success.
+          Revenue Assurance. Human Success.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
