@@ -40,7 +40,7 @@ export function Hero() {
           key={locale}
           className="font-display mb-10"
         >
-          <span className="font-display text-[clamp(42px,5vw,84px)] leading-[1.0] tracking-[0.04em] text-gold-l font-[700] block mb-6 uppercase underline decoration-gold/20 underline-offset-12">
+          <span className="font-display text-[clamp(32px,4vw,64px)] leading-[1.0] tracking-[0.04em] text-gold-l font-[700] block mb-6 uppercase underline decoration-gold/20 underline-offset-12">
             GLOBAL MOBILITY ASSURANCE
           </span>
           <span className="font-display text-[clamp(18px,2.2vw,30px)] leading-[1.2] tracking-[-0.01em] text-white font-[400] block mb-2 opacity-90">
