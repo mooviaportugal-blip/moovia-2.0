@@ -124,12 +124,7 @@ export function Hero() {
                   autoPlay
                   muted
                   playsInline
-                  loop={false}
-                  onEnded={(e) => {
-                    const target = e.target as HTMLVideoElement;
-                    target.pause();
-                    target.currentTime = target.duration;
-                  }}
+                  loop={true}
                   className="w-full h-full object-cover"
                 >
                   <source src={HERO_MEDIA_URL} type="video/mp4" />
