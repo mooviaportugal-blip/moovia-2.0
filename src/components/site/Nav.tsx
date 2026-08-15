@@ -35,7 +35,7 @@ export function Nav() {
   }, [mobileOpen]);
 
   const links = [
-    { name: cmsText("nav.link_hma", "Global Mobility Assurance"), to: "/empresas" },
+    { name: cmsText("nav.link_hma", "Global Mobility Assurance"), to: "/gma" },
     { name: cmsText("nav.link_sobre", t("nav.about")), to: "/sobre" },
     { name: cmsText("nav.link_equipa", t("nav.team")), to: "/equipa" },
     { name: cmsText("nav.link_insights", "Insights"), to: "/blog" },

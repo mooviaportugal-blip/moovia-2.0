@@ -46,7 +46,7 @@ export function Footer() {
             <h5 className="font-urbanist font-[500] text-[11px] tracking-[0.2em] uppercase text-gold">Navegação</h5>
             <div className="flex flex-col gap-3 items-center lg:items-start">
               {[
-                { label: "Global Mobility Assurance", to: "/empresas" },
+                { label: "Global Mobility Assurance", to: "/gma" },
                 { label: "Sobre", to: "/sobre" },
                 { label: "Equipa", to: "/equipa" },
                 { label: "Insights", to: "/blog" },
