@@ -76,11 +76,11 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
           <Link
-            to="/empresas"
+            to="/gma"
             hash="lead-form"
             onClick={(e) => {
               const { pathname } = window.location;
-              if (pathname === "/empresas") {
+              if (pathname === "/gma") {
                 e.preventDefault();
                 document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
               }

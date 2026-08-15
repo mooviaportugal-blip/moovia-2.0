@@ -19,8 +19,8 @@ import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-freq
 import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HomeRouteImport } from './routes/home'
+import { Route as GmaRouteImport } from './routes/gma'
 import { Route as EquipaRouteImport } from './routes/equipa'
-import { Route as EmpresasRouteImport } from './routes/empresas'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactoRouteImport } from './routes/contacto'
@@ -107,14 +107,14 @@ const HomeRoute = HomeRouteImport.update({
   path: '/home',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GmaRoute = GmaRouteImport.update({
+  id: '/gma',
+  path: '/gma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EquipaRoute = EquipaRouteImport.update({
   id: '/equipa',
   path: '/equipa',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmpresasRoute = EmpresasRouteImport.update({
-  id: '/empresas',
-  path: '/empresas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -304,8 +304,8 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
   '/dashboard': typeof DashboardRoute
-  '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
+  '/gma': typeof GmaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
@@ -352,8 +352,8 @@ export interface FileRoutesByTo {
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
   '/dashboard': typeof DashboardRoute
-  '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
+  '/gma': typeof GmaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
@@ -401,8 +401,8 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/cookies': typeof CookiesRoute
   '/dashboard': typeof DashboardRoute
-  '/empresas': typeof EmpresasRoute
   '/equipa': typeof EquipaRoute
+  '/gma': typeof GmaRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
@@ -452,8 +452,8 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/cookies'
     | '/dashboard'
-    | '/empresas'
     | '/equipa'
+    | '/gma'
     | '/home'
     | '/login'
     | '/meu-dashboard'
@@ -500,8 +500,8 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/cookies'
     | '/dashboard'
-    | '/empresas'
     | '/equipa'
+    | '/gma'
     | '/home'
     | '/login'
     | '/meu-dashboard'
@@ -548,8 +548,8 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/cookies'
     | '/dashboard'
-    | '/empresas'
     | '/equipa'
+    | '/gma'
     | '/home'
     | '/login'
     | '/meu-dashboard'
@@ -598,8 +598,8 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   CookiesRoute: typeof CookiesRoute
   DashboardRoute: typeof DashboardRoute
-  EmpresasRoute: typeof EmpresasRoute
   EquipaRoute: typeof EquipaRoute
+  GmaRoute: typeof GmaRoute
   HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
   MeuDashboardRoute: typeof MeuDashboardRoute
@@ -689,18 +689,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gma': {
+      id: '/gma'
+      path: '/gma'
+      fullPath: '/gma'
+      preLoaderRoute: typeof GmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/equipa': {
       id: '/equipa'
       path: '/equipa'
       fullPath: '/equipa'
       preLoaderRoute: typeof EquipaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/empresas': {
-      id: '/empresas'
-      path: '/empresas'
-      fullPath: '/empresas'
-      preLoaderRoute: typeof EmpresasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -1022,8 +1022,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   CookiesRoute: CookiesRoute,
   DashboardRoute: DashboardRoute,
-  EmpresasRoute: EmpresasRoute,
   EquipaRoute: EquipaRoute,
+  GmaRoute: GmaRoute,
   HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
   MeuDashboardRoute: MeuDashboardRoute,
