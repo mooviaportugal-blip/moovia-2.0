@@ -40,13 +40,13 @@ export function Hero() {
           key={locale}
           className="font-display mb-10"
         >
-          <span className="font-display text-[clamp(38px,4.6vw,72px)] leading-[1.05] tracking-[0.04em] text-gold-l font-[600] block mb-3 uppercase underline decoration-gold/20 underline-offset-8">
+          <span className="font-display text-[clamp(42px,5vw,84px)] leading-[1.0] tracking-[0.04em] text-gold-l font-[700] block mb-6 uppercase underline decoration-gold/20 underline-offset-12">
             GLOBAL MOBILITY ASSURANCE
           </span>
-          <span className="font-display text-[clamp(22px,2.6vw,38px)] leading-[1.2] tracking-[-0.02em] text-white font-[300] block mb-2">
+          <span className="font-display text-[clamp(18px,2.2vw,30px)] leading-[1.2] tracking-[-0.01em] text-white font-[400] block mb-2 opacity-90">
             A nova categoria para tornar mensurável
           </span>
-          <span className="font-display text-[clamp(18px,2.0vw,30px)] leading-[1.25] tracking-[-0.01em] text-gold-l italic font-[300] block">
+          <span className="font-display text-[clamp(14px,1.6vw,22px)] leading-[1.3] tracking-normal text-gold-l italic font-[300] block opacity-80">
             a dimensão humana da mobilidade internacional.
           </span>
         </h1>
