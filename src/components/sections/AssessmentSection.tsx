@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 // Quote da Dra. Letícia — deixar string vazia até aprovação final.
@@ -196,15 +197,14 @@ export function AssessmentSection() {
               </p>
             </div>
 
-            <a
-              href="#lead-form"
+            <Link
+              to="/gma"
+              hash="lead-form"
               onClick={(e) => {
-                if (typeof window !== "undefined") {
-                  const el = document.getElementById("lead-form");
-                  if (el) {
-                    e.preventDefault();
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }
+                const { pathname } = window.location;
+                if (pathname === "/gma") {
+                  e.preventDefault();
+                  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
               }}
               className="block text-center w-full bg-gold text-black font-body font-[600] text-[13px] tracking-[0.22em] uppercase py-6 transition-all hover:bg-gold-xl group overflow-hidden relative"
@@ -213,7 +213,7 @@ export function AssessmentSection() {
                 Conhecer Global Mobility Assurance
               </span>
               <div className="absolute inset-0 bg-gold-xl translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>
