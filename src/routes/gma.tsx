@@ -9,7 +9,7 @@ import { BusinessModelSection } from "@/components/sections/BusinessModelSection
 import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 import dashboardMock from "@/assets/dashboard-mock.png.asset.json";
 
-export const Route = createFileRoute("/empresas")({
+export const Route = createFileRoute("/gma")({
   head: () => ({
     meta: [
       { title: "Global Mobility Assurance | MOOVIA" },
