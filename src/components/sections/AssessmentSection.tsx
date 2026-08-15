@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 // Quote da Dra. Letícia — deixar string vazia até aprovação final.
