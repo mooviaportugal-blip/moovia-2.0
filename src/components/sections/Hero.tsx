@@ -38,11 +38,17 @@ export function Hero() {
 
         <h1
           key={locale}
-          className="font-display text-[clamp(32px,3.8vw,60px)] leading-[1.05] tracking-[-0.03em] mb-10"
+          className="font-display mb-10"
         >
-          <span className="text-gold-l font-[200] block mb-2 underline decoration-gold/20 underline-offset-8 uppercase tracking-wider">GLOBAL MOBILITY ASSURANCE</span>
-          <span className="text-white font-[400] block">A nova categoria para tornar mensurável</span>
-          <span className="text-gold-l italic font-[300] block">a dimensão humana da mobilidade internacional.</span>
+          <span className="font-display text-[clamp(38px,4.6vw,72px)] leading-[1.05] tracking-[0.04em] text-gold-l font-[600] block mb-3 uppercase underline decoration-gold/20 underline-offset-8">
+            GLOBAL MOBILITY ASSURANCE
+          </span>
+          <span className="font-display text-[clamp(22px,2.6vw,38px)] leading-[1.2] tracking-[-0.02em] text-white font-[300] block mb-2">
+            A nova categoria para tornar mensurável
+          </span>
+          <span className="font-display text-[clamp(18px,2.0vw,30px)] leading-[1.25] tracking-[-0.01em] text-gold-l italic font-[300] block">
+            a dimensão humana da mobilidade internacional.
+          </span>
         </h1>
 
         <motion.div
