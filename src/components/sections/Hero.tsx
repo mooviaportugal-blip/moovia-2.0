@@ -121,12 +121,12 @@ export function Hero() {
           {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
           <div className="relative w-full h-full">
             <div className="relative w-full h-full">
-              {HERO_MEDIA_URL.endsWith('.mp4') ? (
+              {HERO_MEDIA_URL.toLowerCase().includes('.mp4') ? (
                 <video
                   autoPlay
                   muted
                   playsInline
-                  loop={true}
+                  loop
                   className="w-full h-full object-cover"
                 >
                   <source src={HERO_MEDIA_URL} type="video/mp4" />
@@ -136,6 +136,7 @@ export function Hero() {
                   src={HERO_MEDIA_URL}
                   alt="Moovia"
                   className="w-full h-full object-cover"
+                  loading="eager"
                 />
               )}
 
