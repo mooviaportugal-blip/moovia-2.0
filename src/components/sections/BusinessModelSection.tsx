@@ -72,7 +72,7 @@ export function BusinessModelSection({
             O custo médio de uma expatriação malsucedida ou com adaptação lenta
             é de 2 a 3 vezes o salário anual do executivo, somando perda de
             produtividade, fricção familiar e risco de substituição. O nosso
-            modelo foi desenhado para eliminar esse risco com um investimento
+            modelo foi desenhado para mitigar esse risco com um investimento
             proporcional e transparente.
           </p>
         </div>
