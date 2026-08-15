@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import heroGif from "@/assets/moovia-pt.gif.asset.json";
+import heroGif from "@/assets/moldura.gif.asset.json";
 
 const HERO_MEDIA_URL = heroGif.url;
 const HERO_BG = "#06091a";
