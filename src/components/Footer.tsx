@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSiteContent } from "@/lib/useSiteContent";
-import logoFooterAdminAsset from "@/assets/logo-footer-admin-transp.png.asset.json";
+import logoFooterAsset from "@/assets/logo-footer-v2.png.asset.json";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -21,7 +21,7 @@ export const Footer = () => {
         <div>
           <div className="mb-6">
             <img 
-              src={logoFooterAdminAsset.url} 
+              src={logoFooterAsset.url} 
               alt="MOOVIA Global Mobility Assurance" 
               className="h-10 w-auto object-contain"
             />
