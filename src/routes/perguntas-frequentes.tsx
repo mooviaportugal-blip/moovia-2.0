@@ -177,10 +177,10 @@ function FAQPage() {
             Fale diretamente com um dos founders. A MOOVIA existe para transformar decisões complexas em transições coordenadas.
           </p>
           <Link
-            to="/home"
+            to="/"
             hash="lead-form"
             onClick={(e) => {
-              if (typeof window !== "undefined" && window.location.pathname === "/home") {
+              if (typeof window !== "undefined" && window.location.pathname === "/") {
                 e.preventDefault();
                 document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
               }
