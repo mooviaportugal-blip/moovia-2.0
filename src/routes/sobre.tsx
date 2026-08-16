@@ -1023,7 +1023,7 @@ function Cta() {
             <span className="relative z-10 transition-colors group-hover:text-gold">Conhecer Global Mobility Assurance</span>
           </Link>
           <Link
-            to="/home"
+            to="/"
             hash="lead-form"
             className="group relative overflow-hidden border border-b30 text-gold font-body font-[500] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate hover:border-gold"
           >
