@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSiteContent } from "@/lib/useSiteContent";
-import logoFooterAsset from "@/assets/logo-footer-v2.png.asset.json";
+import logoFooterAsset from "@/assets/logo-footer-admin-transp.png.asset.json";
 
 export const Footer = () => {
   const { t } = useTranslation();
