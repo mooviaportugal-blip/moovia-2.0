@@ -3,7 +3,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { motion } from "framer-motion";
-import logoFooterAdminAsset from "@/assets/logo-footer-admin.png.asset.json";
+import logoFooterAdminAsset from "@/assets/logo-footer-admin-transp.png.asset.json";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
