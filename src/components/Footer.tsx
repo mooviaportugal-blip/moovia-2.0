@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSiteContent } from "@/lib/useSiteContent";
+import logoFooterAdminAsset from "@/assets/logo-footer-admin.png.asset.json";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -18,12 +19,12 @@ export const Footer = () => {
     <footer className="bg-black-2 border-t border-border pt-[72px] pb-10 px-8">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-20 mb-20">
         <div>
-          <div className="flex items-baseline gap-1 mb-6">
-            <span className="font-urbanist font-bold text-2xl text-white">MOO</span>
-            <span className="font-urbanist font-bold text-2xl text-gold-l">VIA</span>
-          </div>
-          <div className="font-urbanist font-normal text-[12px] uppercase tracking-[0.28em] text-white/20">
-            {tagline}
+          <div className="mb-6">
+            <img 
+              src={logoFooterAdminAsset.url} 
+              alt="MOOVIA Global Mobility Assurance" 
+              className="h-10 w-auto object-contain"
+            />
           </div>
         </div>
 

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { motion } from "framer-motion";
+import logoFooterAdminAsset from "@/assets/logo-footer-admin.png.asset.json";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
@@ -77,7 +78,7 @@ function LoginPage() {
         >
           <div className="bg-black-2 border border-b18 p-8 md:p-12 rounded-sm relative shadow-2xl">
             <div className="flex flex-col items-center mb-10">
-              <img src="/mooviagold.svg" alt="MOOVIA" className="w-16 h-16 mb-4" />
+              <img src={logoFooterAdminAsset.url} alt="MOOVIA" className="h-12 w-auto object-contain mb-4" />
               <h1 className="font-amotha text-3xl text-white mb-2 uppercase tracking-widest">Portal MOOVIA</h1>
               <p className="font-urbanist text-[11px] text-gold uppercase tracking-[0.3em]">Global Mobility Assurance</p>
             </div>
