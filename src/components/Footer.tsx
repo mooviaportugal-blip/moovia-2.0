@@ -21,7 +21,7 @@ export const Footer = () => {
         <div>
           <div className="mb-6">
             <img 
-              src={logoFooterAdminAsset.url} 
+              src={logoFooterAsset.url} 
               alt="MOOVIA Global Mobility Assurance" 
               className="h-10 w-auto object-contain"
             />
