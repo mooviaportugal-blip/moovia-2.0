@@ -30,7 +30,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "@tanstack/react-router";
 import { useAdminMe } from "@/hooks/useAdminPermissions";
 import { useState } from "react";
-import logoFooterAdminAsset from "@/assets/logo-footer-admin.png.asset.json";
+import logoFooterAdminAsset from "@/assets/logo-footer-admin-transp.png.asset.json";
 
 const menuItems = [
   { label: "Overview", icon: BarChart3, to: "/admin" },
