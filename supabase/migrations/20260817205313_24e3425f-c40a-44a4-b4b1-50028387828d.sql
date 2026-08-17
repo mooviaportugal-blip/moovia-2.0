@@ -1,0 +1,1 @@
+GRANT SELECT ON public.admin_users TO authenticated;
