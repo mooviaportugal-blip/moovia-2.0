@@ -70,8 +70,18 @@ function shouldSkip(node: Node): boolean {
 function resolve(original: string, lang: WalkerLang): string {
   if (lang === "pt") return original;
   if (lang === "pt-BR") return toBR(original);
-  return translate(original, lang) ?? original;
+  // Dictionary keys are trimmed, normalised Portuguese. DOM text nodes keep
+  // JSX indentation/newlines around the copy, so look the key up trimmed and
+  // restore the surrounding whitespace afterwards.
+  const trimmed = original.trim();
+  if (!trimmed) return original;
+  const leading = original.slice(0, original.indexOf(trimmed[0]!));
+  const trailing = original.slice(leading.length + trimmed.length);
+  const normalised = trimmed.replace(/\s+/g, " ");
+  const hit = translate(trimmed, lang) ?? translate(normalised, lang);
+  return hit ? leading + hit + trailing : original;
 }
+
 
 function translateTextNode(node: Text, lang: WalkerLang) {
   const original = ORIGINAL_TEXT.get(node) ?? node.nodeValue ?? "";
