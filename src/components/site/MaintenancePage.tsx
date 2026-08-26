@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function MaintenancePage() {
   return (
-    <div className="min-h-screen bg-[#06091a] text-white flex items-center justify-center px-6 relative overflow-hidden font-body">
+    <div className="min-h-screen bg-[#06091a] text-white flex items-center justify-center px-6 py-20 relative overflow-hidden font-body">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -14,9 +14,20 @@ export function MaintenancePage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 max-w-2xl text-center"
+        className="relative z-10 w-full max-w-2xl text-center"
       >
-        <div className="flex items-center justify-center gap-4 mb-10">
+        {/* Logo MOOVIA */}
+        <div className="flex justify-center mb-10">
+          <motion.img
+            src="/mooviagold.png"
+            alt="MOOVIA"
+            className="w-20 h-20 sm:w-24 sm:h-24 object-contain brightness-110"
+            animate={{ opacity: [0.55, 1, 0.55] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+
+        <div className="flex items-center justify-center gap-4 mb-8">
           <div className="w-8 h-px bg-gold" />
           <span className="font-body text-[11px] tracking-[0.32em] uppercase text-gold">
             MOOVIA
@@ -24,43 +35,38 @@ export function MaintenancePage() {
           <div className="w-8 h-px bg-gold" />
         </div>
 
-        <h1 className="font-display text-[clamp(32px,5vw,54px)] leading-[1.05] tracking-[-0.02em] mb-12">
-          <span className="font-[400] text-gold-l italic block underline decoration-gold/30">Global Mobility Assurance</span>
+        <h1 className="font-display text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.02em] mb-10 text-gold-l">
+          A MOOVIA está a evoluir.
         </h1>
 
-        <div className="flex justify-center mb-12">
-          <motion.div
-            animate={{ 
-              opacity: [0.4, 1, 0.4],
-              scale: [0.98, 1, 0.98]
-            }}
-            transition={{ 
-              duration: 3, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
-            }}
-            className="relative"
-          >
-            <img 
-              src="/mooviagold.png" 
-              alt="MOOVIA Logo" 
-              className="w-24 h-24 object-contain brightness-110"
-            />
-            {/* Spinning ring around the logo */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-4 border border-gold/10 rounded-full border-t-gold/40"
-            />
-          </motion.div>
+        <div className="space-y-7 font-body text-[15px] font-[300] text-w35 leading-[1.8] max-w-xl mx-auto">
+          <p>
+            Estamos atualmente a trabalhar com a Hypernova para refinar a próxima
+            geração do posicionamento, da arquitetura de produto e da estratégia de
+            go-to-market da MOOVIA.
+          </p>
+          <p>
+            O nosso foco mantém-se claro: tornar visível, mensurável e gerível o
+            sistema humano por trás da Global Mobility, para que as organizações
+            possam compreender melhor o risco, agir mais cedo e proteger o valor das
+            missões internacionais.
+          </p>
+          <p className="text-white/70">
+            O próximo capítulo da MOOVIA chega em setembro de 2026.
+          </p>
         </div>
 
-        <p className="font-body text-[15px] font-[300] text-w35 leading-[1.7] mb-10 max-w-lg mx-auto">
-          Global Mobility Assurance. Estamos a preparar uma nova fase da<br />
-          MOOVIA. Voltamos em breve.
-        </p>
+        {/* Selo de parceria */}
+        <div className="mt-16 pt-10 border-t border-gold/25">
+          <p className="font-body text-[10px] tracking-[0.32em] uppercase text-white/30 mb-5">
+            Em parceria com
+          </p>
+          <div className="font-display text-[clamp(20px,3.5vw,28px)] tracking-[0.18em] uppercase text-gold-l">
+            Hypernova
+          </div>
+        </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[12px] tracking-[0.15em] uppercase">
+        <div className="mt-12 text-[12px] tracking-[0.15em] uppercase">
           <a
             href="mailto:contacto@mooviaglobal.com"
             className="text-gold hover:text-gold-l transition-colors border-b border-gold/30 pb-1"

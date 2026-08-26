@@ -18,6 +18,7 @@ import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
 import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as HomeRouteImport } from './routes/home'
 import { Route as GmaRouteImport } from './routes/gma'
 import { Route as EquipaRouteImport } from './routes/equipa'
 import { Route as DashboardRouteImport } from './routes/dashboard'
@@ -99,6 +100,11 @@ const MeuDashboardRoute = MeuDashboardRouteImport.update({
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GmaRoute = GmaRouteImport.update({
@@ -300,6 +306,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRoute
   '/equipa': typeof EquipaRoute
   '/gma': typeof GmaRoute
+  '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
@@ -347,6 +354,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardRoute
   '/equipa': typeof EquipaRoute
   '/gma': typeof GmaRoute
+  '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
@@ -395,6 +403,7 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRoute
   '/equipa': typeof EquipaRoute
   '/gma': typeof GmaRoute
+  '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
@@ -445,6 +454,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/equipa'
     | '/gma'
+    | '/home'
     | '/login'
     | '/meu-dashboard'
     | '/perguntas-frequentes'
@@ -492,6 +502,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/equipa'
     | '/gma'
+    | '/home'
     | '/login'
     | '/meu-dashboard'
     | '/perguntas-frequentes'
@@ -539,6 +550,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/equipa'
     | '/gma'
+    | '/home'
     | '/login'
     | '/meu-dashboard'
     | '/perguntas-frequentes'
@@ -588,6 +600,7 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRoute
   EquipaRoute: typeof EquipaRoute
   GmaRoute: typeof GmaRoute
+  HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
   MeuDashboardRoute: typeof MeuDashboardRoute
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
@@ -667,6 +680,13 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gma': {
@@ -1004,6 +1024,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRoute,
   EquipaRoute: EquipaRoute,
   GmaRoute: GmaRoute,
+  HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
   MeuDashboardRoute: MeuDashboardRoute,
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
