@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import hypernovaLogo from "@/assets/hypernova-logo.png.asset.json";
 
 export function MaintenancePage() {
   return (
@@ -61,9 +62,21 @@ export function MaintenancePage() {
           <p className="font-body text-[10px] tracking-[0.32em] uppercase text-white/30 mb-5">
             Em parceria com
           </p>
-          <div className="font-display text-[clamp(20px,3.5vw,28px)] tracking-[0.18em] uppercase text-gold-l">
-            Hypernova
-          </div>
+          <a
+            href="https://www.hypernova.global/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+            aria-label="Visitar o site da Hypernova"
+          >
+            <img
+              src={hypernovaLogo.url}
+              alt="Hypernova"
+              width={469}
+              height={123}
+              className="h-auto w-44 sm:w-52 object-contain"
+            />
+          </a>
         </div>
 
         <div className="mt-12 text-[12px] tracking-[0.15em] uppercase">
