@@ -11,6 +11,7 @@ import { EcossistemaSection } from "@/components/sections/EcossistemaSection";
 import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
 import { BlogTeaserSection } from "@/components/sections/BlogTeaserSection";
 import { LisboaGallery } from "@/components/sections/LisboaGallery";
+import { HypernovaSection } from "@/components/sections/HypernovaSection";
 import { AirplaneScene } from "@/components/AirplaneScene";
 import { useAirplaneEnabled } from "@/hooks/useAirplaneEnabled";
 import { motion } from "framer-motion";
