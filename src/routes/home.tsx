@@ -71,6 +71,7 @@ function HomePage() {
 
       <BusinessModelSection />
       <LisboaGallery />
+      <HypernovaSection />
 
       <BlogTeaserSection />
     </SiteLayout>
