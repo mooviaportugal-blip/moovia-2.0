@@ -97,7 +97,7 @@ export function CasesSection({ showCta = true }: { showCta?: boolean }) {
               Pronto para ter essa clareza sobre a sua mudança?
             </p>
             <a
-              href="/home#lead-form"
+              href="/#lead-form"
               className="group relative inline-flex overflow-hidden bg-gold text-black font-body font-[600] text-[11px] md:text-[12px] tracking-[0.24em] uppercase px-10 py-5 isolate"
             >
               <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
