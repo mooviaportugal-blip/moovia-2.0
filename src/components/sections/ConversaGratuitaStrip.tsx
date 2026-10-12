@@ -75,7 +75,7 @@ export function ConversaGratuitaStrip() {
             ))}
           </ul>
           <a
-            href="/home#lead-form"
+            href="/#lead-form"
             className="relative block w-full text-center font-body font-[600] uppercase overflow-hidden group"
             style={{ background: "#ad8957", color: "#06091a", fontSize: 12, letterSpacing: ".2em", padding: "14px 20px" }}
           >
