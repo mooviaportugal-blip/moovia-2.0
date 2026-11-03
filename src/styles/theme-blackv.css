@@ -1,9 +1,12 @@
 /* ==========================================================================
    THEME BLACKV — MOOVIA MINIMALISTA TECH (PRETO E BRANCO)
-   Totalmente escopado sob .theme-blackv. Nenhuma regra global.
+   Totalmente escopado sob .theme-blackv / html.theme-blackv / body.theme-blackv.
+   Nenhuma regra vaza para o escopo global de outras rotas.
    ========================================================================== */
 
-.theme-blackv {
+.theme-blackv,
+html.theme-blackv,
+body.theme-blackv {
   /* Variáveis locais redefinidas exclusivamente no escopo */
   --black: #000000;
   --black-2: #0a0a0a;
@@ -32,7 +35,6 @@
   background-color: #000000 !important;
   color: #ffffff !important;
   font-family: var(--font-body) !important;
-  min-height: 100vh;
 }
 
 /* ── TIPOGRAFIA TECH ESCOPADA ── */
@@ -104,24 +106,67 @@
 .theme-blackv section,
 .theme-blackv [class*="bg-black"],
 .theme-blackv [class*="bg-black-2"],
-.theme-blackv [class*="bg-[#06091a]"],
-.theme-blackv [class*="bg-[#09183D]"] {
+.theme-blackv [class*="bg-[#06091a]"] {
   background-color: #000000 !important;
+  background-image: none !important;
 }
 
-/* Remover gradientes decorativos coloridos */
-.theme-blackv .hero-section > div:first-child > div {
+/* Remover gradientes decorativos coloridos do Hero */
+.theme-blackv .hero-section > div:first-child > div,
+.theme-blackv .hero-section > div[style*="radial-gradient"] {
   background: none !important;
+  background-image: none !important;
+  display: none !important;
 }
 
 .theme-blackv section > div[aria-hidden] {
   background: none !important;
+  background-image: none !important;
   display: none !important;
 }
 
-/* Faixa final com fundo preto elevado minimalista */
-.theme-blackv section:has(a[href*="contacto"]) {
+/* ── FAIXA / BARRA FINAL DE CHAMADA PARA AÇÃO (FinalCtaStrip) ── */
+/* Fundo preto minimalista sem azul (#09183D) e sem degradê dourado */
+.theme-blackv [class*="bg-[#09183D]"],
+.theme-blackv section:has(a[hash="contacto"]) {
+  background: #0a0a0a !important;
   background-color: #0a0a0a !important;
+  background-image: none !important;
+  border-top: 1px solid #262626 !important;
+  border-bottom: 1px solid #262626 !important;
+  border-color: #262626 !important;
+}
+
+.theme-blackv section:has(a[hash="contacto"]) div[aria-hidden],
+.theme-blackv div[style*="173,137,87"] {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.theme-blackv section:has(a[hash="contacto"]) h2 {
+  color: #ffffff !important;
+}
+
+.theme-blackv section:has(a[hash="contacto"]) p {
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv section:has(a[hash="contacto"]) a {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+.theme-blackv section:has(a[hash="contacto"]) a:hover {
+  background: #e5e5e5 !important;
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+  border-color: #e5e5e5 !important;
 }
 
 /* Divisórias entre secções: linhas finas #262626 */
@@ -137,6 +182,7 @@
 .theme-blackv .grid > div > article,
 .theme-blackv div[class*="border border-b18 bg-black/60"] {
   background-color: #111111 !important;
+  background-image: none !important;
   border: 1px solid #262626 !important;
   border-radius: 6px !important;
   box-shadow: none !important;
@@ -146,10 +192,13 @@
   border-color: #404040 !important;
 }
 
-/* Cartão em destaque (Empresas / Cliente) */
+/* Cartão em destaque (Empresas / Cliente em Para quem é) */
 .theme-blackv article.lg\:col-span-7,
-.theme-blackv [class*="border-2 border-gold/50"] {
+.theme-blackv article[class*="border-2 border-gold/50"],
+.theme-blackv [class*="bg-[#09183D]/45"] {
+  background: #141414 !important;
   background-color: #141414 !important;
+  background-image: none !important;
   border: 1px solid #404040 !important;
   border-radius: 6px !important;
 }
@@ -158,6 +207,7 @@
 .theme-blackv article .w-10,
 .theme-blackv article .w-11 {
   background-color: #1a1a1a !important;
+  background-image: none !important;
   border: 1px solid #333333 !important;
   border-radius: 4px !important;
   color: #ffffff !important;
@@ -224,7 +274,9 @@
 .theme-blackv a[class*="bg-gold"],
 .theme-blackv button[class*="bg-gold"],
 .theme-blackv .btn-primary {
+  background: #ffffff !important;
   background-color: #ffffff !important;
+  background-image: none !important;
   color: #000000 !important;
   border: 1px solid #ffffff !important;
   font-weight: 600 !important;
@@ -235,6 +287,7 @@
 .theme-blackv a[class*="bg-gold"]:hover,
 .theme-blackv button[class*="bg-gold"]:hover,
 .theme-blackv .btn-primary:hover {
+  background: #e5e5e5 !important;
   background-color: #e5e5e5 !important;
   color: #000000 !important;
   border-color: #e5e5e5 !important;
@@ -245,6 +298,7 @@
 .theme-blackv button[class*="border-gold"],
 .theme-blackv .btn-secondary {
   background-color: transparent !important;
+  background-image: none !important;
   color: #ffffff !important;
   border: 1px solid #404040 !important;
   font-weight: 600 !important;
@@ -273,10 +327,13 @@
   color: #ffffff !important;
 }
 
-/* ── CABEÇALHO (NAV) ── */
-.theme-blackv nav {
+/* ── CABEÇALHO (NAV / BARRA DE NAVEGAÇÃO) ── */
+.theme-blackv nav,
+html.theme-blackv nav,
+body.theme-blackv nav {
   background: #000000 !important;
   background-color: #000000 !important;
+  background-image: none !important;
   border-bottom: 1px solid #262626 !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75) !important;
   backdrop-filter: blur(8px) !important;
@@ -284,7 +341,9 @@
 
 /* Links do menu */
 .theme-blackv nav a.typo-caption,
-.theme-blackv nav .text-gold-l {
+.theme-blackv nav .text-gold-l,
+html.theme-blackv nav a.typo-caption,
+html.theme-blackv nav .text-gold-l {
   color: #a3a3a3 !important;
   font-weight: 500 !important;
   text-shadow: none !important;
@@ -292,24 +351,32 @@
 }
 
 .theme-blackv nav a.typo-caption:hover,
-.theme-blackv nav .text-gold-l:hover {
+.theme-blackv nav .text-gold-l:hover,
+html.theme-blackv nav a.typo-caption:hover,
+html.theme-blackv nav .text-gold-l:hover {
   color: #ffffff !important;
 }
 
-.theme-blackv nav a.typo-caption span {
+.theme-blackv nav a.typo-caption span,
+html.theme-blackv nav a.typo-caption span {
   background-color: #ffffff !important;
 }
 
 /* Botão do CTA no nav */
-.theme-blackv nav a[href*="contacto"] {
+.theme-blackv nav a[href*="contacto"],
+html.theme-blackv nav a[href*="contacto"] {
+  background: #ffffff !important;
   background-color: #ffffff !important;
+  background-image: none !important;
   color: #000000 !important;
   border: 1px solid #ffffff !important;
   border-radius: 4px !important;
   font-weight: 600 !important;
 }
 
-.theme-blackv nav a[href*="contacto"]:hover {
+.theme-blackv nav a[href*="contacto"]:hover,
+html.theme-blackv nav a[href*="contacto"]:hover {
+  background: #e5e5e5 !important;
   background-color: #e5e5e5 !important;
   color: #000000 !important;
 }
@@ -317,6 +384,7 @@
 /* Seletor de idioma */
 .theme-blackv nav button[aria-label="Select language"] {
   background-color: #111111 !important;
+  background-image: none !important;
   border: 1px solid #262626 !important;
   color: #ffffff !important;
   border-radius: 4px !important;
@@ -332,6 +400,7 @@
 
 .theme-blackv div[class*="min-w-[220px]"] {
   background-color: #111111 !important;
+  background-image: none !important;
   border: 1px solid #262626 !important;
   border-radius: 4px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9) !important;
@@ -349,6 +418,7 @@
 /* Menu Mobile e Hambúrguer */
 .theme-blackv nav button[aria-label="Menu"] {
   background-color: #111111 !important;
+  background-image: none !important;
   border: 1px solid #262626 !important;
   border-radius: 4px !important;
 }
@@ -360,6 +430,7 @@
 .theme-blackv nav div[style*="height: 100dvh"],
 .theme-blackv nav div[style*="position: fixed"] {
   background-color: #000000 !important;
+  background-image: none !important;
 }
 
 .theme-blackv nav div[style*="height: 100dvh"] a {
@@ -373,7 +444,10 @@
 /* ── LOGOS DA MARCA (100% BRANCO VIA FILTRO SEGURO) ── */
 .theme-blackv nav a[href="/"] img,
 .theme-blackv footer a[href="/"] img,
-.theme-blackv footer img[alt*="MOOVIA"] {
+.theme-blackv footer img[alt*="MOOVIA"],
+html.theme-blackv nav a[href="/"] img,
+html.theme-blackv footer a[href="/"] img,
+html.theme-blackv footer img[alt*="MOOVIA"] {
   filter: brightness(0) invert(1) !important;
   opacity: 1 !important;
 }
@@ -387,6 +461,7 @@
 /* ── HERO MEDIA (ESCALA DE CINZENTOS TECH) ── */
 .theme-blackv .hero-section {
   background-color: #000000 !important;
+  background-image: none !important;
   border-bottom: 1px solid #262626 !important;
 }
 
@@ -400,8 +475,11 @@
 }
 
 /* ── RODAPÉ (FOOTER) ── */
-.theme-blackv footer {
+.theme-blackv footer,
+html.theme-blackv footer,
+body.theme-blackv footer {
   background-color: #000000 !important;
+  background-image: none !important;
   border-top: 1px solid #262626 !important;
 }
 
@@ -463,4 +541,3 @@
     scroll-behavior: auto !important;
   }
 }
-

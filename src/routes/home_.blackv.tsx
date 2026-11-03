@@ -7,6 +7,7 @@ import { ForWhomSection } from "@/components/sections/ForWhomSection";
 import { CompanyGainsSection } from "@/components/sections/CompanyGainsSection";
 import { TrustConfidentialitySection } from "@/components/sections/TrustConfidentialitySection";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
+import blackvCss from "@/styles/theme-blackv.css?url";
 import "@/styles/theme-blackv.css";
 
 export const Route = createFileRoute("/home_/blackv")({
@@ -46,6 +47,10 @@ export const Route = createFileRoute("/home_/blackv")({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap",
       },
+      {
+        rel: "stylesheet",
+        href: blackvCss,
+      },
     ],
   }),
   component: HomeBlackVPage,
@@ -55,8 +60,13 @@ function HomeBlackVPage() {
   useEffect(() => {
     const prevBg = document.body.style.backgroundColor;
     document.body.style.backgroundColor = "#000000";
+    document.documentElement.classList.add("theme-blackv");
+    document.body.classList.add("theme-blackv");
+
     return () => {
       document.body.style.backgroundColor = prevBg;
+      document.documentElement.classList.remove("theme-blackv");
+      document.body.classList.remove("theme-blackv");
     };
   }, []);
 
