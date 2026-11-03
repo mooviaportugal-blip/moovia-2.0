@@ -9,142 +9,57 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermosRouteImport } from './routes/termos'
-import { Route as SoundbrandRouteImport } from './routes/soundbrand'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicosRouteImport } from './routes/servicos'
-import { Route as PrivacidadeRouteImport } from './routes/privacidade'
-import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
-import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as HomeRouteImport } from './routes/home'
-import { Route as GmaRouteImport } from './routes/gma'
-import { Route as EquipaRouteImport } from './routes/equipa'
-import { Route as DashboardRouteImport } from './routes/dashboard'
-import { Route as CookiesRouteImport } from './routes/cookies'
-import { Route as ContactoRouteImport } from './routes/contacto'
-import { Route as Checkout2RouteImport } from './routes/checkout2'
-import { Route as CheckoutRouteImport } from './routes/checkout'
-import { Route as AssessmentRouteImport } from './routes/assessment'
-import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AssessmentRouteImport } from './routes/assessment'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as Checkout2RouteImport } from './routes/checkout2'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EquipaRouteImport } from './routes/equipa'
+import { Route as GmaRouteImport } from './routes/gma'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SoundbrandRouteImport } from './routes/soundbrand'
+import { Route as TermosRouteImport } from './routes/termos'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as AdminUxRouteImport } from './routes/admin.ux'
-import { Route as AdminSoundRouteImport } from './routes/admin.sound'
-import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
-import { Route as AdminMaiaRouteImport } from './routes/admin.maia'
-import { Route as AdminLegalRouteImport } from './routes/admin.legal'
-import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
-import { Route as AdminLanguagesRouteImport } from './routes/admin.languages'
-import { Route as AdminImagesRouteImport } from './routes/admin.images'
-import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
-import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
-import { Route as AdminContentRouteImport } from './routes/admin.content'
-import { Route as AdminCompaniesRouteImport } from './routes/admin/companies'
-import { Route as AdminChatRouteImport } from './routes/admin.chat'
-import { Route as AdminBlogRouteImport } from './routes/admin.blog'
-import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
 import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
+import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
+import { Route as AdminBlogRouteImport } from './routes/admin.blog'
+import { Route as AdminChatRouteImport } from './routes/admin.chat'
+import { Route as AdminCompaniesRouteImport } from './routes/admin/companies'
+import { Route as AdminContentRouteImport } from './routes/admin.content'
+import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
+import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
+import { Route as AdminImagesRouteImport } from './routes/admin.images'
+import { Route as AdminLanguagesRouteImport } from './routes/admin.languages'
+import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as AdminLegalRouteImport } from './routes/admin.legal'
+import { Route as AdminMaiaRouteImport } from './routes/admin.maia'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
+import { Route as AdminSoundRouteImport } from './routes/admin.sound'
+import { Route as AdminUxRouteImport } from './routes/admin.ux'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
-import { Route as ApiPublicSeedBlogRouteImport } from './routes/api/public/seed-blog'
-import { Route as ApiPublicMpTestRouteImport } from './routes/api/public/mp-test'
-import { Route as ApiPublicMercadopagoWebhookRouteImport } from './routes/api/public/mercadopago-webhook'
-import { Route as AdminSettingsTeamRouteImport } from './routes/admin.settings.team'
-import { Route as AdminSettingsScriptsRouteImport } from './routes/admin.settings.scripts'
-import { Route as AdminSettingsNotificationsRouteImport } from './routes/admin.settings.notifications'
 import { Route as AdminSettingsFinancialRouteImport } from './routes/admin.settings.financial'
+import { Route as AdminSettingsNotificationsRouteImport } from './routes/admin.settings.notifications'
+import { Route as AdminSettingsScriptsRouteImport } from './routes/admin.settings.scripts'
+import { Route as AdminSettingsTeamRouteImport } from './routes/admin.settings.team'
+import { Route as ApiPublicMercadopagoWebhookRouteImport } from './routes/api/public/mercadopago-webhook'
+import { Route as ApiPublicMpTestRouteImport } from './routes/api/public/mp-test'
+import { Route as ApiPublicSeedBlogRouteImport } from './routes/api/public/seed-blog'
 
-const TermosRoute = TermosRouteImport.update({
-  id: '/termos',
-  path: '/termos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SoundbrandRoute = SoundbrandRouteImport.update({
-  id: '/soundbrand',
-  path: '/soundbrand',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicosRoute = ServicosRouteImport.update({
-  id: '/servicos',
-  path: '/servicos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacidadeRoute = PrivacidadeRouteImport.update({
-  id: '/privacidade',
-  path: '/privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
-  id: '/perguntas-frequentes',
-  path: '/perguntas-frequentes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MeuDashboardRoute = MeuDashboardRouteImport.update({
-  id: '/meu-dashboard',
-  path: '/meu-dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HomeRoute = HomeRouteImport.update({
-  id: '/home',
-  path: '/home',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GmaRoute = GmaRouteImport.update({
-  id: '/gma',
-  path: '/gma',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EquipaRoute = EquipaRouteImport.update({
-  id: '/equipa',
-  path: '/equipa',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DashboardRoute = DashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CookiesRoute = CookiesRouteImport.update({
-  id: '/cookies',
-  path: '/cookies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactoRoute = ContactoRouteImport.update({
-  id: '/contacto',
-  path: '/contacto',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Checkout2Route = Checkout2RouteImport.update({
-  id: '/checkout2',
-  path: '/checkout2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CheckoutRoute = CheckoutRouteImport.update({
-  id: '/checkout',
-  path: '/checkout',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AssessmentRoute = AssessmentRouteImport.update({
-  id: '/assessment',
-  path: '/assessment',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -152,14 +67,94 @@ const AdminRoute = AdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AssessmentRoute = AssessmentRouteImport.update({
+  id: '/assessment',
+  path: '/assessment',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Checkout2Route = Checkout2RouteImport.update({
+  id: '/checkout2',
+  path: '/checkout2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipaRoute = EquipaRouteImport.update({
+  id: '/equipa',
+  path: '/equipa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GmaRoute = GmaRouteImport.update({
+  id: '/gma',
+  path: '/gma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeuDashboardRoute = MeuDashboardRouteImport.update({
+  id: '/meu-dashboard',
+  path: '/meu-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosRoute = ServicosRouteImport.update({
+  id: '/servicos',
+  path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoundbrandRoute = SoundbrandRouteImport.update({
+  id: '/soundbrand',
+  path: '/soundbrand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
@@ -167,79 +162,9 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AdminRoute,
 } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AdminUxRoute = AdminUxRouteImport.update({
-  id: '/ux',
-  path: '/ux',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminSoundRoute = AdminSoundRouteImport.update({
-  id: '/sound',
-  path: '/sound',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminSettingsRoute = AdminSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminMaiaRoute = AdminMaiaRouteImport.update({
-  id: '/maia',
-  path: '/maia',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminLegalRoute = AdminLegalRouteImport.update({
-  id: '/legal',
-  path: '/legal',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminLeadsRoute = AdminLeadsRouteImport.update({
-  id: '/leads',
-  path: '/leads',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminLanguagesRoute = AdminLanguagesRouteImport.update({
-  id: '/languages',
-  path: '/languages',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminImagesRoute = AdminImagesRouteImport.update({
-  id: '/images',
-  path: '/images',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminGalleryRoute = AdminGalleryRouteImport.update({
-  id: '/gallery',
-  path: '/gallery',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminDashboardRoute = AdminDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminContentRoute = AdminContentRouteImport.update({
-  id: '/content',
-  path: '/content',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminCompaniesRoute = AdminCompaniesRouteImport.update({
-  id: '/companies',
-  path: '/companies',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminChatRoute = AdminChatRouteImport.update({
-  id: '/chat',
-  path: '/chat',
-  getParentRoute: () => AdminRoute,
-} as any)
-const AdminBlogRoute = AdminBlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
+const AdminAnalyticsRoute = AdminAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
   getParentRoute: () => AdminRoute,
 } as any)
 const AdminAssessmentsRoute = AdminAssessmentsRouteImport.update({
@@ -247,40 +172,94 @@ const AdminAssessmentsRoute = AdminAssessmentsRouteImport.update({
   path: '/assessments',
   getParentRoute: () => AdminRoute,
 } as any)
-const AdminAnalyticsRoute = AdminAnalyticsRouteImport.update({
-  id: '/analytics',
-  path: '/analytics',
+const AdminBlogRoute = AdminBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => AdminRoute,
+} as any)
+const AdminChatRoute = AdminChatRouteImport.update({
+  id: '/chat',
+  path: '/chat',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminCompaniesRoute = AdminCompaniesRouteImport.update({
+  id: '/companies',
+  path: '/companies',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminContentRoute = AdminContentRouteImport.update({
+  id: '/content',
+  path: '/content',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminGalleryRoute = AdminGalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminImagesRoute = AdminImagesRouteImport.update({
+  id: '/images',
+  path: '/images',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLanguagesRoute = AdminLanguagesRouteImport.update({
+  id: '/languages',
+  path: '/languages',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLeadsRoute = AdminLeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminLegalRoute = AdminLegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminMaiaRoute = AdminMaiaRouteImport.update({
+  id: '/maia',
+  path: '/maia',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSoundRoute = AdminSoundRouteImport.update({
+  id: '/sound',
+  path: '/sound',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUxRoute = AdminUxRouteImport.update({
+  id: '/ux',
+  path: '/ux',
+  getParentRoute: () => AdminRoute,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => AdminSettingsRoute,
 } as any)
-const ApiPublicSeedBlogRoute = ApiPublicSeedBlogRouteImport.update({
-  id: '/api/public/seed-blog',
-  path: '/api/public/seed-blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicMpTestRoute = ApiPublicMpTestRouteImport.update({
-  id: '/api/public/mp-test',
-  path: '/api/public/mp-test',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicMercadopagoWebhookRoute =
-  ApiPublicMercadopagoWebhookRouteImport.update({
-    id: '/api/public/mercadopago-webhook',
-    path: '/api/public/mercadopago-webhook',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const AdminSettingsTeamRoute = AdminSettingsTeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => AdminSettingsRoute,
-} as any)
-const AdminSettingsScriptsRoute = AdminSettingsScriptsRouteImport.update({
-  id: '/scripts',
-  path: '/scripts',
+const AdminSettingsFinancialRoute = AdminSettingsFinancialRouteImport.update({
+  id: '/financial',
+  path: '/financial',
   getParentRoute: () => AdminSettingsRoute,
 } as any)
 const AdminSettingsNotificationsRoute =
@@ -289,10 +268,31 @@ const AdminSettingsNotificationsRoute =
     path: '/notifications',
     getParentRoute: () => AdminSettingsRoute,
   } as any)
-const AdminSettingsFinancialRoute = AdminSettingsFinancialRouteImport.update({
-  id: '/financial',
-  path: '/financial',
+const AdminSettingsScriptsRoute = AdminSettingsScriptsRouteImport.update({
+  id: '/scripts',
+  path: '/scripts',
   getParentRoute: () => AdminSettingsRoute,
+} as any)
+const AdminSettingsTeamRoute = AdminSettingsTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => AdminSettingsRoute,
+} as any)
+const ApiPublicMercadopagoWebhookRoute =
+  ApiPublicMercadopagoWebhookRouteImport.update({
+    id: '/api/public/mercadopago-webhook',
+    path: '/api/public/mercadopago-webhook',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicMpTestRoute = ApiPublicMpTestRouteImport.update({
+  id: '/api/public/mp-test',
+  path: '/api/public/mp-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicSeedBlogRoute = ApiPublicSeedBlogRouteImport.update({
+  id: '/api/public/seed-blog',
+  path: '/api/public/seed-blog',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -619,130 +619,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/termos': {
-      id: '/termos'
-      path: '/termos'
-      fullPath: '/termos'
-      preLoaderRoute: typeof TermosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/soundbrand': {
-      id: '/soundbrand'
-      path: '/soundbrand'
-      fullPath: '/soundbrand'
-      preLoaderRoute: typeof SoundbrandRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/servicos': {
-      id: '/servicos'
-      path: '/servicos'
-      fullPath: '/servicos'
-      preLoaderRoute: typeof ServicosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidade': {
-      id: '/privacidade'
-      path: '/privacidade'
-      fullPath: '/privacidade'
-      preLoaderRoute: typeof PrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/perguntas-frequentes': {
-      id: '/perguntas-frequentes'
-      path: '/perguntas-frequentes'
-      fullPath: '/perguntas-frequentes'
-      preLoaderRoute: typeof PerguntasFrequentesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/meu-dashboard': {
-      id: '/meu-dashboard'
-      path: '/meu-dashboard'
-      fullPath: '/meu-dashboard'
-      preLoaderRoute: typeof MeuDashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/home': {
-      id: '/home'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gma': {
-      id: '/gma'
-      path: '/gma'
-      fullPath: '/gma'
-      preLoaderRoute: typeof GmaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/equipa': {
-      id: '/equipa'
-      path: '/equipa'
-      fullPath: '/equipa'
-      preLoaderRoute: typeof EquipaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cookies': {
-      id: '/cookies'
-      path: '/cookies'
-      fullPath: '/cookies'
-      preLoaderRoute: typeof CookiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contacto': {
-      id: '/contacto'
-      path: '/contacto'
-      fullPath: '/contacto'
-      preLoaderRoute: typeof ContactoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/checkout2': {
-      id: '/checkout2'
-      path: '/checkout2'
-      fullPath: '/checkout2'
-      preLoaderRoute: typeof Checkout2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/checkout': {
-      id: '/checkout'
-      path: '/checkout'
-      fullPath: '/checkout'
-      preLoaderRoute: typeof CheckoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/assessment': {
-      id: '/assessment'
-      path: '/assessment'
-      fullPath: '/assessment'
-      preLoaderRoute: typeof AssessmentRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -752,18 +633,130 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/assessment': {
+      id: '/assessment'
+      path: '/assessment'
+      fullPath: '/assessment'
+      preLoaderRoute: typeof AssessmentRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout2': {
+      id: '/checkout2'
+      path: '/checkout2'
+      fullPath: '/checkout2'
+      preLoaderRoute: typeof Checkout2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipa': {
+      id: '/equipa'
+      path: '/equipa'
+      fullPath: '/equipa'
+      preLoaderRoute: typeof EquipaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gma': {
+      id: '/gma'
+      path: '/gma'
+      fullPath: '/gma'
+      preLoaderRoute: typeof GmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meu-dashboard': {
+      id: '/meu-dashboard'
+      path: '/meu-dashboard'
+      fullPath: '/meu-dashboard'
+      preLoaderRoute: typeof MeuDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos': {
+      id: '/servicos'
+      path: '/servicos'
+      fullPath: '/servicos'
+      preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/soundbrand': {
+      id: '/soundbrand'
+      path: '/soundbrand'
+      fullPath: '/soundbrand'
+      preLoaderRoute: typeof SoundbrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/': {
@@ -773,109 +766,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admin/ux': {
-      id: '/admin/ux'
-      path: '/ux'
-      fullPath: '/admin/ux'
-      preLoaderRoute: typeof AdminUxRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/sound': {
-      id: '/admin/sound'
-      path: '/sound'
-      fullPath: '/admin/sound'
-      preLoaderRoute: typeof AdminSoundRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/settings': {
-      id: '/admin/settings'
-      path: '/settings'
-      fullPath: '/admin/settings'
-      preLoaderRoute: typeof AdminSettingsRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/maia': {
-      id: '/admin/maia'
-      path: '/maia'
-      fullPath: '/admin/maia'
-      preLoaderRoute: typeof AdminMaiaRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/legal': {
-      id: '/admin/legal'
-      path: '/legal'
-      fullPath: '/admin/legal'
-      preLoaderRoute: typeof AdminLegalRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/leads': {
-      id: '/admin/leads'
-      path: '/leads'
-      fullPath: '/admin/leads'
-      preLoaderRoute: typeof AdminLeadsRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/languages': {
-      id: '/admin/languages'
-      path: '/languages'
-      fullPath: '/admin/languages'
-      preLoaderRoute: typeof AdminLanguagesRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/images': {
-      id: '/admin/images'
-      path: '/images'
-      fullPath: '/admin/images'
-      preLoaderRoute: typeof AdminImagesRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/gallery': {
-      id: '/admin/gallery'
-      path: '/gallery'
-      fullPath: '/admin/gallery'
-      preLoaderRoute: typeof AdminGalleryRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/dashboard': {
-      id: '/admin/dashboard'
-      path: '/dashboard'
-      fullPath: '/admin/dashboard'
-      preLoaderRoute: typeof AdminDashboardRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/content': {
-      id: '/admin/content'
-      path: '/content'
-      fullPath: '/admin/content'
-      preLoaderRoute: typeof AdminContentRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/companies': {
-      id: '/admin/companies'
-      path: '/companies'
-      fullPath: '/admin/companies'
-      preLoaderRoute: typeof AdminCompaniesRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/chat': {
-      id: '/admin/chat'
-      path: '/chat'
-      fullPath: '/admin/chat'
-      preLoaderRoute: typeof AdminChatRouteImport
-      parentRoute: typeof AdminRoute
-    }
-    '/admin/blog': {
-      id: '/admin/blog'
-      path: '/blog'
-      fullPath: '/admin/blog'
-      preLoaderRoute: typeof AdminBlogRouteImport
+    '/admin/analytics': {
+      id: '/admin/analytics'
+      path: '/analytics'
+      fullPath: '/admin/analytics'
+      preLoaderRoute: typeof AdminAnalyticsRouteImport
       parentRoute: typeof AdminRoute
     }
     '/admin/assessments': {
@@ -885,12 +780,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminAssessmentsRouteImport
       parentRoute: typeof AdminRoute
     }
-    '/admin/analytics': {
-      id: '/admin/analytics'
-      path: '/analytics'
-      fullPath: '/admin/analytics'
-      preLoaderRoute: typeof AdminAnalyticsRouteImport
+    '/admin/blog': {
+      id: '/admin/blog'
+      path: '/blog'
+      fullPath: '/admin/blog'
+      preLoaderRoute: typeof AdminBlogRouteImport
       parentRoute: typeof AdminRoute
+    }
+    '/admin/chat': {
+      id: '/admin/chat'
+      path: '/chat'
+      fullPath: '/admin/chat'
+      preLoaderRoute: typeof AdminChatRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/companies': {
+      id: '/admin/companies'
+      path: '/companies'
+      fullPath: '/admin/companies'
+      preLoaderRoute: typeof AdminCompaniesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/content': {
+      id: '/admin/content'
+      path: '/content'
+      fullPath: '/admin/content'
+      preLoaderRoute: typeof AdminContentRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/gallery': {
+      id: '/admin/gallery'
+      path: '/gallery'
+      fullPath: '/admin/gallery'
+      preLoaderRoute: typeof AdminGalleryRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/images': {
+      id: '/admin/images'
+      path: '/images'
+      fullPath: '/admin/images'
+      preLoaderRoute: typeof AdminImagesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/languages': {
+      id: '/admin/languages'
+      path: '/languages'
+      fullPath: '/admin/languages'
+      preLoaderRoute: typeof AdminLanguagesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/leads': {
+      id: '/admin/leads'
+      path: '/leads'
+      fullPath: '/admin/leads'
+      preLoaderRoute: typeof AdminLeadsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/legal': {
+      id: '/admin/legal'
+      path: '/legal'
+      fullPath: '/admin/legal'
+      preLoaderRoute: typeof AdminLegalRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/maia': {
+      id: '/admin/maia'
+      path: '/maia'
+      fullPath: '/admin/maia'
+      preLoaderRoute: typeof AdminMaiaRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/sound': {
+      id: '/admin/sound'
+      path: '/sound'
+      fullPath: '/admin/sound'
+      preLoaderRoute: typeof AdminSoundRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/ux': {
+      id: '/admin/ux'
+      path: '/ux'
+      fullPath: '/admin/ux'
+      preLoaderRoute: typeof AdminUxRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/admin/settings/': {
       id: '/admin/settings/'
@@ -899,39 +899,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSettingsIndexRouteImport
       parentRoute: typeof AdminSettingsRoute
     }
-    '/api/public/seed-blog': {
-      id: '/api/public/seed-blog'
-      path: '/api/public/seed-blog'
-      fullPath: '/api/public/seed-blog'
-      preLoaderRoute: typeof ApiPublicSeedBlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/mp-test': {
-      id: '/api/public/mp-test'
-      path: '/api/public/mp-test'
-      fullPath: '/api/public/mp-test'
-      preLoaderRoute: typeof ApiPublicMpTestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/mercadopago-webhook': {
-      id: '/api/public/mercadopago-webhook'
-      path: '/api/public/mercadopago-webhook'
-      fullPath: '/api/public/mercadopago-webhook'
-      preLoaderRoute: typeof ApiPublicMercadopagoWebhookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admin/settings/team': {
-      id: '/admin/settings/team'
-      path: '/team'
-      fullPath: '/admin/settings/team'
-      preLoaderRoute: typeof AdminSettingsTeamRouteImport
-      parentRoute: typeof AdminSettingsRoute
-    }
-    '/admin/settings/scripts': {
-      id: '/admin/settings/scripts'
-      path: '/scripts'
-      fullPath: '/admin/settings/scripts'
-      preLoaderRoute: typeof AdminSettingsScriptsRouteImport
+    '/admin/settings/financial': {
+      id: '/admin/settings/financial'
+      path: '/financial'
+      fullPath: '/admin/settings/financial'
+      preLoaderRoute: typeof AdminSettingsFinancialRouteImport
       parentRoute: typeof AdminSettingsRoute
     }
     '/admin/settings/notifications': {
@@ -941,12 +913,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSettingsNotificationsRouteImport
       parentRoute: typeof AdminSettingsRoute
     }
-    '/admin/settings/financial': {
-      id: '/admin/settings/financial'
-      path: '/financial'
-      fullPath: '/admin/settings/financial'
-      preLoaderRoute: typeof AdminSettingsFinancialRouteImport
+    '/admin/settings/scripts': {
+      id: '/admin/settings/scripts'
+      path: '/scripts'
+      fullPath: '/admin/settings/scripts'
+      preLoaderRoute: typeof AdminSettingsScriptsRouteImport
       parentRoute: typeof AdminSettingsRoute
+    }
+    '/admin/settings/team': {
+      id: '/admin/settings/team'
+      path: '/team'
+      fullPath: '/admin/settings/team'
+      preLoaderRoute: typeof AdminSettingsTeamRouteImport
+      parentRoute: typeof AdminSettingsRoute
+    }
+    '/api/public/mercadopago-webhook': {
+      id: '/api/public/mercadopago-webhook'
+      path: '/api/public/mercadopago-webhook'
+      fullPath: '/api/public/mercadopago-webhook'
+      preLoaderRoute: typeof ApiPublicMercadopagoWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/mp-test': {
+      id: '/api/public/mp-test'
+      path: '/api/public/mp-test'
+      fullPath: '/api/public/mp-test'
+      preLoaderRoute: typeof ApiPublicMpTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/seed-blog': {
+      id: '/api/public/seed-blog'
+      path: '/api/public/seed-blog'
+      fullPath: '/api/public/seed-blog'
+      preLoaderRoute: typeof ApiPublicSeedBlogRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }

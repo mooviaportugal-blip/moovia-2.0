@@ -36,7 +36,7 @@ export function LegalPage({ slug }: { slug: string }) {
     <SiteLayout>
       <article className="bg-black pt-[120px]">
         <div className="mx-auto max-w-3xl px-6 md:px-10 py-20">
-          <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center gap-3">
+          <p className="typo-eyebrow mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-gold" />
             Compliance
           </p>
@@ -53,13 +53,13 @@ export function LegalPage({ slug }: { slug: string }) {
               </div>
             </div>
           ) : !page ? (
-            <div className="text-w35 font-urbanist">Página não encontrada.</div>
+            <div className="text-w35 typo-body">Página não encontrada.</div>
           ) : (
             <>
-              <h1 className="font-sora text-[clamp(32px,5vw,56px)] font-[200] leading-[1.1] text-white">
+              <h1 className="typo-h1 text-white">
                 {page.title}
               </h1>
-              <p className="mt-4 text-w35 font-urbanist text-[13px]">
+              <p className="mt-4 text-w35 typo-caption">
                 Última atualização:{" "}
                 {new Date(page.updated_at).toLocaleDateString("pt-PT", {
                   day: "2-digit",
@@ -67,7 +67,7 @@ export function LegalPage({ slug }: { slug: string }) {
                   year: "numeric",
                 })}
               </p>
-              <div className="legal-markdown mt-12 font-urbanist text-[16px] font-[300] text-white/70 leading-[1.9] space-y-6">
+              <div className="legal-markdown mt-12 typo-body text-white/70 space-y-6">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{

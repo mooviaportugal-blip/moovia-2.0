@@ -1,163 +1,115 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import "@/i18n";
 import heroMedia from "@/assets/moovia-pt.gif.asset.json";
 
 const HERO_MEDIA_URL = heroMedia.url;
 const HERO_BG = "#06091a";
 
 export function Hero() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const locale = i18n.language;
 
-
-
-
-
-
-
+  const handleScrollToSteps = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document
+      .getElementById("como-funciona")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col lg:flex-row bg-[#06091a] overflow-hidden">
+    <section className="hero-section relative min-h-[100svh] flex flex-col lg:flex-row bg-[#06091a] overflow-hidden border-b border-b18">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 90% 70% at 70% 40%, rgba(15,31,65,0.4) 0%, transparent 70%)' }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 50% at 10% 90%, rgba(173,137,87,0.05) 0%, transparent 60%)' }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 90% 70% at 70% 40%, rgba(15,31,65,0.4) 0%, transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(173,137,87,0.05) 0%, transparent 60%)",
+          }}
+        />
       </div>
 
-      <div className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center items-center text-center lg:items-start lg:text-left pt-28 pb-16 md:pt-32 md:pb-20 lg:py-32 px-6 lg:pl-20 lg:pr-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-center mb-10"
-        >
-          <span className="font-body text-[11px] font-[400] tracking-[0.32em] uppercase text-gold">
-            Assurance · Strategy · Success
-          </span>
-        </motion.div>
+      <div
+        key={locale}
+        className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center items-start text-left pt-28 pb-14 md:pt-32 md:pb-20 lg:py-32 px-6 lg:pl-20 lg:pr-12"
+      >
+        <p className="typo-eyebrow mb-5">{t("common.gma")}</p>
 
-        <h1
-          key={locale}
-          className="font-display mb-10"
-        >
-          <span className="font-display text-[clamp(32px,4vw,64px)] leading-[1.0] tracking-[0.04em] text-gold-l font-[700] block mb-6 uppercase underline decoration-gold/20 underline-offset-12">
-            GLOBAL MOBILITY ASSURANCE
-          </span>
-          <span className="font-display text-[clamp(18px,2.2vw,30px)] leading-[1.2] tracking-[-0.01em] text-white font-[400] block mb-2 opacity-90">
-            A nova categoria para tornar mensurável
-          </span>
-          <span className="font-display text-[clamp(14px,1.6vw,22px)] leading-[1.3] tracking-normal text-gold-l italic font-[300] block opacity-80">
-            a dimensão humana da mobilidade internacional.
-          </span>
+        <h1 className="typo-h1 text-white mb-6 max-w-[18ch]">
+          {t("hero.title")}
         </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.8] max-w-[520px] mb-12 mx-auto lg:mx-0 space-y-5"
-        >
-          <p>
-            Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
-          </p>
-          <p className="font-[600] text-white">
-            Um benefício para o colaborador. Um investimento mensurável para a empresa.
-          </p>
-        </motion.div>
+        <p className="typo-body text-w70 mb-8">
+          {t("hero.subtitle")}
+        </p>
 
-        <motion.blockquote
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="font-display italic text-[18px] md:text-[22px] font-[300] text-gold-l/90 leading-[1.5] max-w-[520px] mb-12 mx-auto lg:mx-0 border-l-[3px] border-gold/40 pl-5"
-        >
-          "A mobilidade acontece.<br className="hidden sm:block" /> O sucesso precisa ser medido."
-        </motion.blockquote>
-
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-14 max-w-[560px] mx-auto lg:mx-0">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
           <Link
             to="/gma"
-            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:scale-[1.02]"
+            hash="contacto"
+            className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-7 py-4 rounded-[2px] transition-colors text-center"
           >
-            <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
-              Conhecer Global Mobility Assurance
-            </span>
+            {t("hero.cta_primary")}
           </Link>
-          <Link
-            to="/gma"
-            hash="how-it-works"
-            className="group relative overflow-hidden border border-gold/30 text-gold font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] isolate text-center min-h-[64px] flex items-center justify-center transition-all hover:border-gold"
+
+          <a
+            href="#como-funciona"
+            onClick={handleScrollToSteps}
+            className="inline-flex items-center justify-center border border-gold/40 hover:border-gold text-gold hover:text-gold-l font-semibold typo-caption px-7 py-4 rounded-[2px] transition-colors text-center"
           >
-            <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
-              Como funciona
-            </span>
-          </Link>
+            {t("hero.cta_secondary")}
+          </a>
         </div>
 
-
-
-
-        <div className="flex items-center justify-center lg:justify-start gap-6 font-body text-[10px] tracking-[0.25em] uppercase text-w35">
-          <div className="w-12 h-px bg-gold/30 relative overflow-hidden">
-            <motion.div
-              animate={{ x: ["-100%", "100%"] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-              className="absolute inset-0 bg-gold"
-            />
-          </div>
-          <span className="opacity-80">Identificar · Medir · Mitigar</span>
-        </div>
+        <p className="typo-caption text-w70 mt-4">
+          {t("hero.microtext")}
+        </p>
       </div>
 
-      <div className="relative z-10 block lg:w-1/2 w-full h-[450px] sm:h-[550px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
+      <div className="relative z-10 block lg:w-1/2 w-full h-[360px] sm:h-[460px] lg:h-auto lg:min-h-[100svh] overflow-hidden flex items-center justify-center bg-[#06091a]">
         <motion.div
-          initial={{ opacity: 0, scale: 1.04 }}
+          initial={{ opacity: 0, scale: 1.03 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
-          {/* Video/GIF com fade radial arredondado dissolvendo no fundo */}
           <div className="relative w-full h-full">
-            <div className="relative w-full h-full">
-              {HERO_MEDIA_URL.toLowerCase().includes('.mp4') ? (
-                <video
-                  autoPlay
-                  muted
-                  playsInline
-                  loop
-                  className="w-full h-full object-cover"
-                >
-                  <source src={HERO_MEDIA_URL} type="video/mp4" />
-                </video>
-              ) : (
-                <img
-                  src={HERO_MEDIA_URL}
-                  alt="Moovia"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              )}
-
-              {/* Fade radial elíptico (85% 85%) para suavizar bordas mantendo o preenchimento */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: `radial-gradient(ellipse 85% 85% at center, transparent 30%, ${HERO_BG} 100%)`,
-                }}
+            {HERO_MEDIA_URL.toLowerCase().includes(".mp4") ? (
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="w-full h-full object-cover"
+              >
+                <source src={HERO_MEDIA_URL} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={HERO_MEDIA_URL}
+                alt="MOOVIA"
+                className="w-full h-full object-cover"
+                loading="eager"
               />
-            </div>
+            )}
+
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: `radial-gradient(ellipse 85% 85% at center, transparent 30%, ${HERO_BG} 100%)`,
+              }}
+            />
           </div>
-
-
-
-
         </motion.div>
-
-
       </div>
-
     </section>
   );
 }

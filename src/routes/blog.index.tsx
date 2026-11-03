@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 import { supabase } from "@/integrations/supabase/client";
 import { getCurrentLang } from "@/i18n";
 import { pickPostLocale, type Locale } from "@/lib/post-locale";
@@ -221,6 +222,8 @@ function Blog() {
           )}
         </div>
       </section>
+
+      <FinalCtaStrip />
     </SiteLayout>
   );
 }

@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { MethodologySection } from "@/components/sections/MethodologySection";
@@ -69,7 +70,7 @@ function SobrePage() {
       <MethodologySection />
       <GlossarioConceitual />
       <HowWeBuiltTimeline />
-      <Cta />
+      <FinalCtaStrip />
     </SiteLayout>
   );
 }
@@ -208,7 +209,7 @@ function ComoConstruimosInteligencia() {
 
         <div className="max-w-[860px] space-y-8 font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]">
           <p>
-            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, ciência comportamental e Revenue Assurance adaptada para GMAssurance, numa lógica computacional explicável.
+            A primeira versão não depende de Inteligência Artificial preditiva. Depende de transformar o conhecimento da equipa, feito de psicologia aplicada, ciência comportamental e Revenue Assurance adaptada para Global Mobility Assurance, numa lógica computacional explicável.
           </p>
         </div>
 
@@ -223,7 +224,7 @@ function HowWeBuiltTimeline() {
     { texto: "Experiência internacional como expatriados" },
     { texto: "Liderança em negócios internacionais" },
     { texto: "Metodologias de Revenue Assurance adaptadas a Global Mobility Assurance" },
-    { texto: "Ciência comportamental e Revenue Assurance adaptada para GMAssurance" },
+    { texto: "Ciência comportamental e Revenue Assurance adaptada para Global Mobility Assurance" },
     { texto: "Engenharia de decisão e motor de regras" },
     { texto: "Estudos de caso e assessments reais" },
     { texto: "Refinamento metodológico contínuo" },
@@ -257,7 +258,7 @@ function HowWeBuiltTimeline() {
         </ol>
 
         <p className="mt-14 font-display font-[200] italic text-gold-l text-[clamp(20px,2.4vw,28px)] leading-[1.4] max-w-[820px]">
-          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance adaptada para GMAssurance.
+          A MOOVIA não nasceu de uma ideia. Nasceu da combinação entre experiência internacional, ciência comportamental e Revenue Assurance adaptada para Global Mobility Assurance.
         </p>
       </div>
     </section>
@@ -997,40 +998,6 @@ function PosicaoMarca() {
           Não coordenamos mobilidades internacionais.<br />
           <span className="italic text-gold-l">Coordenamos o seu sucesso.</span>
         </motion.p>
-      </div>
-    </section>
-  );
-}
-
-/* ─────────────────────────── CTA ─────────────────────────── */
-function Cta() {
-  return (
-    <section className="bg-black py-[120px] px-6 lg:px-20">
-      <div className="max-w-[760px] mx-auto text-center">
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(32px,4vw,52px)] mb-8">
-          O primeiro passo<br />é a conversa certa.
-        </h2>
-        <p className="font-body font-[300] text-[17px] text-w35 leading-[1.7] max-w-[480px] mx-auto mb-12">
-          Uma conversa direta para entender o seu caso e mostrar como a MOOVIA pensa.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            to="/"
-            hash="lead-form"
-            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate"
-          >
-            <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <span className="relative z-10 transition-colors group-hover:text-gold">Conhecer Global Mobility Assurance</span>
-          </Link>
-          <Link
-            to="/"
-            hash="lead-form"
-            className="group relative overflow-hidden border border-b30 text-gold font-body font-[500] text-[12px] tracking-[0.22em] uppercase px-10 py-4 isolate hover:border-gold"
-          >
-            <span className="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <span className="relative z-10 transition-colors group-hover:text-[#06091a]">Como funciona</span>
-          </Link>
-        </div>
       </div>
     </section>
   );

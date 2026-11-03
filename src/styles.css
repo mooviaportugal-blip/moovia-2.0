@@ -123,6 +123,39 @@
   /* ── TRANSIÇÕES ──────────────────────────────── */
   --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1.0);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── SISTEMA TIPOGRÁFICO GLOBAL (5 NÍVEIS, 2 PESOS: 400 e 600) ── */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  /* 1. Título de página (H1) */
+  --fs-h1: clamp(2.125rem, 4vw, 3.25rem);
+  --lh-h1: 1.15;
+  --ls-h1: -0.02em;
+
+  /* 2. Título de seção (H2) */
+  --fs-h2: clamp(1.625rem, 2.8vw, 2.375rem);
+  --lh-h2: 1.2;
+  --ls-h2: -0.015em;
+
+  /* 3. Subtítulo (H3) */
+  --fs-h3: clamp(1.125rem, 1.5vw, 1.375rem);
+  --lh-h3: 1.35;
+  --ls-h3: -0.01em;
+
+  /* 4. Corpo */
+  --fs-body: 1.0625rem;
+  --lh-body: 1.6;
+  --measure-body: 65ch;
+
+  /* 5. Legenda & Eyebrow */
+  --fs-caption: 0.8125rem;
+  --lh-caption: 1.5;
+  --ls-eyebrow: 0.18em;
+
+  /* Espaçamento vertical consistente entre seções */
+  --section-py-mobile: 6rem;
+  --section-py-desktop: 8.5rem;
 }
 
 
@@ -154,7 +187,8 @@
     background-color: var(--black);
     color: var(--white);
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
     overflow-x: clip;
     cursor: none;
   }
@@ -192,13 +226,152 @@
     cursor: pointer;
   }
 
-
   /* Modern minimal sans display — matches MOOVIA wordmark */
   .font-display {
-    letter-spacing: -0.025em;
-    font-weight: 300;
+    letter-spacing: var(--ls-h2);
+    font-weight: var(--fw-semibold);
     text-wrap: balance;
   }
+}
+
+/* ── ESCALA TIPOGRÁFICO FIXA (5 NÍVEIS, 2 PESOS: 400 E 600) ── */
+.typo-h1,
+body:not(:has(.admin-root)) main h1 {
+  font-family: var(--font-display) !important;
+  font-size: var(--fs-h1) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-h1) !important;
+  letter-spacing: var(--ls-h1) !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  text-wrap: balance;
+}
+
+.typo-h2,
+body:not(:has(.admin-root)) main h2 {
+  font-family: var(--font-display) !important;
+  font-size: var(--fs-h2) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-h2) !important;
+  letter-spacing: var(--ls-h2) !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  text-wrap: balance;
+}
+
+.typo-h3,
+body:not(:has(.admin-root)) main h3,
+body:not(:has(.admin-root)) main h4 {
+  font-family: var(--font-display) !important;
+  font-size: var(--fs-h3) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-h3) !important;
+  letter-spacing: var(--ls-h3) !important;
+  font-style: normal !important;
+  text-transform: none !important;
+}
+
+.typo-body,
+body:not(:has(.admin-root)) main p:not(.typo-eyebrow):not(.typo-caption),
+body:not(:has(.admin-root)) main li {
+  font-family: var(--font-body) !important;
+  font-size: var(--fs-body) !important;
+  font-weight: var(--fw-regular) !important;
+  line-height: var(--lh-body) !important;
+  max-width: var(--measure-body);
+  font-style: normal !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+body:not(:has(.admin-root)) main .text-center > p,
+body:not(:has(.admin-root)) main p.text-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typo-caption {
+  font-family: var(--font-body) !important;
+  font-size: var(--fs-caption) !important;
+  font-weight: var(--fw-regular) !important;
+  line-height: var(--lh-caption) !important;
+  font-style: normal !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+.typo-eyebrow {
+  font-family: var(--font-body) !important;
+  font-size: var(--fs-caption) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-caption) !important;
+  letter-spacing: var(--ls-eyebrow) !important;
+  text-transform: uppercase !important;
+  font-style: normal !important;
+  color: var(--gold);
+}
+
+/* Espaçamento vertical consistente entre seções públicas */
+.section-spacing,
+main > section:not(.hero-section) {
+  padding-top: var(--section-py-mobile);
+  padding-bottom: var(--section-py-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-spacing,
+  main > section:not(.hero-section) {
+    padding-top: var(--section-py-desktop);
+    padding-bottom: var(--section-py-desktop);
+  }
+}
+
+/* Normalização global nas páginas públicas: máximo 2 pesos (400 e 600), sem itálico */
+body:not(:has(.admin-root)) .italic,
+body:not(:has(.admin-root)) em,
+body:not(:has(.admin-root)) i {
+  font-style: normal !important;
+}
+
+body:not(:has(.admin-root)) .font-thin,
+body:not(:has(.admin-root)) .font-extralight,
+body:not(:has(.admin-root)) .font-light,
+body:not(:has(.admin-root)) .font-normal,
+body:not(:has(.admin-root)) .font-\[100\],
+body:not(:has(.admin-root)) .font-\[200\],
+body:not(:has(.admin-root)) .font-\[300\],
+body:not(:has(.admin-root)) .font-\[400\] {
+  font-weight: var(--fw-regular) !important;
+}
+
+body:not(:has(.admin-root)) .font-medium,
+body:not(:has(.admin-root)) .font-semibold,
+body:not(:has(.admin-root)) .font-bold,
+body:not(:has(.admin-root)) .font-extrabold,
+body:not(:has(.admin-root)) .font-\[500\],
+body:not(:has(.admin-root)) .font-\[600\],
+body:not(:has(.admin-root)) .font-\[700\],
+body:not(:has(.admin-root)) .font-\[800\],
+body:not(:has(.admin-root)) strong,
+body:not(:has(.admin-root)) b {
+  font-weight: var(--fw-semibold) !important;
+}
+
+/* Garantir que H1, H2, H3 mantêm peso semibold (600) mesmo com classes antigas */
+body:not(:has(.admin-root)) main h1,
+body:not(:has(.admin-root)) main h2,
+body:not(:has(.admin-root)) main h3,
+body:not(:has(.admin-root)) main h1 span,
+body:not(:has(.admin-root)) main h2 span,
+body:not(:has(.admin-root)) main h3 span {
+  font-weight: var(--fw-semibold) !important;
+  font-style: normal !important;
+}
+
+/* Garantir que caixa alta (uppercase) em main ocorre apenas no eyebrow */
+body:not(:has(.admin-root)) main :not(.typo-eyebrow).uppercase {
+  text-transform: none !important;
+  letter-spacing: normal !important;
 }
 
 

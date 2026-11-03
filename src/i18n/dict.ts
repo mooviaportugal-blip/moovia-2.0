@@ -173,6 +173,161 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Integração": { en: "Integration", es: "Integración" },
   "Global Mobility Success": { en: "Global Mobility Success", es: "Global Mobility Success" },
   "Global Mobility Strategy": { en: "Global Mobility Strategy", es: "Global Mobility Strategy" },
+
+  // ---------- NOVA HOME & EMPRESAS & METODOLOGIA ----------
+  "Proteja o investimento da sua empresa em talento internacional.": {
+    en: "Protect your company's investment in international talent.",
+    es: "Proteja la inversión de su empresa en talento internacional.",
+  },
+  "A MOOVIA acompanha o executivo e a família antes, durante e depois da mudança e transforma fatores humanos em indicadores claros para os Recursos Humanos e a direção.": {
+    en: "MOOVIA supports the executive and family before, during and after relocation and turns human factors into clear indicators for Human Resources and leadership.",
+    es: "MOOVIA acompaña al ejecutivo y a la familia antes, durante y después del traslado y transforma factores humanos en indicadores claros para Recursos Humanos y la dirección.",
+  },
+  "Falar com a MOOVIA": { en: "Speak with MOOVIA", es: "Hablar con MOOVIA" },
+  "Confidencial e em conformidade com o RGPD.": {
+    en: "Confidential and compliant with the General Data Protection Regulation.",
+    es: "Confidencial y en conformidad con el RGPD.",
+  },
+  "O que fazemos, em três passos": {
+    en: "What we do, in three steps",
+    es: "Lo que hacemos, en tres pasos",
+  },
+  "Avaliar": { en: "Assess", es: "Evaluar" },
+  "Identificamos os fatores humanos que mais influenciam a adaptação do executivo e da família, desde antes da mudança.": {
+    en: "We identify the human factors that most influence the adaptation of the executive and family, starting before the move.",
+    es: "Identificamos los factores humanos que más influyen en la adaptación del ejecutivo y de la familia, desde antes del traslado.",
+  },
+  "Interpretar": { en: "Interpret", es: "Interpretar" },
+  "Transformamos esses fatores em indicadores e recomendações práticas, interpretados por especialistas.": {
+    en: "We transform these factors into practical indicators and recommendations, interpreted by specialists.",
+    es: "Transformamos esos factores en indicadores y recomendaciones prácticas, interpretados por especialistas.",
+  },
+  "Acompanhar": { en: "Monitor", es: "Acompañar" },
+  "Medimos a evolução ao longo da jornada e orientamos a ação preventiva, sem substituir os parceiros que a empresa já utiliza.": {
+    en: "We measure progress throughout the journey and guide preventive action, without replacing the partners the company already uses.",
+    es: "Medimos la evolución a lo largo del proceso y orientamos la acción preventiva, sin sustituir a los socios que la empresa ya utiliza.",
+  },
+  "Conhecer a metodologia completa": {
+    en: "Explore the full methodology",
+    es: "Conocer la metodología completa",
+  },
+  "Para quem é": { en: "Who it is for", es: "Para quién es" },
+  "Contratado pela empresa. Vivido pelo executivo.": {
+    en: "Contracted by the company. Experienced by the executive.",
+    es: "Contratado por la empresa. Vivido por el ejecutivo.",
+  },
+  "Cliente": { en: "Client", es: "Cliente" },
+  "Beneficiários": { en: "Beneficiaries", es: "Beneficiarios" },
+  "Empresas.": { en: "Companies.", es: "Empresas." },
+  "Recebem indicadores agregados e recomendações para decidir melhor sobre a mobilidade internacional.": {
+    en: "Receive aggregated indicators and recommendations to make better decisions on international mobility.",
+    es: "Reciben indicadores agregados y recomendaciones para decidir mejor sobre la movilidad internacional.",
+  },
+  "Empresas. Recebem indicadores agregados e recomendações para decidir melhor sobre a mobilidade internacional.": {
+    en: "Companies. Receive aggregated indicators and recommendations to make better decisions on international mobility.",
+    es: "Empresas. Reciben indicadores agregados y recomendaciones para decidir mejor sobre la movilidad internacional.",
+  },
+  "Executivo:": { en: "Executive:", es: "Ejecutivo:" },
+  "recebe acompanhamento e um relatório pessoal, confidencial.": {
+    en: "receives ongoing support and a confidential personal report.",
+    es: "recibe acompañamiento y un informe personal, confidencial.",
+  },
+  "Executivo: recebe acompanhamento e um relatório pessoal, confidencial.": {
+    en: "Executive: receives ongoing support and a confidential personal report.",
+    es: "Ejecutivo: recibe acompañamiento y un informe personal, confidencial.",
+  },
+  "Família:": { en: "Family:", es: "Familia:" },
+  "recebe acolhimento e apoio à adaptação.": {
+    en: "receives guidance and adaptation support.",
+    es: "recibe acogida y apoyo a la adaptación.",
+  },
+  "Família: recebe acolhimento e apoio à adaptação.": {
+    en: "Family: receives guidance and adaptation support.",
+    es: "Familia: recibe acogida y apoyo a la adaptación.",
+  },
+  "Valor para o negócio": { en: "Business value", es: "Valor de negocio" },
+  "O que a sua empresa ganha": {
+    en: "What your company gains",
+    es: "Lo que su empresa gana",
+  },
+  "Retenção": { en: "Retention", es: "Retención" },
+  "Identificar sinais a tempo de agir e reduzir o risco de turnover.": {
+    en: "Identify signals in time to act and reduce turnover risk.",
+    es: "Identificar señales a tiempo para actuar y reducir el riesgo de rotación.",
+  },
+  "Acelerar a adaptação do executivo e da família.": {
+    en: "Accelerate the adaptation of the executive and family.",
+    es: "Acelerar la adaptación del ejecutivo y de la familia.",
+  },
+  "Decisão": { en: "Decision", es: "Decisión" },
+  "Mais informação para decisões de mobilidade.": {
+    en: "Better information for mobility decisions.",
+    es: "Más información para decisiones de movilidad.",
+  },
+  "Retorno": { en: "Return", es: "Retorno" },
+  "Proteger o investimento feito no talento internacional.": {
+    en: "Protect the investment made in international talent.",
+    es: "Proteger la inversión realizada en el talento internacional.",
+  },
+  "Substituir um talento internacional que não se adaptou custa milhares de euros.": {
+    en: "Replacing international talent who failed to adapt costs thousands of euros.",
+    es: "Sustituir a un talento internacional que no se adaptó cuesta miles de euros.",
+  },
+  "Governança e proteção de dados": {
+    en: "Governance and data protection",
+    es: "Gobernanza y protección de datos",
+  },
+  "Confiança e confidencialidade": {
+    en: "Trust and confidentiality",
+    es: "Confianza y confidencialidad",
+  },
+  "Validação Jurídica": { en: "Legal Validation", es: "Validación Jurídica" },
+  "O modelo jurídico da MOOVIA foi objeto de análise por uma sociedade de advogados de referência em Portugal, tendo sido considerado juridicamente viável, encontrando-se atualmente em fase de implementação das recomendações identificadas.": {
+    en: "The legal model of MOOVIA was analysed by a leading law firm in Portugal, having been considered legally viable, and is currently in the phase of implementing the identified recommendations.",
+    es: "El modelo jurídico de MOOVIA fue objeto de análisis por una firma de abogados de referencia en Portugal, habiendo sido considerado jurídicamente viable, encontrándose actualmente en fase de implementación de las recomendaciones identificadas.",
+  },
+  "A empresa recebe apenas indicadores agregados. As respostas individuais e o relatório pessoal do colaborador permanecem confidenciais.": {
+    en: "The company receives only aggregated indicators. Individual responses and the employee's personal report remain confidential.",
+    es: "La empresa recibe únicamente indicadores agregados. Las respuestas individuales y el informe personal del colaborador permanecen confidenciales.",
+  },
+  "Em conformidade com o RGPD": {
+    en: "Compliant with the General Data Protection Regulation",
+    es: "En conformidad con el RGPD",
+  },
+  "Quer perceber como isto se aplica à sua empresa?": {
+    en: "Want to understand how this applies to your company?",
+    es: "¿Quiere entender cómo se aplica esto a su empresa?",
+  },
+  "Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.": {
+    en: "Each proposal is tailored to the profile and complexity of each transition.",
+    es: "Cada propuesta se diseña a medida del perfil y de la complejidad de cada transición.",
+  },
+  "Em resumo": { en: "In summary", es: "En resumen" },
+  "O que é:": { en: "What it is:", es: "Qué es:" },
+  "Metodologia que identifica, mede e acompanha o risco humano da mobilidade internacional ao longo da transição.": {
+    en: "A methodology that identifies, measures and tracks the human risk of international mobility throughout the transition.",
+    es: "Metodología que identifica, mide y acompaña el riesgo humano de la movilidad internacional a lo largo de la transición.",
+  },
+  "Para quem é:": { en: "Who it is for:", es: "Para quién es:" },
+  "Contratado por empresas que deslocam executivos e famílias para missões internacionais.": {
+    en: "Contracted by companies relocating executives and families for international assignments.",
+    es: "Contratado por empresas que trasladan ejecutivos y familias a misiones internacionales.",
+  },
+  "Qual o benefício:": { en: "Key benefit:", es: "Cuál es el beneficio:" },
+  "Permite agir de forma preventiva, acelerar a integração e reduzir a exposição ao turnover precoce.": {
+    en: "Enables preventive action, accelerates integration and reduces exposure to early turnover.",
+    es: "Permite actuar de forma preventiva, acelerar la integración y reducir la exposición a la rotación temprana.",
+  },
+  "Acompanhamento da mobilidade internacional para empresas que investem em talento": {
+    en: "International mobility support for companies that invest in talent",
+    es: "Acompañamiento de la movilidad internacional para empresas que invierten en talento",
+  },
+  "Adicionar mais detalhes (opcional)": {
+    en: "Add more details (optional)",
+    es: "Añadir más detalles (opcional)",
+  },
+  "Saiba mais": { en: "Learn more", es: "Saber más" },
+  "Mostrar menos": { en: "Show less", es: "Mostrar menos" },
 };
 
 export function translate(text: string, lang: "en" | "es"): string | undefined {

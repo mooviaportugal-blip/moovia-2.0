@@ -1,34 +1,131 @@
 {
+  "common": {
+    "brand": "MOOVIA",
+    "gma": "Global Mobility Assurance",
+    "cta_talk": "Speak with MOOVIA",
+    "learn_more": "Learn more",
+    "show_less": "Show less"
+  },
+  "badges": {
+    "client": "Client",
+    "beneficiaries": "Beneficiaries"
+  },
   "nav": {
     "how_it_works": "How it works",
     "services": "Services",
     "assessment": "Strategic Assessment",
-    "blog": "Blog",
+    "blog": "Insights",
     "contact": "Contact",
-    "cta": "Free Conversation",
+    "cta": "Speak with MOOVIA",
     "about": "About",
     "team": "Team"
   },
   "hero": {
-    "eyebrow": "International Life & Patrimony Coordination",
-    "title_1": "You don't need",
-    "title_2": "more information.",
-    "title_3": "You need someone",
-    "title_4": "to coordinate",
-    "title_5": "the decision.",
-    "lead": "MOOVIA doesn't solve isolated tasks. End-to-end coordination, from the first diagnostic to your disposal.",
-    "cta_primary": "Assess my case",
+    "eyebrow": "Global Mobility Assurance",
+    "title": "Protect your company's investment in international talent.",
+    "subtitle": "MOOVIA supports the executive and family before, during and after relocation and turns human factors into clear indicators for Human Resources and leadership.",
+    "cta_primary": "Speak with MOOVIA",
     "cta_secondary": "See how it works",
-    "tagline": "Planejar · Chegar · Ficar",
-    "chapter_label": "Chapter 01",
-    "chapter_title": "Transition mandate"
+    "microtext": "Confidential and compliant with the General Data Protection Regulation."
+  },
+  "home": {
+    "steps": {
+      "eyebrow": "How it works",
+      "title": "What we do, in three steps",
+      "step1_title": "Assess",
+      "step1_body": "We identify the human factors that most influence the adaptation of the executive and family, starting before the move.",
+      "step2_title": "Interpret",
+      "step2_body": "We transform these factors into practical indicators and recommendations, interpreted by specialists.",
+      "step3_title": "Monitor",
+      "step3_body": "We measure progress throughout the journey and guide preventive action, without replacing the partners the company already uses.",
+      "link_methodology": "Explore the full methodology"
+    },
+    "for_whom": {
+      "eyebrow": "Who it is for",
+      "title": "Contracted by the company. Experienced by the executive.",
+      "client_title": "Companies.",
+      "client_body": "Receive aggregated indicators and recommendations to make better decisions on international mobility.",
+      "exec_title": "Executive:",
+      "exec_body": "receives ongoing support and a confidential personal report.",
+      "family_title": "Family:",
+      "family_body": "receives guidance and adaptation support."
+    },
+    "gains": {
+      "eyebrow": "Business value",
+      "title": "What your company gains",
+      "item1_title": "Retention",
+      "item1_body": "Identify signals in time to act and reduce turnover risk.",
+      "item2_title": "Integration",
+      "item2_body": "Accelerate the adaptation of the executive and family.",
+      "item3_title": "Decision",
+      "item3_body": "Better information for mobility decisions.",
+      "item4_title": "Return",
+      "item4_body": "Protect the investment made in international talent.",
+      "support_line": "Replacing international talent who failed to adapt costs thousands of euros."
+    },
+    "trust": {
+      "eyebrow": "Governance and data protection",
+      "title": "Trust and confidentiality",
+      "legal_validation_label": "Legal Validation",
+      "legal_validation_text": "The legal model of MOOVIA was analysed by a leading law firm in Portugal, having been considered legally viable, and is currently in the phase of implementing the identified recommendations.",
+      "confidentiality_text": "The company receives only aggregated indicators. Individual responses and the employee's personal report remain confidential.",
+      "gdpr_label": "Compliant with the General Data Protection Regulation"
+    },
+    "final_cta": {
+      "title": "Want to understand how this applies to your company?",
+      "body": "Each proposal is tailored to the profile and complexity of each transition.",
+      "button": "Speak with MOOVIA"
+    }
+  },
+  "methodology": {
+    "summary_eyebrow": "In summary",
+    "summary_what_label": "What it is:",
+    "summary_what": "A methodology that identifies, measures and tracks the human risk of international mobility throughout the transition.",
+    "summary_who_label": "Who it is for:",
+    "summary_who": "Contracted by companies relocating executives and families for international assignments.",
+    "summary_benefit_label": "Key benefit:",
+    "summary_benefit": "Enables preventive action, accelerates integration and reduces exposure to early turnover."
+  },
+  "empresas": {
+    "opening": "International mobility support for companies that invest in talent",
+    "risks_title": "The human risks of international mobility",
+    "results_title": "Results for your company",
+    "framework_eyebrow": "Methodology",
+    "framework_title": "The five stages of the MOOVIA Framework",
+    "framework_step1_title": "01. Initial Assessment",
+    "framework_step1_body": "We understand the human, family and professional context before critical relocation decisions.",
+    "framework_step2_title": "02. Mission Readiness Index",
+    "framework_step2_body": "We structure readiness indicators and identify key areas requiring attention.",
+    "framework_step3_title": "03. Global Mobility Success Report",
+    "framework_step3_body": "We deliver a clear plan with priorities and practical recommendations to guide the transition.",
+    "framework_step4_title": "04. 30, 60 and 90-day Follow-up",
+    "framework_step4_body": "We monitor adaptation during the first months to adjust support preventively.",
+    "framework_step5_title": "05. Reassessment and Evolution",
+    "framework_step5_body": "We consolidate integration and support the assessment of return on investment.",
+    "form": {
+      "eyebrow": "Contact",
+      "title": "Speak with MOOVIA",
+      "subtitle": "Each proposal is tailored to the profile and complexity of each transition.",
+      "contact_name": "Contact name",
+      "corporate_email": "Corporate email",
+      "company_name": "Company name",
+      "message_optional": "Message (optional)",
+      "more_details_toggle": "Add more details (optional)",
+      "role_label": "Role / Position",
+      "phone_label": "Phone",
+      "volume_label": "Number of employees in mobility",
+      "countries_label": "Countries involved (origin and destination)",
+      "challenge_label": "Main current challenge",
+      "program_label": "Does the company already have a structured mobility programme?",
+      "submit": "Speak with MOOVIA"
+    }
   },
   "footer": {
-    "tagline": "Planejar · Chegar · Ficar",
+    "tagline": "Plan · Arrive · Stay",
     "services": "Services",
     "contact": "Contact",
     "privacy": "Privacy",
     "cookies": "Cookies",
-    "rights": "© 2026 MOOVIA | Brazil → Portugal"
+    "rights": "© 2026 MOOVIA | Brazil to Portugal"
   }
 }

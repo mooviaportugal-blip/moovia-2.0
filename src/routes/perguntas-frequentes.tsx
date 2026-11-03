@@ -1,7 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 
 export const Route = createFileRoute("/perguntas-frequentes")({
   head: () => ({
@@ -166,34 +167,8 @@ function FAQPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
-        <div className="mx-auto max-w-[900px] text-center">
-          <h2 className="font-display text-[clamp(26px,3.5vw,44px)] font-[200] text-white leading-[1.15] tracking-[-0.02em] mb-6">
-            Não encontrou a sua{" "}
-            <span className="text-gold-l italic">resposta?</span>
-          </h2>
-          <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[680px] mx-auto mb-10">
-            Fale diretamente com um dos founders. A MOOVIA existe para transformar decisões complexas em transições coordenadas.
-          </p>
-          <Link
-            to="/"
-            hash="lead-form"
-            onClick={(e) => {
-              if (typeof window !== "undefined" && window.location.pathname === "/") {
-                e.preventDefault();
-                document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }}
-            className="group relative overflow-hidden bg-gold text-black font-body font-[600] text-[11px] sm:text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-[2px] shadow-[0_8px_24px_rgba(173,137,87,0.15)] isolate inline-flex items-center justify-center"
-          >
-            <span className="absolute inset-0 bg-[#06091a] -translate-x-full group-hover:translate-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)]" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-gold">
-              Conversa com um dos Fundadores
-            </span>
-          </Link>
-        </div>
-      </section>
+      {/* FAIXA FINAL DE CHAMADA PARA AÇÃO */}
+      <FinalCtaStrip />
     </SiteLayout>
   );
 }

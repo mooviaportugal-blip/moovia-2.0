@@ -35,41 +35,55 @@ export function Nav() {
   }, [mobileOpen]);
 
   const links = [
-    { name: cmsText("nav.link_hma", "Global Mobility Assurance"), to: "/gma" },
+    { name: cmsText("nav.link_servicos", t("nav.services")), to: "/servicos" },
+    { name: cmsText("nav.link_hma", t("common.gma")), to: "/gma" },
     { name: cmsText("nav.link_sobre", t("nav.about")), to: "/sobre" },
     { name: cmsText("nav.link_equipa", t("nav.team")), to: "/equipa" },
-    { name: cmsText("nav.link_insights", "Insights"), to: "/blog" },
+    { name: cmsText("nav.link_insights", t("nav.blog")), to: "/blog" },
     { name: cmsText("nav.link_contacto", t("nav.contact")), to: "/contacto" },
   ];
 
+  const handleCtaClick = (e: React.MouseEvent) => {
+    setMobileOpen(false);
+    if (typeof window !== "undefined" && window.location.pathname === "/gma") {
+      e.preventDefault();
+      const target =
+        document.getElementById("contacto") ??
+        document.getElementById("lead-form");
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[900] h-[76px] lg:h-[88px] flex items-center px-5 lg:px-12 transition-all duration-300 ${
-        scrolled ? "bg-[#06091a]/92 backdrop-blur-[20px] border-b border-b18" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-[900] h-[76px] lg:h-[88px] flex items-center px-4 sm:px-6 lg:px-12 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#06091a]/95 backdrop-blur-[20px] border-b border-b18 shadow-lg"
+          : "bg-gradient-to-b from-[#06091a]/95 via-[#06091a]/80 to-[#06091a]/25 backdrop-blur-[6px]"
       }`}
     >
       {/* LOGO */}
-      <Link to="/" className="flex items-center gap-3 mr-auto group">
+      <Link to="/" className="flex items-center gap-2.5 sm:gap-3 mr-auto group shrink-0">
         <img
           src="/mooviagold.png"
           alt=""
           aria-hidden="true"
-          className="h-[36px] lg:h-[44px] w-auto object-contain transition-transform duration-1000 ease-in-out group-hover:rotate-[360deg]"
+          className="h-[32px] sm:h-[36px] lg:h-[44px] w-auto object-contain transition-transform duration-1000 ease-in-out group-hover:rotate-[360deg]"
         />
         <img
           src={logoNav}
           alt="MOOVIA"
-          className="h-[52px] lg:h-[64px] w-auto object-contain brightness-110 transition-transform duration-300 group-hover:scale-[1.02]"
+          className="h-[44px] sm:h-[52px] lg:h-[64px] w-auto object-contain brightness-110 transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </Link>
 
       {/* LINKS (Desktop) */}
-      <div className="hidden lg:flex items-center gap-7 xl:gap-11">
+      <div className="hidden lg:flex items-center gap-7 xl:gap-10">
         {links.map((link) => (
           <Link
             key={link.name}
             to={link.to}
-            className="font-body font-[400] text-[12px] tracking-[0.14em] uppercase text-gold hover:text-gold-l transition-colors relative group"
+            className="typo-caption font-semibold text-gold-l hover:text-white transition-colors relative group drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]"
           >
             {link.name}
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
@@ -77,25 +91,50 @@ export function Nav() {
         ))}
       </div>
 
-
       {/* CTA + Language (Desktop) */}
-      <div className="hidden lg:flex items-center gap-3 ml-auto">
+      <div className="hidden lg:flex items-center gap-4 ml-auto">
         {langEnabled && <LanguageSwitcher />}
-
+        <Link
+          to="/gma"
+          hash="contacto"
+          onClick={handleCtaClick}
+          className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-5 py-2.5 rounded-[2px] transition-colors whitespace-nowrap"
+        >
+          {t("nav.cta")}
+        </Link>
       </div>
 
-
-      {/* Mobile language + hamburger */}
-      <div className="lg:hidden flex items-center gap-3 ml-auto">
+      {/* Mobile CTA + language + hamburger */}
+      <div className="lg:hidden flex items-center gap-2 ml-auto">
+        <Link
+          to="/gma"
+          hash="contacto"
+          onClick={handleCtaClick}
+          className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-3 py-2 rounded-[2px] transition-colors whitespace-nowrap"
+        >
+          {t("nav.cta")}
+        </Link>
         {langEnabled && <LanguageSwitcher compact />}
         <button
-          className="flex flex-col gap-[6px] z-[1001] p-3 -mr-2 rounded border border-gold/40 bg-[#06091a]/60 min-w-11 min-h-11 items-center justify-center"
+          className="flex flex-col gap-[6px] z-[1001] p-2.5 rounded border border-gold/40 bg-[#06091a]/60 min-w-10 min-h-10 items-center justify-center"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
-          <div className={`w-7 h-[2px] bg-gold transition-transform ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <div className={`w-7 h-[2px] bg-gold transition-opacity ${mobileOpen ? "opacity-0" : ""}`} />
-          <div className={`w-7 h-[2px] bg-gold transition-transform ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <div
+            className={`w-6 h-[2px] bg-gold transition-transform ${
+              mobileOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <div
+            className={`w-6 h-[2px] bg-gold transition-opacity ${
+              mobileOpen ? "opacity-0" : ""
+            }`}
+          />
+          <div
+            className={`w-6 h-[2px] bg-gold transition-transform ${
+              mobileOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
         </button>
       </div>
 
@@ -106,7 +145,7 @@ export function Nav() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "tween", duration: 0.4 }}
+            transition={{ type: "tween", duration: 0.35 }}
             style={{
               position: "fixed",
               top: 0,
@@ -116,25 +155,39 @@ export function Nav() {
               backgroundColor: "#06091a",
               zIndex: 1000,
             }}
-            className="flex flex-col items-center justify-center gap-8 overflow-y-auto"
+            className="flex flex-col items-center justify-center gap-7 px-6 overflow-y-auto"
           >
             {links.map((link, i) => (
               <motion.div
                 key={link.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15 + i * 0.06 }}
+                transition={{ delay: 0.1 + i * 0.05 }}
               >
                 <Link
                   to={link.to}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display font-[200] text-[22px] text-gold hover:text-gold-l transition-colors"
+                  className="typo-h3 text-gold hover:text-gold-l transition-colors"
                 >
                   {link.name}
                 </Link>
               </motion.div>
             ))}
-
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="pt-4"
+            >
+              <Link
+                to="/gma"
+                hash="contacto"
+                onClick={handleCtaClick}
+                className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-6 py-3.5 rounded-[2px] transition-colors"
+              >
+                {t("nav.cta")}
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

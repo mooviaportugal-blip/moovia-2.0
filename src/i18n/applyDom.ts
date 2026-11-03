@@ -13,6 +13,8 @@ const ATTRS = ["placeholder", "alt", "aria-label", "title"];
 
 const SKIP_TAGS = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "CODE", "PRE", "TEXTAREA"]);
 
+const RAW_KEY_RE = /^[a-z_]+(\.[a-z0-9_]+)+$/i;
+
 // pt-PT → pt-BR word swaps. Case-preserving for capitalized variants.
 const BR_PAIRS: [string, string][] = [
   ["Contacto", "Contacto"],
@@ -67,41 +69,51 @@ function shouldSkip(node: Node): boolean {
   return false;
 }
 
-function resolve(original: string, lang: WalkerLang): string {
+function resolve(original: string, lang: WalkerLang): string | null {
   if (lang === "pt") return original;
   if (lang === "pt-BR") return toBR(original);
   // Dictionary keys are trimmed, normalised Portuguese. DOM text nodes keep
   // JSX indentation/newlines around the copy, so look the key up trimmed and
   // restore the surrounding whitespace afterwards.
   const trimmed = original.trim();
-  if (!trimmed) return original;
+  if (!trimmed) return null;
   const leading = original.slice(0, original.indexOf(trimmed[0]!));
   const trailing = original.slice(leading.length + trimmed.length);
   const normalised = trimmed.replace(/\s+/g, " ");
   const hit = translate(trimmed, lang) ?? translate(normalised, lang);
-  return hit ? leading + hit + trailing : original;
+  return hit ? leading + hit + trailing : null;
 }
 
-
 function translateTextNode(node: Text, lang: WalkerLang) {
-  const original = ORIGINAL_TEXT.get(node) ?? node.nodeValue ?? "";
-  if (!ORIGINAL_TEXT.has(node)) ORIGINAL_TEXT.set(node, original);
+  const currentVal = node.nodeValue ?? "";
+  if (RAW_KEY_RE.test(currentVal.trim())) {
+    return;
+  }
+  const cached = ORIGINAL_TEXT.get(node);
+  const original = cached && !RAW_KEY_RE.test(cached.trim()) ? cached : currentVal;
+  if (!ORIGINAL_TEXT.has(node) || (cached && RAW_KEY_RE.test(cached.trim()))) {
+    ORIGINAL_TEXT.set(node, original);
+  }
   const next = resolve(original, lang);
-  if (node.nodeValue !== next) node.nodeValue = next;
+  if (next !== null && node.nodeValue !== next) {
+    node.nodeValue = next;
+  }
 }
 
 function translateAttr(el: Element, attr: string, lang: WalkerLang) {
   const current = el.getAttribute(attr);
-  if (current == null) return;
+  if (current == null || RAW_KEY_RE.test(current.trim())) return;
   let store = ORIGINAL_ATTR.get(el);
   if (!store) {
     store = {};
     ORIGINAL_ATTR.set(el, store);
   }
-  if (!(attr in store)) store[attr] = current;
+  if (!(attr in store) || RAW_KEY_RE.test(store[attr].trim())) {
+    store[attr] = current;
+  }
   const original = store[attr];
   const next = resolve(original, lang);
-  if (current !== next) el.setAttribute(attr, next);
+  if (next !== null && current !== next) el.setAttribute(attr, next);
 }
 
 function walk(root: Node, lang: WalkerLang) {
@@ -136,8 +148,6 @@ let flushHandle: number | null = null;
 function flushPending() {
   flushHandle = null;
   if (!currentLang || currentLang === "pt") return;
-  // Just re-walk the whole body. Cheap enough (~ms) and immune to
-  // partial subtree edge cases.
   walk(document.body, currentLang);
 }
 
@@ -148,12 +158,10 @@ function scheduleFlush() {
     : (setTimeout(flushPending, 16) as unknown as number));
 }
 
-
 function ensureObserver() {
   if (observer || typeof MutationObserver === "undefined") return;
   observer = new MutationObserver((records) => {
     if (!currentLang || currentLang === "pt") return;
-    // Clear caches for changed text/attr so they retranslate from fresh values.
     for (const r of records) {
       if (r.type === "characterData" && r.target.nodeType === 3) {
         ORIGINAL_TEXT.delete(r.target as Text);
@@ -165,8 +173,11 @@ function ensureObserver() {
     scheduleFlush();
   });
   observer.observe(document.body, {
-    childList: true, subtree: true, characterData: true,
-    attributes: true, attributeFilter: ATTRS,
+    childList: true,
+    subtree: true,
+    characterData: true,
+    attributes: true,
+    attributeFilter: ATTRS,
   });
 }
 
@@ -177,5 +188,3 @@ export function applyDomTranslations(lang: WalkerLang) {
   walk(document.body, lang);
   ensureObserver();
 }
-
-

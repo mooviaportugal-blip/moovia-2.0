@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 import { supabase } from "@/integrations/supabase/client";
 import DOMPurify from "isomorphic-dompurify";
 import { getCurrentLang } from "@/i18n";
@@ -194,26 +195,17 @@ function Post() {
               />
 
               <div className="mt-20 pt-10 border-t border-b18 flex items-center justify-between">
-                <Link to="/blog" className="font-urbanist text-[11px] uppercase tracking-[0.22em] text-w35 hover:text-gold transition-colors">
+                <Link to="/blog" className="typo-caption text-w35 hover:text-gold transition-colors">
                   ← Todos os artigos
                 </Link>
-                <span className="font-urbanist text-[11px] uppercase tracking-[0.22em] text-w35">MOOVIA</span>
-              </div>
-
-              <div className="mt-16 p-10 md:p-14 border border-b18 bg-black-2 relative overflow-hidden group rounded-sm">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold to-teal" />
-                <p className="font-urbanist text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Pronto para o próximo passo?</p>
-                <h2 className="font-sora text-[clamp(24px,3vw,36px)] font-[200] text-white leading-tight mb-8">Avalie o seu caso com a MOOVIA.</h2>
-                <Link to="/" hash="lead-form" className="bg-gold text-black font-urbanist text-[12px] font-bold tracking-[0.18em] uppercase px-10 py-5 relative overflow-hidden group/btn transition-all duration-300 inline-block">
-                  <span className="relative z-10">Solicitar Global Mobility Assessment</span>
-                  <div className="absolute inset-0 bg-gold-xl origin-left scale-x-0 transition-transform duration-500 ease-out group-hover/btn:scale-x-100" />
-                </Link>
+                <span className="typo-caption text-w35">MOOVIA</span>
               </div>
 
             </>
           )}
         </div>
       </article>
+      <FinalCtaStrip />
     </SiteLayout>
   );
 }

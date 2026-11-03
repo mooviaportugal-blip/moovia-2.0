@@ -1,13 +1,12 @@
-import { createFileRoute, Link, redirect } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import "@/i18n";
+import { ChevronDown, Building2, UserCheck, Users } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { ProcessSection } from "@/components/sections/ProcessSection";
-import { NossaTeseSection } from "@/components/sections/NossaTeseSection";
 import { UnifiedLeadForm } from "@/components/forms/UnifiedLeadForm";
-import { EverybodyWins } from "@/components/sections/EverybodyWins";
-import { BusinessModelSection } from "@/components/sections/BusinessModelSection";
+import { ClientBeneficiaryBadge } from "@/components/ui/ClientBeneficiaryBadge";
 import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
-import dashboardMock from "@/assets/dashboard-mock.png.asset.json";
 
 export const Route = createFileRoute("/gma")({
   head: () => ({
@@ -16,13 +15,13 @@ export const Route = createFileRoute("/gma")({
       {
         name: "description",
         content:
-          "A nova categoria para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance.",
+          "Acompanhamento da mobilidade internacional para empresas que investem em talento através da metodologia Global Mobility Assurance.",
       },
       { property: "og:title", content: "Global Mobility Assurance | MOOVIA" },
       {
         property: "og:description",
         content:
-          "Programa B2B da MOOVIA para tornar mensurável a dimensão humana da mobilidade internacional através da metodologia Human Mobility Assurance.",
+          "Acompanhamento da mobilidade internacional para empresas que investem em talento através da metodologia Global Mobility Assurance.",
       },
     ],
   }),
@@ -30,41 +29,114 @@ export const Route = createFileRoute("/gma")({
 });
 
 function EmpresasPage() {
-  const colaborador = [
-    "Assessment inicial",
-    "Roadmap personalizado",
-    "Acompanhamento 30 dias",
-    "Acompanhamento 60 dias",
-    "Acompanhamento 90 dias",
-    "Executive Mobility Success Dashboard",
+  const { t } = useTranslation();
+  const [showFactors, setShowFactors] = useState(false);
+
+  const riscos = [
+    "Adaptação familiar",
+    "Integração do cônjuge",
+    "Adaptação escolar dos filhos",
+    "Adequação da habitação e do bairro",
+    "Integração cultural e social",
+    "Rede de apoio local",
+    "Expectativas versus realidade do país",
+    "Estabilidade emocional durante a transição",
+    "Alinhamento familiar com a mudança",
+    "Fatores de stress logístico, jurídico ou financeiro",
   ];
-  const empresa = [
-    "Monitorização estruturada da mobilidade",
-    "Global Mobility Success Dashboard",
-    "Recomendações para RH e liderança",
+
+  const resultados = [
+    "Mais visibilidade sobre o risco humano da mobilidade",
     "Maior capacidade de intervenção preventiva",
-    "Identificar e avaliar os fatores humanos da mobilidade",
-    "Maior retenção e redução do turnover",
-    "Fortalecimento da marca empregadora",
-    "produzindo indicadores que permitem acompanhar a evolução da mobilidade e apoiar a avaliação do retorno sobre o investimento realizado",
+    "Apoio estruturado à adaptação do colaborador e da família",
+    "Melhor integração no país de destino",
+    "Redução do risco de turnover precoce",
+    "Apoio à preservação da produtividade",
+    "Proteção do investimento realizado na mobilidade",
+    "Fortalecimento da proposta de valor ao colaborador",
   ];
-  const familia = [
-    "Acolhimento",
-    "Integração",
-    "Apoio à família",
-    "Redução da ansiedade",
-    "Melhor experiência",
+
+  const etapasFramework = [
+    {
+      title: t("empresas.framework_step1_title"),
+      body: t("empresas.framework_step1_body"),
+    },
+    {
+      title: t("empresas.framework_step2_title"),
+      body: t("empresas.framework_step2_body"),
+    },
+    {
+      title: t("empresas.framework_step3_title"),
+      body: t("empresas.framework_step3_body"),
+    },
+    {
+      title: t("empresas.framework_step4_title"),
+      body: t("empresas.framework_step4_body"),
+    },
+    {
+      title: t("empresas.framework_step5_title"),
+      body: t("empresas.framework_step5_body"),
+    },
+  ];
+
+  const empresaRecebe = [
+    "Monitorização estruturada da mobilidade",
+    "Global Mobility Success Dashboard com indicadores agregados",
+    "Recomendações práticas para Recursos Humanos e liderança",
+    "Maior capacidade de intervenção preventiva",
+    "Apoio à retenção e redução da exposição ao turnover",
+  ];
+
+  const executivoRecebe = [
+    "Avaliação inicial estruturada",
+    "Plano personalizado de transição",
+    "Acompanhamento aos 30, 60 e 90 dias",
+    "Relatório e painel pessoal confidencial",
+  ];
+
+  const familiaRecebe = [
+    "Acolhimento estruturado",
+    "Apoio à integração local e escolar",
+    "Orientação prática para o dia a dia",
+    "Redução de fricções na mudança",
+  ];
+
+  const pilaresMetodologia = [
+    {
+      num: "01",
+      title: "Avaliação Estruturada",
+      body: "Aplicamos instrumentos próprios em momentos críticos da transição, antes da mudança e ao longo dos primeiros meses no destino, para captar sinais precoces de adaptação, sobrecarga ou desalinhamento.",
+    },
+    {
+      num: "02",
+      title: "Inteligência Interpretada",
+      body: "As respostas são analisadas à luz da psicologia intercultural e da gestão de mobilidade internacional, transformando perceções subjetivas em indicadores claros e recomendações práticas.",
+    },
+    {
+      num: "03",
+      title: "Acompanhamento Contínuo",
+      body: "A adaptação humana não é estática. Monitorizamos a evolução ao longo da jornada para orientar intervenções preventivas, sem substituir os parceiros fiscais, jurídicos ou de relocation que a empresa já utiliza.",
+    },
   ];
 
   const handleScrollToForm = (e: React.MouseEvent) => {
     e.preventDefault();
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document
+      .getElementById("contacto")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const handleScrollToMethodology = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document
+      .getElementById("metodologia")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <SiteLayout>
-      {/* 1. HERO */}
-      <section className="relative bg-[#06091a] pt-36 pb-20 md:pt-44 md:pb-28 px-6 lg:px-20 overflow-hidden">
+      {/* 1. ABERTURA EMPRESAS: frase única + riscos e resultados compactos */}
+      <section className="hero-section relative bg-[#06091a] pt-32 pb-20 md:pt-40 md:pb-28 px-6 lg:px-20 border-b border-b18 overflow-hidden">
         <div
           aria-hidden
           className="absolute inset-0 pointer-events-none"
@@ -73,353 +145,307 @@ function EmpresasPage() {
               "radial-gradient(ellipse 90% 70% at 70% 40%, rgba(15,31,65,0.4) 0%, transparent 70%)",
           }}
         />
-        <div className="relative z-10 mx-auto max-w-[1200px] grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
-          <div>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6"
-            >
-              GLOBAL MOBILITY ASSURANCE
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="font-display text-[clamp(32px,5vw,64px)] leading-[1.05] tracking-[-0.03em] mb-12 max-w-[900px]"
-            >
-              <span className="block font-[200] text-white mb-2">
-                A nova categoria para tornar mensurável
-              </span>
-              <span className="block text-[clamp(22px,3vw,38px)] text-gold-l italic font-[300] leading-[1.2]">
-                a dimensão humana da mobilidade internacional.
-              </span>
-            </motion.h1>
-            
-            <div className="space-y-8">
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="font-body text-[14px] md:text-[16px] font-[400] text-gold-l/90 leading-[1.5] max-w-[700px]"
-              >
-                Um benefício para o colaborador. Um investimento mensurável para a empresa.
-              </motion.p>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
-                className="font-body text-[12px] md:text-[13px] tracking-[0.2em] uppercase text-white/50 border-l-2 border-gold/50 pl-6 py-2 italic"
-              >
-                Contratado pela empresa. Vivido pelo executivo. Medido ao longo do tempo.
-              </motion.p>
-
-              <div className="space-y-6 max-w-[800px]">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="font-body text-[16px] md:text-[18px] font-[600] text-white"
+        <div className="relative z-10 mx-auto max-w-[1200px]">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-center mb-16">
+            <div>
+              <p className="typo-eyebrow mb-4">{t("common.gma")}</p>
+              <h1 className="typo-h1 text-white mb-8 max-w-[22ch]">
+                {t("empresas.opening")}
+              </h1>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#contacto"
+                  onClick={handleScrollToForm}
+                  className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-7 py-4 rounded-[2px] transition-colors"
                 >
-                  A mobilidade internacional já é medida. Mas não onde mais importa.
-                </motion.p>
-                
-                <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.7] space-y-6">
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35 }}
-                    className="text-white/90"
-                  >
-                    As empresas acompanham vistos, custos, prazos e processos. A MOOVIA acrescenta uma nova camada de inteligência: mede e acompanha os fatores humanos que podem determinar o sucesso de uma mobilidade internacional.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    Através da metodologia Human Mobility Assurance, transformamos fatores como integração, adaptação familiar, bem-estar e prontidão em indicadores estruturados para apoiar decisões de Global Mobility.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.45 }}
-                  >
-                    A metodologia Human Mobility Assurance foi desenvolvida pela MOOVIA com base em princípios internacionalmente reconhecidos de gestão de risco, adaptados ao contexto da mobilidade internacional.
-                  </motion.p>
-                </div>
+                  {t("common.cta_talk")}
+                </a>
+                <a
+                  href="#metodologia"
+                  onClick={handleScrollToMethodology}
+                  className="inline-flex items-center justify-center border border-gold/40 hover:border-gold text-gold hover:text-gold-l font-semibold typo-caption px-7 py-4 rounded-[2px] transition-colors"
+                >
+                  {t("home.steps.link_methodology")}
+                </a>
               </div>
+            </div>
+            <div className="hidden lg:flex items-center justify-center">
+              <ConstellationLogo />
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="hidden lg:flex justify-center items-center"
-          >
-            <ConstellationLogo size={360} />
-          </motion.div>
-        </div>
-      </section>
+          {/* Lista de riscos e lista de resultados em duas colunas compactas (chips) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 pt-10 border-t border-b18">
+            <div className="border border-b18 bg-w05 p-6 md:p-8">
+              <h2 className="typo-h3 text-white mb-4">
+                {t("empresas.risks_title")}
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {riscos.map((r) => (
+                  <span
+                    key={r}
+                    className="inline-flex items-center px-3 py-1.5 border border-b18 bg-black/50 typo-caption text-w70"
+                  >
+                    {r}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-      {/* 2. O INVESTIMENTO EM TALENTO INTERNACIONAL EXIGE ATENÇÃO */}
-      <section className="bg-black py-20 md:py-28 px-6 lg:px-20">
-        <div className="mx-auto max-w-[1100px]">
-          <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
-            Para Empresas
-          </p>
-          <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-10 max-w-[900px]">
-            <span className="block">O investimento em talento internacional exige atenção.</span>
-            <span className="text-gold-l italic block mt-2">A maioria das empresas não avalia esta exposição.</span>
-          </h2>
-          <div className="font-body text-[15px] md:text-[16px] font-[300] text-w35 leading-[1.85] space-y-6 max-w-[820px]">
-            <p>
-              Empresas investem milhares de euros para contratar talentos internacionais. Mas uma parte significativa desse investimento é colocada em risco por fatores que normalmente ficam fora do processo tradicional de onboarding:
-            </p>
-            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 list-none pl-0">
-              {[
-                "Dificuldade de adaptação da família",
-                "Problemas com habitação",
-                "Integração cultural",
-                "Escolas",
-                "Isolamento social",
-                "Expectativas desalinhadas",
-                "Dificuldades práticas do dia a dia",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
-                  <span className="text-white/85">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p>O resultado é conhecido por qualquer diretor de RH:</p>
-            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 list-none pl-0">
-              {[
-                "Menor produtividade",
-                "Menor satisfação",
-                "Maior risco de turnover",
-                "Perda do investimento realizado na contratação",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
-                  <span className="text-white/85">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-white/90 pt-4 border-l-2 border-gold pl-6 italic font-display text-[18px] md:text-[20px] font-[300]">
-              O mercado já entende esse problema. O que ainda não existe é uma solução desenhada especificamente para atuar antecipadamente.
-            </p>
+            <div className="border border-gold/30 bg-[#09183D]/35 p-6 md:p-8">
+              <h2 className="typo-h3 text-gold-l mb-4">
+                {t("empresas.results_title")}
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {resultados.map((res) => (
+                  <span
+                    key={res}
+                    className="inline-flex items-center px-3 py-1.5 border border-gold/25 bg-black/50 typo-caption text-white/90"
+                  >
+                    {res}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3. TRÊS INTERVENIENTES */}
-      <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
+      {/* 2. AS CINCO ETAPAS DO MOOVIA FRAMEWORK (título + 1 linha cada) */}
+      <section
+        id="how-it-works"
+        className="section-spacing bg-black px-6 lg:px-20 border-b border-b18"
+      >
         <div className="mx-auto max-w-[1200px]">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6 text-center"
-          >
-            Três intervenientes
-          </motion.p>
-          <h2 className="font-display text-[clamp(32px,5vw,60px)] leading-[1.05] tracking-[-0.03em] mb-8 text-center max-w-[1000px] mx-auto">
-            <span className="block font-[200] text-white italic">Um programa desenhado para quem decide,</span>
-            <span className="block text-gold-l font-[300] mt-2">quem coordena e quem vive a mobilidade.</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-[900px] mx-auto">
-            {[
-              { label: "EMPRESA", desc: "ROI e Governança", icon: "briefcase" },
-              { label: "EXECUTIVO", desc: "Foco e Performance", icon: "user" },
-              { label: "FAMÍLIA", desc: "Bem-estar e Adaptação", icon: "users" }
-            ].map((item) => (
-              <div key={item.label} className="text-center p-6 border border-white/5 bg-white/5">
-                <p className="text-gold font-body text-[11px] tracking-widest mb-2">{item.label}</p>
-                <p className="text-white/70 font-display text-[14px]">{item.desc}</p>
-              </div>
+          <div className="mb-12">
+            <p className="typo-eyebrow mb-4">{t("empresas.framework_eyebrow")}</p>
+            <h2 className="typo-h2 text-white">{t("empresas.framework_title")}</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 lg:gap-6 items-stretch">
+            {etapasFramework.map((etapa) => (
+              <article
+                key={etapa.title}
+                className="border border-b18 bg-w05 p-6 flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="typo-h3 text-gold-l mb-3">{etapa.title}</h3>
+                  <p className="typo-body text-w70">{etapa.body}</p>
+                </div>
+              </article>
             ))}
           </div>
-          <p className="font-body text-[16px] md:text-[18px] font-[300] text-w35 leading-[1.8] max-w-[850px] mx-auto text-center mb-20">
-            O sucesso de uma mobilidade internacional não é um evento isolado, mas o resultado da harmonia entre os objetivos da organização, a carreira do talento e a estabilidade do núcleo familiar.
-          </p>
         </div>
       </section>
 
-      {/* 4. PARA A EMPRESA · PARA O EXECUTIVO · PARA A FAMÍLIA (fundido) */}
-      <section className="bg-[#06091a] pb-20 md:pb-28 px-6 lg:px-20">
+      {/* 3. QUEM É O CLIENTE E O QUE CADA PARTE RECEBE */}
+      <section className="section-spacing bg-black-2 px-6 lg:px-20 border-b border-b18">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-6 text-center max-w-[900px] mx-auto">
-            Um benefício para o colaborador.{" "}
-            <span className="text-gold-l italic">Inteligência para a empresa.</span>
-          </h2>
-          <p className="font-body text-[14px] md:text-[15px] font-[300] italic text-white/60 leading-[1.7] text-center max-w-[720px] mx-auto mb-16">
-            Atendemos empresas de todos os tamanhos. Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-            {[
-              { title: "Para a empresa", items: empresa },
-              { title: "Para o executivo", items: colaborador },
-              { title: "Para a família", items: familia },
-            ].map((col) => (
-              <div
-                key={col.title}
-                className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col"
-              >
-                <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6">
-                  {col.title}
-                </p>
-                <ul className="space-y-4">
-                  {col.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.6]"
-                    >
-                      <img src="/mooviagold.png" alt="" className="mt-[6px] h-3 w-3 object-contain shrink-0 opacity-80" />
+          <div className="mb-12">
+            <p className="typo-eyebrow mb-4">{t("home.for_whom.eyebrow")}</p>
+            <h2 className="typo-h2 text-white">{t("home.for_whom.title")}</h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+            {/* Cartão principal: Cliente (Empresa) */}
+            <article className="lg:col-span-7 border-2 border-gold/50 bg-[#09183D]/45 p-8 md:p-10 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <ClientBeneficiaryBadge role="client" />
+                  <Building2 size={22} className="text-gold shrink-0" strokeWidth={1.6} />
+                </div>
+                <h3 className="typo-h3 text-white mb-4">Empresa</h3>
+                <ul className="space-y-3">
+                  {empresaRecebe.map((item) => (
+                    <li key={item} className="typo-body text-white/90 flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
+            </article>
+
+            {/* Dois cartões menores: Beneficiários (Executivo e Família) */}
+            <div className="lg:col-span-5 grid grid-cols-1 gap-6">
+              <article className="border border-b18 bg-w05 p-6 md:p-8">
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <ClientBeneficiaryBadge role="beneficiary" />
+                  <UserCheck size={18} className="text-w70 shrink-0" strokeWidth={1.6} />
+                </div>
+                <h3 className="typo-h3 text-white mb-3">Executivo</h3>
+                <ul className="space-y-2">
+                  {executivoRecebe.map((item) => (
+                    <li key={item} className="typo-body text-w70 flex items-start gap-2.5">
+                      <span className="w-1 h-1 rounded-full bg-white/40 mt-2.5 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="border border-b18 bg-w05 p-6 md:p-8">
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <ClientBeneficiaryBadge role="beneficiary" />
+                  <Users size={18} className="text-w70 shrink-0" strokeWidth={1.6} />
+                </div>
+                <h3 className="typo-h3 text-white mb-3">Família</h3>
+                <ul className="space-y-2">
+                  {familiaRecebe.map((item) => (
+                    <li key={item} className="typo-body text-w70 flex items-start gap-2.5">
+                      <span className="w-1 h-1 rounded-full bg-white/40 mt-2.5 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. METODOLOGIA COMPLETA (explicação única de Global Mobility Assurance + Em resumo de 3 linhas) */}
+      <section
+        id="metodologia"
+        className="section-spacing bg-black px-6 lg:px-20 border-b border-b18 scroll-mt-24"
+      >
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mb-10">
+            <p className="typo-eyebrow mb-4">{t("common.gma")}</p>
+            <h2 className="typo-h2 text-white mb-6">
+              A metodologia que torna mensurável a dimensão humana da mobilidade internacional.
+            </h2>
+          </div>
+
+          {/* Bloco "Em resumo" de 3 linhas no topo da metodologia */}
+          <div className="border border-gold/40 bg-[#09183D]/40 p-6 md:p-8 mb-12">
+            <p className="typo-eyebrow mb-4">{t("methodology.summary_eyebrow")}</p>
+            <div className="space-y-3">
+              <p className="typo-body text-white/90">
+                <strong className="font-semibold text-gold-l">
+                  {t("methodology.summary_what_label")}
+                </strong>{" "}
+                {t("methodology.summary_what")}
+              </p>
+              <p className="typo-body text-white/90">
+                <strong className="font-semibold text-gold-l">
+                  {t("methodology.summary_who_label")}
+                </strong>{" "}
+                {t("methodology.summary_who")}
+              </p>
+              <p className="typo-body text-white/90">
+                <strong className="font-semibold text-gold-l">
+                  {t("methodology.summary_benefit_label")}
+                </strong>{" "}
+                {t("methodology.summary_benefit")}
+              </p>
+            </div>
+          </div>
+
+          {/* Três pilares da metodologia */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-10">
+            {pilaresMetodologia.map((p) => (
+              <article key={p.num} className="border border-b18 bg-w05 p-8 flex flex-col">
+                <span className="typo-caption font-semibold text-gold mb-3">
+                  {p.num}
+                </span>
+                <h3 className="typo-h3 text-white mb-3">{p.title}</h3>
+                <p className="typo-body text-w70">{p.body}</p>
+              </article>
             ))}
           </div>
 
-          {/* 5. VELOCIDADE DE EXECUÇÃO */}
-          <div className="mt-14 md:mt-16 mx-auto max-w-[880px] border-l-2 border-gold pl-6 md:pl-8">
-            <p className="font-body text-[10px] tracking-[0.32em] uppercase text-gold mb-3">
-              Ação coordenada
-            </p>
-            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/85 leading-[1.85]">
-              A Human Mobility Assurance não termina no diagnóstico. Quando os
-              indicadores identificam uma necessidade específica, a MOOVIA pode
-              ativar e coordenar especialistas qualificados para apoiar o
-              executivo e a família, mantendo a intervenção alinhada aos
-              fatores identificados.
-            </p>
+          {/* Bloco expansível "Saiba mais" com detalhes preservados da home anterior */}
+          <div className="border border-b18 bg-black-2/60">
+            <button
+              type="button"
+              onClick={() => setShowFactors((prev) => !prev)}
+              aria-expanded={showFactors}
+              className="w-full flex items-center justify-between px-6 py-4 text-left typo-caption font-semibold text-gold hover:text-gold-l transition-colors"
+            >
+              <span>
+                {showFactors ? t("common.show_less") : t("common.learn_more")}
+              </span>
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-200 ${
+                  showFactors ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {showFactors && (
+              <div className="p-6 md:p-8 border-t border-b18 space-y-6">
+                <p className="typo-body text-w70">
+                  As empresas investem milhares de euros para transferir talentos, mas os principais fatores que levam uma missão internacional a falhar raramente são medidos: são humanos e familiares.
+                </p>
+                <p className="typo-body text-w70">
+                  Muitas empresas já trabalham com parceiros de relocation, imobiliário ou fiscalidade de confiança. A MOOVIA atua em coordenação com esses parceiros para alinhar as intervenções práticas aos fatores humanos identificados ao longo da transição.
+                </p>
+                <p className="typo-body text-gold-l font-semibold">
+                  A avaliação do sucesso da mobilidade internacional não deve terminar no momento da chegada, mas consolidar-se na integração e permanência do colaborador e da família.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
-      
-      {/* 6. VALIDAÇÃO JURÍDICA */}
-      <section className="bg-[#06091a] pb-20 md:pb-28 px-6 lg:px-20 relative overflow-hidden">
-        <div className="mx-auto max-w-[900px]">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative p-8 md:p-12 border-l-2 border-gold/40 bg-w05/40"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <svg className="w-5 h-5 text-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              <span className="font-body text-[10px] tracking-[0.32em] uppercase text-gold/80">Validação Jurídica</span>
-            </div>
-            <blockquote className="font-display italic text-[18px] md:text-[22px] font-[300] text-w85 leading-[1.6]">
-              "O modelo jurídico da MOOVIA foi objeto de análise por uma sociedade 
-              de advogados de referência em Portugal, tendo sido considerado 
-              juridicamente viável, produzindo indicadores que permitem acompanhar 
-              a evolução da mobilidade e apoiar a avaliação do retorno sobre o 
-              investimento realizado."
-            </blockquote>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* 7. NOSSO INSIGHT */}
-      <NossaTeseSection />
-
-      {/* 8. CONFIDENCIALIDADE E SEPARAÇÃO DE VISÕES */}
-      <section className="bg-[#06091a] py-20 md:py-28 px-6 lg:px-20">
+      {/* 5. CONFIDENCIALIDADE, PROTEÇÃO DE DADOS E VALIDAÇÃO JURÍDICA */}
+      <section className="section-spacing bg-black-2 px-6 lg:px-20 border-b border-b18">
         <div className="mx-auto max-w-[1200px]">
-          <div className="bg-w05 border border-b18 p-8 md:p-10 max-w-[1200px] mx-auto">
-            <p className="font-body text-[11px] tracking-[0.28em] uppercase text-gold mb-6 text-center">
-              Confidencialidade e separação de visões
-            </p>
-            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/90 leading-[1.8] max-w-[900px] mx-auto text-center">
-              O acompanhamento do participante é confidencial e realizado em conformidade com a legislação aplicável.
-            </p>
-            <p className="font-body text-[15px] md:text-[16px] font-[300] text-white/80 leading-[1.8] max-w-[900px] mx-auto text-center mt-4">
-              A empresa não recebe respostas individuais nem informação confidencial do participante. Recebe apenas indicadores agregados e estatísticos, sem acesso às entrevistas, às respostas individuais ou ao dashboard pessoal do colaborador.
-            </p>
-            
-            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 mt-12 max-w-[1100px] mx-auto items-center">
-              <div className="space-y-6">
-                <div className="border border-b18 bg-w05 p-6">
-                  <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                    Dashboard Individual
-                  </p>
-                  <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
-                    Exclusivo do participante, com o seu roadmap e recomendações pessoais.
-                  </p>
-                </div>
-                <div className="border border-b18 bg-w05 p-6">
-                  <p className="font-body text-[11px] tracking-[0.24em] uppercase text-gold mb-3">
-                    Dashboard Corporativo
-                  </p>
-                  <p className="font-body text-[14px] font-[300] text-white/80 leading-[1.7]">
-                    Apenas indicadores agregados, tendências e recomendações de gestão para a empresa.
-                  </p>
-                </div>
-              </div>
+          <div className="mb-12">
+            <p className="typo-eyebrow mb-4">{t("home.trust.eyebrow")}</p>
+            <h2 className="typo-h2 text-white">{t("home.trust.title")}</h2>
+          </div>
 
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative group"
-              >
-                <div className="absolute -inset-2 bg-gold/10 rounded-lg blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
-                <div className="relative rounded-lg overflow-hidden border border-gold/30 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.7)]">
-                  <img 
-                    src={dashboardMock.url} 
-                    alt="Mock do Dashboard Corporativo MOOVIA" 
-                    className="w-full h-auto grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                </div>
-                <div className="mt-4 flex items-center justify-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                  <span className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/80">Visualização de Dashboard Corporativo</span>
-                </div>
-              </motion.div>
+          <div className="space-y-6">
+            <div className="border border-b18 bg-w05 p-6 md:p-8">
+              <h3 className="typo-h3 text-gold-l mb-3">
+                {t("home.trust.legal_validation_label")}
+              </h3>
+              <p className="typo-body text-white/90">
+                {t("home.trust.legal_validation_text")}
+              </p>
             </div>
 
-            <p className="font-body text-[12px] font-[300] text-white/50 leading-[1.7] max-w-[900px] mx-auto mt-12 text-center">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="border border-b18 bg-w05 p-6">
+                <h3 className="typo-h3 text-white mb-2">Relatório Individual</h3>
+                <p className="typo-body text-w70">
+                  Exclusivo do participante, confidencial, com o seu plano e recomendações pessoais.
+                </p>
+              </div>
+              <div className="border border-gold/30 bg-[#09183D]/35 p-6">
+                <h3 className="typo-h3 text-gold-l mb-2">Painel Corporativo</h3>
+                <p className="typo-body text-white/90">
+                  Apenas indicadores agregados e recomendações de gestão para a empresa.
+                </p>
+              </div>
+            </div>
+
+            <p className="typo-caption text-w70">
               Os resultados produzidos pela MOOVIA não constituem instrumento de avaliação de desempenho e não podem, por si só, fundamentar decisões de remuneração, promoção, procedimento disciplinar ou cessação da relação laboral. A participação no programa é voluntária.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 9. COMO FUNCIONA — O MOOVIA FRAMEWORK */}
-      <section className="bg-black pt-20 md:pt-28 px-6 lg:px-20">
-        <div className="mx-auto max-w-[1100px] text-center">
-          <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
-            Como funciona
-          </p>
-          <h2 className="font-display text-[clamp(28px,4vw,52px)] font-[200] text-white leading-[1.05] tracking-[-0.03em] mb-8">
-            A mesma metodologia.{" "}
-            <span className="text-gold-l italic">Aplicada à sua equipa.</span>
-          </h2>
-          <p className="font-body text-[15px] md:text-[17px] font-[300] text-w35 leading-[1.8] max-w-[780px] mx-auto">
-            O MOOVIA Framework coordena cada etapa da mobilidade do seu colaborador, desde o assessment inicial até à integração completa da família, com o mesmo rigor que aplicamos a cada mandato individual.
-          </p>
+      {/* 6. FORMULÁRIO DE CONTACTO (#contacto e #lead-form) */}
+      <section
+        id="contacto"
+        className="section-spacing bg-black px-6 lg:px-20 scroll-mt-20"
+      >
+        <div id="lead-form" className="mx-auto max-w-[720px]">
+          <div className="mb-10 text-center">
+            <p className="typo-eyebrow mb-4">{t("empresas.form.eyebrow")}</p>
+            <h2 className="typo-h2 text-white mb-3">{t("empresas.form.title")}</h2>
+            <p className="typo-body text-w70 mx-auto">
+              {t("empresas.form.subtitle")}
+            </p>
+          </div>
+          <UnifiedLeadForm context="empresas" />
         </div>
-      </section>
-      <ProcessSection />
-
-      {/* 10. GLOBAL MOBILITY SUCCESS — EVERYBODY WINS */}
-      <EverybodyWins />
-
-      {/* 11. MODELO DE NEGÓCIO MOOVIA */}
-      <BusinessModelSection />
-
-      {/* 12. FORMULÁRIO */}
-      <section id="lead-form" className="bg-black py-24 md:py-32 px-6 lg:px-20">
-        <UnifiedLeadForm context="empresas" />
       </section>
     </SiteLayout>
   );

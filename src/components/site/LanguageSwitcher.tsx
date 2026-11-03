@@ -42,20 +42,20 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
       <button
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "flex items-center gap-2 border border-b35 px-3 py-2 text-w35 hover:text-gold hover:border-gold transition-all group",
+          "flex items-center gap-2 border border-gold/50 bg-[#06091a]/80 px-3 py-2 text-white hover:text-gold-l hover:border-gold transition-all group",
           compact && "px-2 py-1.5"
         )}
         aria-label="Select language"
       >
         <Current className="w-5 h-3.5 rounded-[1px] shadow-sm" title={current.label} />
         {!compact && (
-          <span className="font-body font-[500] text-[11px] tracking-[0.14em] uppercase">
+          <span className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase">
             {current.short}
           </span>
         )}
         <ChevronDown
           size={12}
-          className={cn("transition-transform text-gold/60", open && "rotate-180")}
+          className={cn("transition-transform text-gold-l", open && "rotate-180")}
         />
       </button>
 

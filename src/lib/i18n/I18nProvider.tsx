@@ -1,15 +1,20 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { useRouterState } from "@tanstack/react-router";
-import i18n, { detectInitialLang, setLang as setLangCore, reapplyCurrentLang, type Lang } from "@/i18n";
+import i18n, {
+  detectInitialLang,
+  resourceKey,
+  setLang as setLangCore,
+  reapplyCurrentLang,
+  type Lang,
+} from "@/i18n";
 
 // Compatibility shim so existing imports of `useI18n` keep working.
 // New code can still use `useTranslation()` from `react-i18next`.
 
 function DomLangSync() {
   // Re-applies the current language whenever the URL changes so newly
-  // mounted route content gets translated. No MutationObserver, we just
-  // re-run the DOM walker after navigations.
+  // mounted route content gets translated.
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   useEffect(() => {
     reapplyCurrentLang();
@@ -18,9 +23,12 @@ function DomLangSync() {
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
+  const [, setHydratedTick] = useState(0);
+
   useEffect(() => {
     const detected = detectInitialLang();
-    if (i18n.language !== detected) {
+    const targetRes = resourceKey(detected);
+    if (i18n.language !== targetRes) {
       setLangCore(detected);
     } else {
       if (typeof document !== "undefined") {
@@ -28,6 +36,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       }
       reapplyCurrentLang();
     }
+    setHydratedTick((n) => n + 1);
   }, []);
 
   return (
@@ -52,9 +61,12 @@ export function useI18n() {
     };
   }, [i18nInstance]);
 
-  const stored = (typeof window !== "undefined" ? (localStorage.getItem("mv_lang") as Lang | null) : null);
+  const stored =
+    typeof window !== "undefined"
+      ? (localStorage.getItem("mv_lang") as Lang | null)
+      : null;
   const raw = i18nInstance.language as string | undefined;
-  const fallback: Lang = raw === "en" ? "en" : raw === "es" ? "es" : "pt-BR";
+  const fallback: Lang = raw === "en" ? "en" : raw === "es" ? "es" : "pt-PT";
   return {
     locale: stored ?? fallback,
     setLocale: (l: string) => setLangCore(l as Lang),

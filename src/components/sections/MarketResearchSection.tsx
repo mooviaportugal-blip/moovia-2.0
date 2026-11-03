@@ -258,7 +258,7 @@ export function MarketResearchSection() {
                 Custo total estimado por expatriado (por missão)
               </p>
               <p className="font-display text-[clamp(1.7rem,7vw,3.6rem)] font-[300] text-gold-l leading-none tracking-[-0.02em] break-words">
-                €215K <span className="text-gold/60">–</span> €470K
+                €215K <span className="text-gold/60">a</span> €470K
               </p>
 
               <p className="font-body text-[12px] font-[300] text-w35/70 leading-[1.6] mt-3">
