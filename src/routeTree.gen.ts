@@ -48,6 +48,7 @@ import { Route as AdminSoundRouteImport } from './routes/admin.sound'
 import { Route as AdminUxRouteImport } from './routes/admin.ux'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as HomeBlackvRouteImport } from './routes/home_.blackv'
 import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
 import { Route as AdminSettingsFinancialRouteImport } from './routes/admin.settings.financial'
 import { Route as AdminSettingsNotificationsRouteImport } from './routes/admin.settings.notifications'
@@ -252,6 +253,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HomeBlackvRoute = HomeBlackvRouteImport.update({
+  id: '/home_/blackv',
+  path: '/home/blackv',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -333,6 +339,7 @@ export interface FileRoutesByFullPath {
   '/admin/sound': typeof AdminSoundRoute
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/home/blackv': typeof HomeBlackvRoute
   '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -380,6 +387,7 @@ export interface FileRoutesByTo {
   '/admin/sound': typeof AdminSoundRoute
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/home/blackv': typeof HomeBlackvRoute
   '/admin': typeof AdminIndexRoute
   '/blog': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -430,6 +438,7 @@ export interface FileRoutesById {
   '/admin/sound': typeof AdminSoundRoute
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/home_/blackv': typeof HomeBlackvRoute
   '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -481,6 +490,7 @@ export interface FileRouteTypes {
     | '/admin/sound'
     | '/admin/ux'
     | '/blog/$slug'
+    | '/home/blackv'
     | '/admin/'
     | '/blog/'
     | '/admin/settings/financial'
@@ -528,6 +538,7 @@ export interface FileRouteTypes {
     | '/admin/sound'
     | '/admin/ux'
     | '/blog/$slug'
+    | '/home/blackv'
     | '/admin'
     | '/blog'
     | '/admin/settings/financial'
@@ -577,6 +588,7 @@ export interface FileRouteTypes {
     | '/admin/sound'
     | '/admin/ux'
     | '/blog/$slug'
+    | '/home_/blackv'
     | '/admin/'
     | '/blog/'
     | '/admin/settings/financial'
@@ -611,6 +623,7 @@ export interface RootRouteChildren {
   SoundbrandRoute: typeof SoundbrandRoute
   TermosRoute: typeof TermosRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  HomeBlackvRoute: typeof HomeBlackvRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ApiPublicMercadopagoWebhookRoute: typeof ApiPublicMercadopagoWebhookRoute
   ApiPublicMpTestRoute: typeof ApiPublicMpTestRoute
@@ -892,6 +905,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/home_/blackv': {
+      id: '/home_/blackv'
+      path: '/home/blackv'
+      fullPath: '/home/blackv'
+      preLoaderRoute: typeof HomeBlackvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/settings/': {
       id: '/admin/settings/'
       path: '/'
@@ -1035,6 +1055,7 @@ const rootRouteChildren: RootRouteChildren = {
   SoundbrandRoute: SoundbrandRoute,
   TermosRoute: TermosRoute,
   BlogSlugRoute: BlogSlugRoute,
+  HomeBlackvRoute: HomeBlackvRoute,
   BlogIndexRoute: BlogIndexRoute,
   ApiPublicMercadopagoWebhookRoute: ApiPublicMercadopagoWebhookRoute,
   ApiPublicMpTestRoute: ApiPublicMpTestRoute,

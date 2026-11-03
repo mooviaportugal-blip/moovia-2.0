@@ -1,0 +1,466 @@
+/* ==========================================================================
+   THEME BLACKV — MOOVIA MINIMALISTA TECH (PRETO E BRANCO)
+   Totalmente escopado sob .theme-blackv. Nenhuma regra global.
+   ========================================================================== */
+
+.theme-blackv {
+  /* Variáveis locais redefinidas exclusivamente no escopo */
+  --black: #000000;
+  --black-2: #0a0a0a;
+  --black-3: #111111;
+  --gold: #ffffff;
+  --gold-m: #d4d4d4;
+  --gold-l: #e5e5e5;
+  --gold-xl: #ffffff;
+  --navy: #111111;
+  --teal: #a3a3a3;
+  --white: #ffffff;
+  --w70: #a3a3a3;
+  --w50: #8a8a8a;
+  --w35: #737373;
+  --w12: rgba(255, 255, 255, 0.08);
+  --w05: #111111;
+  --b18: #262626;
+  --b35: #404040;
+  --navy-border: #262626;
+
+  /* Fontes tech */
+  --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-family: var(--font-body) !important;
+  min-height: 100vh;
+}
+
+/* ── TIPOGRAFIA TECH ESCOPADA ── */
+.theme-blackv,
+.theme-blackv h1,
+.theme-blackv h2,
+.theme-blackv h3,
+.theme-blackv h4,
+.theme-blackv h5,
+.theme-blackv h6,
+.theme-blackv p,
+.theme-blackv span,
+.theme-blackv a,
+.theme-blackv button,
+.theme-blackv div {
+  font-family: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Eyebrows, rótulos técnicos e selos em JetBrains Mono */
+.theme-blackv .typo-eyebrow,
+.theme-blackv footer h5,
+.theme-blackv [class*="ClientBeneficiaryBadge"],
+.theme-blackv span[class*="tracking-[0.12em]"],
+.theme-blackv p[class*="tracking-[0.28em]"] {
+  font-family: "JetBrains Mono", monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+}
+
+.theme-blackv .typo-eyebrow {
+  color: #a3a3a3 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* Títulos principais em branco puro */
+.theme-blackv h1,
+.theme-blackv h2,
+.theme-blackv h3,
+.theme-blackv .typo-h1,
+.theme-blackv .typo-h2,
+.theme-blackv .typo-h3 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Corpo de texto em cinzento claro com leitura confortável */
+.theme-blackv p,
+.theme-blackv .typo-body,
+.theme-blackv .text-w70,
+.theme-blackv [class*="text-w70"] {
+  color: #a3a3a3 !important;
+  line-height: 1.6 !important;
+}
+
+.theme-blackv strong,
+.theme-blackv b {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.theme-blackv .typo-caption,
+.theme-blackv .text-w35 {
+  color: #737373 !important;
+}
+
+/* ── FUNDOS E SECÇÕES ── */
+.theme-blackv main,
+.theme-blackv section,
+.theme-blackv [class*="bg-black"],
+.theme-blackv [class*="bg-black-2"],
+.theme-blackv [class*="bg-[#06091a]"],
+.theme-blackv [class*="bg-[#09183D]"] {
+  background-color: #000000 !important;
+}
+
+/* Remover gradientes decorativos coloridos */
+.theme-blackv .hero-section > div:first-child > div {
+  background: none !important;
+}
+
+.theme-blackv section > div[aria-hidden] {
+  background: none !important;
+  display: none !important;
+}
+
+/* Faixa final com fundo preto elevado minimalista */
+.theme-blackv section:has(a[href*="contacto"]) {
+  background-color: #0a0a0a !important;
+}
+
+/* Divisórias entre secções: linhas finas #262626 */
+.theme-blackv section,
+.theme-blackv [class*="border-b18"],
+.theme-blackv [class*="border-gold/25"] {
+  border-color: #262626 !important;
+}
+
+/* ── CARTÕES E BLOCOS (#111111, BORDAS #262626, RAIO 6px) ── */
+.theme-blackv article,
+.theme-blackv [class*="bg-w05"],
+.theme-blackv .grid > div > article,
+.theme-blackv div[class*="border border-b18 bg-black/60"] {
+  background-color: #111111 !important;
+  border: 1px solid #262626 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.theme-blackv article:hover {
+  border-color: #404040 !important;
+}
+
+/* Cartão em destaque (Empresas / Cliente) */
+.theme-blackv article.lg\:col-span-7,
+.theme-blackv [class*="border-2 border-gold/50"] {
+  background-color: #141414 !important;
+  border: 1px solid #404040 !important;
+  border-radius: 6px !important;
+}
+
+/* Ícones de cartões */
+.theme-blackv article .w-10,
+.theme-blackv article .w-11 {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333333 !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+}
+
+.theme-blackv article .w-10 svg,
+.theme-blackv article .w-11 svg,
+.theme-blackv article svg {
+  color: #ffffff !important;
+}
+
+.theme-blackv article svg.text-w70 {
+  color: #a3a3a3 !important;
+}
+
+/* Selos Cliente / Beneficiário */
+.theme-blackv span[class*="ClientBeneficiaryBadge"] {
+  border-radius: 4px !important;
+  font-size: 0.72rem !important;
+}
+
+.theme-blackv span[class*="border-gold/50"] {
+  background-color: #1f1f1f !important;
+  border: 1px solid #404040 !important;
+  color: #ffffff !important;
+}
+
+.theme-blackv span[class*="border-gold/50"] span[class*="rounded-full"] {
+  background-color: #ffffff !important;
+}
+
+.theme-blackv span[class*="border-white/15"] {
+  background-color: #141414 !important;
+  border: 1px solid #262626 !important;
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv span[class*="border-white/15"] span[class*="rounded-full"] {
+  background-color: #737373 !important;
+}
+
+/* Linha de suporte da secção Ganhos */
+.theme-blackv p[class*="border-l-2 border-gold"] {
+  border-left: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Bloco de validação jurídica em Confiança */
+.theme-blackv div[class*="border-b18 bg-black/60"] h3 {
+  color: #ffffff !important;
+}
+
+.theme-blackv div[class*="border-b18 bg-black/60"] p {
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv div[class*="border-b18 bg-black/60"] span {
+  color: #ffffff !important;
+}
+
+/* ── BOTÕES E LINKS DE AÇÃO (ALTO CONTRASTE) ── */
+
+/* Botão primário: fundo branco sólido, texto preto, cantos 4px */
+.theme-blackv a[class*="bg-gold"],
+.theme-blackv button[class*="bg-gold"],
+.theme-blackv .btn-primary {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.theme-blackv a[class*="bg-gold"]:hover,
+.theme-blackv button[class*="bg-gold"]:hover,
+.theme-blackv .btn-primary:hover {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+  border-color: #e5e5e5 !important;
+}
+
+/* Botão secundário: contorno fino, texto branco, cantos 4px */
+.theme-blackv a[class*="border-gold"],
+.theme-blackv button[class*="border-gold"],
+.theme-blackv .btn-secondary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #404040 !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+.theme-blackv a[class*="border-gold"]:hover,
+.theme-blackv button[class*="border-gold"]:hover,
+.theme-blackv .btn-secondary:hover {
+  border-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+}
+
+/* Link de metodologia ("Conhecer a metodologia...") */
+.theme-blackv a[href*="metodologia"] {
+  color: #ffffff !important;
+}
+
+.theme-blackv a[href*="metodologia"]:hover {
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv a[href*="metodologia"] svg {
+  color: #ffffff !important;
+}
+
+/* ── CABEÇALHO (NAV) ── */
+.theme-blackv nav {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  border-bottom: 1px solid #262626 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Links do menu */
+.theme-blackv nav a.typo-caption,
+.theme-blackv nav .text-gold-l {
+  color: #a3a3a3 !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+.theme-blackv nav a.typo-caption:hover,
+.theme-blackv nav .text-gold-l:hover {
+  color: #ffffff !important;
+}
+
+.theme-blackv nav a.typo-caption span {
+  background-color: #ffffff !important;
+}
+
+/* Botão do CTA no nav */
+.theme-blackv nav a[href*="contacto"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+}
+
+.theme-blackv nav a[href*="contacto"]:hover {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+}
+
+/* Seletor de idioma */
+.theme-blackv nav button[aria-label="Select language"] {
+  background-color: #111111 !important;
+  border: 1px solid #262626 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+}
+
+.theme-blackv nav button[aria-label="Select language"]:hover {
+  border-color: #555555 !important;
+}
+
+.theme-blackv nav button[aria-label="Select language"] svg {
+  color: #ffffff !important;
+}
+
+.theme-blackv div[class*="min-w-[220px]"] {
+  background-color: #111111 !important;
+  border: 1px solid #262626 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9) !important;
+}
+
+.theme-blackv div[class*="min-w-[220px]"] button {
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv div[class*="min-w-[220px]"] button:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+/* Menu Mobile e Hambúrguer */
+.theme-blackv nav button[aria-label="Menu"] {
+  background-color: #111111 !important;
+  border: 1px solid #262626 !important;
+  border-radius: 4px !important;
+}
+
+.theme-blackv nav button[aria-label="Menu"] div {
+  background-color: #ffffff !important;
+}
+
+.theme-blackv nav div[style*="height: 100dvh"],
+.theme-blackv nav div[style*="position: fixed"] {
+  background-color: #000000 !important;
+}
+
+.theme-blackv nav div[style*="height: 100dvh"] a {
+  color: #ffffff !important;
+}
+
+.theme-blackv nav div[style*="height: 100dvh"] a:hover {
+  color: #a3a3a3 !important;
+}
+
+/* ── LOGOS DA MARCA (100% BRANCO VIA FILTRO SEGURO) ── */
+.theme-blackv nav a[href="/"] img,
+.theme-blackv footer a[href="/"] img,
+.theme-blackv footer img[alt*="MOOVIA"] {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+/* Selo RGPD em escala de cinzentos */
+.theme-blackv img[alt*="RGPD"],
+.theme-blackv img[alt*="GDPR"] {
+  filter: grayscale(1) brightness(1.2) !important;
+}
+
+/* ── HERO MEDIA (ESCALA DE CINZENTOS TECH) ── */
+.theme-blackv .hero-section {
+  background-color: #000000 !important;
+  border-bottom: 1px solid #262626 !important;
+}
+
+.theme-blackv .hero-section img,
+.theme-blackv .hero-section video {
+  filter: grayscale(1) brightness(0.85) contrast(1.1) !important;
+}
+
+.theme-blackv .hero-section div[style*="radial-gradient"] {
+  background: radial-gradient(ellipse 85% 85% at center, rgba(0, 0, 0, 0.4) 10%, #000000 95%) !important;
+}
+
+/* ── RODAPÉ (FOOTER) ── */
+.theme-blackv footer {
+  background-color: #000000 !important;
+  border-top: 1px solid #262626 !important;
+}
+
+.theme-blackv footer h5 {
+  color: #ffffff !important;
+  font-size: 0.72rem !important;
+}
+
+.theme-blackv footer a {
+  color: #737373 !important;
+  transition: color 0.2s ease !important;
+}
+
+.theme-blackv footer a:hover {
+  color: #ffffff !important;
+}
+
+.theme-blackv footer div.pt-10 {
+  border-top: 1px solid #262626 !important;
+}
+
+.theme-blackv footer div.pt-10 span,
+.theme-blackv footer div.pt-8 p {
+  color: #737373 !important;
+}
+
+.theme-blackv footer div.pt-10 a {
+  color: #a3a3a3 !important;
+}
+
+.theme-blackv footer div.pt-10 a:hover {
+  color: #ffffff !important;
+}
+
+.theme-blackv footer a[aria-label] {
+  color: #737373 !important;
+}
+
+.theme-blackv footer a[aria-label]:hover {
+  color: #ffffff !important;
+}
+
+/* Custom Cursor em tom neutro */
+.theme-blackv img[alt="Cursor"] {
+  filter: grayscale(1) brightness(2) !important;
+}
+
+/* Granulação subtil */
+.theme-blackv .grain {
+  opacity: 0.02 !important;
+}
+
+/* ── ACESSIBILIDADE E MOVIMENTO REDUZIDO ── */
+@media (prefers-reduced-motion: reduce) {
+  .theme-blackv * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
