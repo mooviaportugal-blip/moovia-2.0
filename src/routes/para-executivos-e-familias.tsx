@@ -72,7 +72,6 @@ function ParaExecutivosPage() {
         {/* Seção 3: CTA final */}
         <FinalCtaStrip
           title="Dúvidas sobre o seu apoio à mobilidade?"
-          buttonText="Falar com a MOOVIA"
           buttonTo="/contacto"
         >
           <p className="font-body text-[15px] md:text-[17px] text-white/80 font-[300] leading-relaxed">
@@ -117,9 +116,7 @@ function HeroSection() {
 
             {/* Botão primário padronizado com Home, Nav e CTAs */}
             <div>
-              <CtaButton to="/contacto">
-                Falar com a MOOVIA
-              </CtaButton>
+              <CtaButton to="/contacto" />
             </div>
           </div>
 

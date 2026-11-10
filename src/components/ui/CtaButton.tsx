@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import "@/i18n";
 
 export interface CtaButtonProps {
   to?: string;
@@ -15,11 +17,14 @@ export function CtaButton({
   to = "/contacto",
   onClick,
   className = "",
-  children = "Falar com a MOOVIA",
+  children,
   size = "default",
   type = "button",
   asButton = false,
 }: CtaButtonProps) {
+  const { t } = useTranslation();
+  const label = children ?? t("nav.cta");
+
   const sizeClasses =
     size === "nav"
       ? "px-5 py-2.5"
@@ -32,14 +37,14 @@ export function CtaButton({
   if (asButton) {
     return (
       <button type={type} onClick={onClick} className={baseClasses}>
-        {children}
+        {label}
       </button>
     );
   }
 
   return (
     <Link to={to} onClick={onClick} className={baseClasses}>
-      {children}
+      {label}
     </Link>
   );
 }

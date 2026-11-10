@@ -60,7 +60,6 @@ function SobrePage() {
         <SobreComoNosEncaixamos />
         <FinalCtaStrip
           title="Tornar a mobilidade internacional mais informada, mais solidária e mais responsável perante as pessoas e os resultados do negócio."
-          buttonText="Falar com a MOOVIA"
           subtitle="Cada proposta é adaptada ao perfil e à complexidade de cada transição."
         />
       </div>

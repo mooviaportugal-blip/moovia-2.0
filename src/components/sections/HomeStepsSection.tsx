@@ -3,8 +3,10 @@ import "@/i18n";
 import { ClipboardCheck, Compass, Activity, Check, type LucideIcon } from "lucide-react";
 
 export interface StepCardData {
+  number: string;
   icon: LucideIcon;
   title: string;
+  highlight: string;
   body: string;
   items: string[];
 }
@@ -14,8 +16,10 @@ export function HomeStepsSection() {
 
   const steps: StepCardData[] = [
     {
+      number: "01",
       icon: ClipboardCheck,
       title: t("home.steps.step1_title"),
+      highlight: t("home.steps.step1_highlight"),
       body: t("home.steps.step1_body"),
       items: [
         t("home.steps.step1_item1"),
@@ -24,17 +28,22 @@ export function HomeStepsSection() {
       ],
     },
     {
+      number: "02",
       icon: Compass,
       title: t("home.steps.step2_title"),
+      highlight: t("home.steps.step2_highlight"),
       body: t("home.steps.step2_body"),
       items: [
         t("home.steps.step2_item1"),
         t("home.steps.step2_item2"),
+        t("home.steps.step2_item3"),
       ],
     },
     {
+      number: "03",
       icon: Activity,
       title: t("home.steps.step3_title"),
+      highlight: t("home.steps.step3_highlight"),
       body: t("home.steps.step3_body"),
       items: [
         t("home.steps.step3_item1"),
@@ -60,16 +69,24 @@ export function HomeStepsSection() {
             const Icon = step.icon;
             return (
               <article
-                key={step.title}
+                key={step.number}
                 className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col justify-between h-full rounded-sm transition-colors hover:border-gold/40"
               >
                 <div>
-                  <div className="w-11 h-11 rounded-sm border border-gold/30 bg-gold/10 flex items-center justify-center text-gold mb-6 shrink-0">
-                    <Icon size={20} strokeWidth={1.6} />
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-11 h-11 rounded-sm border border-gold/30 bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                      <Icon size={20} strokeWidth={1.6} />
+                    </div>
+                    <span className="font-urbanist text-[13px] tracking-[0.2em] uppercase text-[#9B7A50] font-[600]">
+                      {step.number}
+                    </span>
                   </div>
-                  <h3 className="font-urbanist text-[16px] md:text-[18px] font-[600] tracking-wider uppercase text-[#9B7A50] mb-3">
+                  <h3 className="font-urbanist text-[16px] md:text-[18px] font-[600] tracking-wider uppercase text-[#9B7A50] mb-2">
                     {step.title}
                   </h3>
+                  <p className="font-urbanist text-[15px] font-[500] text-white leading-snug mb-3">
+                    {step.highlight}
+                  </p>
                   <p className="typo-body text-w70 mb-6">{step.body}</p>
                 </div>
 

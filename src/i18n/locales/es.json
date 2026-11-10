@@ -2,7 +2,7 @@
   "common": {
     "brand": "MOOVIA",
     "gma": "Global Mobility Assurance",
-    "cta_talk": "Hablar con MOOVIA",
+    "cta_talk": "Hablemos",
     "learn_more": "Saber más",
     "show_less": "Mostrar menos"
   },
@@ -18,16 +18,16 @@
     "assessment": "Evaluación Estratégica",
     "blog": "Insights",
     "contact": "Contacto",
-    "cta": "Hablar con MOOVIA",
+    "cta": "Hablemos",
     "about": "Sobre",
     "team": "Equipo"
   },
   "hero": {
     "eyebrow": "GLOBAL MOBILITY ASSURANCE",
-    "title": "Inteligencia para los riesgos humanos de las misiones internacionales",
-    "support_line": "Identifique y gestione los riesgos de adaptación de ejecutivos en misiones internacionales",
-    "subtitle": "MOOVIA ayuda a empresas y ejecutivos a identificar y abordar los desafíos humanos, culturales y familiares que pueden comprometer las misiones internacionales, antes de que se conviertan en problemas de desempeño, retención o repatriación.",
-    "cta_primary": "Hablar con MOOVIA",
+    "title": "Inteligencia de riesgo humano para la movilidad global.",
+    "support_line": "Proteger a las personas, el rendimiento y su inversión en movilidad.",
+    "subtitle": "MOOVIA aporta inteligencia estructurada y monitorización continua del riesgo a la movilidad internacional, ayudando a las organizaciones a anticipar desafíos humanos y familiares antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
+    "cta_primary": "Hablemos",
     "cta_secondary": "Ver cómo funciona MOOVIA",
     "chips": {
       "chip1": "Preparación y adaptación",
@@ -51,34 +51,43 @@
       "col3_body": "Dificultades en la integración familiar, aislamiento social o ajuste cultural pueden afectar al colaborador y la continuidad de la misión.",
       "col3_help": "Cómo ayuda MOOVIA: ofrece evaluaciones familiares confidenciales, check-ins periódicos y orientación personalizada.",
       "stat_line": "Para un ejecutivo sénior con un salario de 150 mil euros, una misión internacional problemática puede destruir entre 300 mil y 500 mil euros en costos de movilidad ya invertidos, productividad perdida, repatriación y reemplazo.",
-      "conclusion_line": "MOOVIA transforma la información humana y contextual en recomendaciones prácticas, brindando a los colaboradores y a las familias apoyo confidencial y a los equipos de Global Mobility la información que necesitan para actuar."
+      "conclusion_line": "MOOVIA transforma la información humana y contextual en recomendaciones prácticas, brindando a los colaboradores y a las familias apoyo confidencial y a los equipos de Global Mobility la información que necesitan para actuar.",
+      "bottom_title": "De los riesgos humanos a la inteligencia de negocio.",
+      "bottom_text": "MOOVIA transforma información humana, familiar y contextual en inteligencia de riesgo accionable, ayudando a las organizaciones a anticipar problemas, decidir con información y proteger los resultados de las misiones."
     },
     "steps": {
-      "eyebrow": "Cómo funciona",
-      "title": "Lo que hacemos, en tres pasos",
-      "step1_title": "EVALUAR",
-      "step1_body": "Identificamos los factores humanos que más influyen en la adaptación del ejecutivo y de la familia, desde antes del traslado.",
-      "step1_item1": "Preparación y adaptación",
-      "step1_item2": "Familia y contexto",
+      "eyebrow": "CÓMO FUNCIONA",
+      "title": "De la información humana a la acción preventiva",
+      "step1_title": "Evaluar",
+      "step1_highlight": "Comprender los riesgos humanos antes de que se conviertan en riesgos de negocio.",
+      "step1_body": "Evaluamos los factores humanos, familiares y organizativos que influyen en el éxito de una misión internacional.",
+      "step1_item1": "Preparación del colaborador y de la familia",
+      "step1_item2": "Adaptación cultural y personal",
       "step1_item3": "Apoyo organizacional",
-      "step2_title": "CONECTAR E INTERPRETAR",
-      "step2_body": "Transformamos esos factores en indicadores y recomendaciones prácticas, interpretados por especialistas.",
-      "step2_item1": "Señales estructuradas a lo largo del tiempo",
-      "step2_item2": "Motor de decisión con revisión especializada",
-      "step3_title": "ACTUAR",
-      "step3_body": "Medimos la evolución a lo largo del proceso y orientamos la acción preventiva.",
-      "step3_item1": "Recomendaciones para el colaborador",
-      "step3_item2": "Recomendaciones para la empresa",
-      "step3_item3": "Nuevos check-ins"
+      "step2_title": "Conectar e interpretar",
+      "step2_highlight": "Convertir datos humanos en inteligencia de riesgo accionable.",
+      "step2_body": "Nuestra metodología estructurada y el motor de decisión conectan indicadores de riesgo, identifican preocupaciones emergentes y apoyan recomendaciones dirigidas por especialistas.",
+      "step2_item1": "Indicadores de riesgo estructurados",
+      "step2_item2": "Inteligencia de decisión",
+      "step2_item3": "Interpretación especializada",
+      "step3_title": "Actuar y monitorizar",
+      "step3_highlight": "Anticipar problemas. Orientar decisiones. Proteger resultados.",
+      "step3_body": "Apoyamos acciones preventivas y monitorizamos la adaptación a lo largo del tiempo, ayudando a las organizaciones a gestionar los riesgos antes de que se agraven.",
+      "step3_item1": "Recomendaciones personalizadas",
+      "step3_item2": "Indicadores de riesgo a nivel de empresa",
+      "step3_item3": "Seguimiento continuo"
     },
     "costSource": "",
     "who_is_it_for": {
       "eyebrow": "Público objetivo",
-      "title": "¿Para quién es?",
-      "exec_title": "Para ejecutivos y sus familias",
-      "exec_body": "Feedback individual, plan personal de adaptación, recomendaciones y seguimiento confidencial.",
+      "title": "A quién apoyamos",
+      "subtitle": "Un enfoque integrado. Valor para organizaciones, colaboradores y familias.",
       "comp_title": "Para empresas",
-      "comp_body": "Señales a nivel de la misión, tendencias, prioridades de intervención y recomendaciones para los equipos responsables."
+      "comp_headline": "Proteja su inversión en movilidad y la continuidad del negocio.",
+      "comp_body": "Obtenga visibilidad sobre los riesgos humanos y familiares y actúe antes para proteger el rendimiento y la retención.",
+      "exec_title": "Para ejecutivos y familias",
+      "exec_headline": "Una transición internacional más segura y acompañada.",
+      "exec_body": "Comprenda los desafíos de adaptación y reciba orientación personalizada y confidencial durante todo el recorrido."
     },
     "for_whom": {
       "eyebrow": "Para quién es",
@@ -92,19 +101,36 @@
     },
     "gains": {
       "eyebrow": "Valor para el negocio",
-      "title": "Lo que gana su empresa",
-      "item1_title": "Retención",
-      "item1_body": "Identificar tempranamente signos de dificultades de adaptación y desconexión, permitiendo apoyo oportuno para reducir el riesgo de finalización prematura de la misión.",
-      "item2_title": "Integración",
-      "item2_body": "Apoyar a colaboradores y familias en la adaptación, con seguimiento estructurado y orientación personalizada.",
-      "item3_title": "Mejores decisiones",
-      "item3_body": "Proporcionar a los equipos de Global Mobility y Recursos Humanos indicadores claros de riesgo, actualizaciones de progreso y acciones recomendadas para gestionar las misiones de forma proactiva.",
+      "title": "Business Value",
+      "subtitle": "Transformar la inteligencia de riesgo humano en resultados de negocio.",
+      "item1_title": "Retención y continuidad",
+      "item1_body": "Identificar pronto riesgos de adaptación emergentes para reducir regresos anticipados y desvinculación.",
+      "item2_title": "Integración del colaborador y la familia",
+      "item2_body": "Atender los desafíos personales, culturales y familiares que condicionan el compromiso y el éxito de la misión.",
+      "item3_title": "Decisiones basadas en el riesgo",
+      "item3_body": "Dar a los equipos de Recursos Humanos y Global Mobility indicadores claros de riesgo, prioridades de intervención.",
       "item4_title": "Protección de la inversión",
-      "item4_body": "Abordar los factores humanos que pueden afectar el rendimiento, la continuidad de la misión y el retorno de la inversión en movilidad internacional.",
-      "banner_title": "2 a 3× el salario base anual",
-      "banner_line": "Eso es lo que una misión internacional de larga duración puede costar a una empresa.",
+      "item4_body": "Proteger la inversión en movilidad gestionando los riesgos humanos que afectan a la productividad y la continuidad.",
+      "banner_title": "De 2 a 3 veces el salario base anual",
+      "banner_line": "Es lo que puede costar a una empresa una misión internacional de larga duración.",
       "banner_body": "MOOVIA ayuda a proteger esa inversión al identificar temprano los riesgos humanos y familiares, permitiendo actuar a tiempo antes de que afecten el desempeño, la retención o la continuidad de la misión.",
-      "support_line": "Reemplazar a un talento internacional que no se adaptó cuesta miles de euros."
+      "support_line": "Reemplazar a un talento internacional que no se adaptó cuesta miles de euros.",
+      "ripple": {
+        "eyebrow": "EL EFECTO EN CASCADA",
+        "highlight": "De 2 a 3 veces el salario base anual",
+        "line1": "Es lo que puede costar a una empresa una misión internacional de larga duración.",
+        "line2": "Pero el verdadero coste de un fracaso puede ir mucho más allá de la inversión inicial.",
+        "line3": "La inestabilidad familiar o las dificultades de adaptación pueden desencadenar una reacción en cadena:",
+        "steps": [
+          "Desvinculación",
+          "Pérdida de productividad",
+          "Regreso anticipado",
+          "Costes de sustitución",
+          "Interrupción del negocio"
+        ],
+        "line5": "Lo que empieza como un desafío humano puede convertirse en un riesgo significativo para el negocio.",
+        "line6": "MOOVIA ayuda a identificar las señales de alerta a tiempo, antes de que desafíos manejables se conviertan en consecuencias costosas para el negocio."
+      }
     },
     "trust": {
       "eyebrow": "Gobernanza y protección de datos",
@@ -115,9 +141,10 @@
       "gdpr_label": "En conformidad con el RGPD"
     },
     "final_cta": {
-      "title": "Podemos ayudarle a identificar dónde nuestra evaluación estructurada y el acompañamiento continuo pueden encajar en su programa de movilidad.",
-      "body": "Cada propuesta se diseña a la medida del perfil y la complejidad de cada transición.",
-      "button": "Hablar con MOOVIA"
+      "title": "Proteja a sus personas. Proteja su inversión.",
+      "body": "Descubra cómo MOOVIA ayuda a su organización a identificar pronto los riesgos de movilidad, proteger el rendimiento de los colaboradores y evitar interrupciones de misión costosas.",
+      "line": "Veamos cómo podemos reforzar su estrategia de movilidad global.",
+      "button": "Hablemos"
     }
   },
   "methodology": {
@@ -160,7 +187,7 @@
       "countries_label": "Países involucrados (origen y destino)",
       "challenge_label": "Principal desafío actual",
       "program_label": "¿La empresa ya cuenta con un programa estructurado de movilidad?",
-      "submit": "Hablar con MOOVIA"
+      "submit": "Hablemos"
     }
   },
   "footer": {
@@ -231,7 +258,7 @@
         "legal_note": "Texto sujeto a revisión jurídica."
       }
     },
-    "cta_button": "Hablar con MOOVIA"
+    "cta_button": "Hablemos"
   },
   "team_page": {
     "eyebrow": "Conozca al equipo",
@@ -305,7 +332,7 @@
     },
     "cta": {
       "title": "Hacer que la movilidad internacional sea más informada, más solidaria y más responsable con las personas y los resultados del negocio.",
-      "button": "Hablar con MOOVIA",
+      "button": "Hablemos",
       "subtitle": "Cada propuesta se diseña a medida del perfil y la complejidad de cada transición."
     }
   },

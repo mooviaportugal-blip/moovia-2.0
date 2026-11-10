@@ -72,18 +72,13 @@ export function ProblemAndHelpSection() {
           })}
         </div>
 
-        {/* Duas linhas de texto conclusivas / impacto financeiro */}
-        <div className="space-y-4 pt-8 border-t border-b18">
-          <p className="font-urbanist text-[16px] md:text-[17px] font-[500] text-[#e8d5b0] border-l-2 border-[#9B7A50] pl-4 leading-relaxed">
-            {t("home.problem_help.stat_line")}
-          </p>
-          {Boolean(t("home.costSource")) && (
-            <p className="font-urbanist text-[12px] text-white/70 pl-4 leading-normal">
-              {t("home.costSource")}
-            </p>
-          )}
-          <p className="font-urbanist text-[15px] font-[300] text-w70 pl-4 leading-relaxed max-w-4xl">
-            {t("home.problem_help.conclusion_line")}
+        {/* Bloco sob os três cartões: Dos riscos humanos à inteligência de negócio */}
+        <div id="problem-help-bottom-block" className="pt-8 border-t border-b18">
+          <h3 className="font-display text-[22px] md:text-[26px] font-[400] text-white mb-3">
+            {t("home.problem_help.bottom_title")}
+          </h3>
+          <p className="font-urbanist text-[15px] md:text-[16px] font-[300] text-w70 leading-relaxed max-w-4xl">
+            {t("home.problem_help.bottom_text")}
           </p>
         </div>
       </div>

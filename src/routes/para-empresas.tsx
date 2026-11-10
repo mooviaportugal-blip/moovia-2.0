@@ -76,7 +76,6 @@ function ParaEmpresasPage() {
         <FinalCtaStrip
           title="Converse com a MOOVIA sobre o seu programa de mobilidade."
           subtitle="Em conjunto, identificamos as missões adequadas, definimos o âmbito do apoio e acordamos um programa de acompanhamento."
-          buttonText="Falar com a MOOVIA"
         />
       </div>
     </SiteLayout>
@@ -121,9 +120,7 @@ function HeroSection() {
 
           {/* Botão primário */}
           <div>
-            <CtaButton to="/contacto">
-              Falar com a MOOVIA
-            </CtaButton>
+            <CtaButton to="/contacto" />
           </div>
         </div>
       </div>

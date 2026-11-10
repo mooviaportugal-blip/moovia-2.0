@@ -411,7 +411,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "MOOVIA supports the executive and family before, during and after relocation and turns human factors into clear indicators for Human Resources and leadership.",
     es: "MOOVIA acompaña al ejecutivo y a la familia antes, durante y después del traslado y transforma factores humanos en indicadores claros para Recursos Humanos y la dirección.",
   },
-  "Falar com a MOOVIA": { en: "Speak with MOOVIA", es: "Hablar con MOOVIA" },
+  "Falar com a MOOVIA": { en: "Let's Talk", es: "Hablemos" },
   "Confidencial e em conformidade com o RGPD.": {
     en: "Confidential and compliant with the General Data Protection Regulation.",
     es: "Confidencial y en conformidad con el RGPD.",
@@ -743,8 +743,8 @@ export const DICT: Record<string, { en: string; es: string }> = {
     es: "2 a 3× el salario base anual",
   },
   "É quanto uma missão internacional de longa duração pode custar a uma empresa.": {
-    en: "That is how much a long-term international assignment can cost a company.",
-    es: "Es lo que una misión internacional de larga duración puede costar a una empresa.",
+    en: "That's what a long-term international assignment can cost a company.",
+    es: "Es lo que puede costar a una empresa una misión internacional de larga duración.",
   },
   "A MOOVIA ajuda a proteger esse investimento, atuando nos fatores humanos que determinam se a missão tem sucesso ou falha.": {
     en: "MOOVIA helps protect that investment by addressing the human factors that determine whether an assignment succeeds or fails.",
@@ -852,7 +852,7 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "Ready to protect your mobility investments?",
     es: "¿Preparado para proteger sus inversiones en movilidad?",
   },
-  "Fale com a MOOVIA": { en: "Speak with MOOVIA", es: "Hable con MOOVIA" },
+  "Fale com a MOOVIA": { en: "Let's Talk", es: "Hablemos" },
   "Cada proposta é adaptada ao perfil e à complexidade de cada transição.": {
     en: "Each proposal is tailored to the profile and complexity of each transition.",
     es: "Cada propuesta se adapta al perfil y a la complejidad de cada transición.",
@@ -1610,6 +1610,220 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Ao enviar, reconhece que tratamos os seus dados para responder ao seu pedido, conforme a Política de Privacidade.": {
     en: "By submitting, you acknowledge that we process your data to respond to your request, as described in our Privacy Policy.",
     es: "Al enviar, reconoce que tratamos sus datos para responder a su solicitud, conforme a la Política de Privacidad.",
+  },
+
+  // --- NOVAS ATUALIZAÇÕES DA HOME (A, B, C, D, E, F, G, H) ---
+  "Vamos conversar": {
+    en: "Let's Talk",
+    es: "Hablemos",
+  },
+  "Inteligência de risco humano para a mobilidade global.": {
+    en: "Human Risk Intelligence for Global Mobility.",
+    es: "Inteligencia de riesgo humano para la movilidad global.",
+  },
+  "Proteger as pessoas, o desempenho e o seu investimento em mobilidade.": {
+    en: "Protecting People. Performance. And Your Mobility Investment.",
+    es: "Proteger a las personas, el rendimiento y su inversión en movilidad.",
+  },
+  "A MOOVIA traz inteligência estruturada e monitorização contínua do risco à mobilidade internacional, ajudando as organizações a antecipar desafios humanos e familiares antes de afetarem o desempenho, a retenção e a continuidade do negócio.": {
+    en: "MOOVIA brings structured intelligence and continuous risk monitoring to international mobility, helping organisations anticipate human and family-related challenges before they affect employee performance, retention and business continuity.",
+    es: "MOOVIA aporta inteligencia estructurada y monitorización continua del riesgo a la movilidad internacional, ayudando a las organizaciones a anticipar desafíos humanos y familiares antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
+  },
+  "Dos riscos humanos à inteligência de negócio.": {
+    en: "From Human Risks to Business Intelligence.",
+    es: "De los riesgos humanos a la inteligencia de negocio.",
+  },
+  "A MOOVIA transforma informação humana, familiar e contextual em inteligência de risco acionável, ajudando as organizações a antecipar problemas, decidir com informação e proteger os resultados das missões.": {
+    en: "MOOVIA transforms human, family and contextual insights into actionable risk intelligence, helping organisations anticipate problems, make informed decisions and protect assignment outcomes.",
+    es: "MOOVIA transforma información humana, familiar y contextual en inteligencia de riesgo accionable, ayudando a las organizaciones a anticipar problemas, decidir con información y proteger los resultados de las misiones.",
+  },
+  "Dos sinais humanos à ação preventiva": {
+    en: "From Human Insights to Preventive Action",
+    es: "De la información humana a la acción preventiva",
+  },
+  "Compreender os riscos humanos antes de se tornarem riscos de negócio.": {
+    en: "Understand the human risks before they become business risks.",
+    es: "Comprender los riesgos humanos antes de que se conviertan en riesgos de negocio.",
+  },
+  "Avaliamos os fatores humanos, familiares e organizacionais que influenciam o sucesso de uma missão internacional.": {
+    en: "We assess the human, family and organisational factors that influence the success of an international assignment.",
+    es: "Evaluamos los factores humanos, familiares y organizativos que influyen en el éxito de una misión internacional.",
+  },
+  "Preparação do colaborador e da família": {
+    en: "Employee and family readiness",
+    es: "Preparación del colaborador y de la familia",
+  },
+  "Adaptação cultural e pessoal": {
+    en: "Cultural and personal adaptation",
+    es: "Adaptación cultural y personal",
+  },
+  "Apoio organizacional": {
+    en: "Organisational support",
+    es: "Apoyo organizacional",
+  },
+  "Ligar e interpretar": {
+    en: "Connect and Interpret",
+    es: "Conectar e interpretar",
+  },
+  "Transformar dados humanos em inteligência de risco acionável.": {
+    en: "Turn human data into actionable risk intelligence.",
+    es: "Convertir datos humanos en inteligencia de riesgo accionable.",
+  },
+  "A nossa metodologia estruturada e o motor de decisão ligam indicadores de risco, identificam preocupações emergentes e apoiam recomendações lideradas por especialistas.": {
+    en: "Our structured methodology and decision engine connect risk indicators, identify emerging concerns and support expert-led recommendations.",
+    es: "Nuestra metodología estructurada y el motor de decisión conectan indicadores de riesgo, identifican preocupaciones emergentes y apoyan recomendaciones dirigidas por especialistas.",
+  },
+  "Indicadores de risco estruturados": {
+    en: "Structured risk indicators",
+    es: "Indicadores de riesgo estructurados",
+  },
+  "Inteligência de decisão": {
+    en: "Decision intelligence",
+    es: "Inteligencia de decisión",
+  },
+  "Interpretação especializada": {
+    en: "Expert interpretation",
+    es: "Interpretación especializada",
+  },
+  "Agir e acompanhar": {
+    en: "Act and Monitor",
+    es: "Actuar y monitorizar",
+  },
+  "Antecipar problemas. Orientar decisões. Proteger resultados.": {
+    en: "Anticipate problems. Guide decisions. Protect outcomes.",
+    es: "Anticipar problemas. Orientar decisiones. Proteger resultados.",
+  },
+  "Apoiamos ações preventivas e acompanhamos a adaptação ao longo do tempo, ajudando as organizações a gerir riscos antes de estes se agravarem.": {
+    en: "We support preventive actions and monitor adaptation over time, helping organisations manage risks before they escalate.",
+    es: "Apoyamos acciones preventivas y monitorizamos la adaptación a lo largo del tiempo, ayudando a las organizaciones a gestionar los riesgos antes de que se agraven.",
+  },
+  "Recomendações personalizadas": {
+    en: "Personalised recommendations",
+    es: "Recomendaciones personalizadas",
+  },
+  "Indicadores de risco ao nível da empresa": {
+    en: "Company-level risk insights",
+    es: "Indicadores de riesgo a nivel de empresa",
+  },
+  "Acompanhamento contínuo": {
+    en: "Ongoing monitoring",
+    es: "Seguimiento continuo",
+  },
+  "Transformar inteligência de risco humano em resultados de negócio.": {
+    en: "Turning Human Risk Intelligence into Business Outcomes.",
+    es: "Transformar la inteligencia de riesgo humano en resultados de negocio.",
+  },
+  "Retenção e continuidade": {
+    en: "Retention and Continuity",
+    es: "Retención y continuidad",
+  },
+  "Identificar cedo riscos de adaptação emergentes para reduzir regressos antecipados e desligamento.": {
+    en: "Identify emerging adaptation risks early to reduce early returns and disengagement.",
+    es: "Identificar pronto riesgos de adaptación emergentes para reducir regresos anticipados y desvinculación.",
+  },
+  "Integração do colaborador e da família": {
+    en: "Employee and Family Integration",
+    es: "Integración del colaborador y la familia",
+  },
+  "Tratar os desafios pessoais, culturais e familiares que moldam o envolvimento e o sucesso da missão.": {
+    en: "Address the personal, cultural and family challenges that shape engagement and assignment success.",
+    es: "Atender los desafíos personales, culturales y familiares que condicionan el compromiso y el éxito de la misión.",
+  },
+  "Decisões informadas pelo risco": {
+    en: "Risk-Informed Decisions",
+    es: "Decisiones basadas en el riesgo",
+  },
+  "Dar às equipas de Recursos Humanos e de Global Mobility indicadores de risco claros e prioridades de intervenção.": {
+    en: "Give Human Resources and Global Mobility teams clear risk indicators and intervention priorities.",
+    es: "Dar a los equipos de Recursos Humanos y Global Mobility indicadores de riesgo claros y prioridades de intervención.",
+  },
+  "Proteção do investimento": {
+    en: "Investment Protection",
+    es: "Protección de la inversión",
+  },
+  "Proteger o investimento em mobilidade gerindo os riscos humanos que afetam a produtividade e a continuidade.": {
+    en: "Protect mobility investment by managing the human risks that affect productivity and continuity.",
+    es: "Proteger la inversión en movilidad gestionando los riesgos humanos que afectan a la productividad y la continuidad.",
+  },
+  "O EFEITO EM CASCATA": {
+    en: "THE RIPPLE EFFECT",
+    es: "EL EFECTO EN CASCADA",
+  },
+  "2 a 3 vezes o salário base anual": {
+    en: "2–3× Annual Base Salary",
+    es: "De 2 a 3 veces el salario base anual",
+  },
+  "Mas o verdadeiro custo de uma missão que falha pode ir muito além do investimento inicial.": {
+    en: "But the true cost of failure can extend far beyond the initial investment.",
+    es: "Pero el verdadero coste de un fracaso puede ir mucho más allá de la inversión inicial.",
+  },
+  "A instabilidade familiar ou as dificuldades de adaptação podem desencadear uma reação em cadeia:": {
+    en: "Family instability or adaptation difficulties can trigger a chain reaction:",
+    es: "La inestabilidad familiar o las dificultades de adaptación pueden desencadenar una reacción en cadena:",
+  },
+  "Desligamento": {
+    en: "Disengagement",
+    es: "Desvinculación",
+  },
+  "Perda de produtividade": {
+    en: "Productivity Loss",
+    es: "Pérdida de productividad",
+  },
+  "Regresso antecipado": {
+    en: "Early Return",
+    es: "Regreso anticipado",
+  },
+  "Custos de substituição": {
+    en: "Replacement Costs",
+    es: "Costes de sustitución",
+  },
+  "Disrupção do negócio": {
+    en: "Business Disruption",
+    es: "Interrupción del negocio",
+  },
+  "O que começa como um desafio humano pode tornar-se um risco significativo para o negócio.": {
+    en: "What begins as a human challenge can become a significant business risk.",
+    es: "Lo que empieza como un desafío humano puede convertirse en un riesgo significativo para el negocio.",
+  },
+  "A MOOVIA ajuda a identificar os sinais de alerta cedo, antes de desafios geríveis se transformarem em consequências de negócio dispendiosas.": {
+    en: "MOOVIA helps identify the warning signs early, before manageable challenges escalate into costly business consequences.",
+    es: "MOOVIA ayuda a identificar las señales de alerta a tiempo, antes de que desafíos manejables se conviertan en consecuencias costosas para el negocio.",
+  },
+  "Quem apoiamos": {
+    en: "Who We Support",
+    es: "A quién apoyamos",
+  },
+  "Uma abordagem integrada. Valor para organizações, colaboradores e famílias.": {
+    en: "One integrated approach. Value for organisations, employees and families.",
+    es: "Un enfoque integrado. Valor para organizaciones, colaboradores y familias.",
+  },
+  "Proteja o seu investimento em mobilidade e a continuidade do negócio.": {
+    en: "Protect your mobility investment and business continuity.",
+    es: "Proteja su inversión en movilidad y la continuidad del negocio.",
+  },
+  "Ganhe visibilidade sobre os riscos humanos e familiares e atue mais cedo para proteger o desempenho e a retenção.": {
+    en: "Gain visibility into human and family risks and act earlier to protect performance and retention.",
+    es: "Obtenga visibilidad sobre los riesgos humanos y familiares y actúe antes para proteger el rendimiento y la retención.",
+  },
+  "Uma transição internacional mais confiante e apoiada.": {
+    en: "A more confident and supported international transition.",
+    es: "Una transición internacional más segura y acompañada.",
+  },
+  "Compreenda os desafios de adaptação e receba orientação personalizada e confidencial ao longo de todo o percurso.": {
+    en: "Understand adaptation challenges and receive personalised, confidential guidance throughout the journey.",
+    es: "Comprenda los desafíos de adaptación y reciba orientación personalizada y confidencial durante todo el recorrido.",
+  },
+  "Proteja as suas pessoas. Proteja o seu investimento.": {
+    en: "Protect Your People. Protect Your Investment.",
+    es: "Proteja a sus personas. Proteja su inversión.",
+  },
+  "Descubra como a MOOVIA ajuda a sua organização a identificar cedo os riscos de mobilidade, a proteger o desempenho dos colaboradores e a evitar interrupções de missão dispendiosas.": {
+    en: "Discover how MOOVIA helps your organisation identify mobility risks early, protect employee performance and prevent costly assignment disruptions.",
+    es: "Descubra cómo MOOVIA ayuda a su organización a identificar pronto los riesgos de movilidad, proteger el rendimiento de los colaboradores y evitar interrupciones de misión costosas.",
+  },
+  "Vamos ver como podemos reforçar a sua estratégia de mobilidade global.": {
+    en: "Let's explore how we can strengthen your global mobility strategy.",
+    es: "Veamos cómo podemos reforzar su estrategia de movilidad global.",
   },
 };
 

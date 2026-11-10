@@ -2,7 +2,7 @@
   "common": {
     "brand": "MOOVIA",
     "gma": "Global Mobility Assurance",
-    "cta_talk": "Speak with MOOVIA",
+    "cta_talk": "Let's Talk",
     "learn_more": "Learn more",
     "show_less": "Show less"
   },
@@ -18,16 +18,16 @@
     "assessment": "Strategic Assessment",
     "blog": "Insights",
     "contact": "Contact",
-    "cta": "Speak with MOOVIA",
+    "cta": "Let's Talk",
     "about": "About",
     "team": "Team"
   },
   "hero": {
     "eyebrow": "GLOBAL MOBILITY ASSURANCE",
-    "title": "Intelligence for the human risks of international assignments",
-    "support_line": "Identify and Manage Adaptation Risks of Executives in International Assignments",
-    "subtitle": "MOOVIA helps companies and executives identify and address the human, cultural and family challenges that can undermine international assignments, before they escalate into performance, retention or repatriation problems.",
-    "cta_primary": "Speak with MOOVIA",
+    "title": "Human Risk Intelligence for Global Mobility.",
+    "support_line": "Protecting People. Performance. And Your Mobility Investment.",
+    "subtitle": "MOOVIA brings structured intelligence and continuous risk monitoring to international mobility, helping organisations anticipate human and family-related challenges before they affect employee performance, retention and business continuity.",
+    "cta_primary": "Let's Talk",
     "cta_secondary": "See How MOOVIA Works",
     "chips": {
       "chip1": "Preparation and adaptation",
@@ -51,34 +51,43 @@
       "col3_body": "Difficulties with family integration, social isolation or cultural adjustment can affect the employee and assignment continuity.",
       "col3_help": "How MOOVIA helps: Provides confidential family assessments, regular check-ins and personalised guidance.",
       "stat_line": "For a €150k senior assignee, a troubled international assignment can destroy €300k–€500k in sunk mobility costs, lost productivity, repatriation and replacement.",
-      "conclusion_line": "MOOVIA turns human and contextual information into practical recommendations, giving employees and families confidential support, while providing Global Mobility teams with the insights needed to act."
+      "conclusion_line": "MOOVIA turns human and contextual information into practical recommendations, giving employees and families confidential support, while providing Global Mobility teams with the insights needed to act.",
+      "bottom_title": "From Human Risks to Business Intelligence.",
+      "bottom_text": "MOOVIA transforms human, family and contextual insights into actionable risk intelligence, helping organisations anticipate problems, make informed decisions and protect assignment outcomes."
     },
     "steps": {
-      "eyebrow": "How it works",
-      "title": "What we do, in three steps",
-      "step1_title": "ASSESS",
-      "step1_body": "We identify the human factors that most influence the adaptation of the executive and family, starting before the move.",
-      "step1_item1": "Preparation and adaptation",
-      "step1_item2": "Family and context.",
+      "eyebrow": "HOW IT WORKS",
+      "title": "From Human Insights to Preventive Action",
+      "step1_title": "Assess",
+      "step1_highlight": "Understand the human risks before they become business risks.",
+      "step1_body": "We assess the human, family and organisational factors that influence the success of an international assignment.",
+      "step1_item1": "Employee and family readiness",
+      "step1_item2": "Cultural and personal adaptation",
       "step1_item3": "Organisational support",
-      "step2_title": "CONNECT & INTERPRET",
-      "step2_body": "We transform these factors into practical indicators and recommendations, interpreted by specialists.",
-      "step2_item1": "Structured signals over time",
-      "step2_item2": "Decision engine with expert review",
-      "step3_title": "ACT",
-      "step3_body": "We measure progress throughout the journey and guide preventive actions.",
-      "step3_item1": "Recommendations to the employee",
-      "step3_item2": "Recommendations to the company",
-      "step3_item3": "New check-ins"
+      "step2_title": "Connect and Interpret",
+      "step2_highlight": "Turn human data into actionable risk intelligence.",
+      "step2_body": "Our structured methodology and decision engine connect risk indicators, identify emerging concerns and support expert-led recommendations.",
+      "step2_item1": "Structured risk indicators",
+      "step2_item2": "Decision intelligence",
+      "step2_item3": "Expert interpretation",
+      "step3_title": "Act and Monitor",
+      "step3_highlight": "Anticipate problems. Guide decisions. Protect outcomes.",
+      "step3_body": "We support preventive actions and monitor adaptation over time, helping organisations manage risks before they escalate.",
+      "step3_item1": "Personalised recommendations",
+      "step3_item2": "Company-level risk insights",
+      "step3_item3": "Ongoing monitoring"
     },
     "costSource": "",
     "who_is_it_for": {
       "eyebrow": "Target Audience",
-      "title": "Who is it for?",
-      "exec_title": "For Executives & Their Families",
-      "exec_body": "Individual feedback, a personal adaptation plan, recommendations and confidential follow-up.",
+      "title": "Who We Support",
+      "subtitle": "One integrated approach. Value for organisations, employees and families.",
       "comp_title": "For Companies",
-      "comp_body": "Assignment-level signals, trends, intervention priorities and recommendations for the responsible teams."
+      "comp_headline": "Protect your mobility investment and business continuity.",
+      "comp_body": "Gain visibility into human and family risks and act earlier to protect performance and retention.",
+      "exec_title": "For Executives & Their Families",
+      "exec_headline": "A more confident and supported international transition.",
+      "exec_body": "Understand adaptation challenges and receive personalised, confidential guidance throughout the journey."
     },
     "for_whom": {
       "eyebrow": "Who it is for",
@@ -93,18 +102,35 @@
     "gains": {
       "eyebrow": "Business Value",
       "title": "Business Value",
-      "item1_title": "Retention",
-      "item1_body": "Identify early signs of adaptation difficulties and disengagement, allowing timely support to reduce the risk of premature assignment termination.",
-      "item2_title": "Integration",
-      "item2_body": "Support employees and their families throughout their adaptation with structured monitoring and personalised guidance.",
-      "item3_title": "Better Decisions",
-      "item3_body": "Give Global Mobility and HR teams clear risk indicators, progress updates and recommended actions to manage assignments proactively.",
+      "subtitle": "Turning Human Risk Intelligence into Business Outcomes.",
+      "item1_title": "Retention and Continuity",
+      "item1_body": "Identify emerging adaptation risks early to reduce early returns and disengagement.",
+      "item2_title": "Employee and Family Integration",
+      "item2_body": "Address the personal, cultural and family challenges that shape engagement and assignment success.",
+      "item3_title": "Risk-Informed Decisions",
+      "item3_body": "Give Human Resources and Global Mobility teams clear risk indicators and intervention priorities.",
       "item4_title": "Investment Protection",
-      "item4_body": "Address human factors that can affect performance, assignment continuity and the return on international mobility investment.",
+      "item4_body": "Protect mobility investment by managing the human risks that affect productivity and continuity.",
       "banner_title": "2–3× Annual Base Salary",
       "banner_line": "That’s what a long-term international assignment can cost a company.",
       "banner_body": "MOOVIA helps protect that investment by identifying human and family-related risks early, enabling timely action before they affect performance, retention or assignment continuity.",
-      "support_line": "Replacing an international talent who failed to adapt costs thousands of euros."
+      "support_line": "Replacing an international talent who failed to adapt costs thousands of euros.",
+      "ripple": {
+        "eyebrow": "THE RIPPLE EFFECT",
+        "highlight": "2–3× Annual Base Salary",
+        "line1": "That's what a long-term international assignment can cost a company.",
+        "line2": "But the true cost of failure can extend far beyond the initial investment.",
+        "line3": "Family instability or adaptation difficulties can trigger a chain reaction:",
+        "steps": [
+          "Disengagement",
+          "Productivity Loss",
+          "Early Return",
+          "Replacement Costs",
+          "Business Disruption"
+        ],
+        "line5": "What begins as a human challenge can become a significant business risk.",
+        "line6": "MOOVIA helps identify the warning signs early, before manageable challenges escalate into costly business consequences."
+      }
     },
     "trust": {
       "eyebrow": "Governance and data protection",
@@ -115,9 +141,10 @@
       "gdpr_label": "Compliant with the General Data Protection Regulation"
     },
     "final_cta": {
-      "title": "We can help you identify where our structured assessment and ongoing support could fit your mobility programme.",
-      "body": "Each proposal is tailored to the profile and complexity of each transition.",
-      "button": "Speak with MOOVIA"
+      "title": "Protect Your People. Protect Your Investment.",
+      "body": "Discover how MOOVIA helps your organisation identify mobility risks early, protect employee performance and prevent costly assignment disruptions.",
+      "line": "Let's explore how we can strengthen your global mobility strategy.",
+      "button": "Let's Talk"
     }
   },
   "methodology": {
@@ -160,7 +187,7 @@
       "countries_label": "Countries involved (origin and destination)",
       "challenge_label": "Main current challenge",
       "program_label": "Does the company already have a structured mobility programme?",
-      "submit": "Speak with MOOVIA"
+      "submit": "Let's Talk"
     }
   },
   "footer": {
@@ -231,7 +258,7 @@
         "legal_note": "Text subject to legal review."
       }
     },
-    "cta_button": "Speak with MOOVIA"
+    "cta_button": "Let's Talk"
   },
   "team_page": {
     "eyebrow": "Meet the Team",
@@ -308,7 +335,7 @@
     },
     "cta": {
       "title": "Ready to protect your mobility investments?",
-      "button": "Speak with MOOVIA",
+      "button": "Let's Talk",
       "subtitle": "Each proposal is tailored to the profile and complexity of each transition."
     }
   },

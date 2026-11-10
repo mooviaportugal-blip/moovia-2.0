@@ -6,6 +6,7 @@ interface FinalCtaStripProps {
   title?: string;
   buttonText?: string;
   subtitle?: string;
+  line?: string;
   buttonTo?: string;
   children?: React.ReactNode;
 }
@@ -14,6 +15,7 @@ export function FinalCtaStrip({
   title,
   buttonText,
   subtitle,
+  line,
   buttonTo = "/contacto",
   children,
 }: FinalCtaStripProps = {}) {
@@ -31,10 +33,11 @@ export function FinalCtaStrip({
 
   const resolvedTitle = title ?? t("home.final_cta.title");
   const resolvedBody = subtitle !== undefined ? subtitle : t("home.final_cta.body");
+  const resolvedLine = line !== undefined ? line : (title ? undefined : t("home.final_cta.line"));
   const resolvedButton = buttonText ?? t("home.final_cta.button");
 
   return (
-    <section className="section-spacing relative w-full bg-[#09183D] border-t border-b border-gold/25 px-6 lg:px-20 overflow-hidden">
+    <section id="final-cta-section" className="section-spacing relative w-full bg-[#09183D] border-t border-b border-gold/25 px-6 lg:px-20 overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -51,12 +54,19 @@ export function FinalCtaStrip({
           <div className="mb-8 space-y-4 max-w-[760px] text-center">
             {children}
           </div>
-        ) : resolvedBody ? (
-          <p className="typo-body text-w70 mb-8 text-center max-w-[700px]">
-            {resolvedBody}
-          </p>
         ) : (
-          <div className="mb-8" />
+          <div className="mb-8 space-y-3 max-w-[760px] text-center">
+            {resolvedBody && (
+              <p className="typo-body text-w70 max-w-[700px] mx-auto leading-relaxed">
+                {resolvedBody}
+              </p>
+            )}
+            {resolvedLine && (
+              <p className="font-urbanist text-[15px] md:text-[16px] font-[500] text-white/90">
+                {resolvedLine}
+              </p>
+            )}
+          </div>
         )}
         <CtaButton to={buttonTo} onClick={handleClick}>
           {resolvedButton}
