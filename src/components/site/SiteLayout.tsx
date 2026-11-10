@@ -8,7 +8,7 @@ import { SoundModal } from "./SoundModal";
 import { SoundToggle } from "./SoundToggle";
 import { CustomCursor } from "../ui/CustomCursor";
 import { startUxTracker } from "@/lib/uxTracker";
-import { useMooviaPlayer } from "@/hooks/useMooviaPlayer";
+import { useMooviaPlayer, SOUND_FEATURE_ENABLED } from "@/hooks/useMooviaPlayer";
 
 export function SiteLayout({ 
   children, 
@@ -40,7 +40,8 @@ export function SiteLayout({
       
       
       
-      {player.buttonEnabled && player.tracks.length > 0 && (
+      {/* SoundBrand desativado temporariamente */}
+      {SOUND_FEATURE_ENABLED && player.buttonEnabled && player.tracks.length > 0 && (
         <>
           <SoundModal
             open={player.showModal}

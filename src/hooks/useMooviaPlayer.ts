@@ -21,6 +21,9 @@ const isIOS =
     (navigator.platform === "MacIntel" && (navigator as any).maxTouchPoints > 1));
 const canFade = !isIOS;
 
+// Recurso de SoundBrand / botão flutuante e modal desativados temporariamente
+export const SOUND_FEATURE_ENABLED = false;
+
 let globalState: {
   tracks: Track[];
   currentIndex: number;
@@ -36,7 +39,7 @@ let globalState: {
   progress: 0,
   hasPermission: null,
   showModal: false,
-  buttonEnabled: true,
+  buttonEnabled: SOUND_FEATURE_ENABLED,
 };
 
 const listeners = new Set<() => void>();
@@ -342,7 +345,7 @@ async function loadFromDB() {
       ...globalState,
       tracks: mapped,
       currentIndex: Math.min(globalState.currentIndex, Math.max(0, mapped.length - 1)),
-      buttonEnabled: setting?.value !== "false",
+      buttonEnabled: SOUND_FEATURE_ENABLED && setting?.value !== "false",
     };
     notify();
   } catch (e) {
