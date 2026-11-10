@@ -62,20 +62,28 @@ function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMsg(null);
 
     try {
-      // Aceita "admin" como usuário, ou um e-mail completo
-      const email = username.includes("@")
-        ? username.trim()
-        : username.trim().toLowerCase() === "admin" 
-          ? "admin@moovia.global"
-          : `${username.trim().toLowerCase()}@moovia.local`;
+      // Aceita "admin", "admin@moovia.global", "admin@mooviaglobal.com" ou "admin@mooviaportugal.com"
+      const trimmed = username.trim();
+      const normalized = trimmed.toLowerCase();
+      const email =
+        normalized === "admin" ||
+        normalized === "admin@moovia.global" ||
+        normalized === "admin@mooviaglobal.com" ||
+        normalized === "admin@mooviaportugal.com"
+          ? "admin@mooviaportugal.com"
+          : trimmed.includes("@")
+          ? trimmed
+          : `${normalized}@mooviaportugal.com`;
 
       const { error } = await supabase.auth.signInWithPassword({
         email,
@@ -87,7 +95,12 @@ function AdminLogin() {
       toast.success("Login realizado com sucesso");
       navigate({ to: "/admin/dashboard" });
     } catch (error: any) {
-      toast.error(error.message || "Erro ao realizar login");
+      const msg =
+        error.message === "Invalid login credentials"
+          ? "Credenciais inválidas. Verifique o usuário e a senha."
+          : error.message || "Erro ao realizar login";
+      setErrorMsg(msg);
+      toast.error(msg);
     } finally {
       setLoading(false);
     }
@@ -136,6 +149,12 @@ function AdminLogin() {
                 </div>
               </div>
               
+              {errorMsg && (
+                <div className="p-3 bg-red-950/40 border border-red-800/60 rounded text-red-300 text-xs font-urbanist">
+                  {errorMsg}
+                </div>
+              )}
+
               <button
                 type="submit"
                 disabled={loading}

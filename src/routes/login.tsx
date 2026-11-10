@@ -21,8 +21,20 @@ function LoginPage() {
     setLoading(true);
     setError(null);
 
+    const trimmed = email.trim();
+    const normalized = trimmed.toLowerCase();
+    const loginEmail =
+      normalized === "admin" ||
+      normalized === "admin@moovia.global" ||
+      normalized === "admin@mooviaglobal.com" ||
+      normalized === "admin@mooviaportugal.com"
+        ? "admin@mooviaportugal.com"
+        : trimmed.includes("@")
+        ? trimmed
+        : `${normalized}@mooviaportugal.com`;
+
     const { error } = await supabase.auth.signInWithPassword({
-      email,
+      email: loginEmail,
       password,
     });
 
