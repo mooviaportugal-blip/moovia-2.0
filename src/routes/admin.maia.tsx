@@ -84,64 +84,173 @@ function AdminMaia() {
 
   async function load() {
     setLoading(true);
-    const [{ data: kdata }, { data: ddata }] = await Promise.all([
-      supabase
+    try {
+      const { data: kdata } = await supabase
         .from("maia_knowledge" as any)
         .select("*")
         .eq("is_active", true)
         .order("updated_at", { ascending: false })
         .limit(1)
-        .maybeSingle(),
-      supabase
-        .from("maia_documents" as any)
-        .select("*")
-        .order("created_at", { ascending: false }),
-    ]);
-    if (kdata) {
-      const k = kdata as any;
+        .maybeSingle();
+
+      let parsed: Knowledge = {
+        id: "default",
+        system_prompt: "Você é a MAIA, a inteligência da MOOVIA focada em Global Mobility Assurance.",
+        persona: "Empática, profissional, especializada em mobilidade internacional e adaptação de executivos e famílias.",
+        rules: [
+          "Nunca forneça aconselhamento jurídico formal vinculativo",
+          "Mantenha a confidencialidade e a privacidade das famílias",
+          "Promova a categoria Global Mobility Assurance como antecipação e proteção de riscos humanos",
+        ],
+        faqs: [
+          {
+            q: "O que é Global Mobility Assurance?",
+            a: "É o acompanhamento contínuo e estruturado que identifica, mede e mitiga os riscos humanos da mobilidade internacional.",
+          },
+        ],
+        vocabulary: {
+          use: ["Global Mobility Assurance", "missões internacionais", "adaptação contínua"],
+          avoid: ["relocation básica", "agência de emprego"],
+        },
+        examples: [],
+      };
+
+      if (kdata) {
+        const k = kdata as any;
+        parsed.id = k.id || "default";
+
+        // Se tiver content com JSON armazenado
+        if (k.content && typeof k.content === "string") {
+          try {
+            const json = JSON.parse(k.content);
+            if (json && typeof json === "object") {
+              if (json.system_prompt) parsed.system_prompt = json.system_prompt;
+              if (json.persona) parsed.persona = json.persona;
+              if (Array.isArray(json.rules)) parsed.rules = json.rules;
+              if (Array.isArray(json.faqs)) parsed.faqs = json.faqs;
+              if (json.vocabulary) parsed.vocabulary = json.vocabulary;
+              if (Array.isArray(json.examples)) parsed.examples = json.examples;
+            }
+          } catch (_) {
+            parsed.system_prompt = k.content;
+          }
+        }
+
+        // Se tiver colunas diretas
+        if (k.system_prompt) parsed.system_prompt = k.system_prompt;
+        if (k.persona) parsed.persona = k.persona;
+        if (Array.isArray(k.rules)) parsed.rules = k.rules;
+        if (Array.isArray(k.faqs)) parsed.faqs = k.faqs;
+        if (k.vocabulary && typeof k.vocabulary === "object") parsed.vocabulary = k.vocabulary;
+        if (Array.isArray(k.examples)) parsed.examples = k.examples;
+      }
+
+      setKnowledge(parsed);
+
+      try {
+        const { data: ddata, error: dErr } = await supabase
+          .from("maia_documents" as any)
+          .select("*")
+          .order("created_at", { ascending: false });
+        if (!dErr && ddata) {
+          setDocuments(ddata as any);
+        } else {
+          setDocuments([]);
+        }
+      } catch (_) {
+        setDocuments([]);
+      }
+    } catch (err: any) {
+      console.error("[admin.maia] load error:", err);
       setKnowledge({
-        id: k.id,
-        system_prompt: k.system_prompt || "",
-        persona: k.persona || "",
-        rules: Array.isArray(k.rules) ? k.rules : [],
-        faqs: Array.isArray(k.faqs) ? k.faqs : [],
-        vocabulary: k.vocabulary && typeof k.vocabulary === "object" ? k.vocabulary : { use: [], avoid: [] },
-        examples: Array.isArray(k.examples) ? k.examples : [],
+        id: "default",
+        system_prompt: "Você é a MAIA, a inteligência da MOOVIA focada em Global Mobility Assurance.",
+        persona: "Empática, profissional, especializada em mobilidade internacional.",
+        rules: ["Confidencialidade e respeito humano"],
+        faqs: [],
+        vocabulary: { use: [], avoid: [] },
+        examples: [],
       });
+      setDocuments([]);
+    } finally {
+      setLoading(false);
     }
-    setDocuments((ddata as any) || []);
-    setLoading(false);
   }
 
   useEffect(() => { load(); }, []);
 
   // Realtime: refresh document list when status changes
   useEffect(() => {
-    const channel = supabase
-      .channel("maia_documents_changes")
-      .on("postgres_changes", { event: "*", schema: "public", table: "maia_documents" }, () => {
-        load();
-      })
-      .subscribe();
-    return () => { supabase.removeChannel(channel); };
+    try {
+      const channel = supabase
+        .channel("maia_documents_changes")
+        .on("postgres_changes", { event: "*", schema: "public", table: "maia_documents" }, () => {
+          load();
+        })
+        .subscribe();
+      return () => { supabase.removeChannel(channel); };
+    } catch (_) {}
   }, []);
 
   async function saveKnowledge() {
     if (!knowledge) return;
     setSaving(true);
-    const { error } = await (supabase.from("maia_knowledge" as any) as any)
-      .update({
+    try {
+      const payload = {
         system_prompt: knowledge.system_prompt,
         persona: knowledge.persona,
         rules: knowledge.rules,
         faqs: knowledge.faqs,
         vocabulary: knowledge.vocabulary,
         examples: knowledge.examples,
-      })
-      .eq("id", knowledge.id);
-    setSaving(false);
-    if (error) toast.error("Erro ao salvar: " + error.message);
-    else toast.success("Inteligência salva");
+      };
+
+      const contentJson = JSON.stringify(payload);
+      let saveErr: any = null;
+
+      if (knowledge.id && knowledge.id !== "default") {
+        const { error } = await (supabase.from("maia_knowledge" as any) as any)
+          .update({
+            category: "maia_config",
+            title: "MAIA Config",
+            content: contentJson,
+            updated_at: new Date().toISOString(),
+          })
+          .eq("id", knowledge.id);
+        saveErr = error;
+      } else {
+        const { data: insData, error } = await (supabase.from("maia_knowledge" as any) as any)
+          .insert({
+            category: "maia_config",
+            title: "MAIA Config",
+            content: contentJson,
+            is_active: true,
+          })
+          .select()
+          .single();
+        if (insData) {
+          setKnowledge((prev) => (prev ? { ...prev, id: (insData as any).id } : prev));
+        }
+        saveErr = error;
+      }
+
+      if (saveErr && saveErr.message?.includes("column")) {
+        const { error: directErr } = await (supabase.from("maia_knowledge" as any) as any)
+          .update(payload)
+          .eq("id", knowledge.id);
+        saveErr = directErr;
+      }
+
+      if (saveErr) {
+        toast.error("Erro ao salvar: " + saveErr.message);
+      } else {
+        toast.success("Inteligência salva");
+      }
+    } catch (e: any) {
+      toast.error("Erro ao salvar: " + (e.message || e));
+    } finally {
+      setSaving(false);
+    }
   }
 
   async function uploadFile(file: File) {
@@ -243,16 +352,28 @@ function AdminMaia() {
       if (!payload?.knowledge) throw new Error("JSON inválido (sem 'knowledge')");
       if (!confirm("Isso vai sobrescrever a inteligência atual da MAIA (prompt, regras, FAQs, exemplos). Continuar?")) return;
       const k = payload.knowledge;
-      await (supabase.from("maia_knowledge" as any) as any)
+      const contentJson = JSON.stringify(k);
+      const { error: updErr } = await (supabase.from("maia_knowledge" as any) as any)
         .update({
-          system_prompt: k.system_prompt || "",
-          persona: k.persona || null,
-          rules: k.rules || [],
-          faqs: k.faqs || [],
-          vocabulary: k.vocabulary || {},
-          examples: k.examples || [],
+          category: "maia_config",
+          title: "MAIA Config",
+          content: contentJson,
+          updated_at: new Date().toISOString(),
         })
         .eq("is_active", true);
+
+      if (updErr && updErr.message?.includes("column")) {
+        await (supabase.from("maia_knowledge" as any) as any)
+          .update({
+            system_prompt: k.system_prompt || "",
+            persona: k.persona || null,
+            rules: k.rules || [],
+            faqs: k.faqs || [],
+            vocabulary: k.vocabulary || {},
+            examples: k.examples || [],
+          })
+          .eq("is_active", true);
+      }
       toast.success("Inteligência importada");
       load();
     } catch (e: any) {
