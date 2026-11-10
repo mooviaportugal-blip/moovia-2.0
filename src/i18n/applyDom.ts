@@ -181,10 +181,64 @@ function ensureObserver() {
   });
 }
 
+function translateHead(lang: WalkerLang) {
+  if (typeof document === "undefined") return;
+  const dictLang = lang === "pt-BR" ? "pt" : lang;
+  
+  if (!(window as any).__origTitle) {
+    (window as any).__origTitle = document.title;
+  }
+  const origTitle = (window as any).__origTitle;
+  if (origTitle) {
+    if (dictLang === "pt") {
+      document.title = origTitle;
+    } else {
+      const t = translate(origTitle.trim(), dictLang);
+      if (t) document.title = t;
+    }
+  }
+
+  const metaEl = document.querySelector('meta[name="description"]');
+  if (metaEl) {
+    if (!(window as any).__origMetaDesc) {
+      (window as any).__origMetaDesc = metaEl.getAttribute("content") || "";
+    }
+    const origDesc = (window as any).__origMetaDesc;
+    if (origDesc) {
+      if (dictLang === "pt") {
+        metaEl.setAttribute("content", origDesc);
+      } else {
+        const t = translate(origDesc.trim(), dictLang);
+        if (t) metaEl.setAttribute("content", t);
+      }
+    }
+  }
+}
+
+export function resetHeadOrigin() {
+  if (typeof window !== "undefined") {
+    delete (window as any).__origTitle;
+    delete (window as any).__origMetaDesc;
+  }
+}
+
 export function applyDomTranslations(lang: WalkerLang) {
   if (typeof document === "undefined") return;
   currentLang = lang;
-  if (lang === "pt-BR" || lang === "pt") return;
+  translateHead(lang);
+  if (lang === "pt-BR" || lang === "pt") {
+    // If resetting to pt, restore original text nodes
+    document.querySelectorAll("*").forEach(el => {
+      // restore attributes
+      const store = ORIGINAL_ATTR.get(el);
+      if (store) {
+        for (const [attr, val] of Object.entries(store)) {
+          el.setAttribute(attr, val);
+        }
+      }
+    });
+    return;
+  }
   walk(document.body, lang);
   ensureObserver();
 }

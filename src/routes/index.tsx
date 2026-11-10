@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
           "MOOVIA is Evolving. The next chapter of MOOVIA arrives in September 2026.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://mooviaglobal.com/" }],
+    links: [{ rel: "canonical", href: "https://moovia.global/" }],
   }),
   component: MaintenancePage,
 });

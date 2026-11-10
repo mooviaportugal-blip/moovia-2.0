@@ -444,3 +444,66 @@ html {
   0%, 100% { opacity: 0.35; }
   50% { opacity: 1; }
 }
+
+/* ── PÁGINA EQUIPA: HERO H1 COM ESPECIFICIDADE SEGURA ── */
+body:not(:has(.admin-root)) main h1.equipa-hero-title {
+  font-family: "Wright Pro", sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.2 !important;
+  text-wrap: normal !important;
+}
+@media (min-width: 1024px) {
+  body:not(:has(.admin-root)) main h1.equipa-hero-title {
+    font-size: clamp(28px, 3vw, 42px) !important;
+    max-width: 48ch !important;
+  }
+  .equipa-hero-cols {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+  }
+  .equipa-col-extra {
+    display: block !important;
+    opacity: 1 !important;
+    max-height: none !important;
+  }
+}
+@media (max-width: 1023px) {
+  body:not(:has(.admin-root)) main h1.equipa-hero-title {
+    font-size: clamp(24px, 6.6vw, 28px) !important;
+    max-width: 100% !important;
+  }
+  .equipa-hero-cols {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ── PÁGINA SOBRE: HERO H1 & TÍTULOS COM ESPECIFICIDADE SEGURA ── */
+body:not(:has(.admin-root)) main h1.sobre-hero-title {
+  font-family: "Wright Pro", sans-serif !important;
+  font-weight: 300 !important;
+  line-height: var(--lh-h1) !important;
+  font-size: var(--fs-h1) !important;
+  letter-spacing: var(--ls-h1) !important;
+  text-wrap: balance !important;
+  color: #ffffff !important;
+}
+@media (min-width: 1024px) {
+  body:not(:has(.admin-root)) main h1.sobre-hero-title {
+    max-width: 28ch !important;
+  }
+}
+@media (max-width: 1023px) {
+  body:not(:has(.admin-root)) main h1.sobre-hero-title {
+    max-width: 100% !important;
+  }
+}
+
+body:not(:has(.admin-root)) main .sobre-section-title {
+  font-family: "Wright Pro", sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.15 !important;
+  color: var(--gold) !important;
+}

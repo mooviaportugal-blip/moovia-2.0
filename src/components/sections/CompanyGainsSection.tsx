@@ -47,7 +47,7 @@ export function CompanyGainsSection() {
                 key={item.title}
                 className="border border-b18 bg-w05 p-8 flex flex-col h-full"
               >
-                <div className="w-10 h-10 rounded-sm border border-gold/30 bg-gold/10 flex items-center justify-center text-gold mb-5 shrink-0">
+                <div className="w-10 h-10 rounded-sm border border-[#9B7A50]/40 bg-[#9B7A50]/10 flex items-center justify-center text-[#9B7A50] mb-5 shrink-0">
                   <Icon size={18} strokeWidth={1.6} />
                 </div>
                 <h3 className="typo-h3 text-white mb-2">{item.title}</h3>
@@ -57,9 +57,22 @@ export function CompanyGainsSection() {
           })}
         </div>
 
-        <p className="mt-10 md:mt-12 typo-body text-gold-l font-semibold border-l-2 border-gold pl-4">
-          {t("home.gains.support_line")}
-        </p>
+        <div className="mt-12 md:mt-16 border-l-2 border-[#9B7A50] pl-6 py-1 space-y-3">
+          <h3 className="text-xl md:text-2xl font-serif text-[#9B7A50] font-normal tracking-tight">
+            {t("home.gains.banner_title")}
+          </h3>
+          <p className="typo-body text-white font-medium">
+            {t("home.gains.banner_line")}
+          </p>
+          {Boolean(t("home.costSource")) && (
+            <p className="font-urbanist text-[12px] text-white/70 leading-normal">
+              {t("home.costSource")}
+            </p>
+          )}
+          <p className="typo-body text-w70 max-w-[840px]">
+            {t("home.gains.banner_body")}
+          </p>
+        </div>
       </div>
     </section>
   );

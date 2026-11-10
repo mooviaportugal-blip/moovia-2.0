@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import fredericoNewAsset from "@/assets/frederico_new.webp.asset.json";
+import ruiManoImg from "@/assets/rui-mano.png";
 
 const Linkedin = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -18,6 +19,7 @@ type Member = {
   name: string;
   initials: string;
   role: string;
+  companies?: string;
   img?: string;
   linkedin?: string;
   chips: string[];
@@ -172,20 +174,26 @@ const ALL: Record<string, Member> = {
       "Head de Marketing & Branding da MOOVIA. Responsável pela estratégia de posicionamento, comunicação institucional e crescimento digital da marca.",
     ],
   },
+  rui: {
+    id: "rui",
+    name: "Rui Mano",
+    initials: "RM",
+    role: "Advisor | Revenue Assurance",
+    companies: "Choice Technologies / Kema / eTECH",
+    img: ruiManoImg,
+    chips: ["Revenue Assurance", "Telecommunications", "Enterprise Tech"],
+    bio: [
+      "Com mais de 25 anos de experiência executiva internacional, liderou operações globais e estratégias de Revenue Assurance em empresas líderes como Choice Technologies e Kema.",
+    ],
+  },
 };
 
-const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.eduardo, ALL.guilherme];
+const EQUIPA_INTERNA = [ALL.frederico, ALL.pablo, ALL.joao, ALL.leticia, ALL.guilherme, ALL.rui];
 const REDE_PARCEIROS = [ALL.sara, ALL.cristina, ALL.sandra, ALL.dany, ALL.laura];
 
-function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen: () => void; index: number; isPartner?: boolean }) {
+function MemberCard({ m, onOpen, isPartner = false }: { m: Member; onOpen: () => void; index?: number; isPartner?: boolean }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ delay: index * 0.05, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative flex flex-col items-center text-center"
-    >
+    <div className="group relative flex flex-col items-center text-center w-full">
       <button
         type="button"
         onClick={onOpen}
@@ -229,8 +237,13 @@ function MemberCard({ m, onOpen, index, isPartner = false }: { m: Member; onOpen
         <p className="mt-1.5 font-body text-[10px] font-[400] uppercase tracking-[0.2em] text-gold/80">
           {m.role}
         </p>
+        {m.companies && (
+          <p className="mt-1 font-body text-[11px] font-[400] text-white/60">
+            {m.companies}
+          </p>
+        )}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -277,6 +290,7 @@ function Lightbox({ m, onClose }: { m: Member; onClose: () => void }) {
           <div className="absolute inset-x-0 bottom-0 p-5">
             <p className="font-display text-[22px] md:text-[24px] font-[300] text-white leading-tight">{m.name}</p>
             <p className="mt-1 font-body text-[11px] uppercase tracking-[0.22em] text-gold">{m.role}</p>
+            {m.companies && <p className="mt-1 font-body text-[11px] text-white/60">{m.companies}</p>}
             {m.linkedin && (
               <a
                 href={m.linkedin}
@@ -332,32 +346,20 @@ export function EquipaShowcase() {
   const [active, setActive] = useState<Member | null>(null);
 
   return (
-    <section className="bg-black px-6 pb-24 lg:px-20">
-      <div className="mx-auto max-w-[1200px]">
+    <section className="bg-black px-6 md:px-[80px] pb-24 pt-0">
+      <div className="mx-auto max-w-[1400px]">
         
         {/* SECÇÃO A: EQUIPA MOOVIA */}
-        <div className="mb-12 text-center md:text-left">
+        <div className="mb-12 text-left">
           <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Equipa MOOVIA</h2>
           <p className="mt-2 font-body text-[14px] md:text-[16px] text-white/60">A equipa que coordena. Enxuta, multidisciplinar, por desenho.</p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8 mb-24">
-          {EQUIPA_INTERNA.map((m, i) => (
-            <MemberCard key={m.id} m={m} onOpen={() => setActive(m)} index={i} />
-          ))}
-        </div>
-
-        {/* SECÇÃO B: REDE DE PARCEIROS */}
-        <div id="rede-parceiros" className="mb-12 text-center md:text-left max-w-[800px] scroll-mt-24">
-          <h2 className="font-display text-[28px] md:text-[36px] font-[300] text-white">Rede de Parceiros</h2>
-          <p className="mt-4 font-body text-[14px] md:text-[16px] text-white/60 leading-[1.8]">
-            Quando um executivo precisa de apoio adicional, seja encontrar casa, escolher escola ou tratar documentação, a MOOVIA orquestra uma rede de parceiros especializados para essas necessidades específicas. A empresa pode identificar essa necessidade pelo perfil do cargo e incluir no pacote de mobilidade, ou o próprio executivo aciona os serviços ao conhecer a rede de parceiros que a MOOVIA orquestra.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8">
-          {REDE_PARCEIROS.map((m, i) => (
-            <MemberCard key={m.id} m={m} onOpen={() => setActive(m)} index={i} isPartner />
+        <div className="flex flex-wrap justify-center gap-y-12 gap-x-6 md:gap-x-10 mb-4">
+          {EQUIPA_INTERNA.map((m) => (
+            <div key={m.id} className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2.5rem)] max-w-[320px]">
+              <MemberCard m={m} onOpen={() => setActive(m)} />
+            </div>
           ))}
         </div>
 

@@ -1,18 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { LinkedinLogo, InstagramLogo, WhatsappLogo, ShieldCheck } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import "@/i18n";
 import { supabase } from "@/integrations/supabase/client";
 import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
 import gdprBadge from "@/assets/gdpr-badge.png.asset.json";
 import logoFooterAsset from "@/assets/logo-moovia-footer.png.asset.json";
 
 const LEGAL_ROUTES: Record<string, string> = {
-  "politica-privacidade": "/privacidade",
+  "politica-privacidade": "/politica-de-privacidade",
   "politica-cookies": "/cookies",
   "termos-condicoes": "/termos",
 };
 
 export function Footer() {
+  const { t } = useTranslation();
   const whatsappEnabled = useWhatsappEnabled();
   const [legal, setLegal] = useState<{ slug: string; title: string }[]>([]);
   useEffect(() => {
@@ -46,16 +49,15 @@ export function Footer() {
             <h5 className="font-urbanist font-[500] text-[11px] tracking-[0.2em] uppercase text-gold">Navegação</h5>
             <div className="flex flex-col gap-3 items-center lg:items-start">
               {[
-                { label: "Serviços", to: "/servicos" },
-                { label: "Global Mobility Assurance", to: "/gma" },
+                { label: "Para Empresas", to: "/para-empresas" },
+                { label: "Para Executivos e Famílias", to: "/para-executivos-e-familias" },
                 { label: "Sobre", to: "/sobre" },
                 { label: "Equipa", to: "/equipa" },
-                { label: "Insights", to: "/blog" },
                 { label: "Contacto", to: "/contacto" },
               ].map((l) => (
-                <a key={l.label} href={l.to} className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors">
+                <Link key={l.label} to={l.to} className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors">
                   {l.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -64,7 +66,20 @@ export function Footer() {
           <div className="flex flex-col items-center lg:items-start gap-6">
             <h5 className="font-urbanist font-[500] text-[11px] tracking-[0.2em] uppercase text-gold">Políticas</h5>
             <div className="flex flex-col gap-3 items-center lg:items-start">
+              <Link
+                to="/politica-de-privacidade"
+                className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors"
+              >
+                {t("footer.privacy_policy")}
+              </Link>
+              <Link
+                to="/termos-de-consentimento"
+                className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors"
+              >
+                {t("footer.consent_terms", "Termos de Consentimento")}
+              </Link>
               {legal.map((p) => {
+                if (p.slug === "politica-privacidade") return null;
                 const to = LEGAL_ROUTES[p.slug];
                 if (!to) return null;
                 return (

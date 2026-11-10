@@ -55,7 +55,8 @@ export const Footer = () => {
       <div className="max-w-screen-2xl mx-auto border-t border-border pt-8 flex flex-col md:flex-row justify-between gap-4 font-urbanist font-light text-[12px] text-white/20">
         <div>{rights}</div>
         <div className="flex gap-6">
-          <a href="/privacidade" className="hover:text-white transition-colors">{t("footer.privacy")}</a>
+          <a href="/politica-de-privacidade" className="hover:text-white transition-colors">{t("footer.privacy")}</a>
+          <a href="/termos-de-consentimento" className="hover:text-white transition-colors">{t("footer.consent_terms", "Termos de Consentimento")}</a>
           <a href="/cookies" className="hover:text-white transition-colors">{t("footer.cookies")}</a>
           <a href="/termos" className="hover:text-white transition-colors">Termos</a>
         </div>

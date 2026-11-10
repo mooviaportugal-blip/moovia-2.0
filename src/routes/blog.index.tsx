@@ -27,6 +27,7 @@ function useLocale(): Locale {
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, nofollow" },
       { title: "Insights, MOOVIA" },
       { name: "description", content: "Insights sobre transição internacional, fiscalidade, habitação, escolas e adaptação. Brasil → Portugal." },
       { property: "og:title", content: "Insights MOOVIA" },

@@ -20,6 +20,11 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Local scratch and temporary artifacts
+scratch/
+site-inventory/
+site-inventory.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

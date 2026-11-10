@@ -5,6 +5,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguageSwitcherEnabled } from "@/hooks/useLanguageSwitcherEnabled";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { useSiteContent } from "@/lib/useSiteContent";
+import { CtaButton } from "@/components/ui/CtaButton";
 import logoNavAsset from "@/assets/logo-nav-v8.png.asset.json";
 
 export function Nav() {
@@ -35,23 +36,15 @@ export function Nav() {
   }, [mobileOpen]);
 
   const links = [
-    { name: cmsText("nav.link_servicos", t("nav.services")), to: "/servicos" },
-    { name: cmsText("nav.link_hma", t("common.gma")), to: "/gma" },
-    { name: cmsText("nav.link_sobre", t("nav.about")), to: "/sobre" },
-    { name: cmsText("nav.link_equipa", t("nav.team")), to: "/equipa" },
-    { name: cmsText("nav.link_insights", t("nav.blog")), to: "/blog" },
-    { name: cmsText("nav.link_contacto", t("nav.contact")), to: "/contacto" },
+    { name: cmsText("nav.link_para_empresas", t("nav.for_companies", "Para Empresas")), to: "/para-empresas" },
+    { name: cmsText("nav.link_para_executivos", t("nav.for_executives", "Para Executivos e Famílias")), to: "/para-executivos-e-familias" },
+    { name: cmsText("nav.link_sobre", t("nav.about", "Sobre")), to: "/sobre" },
+    { name: cmsText("nav.link_equipa", t("nav.team", "Equipa")), to: "/equipa" },
+    { name: cmsText("nav.link_contacto", t("nav.contact", "Contacto")), to: "/contacto" },
   ];
 
-  const handleCtaClick = (e: React.MouseEvent) => {
+  const handleCtaClick = () => {
     setMobileOpen(false);
-    if (typeof window !== "undefined" && window.location.pathname === "/gma") {
-      e.preventDefault();
-      const target =
-        document.getElementById("contacto") ??
-        document.getElementById("lead-form");
-      target?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
   };
 
   return (
@@ -94,26 +87,24 @@ export function Nav() {
       {/* CTA + Language (Desktop) */}
       <div className="hidden lg:flex items-center gap-4 ml-auto">
         {langEnabled && <LanguageSwitcher />}
-        <Link
-          to="/gma"
-          hash="contacto"
+        <CtaButton
+          to="/contacto"
           onClick={handleCtaClick}
-          className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-5 py-2.5 rounded-[2px] transition-colors whitespace-nowrap"
+          size="nav"
         >
           {t("nav.cta")}
-        </Link>
+        </CtaButton>
       </div>
 
       {/* Mobile CTA + language + hamburger */}
       <div className="lg:hidden flex items-center gap-2 ml-auto">
-        <Link
-          to="/gma"
-          hash="contacto"
+        <CtaButton
+          to="/contacto"
           onClick={handleCtaClick}
-          className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-3 py-2 rounded-[2px] transition-colors whitespace-nowrap"
+          size="compact"
         >
           {t("nav.cta")}
-        </Link>
+        </CtaButton>
         {langEnabled && <LanguageSwitcher compact />}
         <button
           className="flex flex-col gap-[6px] z-[1001] p-2.5 rounded border border-gold/40 bg-[#06091a]/60 min-w-10 min-h-10 items-center justify-center"
@@ -179,14 +170,13 @@ export function Nav() {
               transition={{ delay: 0.4 }}
               className="pt-4"
             >
-              <Link
-                to="/gma"
-                hash="contacto"
+              <CtaButton
+                to="/contacto"
                 onClick={handleCtaClick}
-                className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-6 py-3.5 rounded-[2px] transition-colors"
+                className="px-6 py-3.5"
               >
                 {t("nav.cta")}
-              </Link>
+              </CtaButton>
             </motion.div>
           </motion.div>
         )}

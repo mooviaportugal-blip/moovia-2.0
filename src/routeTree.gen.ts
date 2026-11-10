@@ -22,13 +22,17 @@ import { Route as GmaRouteImport } from './routes/gma'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MeuDashboardRouteImport } from './routes/meu-dashboard'
+import { Route as ParaEmpresasRouteImport } from './routes/para-empresas'
+import { Route as ParaExecutivosEFamiliasRouteImport } from './routes/para-executivos-e-familias'
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SoundbrandRouteImport } from './routes/soundbrand'
 import { Route as TermosRouteImport } from './routes/termos'
+import { Route as TermosDeConsentimentoRouteImport } from './routes/termos-de-consentimento'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
 import { Route as AdminAssessmentsRouteImport } from './routes/admin.assessments'
@@ -123,9 +127,24 @@ const MeuDashboardRoute = MeuDashboardRouteImport.update({
   path: '/meu-dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ParaEmpresasRoute = ParaEmpresasRouteImport.update({
+  id: '/para-empresas',
+  path: '/para-empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParaExecutivosEFamiliasRoute = ParaExecutivosEFamiliasRouteImport.update({
+  id: '/para-executivos-e-familias',
+  path: '/para-executivos-e-familias',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
   id: '/perguntas-frequentes',
   path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
@@ -156,6 +175,11 @@ const SoundbrandRoute = SoundbrandRouteImport.update({
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
   path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeConsentimentoRoute = TermosDeConsentimentoRouteImport.update({
+  id: '/termos-de-consentimento',
+  path: '/termos-de-consentimento',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
@@ -315,13 +339,17 @@ export interface FileRoutesByFullPath {
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
+  '/para-empresas': typeof ParaEmpresasRoute
+  '/para-executivos-e-familias': typeof ParaExecutivosEFamiliasRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/soundbrand': typeof SoundbrandRoute
   '/termos': typeof TermosRoute
+  '/termos-de-consentimento': typeof TermosDeConsentimentoRoute
   '/admin/analytics': typeof AdminAnalyticsRoute
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
@@ -364,13 +392,17 @@ export interface FileRoutesByTo {
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
+  '/para-empresas': typeof ParaEmpresasRoute
+  '/para-executivos-e-familias': typeof ParaExecutivosEFamiliasRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/soundbrand': typeof SoundbrandRoute
   '/termos': typeof TermosRoute
+  '/termos-de-consentimento': typeof TermosDeConsentimentoRoute
   '/admin/analytics': typeof AdminAnalyticsRoute
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
@@ -414,13 +446,17 @@ export interface FileRoutesById {
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
   '/meu-dashboard': typeof MeuDashboardRoute
+  '/para-empresas': typeof ParaEmpresasRoute
+  '/para-executivos-e-familias': typeof ParaExecutivosEFamiliasRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/soundbrand': typeof SoundbrandRoute
   '/termos': typeof TermosRoute
+  '/termos-de-consentimento': typeof TermosDeConsentimentoRoute
   '/admin/analytics': typeof AdminAnalyticsRoute
   '/admin/assessments': typeof AdminAssessmentsRoute
   '/admin/blog': typeof AdminBlogRoute
@@ -466,13 +502,17 @@ export interface FileRouteTypes {
     | '/home'
     | '/login'
     | '/meu-dashboard'
+    | '/para-empresas'
+    | '/para-executivos-e-familias'
     | '/perguntas-frequentes'
+    | '/politica-de-privacidade'
     | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
     | '/soundbrand'
     | '/termos'
+    | '/termos-de-consentimento'
     | '/admin/analytics'
     | '/admin/assessments'
     | '/admin/blog'
@@ -515,13 +555,17 @@ export interface FileRouteTypes {
     | '/home'
     | '/login'
     | '/meu-dashboard'
+    | '/para-empresas'
+    | '/para-executivos-e-familias'
     | '/perguntas-frequentes'
+    | '/politica-de-privacidade'
     | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
     | '/soundbrand'
     | '/termos'
+    | '/termos-de-consentimento'
     | '/admin/analytics'
     | '/admin/assessments'
     | '/admin/blog'
@@ -564,13 +608,17 @@ export interface FileRouteTypes {
     | '/home'
     | '/login'
     | '/meu-dashboard'
+    | '/para-empresas'
+    | '/para-executivos-e-familias'
     | '/perguntas-frequentes'
+    | '/politica-de-privacidade'
     | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
     | '/soundbrand'
     | '/termos'
+    | '/termos-de-consentimento'
     | '/admin/analytics'
     | '/admin/assessments'
     | '/admin/blog'
@@ -615,13 +663,17 @@ export interface RootRouteChildren {
   HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
   MeuDashboardRoute: typeof MeuDashboardRoute
+  ParaEmpresasRoute: typeof ParaEmpresasRoute
+  ParaExecutivosEFamiliasRoute: typeof ParaExecutivosEFamiliasRoute
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ServicosRoute: typeof ServicosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
   SoundbrandRoute: typeof SoundbrandRoute
   TermosRoute: typeof TermosRoute
+  TermosDeConsentimentoRoute: typeof TermosDeConsentimentoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   HomeBlackvRoute: typeof HomeBlackvRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -723,11 +775,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MeuDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/para-empresas': {
+      id: '/para-empresas'
+      path: '/para-empresas'
+      fullPath: '/para-empresas'
+      preLoaderRoute: typeof ParaEmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/para-executivos-e-familias': {
+      id: '/para-executivos-e-familias'
+      path: '/para-executivos-e-familias'
+      fullPath: '/para-executivos-e-familias'
+      preLoaderRoute: typeof ParaExecutivosEFamiliasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/perguntas-frequentes': {
       id: '/perguntas-frequentes'
       path: '/perguntas-frequentes'
       fullPath: '/perguntas-frequentes'
       preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacidade': {
@@ -770,6 +843,13 @@ declare module '@tanstack/react-router' {
       path: '/termos'
       fullPath: '/termos'
       preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-consentimento': {
+      id: '/termos-de-consentimento'
+      path: '/termos-de-consentimento'
+      fullPath: '/termos-de-consentimento'
+      preLoaderRoute: typeof TermosDeConsentimentoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/': {
@@ -1047,13 +1127,17 @@ const rootRouteChildren: RootRouteChildren = {
   HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
   MeuDashboardRoute: MeuDashboardRoute,
+  ParaEmpresasRoute: ParaEmpresasRoute,
+  ParaExecutivosEFamiliasRoute: ParaExecutivosEFamiliasRoute,
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ServicosRoute: ServicosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
   SoundbrandRoute: SoundbrandRoute,
   TermosRoute: TermosRoute,
+  TermosDeConsentimentoRoute: TermosDeConsentimentoRoute,
   BlogSlugRoute: BlogSlugRoute,
   HomeBlackvRoute: HomeBlackvRoute,
   BlogIndexRoute: BlogIndexRoute,

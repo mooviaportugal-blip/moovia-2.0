@@ -1,44 +1,46 @@
-import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import "@/i18n";
-import { ClipboardCheck, Compass, Activity, ArrowRight, type LucideIcon } from "lucide-react";
+import { ClipboardCheck, Compass, Activity, Check, type LucideIcon } from "lucide-react";
 
-export interface StepCardProps {
+export interface StepCardData {
   icon: LucideIcon;
   title: string;
   body: string;
-}
-
-export function StepCard({ icon: Icon, title, body }: StepCardProps) {
-  return (
-    <article className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col h-full transition-colors hover:border-gold/40">
-      <div className="w-11 h-11 rounded-sm border border-gold/30 bg-gold/10 flex items-center justify-center text-gold mb-6 shrink-0">
-        <Icon size={20} strokeWidth={1.6} />
-      </div>
-      <h3 className="typo-h3 text-white mb-3">{title}</h3>
-      <p className="typo-body text-w70">{body}</p>
-    </article>
-  );
+  items: string[];
 }
 
 export function HomeStepsSection() {
   const { t } = useTranslation();
 
-  const steps: StepCardProps[] = [
+  const steps: StepCardData[] = [
     {
       icon: ClipboardCheck,
       title: t("home.steps.step1_title"),
       body: t("home.steps.step1_body"),
+      items: [
+        t("home.steps.step1_item1"),
+        t("home.steps.step1_item2"),
+        t("home.steps.step1_item3"),
+      ],
     },
     {
       icon: Compass,
       title: t("home.steps.step2_title"),
       body: t("home.steps.step2_body"),
+      items: [
+        t("home.steps.step2_item1"),
+        t("home.steps.step2_item2"),
+      ],
     },
     {
       icon: Activity,
       title: t("home.steps.step3_title"),
       body: t("home.steps.step3_body"),
+      items: [
+        t("home.steps.step3_item1"),
+        t("home.steps.step3_item2"),
+        t("home.steps.step3_item3"),
+      ],
     },
   ];
 
@@ -54,31 +56,39 @@ export function HomeStepsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {steps.map((step) => (
-            <StepCard
-              key={step.title}
-              icon={step.icon}
-              title={step.title}
-              body={step.body}
-            />
-          ))}
-        </div>
+          {steps.map((step) => {
+            const Icon = step.icon;
+            return (
+              <article
+                key={step.title}
+                className="border border-b18 bg-w05 p-8 md:p-10 flex flex-col justify-between h-full rounded-sm transition-colors hover:border-gold/40"
+              >
+                <div>
+                  <div className="w-11 h-11 rounded-sm border border-gold/30 bg-gold/10 flex items-center justify-center text-gold mb-6 shrink-0">
+                    <Icon size={20} strokeWidth={1.6} />
+                  </div>
+                  <h3 className="font-urbanist text-[16px] md:text-[18px] font-[600] tracking-wider uppercase text-[#9B7A50] mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="typo-body text-w70 mb-6">{step.body}</p>
+                </div>
 
-        <div className="mt-10 md:mt-12">
-          <Link
-            to="/gma"
-            hash="metodologia"
-            className="inline-flex items-center gap-2 typo-caption font-semibold text-gold hover:text-gold-l transition-colors group"
-          >
-            <span>{t("home.steps.link_methodology")}</span>
-            <ArrowRight
-              size={15}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </Link>
+                <ul className="pt-5 border-t border-b18 space-y-2.5">
+                  {step.items.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2.5 text-[14px] font-urbanist text-white/85"
+                    >
+                      <Check size={14} className="text-[#9B7A50] shrink-0" strokeWidth={2} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-

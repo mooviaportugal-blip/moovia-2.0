@@ -8,6 +8,7 @@ import i18n, {
   reapplyCurrentLang,
   type Lang,
 } from "@/i18n";
+import { resetHeadOrigin } from "@/i18n/applyDom";
 
 // Compatibility shim so existing imports of `useI18n` keep working.
 // New code can still use `useTranslation()` from `react-i18next`.
@@ -17,6 +18,7 @@ function DomLangSync() {
   // mounted route content gets translated.
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   useEffect(() => {
+    resetHeadOrigin();
     reapplyCurrentLang();
   }, [pathname]);
   return null;

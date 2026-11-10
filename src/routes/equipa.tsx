@@ -1,139 +1,72 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { RotatingLogo } from "@/components/ui/RotatingLogo";
 import { EquipaShowcase } from "@/components/sections/EquipaShowcase";
-import { LinhaMooverSection } from "@/components/sections/LinhaMooverSection";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
+import { RotatingLogo } from "@/components/ui/RotatingLogo";
 
 export const Route = createFileRoute("/equipa")({
-  head: () => ({
-    meta: [
-      { title: "Nossa Equipa e Rede de Parceiros | MOOVIA" },
-      { name: "description", content: "Diferentes competências. Uma única camada de Assurance. A MOOVIA integra experiência internacional, ciência comportamental e Revenue Assurance adaptada para Global Mobility Assurance, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para o sucesso humano." },
-      { property: "og:title", content: "Nossa Equipa e Rede de Parceiros" },
-      { property: "og:description", content: "Diferentes competências. Uma única camada de Assurance." },
-      { property: "og:url", content: "https://moovia.global/equipa" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Equipa e Rede MOOVIA" },
-      { name: "twitter:description", content: "Diferentes competências. Uma única camada de Assurance." },
-    ],
-    links: [{ rel: "canonical", href: "https://moovia.global/equipa" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          name: "Equipa MOOVIA",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, item: { "@type": "Person", name: "Frederico Prado", jobTitle: "Founder & CEO", worksFor: { "@type": "Organization", name: "MOOVIA" }, url: "https://www.linkedin.com/in/fredericoprado/" } },
-            { "@type": "ListItem", position: 2, item: { "@type": "Person", name: "Pablo Alejandro Saco Paim", jobTitle: "Co-Founder & CPTO", worksFor: { "@type": "Organization", name: "MOOVIA" } } },
-            { "@type": "ListItem", position: 3, item: { "@type": "Person", name: "Dra. Letícia de Mello", jobTitle: "Co-Founder & CSO", worksFor: { "@type": "Organization", name: "MOOVIA" } } },
-            { "@type": "ListItem", position: 4, item: { "@type": "Person", name: "João Gabriel Prado", jobTitle: "Co-Founder & Legal", worksFor: { "@type": "Organization", name: "MOOVIA" } } },
-          ],
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://moovia.global/" },
-            { "@type": "ListItem", position: 2, name: "Equipa", item: "https://moovia.global/equipa" },
-          ],
-        }),
-      },
-    ],
-  }),
-  component: Equipa,
+    head: () => ({
+        meta: [
+            { title: "Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela." },
+            {
+                name: "description",
+                content:
+                    "A MOOVIA nasceu de uma amizade de décadas e de dois percursos profissionais que se cruzaram no mundo corporativo internacional, passando por Revenue Assurance, grandes consultoras e tecnologia empresarial, a par de experiência direta dos desafios humanos da mobilidade internacional.",
+            },
+            { property: "og:title", content: "Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela." },
+            {
+                property: "og:description",
+                content:
+                    "A MOOVIA nasceu de uma amizade de décadas e de dois percursos profissionais que se cruzaram no mundo corporativo internacional, passando por Revenue Assurance, grandes consultoras e tecnologia empresarial, a par de experiência direta dos desafios humanos da mobilidade internacional.",
+            },
+            { property: "og:url", content: "https://moovia.global/equipa" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "https://moovia.global/og-image.jpg" },
+            { name: "twitter:title", content: "Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela." },
+            {
+                name: "twitter:description",
+                content:
+                    "A MOOVIA nasceu de uma amizade de décadas e de dois percursos profissionais que se cruzaram no mundo corporativo internacional, passando por Revenue Assurance, grandes consultoras e tecnologia empresarial, a par de experiência direta dos desafios humanos da mobilidade internacional.",
+            },
+            { name: "twitter:image", content: "https://moovia.global/og-image.jpg" },
+        ],
+        links: [{ rel: "canonical", href: "https://moovia.global/equipa" }],
+        scripts: [
+            {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    itemListElement: [
+                        { "@type": "ListItem", position: 1, name: "Home", item: "https://moovia.global/" },
+                        { "@type": "ListItem", position: 2, name: "Equipa", item: "https://moovia.global/equipa" },
+                    ],
+                }),
+            },
+        ],
+    }),
+    component: Equipa,
 });
 
 function Equipa() {
-  return (
-    <SiteLayout>
-      <div className="relative overflow-hidden bg-black pt-[120px]">
-        <RotatingLogo size="min(90vw,1100px)" opacity={0.025} duration={150} />
-        <div className="relative z-10 mx-auto max-w-[1400px] px-6 md:px-[80px] py-20">
-          <motion.p 
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-8"
-          >
-            A equipa
-          </motion.p>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-display text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-0.03em] mb-14"
-          >
-            <span className="block font-[200] text-white mb-2">Diferentes competências.</span>
-            <span className="block font-[300] italic text-gold-l">Uma única camada de Assurance.</span>
-          </motion.h1>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="max-w-[760px] border-l-[3px] border-gold/40 pl-6 space-y-6"
-          >
-            <p className="typo-body text-white/90">
-              O Global Mobility Assurance integra experiência internacional, ciência comportamental e Revenue Assurance adaptada para Global Mobility Assurance, tecnologia, engenharia de decisão e governança para transformar fatores humanos em inteligência acionável para a mobilidade internacional.
-            </p>
-            <p className="typo-body text-w70">
-              A MOOVIA identifica, mede e acompanha os fatores que podem afetar integração, adaptação familiar, produtividade, retenção e sucesso da missão, apoiando empresas e executivos ao longo de toda a jornada.
-            </p>
-            <p className="typo-body text-w70">
-              Quando uma necessidade específica é identificada, a MOOVIA pode conectar a organização à sua rede de especialistas, mantendo o foco na medição, acompanhamento e evolução dos indicadores.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+    return (
+        <SiteLayout>
+            <div className="relative overflow-hidden bg-black pt-36 pb-10 md:pt-48 md:pb-14">
+                <RotatingLogo size="min(90vw,1100px)" opacity={0.035} duration={150} />
+                <div className="relative z-10 mx-auto max-w-[1400px] px-6 md:px-[80px]">
+                    <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-3 md:mb-5">
+                        Conheça a equipa
+                    </p>
 
-      <LinhaMooverSection />
+                    <h1 className="equipa-hero-title font-[300] text-gold w-full mb-0">
+                        Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela.
+                    </h1>
+                </div>
+            </div>
 
-      <HistoriaPrecedeEquipa />
+            <EquipaShowcase />
 
-      <EquipaShowcase />
-
-      <FinalCtaStrip />
-    </SiteLayout>
-  );
-}
-
-function HistoriaPrecedeEquipa() {
-  const paragrafos = [
-    "A MOOVIA não nasce de uma ideia isolada. Nasce da amizade de décadas e de duas trajetórias que se cruzaram no mundo corporativo internacional, entre Revenue Assurance, grandes consultorias e tecnologia empresarial, e que viveram na pele os desafios humanos da mobilidade internacional.",
-    "Depois de anos a proteger o investimento das empresas em processos e receita, decidimos aplicar a mesma disciplina de rigor, evidência e rastreabilidade a algo que nunca teve essa proteção: o investimento humano da mobilidade internacional.",
-    "Dessa convicção, de que os fatores que mais determinam o sucesso de uma mobilidade raramente são medidos, nasce a MOOVIA.",
-  ];
-  return (
-    <section className="bg-black-2 py-[120px] px-6 lg:px-20 border-t border-b18">
-      <div className="max-w-[860px] mx-auto">
-        <p className="font-body text-[11px] tracking-[0.32em] uppercase text-gold mb-6">
-          A história que precede a equipa
-        </p>
-        <h2 className="font-display font-[200] text-white leading-[1.05] tracking-[-0.03em] text-[clamp(28px,3.8vw,48px)] mb-12">
-          Antes das pessoas, <span className="italic text-gold-l">a convicção.</span>
-        </h2>
-        <div className="space-y-6">
-          {paragrafos.map((p, i) => (
-            <motion.p
-              key={i}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ delay: i * 0.08, duration: 0.6 }}
-              className="font-body font-[300] text-[16px] md:text-[17px] text-w35 leading-[1.9]"
-            >
-              {p}
-            </motion.p>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+            <FinalCtaStrip />
+        </SiteLayout>
+    );
 }

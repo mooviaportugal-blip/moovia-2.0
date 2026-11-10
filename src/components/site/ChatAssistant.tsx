@@ -1100,7 +1100,7 @@ export function ChatAssistant() {
       <button
         onClick={() => setOpen(!open)}
         aria-label={S.ariaOpen}
-        className="fixed bottom-6 left-4 sm:bottom-8 sm:left-auto sm:right-8 z-[1200] w-14 h-14 rounded-full flex items-center justify-center transition-all overflow-hidden"
+        className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-[1200] w-14 h-14 rounded-full flex items-center justify-center transition-all overflow-hidden"
         style={{
           background: '#111d36',
           border: open ? '1px solid #ad8957' : '1px solid rgba(173,137,87,.3)',
@@ -1116,7 +1116,7 @@ export function ChatAssistant() {
       {!open && showInvite && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed z-[1200] bottom-[96px] left-4 sm:bottom-8 sm:left-auto sm:right-[84px]"
+          className="hidden md:block fixed z-[1200] sm:bottom-8 sm:right-[84px]"
           style={{
             background: '#12141a',
             border: '1px solid rgba(173,137,87,.3)',

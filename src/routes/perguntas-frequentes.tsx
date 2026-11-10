@@ -8,6 +8,7 @@ export const Route = createFileRoute("/perguntas-frequentes")({
   head: () => ({
     meta: [
       { title: "Perguntas Frequentes | MOOVIA" },
+      { name: "robots", content: "noindex, nofollow" },
       {
         name: "description",
         content:

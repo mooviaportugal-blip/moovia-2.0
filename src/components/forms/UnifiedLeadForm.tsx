@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "@/i18n";
@@ -241,18 +242,6 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
           )}
         </div>
 
-        <label className="flex items-start gap-3 mt-2 cursor-pointer">
-          <input
-            type="checkbox"
-            required
-            defaultChecked
-            className="mt-1 accent-[#ad8957]"
-          />
-          <span className="typo-caption text-w70">
-            Confidencial e em conformidade com o RGPD. Autorizo o tratamento dos dados pela MOOVIA para resposta a este pedido de contacto.
-          </span>
-        </label>
-
         <button
           type="submit"
           disabled={loading}
@@ -260,6 +249,17 @@ export function UnifiedLeadForm({ context = "home" }: { context?: Ctx }) {
         >
           {loading ? "A enviar..." : t("empresas.form.submit")}
         </button>
+
+        <p className="mt-3 text-center font-body text-[12px] text-white/50 font-[300] leading-relaxed">
+          {t("contact.privacyNote_prefix", "Ao enviar, reconhece que tratamos os seus dados para responder ao seu pedido, conforme a")}{" "}
+          <Link
+            to="/politica-de-privacidade"
+            className="text-gold underline hover:text-white transition-colors"
+          >
+            {t("footer.privacy_policy", "Política de Privacidade")}
+          </Link>
+          .
+        </p>
       </form>
     </div>
   );

@@ -1,33 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
+import { ProblemAndHelpSection } from "@/components/sections/ProblemAndHelpSection";
 import { HomeStepsSection } from "@/components/sections/HomeStepsSection";
-import { ForWhomSection } from "@/components/sections/ForWhomSection";
+import { WhoIsItForSection } from "@/components/sections/WhoIsItForSection";
 import { CompanyGainsSection } from "@/components/sections/CompanyGainsSection";
-import { TrustConfidentialitySection } from "@/components/sections/TrustConfidentialitySection";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "MOOVIA | Global Mobility Assurance" },
+      { title: "Inteligência para os riscos humanos das missões internacionais" },
       { name: "robots", content: "noindex, nofollow" },
       {
         name: "description",
         content:
-          "Pré-visualização interna do site MOOVIA. Global Mobility Assurance e acompanhamento da mobilidade internacional para empresas.",
+          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais, antes que se transformem em problemas de desempenho, retenção ou repatriação.",
       },
-      { property: "og:title", content: "MOOVIA | Global Mobility Assurance" },
+      { property: "og:title", content: "Inteligência para os riscos humanos das missões internacionais" },
       {
         property: "og:description",
-        content: "Pré-visualização interna do site MOOVIA.",
+        content:
+          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MOOVIA | Global Mobility Assurance" },
+      { name: "twitter:title", content: "Inteligência para os riscos humanos das missões internacionais" },
       {
         name: "twitter:description",
-        content: "Pré-visualização interna do site MOOVIA.",
+        content:
+          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais.",
       },
     ],
   }),
@@ -40,17 +42,17 @@ function HomePage() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. O que fazemos, em três passos (#como-funciona) */}
+      {/* 2. O Problema e Como a MOOVIA Ajuda */}
+      <ProblemAndHelpSection />
+
+      {/* 3. Como funciona (AVALIAR, LIGAR E INTERPRETAR, AGIR) */}
       <HomeStepsSection />
 
-      {/* 3. Para quem é (Contratado pela empresa. Vivido pelo executivo.) */}
-      <ForWhomSection />
+      {/* 4. Para quem é (Executivos & Famílias / Empresas) */}
+      <WhoIsItForSection />
 
-      {/* 4. O que a sua empresa ganha */}
+      {/* 5. O que a sua empresa ganha (Valor para o negócio) */}
       <CompanyGainsSection />
-
-      {/* 5. Confiança e confidencialidade */}
-      <TrustConfidentialitySection />
 
       {/* 6. Faixa final de chamada para ação */}
       <FinalCtaStrip />

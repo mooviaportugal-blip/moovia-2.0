@@ -47,6 +47,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const image = post?.og_image || post?.banner_image || post?.featured_image;
     return {
       meta: [
+        { name: "robots", content: "noindex, nofollow" },
         { title },
         { name: "description", content: description },
         { property: "og:title", content: post?.title || title },

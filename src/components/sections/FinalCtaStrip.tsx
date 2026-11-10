@@ -1,8 +1,22 @@
-import { Link } from "@tanstack/react-router";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { useTranslation } from "react-i18next";
 import "@/i18n";
 
-export function FinalCtaStrip() {
+interface FinalCtaStripProps {
+  title?: string;
+  buttonText?: string;
+  subtitle?: string;
+  buttonTo?: string;
+  children?: React.ReactNode;
+}
+
+export function FinalCtaStrip({
+  title,
+  buttonText,
+  subtitle,
+  buttonTo = "/contacto",
+  children,
+}: FinalCtaStripProps = {}) {
   const { t } = useTranslation();
 
   const handleClick = (e: React.MouseEvent) => {
@@ -15,6 +29,10 @@ export function FinalCtaStrip() {
     }
   };
 
+  const resolvedTitle = title ?? t("home.final_cta.title");
+  const resolvedBody = subtitle !== undefined ? subtitle : t("home.final_cta.body");
+  const resolvedButton = buttonText ?? t("home.final_cta.button");
+
   return (
     <section className="section-spacing relative w-full bg-[#09183D] border-t border-b border-gold/25 px-6 lg:px-20 overflow-hidden">
       <div
@@ -26,20 +44,23 @@ export function FinalCtaStrip() {
         }}
       />
       <div className="relative z-10 mx-auto max-w-[960px] text-center flex flex-col items-center">
-        <h2 className="typo-h2 text-white mb-4">
-          {t("home.final_cta.title")}
+        <h2 className="typo-h2 text-white mb-4 max-w-[800px]">
+          {resolvedTitle}
         </h2>
-        <p className="typo-body text-w70 mb-8 text-center">
-          {t("home.final_cta.body")}
-        </p>
-        <Link
-          to="/gma"
-          hash="contacto"
-          onClick={handleClick}
-          className="inline-flex items-center justify-center bg-gold hover:bg-gold-l text-black font-semibold typo-caption px-8 py-4 rounded-[2px] transition-colors"
-        >
-          {t("home.final_cta.button")}
-        </Link>
+        {children ? (
+          <div className="mb-8 space-y-4 max-w-[760px] text-center">
+            {children}
+          </div>
+        ) : resolvedBody ? (
+          <p className="typo-body text-w70 mb-8 text-center max-w-[700px]">
+            {resolvedBody}
+          </p>
+        ) : (
+          <div className="mb-8" />
+        )}
+        <CtaButton to={buttonTo} onClick={handleClick}>
+          {resolvedButton}
+        </CtaButton>
       </div>
     </section>
   );

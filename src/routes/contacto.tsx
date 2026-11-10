@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { FormSection } from "@/components/sections/FormSection";
-import { AvailabilitySection } from "@/components/sections/AvailabilitySection";
 import { useWhatsappEnabled } from "@/hooks/useWhatsappEnabled";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto, MOOVIA | Lisboa" },
-      { name: "description", content: "Fale com a MOOVIA em Lisboa. Formulário, e-mail, WhatsApp e LinkedIn. Cada contacto é respondido pessoalmente." },
-      { property: "og:title", content: "Contacto MOOVIA" },
-      { property: "og:description", content: "Sediados em Lisboa. O primeiro passo é a conversa certa." },
+      { title: "Vamos tornar as missões internacionais mais bem-sucedidas." },
+      { name: "description", content: "Descubra como a MOOVIA ajuda a sua empresa a antecipar riscos humanos, apoiar colaboradores e famílias e melhorar os resultados das missões internacionais." },
+      { property: "og:title", content: "Vamos tornar as missões internacionais mais bem-sucedidas." },
+      { property: "og:description", content: "Descubra como a MOOVIA ajuda a sua empresa a antecipar riscos humanos, apoiar colaboradores e famílias e melhorar os resultados das missões internacionais." },
       { property: "og:url", content: "https://moovia.global/contacto" },
     ],
     links: [{ rel: "canonical", href: "https://moovia.global/contacto" }],
@@ -49,35 +49,50 @@ function Contacto() {
     { label: "E-mail direto (Frederico Prado)", value: "frederico.prado@mooviaglobal.com", href: "mailto:frederico.prado@mooviaglobal.com" },
     ...(whatsappEnabled ? [{ label: "WhatsApp", value: "+351 910 388 877", href: "https://wa.me/351910388877" }] : []),
     { label: "LinkedIn (empresa)", value: "/company/moovia-portugal", href: "https://www.linkedin.com/company/moovia-portugal" },
-    { label: "LinkedIn (Frederico Prado)", value: "/in/frederico-prado", href: "https://www.linkedin.com/in/frederico-prado" },
     { label: "Horário", value: "Segunda a Sexta das 09h às 18h (horário de Lisboa)" },
   ];
 
   return (
     <SiteLayout>
+      {/* 1. Hero */}
       <div className="bg-black pt-[120px]">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-[80px] py-16 text-center lg:text-left">
-          <p className="font-urbanist text-[11px] tracking-[0.28em] uppercase text-gold mb-6 flex items-center justify-center lg:justify-start gap-3">
-            <img src="/mooviagold.png" alt="" className="w-4 h-4 object-contain opacity-80" />
+        <div className="mx-auto max-w-[1400px] px-6 md:px-[80px] py-16 lg:py-20 text-left">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-body text-[11px] tracking-[0.32em] uppercase text-[#9B7A50] mb-8"
+          >
             Contacto
-          </p>
-          <h1 className="font-sora text-[clamp(28px,4.5vw,52px)] font-[100] leading-[1.05] max-w-3xl mx-auto lg:mx-0 text-white">
-            Vamos coordenar a sua mobilidade internacional, do diagnóstico à integração.
-          </h1>
-          <div className="mt-8 max-w-2xl mx-auto lg:mx-0 space-y-5 font-urbanist text-[17px] font-[300] text-w35 leading-relaxed">
-            <p>
-              A MOOVIA não resolve tarefas isoladas. Coordenamos toda a jornada, do planejamento à adaptação dos primeiros meses em Portugal.
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-display text-[clamp(40px,6vw,72px)] font-[200] leading-[1.05] tracking-[-0.03em] mb-12 text-[#9B7A50] max-w-4xl"
+          >
+            Vamos tornar as missões internacionais mais bem-sucedidas.
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="max-w-[760px] border-l-[3px] border-[#9B7A50] pl-6 space-y-4"
+          >
+            <p className="font-urbanist text-[15px] font-[300] text-white leading-relaxed">
+              Descubra como a MOOVIA ajuda a sua empresa a antecipar riscos humanos, apoiar colaboradores e famílias e melhorar os resultados das missões internacionais.
             </p>
-            <p>
-              Porque o verdadeiro diferencial da MOOVIA não é imigração, casa ou escola. É o que acontece entre essas coisas.
+            <p className="font-urbanist text-[15px] font-[300] text-white leading-relaxed">
+              Vamos falar das suas necessidades de Global Mobility.
             </p>
-          </div>
+          </motion.div>
         </div>
-
       </div>
 
-      {/* Canais + Localização */}
-      <section className="bg-black px-6 md:px-[80px] pb-16">
+      {/* 2. The first step (FormSection) */}
+      <FormSection />
+
+      {/* 3. Canais diretos + Lisboa */}
+      <section className="bg-black px-6 md:px-[80px] py-16 border-t border-b18">
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-px bg-b18">
           <div className="bg-black-2 p-10 md:p-14">
             <h2 className="font-sora text-[28px] font-[200] text-white mb-10 text-center lg:text-left">Canais diretos</h2>
@@ -114,9 +129,6 @@ function Contacto() {
           </div>
         </div>
       </section>
-
-      <AvailabilitySection />
-      <FormSection />
     </SiteLayout>
   );
 }

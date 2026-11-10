@@ -3,7 +3,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 export const Route = createFileRoute("/servicos")({
   beforeLoad: () => {
     throw redirect({
-      to: "/gma",
+      to: "/para-empresas",
       statusCode: 301,
     });
   },

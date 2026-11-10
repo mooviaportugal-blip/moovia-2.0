@@ -112,4 +112,9 @@ export function reapplyCurrentLang() {
   applyDomTranslations(domLang as any);
 }
 
+if (typeof window !== "undefined") {
+  (window as any).__setLang = setLang;
+  (window as any).__reapplyLang = reapplyCurrentLang;
+}
+
 export default i18n;

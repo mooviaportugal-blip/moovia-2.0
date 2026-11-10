@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import "@/i18n";
 import { ChevronDown, Building2, UserCheck, Users } from "lucide-react";
@@ -9,6 +9,12 @@ import { ClientBeneficiaryBadge } from "@/components/ui/ClientBeneficiaryBadge";
 import { ConstellationLogo } from "@/components/ui/ConstellationLogo";
 
 export const Route = createFileRoute("/gma")({
+  beforeLoad: () => {
+    throw redirect({
+      to: "/para-empresas",
+      statusCode: 301,
+    });
+  },
   head: () => ({
     meta: [
       { title: "Global Mobility Assurance | MOOVIA" },

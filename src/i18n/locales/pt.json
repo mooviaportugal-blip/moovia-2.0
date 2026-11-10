@@ -11,6 +11,8 @@
     "beneficiaries": "Beneficiários"
   },
   "nav": {
+    "for_companies": "Para Empresas",
+    "for_executives": "Para Executivos e Famílias",
     "how_it_works": "Como funciona",
     "services": "Serviços",
     "assessment": "Avaliação Estratégica",
@@ -21,24 +23,62 @@
     "team": "Equipa"
   },
   "hero": {
-    "eyebrow": "Global Mobility Assurance",
-    "title": "Proteja o investimento da sua empresa em talento internacional.",
-    "subtitle": "A MOOVIA acompanha o executivo e a família antes, durante e depois da mudança e transforma fatores humanos em indicadores claros para os Recursos Humanos e a direção.",
+    "eyebrow": "GLOBAL MOBILITY ASSURANCE",
+    "title": "Inteligência para os riscos humanos das missões internacionais",
+    "support_line": "Identifique e gira os riscos de adaptação dos executivos em missões internacionais",
+    "subtitle": "A MOOVIA ajuda empresas e executivos a identificar e tratar os desafios humanos, culturais e familiares que podem comprometer as missões internacionais, antes que se tornem problemas de desempenho, retenção ou repatriamento.",
     "cta_primary": "Falar com a MOOVIA",
-    "cta_secondary": "Ver como funciona",
-    "microtext": "Confidencial e em conformidade com o RGPD."
+    "cta_secondary": "Ver como a MOOVIA funciona",
+    "chips": {
+      "chip1": "Preparação e adaptação",
+      "chip2": "Família e contexto",
+      "chip3": "Apoio organizacional"
+    }
   },
   "home": {
+    "problem_help": {
+      "eyebrow": "Diagnóstico e Acompanhamento",
+      "title": "O problema e como a MOOVIA ajuda",
+      "p1": "A imigração, a habitação e a logística podem estar em dia, enquanto a adaptação do colaborador, a pressão familiar ou os desafios organizacionais colocam a missão em risco.",
+      "p2": "A MOOVIA combina avaliações estruturadas, acompanhamento contínuo e inteligência revista por especialistas para identificar riscos emergentes e recomendar ação atempada.",
+      "col1_title": "O colaborador regressa antecipadamente",
+      "col1_body": "Uma missão termina prematuramente, gerando perturbação operacional e custos adicionais.",
+      "col1_help": "Como a MOOVIA ajuda: identifica cedo as dificuldades de adaptação e recomenda apoio antes que os problemas se agravem.",
+      "col2_title": "O colaborador fica, mas rende abaixo do esperado",
+      "col2_body": "Os colaboradores permanecem na missão, mas desafios por resolver podem afetar o envolvimento, a produtividade e o desempenho.",
+      "col2_help": "Como a MOOVIA ajuda: acompanha a adaptação e os fatores organizacionais para identificar preocupações emergentes e recomendar intervenções.",
+      "col3_title": "A família não se adapta",
+      "col3_body": "Dificuldades de integração familiar, isolamento social ou ajustamento cultural podem afetar o colaborador e a continuidade da missão.",
+      "col3_help": "Como a MOOVIA ajuda: oferece avaliações familiares confidenciais, check-ins regulares e orientação personalizada.",
+      "stat_line": "Para um executivo sénior com um salário de 150 mil euros, uma missão internacional problemática pode destruir entre 300 mil e 500 mil euros em custos de mobilidade já investidos, produtividade perdida, repatriamento e substituição.",
+      "conclusion_line": "A MOOVIA transforma informação humana e contextual em recomendações práticas, dando aos colaboradores e às famílias apoio confidencial e às equipas de Global Mobility a informação de que precisam para agir."
+    },
     "steps": {
       "eyebrow": "Como funciona",
       "title": "O que fazemos, em três passos",
-      "step1_title": "Avaliar",
+      "step1_title": "AVALIAR",
       "step1_body": "Identificamos os fatores humanos que mais influenciam a adaptação do executivo e da família, desde antes da mudança.",
-      "step2_title": "Interpretar",
+      "step1_item1": "Preparação e adaptação",
+      "step1_item2": "Família e contexto",
+      "step1_item3": "Apoio organizacional",
+      "step2_title": "LIGAR E INTERPRETAR",
       "step2_body": "Transformamos esses fatores em indicadores e recomendações práticas, interpretados por especialistas.",
-      "step3_title": "Acompanhar",
-      "step3_body": "Medimos a evolução ao longo da jornada e orientamos a ação preventiva, sem substituir os parceiros que a empresa já utiliza.",
-      "link_methodology": "Conhecer a metodologia completa"
+      "step2_item1": "Sinais estruturados ao longo do tempo",
+      "step2_item2": "Motor de decisão com revisão especializada",
+      "step3_title": "AGIR",
+      "step3_body": "Medimos a evolução ao longo da jornada e orientamos a ação preventiva.",
+      "step3_item1": "Recomendações para o colaborador",
+      "step3_item2": "Recomendações para a empresa",
+      "step3_item3": "Novos check-ins"
+    },
+    "costSource": "",
+    "who_is_it_for": {
+      "eyebrow": "Público-alvo",
+      "title": "Para quem é?",
+      "exec_title": "Para executivos e as suas famílias",
+      "exec_body": "Feedback individual, plano pessoal de adaptação, recomendações e acompanhamento confidencial.",
+      "comp_title": "Para empresas",
+      "comp_body": "Sinais ao nível da missão, tendências, prioridades de intervenção e recomendações para as equipas responsáveis."
     },
     "for_whom": {
       "eyebrow": "Para quem é",
@@ -54,13 +94,16 @@
       "eyebrow": "Valor para o negócio",
       "title": "O que a sua empresa ganha",
       "item1_title": "Retenção",
-      "item1_body": "Identificar sinais a tempo de agir e reduzir o risco de turnover.",
+      "item1_body": "Identificar cedo sinais de dificuldades de adaptação e de desligamento, permitindo apoio atempado para reduzir o risco de cessação prematura da missão.",
       "item2_title": "Integração",
-      "item2_body": "Acelerar a adaptação do executivo e da família.",
-      "item3_title": "Decisão",
-      "item3_body": "Mais informação para decisões de mobilidade.",
-      "item4_title": "Retorno",
-      "item4_body": "Proteger o investimento feito no talento internacional.",
+      "item2_body": "Apoiar colaboradores e famílias na adaptação, com acompanhamento estruturado e orientação personalizada.",
+      "item3_title": "Melhores decisões",
+      "item3_body": "Dar às equipas de Global Mobility e de Recursos Humanos indicadores de risco claros, atualizações de progresso e ações recomendadas para gerir as missões de forma proativa.",
+      "item4_title": "Proteção do investimento",
+      "item4_body": "Tratar os fatores humanos que podem afetar o desempenho, a continuidade da missão e o retorno do investimento em mobilidade internacional.",
+      "banner_title": "2 a 3× o salário-base anual",
+      "banner_line": "É quanto uma missão internacional de longa duração pode custar a uma empresa.",
+      "banner_body": "A MOOVIA ajuda a proteger esse investimento ao identificar cedo os riscos humanos e familiares, permitindo agir a tempo, antes que afetem o desempenho, a retenção ou a continuidade da missão.",
       "support_line": "Substituir um talento internacional que não se adaptou custa milhares de euros."
     },
     "trust": {
@@ -72,7 +115,7 @@
       "gdpr_label": "Em conformidade com o RGPD"
     },
     "final_cta": {
-      "title": "Quer perceber como isto se aplica à sua empresa?",
+      "title": "Podemos ajudá-lo a identificar onde a nossa avaliação estruturada e o acompanhamento contínuo podem encaixar no seu programa de mobilidade.",
       "body": "Cada proposta é desenhada à medida do perfil e da complexidade de cada transição.",
       "button": "Falar com a MOOVIA"
     }
@@ -125,7 +168,323 @@
     "services": "Serviços",
     "contact": "Contacto",
     "privacy": "Privacidade",
+    "privacy_policy": "Política de Privacidade",
     "cookies": "Cookies",
-    "rights": "© 2026 MOOVIA | Brasil para Portugal"
+    "rights": "© 2026 MOOVIA | Brasil para Portugal",
+    "consent_terms": "Termos de Consentimento"
+  },
+  "privacy_page": {
+    "eyebrow": "POLÍTICA DE PRIVACIDADE",
+    "title": "Privacidade e proteção de dados",
+    "lead": "Explicamos que dados pessoais tratamos, porquê e como os protegemos.",
+    "last_updated": "Última atualização: 6 de novembro de 2026",
+    "toc_title": "Índice",
+    "sections": {
+      "who_we_are": {
+        "title": "Quem somos",
+        "content": "O responsável pelo tratamento dos dados pessoais é a MOOVIA, com sede em Lisboa, Portugal, e contacto através do endereço contacto@mooviaglobal.com."
+      },
+      "data_collected": {
+        "title": "Dados que recolhemos",
+        "content": "Recolhemos exclusivamente os dados fornecidos voluntariamente pelos utilizadores através dos formulários de contacto, pedido de informação e agendamento (nome, endereço de e-mail corporativo, nome da empresa, cargo e detalhes sobre o desafio de mobilidade). No que respeita a dados técnicos, o site não utiliza cookies de rastreamento nem serviços de publicidade de terceiros. A navegação preserva a privacidade do utilizador."
+      },
+      "purposes": {
+        "title": "Para que usamos os dados",
+        "content": "Os dados recolhidos destinam-se exclusivamente a: (i) responder a pedidos de contacto e prestar esclarecimentos sobre a MOOVIA e o Global Mobility Assurance (com fundamento em diligências pré-contratuais a pedido do titular ou interesse legítimo); (ii) agendar e realizar reuniões de apresentação e diagnóstico com a equipa (com fundamento em diligências pré-contratuais); e (iii) comunicações institucionais diretamente relacionadas com os serviços solicitados (com fundamento no consentimento ou interesse legítimo)."
+      },
+      "retention": {
+        "title": "Quanto tempo conservamos",
+        "content": "Os dados pessoais são conservados apenas durante o período estritamente necessário para cumprir as finalidades para as quais foram recolhidos, nomeadamente a resposta ao contacto e o acompanhamento comercial preliminar, respeitando os prazos legais aplicáveis."
+      },
+      "sharing": {
+        "title": "Com quem partilhamos",
+        "content": "Os seus dados pessoais não são vendidos nem cedidos a terceiros. Apenas são partilhados com os prestadores de serviços tecnológicos estritamente necessários ao funcionamento seguro do site e ao tratamento dos formulários: infraestrutura de alojamento e base de dados relacional (Supabase, sob padrões de segurança e encriptação) e serviço de correio eletrónico institucional para entrega de notificações. Todos os prestadores atuam sob obrigações rigorosas de confidencialidade e conformidade com o RGPD."
+      },
+      "rights": {
+        "title": "Os seus direitos",
+        "content": "Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD), o titular dos dados tem o direito de solicitar à MOOVIA o acesso aos seus dados pessoais, a respetiva retificação, apagamento, limitação do tratamento, portabilidade dos dados, bem como o direito de oposição e de retirada do consentimento em qualquer altura, sem comprometer a licitude do tratamento efetuado com base no consentimento previamente dado. O titular tem ainda o direito de apresentar reclamação junto da autoridade de controlo competente em Portugal (Comissão Nacional de Proteção de Dados - CNPD). Para o exercício de qualquer um destes direitos, contacte-nos através do e-mail: contacto@mooviaglobal.com."
+      },
+      "confidentiality": {
+        "title": "Confidencialidade e Validação Jurídica",
+        "legal_label": "Validação Jurídica",
+        "legal_text": "O modelo jurídico da MOOVIA foi objeto de análise por uma sociedade de advogados de referência em Portugal, tendo sido considerado juridicamente viável, encontrando-se atualmente em fase de implementação das recomendações identificadas.",
+        "confidentiality_text": "A empresa recebe apenas indicadores agregados. As respostas individuais e o relatório pessoal do colaborador permanecem confidenciais.",
+        "gdpr_badge": "Em conformidade com o RGPD"
+      },
+      "changes": {
+        "title": "Alterações a esta política",
+        "content": "A MOOVIA reserva-se o direito de atualizar a presente Política de Privacidade a qualquer momento para refletir eventuais alterações legislativas ou operacionais. Quaisquer alterações relevantes serão publicadas nesta página com indicação da respetiva data de atualização."
+      },
+      "ai": {
+        "title": "Uso de inteligência artificial",
+        "purpose_title": "Finalidade do tratamento",
+        "purpose_text": "A análise assistida por inteligência artificial é utilizada exclusivamente para interpretar respostas estruturadas e apresentar recomendações de apoio à adaptação e continuidade da missão.",
+        "minimization_title": "Minimização de dados",
+        "minimization_text": "Tratamos exclusivamente a informação estritamente necessária ao acompanhamento da missão internacional, evitando recolha excessiva ou descontextualizada.",
+        "pseudonymization_title": "Pseudonimização e proteção",
+        "pseudonymization_text": "Aplicamos pseudonimização e remoção de identificadores diretos sempre que possível, assegurando que o processamento analítico não exponha a identidade do titular.",
+        "governance_title": "Decisão e revisão humana",
+        "governance_text": "Nenhuma decisão sobre emprego, progressão ou remuneração é tomada de forma exclusivamente automatizada com base num resultado. Qualquer recomendação ou intervenção com impacto humano está sujeita a revisão e validação por especialistas humanos.",
+        "providers_title": "Subcontratantes e infraestrutura",
+        "transfers_title": "Transferências internacionais",
+        "retention_title": "Prazos de conservação",
+        "legal_note": "Texto sujeito a revisão jurídica."
+      }
+    },
+    "cta_button": "Falar com a MOOVIA"
+  },
+  "team_page": {
+    "eyebrow": "Conheça a equipa",
+    "title": "Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela.",
+    "p1": "A MOOVIA nasceu de uma amizade de décadas e de dois percursos profissionais que se cruzaram no mundo corporativo internacional, passando por Revenue Assurance, grandes consultoras e tecnologia empresarial, a par de experiência direta dos desafios humanos da mobilidade internacional.",
+    "p2_prefix": "Depois de anos a proteger investimentos corporativos em processos e receita, vimos a oportunidade de aplicar o mesmo rigor, evidência e responsabilização a um dos aspetos mais críticos, e muitas vezes esquecidos, das missões internacionais: ",
+    "p2_bold": "o fator humano.",
+    "p3": "Hoje, a nossa equipa multidisciplinar reúne competências em mobilidade global, ciência comportamental, tecnologia, estratégia de negócio e governança corporativa, unidas por uma convicção: os fatores humanos que determinam o sucesso da mobilidade internacional merecem a mesma atenção e proteção que o investimento financeiro que está por trás deles.",
+    "team_title": "Equipa MOOVIA",
+    "team_subtitle": "A equipa que coordena. Enxuta, multidisciplinar, por desenho.",
+    "rui_companies": "Choice Technologies / Kema / eTECH",
+    "read_more": "Ler mais",
+    "show_less": "Ler menos"
+  },
+  "about_page": {
+    "hero": {
+      "eyebrow": "SOBRE A MOOVIA",
+      "title": "Levar a disciplina da assurance à mobilidade internacional.",
+      "paragraph": "A MOOVIA foi criada para dar à dimensão humana de uma missão internacional a mesma atenção que o investimento financeiro e operacional que lhe está por trás. Combinamos avaliação estruturada, conhecimento especializado e acompanhamento para ajudar colaboradores, famílias e organizações a navegar as transições internacionais.",
+      "caption": "Experiência humana • Evidência • Ação"
+    },
+    "origin": {
+      "eyebrow": "A NOSSA ORIGEM",
+      "title": "De Revenue Assurance a Global Mobility Assurance.",
+      "p1": "A MOOVIA nasceu de décadas de consultoria em Revenue Assurance, gestão de risco e transformação digital em empresas multinacionais.",
+      "p2": "Nas telecomunicações, banca e energia, Revenue Assurance é uma disciplina estabelecida: previne sistematicamente perdas financeiras, assegura a integridade operacional e recupera valor antes de a fuga se tornar estrutural.",
+      "p3": "Percebemos que o maior risco não gerido nos negócios internacionais de hoje não está nos sistemas financeiros ou nas cadeias de abastecimento, está na transição humana. Milhões são investidos na mobilidade de pessoas-chave através de fronteiras, com quase nenhuma proteção sistemática para a fricção pessoal, familiar e operacional que leva as missões ao fracasso. Criámos a Global Mobility Assurance para fechar essa lacuna.",
+      "heritage_title": "O nosso legado.",
+      "cards": {
+        "c1_title": "Rigor Metodológico",
+        "c1_text": "Auditorias estruturadas, controlos sistemáticos e processos comprovados.",
+        "c2_title": "Proteção Financeira",
+        "c2_text": "Foco obsessivo na prevenção de fugas de valor e na salvaguarda do investimento.",
+        "c3_title": "Escala Empresarial",
+        "c3_text": "Concebida para navegar a complexidade e a governança de grandes organizações multinacionais.",
+        "c4_title": "A Nossa Matriz",
+        "c4_text": "A experiência da Mindset Consulting e da sua equipa fundadora em múltiplos setores e geografias.",
+        "c5_title": "Inteligência Humana",
+        "c5_text": "Tecnologia e método a serviço do elemento mais decisivo e vulnerável: a pessoa."
+      },
+      "tagline": "A disciplina de Revenue Assurance. A empatia da transição humana."
+    },
+    "approach": {
+      "eyebrow": "A NOSSA ABORDAGEM",
+      "title": "Três princípios orientam o nosso trabalho.",
+      "paragraph": "A MOOVIA combina compreensão humana, inteligência estruturada e partilha responsável de informação para apoiar as missões internacionais ao longo de toda a jornada.",
+      "columns": {
+        "c1": "Experiência",
+        "c2": "Evidência",
+        "c3": "Ação"
+      },
+      "cards": {
+        "c1_title": "Experiência Humana",
+        "c1_highlight": "Compreender as pessoas para além do processo de relocalização.",
+        "c1_text": "Cada missão internacional envolve desafios pessoais, profissionais, culturais e familiares. Através de avaliações estruturadas, conversas significativas e check-ins regulares, percebemos como as pessoas se estão a adaptar, de que apoio precisam e como evoluem as suas circunstâncias.",
+        "c2_title": "Inteligência de Mobilidade",
+        "c2_highlight": "Transformar conhecimento humano em ação informada.",
+        "c2_text": "Ligamos sinais relevantes ao longo do tempo para identificar riscos emergentes, fatores de proteção e mudanças na adaptação. Critérios explicáveis e análise assistida por inteligência artificial apoiam os nossos especialistas na interpretação desses padrões e na recomendação de intervenções adequadas, à medida que estas capacidades são desenvolvidas e validadas.",
+        "c2_extra": "A tecnologia apoia a análise. A experiência humana orienta as decisões.",
+        "c3_title": "Painel de Global Mobility",
+        "c3_highlight": "Apoio pessoal e visibilidade corporativa, com a privacidade no centro.",
+        "c3_text": "Os colaboradores e as famílias recebem avaliações confidenciais, orientação personalizada e apoio contínuo. As empresas recebem indicadores ao nível da missão, tendências e ações recomendadas, sem acesso desnecessário a informação pessoal ou familiar.",
+        "c3_extra": "Isto permite à MOOVIA apoiar as pessoas e, ao mesmo tempo, ajudar as organizações a tomar decisões de mobilidade mais informadas."
+      }
+    },
+    "how_we_fit": {
+      "eyebrow": "COMO NOS ENCAIXAMOS",
+      "title": "Complementamos o ecossistema existente de mobilidade global.",
+      "p1": "A MOOVIA não substitui prestadores de relocalização, equipas de Recursos Humanos nem serviços especializados. Complementamos o seu trabalho, focando-nos no que acontece para além da mudança prática: como os colaboradores e as famílias se adaptam, se integram e progridem ao longo de uma missão internacional.",
+      "p2": "Ao ligar informação humana e contextual ao longo do tempo, a MOOVIA ajuda a identificar desafios emergentes, recomendar intervenções adequadas e apoiar uma melhor coordenação entre as pessoas e as organizações envolvidas.",
+      "p3": "Ligamos a experiência humana à tomada de decisão corporativa, ajudando as empresas a proteger o seu investimento em mobilidade internacional e apoiando as pessoas que estão por trás dele.",
+      "distinction_title": "A diferença para Global Mobility Management.",
+      "tagline": "Revenue Assurance. Human Success."
+    },
+    "cta": {
+      "title": "Pronto para proteger os seus investimentos em mobilidade?",
+      "button": "Fale com a MOOVIA",
+      "subtitle": "Cada proposta é adaptada ao perfil e à complexidade de cada transição."
+    }
+  },
+  "ripple": {
+    "eyebrow": "IMPACTO NO NEGÓCIO",
+    "title": "O efeito em cascata do desempenho oculto",
+    "intro": "Quando um colaborador ou a sua família tem dificuldade em adaptar-se, a missão continua, mas o resultado pode deteriorar-se sem que ninguém o veja. O efeito não fica na pessoa.",
+    "step1_title": "Pessoa",
+    "step1_desc": "Adaptação difícil",
+    "step1_full": "Pessoa: Adaptação difícil",
+    "step2_title": "Equipa",
+    "step2_desc": "Decisões mais lentas",
+    "step2_full": "Equipa: Decisões mais lentas",
+    "step3_title": "Projeto",
+    "step3_desc": "Atrasos na execução",
+    "step3_full": "Projeto: Atrasos na execução",
+    "step4_title": "Negócio",
+    "step4_desc": "Margens, clientes e continuidade em risco",
+    "step4_full": "Negócio: Margens, clientes e continuidade em risco",
+    "note": "Esquema qualitativo. O impacto pode ultrapassar os custos diretos da mobilidade.",
+    "closing": "A MOOVIA ajuda a identificar sinais cedo, para que a ação chegue antes de o efeito se espalhar."
+  },
+  "techAccountability": {
+    "eyebrow": "TECNOLOGIA E RESPONSABILIDADE",
+    "title": "Tecnologia que apoia decisões, sem as substituir",
+    "card1_title_unused": "A tecnologia interpreta",
+    "card1_text_unused": "A análise assistida por inteligência artificial foi concebida para ler a informação e apresentá-la com clareza.",
+    "card2_title_unused": "As regras calculam",
+    "card2_text_unused": "Regras definidas e versionadas produzem os indicadores. A mesma informação, com as mesmas regras, dá o mesmo resultado.",
+    "card3_title_unused": "Cada recomendação é rastreável",
+    "card3_text_unused": "Cada recomendação aponta para a evidência e para a regra que a originou.",
+    "card4_title_unused": "Os especialistas decidem",
+    "card4_text_unused": "A revisão especializada valida qualquer intervenção com impacto humano. A tecnologia não altera os resultados sem decisão explícita.",
+    "card1_title": "A tecnologia interpreta",
+    "card1_text": "Lê a informação e apresenta-a com clareza.",
+    "card2_title": "As regras calculam",
+    "card2_text": "Regras versionadas dão o mesmo resultado para a mesma informação.",
+    "card3_title": "Rastreável",
+    "card3_text": "Cada recomendação aponta para a sua evidência e regra.",
+    "card4_title": "Os especialistas decidem",
+    "card4_text": "Os especialistas validam cada intervenção com impacto humano.",
+    "privacyLine": "Concebido para a privacidade desde a origem: apenas a informação necessária, acesso limitado e nenhuma decisão automatizada sobre emprego com base num resultado.",
+    "stageNote": "Algumas capacidades assistidas por inteligência artificial estão em desenvolvimento e em validação, com revisão especializada."
+  },
+  "journey": {
+    "longitudinal": "Cada medição é comparada com a anterior, tornando visível a evolução ao longo do tempo."
+  },
+  "exec": {
+    "privacyNote": "Concebido a pensar na sua privacidade: apenas a informação necessária para o apoiar, com acesso limitado."
+  },
+  "contact": {
+    "privacyNote": "Ao enviar, reconhece que tratamos os seus dados para responder ao seu pedido, conforme a Política de Privacidade.",
+    "privacyNote_prefix": "Ao enviar, reconhece que tratamos os seus dados para responder ao seu pedido, conforme a",
+    "privacyNote_link": "Política de Privacidade"
+  },
+  "privacy": {
+    "disclaimer": "Em caso de divergência, prevalece a versão portuguesa.",
+    "eyebrow": "COMPLIANCE & PRIVACIDADE",
+    "title": "Política de Privacidade",
+    "last_updated_prefix": "Última atualização: ",
+    "toc_title": "Índice",
+    "s1_title": "1. Quem é o responsável pelo tratamento",
+    "s1_p1_default": "O responsável pelo tratamento dos dados pessoais descritos nesta política é a MOOVIA.",
+    "s1_p1_prefix": "O responsável pelo tratamento dos dados pessoais descritos nesta política é ",
+    "s1_tax_prefix": ", com número de identificação fiscal ",
+    "s1_office_prefix": " e sede em ",
+    "s1_entity_suffix": " (\"MOOVIA\").",
+    "s1_email_prefix": " Para qualquer questão sobre privacidade, escreva para ",
+    "s1_p2": "Quando prestamos serviços a uma empresa cliente, a MOOVIA pode atuar como responsável, responsável conjunta ou subcontratante, conforme o contrato com essa empresa. O texto de consentimento entregue a cada participante identifica o papel de cada parte.",
+    "s2_title": "2. A quem se aplica",
+    "s2_p1": "Esta política aplica-se a quem visita o site, a quem nos contacta e a quem participa nos nossos serviços (colaboradores e familiares). Os participantes têm ainda os ",
+    "s2_link_consent": "Termos de Consentimento",
+    "s2_p1_suffix": " próprios.",
+    "s3_title": "3. Que dados recolhemos",
+    "s3_item1_label": "Contacto: ",
+    "s3_item1_text": "nome, e-mail corporativo, organização, mensagem e eventuais informações adicionais partilhadas no formulário (cargo, dimensão da equipa, países de origem e destino, desafios de mobilidade e telefone).",
+    "s3_item2_label": "Assistente MAIA: ",
+    "s3_item2_text": "o conteúdo das mensagens que escreve na conversa.",
+    "s3_item3_label": "Dados técnicos: ",
+    "s3_item3_text": "endereço de rede e dados de navegação, nos termos da ",
+    "s3_link_cookies": "Política de Cookies",
+    "s3_item4_label": "Participantes: ",
+    "s3_item4_text": "respostas a questionários e entrevistas e informação de contexto da missão, descritas nos Termos de Consentimento.",
+    "s3_p_sensitive": "Recolhemos apenas o necessário. Pedimos que não inclua informação de saúde ou outra informação sensível na mensagem do formulário de contacto.",
+    "s4_title": "4. Para que usamos os dados e com que fundamento",
+    "s4_th_purpose": "Finalidade",
+    "s4_th_basis": "Fundamento",
+    "s4_r1_p": "Responder a pedidos de contacto e a propostas",
+    "s4_r1_b": "Diligências pré-contratuais ou interesse legítimo em responder",
+    "s4_r2_p": "Operar o assistente MAIA",
+    "s4_r2_b": "Interesse legítimo",
+    "s4_r3_p": "Prestar os serviços contratados",
+    "s4_r3_b": "Execução do contrato e, quando aplicável, consentimento do participante",
+    "s4_r4_p": "Segurança do site e prevenção de abusos",
+    "s4_r4_b": "Interesse legítimo",
+    "s4_r5_p": "Cumprir obrigações legais",
+    "s4_r5_b": "Obrigação legal",
+    "s4_r6_p": "Cookies não essenciais",
+    "s4_r6_b": "Consentimento",
+    "s4_r7_p": "Comunicações de novidades (só se as autorizar)",
+    "s4_r7_b": "Consentimento",
+    "s5_title": "5. Inteligência artificial",
+    "s5_p1": "Utilizamos, ou vamos utilizar à medida que forem validadas, ferramentas de análise assistida por inteligência artificial para interpretar respostas e apoiar recomendações. Aplicamos estas regras:",
+    "s5_rule1": "Tratamos apenas a informação necessária e, sempre que possível, retiramos identificadores diretos antes de a enviar a um modelo.",
+    "s5_rule2": "Nenhuma decisão sobre emprego, avaliação ou remuneração é tomada de forma exclusivamente automatizada com base num resultado.",
+    "s5_rule3": "Qualquer intervenção com impacto humano é revista por um especialista.",
+    "s5_rule4": "Cada recomendação deve poder ser ligada à evidência e à regra que a originou.",
+    "s5_rule5": "Só recorremos a fornecedores com contrato que defina o tratamento dos dados.",
+    "s5_p_closing": "Esta secção descreve princípios que adotamos. As capacidades concretas só são descritas à medida que estão implementadas.",
+    "s6_title": "6. Com quem partilhamos",
+    "s6_providers_prefix": "Prestadores de serviços que tratam dados por nossa conta, sob contrato: ",
+    "s6_client": "A empresa cliente, nos termos indicados nos Termos de Consentimento.",
+    "s6_authorities": "Autoridades, quando a lei o exigir.",
+    "s6_no_sale": "Não vendemos dados pessoais.",
+    "s7_title": "7. Transferências para fora do Espaço Económico Europeu",
+    "s7_p1": "Quando um fornecedor trate dados fora do Espaço Económico Europeu, aplicamos os mecanismos previstos no RGPD, como decisão de adequação ou cláusulas contratuais-tipo.",
+    "s7_p2": "Um contrato de localização de dados na União Europeia não garante, por si, que todos os metadados e subcontratantes estejam na União Europeia, e não o afirmamos sem confirmação.",
+    "s8_title": "8. Quanto tempo conservamos os dados",
+    "s8_p_default": "Conservamos os dados pelo tempo necessário à finalidade e depois apagamo-los ou anonimizamo-los.",
+    "s9_title": "9. Os seus direitos",
+    "s9_p1": "Tem direito de acesso, retificação, apagamento, limitação, portabilidade e oposição, e pode retirar o consentimento a qualquer momento, sem afetar a licitude do tratamento já feito.",
+    "s9_p_email_prefix": " Para os exercer, escreva para ",
+    "s9_p_response_time": " Respondemos no prazo de um mês.",
+    "s9_p_authority": " Pode apresentar reclamação à autoridade de controlo competente",
+    "s10_title": "10. Segurança",
+    "s10_p1": "Adotamos medidas técnicas e organizativas adequadas, como acesso limitado a quem precisa, registo de acessos, separação entre clientes e minimização de dados.",
+    "s11_title": "11. Menores",
+    "s11_p1": "O site não se dirige a menores. Quando um serviço envolva dados de menores, só os tratamos com autorização de quem exerce a responsabilidade parental.",
+    "s12_title": "12. Alterações",
+    "s12_p1": "Publicamos qualquer alteração nesta página, com a data da última atualização."
+  },
+  "consent": {
+    "disclaimer": "Em caso de divergência, prevalece a versão portuguesa.",
+    "eyebrow": "TERMOS DE CONSENTIMENTO",
+    "title": "Termos de Consentimento para participantes",
+    "intro": "Destinam-se a colaboradores e familiares que participam nas avaliações e no acompanhamento da MOOVIA. A participação é voluntária.",
+    "s1_title": "1. O que é o serviço",
+    "s1_p1": "A MOOVIA acompanha a adaptação de colaboradores e famílias durante uma missão internacional, para identificar cedo sinais de dificuldade e apoiar a ação atempada.",
+    "s2_title": "2. Que informação recolhemos",
+    "s2_item1": "Respostas a questionários e entrevistas.",
+    "s2_item2": "Informação de contexto da missão, como origem, destino e calendário.",
+    "s2_item3": "Informação sobre a situação familiar que decidir partilhar.",
+    "s2_sensitive": "As respostas podem incluir informação sobre bem-estar e saúde, que é um dado sensível e exige o seu consentimento expresso.",
+    "s3_title": "3. Para que a usamos",
+    "s3_p1": "Para avaliar a adaptação, identificar sinais, recomendar apoio e elaborar um relatório individual para si. A empresa recebe informação nos termos do ponto 4.",
+    "s4_title": "4. Quem a vê",
+    "s4_p1": "A equipa da MOOVIA e os especialistas envolvidos. A empresa recebe apenas informação agregada e anonimizada.",
+    "s5_title": "5. Inteligência artificial",
+    "s5_p1_prefix": "Se a análise assistida por inteligência artificial for usada, aplicam-se as regras da ",
+    "s5_link_text": "secção 5 da Política de Privacidade",
+    "s5_p1_suffix": ": sem decisão exclusivamente automatizada, com revisão por especialista e com informação limitada ao necessário.",
+    "s6_title": "6. A sua escolha",
+    "s6_p1": "A participação é voluntária. Pode recusar ou retirar-se sem consequências para o seu emprego ou para a sua missão.",
+    "s7_title": "7. Como retirar o consentimento",
+    "s7_p_email_prefix": "Escreva para ",
+    "s7_p_no_email": "Utilize o contacto indicado na Política de Privacidade. ",
+    "s7_p_common": "A retirada não afeta o tratamento já feito. Apagamos ou anonimizamos os seus dados, salvo obrigação legal de os conservar.",
+    "s8_title": "8. Consentimentos",
+    "s8_c1_title": "C1. Tratamento geral",
+    "s8_c1_text": "Autorizo o tratamento das minhas respostas e da informação de contexto para a avaliação e o acompanhamento.",
+    "s8_c1_note": "(Necessário para participar.)",
+    "s8_c2_title": "C2. Dados sensíveis",
+    "s8_c2_text": "Autorizo expressamente o tratamento de informação sobre o meu bem-estar e saúde que possa resultar das minhas respostas.",
+    "s8_c2_note": "(Pode saltar as perguntas correspondentes.)",
+    "s8_c3_title": "C3. Representação de familiares",
+    "s8_c3_text": "Respondo também em nome de familiares e tenho autoridade para o fazer, incluindo, no caso de menores, como titular da responsabilidade parental.",
+    "s8_c4_title": "C4. Análise assistida por inteligência artificial",
+    "s8_c4_text": "Autorizo a análise assistida por inteligência artificial das minhas respostas, com revisão especializada.",
+    "s8_c5_title": "C5. Partilha com a empresa",
+    "s8_c5_text": "Autorizo a partilha com a empresa da informação descrita no ponto 4.",
+    "s8_note": "Nenhuma caixa vem pré-assinalada.",
+    "s9_title": "9. Registo",
+    "s9_p1": "Guardamos a data, a hora e a versão do texto que aceitou.",
+    "s10_title": "10. Os seus direitos",
+    "s10_p1_prefix": "Os direitos e a forma de os exercer estão na ",
+    "s10_link_text": "Política de Privacidade, secção 9",
+    "s10_p1_suffix": "."
   }
 }

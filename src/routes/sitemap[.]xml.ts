@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { isLegalConfigured } from "@/config/legalConstants";
 
 const BASE_URL = "https://moovia.global";
 
@@ -9,20 +10,25 @@ interface SitemapEntry {
   priority?: string;
 }
 
-const entries: SitemapEntry[] = [
+const baseEntries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/assessment", changefreq: "monthly", priority: "0.9" },
-  { path: "/gma", changefreq: "monthly", priority: "0.9" },
-  { path: "/perguntas-frequentes", changefreq: "monthly", priority: "0.7" },
-  { path: "/servicos", changefreq: "monthly", priority: "0.8" },
+  { path: "/para-empresas", changefreq: "monthly", priority: "0.9" },
+  { path: "/para-executivos-e-familias", changefreq: "monthly", priority: "0.9" },
+  { path: "/assessment", changefreq: "monthly", priority: "0.8" },
+  { path: "/sobre", changefreq: "monthly", priority: "0.8" },
   { path: "/equipa", changefreq: "monthly", priority: "0.7" },
-  { path: "/sobre", changefreq: "monthly", priority: "0.7" },
-  { path: "/blog", changefreq: "weekly", priority: "0.6" },
   { path: "/contacto", changefreq: "yearly", priority: "0.5" },
-  { path: "/privacidade", changefreq: "yearly", priority: "0.2" },
   { path: "/cookies", changefreq: "yearly", priority: "0.2" },
   { path: "/termos", changefreq: "yearly", priority: "0.2" },
 ];
+
+const entries: SitemapEntry[] = isLegalConfigured
+  ? [
+      ...baseEntries,
+      { path: "/politica-de-privacidade", changefreq: "yearly", priority: "0.3" },
+      { path: "/termos-de-consentimento", changefreq: "yearly", priority: "0.3" },
+    ]
+  : baseEntries;
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
