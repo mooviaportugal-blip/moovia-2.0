@@ -51,3 +51,4 @@ export function openCookiePreferencesModal() {
     window.dispatchEvent(new CustomEvent("open_cookie_preferences"));
   }
 }
+
