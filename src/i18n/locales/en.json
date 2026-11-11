@@ -609,5 +609,16 @@
     "pref_analytics_desc": "Allows aggregate measurement of website navigation and flows to improve the user experience.",
     "pref_preferences_title": "Preferences",
     "pref_preferences_desc": "Remembers custom user options, such as sound and display preferences."
+  },
+  "sobre": {
+    "approach": {
+      "principles": {
+        "p1": "Human understanding",
+        "p2": "Structured intelligence",
+        "p3": "Responsible information-sharing",
+        "where_three_meet": "Where the three meet",
+        "symbol_aria": "Three principles that meet at the center: human understanding, structured intelligence, and responsible information-sharing"
+      }
+    }
   }
 }

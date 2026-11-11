@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 import { motion } from "framer-motion";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import sobreHero from "@/assets/sobre-hero.jpg";
 import heroHumanoid from "@/assets/hero-humanoid.png";
-import threePillarsImg from "@/assets/three-pillars.png";
+import { PrinciplesSymbol } from "@/components/site/PrinciplesSymbol";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -277,6 +278,8 @@ function SobreOrigem() {
    Faixa alternada em bg-black-2 (--black-2: #0b1225).
    ───────────────────────────────────────────────────────────── */
 function SobreAbordagem() {
+  const [activePrinciple, setActivePrinciple] = useState<number | null>(null);
+
   const cards = [
     {
       num: "01",
@@ -312,38 +315,35 @@ function SobreAbordagem() {
         </h2>
 
         {/* Parágrafo canônico do documento do Wilson */}
-        <p className="font-body text-[15px] md:text-[17px] text-white/80 font-[300] leading-[1.7] max-w-[72ch] mb-16">
+        <p className="font-body text-[15px] md:text-[17px] text-white/80 font-[300] leading-[1.7] max-w-[72ch] mb-12">
           A MOOVIA combina compreensão humana, inteligência estruturada e partilha responsável de informação para apoiar as missões internacionais ao longo de toda a jornada.
         </p>
 
-        {/* Imagem dos 3 pilares */}
-        <div className="relative my-10 max-w-[960px] mx-auto">
-          {/* Imagem dos 3 pilares com máscara radial suave */}
-          <div className="relative flex justify-center items-center">
-            <img
-              src={threePillarsImg}
-              alt="Os três pilares da MOOVIA: Experiência, Evidência e Ação"
-              className="w-full max-h-[340px] md:max-h-[420px] object-contain pointer-events-none select-none"
-              style={{
-                maskImage:
-                  "radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%)",
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%)",
-              }}
-            />
-          </div>
-        </div>
+        {/* Símbolo vetorial dos três princípios */}
+        <PrinciplesSymbol
+          activePrinciple={activePrinciple}
+          onHoverPrinciple={setActivePrinciple}
+        />
 
         {/* 3 cards numerados com os títulos do documento do Wilson */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mt-14">
           {cards.map((c, i) => (
             <motion.div
               key={c.num}
+              tabIndex={0}
+              onMouseEnter={() => setActivePrinciple(i + 1)}
+              onMouseLeave={() => setActivePrinciple(null)}
+              onFocus={() => setActivePrinciple(i + 1)}
+              onBlur={() => setActivePrinciple(null)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="border border-b18 bg-w05 p-7 md:p-8 flex flex-col justify-between rounded-sm"
+              className={`border ${
+                activePrinciple === i + 1
+                  ? "border-[#9B7A50] bg-w08 shadow-[0_0_24px_rgba(155,122,80,0.12)]"
+                  : "border-b18 bg-w05"
+              } p-7 md:p-8 flex flex-col justify-between rounded-sm transition-all duration-300 focus:outline-none focus:border-[#9B7A50]`}
             >
               <div>
                 <span className="font-mono text-gold/60 text-[13px] tracking-widest mb-3 block">

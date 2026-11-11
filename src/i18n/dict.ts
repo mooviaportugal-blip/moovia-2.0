@@ -1445,14 +1445,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "MOOVIA was born from a decades-long friendship and two professional journeys that crossed paths in the international corporate world, spanning Revenue Assurance, major consultancies and enterprise technology, alongside firsthand experience of the human challenges of international mobility.",
     "es": "MOOVIA nació de una amistad de décadas y de dos trayectorias profesionales que se cruzaron en el mundo corporativo internacional, abarcando Revenue Assurance, grandes consultoras y tecnología empresarial, junto con la experiencia directa de los desafíos humanos de la movilidad internacional."
   },
-  "Vamos tornar as missões internacionais mais bem-sucedidas.": {
-    "en": "Let’s Make International Assignments More Successful.",
-    "es": "Hagamos que las misiones internacionales sean más exitosas."
-  },
-  "Descubra como a MOOVIA ajuda a sua empresa a antecipar riscos humanos, apoiar colaboradores e famílias e melhorar os resultados das missões internacionais.": {
-    "en": "Discover how MOOVIA helps your company anticipate human risks, support employees and their families, and improve international assignment outcomes.",
-    "es": "Descubra cómo MOOVIA ayuda a su empresa a anticipar riesgos humanos, apoyar a colaboradores y familias y mejorar los resultados de las misiones internacionales."
-  },
 
   // ---------- NEW RIPPLE, TECH ACCOUNTABILITY, TIMELINE, PRIVACY ----------
   "IMPACTO NO NEGÓCIO": {
@@ -1942,6 +1934,28 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Gerir preferências de cookies": {
     en: "Manage cookie preferences",
     es: "Gestionar preferencias de cookies",
+  },
+
+  // ---------- PRINCIPLES SYMBOL (/sobre) ----------
+  "Compreensão humana": {
+    en: "Human understanding",
+    es: "Comprensión humana",
+  },
+  "Inteligência estruturada": {
+    en: "Structured intelligence",
+    es: "Inteligencia estructurada",
+  },
+  "Partilha responsável de informação": {
+    en: "Responsible information-sharing",
+    es: "Intercambio responsable de información",
+  },
+  "Onde os três se encontram": {
+    en: "Where the three meet",
+    es: "Donde los tres se encuentran",
+  },
+  "Três princípios que se encontram no centro: compreensão humana, inteligência estruturada e partilha responsável de informação": {
+    en: "Three principles that meet at the center: human understanding, structured intelligence, and responsible information-sharing",
+    es: "Tres principios que se encuentran en el centro: comprensión humana, inteligencia estructurada e intercambio responsable de información",
   },
 };
 

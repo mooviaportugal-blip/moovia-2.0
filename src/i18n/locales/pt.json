@@ -609,5 +609,16 @@
     "pref_analytics_desc": "Permite medir de forma agregada a navegação e fluxos do site para melhorar a experiência.",
     "pref_preferences_title": "Preferências",
     "pref_preferences_desc": "Recorda opções personalizadas do utilizador, como preferências de som e visualização."
+  },
+  "sobre": {
+    "approach": {
+      "principles": {
+        "p1": "Compreensão humana",
+        "p2": "Inteligência estruturada",
+        "p3": "Partilha responsável de informação",
+        "where_three_meet": "Onde os três se encontram",
+        "symbol_aria": "Três princípios que se encontram no centro: compreensão humana, inteligência estruturada e partilha responsável de informação"
+      }
+    }
   }
 }

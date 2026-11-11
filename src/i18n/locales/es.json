@@ -606,5 +606,16 @@
     "pref_analytics_desc": "Permite medir de forma agregada la navegación y flujos del sitio web para mejorar la experiencia.",
     "pref_preferences_title": "Preferencias",
     "pref_preferences_desc": "Recuerda opciones personalizadas del usuario, como preferencias de sonido y visualización."
+  },
+  "sobre": {
+    "approach": {
+      "principles": {
+        "p1": "Comprensión humana",
+        "p2": "Inteligencia estructurada",
+        "p3": "Intercambio responsable de información",
+        "where_three_meet": "Donde los tres se encuentran",
+        "symbol_aria": "Tres principios que se encuentran en el centro: comprensión humana, inteligencia estructurada e intercambio responsable de información"
+      }
+    }
   }
 }
