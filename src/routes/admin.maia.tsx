@@ -85,13 +85,26 @@ function AdminMaia() {
   async function load() {
     setLoading(true);
     try {
-      const { data: kdata } = await supabase
+      // Tenta obter especificamente a linha de configuração da MAIA
+      let { data: kdata } = await supabase
         .from("maia_knowledge" as any)
         .select("*")
+        .eq("category", "maia_config")
         .eq("is_active", true)
         .order("updated_at", { ascending: false })
         .limit(1)
         .maybeSingle();
+
+      if (!kdata) {
+        const { data: fallbackData } = await supabase
+          .from("maia_knowledge" as any)
+          .select("*")
+          .eq("is_active", true)
+          .order("updated_at", { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        kdata = fallbackData;
+      }
 
       let parsed: Knowledge = {
         id: "default",
@@ -145,6 +158,15 @@ function AdminMaia() {
         if (Array.isArray(k.examples)) parsed.examples = k.examples;
       }
 
+      // Garantir estrutura segura
+      parsed.vocabulary = {
+        use: Array.isArray(parsed.vocabulary?.use) ? parsed.vocabulary.use : [],
+        avoid: Array.isArray(parsed.vocabulary?.avoid) ? parsed.vocabulary.avoid : [],
+      };
+      if (!Array.isArray(parsed.rules)) parsed.rules = [];
+      if (!Array.isArray(parsed.faqs)) parsed.faqs = [];
+      if (!Array.isArray(parsed.examples)) parsed.examples = [];
+
       setKnowledge(parsed);
 
       try {
@@ -179,12 +201,12 @@ function AdminMaia() {
 
   useEffect(() => { load(); }, []);
 
-  // Realtime: refresh document list when status changes
+  // Realtime: refresh when maia_knowledge changes
   useEffect(() => {
     try {
       const channel = supabase
-        .channel("maia_documents_changes")
-        .on("postgres_changes", { event: "*", schema: "public", table: "maia_documents" }, () => {
+        .channel("maia_knowledge_changes")
+        .on("postgres_changes", { event: "*", schema: "public", table: "maia_knowledge" }, () => {
           load();
         })
         .subscribe();

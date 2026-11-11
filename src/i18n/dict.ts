@@ -1441,10 +1441,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "Built on decades of experience, united by one conviction: the human side of international mobility deserves the same protection as the investment behind it.",
     "es": "Construida sobre décadas de experiencia, unida por una convicción: la dimensión humana de la movilidad internacional merece la misma protección que la inversión que hay detrás de ella."
   },
-  "A MOOVIA nasceu de uma amizade de décadas e de dois percursos profissionais que se cruzaram no mundo corporativo internacional, passando por Revenue Assurance, grandes consultoras e tecnologia empresarial, a par de experiência direta dos desafios humanos da mobilidade internacional.": {
-    "en": "MOOVIA was born from a decades-long friendship and two professional journeys that crossed paths in the international corporate world, spanning Revenue Assurance, major consultancies and enterprise technology, alongside firsthand experience of the human challenges of international mobility.",
-    "es": "MOOVIA nació de una amistad de décadas y de dos trayectorias profesionales que se cruzaron en el mundo corporativo internacional, abarcando Revenue Assurance, grandes consultoras y tecnología empresarial, junto con la experiencia directa de los desafíos humanos de la movilidad internacional."
-  },
 
   // ---------- NEW RIPPLE, TECH ACCOUNTABILITY, TIMELINE, PRIVACY ----------
   "IMPACTO NO NEGÓCIO": {

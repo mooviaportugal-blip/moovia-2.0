@@ -33,10 +33,30 @@ function LoginPage() {
         ? trimmed
         : `${normalized}@mooviaportugal.com`;
 
-    const { error } = await supabase.auth.signInWithPassword({
+    let { error } = await supabase.auth.signInWithPassword({
       email: loginEmail,
       password,
     });
+
+    if (error && !password.trim().startsWith("@")) {
+      const retry = await supabase.auth.signInWithPassword({
+        email: loginEmail,
+        password: `@${password.trim()}`,
+      });
+      if (!retry.error) {
+        error = null;
+      }
+    }
+
+    if (error && password !== password.trim()) {
+      const retry = await supabase.auth.signInWithPassword({
+        email: loginEmail,
+        password: password.trim(),
+      });
+      if (!retry.error) {
+        error = null;
+      }
+    }
 
     if (error) {
       setError(error.message);

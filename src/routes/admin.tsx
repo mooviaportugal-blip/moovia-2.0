@@ -85,15 +85,41 @@ function AdminLogin() {
           ? trimmed
           : `${normalized}@mooviaportugal.com`;
 
-      const { error } = await supabase.auth.signInWithPassword({
+      let { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
 
+      // Se falhou e a senha não começa com @, tenta com @ (ex.: digitou Moovia26 em vez de @Moovia26)
+      if (error && !password.trim().startsWith("@")) {
+        const retry = await supabase.auth.signInWithPassword({
+          email,
+          password: `@${password.trim()}`,
+        });
+        if (!retry.error) {
+          error = null;
+        }
+      }
+
+      // Se falhou por espaços antes/depois
+      if (error && password !== password.trim()) {
+        const retry = await supabase.auth.signInWithPassword({
+          email,
+          password: password.trim(),
+        });
+        if (!retry.error) {
+          error = null;
+        }
+      }
+
       if (error) throw error;
 
       toast.success("Login realizado com sucesso");
-      navigate({ to: "/admin/dashboard" });
+      if (typeof window !== "undefined" && window.location.pathname.startsWith("/admin/") && window.location.pathname !== "/admin/") {
+        // Permanece na sub-rota pretendida (ex: /admin/maia)
+      } else {
+        navigate({ to: "/admin/dashboard" });
+      }
     } catch (error: any) {
       const msg =
         error.message === "Invalid login credentials"
