@@ -1825,6 +1825,124 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "Let's explore how we can strengthen your global mobility strategy.",
     es: "Veamos cómo podemos reforzar su estrategia de movilidad global.",
   },
+
+  // ---------- COOKIES ----------
+  "Política de Cookies": {
+    en: "Cookie Policy",
+    es: "Política de Cookies",
+  },
+  "Transparência e Privacidade": {
+    en: "Transparency and Privacy",
+    es: "Transparencia y Privacidad",
+  },
+  "Em caso de divergência, prevalece a versão portuguesa.": {
+    en: "In case of discrepancy, the Portuguese version prevails.",
+    es: "En caso de divergencia, prevalece la versión en portugués.",
+  },
+  "Última atualização: ": {
+    en: "Last updated: ",
+    es: "Última actualización: ",
+  },
+  "1. O que são cookies": {
+    en: "1. What cookies are",
+    es: "1. Qué son las cookies",
+  },
+  "Cookies são pequenos ficheiros guardados no seu dispositivo quando visita um site. Usamos o termo também para tecnologias semelhantes, como o armazenamento local do navegador.": {
+    en: "Cookies are small files saved on your device when you visit a website. We also use the term for similar technologies, such as browser local storage.",
+    es: "Las cookies son pequeños archivos guardados en su dispositivo cuando visita un sitio web. Utilizamos el término también para tecnologías similares, como el almacenamiento local del navegador.",
+  },
+  "2. Quem é o responsável": {
+    en: "2. Who is responsible",
+    es: "2. Quién es el responsable",
+  },
+  "O responsável é ": {
+    en: "The controller is ",
+    es: "El responsable es ",
+  },
+  "Para qualquer questão, escreva para ": {
+    en: "For any questions, write to ",
+    es: "Para cualquier cuestión, escriba a ",
+  },
+  "O tratamento de dados pessoais está descrito na ": {
+    en: "The processing of personal data is described in the ",
+    es: "El tratamiento de datos personales está descrito en la ",
+  },
+  "3. Que cookies e armazenamento usamos": {
+    en: "3. What cookies and storage we use",
+    es: "3. Qué cookies y almacenamiento usamos",
+  },
+  "A lista seguinte descreve o que o site guarda no seu dispositivo.": {
+    en: "The following list describes what the website saves on your device.",
+    es: "La siguiente lista describe lo que el sitio web guarda en su dispositivo.",
+  },
+  "4. Cookies essenciais": {
+    en: "4. Essential cookies",
+    es: "4. Cookies esenciales",
+  },
+  "Os cookies essenciais são necessários ao funcionamento do site e à sua segurança. Não exigem o seu consentimento.": {
+    en: "Essential cookies are necessary for the website to function and for its security. They do not require your consent.",
+    es: "Las cookies esenciales son necesarias para el funcionamiento del sitio web y su seguridad. No requieren su consentimiento.",
+  },
+  "5. Cookies não essenciais": {
+    en: "5. Non-essential cookies",
+    es: "5. Cookies no esenciales",
+  },
+  "Os cookies de preferências, de medição e outros não essenciais só são ativados com o seu consentimento, que pode dar ou retirar a qualquer momento.": {
+    en: "Preferences, measurement and other non-essential cookies are only activated with your consent, which you can give or withdraw at any time.",
+    es: "Las cookies de preferencias, de medición y otras no esenciales solo se activan con su consentimiento, que puede dar o retirar en cualquier momento.",
+  },
+  "6. Serviços de terceiros": {
+    en: "6. Third-party services",
+    es: "6. Servicios de terceros",
+  },
+  "Alguns elementos do site, como o assistente de conversa MAIA, podem guardar ou ler informação no seu dispositivo.": {
+    en: "Some elements of the website, such as the MAIA conversational assistant, may save or read information on your device.",
+    es: "Algunos elementos del sitio web, como el asistente de conversación MAIA, pueden guardar o leer información en su dispositivo.",
+  },
+  "7. Como gerir": {
+    en: "7. How to manage",
+    es: "7. Cómo gestionar",
+  },
+  "Pode apagar ou bloquear cookies nas definições do seu navegador. Bloquear os essenciais pode afetar o funcionamento do site. Pode alterar a sua escolha a qualquer momento em «Gerir preferências de cookies», no rodapé.": {
+    en: "You can delete or block cookies in your browser settings. Blocking essential ones may affect how the website works. You can change your choice at any time under «Manage preferences» in the footer.",
+    es: "Puede eliminar o bloquear cookies en la configuración de su navegador. Bloquear las esenciales puede afectar al funcionamiento del sitio web. Puede cambiar su elección en cualquier momento en «Gestionar preferencias», en el pie de página.",
+  },
+  "8. Duração": {
+    en: "8. Duration",
+    es: "8. Duración",
+  },
+  "A duração de cada item consta da tabela do ponto 3.": {
+    en: "The duration of each item is listed in the table in section 3.",
+    es: "La duración de cada elemento figura en la tabla del punto 3.",
+  },
+  "9. Os seus direitos": {
+    en: "9. Your rights",
+    es: "9. Sus derechos",
+  },
+  "Os seus direitos sobre dados pessoais estão na ": {
+    en: "Your rights regarding personal data are set out in the ",
+    es: "Sus derechos sobre los datos personales se encuentran en la ",
+  },
+  "Política de Privacidade, secção 9": {
+    en: "Privacy Policy, section 9",
+    es: "Política de Privacidad, sección 9",
+  },
+  "10. Alterações": {
+    en: "10. Changes",
+    es: "10. Modificaciones",
+  },
+  "Publicamos qualquer alteração nesta página, com a data da última atualização.": {
+    en: "We publish any changes on this page, along with the date of the last update.",
+    es: "Publicamos cualquier modificación en esta página, con la fecha de la última actualización.",
+  },
+  "Usamos cookies não essenciais apenas com o seu consentimento. Pode alterar a sua escolha a qualquer momento.": {
+    en: "We use non-essential cookies only with your consent. You can change your choice at any time.",
+    es: "Usamos cookies no esenciales solo con su consentimiento. Puede cambiar su elección en cualquier momento.",
+  },
+  "Gerir preferências de cookies": {
+    en: "Manage cookie preferences",
+    es: "Gestionar preferencias de cookies",
+  },
 };
 
 export function translate(text: string, lang: "en" | "es"): string | undefined {

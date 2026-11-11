@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { isAnalyticsAllowed } from "./cookieConsent";
 
 type EventType = "pageview" | "click" | "scroll" | "session_start" | "session_end";
 
@@ -78,6 +79,19 @@ async function flush() {
 export function startUxTracker() {
   if (started || typeof window === "undefined") return;
   if (window.location.pathname.startsWith("/admin")) return;
+
+  if (!isAnalyticsAllowed()) {
+    const handleConsent = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail?.analytics && !started) {
+        window.removeEventListener("cookie_consent_updated", handleConsent);
+        startUxTracker();
+      }
+    };
+    window.addEventListener("cookie_consent_updated", handleConsent);
+    return;
+  }
+
   started = true;
 
   track({ event_type: "session_start", referrer: document.referrer.slice(0, 500) });

@@ -58,6 +58,9 @@ export const Footer = () => {
           <a href="/politica-de-privacidade" className="hover:text-white transition-colors">{t("footer.privacy")}</a>
           <a href="/termos-de-consentimento" className="hover:text-white transition-colors">{t("footer.consent_terms", "Termos de Consentimento")}</a>
           <a href="/cookies" className="hover:text-white transition-colors">{t("footer.cookies")}</a>
+          <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("open_cookie_preferences"))} className="hover:text-white transition-colors">
+            {t("footer.manage_cookies", "Gerir preferências de cookies")}
+          </button>
           <a href="/termos" className="hover:text-white transition-colors">Termos</a>
         </div>
       </div>

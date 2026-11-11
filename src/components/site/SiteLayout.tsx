@@ -7,6 +7,7 @@ import { ChatAssistant } from "./ChatAssistant";
 import { SoundModal } from "./SoundModal";
 import { SoundToggle } from "./SoundToggle";
 import { CustomCursor } from "../ui/CustomCursor";
+import { CookieConsentBanner } from "./CookieConsentBanner";
 import { startUxTracker } from "@/lib/uxTracker";
 import { useMooviaPlayer, SOUND_FEATURE_ENABLED } from "@/hooks/useMooviaPlayer";
 
@@ -37,6 +38,7 @@ export function SiteLayout({
       {showNav && <Nav />}
       <main className="relative z-10 overflow-x-clip">{children}</main>
       {showFooter && <Footer />}
+      <CookieConsentBanner />
       
       
       

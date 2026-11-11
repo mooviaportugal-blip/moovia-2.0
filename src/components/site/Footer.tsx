@@ -78,8 +78,21 @@ export function Footer() {
               >
                 {t("footer.consent_terms", "Termos de Consentimento")}
               </Link>
+              <Link
+                to="/cookies"
+                className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors"
+              >
+                {t("footer.cookies", "Cookies")}
+              </Link>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent("open_cookie_preferences"))}
+                className="font-urbanist text-[14px] font-[300] text-w70 hover:text-gold-l transition-colors text-left"
+              >
+                {t("footer.manage_cookies", "Gerir preferências de cookies")}
+              </button>
               {legal.map((p) => {
-                if (p.slug === "politica-privacidade") return null;
+                if (p.slug === "politica-privacidade" || p.slug === "politica-cookies") return null;
                 const to = LEGAL_ROUTES[p.slug];
                 if (!to) return null;
                 return (

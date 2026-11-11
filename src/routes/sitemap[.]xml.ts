@@ -18,7 +18,6 @@ const baseEntries: SitemapEntry[] = [
   { path: "/sobre", changefreq: "monthly", priority: "0.8" },
   { path: "/equipa", changefreq: "monthly", priority: "0.7" },
   { path: "/contacto", changefreq: "yearly", priority: "0.5" },
-  { path: "/cookies", changefreq: "yearly", priority: "0.2" },
   { path: "/termos", changefreq: "yearly", priority: "0.2" },
 ];
 
@@ -27,6 +26,7 @@ const entries: SitemapEntry[] = isLegalConfigured
       ...baseEntries,
       { path: "/politica-de-privacidade", changefreq: "yearly", priority: "0.3" },
       { path: "/termos-de-consentimento", changefreq: "yearly", priority: "0.3" },
+      { path: "/cookies", changefreq: "yearly", priority: "0.2" },
     ]
   : baseEntries;
 
