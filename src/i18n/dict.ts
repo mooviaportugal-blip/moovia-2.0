@@ -1617,9 +1617,17 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "Protecting People. Performance. And Your Mobility Investment.",
     es: "Proteger a las personas, el rendimiento y su inversión en movilidad.",
   },
-  "A MOOVIA traz inteligência estruturada e monitorização contínua do risco à mobilidade internacional, ajudando as organizações a antecipar desafios humanos e familiares antes de afetarem o desempenho, a retenção e a continuidade do negócio.": {
-    en: "MOOVIA brings structured intelligence and continuous risk monitoring to international mobility, helping organisations anticipate human and family-related challenges before they affect employee performance, retention and business continuity.",
-    es: "MOOVIA aporta inteligencia estructurada y monitorización continua del riesgo a la movilidad internacional, ayudando a las organizaciones a anticipar desafíos humanos y familiares antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
+  "A MOOVIA combina avaliação estruturada de risco, monitorização contínua e uma visão de produto assente em inteligência artificial para ajudar as organizações a identificar os desafios humanos, culturais e familiares que podem comprometer as missões internacionais, antes de afetarem o desempenho, a retenção e a continuidade do negócio.": {
+    en: "MOOVIA combines structured risk assessment, ongoing monitoring and an AI-powered product vision to help organisations identify the human, cultural and family challenges that can compromise international assignments, before they impact performance, retention and business continuity.",
+    es: "MOOVIA combina evaluación estructurada del riesgo, monitorización continua y una visión de producto basada en inteligencia artificial para ayudar a las organizaciones a identificar los desafíos humanos, culturales y familiares que pueden comprometer las misiones internacionales, antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
+  },
+  "GLOBAL MOBILITY ASSURANCE | AI-POWERED": {
+    en: "GLOBAL MOBILITY ASSURANCE | AI-POWERED",
+    es: "GLOBAL MOBILITY ASSURANCE | AI-POWERED",
+  },
+  "Descubra como a MOOVIA funciona": {
+    en: "Discover How MOOVIA Works",
+    es: "Descubra cómo funciona MOOVIA",
   },
   "Dos riscos humanos à inteligência de negócio.": {
     en: "From Human Risks to Business Intelligence.",
@@ -1793,17 +1801,21 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "Protect your mobility investment and business continuity.",
     es: "Proteja su inversión en movilidad y la continuidad del negocio.",
   },
-  "Ganhe visibilidade sobre os riscos humanos e familiares e atue mais cedo para proteger o desempenho e a retenção.": {
-    en: "Gain visibility into human and family risks and act earlier to protect performance and retention.",
-    es: "Obtenga visibilidad sobre los riesgos humanos y familiares y actúe antes para proteger el rendimiento y la retención.",
+  "Ganhe visibilidade sobre os riscos humanos e familiares, priorize ações preventivas e tome decisões mais informadas para proteger o desempenho dos colaboradores, a retenção e o sucesso das missões.": {
+    en: "Gain visibility into human and family-related risks, prioritise preventive actions and make better-informed decisions to protect employee performance, retention and assignment success.",
+    es: "Obtenga visibilidad sobre los riesgos humanos y familiares, priorice acciones preventivas y tome decisiones mejor informadas para proteger el rendimiento de los colaboradores, la retención y el éxito de las misiones.",
+  },
+  "Para executivos e famílias": {
+    en: "For Executives & Their Families",
+    es: "Para ejecutivos y familias",
   },
   "Uma transição internacional mais confiante e apoiada.": {
     en: "A more confident and supported international transition.",
     es: "Una transición internacional más segura y acompañada.",
   },
-  "Compreenda os desafios de adaptação e receba orientação personalizada e confidencial ao longo de todo o percurso.": {
-    en: "Understand adaptation challenges and receive personalised, confidential guidance throughout the journey.",
-    es: "Comprenda los desafíos de adaptación y reciba orientación personalizada y confidencial durante todo el recorrido.",
+  "Compreenda os desafios de adaptação, receba orientação personalizada e aceda a apoio confidencial para lidar com as mudanças culturais, pessoais e familiares ao longo de todo o percurso internacional.": {
+    en: "Understand adaptation challenges, receive personalised guidance and access confidential support to navigate cultural, personal and family changes throughout the international journey.",
+    es: "Comprenda los desafíos de adaptación, reciba orientación personalizada y acceda a apoyo confidencial para afrontar los cambios culturales, personales y familiares a lo largo de todo el recorrido internacional.",
   },
   "Proteja as suas pessoas. Proteja o seu investimento.": {
     en: "Protect Your People. Protect Your Investment.",

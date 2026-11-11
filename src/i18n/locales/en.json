@@ -23,12 +23,12 @@
     "team": "Team"
   },
   "hero": {
-    "eyebrow": "GLOBAL MOBILITY ASSURANCE",
+    "eyebrow": "GLOBAL MOBILITY ASSURANCE | AI-POWERED",
     "title": "Human Risk Intelligence for Global Mobility.",
     "support_line": "Protecting People. Performance. And Your Mobility Investment.",
-    "subtitle": "MOOVIA brings structured intelligence and continuous risk monitoring to international mobility, helping organisations anticipate human and family-related challenges before they affect employee performance, retention and business continuity.",
+    "subtitle": "MOOVIA combines structured risk assessment, ongoing monitoring and an AI-powered product vision to help organisations identify the human, cultural and family challenges that can compromise international assignments, before they impact performance, retention and business continuity.",
     "cta_primary": "Let's Talk",
-    "cta_secondary": "See How MOOVIA Works",
+    "cta_secondary": "Discover How MOOVIA Works",
     "chips": {
       "chip1": "Preparation and adaptation",
       "chip2": "Family and context",
@@ -620,5 +620,15 @@
         "symbol_aria": "Three principles that meet at the center: human understanding, structured intelligence, and responsible information-sharing"
       }
     }
+  },
+  "whoWeSupport": {
+    "title": "Who We Support",
+    "subtitle": "One integrated approach. Value for organisations, employees and families.",
+    "comp_title": "For Companies",
+    "comp_highlight": "Protect your mobility investment and business continuity.",
+    "comp_text": "Gain visibility into human and family-related risks, prioritise preventive actions and make better-informed decisions to protect employee performance, retention and assignment success.",
+    "exec_title": "For Executives & Their Families",
+    "exec_highlight": "A more confident and supported international transition.",
+    "exec_text": "Understand adaptation challenges, receive personalised guidance and access confidential support to navigate cultural, personal and family changes throughout the international journey."
   }
 }

@@ -23,12 +23,12 @@
     "team": "Equipa"
   },
   "hero": {
-    "eyebrow": "GLOBAL MOBILITY ASSURANCE",
+    "eyebrow": "GLOBAL MOBILITY ASSURANCE | AI-POWERED",
     "title": "Inteligência de risco humano para a mobilidade global.",
     "support_line": "Proteger as pessoas, o desempenho e o seu investimento em mobilidade.",
-    "subtitle": "A MOOVIA traz inteligência estruturada e monitorização contínua do risco à mobilidade internacional, ajudando as organizações a antecipar desafios humanos e familiares antes de afetarem o desempenho, a retenção e a continuidade do negócio.",
+    "subtitle": "A MOOVIA combina avaliação estruturada de risco, monitorização contínua e uma visão de produto assente em inteligência artificial para ajudar as organizações a identificar os desafios humanos, culturais e familiares que podem comprometer as missões internacionais, antes de afetarem o desempenho, a retenção e a continuidade do negócio.",
     "cta_primary": "Vamos conversar",
-    "cta_secondary": "Ver como a MOOVIA funciona",
+    "cta_secondary": "Descubra como a MOOVIA funciona",
     "chips": {
       "chip1": "Preparação e adaptação",
       "chip2": "Família e contexto",
@@ -620,5 +620,15 @@
         "symbol_aria": "Três princípios que se encontram no centro: compreensão humana, inteligência estruturada e partilha responsável de informação"
       }
     }
+  },
+  "whoWeSupport": {
+    "title": "Quem apoiamos",
+    "subtitle": "Uma abordagem integrada. Valor para organizações, colaboradores e famílias.",
+    "comp_title": "Para empresas",
+    "comp_highlight": "Proteja o seu investimento em mobilidade e a continuidade do negócio.",
+    "comp_text": "Ganhe visibilidade sobre os riscos humanos e familiares, priorize ações preventivas e tome decisões mais informadas para proteger o desempenho dos colaboradores, a retenção e o sucesso das missões.",
+    "exec_title": "Para executivos e famílias",
+    "exec_highlight": "Uma transição internacional mais confiante e apoiada.",
+    "exec_text": "Compreenda os desafios de adaptação, receba orientação personalizada e aceda a apoio confidencial para lidar com as mudanças culturais, pessoais e familiares ao longo de todo o percurso internacional."
   }
 }

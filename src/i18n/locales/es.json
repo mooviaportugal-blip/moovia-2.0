@@ -23,12 +23,12 @@
     "team": "Equipo"
   },
   "hero": {
-    "eyebrow": "GLOBAL MOBILITY ASSURANCE",
+    "eyebrow": "GLOBAL MOBILITY ASSURANCE | AI-POWERED",
     "title": "Inteligencia de riesgo humano para la movilidad global.",
     "support_line": "Proteger a las personas, el rendimiento y su inversión en movilidad.",
-    "subtitle": "MOOVIA aporta inteligencia estructurada y monitorización continua del riesgo a la movilidad internacional, ayudando a las organizaciones a anticipar desafíos humanos y familiares antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
+    "subtitle": "MOOVIA combina evaluación estructurada del riesgo, monitorización continua y una visión de producto basada en inteligencia artificial para ayudar a las organizaciones a identificar los desafíos humanos, culturales y familiares que pueden comprometer las misiones internacionales, antes de que afecten al rendimiento, la retención y la continuidad del negocio.",
     "cta_primary": "Hablemos",
-    "cta_secondary": "Ver cómo funciona MOOVIA",
+    "cta_secondary": "Descubra cómo funciona MOOVIA",
     "chips": {
       "chip1": "Preparación y adaptación",
       "chip2": "Familia y contexto",
@@ -617,5 +617,15 @@
         "symbol_aria": "Tres principios que se encuentran en el centro: comprensión humana, inteligencia estructurada e intercambio responsable de información"
       }
     }
+  },
+  "whoWeSupport": {
+    "title": "A quién apoyamos",
+    "subtitle": "Un enfoque integrado. Valor para organizaciones, colaboradores y familias.",
+    "comp_title": "Para empresas",
+    "comp_highlight": "Proteja su inversión en movilidad y la continuidad del negocio.",
+    "comp_text": "Obtenga visibilidad sobre los riesgos humanos y familiares, priorice acciones preventivas y tome decisiones mejor informadas para proteger el rendimiento de los colaboradores, la retención y el éxito de las misiones.",
+    "exec_title": "Para ejecutivos y familias",
+    "exec_highlight": "Una transición internacional más segura y acompañada.",
+    "exec_text": "Comprenda los desafíos de adaptación, reciba orientación personalizada y acceda a apoyo confidencial para afrontar los cambios culturales, personales y familiares a lo largo de todo el recorrido internacional."
   }
 }

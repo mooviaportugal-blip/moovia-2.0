@@ -3,8 +3,8 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemAndHelpSection } from "@/components/sections/ProblemAndHelpSection";
 import { HomeStepsSection } from "@/components/sections/HomeStepsSection";
-import { WhoIsItForSection } from "@/components/sections/WhoIsItForSection";
 import { CompanyGainsSection } from "@/components/sections/CompanyGainsSection";
+import { WhoWeSupportSection } from "@/components/sections/WhoWeSupportSection";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 
 export const Route = createFileRoute("/home")({
@@ -48,11 +48,11 @@ function HomePage() {
       {/* 3. Como funciona (AVALIAR, LIGAR E INTERPRETAR, AGIR) */}
       <HomeStepsSection />
 
-      {/* 4. Para quem é (Executivos & Famílias / Empresas) */}
-      <WhoIsItForSection />
-
-      {/* 5. O que a sua empresa ganha (Valor para o negócio) */}
+      {/* 4. O que a sua empresa ganha (Valor para o negócio e The Ripple Effect) */}
       <CompanyGainsSection />
+
+      {/* 5. Quem apoiamos (Who We Support) */}
+      <WhoWeSupportSection />
 
       {/* 6. Faixa final de chamada para ação */}
       <FinalCtaStrip />

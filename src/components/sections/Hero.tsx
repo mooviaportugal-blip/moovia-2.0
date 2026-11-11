@@ -55,9 +55,6 @@ export function Hero() {
   const handleScrollToSteps = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     document
-      .getElementById("o-problema")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" }) ||
-    document
       .getElementById("como-funciona")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
