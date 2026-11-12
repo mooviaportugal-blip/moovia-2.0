@@ -35,6 +35,26 @@
       "chip3": "Apoyo organizacional"
     }
   },
+  "rippleDrill": {
+    "central_label": "Misión internacional",
+    "ring1_label": "Impacto familiar",
+    "ring2_label": "Impacto en el equipo",
+    "ring3_label": "Impacto en el negocio",
+    "ring4_label": "Consecuencias a largo plazo",
+    "intro_tag": "Introducción",
+    "close": "Cerrar",
+    "intro": "Todo empieza con un expatriado que se enfrenta a dificultades de adaptación. Puede ser un problema familiar: el cónyuge que no logra integrarse, los hijos con dificultades en la escuela, el aislamiento social o simplemente una sensación creciente de que el traslado fue un error.",
+    "family_title": "El expatriado empieza a sufrir.",
+    "family_text": "La ansiedad aumenta, la motivación disminuye, la concentración se deteriora. Aunque siga trabajando, ya no rinde como se esperaba.",
+    "team_title": "El equipo empieza a sentir las consecuencias.",
+    "team_text": "El expatriado retrasa decisiones, entrega menos y requiere más apoyo de sus colegas. El equipo asume tareas adicionales, la productividad colectiva disminuye y el ambiente de trabajo se deteriora.",
+    "business_p1_title": "Los proyectos empiezan a correr riesgo.",
+    "business_p1_text": "Se comprometen los plazos, se retrasan decisiones estratégicas, los costes aumentan y se dejan de cumplir objetivos importantes. El problema ya ha superado al expatriado y a su equipo.",
+    "business_p2_title": "Los clientes empiezan a verse afectados.",
+    "business_p2_text": "Los retrasos, los fallos de ejecución y el deterioro de la calidad del servicio perjudican la experiencia de los clientes. Los contratos pueden correr riesgo y se pueden perder oportunidades comerciales.",
+    "consequences_title": "La reputación y los resultados de la empresa sufren.",
+    "consequences_text": "La insatisfacción de los clientes puede comprometer las relaciones comerciales, futuros ingresos y la reputación de la organización. Si el expatriado regresa anticipadamente o abandona la empresa, los costes de sustitución y el impacto en el negocio se multiplican."
+  },
   "home": {
     "problem_help": {
       "eyebrow": "Diagnóstico y Seguimiento",

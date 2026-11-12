@@ -1437,10 +1437,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "MOOVIA was created to give the human side of an international assignment the same attention as the financial and operational investment behind it. We combine structured assessment, specialist insight and follow-up to help employees, families and organisations navigate international transitions.",
     "es": "MOOVIA se creó para prestar a la dimensión humana de una asignación internacional la misma atención que a la inversión financiera y operativa que hay detrás. Combinamos evaluación estructurada, criterio especializado y seguimiento para ayudar a colaboradores, familias y organizaciones a navegar las transiciones internacionales."
   },
-  "Construída sobre décadas de experiência, unida por uma convicção: a dimensão humana da mobilidade internacional merece a mesma proteção que o investimento que está por trás dela.": {
-    "en": "Built on decades of experience, united by one conviction: the human side of international mobility deserves the same protection as the investment behind it.",
-    "es": "Construida sobre décadas de experiencia, unida por una convicción: la dimensión humana de la movilidad internacional merece la misma protección que la inversión que hay detrás de ella."
-  },
 
   // ---------- NEW RIPPLE, TECH ACCOUNTABILITY, TIMELINE, PRIVACY ----------
   "IMPACTO NO NEGÓCIO": {
@@ -1964,6 +1960,80 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Três princípios que se encontram no centro: compreensão humana, inteligência estruturada e partilha responsável de informação": {
     en: "Three principles that meet at the center: human understanding, structured intelligence, and responsible information-sharing",
     es: "Tres principios que se encuentran en el centro: comprensión humana, inteligencia estructurada e intercambio responsable de información",
+  },
+
+  // ---------- RIPPLE DRILLDOWN (HERO HUMANOID) ----------
+  "Missão internacional": {
+    en: "International Assignment",
+    es: "Misión internacional",
+  },
+  "Impacto familiar": {
+    en: "Family Impact",
+    es: "Impacto familiar",
+  },
+  "Impacto na equipa": {
+    en: "Team Impact",
+    es: "Impacto en el equipo",
+  },
+  "Impacto no negócio": {
+    en: "Business Impact",
+    es: "Impacto en el negocio",
+  },
+  "Consequências a longo prazo": {
+    en: "Long-term Consequences",
+    es: "Consecuencias a largo plazo",
+  },
+  "Introdução": {
+    en: "Introduction",
+    es: "Introducción",
+  },
+  "Fechar": {
+    en: "Close",
+    es: "Cerrar",
+  },
+  "Tudo começa com um expatriado que enfrenta dificuldades de adaptação. Pode ser um problema familiar, o cônjuge que não consegue integrar-se, os filhos com dificuldades na escola, isolamento social ou simplesmente uma sensação crescente de que a mudança foi um erro.": {
+    en: "It all starts with an expatriate facing difficulties adapting. It might be a family issue: a spouse who cannot integrate, children struggling at school, social isolation, or simply a growing sense that the move was a mistake.",
+    es: "Todo empieza con un expatriado que se enfrenta a dificultades de adaptación. Puede ser un problema familiar: el cónyuge que no logra integrarse, los hijos con dificultades en la escuela, el aislamiento social o simplemente una sensación creciente de que el traslado fue un error.",
+  },
+  "O expatriado começa a sofrer.": {
+    en: "The expatriate starts to suffer.",
+    es: "El expatriado empieza a sufrir.",
+  },
+  "A ansiedade aumenta, a motivação diminui, a concentração deteriora-se. Mesmo continuando a trabalhar, já não apresenta o desempenho esperado.": {
+    en: "Anxiety grows, motivation drops, concentration deteriorates. Even while still working, they no longer perform as expected.",
+    es: "La ansiedad aumenta, la motivación disminuye, la concentración se deteriora. Aunque siga trabajando, ya no rinde como se esperaba.",
+  },
+  "A equipa começa a sentir as consequências.": {
+    en: "The team starts to feel the consequences.",
+    es: "El equipo empieza a sentir las consecuencias.",
+  },
+  "O expatriado atrasa decisões, entrega menos e exige mais apoio dos colegas. A equipa absorve tarefas adicionais, a produtividade coletiva diminui e o ambiente de trabalho deteriora-se.": {
+    en: "The expatriate delays decisions, delivers less and needs more support from colleagues. The team absorbs additional tasks, collective productivity declines and the working environment deteriorates.",
+    es: "El expatriado retrasa decisiones, entrega menos y requiere más apoyo de sus colegas. El equipo asume tareas adicionales, la productividad colectiva disminuye y el ambiente de trabajo se deteriora.",
+  },
+  "Os projetos começam a ficar em risco.": {
+    en: "Projects start to be at risk.",
+    es: "Los proyectos empiezan a correr riesgo.",
+  },
+  "Prazos são comprometidos, decisões estratégicas atrasam-se, os custos aumentam e objetivos importantes deixam de ser cumpridos. O problema já ultrapassou o expatriado e a sua equipa.": {
+    en: "Deadlines are compromised, strategic decisions are delayed, costs rise and important objectives are no longer met. The problem has already gone beyond the expatriate and their team.",
+    es: "Se comprometen los plazos, se retrasan decisiones estratégicas, los costes aumentan y se dejan de cumplir objetivos importantes. El problema ya ha superado al expatriado y a su equipo.",
+  },
+  "Os clientes começam a ser afetados.": {
+    en: "Clients start to be affected.",
+    es: "Los clientes empiezan a verse afectados.",
+  },
+  "Atrasos, falhas de execução e deterioração da qualidade do serviço prejudicam a experiência dos clientes. Contratos podem ficar em risco e oportunidades comerciais podem perder-se.": {
+    en: "Delays, execution failures and declining service quality harm the client experience. Contracts may be at risk and commercial opportunities may be lost.",
+    es: "Los retrasos, los fallos de ejecución y el deterioro de la calidad del servicio perjudican la experiencia de los clientes. Los contratos pueden correr riesgo y se pueden perder oportunidades comerciales.",
+  },
+  "A reputação e os resultados da empresa sofrem.": {
+    en: "Company reputation and results suffer.",
+    es: "La reputación y los resultados de la empresa sufren.",
+  },
+  "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente ou sair da empresa, os custos de substituição e o impacto no negócio multiplicam-se.": {
+    en: "Client dissatisfaction can compromise commercial relationships, future revenue and organisation reputation. If the expatriate returns early or leaves the company, replacement costs and business disruption multiply.",
+    es: "La insatisfacción de los clientes puede comprometer las relaciones comerciales, futuros ingresos y la reputación de la organización. Si el expatriado regresa anticipadamente o abandona la empresa, los costes de sustitución y el impacto en el negocio se multiplican.",
   },
 };
 

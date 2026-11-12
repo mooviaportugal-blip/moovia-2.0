@@ -35,6 +35,26 @@
       "chip3": "Apoio organizacional"
     }
   },
+  "rippleDrill": {
+    "central_label": "Missão internacional",
+    "ring1_label": "Impacto familiar",
+    "ring2_label": "Impacto na equipa",
+    "ring3_label": "Impacto no negócio",
+    "ring4_label": "Consequências a longo prazo",
+    "intro_tag": "Introdução",
+    "close": "Fechar",
+    "intro": "Tudo começa com um expatriado que enfrenta dificuldades de adaptação. Pode ser um problema familiar, o cônjuge que não consegue integrar-se, os filhos com dificuldades na escola, isolamento social ou simplesmente uma sensação crescente de que a mudança foi um erro.",
+    "family_title": "O expatriado começa a sofrer.",
+    "family_text": "A ansiedade aumenta, a motivação diminui, a concentração deteriora-se. Mesmo continuando a trabalhar, já não apresenta o desempenho esperado.",
+    "team_title": "A equipa começa a sentir as consequências.",
+    "team_text": "O expatriado atrasa decisões, entrega menos e exige mais apoio dos colegas. A equipa absorve tarefas adicionais, a produtividade coletiva diminui e o ambiente de trabalho deteriora-se.",
+    "business_p1_title": "Os projetos começam a ficar em risco.",
+    "business_p1_text": "Prazos são comprometidos, decisões estratégicas atrasam-se, os custos aumentam e objetivos importantes deixam de ser cumpridos. O problema já ultrapassou o expatriado e a sua equipa.",
+    "business_p2_title": "Os clientes começam a ser afetados.",
+    "business_p2_text": "Atrasos, falhas de execução e deterioração da qualidade do serviço prejudicam a experiência dos clientes. Contratos podem ficar em risco e oportunidades comerciais podem perder-se.",
+    "consequences_title": "A reputação e os resultados da empresa sofrem.",
+    "consequences_text": "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente ou sair da empresa, os custos de substituição e o impacto no negócio multiplicam-se."
+  },
   "home": {
     "problem_help": {
       "eyebrow": "Diagnóstico e Acompanhamento",

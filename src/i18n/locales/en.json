@@ -35,6 +35,26 @@
       "chip3": "Organisational support"
     }
   },
+  "rippleDrill": {
+    "central_label": "International Assignment",
+    "ring1_label": "Family Impact",
+    "ring2_label": "Team Impact",
+    "ring3_label": "Business Impact",
+    "ring4_label": "Long-term Consequences",
+    "intro_tag": "Introduction",
+    "close": "Close",
+    "intro": "It all starts with an expatriate facing difficulties adapting. It might be a family issue: a spouse who cannot integrate, children struggling at school, social isolation, or simply a growing sense that the move was a mistake.",
+    "family_title": "The expatriate starts to suffer.",
+    "family_text": "Anxiety grows, motivation drops, concentration deteriorates. Even while still working, they no longer perform as expected.",
+    "team_title": "The team starts to feel the consequences.",
+    "team_text": "The expatriate delays decisions, delivers less and needs more support from colleagues. The team absorbs additional tasks, collective productivity declines and the working environment deteriorates.",
+    "business_p1_title": "Projects start to be at risk.",
+    "business_p1_text": "Deadlines are compromised, strategic decisions are delayed, costs rise and important objectives are no longer met. The problem has already gone beyond the expatriate and their team.",
+    "business_p2_title": "Clients start to be affected.",
+    "business_p2_text": "Delays, execution failures and declining service quality harm the client experience. Contracts may be at risk and commercial opportunities may be lost.",
+    "consequences_title": "Company reputation and results suffer.",
+    "consequences_text": "Client dissatisfaction can compromise commercial relationships, future revenue and organisation reputation. If the expatriate returns early or leaves the company, replacement costs and business disruption multiply."
+  },
   "home": {
     "problem_help": {
       "eyebrow": "Diagnosis & Support",
