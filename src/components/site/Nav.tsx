@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -18,6 +18,8 @@ export function Nav() {
   const cmsText = (k: string, fb: string) => (isPt && cms && cms[k]) || fb;
 
   const logoNav = cmsText("brand.logo_nav", logoNavAsset.url);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -25,6 +27,7 @@ export function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Bloquear scroll do body quando o menu mobile está aberto
   useEffect(() => {
     if (mobileOpen) {
       const prev = document.body.style.overflow;
@@ -33,6 +36,53 @@ export function Nav() {
         document.body.style.overflow = prev;
       };
     }
+  }, [mobileOpen]);
+
+  // Gestão de foco por teclado (Escape fecha, Tab fica preso no menu)
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setMobileOpen(false);
+        toggleBtnRef.current?.focus();
+        return;
+      }
+
+      if (e.key === "Tab") {
+        if (!menuRef.current) return;
+        const focusableElements = Array.from(
+          menuRef.current.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), [tabindex="0"]'
+          )
+        );
+        // Incluir também o botão do hambúrguer no topo se visível
+        const allFocusable = toggleBtnRef.current
+          ? [...focusableElements, toggleBtnRef.current]
+          : focusableElements;
+
+        if (allFocusable.length === 0) return;
+
+        const firstElement = allFocusable[0];
+        const lastElement = allFocusable[allFocusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [mobileOpen]);
 
   const links = [
@@ -84,7 +134,7 @@ export function Nav() {
         ))}
       </div>
 
-      {/* CTA + Language (Desktop) */}
+      {/* CTA + Language (Desktop >= 1024px: display block apenas em desktop, display none no mobile/tablet) */}
       <div className="hidden lg:flex items-center gap-4 ml-auto">
         {langEnabled && <LanguageSwitcher />}
         <CtaButton
@@ -96,43 +146,43 @@ export function Nav() {
         </CtaButton>
       </div>
 
-      {/* Mobile CTA + language + hamburger */}
-      <div className="lg:hidden flex items-center gap-2 ml-auto">
-        <CtaButton
-          to="/contacto"
-          onClick={handleCtaClick}
-          size="compact"
-        >
-          {t("nav.cta")}
-        </CtaButton>
+      {/* Mobile e Tablet (< 1024px): Apenas Seletor de Idioma e Ícone de Hambúrguer (sem botão Let's Talk) */}
+      <div className="lg:hidden flex items-center gap-3 sm:gap-4 ml-auto">
         {langEnabled && <LanguageSwitcher compact />}
         <button
-          className="flex flex-col gap-[6px] z-[1001] p-2.5 rounded border border-gold/40 bg-[#06091a]/60 min-w-10 min-h-10 items-center justify-center"
+          ref={toggleBtnRef}
+          type="button"
+          className="flex flex-col gap-[6px] z-[1001] p-2.5 rounded border border-gold/40 bg-[#06091a]/60 min-w-10 min-h-10 items-center justify-center cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
+          aria-label={mobileOpen ? (isPt ? "Fechar menu" : "Close menu") : "Menu"}
+          aria-expanded={mobileOpen}
         >
           <div
-            className={`w-6 h-[2px] bg-gold transition-transform ${
+            className={`w-6 h-[2px] bg-gold transition-transform duration-300 ${
               mobileOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <div
-            className={`w-6 h-[2px] bg-gold transition-opacity ${
+            className={`w-6 h-[2px] bg-gold transition-opacity duration-300 ${
               mobileOpen ? "opacity-0" : ""
             }`}
           />
           <div
-            className={`w-6 h-[2px] bg-gold transition-transform ${
+            className={`w-6 h-[2px] bg-gold transition-transform duration-300 ${
               mobileOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu Aberto Mobile e Tablet (< 1024px) */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            ref={menuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegação"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -146,14 +196,15 @@ export function Nav() {
               backgroundColor: "#06091a",
               zIndex: 1000,
             }}
-            className="flex flex-col items-center justify-center gap-7 px-6 overflow-y-auto"
+            className="flex flex-col items-center justify-center gap-6 px-6 py-12 overflow-y-auto"
           >
+            {/* Lista de links de navegação */}
             {links.map((link, i) => (
               <motion.div
                 key={link.name}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + i * 0.05 }}
+                transition={{ delay: 0.08 + i * 0.04 }}
               >
                 <Link
                   to={link.to}
@@ -164,16 +215,18 @@ export function Nav() {
                 </Link>
               </motion.div>
             ))}
+
+            {/* Botão no fim da lista de links (depois de Contacto), largura total do menu */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="pt-4"
+              transition={{ delay: 0.08 + links.length * 0.04 }}
+              className="w-full max-w-xs sm:max-w-sm pt-2"
             >
               <CtaButton
                 to="/contacto"
                 onClick={handleCtaClick}
-                className="px-6 py-3.5"
+                className="w-full py-3.5"
               >
                 {t("nav.cta")}
               </CtaButton>
