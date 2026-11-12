@@ -132,6 +132,13 @@ export function CompanyGainsSection() {
             <p>{t("home.gains.ripple.line6")}</p>
           </div>
         </div>
+
+        {/* Fonte do indicador 2–3× */}
+        {t("home.costSource") && (
+          <p className="mt-3 text-[11px] md:text-[12px] text-white/50 font-urbanist tracking-wide">
+            {t("home.costSource")}
+          </p>
+        )}
       </div>
     </section>
   );

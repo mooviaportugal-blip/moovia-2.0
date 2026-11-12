@@ -58,7 +58,7 @@
     "consequences_highlight": "The result: a family or individual problem, initially small and potentially solvable, can turn into a business loss far greater than the cost of the assignment itself."
   },
   "rippleBottom": {
-    "eyebrow": "THE RIPPLE EFFECT",
+    "eyebrow": "INVISIBLE COSTS",
     "title": "One Human Challenge. Enterprise-Wide Consequences.",
     "zone1_title": "International Assignment",
     "zone2_title": "Family Impact",
@@ -139,7 +139,7 @@
       "step3_item2": "Company-level risk insights",
       "step3_item3": "Ongoing monitoring"
     },
-    "costSource": "",
+    "costSource": "Source: Crown World Mobility, World Mobility Perspectives, citing the ERC Mobility Survey (2012).",
     "who_is_it_for": {
       "eyebrow": "Target Audience",
       "title": "Who We Support",
@@ -332,7 +332,7 @@
     "p3": "Today, our multidisciplinary team brings together expertise in global mobility, behavioural science, technology, business strategy, and corporate governance, united by one conviction: the human factors that determine the success of international mobility deserve the same attention and protection as the financial investment behind it.",
     "team_title": "MOOVIA Team",
     "team_subtitle": "The team coordinating your journey. Lean, multidisciplinary, by design.",
-    "rui_companies": "Choice Technologies / Kema / eTECH",
+    "rui_companies": "",
     "read_more": "Read more",
     "show_less": "Show less"
   },

@@ -179,11 +179,10 @@ const ALL: Record<string, Member> = {
     name: "Rui Mano",
     initials: "RM",
     role: "Advisor | Revenue Assurance",
-    companies: "Choice Technologies / Kema / eTECH",
     img: ruiManoImg,
     chips: ["Revenue Assurance", "Telecommunications", "Enterprise Tech"],
     bio: [
-      "Com mais de 25 anos de experiência executiva internacional, liderou operações globais e estratégias de Revenue Assurance em empresas líderes como Choice Technologies e Kema.",
+      "Com mais de 25 anos de experiência executiva internacional, liderou operações globais e estratégias de Revenue Assurance em empresas líderes.",
     ],
   },
 };

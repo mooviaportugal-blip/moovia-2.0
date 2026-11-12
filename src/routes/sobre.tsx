@@ -465,7 +465,7 @@ function SobreComoNosEncaixamos() {
                     EXEMPLO DE ENTREGÁVEL PARA EMPRESAS
                     <br />
                     <span className="text-[9px] normal-case opacity-70">
-                      (Dados agregados e anonimizados)
+                      (Exemplo ilustrativo • Dados agregados e anonimizados)
                     </span>
                   </p>
 
@@ -475,7 +475,7 @@ function SobreComoNosEncaixamos() {
                         Mission Readiness Index
                       </p>
                       <p className="text-2xl font-display font-[300] text-white">
-                        24 <span className="text-sm text-white/40">/ 100</span>
+                        82 <span className="text-sm text-white/40">/ 100</span>
                       </p>
                     </div>
                     <div className="text-right">
@@ -509,6 +509,9 @@ function SobreComoNosEncaixamos() {
 
                   <p className="mt-6 text-[9px] text-white/45 italic leading-relaxed text-center border-t border-white/10 pt-4">
                     Nota: "Estes indicadores são produzidos a partir da metodologia Human Mobility Assurance e não revelam respostas individuais nem informação pessoal identificável."
+                  </p>
+                  <p className="mt-2 text-[8.5px] uppercase tracking-wider text-gold/60 text-center">
+                    Exemplo ilustrativo
                   </p>
                 </div>
 

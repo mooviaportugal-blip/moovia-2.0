@@ -190,10 +190,9 @@ export const DICT: Record<string, { en: string; es: string }> = {
     es: "El equipo que coordina. Ágil, multidisciplinar, por diseño."
   },
   "Advisor | Revenue Assurance": { en: "Advisor | Revenue Assurance", es: "Advisor | Revenue Assurance" },
-  "Choice Technologies / Kema / eTECH": { en: "Choice Technologies / Kema / eTECH", es: "Choice Technologies / Kema / eTECH" },
-  "Com mais de 25 anos de experiência executiva internacional, liderou operações globais e estratégias de Revenue Assurance em empresas líderes como Choice Technologies e Kema.": {
-    en: "With over 25 years of international executive experience, he led global operations and Revenue Assurance strategies at industry leaders such as Choice Technologies and Kema.",
-    es: "Con más de 25 años de experiencia ejecutiva internacional, lideró operaciones globales y estrategias de Revenue Assurance en empresas líderes como Choice Technologies y Kema."
+  "Com mais de 25 anos de experiência executiva internacional, liderou operações globais e estratégias de Revenue Assurance em empresas líderes.": {
+    en: "With over 25 years of international executive experience, he led global operations and Revenue Assurance strategies at industry leaders.",
+    es: "Con más de 25 años de experiencia ejecutiva internacional, lideró operaciones globales y estrategias de Revenue Assurance en empresas líderes."
   },
   "A equipa que coordena a sua jornada.": { en: "The team coordinating your journey.", es: "El equipo que coordina tu trayecto." },
   "Cada membro da MOOVIA foi escolhido pela profundidade da experiência, não pelo tamanho do currículo. São as pessoas certas para as decisões que importam.":
@@ -2042,6 +2041,22 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "CUSTOS VISÍVEIS": {
     en: "VISIBLE COSTS",
     es: "COSTES VISIBLES",
+  },
+  "CUSTOS INVISÍVEIS": {
+    en: "INVISIBLE COSTS",
+    es: "COSTES INVISIBLES",
+  },
+  "Fonte: Crown World Mobility, World Mobility Perspectives, citando o ERC Mobility Survey (2012).": {
+    en: "Source: Crown World Mobility, World Mobility Perspectives, citing the ERC Mobility Survey (2012).",
+    es: "Fuente: Crown World Mobility, World Mobility Perspectives, citando el ERC Mobility Survey (2012).",
+  },
+  "(Exemplo ilustrativo • Dados agregados e anonimizados)": {
+    en: "(Illustrative example • Aggregated and anonymised data)",
+    es: "(Ejemplo ilustrativo • Datos agregados y anonimizados)",
+  },
+  "Exemplo ilustrativo": {
+    en: "Illustrative example",
+    es: "Ejemplo ilustrativo",
   },
   "Um desafio humano. Consequências em toda a empresa.": {
     en: "One Human Challenge. Enterprise-Wide Consequences.",
