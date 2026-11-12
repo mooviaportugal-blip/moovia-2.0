@@ -2075,6 +2075,62 @@ export const DICT: Record<string, { en: string; es: string }> = {
     en: "MOOVIA identifies the early warning signs, helping companies intervene before the ripple effect reaches their business.",
     es: "MOOVIA identifica las primeras señales de alerta, ayudando a las empresas a intervenir antes de que el efecto en cascada llegue a su negocio.",
   },
+  "Desafios de adaptação": {
+    en: "Adaptation challenges",
+    es: "Desafíos de adaptación",
+  },
+  "Educação e habitação": {
+    en: "Education and housing",
+    es: "Educación y vivienda",
+  },
+  "Bem-estar e estabilidade": {
+    en: "Well-being and stability",
+    es: "Bienestar y estabilidad",
+  },
+  "Risco de regresso antecipado": {
+    en: "Risk of early return",
+    es: "Riesgo de regreso anticipado",
+  },
+  "Lacunas de conhecimento": {
+    en: "Knowledge gaps",
+    es: "Brechas de conocimiento",
+  },
+  "Aumento da carga de trabalho": {
+    en: "Workload increase",
+    es: "Aumento de la carga de trabajo",
+  },
+  "Perturbação da equipa": {
+    en: "Team disruption",
+    es: "Alteración del equipo",
+  },
+  "Perda de continuidade": {
+    en: "Loss of continuity",
+    es: "Pérdida de continuidad",
+  },
+  "Atrasos nos projetos": {
+    en: "Project delays",
+    es: "Retrasos en los proyectos",
+  },
+  "Custo total mais elevado (2–3× o salário)": {
+    en: "Higher total cost (2–3× salary)",
+    es: "Coste total más elevado (2–3× el salario)",
+  },
+  "Risco de retenção de talento": {
+    en: "Talent retention risk",
+    es: "Riesgo de retención de talento",
+  },
+  "Custos de mobilidade mais elevados": {
+    en: "Higher mobility costs",
+    es: "Costes de movilidad más elevados",
+  },
+  "Impacto nos planos de expansão": {
+    en: "Impact on expansion plans",
+    es: "Impacto en los planes de expansión",
+  },
+  "Reputação e marca empregadora": {
+    en: "Reputation and employer brand",
+    es: "Reputación y marca empleadora",
+  },
 };
 
 export function translate(text: string, lang: "en" | "es"): string | undefined {

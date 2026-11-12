@@ -174,7 +174,7 @@ export function Hero() {
 
         {/* LADO DIREITO: FIGURA + ANÉIS CONCÊNTRICOS + RIPPLE EFFECT INTERATIVO */}
         <div className="relative z-10 w-full lg:w-[56%] xl:w-[58%] flex flex-col items-center justify-start overflow-visible">
-          <div className="relative w-full flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-end gap-5 xl:gap-7">
+          <div className="relative w-full flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-end gap-8 lg:gap-10 xl:gap-12">
             
             {/* Wrapper do Humanoide com Anéis Concêntricos */}
             <motion.div
@@ -282,72 +282,7 @@ export function Hero() {
                     <circle cx="377" cy="377" r="2.5" fill={activeRing === "family" ? "#D4AF37" : "#9B7A50"} />
                   </g>
 
-                  {/* Linhas finas estáticas ligando os anéis às 4 etiquetas da coluna (apenas desktop) */}
-                  <g className="hidden lg:block pointer-events-none" aria-hidden="true">
-                    {/* Linha 1: Anel Interior (Family) -> Botão 01 (y=56) */}
-                    <circle
-                      cx="340"
-                      cy="198"
-                      r={activeRing === "family" ? 4 : 2.5}
-                      fill={activeRing === "family" ? "#D4AF37" : "#9B7A50"}
-                      className={activeRing === "family" ? "animate-pulse" : ""}
-                    />
-                    <path
-                      d="M 340 198 L 410 56 L 600 56"
-                      fill="none"
-                      stroke={activeRing === "family" ? "#D4AF37" : "#9B7A50"}
-                      strokeWidth={activeRing === "family" ? "1.6" : "0.75"}
-                      strokeOpacity={activeRing === "family" ? 0.95 : 0.35}
-                    />
 
-                    {/* Linha 2: Anel Médio (Team) -> Botão 02 (y=104) */}
-                    <circle
-                      cx="420"
-                      cy="180"
-                      r={activeRing === "team" ? 4 : 2.5}
-                      fill={activeRing === "team" ? "#D4AF37" : "#9B7A50"}
-                      className={activeRing === "team" ? "animate-pulse" : ""}
-                    />
-                    <path
-                      d="M 420 180 L 480 104 L 600 104"
-                      fill="none"
-                      stroke={activeRing === "team" ? "#D4AF37" : "#9B7A50"}
-                      strokeWidth={activeRing === "team" ? "1.6" : "0.75"}
-                      strokeOpacity={activeRing === "team" ? 0.95 : 0.35}
-                    />
-
-                    {/* Linha 3: Anel Médio-externo (Business) -> Botão 03 (y=152) */}
-                    <circle
-                      cx="480"
-                      cy="157"
-                      r={activeRing === "business" ? 4 : 2.5}
-                      fill={activeRing === "business" ? "#D4AF37" : "#9B7A50"}
-                      className={activeRing === "business" ? "animate-pulse" : ""}
-                    />
-                    <path
-                      d="M 480 157 L 530 152 L 600 152"
-                      fill="none"
-                      stroke={activeRing === "business" ? "#D4AF37" : "#9B7A50"}
-                      strokeWidth={activeRing === "business" ? "1.6" : "0.75"}
-                      strokeOpacity={activeRing === "business" ? 0.95 : 0.35}
-                    />
-
-                    {/* Linha 4: Anel Exterior (Consequences) -> Botão 04 (y=200) */}
-                    <circle
-                      cx="535"
-                      cy="130"
-                      r={activeRing === "consequences" ? 4 : 2.5}
-                      fill={activeRing === "consequences" ? "#D4AF37" : "#9B7A50"}
-                      className={activeRing === "consequences" ? "animate-pulse" : ""}
-                    />
-                    <path
-                      d="M 535 130 L 565 200 L 600 200"
-                      fill="none"
-                      stroke={activeRing === "consequences" ? "#D4AF37" : "#9B7A50"}
-                      strokeWidth={activeRing === "consequences" ? "1.6" : "0.75"}
-                      strokeOpacity={activeRing === "consequences" ? 0.95 : 0.35}
-                    />
-                  </g>
                 </svg>
               </div>
 
