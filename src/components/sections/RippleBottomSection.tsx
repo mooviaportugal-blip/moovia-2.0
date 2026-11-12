@@ -5,8 +5,9 @@ import { User, Users, UsersRound, BarChart3, Target } from "lucide-react";
 import logoNavAsset from "@/assets/logo-nav-v8.png.asset.json";
 
 export function RippleBottomSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
+  const locale = (i18n.language || "pt").split("-")[0];
 
   // Decomposição do título em duas frases para colorir a segunda em peru (#9B7A50)
   const fullTitle = t("rippleBottom.title");
@@ -24,6 +25,41 @@ export function RippleBottomSection() {
       id="ripple-effect-bottom"
       className="section-spacing bg-black px-6 lg:px-12 xl:px-20 border-b border-b18 relative overflow-hidden"
     >
+      {/* Estilos para escala tipográfica com container queries (cqw) e limites clamp */}
+      <style>{`
+        .ripple-cq-container {
+          container-type: inline-size;
+        }
+        .ripple-item-text {
+          font-family: var(--font-body, "Space Grotesk", sans-serif);
+          font-size: clamp(11px, 1.0cqw, 14px);
+          line-height: 1.35;
+        }
+        .ripple-title-text {
+          font-family: var(--font-display, "Space Grotesk", sans-serif);
+          font-size: clamp(13px, 1.35cqw, 18px);
+          font-weight: 600;
+          line-height: 1.25;
+        }
+        .ripple-legend-text {
+          font-family: var(--font-display, "Space Grotesk", sans-serif);
+          font-size: clamp(12px, 1.2cqw, 16px);
+          font-weight: 600;
+          line-height: 1.25;
+        }
+        @media (max-width: 1023px) {
+          .ripple-item-text {
+            font-size: 11px !important;
+          }
+          .ripple-title-text {
+            font-size: 13px !important;
+          }
+          .ripple-legend-text {
+            font-size: 12px !important;
+          }
+        }
+      `}</style>
+
       {/* Brilho radial de fundo suave em peru */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -48,24 +84,24 @@ export function RippleBottomSection() {
           </h2>
         </div>
 
-        {/* 1. VISUAL DESKTOP & TABLET: Cinco "ondas" de círculos sobrepostos com colunas de texto HTML */}
+        {/* 1. VISUAL DESKTOP & TABLET: Ondas sobrepostas flutuando diretamente no fundo, sem caixa */}
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0.9, scale: 0.995 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: shouldReduceMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="hidden md:block relative w-full aspect-[1300/600] lg:aspect-[1300/520] max-w-[1240px] mx-auto overflow-hidden rounded-sm select-none border border-b18 bg-[#06091a]/40 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          className="hidden md:block relative w-full aspect-[1300/600] max-lg:aspect-[1300/680] max-w-[1240px] mx-auto overflow-hidden select-none ripple-cq-container"
         >
-          {/* Camada 1: SVG de fundo com as 5 ondas desenhadas da maior para a menor */}
+          {/* Camada 1: SVG de fundo (viewBox 0 0 1300 600, cy 300) desenhado da maior para a menor */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none"
-            viewBox="0 0 1300 520"
+            viewBox="0 0 1300 600"
             preserveAspectRatio="xMidYMid meet"
             aria-hidden="true"
           >
             <defs>
-              {/* Brilho dourado suave no bordo direito */}
-              <filter id="ripple-right-glow" x="-20%" y="-20%" width="140%" height="140%">
+              {/* Brilho suave no bordo dourado direito */}
+              <filter id="ripple-crest-glow" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="3.5" result="blur" />
                 <feMerge>
                   <feMergeNode in="blur" />
@@ -73,75 +109,75 @@ export function RippleBottomSection() {
                 </feMerge>
               </filter>
 
-              {/* Traço linearGradient horizontal: transparente à esquerda e dourado forte no bordo direito */}
-              <linearGradient id="waveStrokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              {/* Traço linearGradient horizontal: 100% transparente à esquerda (sem arcos à esquerda), dourado brilhante à direita */}
+              <linearGradient id="crestStrokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#D4AF37" stopOpacity="0" />
-                <stop offset="60%" stopColor="#9B7A50" stopOpacity="0.08" />
-                <stop offset="82%" stopColor="#9B7A50" stopOpacity="0.5" />
+                <stop offset="78%" stopColor="#D4AF37" stopOpacity="0" />
+                <stop offset="86%" stopColor="#9B7A50" stopOpacity="0.35" />
                 <stop offset="96%" stopColor="#D4AF37" stopOpacity="0.9" />
                 <stop offset="100%" stopColor="#D4AF37" stopOpacity="1" />
               </linearGradient>
             </defs>
 
-            {/* Onda 5: elipse cx 805, cy 260, rx 420, ry 285 */}
+            {/* Onda 5: elipse cx 874, cy 300, rx 400, ry 295 (borda direita ≈ 98%) */}
             <ellipse
-              cx="805"
-              cy="260"
-              rx="420"
-              ry="285"
-              fill="rgba(15, 31, 65, 0.48)"
-              stroke="url(#waveStrokeGrad)"
-              strokeWidth="2.2"
-              filter="url(#ripple-right-glow)"
+              cx="874"
+              cy="300"
+              rx="400"
+              ry="295"
+              fill="#162544"
+              stroke="url(#crestStrokeGrad)"
+              strokeWidth="2.4"
+              filter="url(#ripple-crest-glow)"
             />
 
-            {/* Onda 4: círculo cx 575, cy 260, r 270 */}
+            {/* Onda 4: círculo cx 648, cy 300, r 275 (borda direita ≈ 70%) */}
             <circle
-              cx="575"
-              cy="260"
-              r="270"
-              fill="rgba(15, 31, 65, 0.42)"
-              stroke="url(#waveStrokeGrad)"
-              strokeWidth="2.2"
-              filter="url(#ripple-right-glow)"
+              cx="648"
+              cy="300"
+              r="275"
+              fill="#111d37"
+              stroke="url(#crestStrokeGrad)"
+              strokeWidth="2.4"
+              filter="url(#ripple-crest-glow)"
             />
 
-            {/* Onda 3: círculo cx 400, cy 260, r 245 */}
+            {/* Onda 3: círculo cx 431, cy 300, r 255 (borda direita ≈ 52%) */}
             <circle
-              cx="400"
-              cy="260"
-              r="245"
-              fill="rgba(15, 31, 65, 0.36)"
-              stroke="url(#waveStrokeGrad)"
-              strokeWidth="2.2"
-              filter="url(#ripple-right-glow)"
+              cx="431"
+              cy="300"
+              r="255"
+              fill="#0d162a"
+              stroke="url(#crestStrokeGrad)"
+              strokeWidth="2.4"
+              filter="url(#ripple-crest-glow)"
             />
 
-            {/* Onda 2: círculo cx 255, cy 260, r 215 */}
+            {/* Onda 2: círculo cx 217, cy 300, r 230 (borda direita ≈ 34%) */}
             <circle
-              cx="255"
-              cy="260"
-              r="215"
-              fill="rgba(15, 31, 65, 0.30)"
-              stroke="url(#waveStrokeGrad)"
-              strokeWidth="2.2"
-              filter="url(#ripple-right-glow)"
+              cx="217"
+              cy="300"
+              r="230"
+              fill="#090f1d"
+              stroke="url(#crestStrokeGrad)"
+              strokeWidth="2.4"
+              filter="url(#ripple-crest-glow)"
             />
 
-            {/* Onda 1 (centro): círculo cx 142, cy 260, r 92 com contorno dourado completo e brilho suave */}
+            {/* Onda 1 (centro): círculo cx 118, cy 300, r 92 (borda direita ≈ 16%) com contorno dourado completo e fundo escuro */}
             <circle
-              cx="142"
-              cy="260"
+              cx="118"
+              cy="300"
               r="92"
               fill="#06091a"
               stroke="#D4AF37"
               strokeWidth="2.4"
-              filter="url(#ripple-right-glow)"
+              filter="url(#ripple-crest-glow)"
             />
             {/* Anel de precisão interno da Onda 1 */}
             <circle
-              cx="142"
-              cy="260"
+              cx="118"
+              cy="300"
               r="80"
               fill="none"
               stroke="#9B7A50"
@@ -150,111 +186,131 @@ export function RippleBottomSection() {
             />
           </svg>
 
-          {/* Camada 2: Texto em HTML posicionado por cima com left e width em % */}
+          {/* Camada 2: Colunas de texto em HTML dentro da sua crescente com margem de segurança */}
           <div className="absolute inset-0 w-full h-full pointer-events-none opacity-100">
-            {/* Zona 1: 0 a 18% (círculo central) */}
+            {/* Zona 1: Círculo central (cx 118, r 92 -> centro em 9.08%) */}
             <div
-              className="absolute top-0 bottom-0 flex flex-col justify-center items-center pointer-events-auto px-2"
-              style={{ left: "0%", width: "18%" }}
+              className="absolute top-1/2 -translate-y-1/2 flex flex-col justify-center items-center pointer-events-auto"
+              style={{ left: "2.5%", width: "13%" }}
             >
-              <div className="flex flex-col items-center justify-center text-center max-w-[130px]">
+              <div className="flex flex-col items-center justify-center text-center">
                 <User size={26} strokeWidth={1.8} className="text-[#D4AF37] mb-2" />
-                <span className="font-urbanist font-[600] text-white tracking-widest uppercase text-center text-[10.5px] lg:text-[11.5px] leading-snug">
-                  {t("rippleBottom.zone1_title")}
+                <span className="ripple-legend-text text-white tracking-wider uppercase text-center max-w-[130px]">
+                  {locale === "en" ? (
+                    <>
+                      International<br />Assignment
+                    </>
+                  ) : locale === "es" ? (
+                    <>
+                      Misión<br />internacional
+                    </>
+                  ) : (
+                    <>
+                      Missão<br />internacional
+                    </>
+                  )}
                 </span>
               </div>
             </div>
 
-            {/* Zona 2 (Impacto familiar): 18 a 36% */}
+            {/* Zona 2 (Impacto familiar): Crescente 2 (borda direita 34.38%), coluna em 18.2% com largura 10.2% */}
             <div
-              className="absolute top-0 bottom-0 flex flex-col justify-center items-center pointer-events-auto px-2 lg:px-3"
-              style={{ left: "18%", width: "18%" }}
+              className="absolute pointer-events-auto flex flex-col items-center"
+              style={{ left: "18.2%", width: "10.2%", top: "27%" }}
             >
-              <div className="w-full flex flex-col items-center max-w-[185px]">
-                <Users size={22} strokeWidth={1.8} className="text-[#9B7A50] mb-1.5" />
-                <h3 className="font-urbanist font-[600] text-white text-center text-[13.5px] lg:text-[15px] leading-snug mb-2.5">
+              <div className="w-full flex flex-col items-center">
+                <div className="flex justify-center mb-1.5 h-6 items-center">
+                  <Users size={22} strokeWidth={1.8} className="text-[#9B7A50]" />
+                </div>
+                <h3 className="ripple-title-text text-white text-center mb-2.5">
                   {t("rippleBottom.zone2_title")}
                 </h3>
                 <ul className="w-full space-y-1.5 text-left">
                   {zone2Items.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-1.5 font-urbanist text-[12px] lg:text-[13px] text-white/85 leading-snug"
+                      className="flex items-start gap-1.5 ripple-item-text text-white/85"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#9B7A50] shrink-0 mt-1" />
-                      <span>{item}</span>
+                      <span className="break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            {/* Zona 3 (Impacto na equipa): 36 a 49,6% */}
+            {/* Zona 3 (Impacto na equipa): Crescente 3 (borda direita 52.77%), coluna em 36.5% com largura 10.2% */}
             <div
-              className="absolute top-0 bottom-0 flex flex-col justify-center items-center pointer-events-auto px-1.5 lg:px-2.5"
-              style={{ left: "36%", width: "13.6%" }}
+              className="absolute pointer-events-auto flex flex-col items-center"
+              style={{ left: "36.5%", width: "10.2%", top: "27%" }}
             >
-              <div className="w-full flex flex-col items-center max-w-[155px]">
-                <UsersRound size={22} strokeWidth={1.8} className="text-[#9B7A50] mb-1.5" />
-                <h3 className="font-urbanist font-[600] text-white text-center text-[13.5px] lg:text-[15px] leading-snug mb-2.5">
+              <div className="w-full flex flex-col items-center">
+                <div className="flex justify-center mb-1.5 h-6 items-center">
+                  <UsersRound size={22} strokeWidth={1.8} className="text-[#9B7A50]" />
+                </div>
+                <h3 className="ripple-title-text text-white text-center mb-2.5">
                   {t("rippleBottom.zone3_title")}
                 </h3>
                 <ul className="w-full space-y-1.5 text-left">
                   {zone3Items.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-1.5 font-urbanist text-[12px] lg:text-[13px] text-white/85 leading-snug"
+                      className="flex items-start gap-1.5 ripple-item-text text-white/85"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#9B7A50] shrink-0 mt-1" />
-                      <span>{item}</span>
+                      <span className="break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            {/* Zona 4 (Impacto no negócio): 49,6 a 65% */}
+            {/* Zona 4 (Impacto no negócio): Crescente 4 (borda direita 71.00%), coluna em 55.0% com largura 10.2% */}
             <div
-              className="absolute top-0 bottom-0 flex flex-col justify-center items-center pointer-events-auto px-1.5 lg:px-2.5"
-              style={{ left: "49.6%", width: "15.4%" }}
+              className="absolute pointer-events-auto flex flex-col items-center"
+              style={{ left: "55.0%", width: "10.2%", top: "27%" }}
             >
-              <div className="w-full flex flex-col items-center max-w-[170px]">
-                <BarChart3 size={22} strokeWidth={1.8} className="text-[#9B7A50] mb-1.5" />
-                <h3 className="font-urbanist font-[600] text-white text-center text-[13.5px] lg:text-[15px] leading-snug mb-2.5">
+              <div className="w-full flex flex-col items-center">
+                <div className="flex justify-center mb-1.5 h-6 items-center">
+                  <BarChart3 size={22} strokeWidth={1.8} className="text-[#9B7A50]" />
+                </div>
+                <h3 className="ripple-title-text text-white text-center mb-2.5">
                   {t("rippleBottom.zone4_title")}
                 </h3>
                 <ul className="w-full space-y-1.5 text-left">
                   {zone4Items.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-1.5 font-urbanist text-[12px] lg:text-[13px] text-white/85 leading-snug"
+                      className="flex items-start gap-1.5 ripple-item-text text-white/85"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#9B7A50] shrink-0 mt-1" />
-                      <span>{item}</span>
+                      <span className="break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            {/* Zona 5 (Consequências a longo prazo): 65 a 94% */}
+            {/* Zona 5 (Consequências a longo prazo): Crescente 5 (borda direita 98.00%), coluna em 73.0% com largura 17.5%, centrada à sua altura */}
             <div
-              className="absolute top-0 bottom-0 flex flex-col justify-center items-center pointer-events-auto px-3 lg:px-6"
-              style={{ left: "65%", width: "29%" }}
+              className="absolute top-1/2 -translate-y-1/2 pointer-events-auto flex flex-col items-center"
+              style={{ left: "73.0%", width: "17.5%" }}
             >
-              <div className="w-full flex flex-col items-center max-w-[310px]">
-                <Target size={22} strokeWidth={1.8} className="text-[#9B7A50] mb-1.5" />
-                <h3 className="font-urbanist font-[600] text-white text-center text-[13.5px] lg:text-[15px] leading-snug mb-2.5">
+              <div className="w-full flex flex-col items-center max-w-[260px]">
+                <div className="flex justify-center mb-1.5 h-6 items-center">
+                  <Target size={24} strokeWidth={1.8} className="text-[#9B7A50]" />
+                </div>
+                <h3 className="ripple-title-text text-white text-center mb-2.5">
                   {t("rippleBottom.zone5_title")}
                 </h3>
                 <ul className="w-full space-y-1.5 text-left">
                   {zone5Items.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-1.5 font-urbanist text-[12px] lg:text-[13px] text-white/85 leading-snug"
+                      className="flex items-start gap-1.5 ripple-item-text text-white/85"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#9B7A50] shrink-0 mt-1" />
-                      <span>{item}</span>
+                      <span className="break-words">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -263,12 +319,12 @@ export function RippleBottomSection() {
           </div>
         </motion.div>
 
-        {/* 2. VISUAL MOBILE: Coluna vertical de 5 cartões com bordo direito arredondado e brilho dourado */}
+        {/* 2. VISUAL MOBILE (abaixo de 768px): Coluna vertical de 5 cartões com bordo direito arredondado e brilho dourado reduzido */}
         <div className="md:hidden flex flex-col gap-3.5 w-full select-none">
           {/* Cartão 1: Zona 1 (Missão Internacional) - mais curto */}
           <div className="w-full bg-[#0f1f41]/40 border border-b18 border-r-2 border-r-[#9B7A50] rounded-l-sm rounded-r-2xl p-4 shadow-[3px_0_12px_rgba(155,122,80,0.18)] flex items-center justify-center gap-2.5 text-center">
             <User size={20} strokeWidth={1.8} className="text-[#D4AF37]" />
-            <span className="font-urbanist font-[600] text-white tracking-widest uppercase text-[11.5px]">
+            <span className="font-urbanist font-[600] text-white tracking-widest uppercase text-[12px]">
               {t("rippleBottom.zone1_title")}
             </span>
           </div>
