@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ProblemAndHelpSection } from "@/components/sections/ProblemAndHelpSection";
 import { HomeStepsSection } from "@/components/sections/HomeStepsSection";
 import { CompanyGainsSection } from "@/components/sections/CompanyGainsSection";
+import { RippleBottomSection } from "@/components/sections/RippleBottomSection";
 import { WhoWeSupportSection } from "@/components/sections/WhoWeSupportSection";
 import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 
@@ -48,10 +49,13 @@ function HomePage() {
       {/* 3. Como funciona (AVALIAR, LIGAR E INTERPRETAR, AGIR) */}
       <HomeStepsSection />
 
-      {/* 4. O que a sua empresa ganha (Valor para o negócio e The Ripple Effect) */}
+      {/* 4. O que a sua empresa ganha (Valor para o negócio e VISIBLE COSTS) */}
       <CompanyGainsSection />
 
-      {/* 5. Quem apoiamos (Who We Support) */}
+      {/* 5. The Ripple Effect (Nova secção com 5 zonas concêntricas crescentes e narrativa) */}
+      <RippleBottomSection />
+
+      {/* 6. Quem apoiamos (Who We Support) */}
       <WhoWeSupportSection />
 
       {/* 6. Faixa final de chamada para ação */}

@@ -63,8 +63,8 @@ export function CompanyGainsSection() {
           })}
         </div>
 
-        {/* Bloco The Ripple Effect */}
-        <div id="ripple-effect" className="mt-12 md:mt-16 border border-b18 bg-w05/60 p-7 md:p-10 rounded-sm relative overflow-hidden">
+        {/* Bloco Custos Visíveis (Visible Costs) */}
+        <div id="custos-visiveis" className="mt-12 md:mt-16 border border-b18 bg-w05/60 p-7 md:p-10 rounded-sm relative overflow-hidden">
           <p className="typo-eyebrow text-[#9B7A50] mb-2">
             {t("home.gains.ripple.eyebrow")}
           </p>
@@ -130,9 +130,6 @@ export function CompanyGainsSection() {
           <div className="space-y-2.5 font-urbanist text-[14.5px] md:text-[15.5px] text-w70 leading-relaxed max-w-3xl pt-5 border-t border-b18">
             <p className="text-white/90 font-[500]">{t("home.gains.ripple.line5")}</p>
             <p>{t("home.gains.ripple.line6")}</p>
-            {Boolean(t("home.costSource")) && (
-              <p className="text-[12px] text-white/50 pt-1.5">{t("home.costSource")}</p>
-            )}
           </div>
         </div>
       </div>

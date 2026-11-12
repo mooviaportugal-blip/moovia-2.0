@@ -379,19 +379,21 @@ export function Hero() {
             </motion.div>
 
             {/* COLUNA DE ETIQUETAS + CARTÃO DE DETALHE (Desktop à direita, Mobile abaixo) */}
-            <div className="w-full max-w-[340px] lg:w-[260px] xl:w-[290px] flex flex-col items-center lg:items-start gap-3 z-30 shrink-0">
+            <div className="w-full max-w-[340px] lg:w-[260px] xl:w-[290px] flex flex-col items-center lg:items-start gap-2.5 z-30 shrink-0">
+              {/* Eyebrow estático, não clicável, do Ripple Effect */}
+              <p className="typo-eyebrow text-[#9B7A50] text-[10px] md:text-[11px] tracking-[0.25em] mb-0.5 select-none pointer-events-none self-center lg:self-start">
+                {t("rippleDrill.eyebrow")}
+              </p>
+
               {/* 4 Etiquetas dos anéis (Coluna no desktop, grid/wrap no mobile) */}
               <div
-                role="tablist"
                 aria-label="Impactos da mobilidade"
                 className="w-full flex flex-row flex-wrap lg:flex-col gap-2 justify-center lg:justify-start"
               >
                 {/* 01 · Impacto familiar */}
                 <button
                   type="button"
-                  role="tab"
                   id="tab-ring-family"
-                  aria-selected={activeRing === "family"}
                   aria-expanded={activeRing === "family"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "family" ? null : "family")}
@@ -411,9 +413,7 @@ export function Hero() {
                 {/* 02 · Impacto na equipa */}
                 <button
                   type="button"
-                  role="tab"
                   id="tab-ring-team"
-                  aria-selected={activeRing === "team"}
                   aria-expanded={activeRing === "team"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "team" ? null : "team")}
@@ -433,9 +433,7 @@ export function Hero() {
                 {/* 03 · Impacto no negócio */}
                 <button
                   type="button"
-                  role="tab"
                   id="tab-ring-business"
-                  aria-selected={activeRing === "business"}
                   aria-expanded={activeRing === "business"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "business" ? null : "business")}
@@ -455,9 +453,7 @@ export function Hero() {
                 {/* 04 · Consequências a longo prazo */}
                 <button
                   type="button"
-                  role="tab"
                   id="tab-ring-consequences"
-                  aria-selected={activeRing === "consequences"}
                   aria-expanded={activeRing === "consequences"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "consequences" ? null : "consequences")}
@@ -557,8 +553,11 @@ export function Hero() {
                       <h4 className="font-urbanist text-[14px] font-[600] text-[#9B7A50] mb-1 leading-snug">
                         {t("rippleDrill.consequences_title")}
                       </h4>
-                      <p className="font-urbanist text-[12.5px] text-white/85 leading-relaxed">
+                      <p className="font-urbanist text-[12px] text-white/85 leading-relaxed mb-2.5">
                         {t("rippleDrill.consequences_text")}
+                      </p>
+                      <p className="font-urbanist text-[12px] text-[#9B7A50] font-[600] leading-relaxed pt-2 border-t border-[#9B7A50]/20">
+                        {t("rippleDrill.consequences_highlight")}
                       </p>
                     </div>
                   )}

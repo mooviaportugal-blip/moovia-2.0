@@ -2028,12 +2028,52 @@ export const DICT: Record<string, { en: string; es: string }> = {
     es: "Los retrasos, los fallos de ejecución y el deterioro de la calidad del servicio perjudican la experiencia de los clientes. Los contratos pueden correr riesgo y se pueden perder oportunidades comerciales.",
   },
   "A reputação e os resultados da empresa sofrem.": {
-    en: "Company reputation and results suffer.",
-    es: "La reputación y los resultados de la empresa sufren.",
+    en: "The company's reputation and results suffer.",
+    es: "La reputación y los resultados de la empresa se resienten.",
   },
-  "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente ou sair da empresa, os custos de substituição e o impacto no negócio multiplicam-se.": {
-    en: "Client dissatisfaction can compromise commercial relationships, future revenue and organisation reputation. If the expatriate returns early or leaves the company, replacement costs and business disruption multiply.",
-    es: "La insatisfacción de los clientes puede comprometer las relaciones comerciales, futuros ingresos y la reputación de la organización. Si el expatriado regresa anticipadamente o abandona la empresa, los costes de sustitución y el impacto en el negocio se multiplican.",
+  "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente, surgem ainda custos de substituição, perda de conhecimento e um novo processo de mobilidade.": {
+    en: "Client dissatisfaction can compromise commercial relationships, future revenue and the organisation's reputation. If the expatriate returns early, replacement costs, loss of knowledge and a new mobility process follow.",
+    es: "La insatisfacción de los clientes puede comprometer las relaciones comerciales, los ingresos futuros y la reputación de la organización. Si el expatriado regresa anticipadamente, surgen además costes de sustitución, pérdida de conocimiento y un nuevo proceso de movilidad.",
+  },
+  "O resultado: um problema familiar ou individual, inicialmente pequeno e potencialmente resolúvel, pode transformar-se num prejuízo empresarial muito superior ao próprio custo da expatriação.": {
+    en: "The result: a family or individual problem, initially small and potentially solvable, can turn into a business loss far greater than the cost of the assignment itself.",
+    es: "El resultado: un problema familiar o individual, inicialmente pequeño y potencialmente resoluble, puede convertirse en una pérdida empresarial muy superior al propio coste de la expatriación.",
+  },
+  "CUSTOS VISÍVEIS": {
+    en: "VISIBLE COSTS",
+    es: "COSTES VISIBLES",
+  },
+  "Um desafio humano. Consequências em toda a empresa.": {
+    en: "One Human Challenge. Enterprise-Wide Consequences.",
+    es: "Un desafío humano. Consecuencias en toda la empresa.",
+  },
+  "Tudo começa com um expatriado que tem dificuldade em adaptar-se.": {
+    en: "It starts with an expatriate struggling to adapt.",
+    es: "Todo empieza con un expatriado que tiene dificultades para adaptarse.",
+  },
+  "Dificuldades pessoais ou familiares começam a afetar a concentração, a motivação e o desempenho.": {
+    en: "Personal or family difficulties begin to affect focus, motivation and performance.",
+    es: "Las dificultades personales o familiares empiezan a afectar la concentración, la motivación y el rendimiento.",
+  },
+  "O impacto estende-se à equipa. A produtividade diminui, os colegas absorvem responsabilidades adicionais e decisões críticas são adiadas.": {
+    en: "The impact spreads to the team. Productivity declines, colleagues absorb additional responsibilities, and critical decisions are delayed.",
+    es: "El impacto se extiende al equipo. La productividad disminuye, los colegas asumen responsabilidades adicionales y se retrasan decisiones críticas.",
+  },
+  "Os projetos atrasam-se. Os custos aumentam. Os objetivos do negócio ficam em risco.": {
+    en: "Projects fall behind schedule. Costs rise. Business objectives are put at risk.",
+    es: "Los proyectos se retrasan. Los costes aumentan. Los objetivos del negocio quedan en riesgo.",
+  },
+  "Por fim, os clientes sentem as consequências. A qualidade do serviço degrada-se, as relações comerciais enfraquecem e a reputação e o desempenho financeiro da empresa podem ser afetados.": {
+    en: "Eventually, customers feel the consequences. Service quality suffers, commercial relationships weaken, and the company's reputation and financial performance may be affected.",
+    es: "Finalmente, los clientes sienten las consecuencias. La calidad del servicio se resiente, las relaciones comerciales se debilitan y la reputación y el rendimiento financiero de la empresa pueden verse afectados.",
+  },
+  "O que começa como um desafio humano pode tornar-se um risco de negócio para toda a empresa.": {
+    en: "What begins as a human challenge can become an enterprise-wide business risk.",
+    es: "Lo que empieza como un desafío humano puede convertirse en un riesgo de negocio para toda la empresa.",
+  },
+  "A MOOVIA identifica os primeiros sinais de alerta, ajudando as empresas a intervir antes de o efeito em cascata chegar ao seu negócio.": {
+    en: "MOOVIA identifies the early warning signs, helping companies intervene before the ripple effect reaches their business.",
+    es: "MOOVIA identifica las primeras señales de alerta, ayudando a las empresas a intervenir antes de que el efecto en cascada llegue a su negocio.",
   },
 };
 

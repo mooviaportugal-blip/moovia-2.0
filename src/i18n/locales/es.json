@@ -36,6 +36,7 @@
     }
   },
   "rippleDrill": {
+    "eyebrow": "THE RIPPLE EFFECT",
     "central_label": "Misión internacional",
     "ring1_label": "Impacto familiar",
     "ring2_label": "Impacto en el equipo",
@@ -52,8 +53,49 @@
     "business_p1_text": "Se comprometen los plazos, se retrasan decisiones estratégicas, los costes aumentan y se dejan de cumplir objetivos importantes. El problema ya ha superado al expatriado y a su equipo.",
     "business_p2_title": "Los clientes empiezan a verse afectados.",
     "business_p2_text": "Los retrasos, los fallos de ejecución y el deterioro de la calidad del servicio perjudican la experiencia de los clientes. Los contratos pueden correr riesgo y se pueden perder oportunidades comerciales.",
-    "consequences_title": "La reputación y los resultados de la empresa sufren.",
-    "consequences_text": "La insatisfacción de los clientes puede comprometer las relaciones comerciales, futuros ingresos y la reputación de la organización. Si el expatriado regresa anticipadamente o abandona la empresa, los costes de sustitución y el impacto en el negocio se multiplican."
+    "consequences_title": "La reputación y los resultados de la empresa se resienten.",
+    "consequences_text": "La insatisfacción de los clientes puede comprometer las relaciones comerciales, los ingresos futuros y la reputación de la organización. Si el expatriado regresa anticipadamente, surgen además costes de sustitución, pérdida de conocimiento y un nuevo proceso de movilidad.",
+    "consequences_highlight": "El resultado: un problema familiar o individual, inicialmente pequeño y potencialmente resoluble, puede convertirse en una pérdida empresarial muy superior al propio coste de la expatriación."
+  },
+  "rippleBottom": {
+    "eyebrow": "THE RIPPLE EFFECT",
+    "title": "Un desafío humano. Consecuencias en toda la empresa.",
+    "zone1_title": "Misión internacional",
+    "zone2_title": "Impacto familiar",
+    "zone2_items": [
+      "Desafíos de adaptación",
+      "Educación y vivienda",
+      "Bienestar y estabilidad",
+      "Riesgo de regreso anticipado"
+    ],
+    "zone3_title": "Impacto en el equipo",
+    "zone3_items": [
+      "Brechas de conocimiento",
+      "Aumento de la carga de trabajo",
+      "Alteración del equipo",
+      "Pérdida de continuidad"
+    ],
+    "zone4_title": "Impacto en el negocio",
+    "zone4_items": [
+      "Pérdida de productividad",
+      "Costes de sustitución",
+      "Retrasos en los proyectos",
+      "Coste total más elevado (2–3× el salario)"
+    ],
+    "zone5_title": "Consecuencias a largo plazo",
+    "zone5_items": [
+      "Riesgo de retención de talento",
+      "Costes de movilidad más elevados",
+      "Impacto en los planes de expansión",
+      "Reputación y marca empleadora"
+    ],
+    "narrative_p1": "Todo empieza con un expatriado que tiene dificultades para adaptarse.",
+    "narrative_p2": "Las dificultades personales o familiares empiezan a afectar la concentración, la motivación y el rendimiento.",
+    "narrative_p3": "El impacto se extiende al equipo. La productividad disminuye, los colegas asumen responsabilidades adicionales y se retrasan decisiones críticas.",
+    "narrative_p4": "Los proyectos se retrasan. Los costes aumentan. Los objetivos del negocio quedan en riesgo.",
+    "narrative_p5": "Finalmente, los clientes sienten las consecuencias. La calidad del servicio se resiente, las relaciones comerciales se debilitan y la reputación y el rendimiento financiero de la empresa pueden verse afectados.",
+    "narrative_highlight": "Lo que empieza como un desafío humano puede convertirse en un riesgo de negocio para toda la empresa.",
+    "narrative_close": "MOOVIA identifica las primeras señales de alerta, ayudando a las empresas a intervenir antes de que el efecto en cascada llegue a su negocio."
   },
   "home": {
     "problem_help": {
@@ -136,7 +178,7 @@
       "banner_body": "MOOVIA ayuda a proteger esa inversión al identificar temprano los riesgos humanos y familiares, permitiendo actuar a tiempo antes de que afecten el desempeño, la retención o la continuidad de la misión.",
       "support_line": "Reemplazar a un talento internacional que no se adaptó cuesta miles de euros.",
       "ripple": {
-        "eyebrow": "EL EFECTO EN CASCADA",
+        "eyebrow": "COSTES VISIBLES",
         "highlight": "De 2 a 3 veces el salario base anual",
         "line1": "Es lo que puede costar a una empresa una misión internacional de larga duración.",
         "line2": "Pero el verdadero coste de un fracaso puede ir mucho más allá de la inversión inicial.",

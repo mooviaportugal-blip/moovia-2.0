@@ -36,6 +36,7 @@
     }
   },
   "rippleDrill": {
+    "eyebrow": "THE RIPPLE EFFECT",
     "central_label": "International Assignment",
     "ring1_label": "Family Impact",
     "ring2_label": "Team Impact",
@@ -52,8 +53,49 @@
     "business_p1_text": "Deadlines are compromised, strategic decisions are delayed, costs rise and important objectives are no longer met. The problem has already gone beyond the expatriate and their team.",
     "business_p2_title": "Clients start to be affected.",
     "business_p2_text": "Delays, execution failures and declining service quality harm the client experience. Contracts may be at risk and commercial opportunities may be lost.",
-    "consequences_title": "Company reputation and results suffer.",
-    "consequences_text": "Client dissatisfaction can compromise commercial relationships, future revenue and organisation reputation. If the expatriate returns early or leaves the company, replacement costs and business disruption multiply."
+    "consequences_title": "The company's reputation and results suffer.",
+    "consequences_text": "Client dissatisfaction can compromise commercial relationships, future revenue and the organisation's reputation. If the expatriate returns early, replacement costs, loss of knowledge and a new mobility process follow.",
+    "consequences_highlight": "The result: a family or individual problem, initially small and potentially solvable, can turn into a business loss far greater than the cost of the assignment itself."
+  },
+  "rippleBottom": {
+    "eyebrow": "THE RIPPLE EFFECT",
+    "title": "One Human Challenge. Enterprise-Wide Consequences.",
+    "zone1_title": "International Assignment",
+    "zone2_title": "Family Impact",
+    "zone2_items": [
+      "Adaptation challenges",
+      "Education and housing",
+      "Well-being and stability",
+      "Risk of early return"
+    ],
+    "zone3_title": "Team Impact",
+    "zone3_items": [
+      "Knowledge gaps",
+      "Workload increase",
+      "Team disruption",
+      "Loss of continuity"
+    ],
+    "zone4_title": "Business Impact",
+    "zone4_items": [
+      "Productivity loss",
+      "Replacement costs",
+      "Project delays",
+      "Higher total cost (2–3× salary)"
+    ],
+    "zone5_title": "Long-term Consequences",
+    "zone5_items": [
+      "Talent retention risk",
+      "Higher mobility costs",
+      "Impact on expansion plans",
+      "Reputation and employer brand"
+    ],
+    "narrative_p1": "It starts with an expatriate struggling to adapt.",
+    "narrative_p2": "Personal or family difficulties begin to affect focus, motivation and performance.",
+    "narrative_p3": "The impact spreads to the team. Productivity declines, colleagues absorb additional responsibilities, and critical decisions are delayed.",
+    "narrative_p4": "Projects fall behind schedule. Costs rise. Business objectives are put at risk.",
+    "narrative_p5": "Eventually, customers feel the consequences. Service quality suffers, commercial relationships weaken, and the company's reputation and financial performance may be affected.",
+    "narrative_highlight": "What begins as a human challenge can become an enterprise-wide business risk.",
+    "narrative_close": "MOOVIA identifies the early warning signs, helping companies intervene before the ripple effect reaches their business."
   },
   "home": {
     "problem_help": {
@@ -136,7 +178,7 @@
       "banner_body": "MOOVIA helps protect that investment by identifying human and family-related risks early, enabling timely action before they affect performance, retention or assignment continuity.",
       "support_line": "Replacing an international talent who failed to adapt costs thousands of euros.",
       "ripple": {
-        "eyebrow": "THE RIPPLE EFFECT",
+        "eyebrow": "VISIBLE COSTS",
         "highlight": "2–3× Annual Base Salary",
         "line1": "That's what a long-term international assignment can cost a company.",
         "line2": "But the true cost of failure can extend far beyond the initial investment.",

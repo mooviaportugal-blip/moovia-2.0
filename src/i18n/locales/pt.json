@@ -36,6 +36,7 @@
     }
   },
   "rippleDrill": {
+    "eyebrow": "THE RIPPLE EFFECT",
     "central_label": "Missão internacional",
     "ring1_label": "Impacto familiar",
     "ring2_label": "Impacto na equipa",
@@ -53,7 +54,48 @@
     "business_p2_title": "Os clientes começam a ser afetados.",
     "business_p2_text": "Atrasos, falhas de execução e deterioração da qualidade do serviço prejudicam a experiência dos clientes. Contratos podem ficar em risco e oportunidades comerciais podem perder-se.",
     "consequences_title": "A reputação e os resultados da empresa sofrem.",
-    "consequences_text": "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente ou sair da empresa, os custos de substituição e o impacto no negócio multiplicam-se."
+    "consequences_text": "A insatisfação dos clientes pode comprometer relações comerciais, futuras receitas e a reputação da organização. Se o expatriado regressar antecipadamente, surgem ainda custos de substituição, perda de conhecimento e um novo processo de mobilidade.",
+    "consequences_highlight": "O resultado: um problema familiar ou individual, inicialmente pequeno e potencialmente resolúvel, pode transformar-se num prejuízo empresarial muito superior ao próprio custo da expatriação."
+  },
+  "rippleBottom": {
+    "eyebrow": "THE RIPPLE EFFECT",
+    "title": "Um desafio humano. Consequências em toda a empresa.",
+    "zone1_title": "Missão internacional",
+    "zone2_title": "Impacto familiar",
+    "zone2_items": [
+      "Desafios de adaptação",
+      "Educação e habitação",
+      "Bem-estar e estabilidade",
+      "Risco de regresso antecipado"
+    ],
+    "zone3_title": "Impacto na equipa",
+    "zone3_items": [
+      "Lacunas de conhecimento",
+      "Aumento da carga de trabalho",
+      "Perturbação da equipa",
+      "Perda de continuidade"
+    ],
+    "zone4_title": "Impacto no negócio",
+    "zone4_items": [
+      "Perda de produtividade",
+      "Custos de substituição",
+      "Atrasos nos projetos",
+      "Custo total mais elevado (2–3× o salário)"
+    ],
+    "zone5_title": "Consequências a longo prazo",
+    "zone5_items": [
+      "Risco de retenção de talento",
+      "Custos de mobilidade mais elevados",
+      "Impacto nos planos de expansão",
+      "Reputação e marca empregadora"
+    ],
+    "narrative_p1": "Tudo começa com um expatriado que tem dificuldade em adaptar-se.",
+    "narrative_p2": "Dificuldades pessoais ou familiares começam a afetar a concentração, a motivação e o desempenho.",
+    "narrative_p3": "O impacto estende-se à equipa. A produtividade diminui, os colegas absorvem responsabilidades adicionais e decisões críticas são adiadas.",
+    "narrative_p4": "Os projetos atrasam-se. Os custos aumentam. Os objetivos do negócio ficam em risco.",
+    "narrative_p5": "Por fim, os clientes sentem as consequências. A qualidade do serviço degrada-se, as relações comerciais enfraquecem e a reputação e o desempenho financeiro da empresa podem ser afetados.",
+    "narrative_highlight": "O que começa como um desafio humano pode tornar-se um risco de negócio para toda a empresa.",
+    "narrative_close": "A MOOVIA identifica os primeiros sinais de alerta, ajudando as empresas a intervir antes de o efeito em cascata chegar ao seu negócio."
   },
   "home": {
     "problem_help": {
@@ -136,7 +178,7 @@
       "banner_body": "A MOOVIA ajuda a proteger esse investimento ao identificar cedo os riscos humanos e familiares, permitindo agir a tempo, antes que afetem o desempenho, a retenção ou a continuidade da missão.",
       "support_line": "Substituir um talento internacional que não se adaptou custa milhares de euros.",
       "ripple": {
-        "eyebrow": "O EFEITO EM CASCATA",
+        "eyebrow": "CUSTOS VISÍVEIS",
         "highlight": "2 a 3 vezes o salário base anual",
         "line1": "É quanto uma missão internacional de longa duração pode custar a uma empresa.",
         "line2": "Mas o verdadeiro custo de uma missão que falha pode ir muito além do investimento inicial.",
