@@ -90,7 +90,7 @@ export function Hero() {
       ref={sectionRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="hero-section relative min-h-[calc(100svh-80px)] lg:h-[calc(100svh-80px)] flex flex-col justify-center bg-black overflow-hidden border-b border-b18 px-6 lg:px-12 xl:px-16"
+      className="hero-section relative min-h-[100svh] flex flex-col justify-start bg-black overflow-hidden border-b border-b18 px-6 lg:px-12 xl:px-16 pt-[100px] lg:pt-[112px] pb-10 lg:pb-12"
     >
       {/* 1. FUNDO: bg-black (--black: #06091a). Brilho radial peru max 6% sutil atrás da figura */}
       <div
@@ -102,18 +102,18 @@ export function Hero() {
         }}
       />
 
-      <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6 relative z-10 py-6 lg:py-0">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-6 relative z-10">
         {/* LADO ESQUERDO: TEXTO (max-w-[520px] em desktop) */}
         <div
           key={locale}
-          className="relative z-10 w-full lg:w-[44%] xl:w-[42%] max-w-[520px] flex flex-col justify-center items-start text-left pt-12 pb-4 lg:py-0 shrink-0"
+          className="relative z-10 w-full lg:w-[44%] xl:w-[42%] max-w-[520px] flex flex-col items-start text-left shrink-0"
         >
           {/* Eyebrow */}
           <motion.p
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={itemTransition(0)}
-            className="typo-eyebrow text-[#9B7A50] mb-5 tracking-[0.25em]"
+            className="typo-eyebrow text-[#9B7A50] mb-3.5 tracking-[0.25em]"
           >
             {t("hero.eyebrow")}
           </motion.p>
@@ -123,7 +123,7 @@ export function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={itemTransition(2)}
-            className="typo-h1 text-white mb-5 max-w-[20ch] leading-[1.08]"
+            className="typo-h1 text-white mb-3.5 max-w-[20ch] leading-[1.08]"
           >
             {t("hero.title")}
           </motion.h1>
@@ -133,7 +133,7 @@ export function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={itemTransition(3)}
-            className="font-urbanist text-[17px] font-[500] text-[#FFFFFF]/90 mb-4 max-w-[54ch]"
+            className="font-urbanist text-[16px] lg:text-[17px] font-[500] text-[#FFFFFF]/90 mb-3 max-w-[54ch]"
           >
             {t("hero.support_line")}
           </motion.p>
@@ -143,7 +143,7 @@ export function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={itemTransition(4)}
-            className="typo-body text-white/70 mb-8 max-w-[54ch]"
+            className="typo-body text-white/70 mb-6 max-w-[54ch]"
           >
             {t("hero.subtitle")}
           </motion.p>
@@ -153,11 +153,11 @@ export function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={itemTransition(5)}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto"
           >
             <Link
               to="/contacto"
-              className="inline-flex items-center justify-center bg-[#9B7A50] hover:bg-[#b08d60] text-black font-semibold typo-caption px-8 py-4 rounded-[2px] transition-colors text-center w-full sm:w-auto"
+              className="inline-flex items-center justify-center bg-[#9B7A50] hover:bg-[#b08d60] text-black font-semibold typo-caption px-8 py-3.5 rounded-[2px] transition-colors text-center w-full sm:w-auto"
             >
               {t("hero.cta_primary")}
             </Link>
@@ -165,7 +165,7 @@ export function Hero() {
             <a
               href="#como-funciona"
               onClick={handleScrollToSteps}
-              className="inline-flex items-center justify-center border border-[#9B7A50] hover:border-white text-white hover:text-white font-semibold typo-caption px-8 py-4 rounded-[2px] transition-colors text-center w-full sm:w-auto"
+              className="inline-flex items-center justify-center border border-[#9B7A50] hover:border-white text-white hover:text-white font-semibold typo-caption px-8 py-3.5 rounded-[2px] transition-colors text-center w-full sm:w-auto"
             >
               {t("hero.cta_secondary")}
             </a>
@@ -173,8 +173,8 @@ export function Hero() {
         </div>
 
         {/* LADO DIREITO: FIGURA + ANÉIS CONCÊNTRICOS + RIPPLE EFFECT INTERATIVO */}
-        <div className="relative z-10 w-full lg:w-[56%] xl:w-[58%] flex flex-col items-center justify-center overflow-visible py-4 lg:py-0">
-          <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 xl:gap-7">
+        <div className="relative z-10 w-full lg:w-[56%] xl:w-[58%] flex flex-col items-center justify-start overflow-visible">
+          <div className="relative w-full flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-end gap-5 xl:gap-7">
             
             {/* Wrapper do Humanoide com Anéis Concêntricos */}
             <motion.div
@@ -284,64 +284,64 @@ export function Hero() {
 
                   {/* Linhas finas estáticas ligando os anéis às 4 etiquetas da coluna (apenas desktop) */}
                   <g className="hidden lg:block pointer-events-none" aria-hidden="true">
-                    {/* Linha 1: Anel Interior (Family) -> Botão 01 (y=168) */}
+                    {/* Linha 1: Anel Interior (Family) -> Botão 01 (y=56) */}
                     <circle
-                      cx="360"
-                      cy="215"
+                      cx="340"
+                      cy="198"
                       r={activeRing === "family" ? 4 : 2.5}
                       fill={activeRing === "family" ? "#D4AF37" : "#9B7A50"}
                       className={activeRing === "family" ? "animate-pulse" : ""}
                     />
                     <path
-                      d="M 360 215 L 420 168 L 600 168"
+                      d="M 340 198 L 410 56 L 600 56"
                       fill="none"
                       stroke={activeRing === "family" ? "#D4AF37" : "#9B7A50"}
                       strokeWidth={activeRing === "family" ? "1.6" : "0.75"}
                       strokeOpacity={activeRing === "family" ? 0.95 : 0.35}
                     />
 
-                    {/* Linha 2: Anel Médio (Team) -> Botão 02 (y=214) */}
+                    {/* Linha 2: Anel Médio (Team) -> Botão 02 (y=104) */}
                     <circle
-                      cx="448"
-                      cy="216"
+                      cx="420"
+                      cy="180"
                       r={activeRing === "team" ? 4 : 2.5}
                       fill={activeRing === "team" ? "#D4AF37" : "#9B7A50"}
                       className={activeRing === "team" ? "animate-pulse" : ""}
                     />
                     <path
-                      d="M 448 216 L 600 216"
+                      d="M 420 180 L 480 104 L 600 104"
                       fill="none"
                       stroke={activeRing === "team" ? "#D4AF37" : "#9B7A50"}
                       strokeWidth={activeRing === "team" ? "1.6" : "0.75"}
                       strokeOpacity={activeRing === "team" ? 0.95 : 0.35}
                     />
 
-                    {/* Linha 3: Anel Médio-externo (Business) -> Botão 03 (y=264) */}
+                    {/* Linha 3: Anel Médio-externo (Business) -> Botão 03 (y=152) */}
                     <circle
-                      cx="527"
-                      cy="264"
+                      cx="480"
+                      cy="157"
                       r={activeRing === "business" ? 4 : 2.5}
                       fill={activeRing === "business" ? "#D4AF37" : "#9B7A50"}
                       className={activeRing === "business" ? "animate-pulse" : ""}
                     />
                     <path
-                      d="M 527 264 L 600 264"
+                      d="M 480 157 L 530 152 L 600 152"
                       fill="none"
                       stroke={activeRing === "business" ? "#D4AF37" : "#9B7A50"}
                       strokeWidth={activeRing === "business" ? "1.6" : "0.75"}
                       strokeOpacity={activeRing === "business" ? 0.95 : 0.35}
                     />
 
-                    {/* Linha 4: Anel Exterior (Consequences) -> Botão 04 (y=312) */}
+                    {/* Linha 4: Anel Exterior (Consequences) -> Botão 04 (y=200) */}
                     <circle
-                      cx="590"
-                      cy="312"
+                      cx="535"
+                      cy="130"
                       r={activeRing === "consequences" ? 4 : 2.5}
                       fill={activeRing === "consequences" ? "#D4AF37" : "#9B7A50"}
                       className={activeRing === "consequences" ? "animate-pulse" : ""}
                     />
                     <path
-                      d="M 590 312 L 600 312"
+                      d="M 535 130 L 565 200 L 600 200"
                       fill="none"
                       stroke={activeRing === "consequences" ? "#D4AF37" : "#9B7A50"}
                       strokeWidth={activeRing === "consequences" ? "1.6" : "0.75"}
@@ -379,16 +379,16 @@ export function Hero() {
             </motion.div>
 
             {/* COLUNA DE ETIQUETAS + CARTÃO DE DETALHE (Desktop à direita, Mobile abaixo) */}
-            <div className="w-full max-w-[340px] lg:w-[260px] xl:w-[290px] flex flex-col items-center lg:items-start gap-2.5 z-30 shrink-0">
+            <div className="w-full max-w-[340px] lg:w-[285px] xl:w-[315px] flex flex-col items-center lg:items-start gap-1.5 z-30 shrink-0">
               {/* Eyebrow estático, não clicável, do Ripple Effect */}
-              <p className="typo-eyebrow text-[#9B7A50] text-[10px] md:text-[11px] tracking-[0.25em] mb-0.5 select-none pointer-events-none self-center lg:self-start">
+              <p className="typo-eyebrow text-[#9B7A50] text-[10px] md:text-[11px] tracking-[0.25em] mb-1 select-none pointer-events-none self-center lg:self-start">
                 {t("rippleDrill.eyebrow")}
               </p>
 
               {/* 4 Etiquetas dos anéis (Coluna no desktop, grid/wrap no mobile) */}
               <div
                 aria-label="Impactos da mobilidade"
-                className="w-full flex flex-row flex-wrap lg:flex-col gap-2 justify-center lg:justify-start"
+                className="w-full flex flex-row flex-wrap lg:flex-col gap-1.5 justify-center lg:justify-start"
               >
                 {/* 01 · Impacto familiar */}
                 <button
@@ -397,7 +397,7 @@ export function Hero() {
                   aria-expanded={activeRing === "family"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "family" ? null : "family")}
-                  className={`group flex items-center justify-between px-3.5 py-2 rounded-full border text-xs font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
+                  className={`group flex items-center justify-between px-3 py-1.5 rounded-full border text-[11.5px] lg:text-[12px] font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
                     activeRing === "family"
                       ? "border-[#D4AF37] bg-[#9B7A50]/30 text-white shadow-[0_0_14px_rgba(212,175,55,0.45)] ring-1 ring-[#D4AF37]"
                       : "border-[#9B7A50]/40 bg-black/75 text-white/85 hover:border-[#9B7A50] hover:text-white hover:bg-black/90"
@@ -417,7 +417,7 @@ export function Hero() {
                   aria-expanded={activeRing === "team"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "team" ? null : "team")}
-                  className={`group flex items-center justify-between px-3.5 py-2 rounded-full border text-xs font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
+                  className={`group flex items-center justify-between px-3 py-1.5 rounded-full border text-[11.5px] lg:text-[12px] font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
                     activeRing === "team"
                       ? "border-[#D4AF37] bg-[#9B7A50]/30 text-white shadow-[0_0_14px_rgba(212,175,55,0.45)] ring-1 ring-[#D4AF37]"
                       : "border-[#9B7A50]/40 bg-black/75 text-white/85 hover:border-[#9B7A50] hover:text-white hover:bg-black/90"
@@ -437,7 +437,7 @@ export function Hero() {
                   aria-expanded={activeRing === "business"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "business" ? null : "business")}
-                  className={`group flex items-center justify-between px-3.5 py-2 rounded-full border text-xs font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
+                  className={`group flex items-center justify-between px-3 py-1.5 rounded-full border text-[11.5px] lg:text-[12px] font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
                     activeRing === "business"
                       ? "border-[#D4AF37] bg-[#9B7A50]/30 text-white shadow-[0_0_14px_rgba(212,175,55,0.45)] ring-1 ring-[#D4AF37]"
                       : "border-[#9B7A50]/40 bg-black/75 text-white/85 hover:border-[#9B7A50] hover:text-white hover:bg-black/90"
@@ -457,7 +457,7 @@ export function Hero() {
                   aria-expanded={activeRing === "consequences"}
                   aria-controls="ripple-drilldown-card"
                   onClick={() => setActiveRing(activeRing === "consequences" ? null : "consequences")}
-                  className={`group flex items-center justify-between px-3.5 py-2 rounded-full border text-xs font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
+                  className={`group flex items-center justify-between px-3 py-1.5 rounded-full border text-[11.5px] lg:text-[12px] font-urbanist transition-all cursor-pointer w-auto lg:w-full ${
                     activeRing === "consequences"
                       ? "border-[#D4AF37] bg-[#9B7A50]/30 text-white shadow-[0_0_14px_rgba(212,175,55,0.45)] ring-1 ring-[#D4AF37]"
                       : "border-[#9B7A50]/40 bg-black/75 text-white/85 hover:border-[#9B7A50] hover:text-white hover:bg-black/90"
@@ -476,11 +476,11 @@ export function Hero() {
                 id="ripple-drilldown-card"
                 role="region"
                 aria-live="polite"
-                className="w-full min-h-[190px] sm:min-h-[180px] bg-[#06091a]/95 border border-[#9B7A50]/40 rounded-sm p-4 sm:p-4.5 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-colors"
+                className="w-full min-h-[285px] bg-[#06091a]/95 border border-[#9B7A50]/40 rounded-sm p-3.5 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-colors"
               >
                 <div>
-                  <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-[#9B7A50]/20">
-                    <span className="typo-eyebrow text-[#9B7A50] text-[10px] tracking-[0.2em]">
+                  <div className="flex items-center justify-between pb-1.5 mb-2 border-b border-[#9B7A50]/20">
+                    <span className="typo-eyebrow text-[#9B7A50] text-[9.5px] tracking-[0.2em]">
                       {activeRing === null && t("rippleDrill.intro_tag")}
                       {activeRing === "family" && `01 · ${t("rippleDrill.ring1_label")}`}
                       {activeRing === "team" && `02 · ${t("rippleDrill.ring2_label")}`}
@@ -491,7 +491,7 @@ export function Hero() {
                       <button
                         type="button"
                         onClick={() => setActiveRing(null)}
-                        className="text-[11px] font-urbanist text-white/60 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+                        className="text-[10.5px] font-urbanist text-white/60 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
                         aria-label={t("rippleDrill.close")}
                       >
                         {t("rippleDrill.close")} ✕
@@ -500,17 +500,17 @@ export function Hero() {
                   </div>
 
                   {activeRing === null && (
-                    <p className="font-urbanist text-[13px] text-white/85 leading-relaxed">
+                    <p className="typo-caption text-white/85 !leading-[1.45]">
                       {t("rippleDrill.intro")}
                     </p>
                   )}
 
                   {activeRing === "family" && (
                     <div>
-                      <h4 className="font-urbanist text-[14px] font-[600] text-[#9B7A50] mb-1 leading-snug">
+                      <strong className="block font-urbanist text-[13px] font-[600] text-[#9B7A50] mb-1 leading-snug">
                         {t("rippleDrill.family_title")}
-                      </h4>
-                      <p className="font-urbanist text-[12.5px] text-white/85 leading-relaxed">
+                      </strong>
+                      <p className="typo-caption text-white/85 !leading-[1.45]">
                         {t("rippleDrill.family_text")}
                       </p>
                     </div>
@@ -518,10 +518,10 @@ export function Hero() {
 
                   {activeRing === "team" && (
                     <div>
-                      <h4 className="font-urbanist text-[14px] font-[600] text-[#9B7A50] mb-1 leading-snug">
+                      <strong className="block font-urbanist text-[13px] font-[600] text-[#9B7A50] mb-1 leading-snug">
                         {t("rippleDrill.team_title")}
-                      </h4>
-                      <p className="font-urbanist text-[12.5px] text-white/85 leading-relaxed">
+                      </strong>
+                      <p className="typo-caption text-white/85 !leading-[1.45]">
                         {t("rippleDrill.team_text")}
                       </p>
                     </div>
@@ -530,18 +530,18 @@ export function Hero() {
                   {activeRing === "business" && (
                     <div className="space-y-2">
                       <div>
-                        <h4 className="font-urbanist text-[13.5px] font-[600] text-[#9B7A50] mb-0.5 leading-snug">
+                        <strong className="block font-urbanist text-[12.5px] font-[600] text-[#9B7A50] mb-0.5 leading-snug">
                           {t("rippleDrill.business_p1_title")}
-                        </h4>
-                        <p className="font-urbanist text-[12px] text-white/85 leading-relaxed">
+                        </strong>
+                        <p className="typo-caption text-white/85 !leading-[1.45]">
                           {t("rippleDrill.business_p1_text")}
                         </p>
                       </div>
                       <div>
-                        <h4 className="font-urbanist text-[13.5px] font-[600] text-[#9B7A50] mb-0.5 leading-snug">
+                        <strong className="block font-urbanist text-[12.5px] font-[600] text-[#9B7A50] mb-0.5 leading-snug">
                           {t("rippleDrill.business_p2_title")}
-                        </h4>
-                        <p className="font-urbanist text-[12px] text-white/85 leading-relaxed">
+                        </strong>
+                        <p className="typo-caption text-white/85 !leading-[1.45]">
                           {t("rippleDrill.business_p2_text")}
                         </p>
                       </div>
@@ -550,13 +550,13 @@ export function Hero() {
 
                   {activeRing === "consequences" && (
                     <div>
-                      <h4 className="font-urbanist text-[14px] font-[600] text-[#9B7A50] mb-1 leading-snug">
+                      <strong className="block font-urbanist text-[13px] font-[600] text-[#9B7A50] mb-1 leading-snug">
                         {t("rippleDrill.consequences_title")}
-                      </h4>
-                      <p className="font-urbanist text-[12px] text-white/85 leading-relaxed mb-2.5">
+                      </strong>
+                      <p className="typo-caption text-white/85 !leading-[1.45] mb-1.5">
                         {t("rippleDrill.consequences_text")}
                       </p>
-                      <p className="font-urbanist text-[12px] text-[#9B7A50] font-[600] leading-relaxed pt-2 border-t border-[#9B7A50]/20">
+                      <p className="typo-caption text-[#9B7A50] font-[600] !leading-[1.4] pt-1.5 border-t border-[#9B7A50]/20">
                         {t("rippleDrill.consequences_highlight")}
                       </p>
                     </div>
