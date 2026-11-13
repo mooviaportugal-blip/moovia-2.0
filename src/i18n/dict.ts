@@ -1240,18 +1240,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
   },
 
   // --- AUTO-INJECTED CORRECTIONS ---
-  "A MOOVIA é a aplicação desta experiência à proteção do investimento humano.": {
-    "en": "MOOVIA is the application of this experience to the protection of human investment.",
-    "es": "MOOVIA es la aplicación de esta experiencia a la protección de la inversión humana."
-  },
-  "Tornar a mobilidade internacional mais informada, mais solidária e mais responsável perante as pessoas e os resultados do negócio.": {
-    "en": "Make international mobility more informed, more supportive and more accountable to people and business outcomes",
-    "es": "Hacer que la movilidad internacional sea más informada, más solidaria y más responsable ante las personas y los resultados empresariales."
-  },
-  "Carreira Internacional": {
-    "en": "International Career",
-    "es": "Carrera Internacional"
-  },
   "Décadas de experiência em negócios internacionais, projetos globais e desenvolvimento de mercados em vários continentes.": {
     "en": "Decades of experience in international business, global projects, and market development across multiple continents.",
     "es": "Décadas de experiencia en negocios internacionales, proyectos globales y desarrollo de mercados en varios continentes."
@@ -1260,21 +1248,9 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "Identifying hidden risks and losses: the discipline that taught MOOVIA to see what traditional management models fail to capture.",
     "es": "Identificar riesgos y pérdidas ocultos: la disciplina que enseñó a MOOVIA a ver lo que los modelos tradicionales de gestión no captan."
   },
-  "Metodologias Próprias": {
-    "en": "Proprietary Methodologies",
-    "es": "Metodologías Propias"
-  },
   "A combinação de ciência comportamental humana e engenharia de sistemas, transformando o conhecimento especializado num processo estruturado e replicável.": {
     "en": "The combination of human behavioural science and systems engineering, transforming specialist knowledge into a structured and replicable process.",
     "es": "La combinación de ciencia del comportamiento humano e ingeniería de sistemas, transformando el conocimiento especializado en un proceso estructurado y replicable."
-  },
-  "Raízes e Asas": {
-    "en": "Roots and Wings",
-    "es": "Raíces y Alas"
-  },
-  "A metodologia que estrutura a dimensão humana do sucesso, traduzindo adaptação, integração e bem-estar em variáveis mensuráveis.": {
-    "en": "The methodology that structures the human dimension of success, translating adaptation, integration, and well-being into measurable variables.",
-    "es": "La metodología que estructura la dimensión humana del éxito, traduciendo adaptación, integración y bienestar en variables medibles."
   },
   "Tecnologia": {
     "en": "Technology",
@@ -1348,10 +1324,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "T-30 / T0",
     "es": "T-30 / T0"
   },
-  "Contínuo": {
-    "en": "Ongoing",
-    "es": "Continuo"
-  },
   "Co-Founder & Legal | Advogado Associado da Abreu": {
     "en": "Co-Founder & Legal | Associate Lawyer at Abreu",
     "es": "Co-Founder & Legal | Abogado asociado de Abreu"
@@ -1404,21 +1376,9 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "View Laura Costa, LL.M.’s profile",
     "es": "Ver el perfil de Laura Costa, LL.M."
   },
-  "Inteligência para os riscos humanos das missões internacionais": {
-    "en": "Intelligence for the human risks of international assignments",
-    "es": "Inteligencia para los riesgos humanos de las misiones internacionales"
-  },
   "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais, antes que se transformem em problemas de desempenho, retenção ou repatriação.": {
     "en": "MOOVIA helps companies and executives identify and address the human, cultural and family challenges that can compromise international assignments, before they become performance, retention or repatriation issues.",
     "es": "MOOVIA ayuda a empresas y ejecutivos a identificar y abordar los desafíos humanos, culturales y familiares que pueden comprometer las misiones internacionales, antes de que se conviertan en problemas de desempeño, retención o repatriación."
-  },
-  "Proteja o valor das suas missões internacionais.": {
-    "en": "Protect the Value of Your International Assignments.",
-    "es": "Proteja el valor de sus misiones internacionales."
-  },
-  "A MOOVIA ajuda as empresas a avaliar a adaptação dos colaboradores e das famílias, a identificar riscos emergentes e a agir atempadamente para apoiar o desempenho, a retenção e a continuidade das missões.": {
-    "en": "MOOVIA helps companies assess employee and family adaptation, identify emerging risks and take timely action to support performance, retention and assignment continuity.",
-    "es": "MOOVIA ayuda a las empresas a evaluar la adaptación de los empleados y las familias, a identificar riesgos emergentes y a actuar a tiempo para apoyar el rendimiento, la retención y la continuidad de las misiones."
   },
   "Um novo país. Um novo capítulo. Apoio ao longo do caminho.": {
     "en": "A new country. A new chapter. Support along the way.",
@@ -1427,10 +1387,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Uma mudança internacional traz oportunidades profissionais e transformações pessoais. A MOOVIA ajuda-o a si e à sua família a preparar, adaptar e encontrar apoio prático ao longo de toda a transição.": {
     "en": "An international move brings professional opportunities and personal change. MOOVIA helps you and your family prepare, adapt and find practical support throughout the transition.",
     "es": "Una mudanza internacional trae oportunidades profesionales y transformaciones personales. MOOVIA le ayuda a usted y a su familia a prepararse, adaptarse y encontrar apoyo práctico a lo largo de toda la transición."
-  },
-  "Levar a disciplina da assurance à mobilidade internacional.": {
-    "en": "Bringing the discipline of assurance to international mobility.",
-    "es": "Llevar la disciplina de la assurance a la movilidad internacional."
   },
 
   // ---------- NEW RIPPLE, TECH ACCOUNTABILITY, TIMELINE, PRIVACY ----------
