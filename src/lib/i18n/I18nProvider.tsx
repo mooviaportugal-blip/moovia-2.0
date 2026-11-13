@@ -75,6 +75,6 @@ export function useI18n() {
   return {
     locale: safeStored ?? fallback,
     setLocale: (l: string) => setLangCore(l as Lang),
-    t: (key: string) => t(key),
+    t: (key: string, opts?: { defaultValue?: string }) => t(key, opts ?? {}) as string,
   };
 }

@@ -86,11 +86,11 @@ export function Nav() {
   }, [mobileOpen]);
 
   const links = [
-    { name: cmsText("nav.link_para_empresas", t("nav.for_companies", "Para Empresas")), to: "/para-empresas" },
-    { name: cmsText("nav.link_para_executivos", t("nav.for_executives", "Para Executivos e Famílias")), to: "/para-executivos-e-familias" },
-    { name: cmsText("nav.link_sobre", t("nav.about", "Sobre")), to: "/sobre" },
-    { name: cmsText("nav.link_equipa", t("nav.team", "Equipa")), to: "/equipa" },
-    { name: cmsText("nav.link_contacto", t("nav.contact", "Contacto")), to: "/contacto" },
+    { name: cmsText("nav.link_para_empresas", t("nav.for_companies", { defaultValue: "Para Empresas" })), to: "/para-empresas" },
+    { name: cmsText("nav.link_para_executivos", t("nav.for_executives", { defaultValue: "Para Executivos e Famílias" })), to: "/para-executivos-e-familias" },
+    { name: cmsText("nav.link_sobre", t("nav.about", { defaultValue: "Sobre" })), to: "/sobre" },
+    { name: cmsText("nav.link_equipa", t("nav.team", { defaultValue: "Equipa" })), to: "/equipa" },
+    { name: cmsText("nav.link_contacto", t("nav.contact", { defaultValue: "Contacto" })), to: "/contacto" },
   ];
 
   const handleCtaClick = () => {

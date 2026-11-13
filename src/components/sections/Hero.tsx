@@ -80,7 +80,7 @@ export function Hero() {
   const itemTransition = (index: number) =>
     shouldReduceMotion
       ? { duration: 0 }
-      : { duration: 0.7, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] };
+      : { duration: 0.7, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] };
 
   // Estado das animações dos anéis SVG (pausado se fora de vista ou reduced motion)
   const isSpinning = isInView && !shouldReduceMotion;

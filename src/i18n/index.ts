@@ -98,7 +98,7 @@ if (!i18n.isInitialized) {
     fallbackLng: DEFAULT_LOCALE,
     defaultNS: "translation",
     ns: ["translation"],
-    initImmediate: false,
+    initAsync: false,
     interpolation: { escapeValue: false },
     returnNull: false,
     returnEmptyString: false,

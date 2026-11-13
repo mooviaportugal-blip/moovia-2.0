@@ -42,7 +42,7 @@ async function extractPdf(bytes: Uint8Array): Promise<string> {
 
 async function extractDocx(bytes: Uint8Array): Promise<string> {
   const mammoth = await import('https://esm.sh/mammoth@1.7.2?bundle')
-  const result = await mammoth.default.extractRawText({
+  const result = await (mammoth as any).default.extractRawText({
     arrayBuffer: bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength),
   })
   return result.value || ''
@@ -131,7 +131,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   } catch (err) {
-    const msg = String(err?.message || err)
+    const msg = String((err as Error)?.message || err)
     if (documentId) {
       await supabase.from('maia_documents').update({ status: 'error', error: msg }).eq('id', documentId)
     }
