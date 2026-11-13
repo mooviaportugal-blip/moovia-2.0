@@ -1432,10 +1432,6 @@ export const DICT: Record<string, { en: string; es: string }> = {
     "en": "Bringing the discipline of assurance to international mobility.",
     "es": "Llevar la disciplina de la assurance a la movilidad internacional."
   },
-  "A MOOVIA foi criada para dar à dimensão humana de uma missão internacional a mesma atenção que o investimento financeiro e operacional que lhe está por trás. Combinamos avaliação estruturada, conhecimento especializado e acompanhamento para ajudar colaboradores, famílias e organizações a navegar as transições internacionais.": {
-    "en": "MOOVIA was created to give the human side of an international assignment the same attention as the financial and operational investment behind it. We combine structured assessment, specialist insight and follow-up to help employees, families and organisations navigate international transitions.",
-    "es": "MOOVIA se creó para prestar a la dimensión humana de una asignación internacional la misma atención que a la inversión financiera y operativa que hay detrás. Combinamos evaluación estructurada, criterio especializado y seguimiento para ayudar a colaboradores, familias y organizaciones a navegar las transiciones internacionales."
-  },
 
   // ---------- NEW RIPPLE, TECH ACCOUNTABILITY, TIMELINE, PRIVACY ----------
   "IMPACTO NO NEGÓCIO": {
@@ -1601,8 +1597,12 @@ export const DICT: Record<string, { en: string; es: string }> = {
     es: "Hablemos",
   },
   "Inteligência de risco humano para a mobilidade global.": {
-    en: "Human Risk Intelligence for Global Mobility.",
-    es: "Inteligencia de riesgo humano para la movilidad global.",
+    en: "Human Risk Intelligence for Global Mobility Success.",
+    es: "Inteligencia de riesgo humano para el éxito de la movilidad global.",
+  },
+  "Inteligência de risco humano para o sucesso da mobilidade global.": {
+    en: "Human Risk Intelligence for Global Mobility Success.",
+    es: "Inteligencia de riesgo humano para el éxito de la movilidad global.",
   },
   "Proteger as pessoas, o desempenho e o seu investimento em mobilidade.": {
     en: "Protecting People. Performance. And Your Mobility Investment.",
@@ -2145,6 +2145,96 @@ export const DICT: Record<string, { en: string; es: string }> = {
   "Reputação e marca empregadora": {
     en: "Reputation and employer brand",
     es: "Reputación y marca empleadora",
+  },
+
+  // ---------- FORMULÁRIO DE CONTACTO / LEAD FORM ----------
+  "Nome do contacto": {
+    en: "Contact name",
+    es: "Nombre de contacto",
+  },
+  "E-mail corporativo": {
+    en: "Corporate email",
+    es: "Correo corporativo",
+  },
+  "Nome da empresa": {
+    en: "Company name",
+    es: "Nombre de la empresa",
+  },
+  "Mensagem (opcional)": {
+    en: "Message (optional)",
+    es: "Mensaje (opcional)",
+  },
+  "Responsável / cargo (ex: Ana Silva, Recursos Humanos)": {
+    en: "Contact person / role (e.g., Jane Doe, Human Resources)",
+    es: "Responsable / cargo (ej.: Ana Silva, Recursos Humanos)",
+  },
+  "Quantidade de colaboradores": {
+    en: "Number of employees",
+    es: "Número de empleados",
+  },
+  "Mais de 1000": {
+    en: "More than 1,000",
+    es: "Más de 1000",
+  },
+  "500 a 1000": {
+    en: "500 to 1,000",
+    es: "500 a 1000",
+  },
+  "1 a 50": {
+    en: "1 to 50",
+    es: "1 a 50",
+  },
+  "50 a 100": {
+    en: "50 to 100",
+    es: "50 a 100",
+  },
+  "100 a 500": {
+    en: "100 to 500",
+    es: "100 a 500",
+  },
+  "Países de origem e destino (ex: Brasil → Portugal)": {
+    en: "Origin and destination countries (e.g., Brazil → Portugal)",
+    es: "Países de origen y destino (ej.: Brasil → Portugal)",
+  },
+  "Principal desafio que procura resolver (ex: retenção de talento, adaptação da liderança)": {
+    en: "Main challenge you want to address (e.g., talent retention, leadership adaptation)",
+    es: "Desafío principal a resolver (ej.: retención de talento, adaptación de liderazgo)",
+  },
+  "Já tem programa de mobilidade formal?": {
+    en: "Do you have a formal mobility programme in place?",
+    es: "¿Tiene un programa formal de movilidad?",
+  },
+  "Sim": {
+    en: "Yes",
+    es: "Sí",
+  },
+  "Não": {
+    en: "No",
+    es: "No",
+  },
+  "Em estruturação": {
+    en: "Being structured",
+    es: "En estructuración",
+  },
+  "Enviar mensagem": {
+    en: "Send message",
+    es: "Enviar mensaje",
+  },
+  "A enviar...": {
+    en: "Sending...",
+    es: "Enviando...",
+  },
+  "Recebido": {
+    en: "Received",
+    es: "Recibido",
+  },
+  "Obrigado. A equipa MOOVIA entrará em contacto brevemente.": {
+    en: "Thank you. The MOOVIA team will contact you shortly.",
+    es: "Gracias. El equipo de MOOVIA se pondrá en contacto pronto.",
+  },
+  "Vamos rever o seu contexto e responderemos em até um dia útil.": {
+    en: "We will review your context and respond within one business day.",
+    es: "Revisaremos su contexto y le responderemos en un día hábil.",
   },
 };
 

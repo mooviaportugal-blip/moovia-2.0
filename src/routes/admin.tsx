@@ -9,6 +9,12 @@ import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import logoFooterAsset from "@/assets/logo-moovia-footer.png.asset.json";
 
 export const Route = createFileRoute("/admin")({
+  head: () => ({
+    meta: [
+      { title: "Admin | MOOVIA" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: AdminLayout,
   ssr: false,
 });

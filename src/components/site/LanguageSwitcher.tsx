@@ -5,13 +5,16 @@ import PT from "country-flag-icons/react/3x2/PT";
 import ES from "country-flag-icons/react/3x2/ES";
 import GB from "country-flag-icons/react/3x2/GB";
 import { useI18n } from "@/lib/i18n/I18nProvider";
-import type { Lang } from "@/i18n";
+import { ENABLED_LOCALES, type Lang } from "@/i18n";
 import { cn } from "@/lib/utils";
 
-const LANGS: { code: Lang; native: string; label: string; short: string }[] = [
-  { code: "pt-PT", native: "Português", label: "Portuguese", short: "PT" },
+const ALL_LANGS: { code: Lang; native: string; label: string; short: string }[] = [
   { code: "en", native: "English", label: "English", short: "EN" },
+  { code: "es", native: "Español", label: "Spanish", short: "ES" },
+  { code: "pt-PT", native: "Português", label: "Portuguese", short: "PT" },
 ];
+
+const LANGS = ALL_LANGS.filter((l) => ENABLED_LOCALES.includes(l.code));
 
 
 const FlagFor: Record<Lang, React.ComponentType<{ className?: string; title?: string }>> = {

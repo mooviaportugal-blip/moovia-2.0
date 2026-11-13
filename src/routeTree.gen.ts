@@ -27,6 +27,7 @@ import { Route as ParaExecutivosEFamiliasRouteImport } from './routes/para-execu
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as PtRouteImport } from './routes/pt'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SobreRouteImport } from './routes/sobre'
@@ -53,6 +54,7 @@ import { Route as AdminUxRouteImport } from './routes/admin.ux'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as HomeBlackvRouteImport } from './routes/home_.blackv'
+import { Route as PtSplatRouteImport } from './routes/pt.$'
 import { Route as AdminSettingsIndexRouteImport } from './routes/admin.settings.index'
 import { Route as AdminSettingsFinancialRouteImport } from './routes/admin.settings.financial'
 import { Route as AdminSettingsNotificationsRouteImport } from './routes/admin.settings.notifications'
@@ -150,6 +152,11 @@ const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
   id: '/privacidade',
   path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtRoute = PtRouteImport.update({
+  id: '/pt',
+  path: '/pt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicosRoute = ServicosRouteImport.update({
@@ -282,6 +289,11 @@ const HomeBlackvRoute = HomeBlackvRouteImport.update({
   path: '/home/blackv',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PtSplatRoute = PtSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => PtRoute,
+} as any)
 const AdminSettingsIndexRoute = AdminSettingsIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -344,6 +356,7 @@ export interface FileRoutesByFullPath {
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/pt': typeof PtRouteWithChildren
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -368,6 +381,7 @@ export interface FileRoutesByFullPath {
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/home/blackv': typeof HomeBlackvRoute
+  '/pt/$': typeof PtSplatRoute
   '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -397,6 +411,7 @@ export interface FileRoutesByTo {
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/pt': typeof PtRouteWithChildren
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -420,6 +435,7 @@ export interface FileRoutesByTo {
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/home/blackv': typeof HomeBlackvRoute
+  '/pt/$': typeof PtSplatRoute
   '/admin': typeof AdminIndexRoute
   '/blog': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -451,6 +467,7 @@ export interface FileRoutesById {
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/pt': typeof PtRouteWithChildren
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -475,6 +492,7 @@ export interface FileRoutesById {
   '/admin/ux': typeof AdminUxRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/home_/blackv': typeof HomeBlackvRoute
+  '/pt/$': typeof PtSplatRoute
   '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/admin/settings/financial': typeof AdminSettingsFinancialRoute
@@ -507,6 +525,7 @@ export interface FileRouteTypes {
     | '/perguntas-frequentes'
     | '/politica-de-privacidade'
     | '/privacidade'
+    | '/pt'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -531,6 +550,7 @@ export interface FileRouteTypes {
     | '/admin/ux'
     | '/blog/$slug'
     | '/home/blackv'
+    | '/pt/$'
     | '/admin/'
     | '/blog/'
     | '/admin/settings/financial'
@@ -560,6 +580,7 @@ export interface FileRouteTypes {
     | '/perguntas-frequentes'
     | '/politica-de-privacidade'
     | '/privacidade'
+    | '/pt'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -583,6 +604,7 @@ export interface FileRouteTypes {
     | '/admin/ux'
     | '/blog/$slug'
     | '/home/blackv'
+    | '/pt/$'
     | '/admin'
     | '/blog'
     | '/admin/settings/financial'
@@ -613,6 +635,7 @@ export interface FileRouteTypes {
     | '/perguntas-frequentes'
     | '/politica-de-privacidade'
     | '/privacidade'
+    | '/pt'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -637,6 +660,7 @@ export interface FileRouteTypes {
     | '/admin/ux'
     | '/blog/$slug'
     | '/home_/blackv'
+    | '/pt/$'
     | '/admin/'
     | '/blog/'
     | '/admin/settings/financial'
@@ -668,6 +692,7 @@ export interface RootRouteChildren {
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
+  PtRoute: typeof PtRouteWithChildren
   ServicosRoute: typeof ServicosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
@@ -808,6 +833,13 @@ declare module '@tanstack/react-router' {
       path: '/privacidade'
       fullPath: '/privacidade'
       preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt': {
+      id: '/pt'
+      path: '/pt'
+      fullPath: '/pt'
+      preLoaderRoute: typeof PtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos': {
@@ -992,6 +1024,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeBlackvRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/$': {
+      id: '/pt/$'
+      path: '/$'
+      fullPath: '/pt/$'
+      preLoaderRoute: typeof PtSplatRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/admin/settings/': {
       id: '/admin/settings/'
       path: '/'
@@ -1113,6 +1152,16 @@ const AdminRouteChildren: AdminRouteChildren = {
 
 const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
+interface PtRouteChildren {
+  PtSplatRoute: typeof PtSplatRoute
+}
+
+const PtRouteChildren: PtRouteChildren = {
+  PtSplatRoute: PtSplatRoute,
+}
+
+const PtRouteWithChildren = PtRoute._addFileChildren(PtRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdminRoute: AdminRouteWithChildren,
@@ -1132,6 +1181,7 @@ const rootRouteChildren: RootRouteChildren = {
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   PrivacidadeRoute: PrivacidadeRoute,
+  PtRoute: PtRouteWithChildren,
   ServicosRoute: ServicosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,

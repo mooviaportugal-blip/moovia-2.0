@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/meu-dashboard")({
+  head: () => ({
+    meta: [{ name: "robots", content: "noindex, nofollow" }],
+  }),
   beforeLoad: async () => {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) throw redirect({ to: "/login" });

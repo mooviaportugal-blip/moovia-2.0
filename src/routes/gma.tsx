@@ -17,6 +17,7 @@ export const Route = createFileRoute("/gma")({
   },
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, nofollow" },
       { title: "Global Mobility Assurance | MOOVIA" },
       {
         name: "description",

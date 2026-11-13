@@ -14,11 +14,9 @@ const baseEntries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/para-empresas", changefreq: "monthly", priority: "0.9" },
   { path: "/para-executivos-e-familias", changefreq: "monthly", priority: "0.9" },
-  { path: "/assessment", changefreq: "monthly", priority: "0.8" },
   { path: "/sobre", changefreq: "monthly", priority: "0.8" },
   { path: "/equipa", changefreq: "monthly", priority: "0.7" },
   { path: "/contacto", changefreq: "yearly", priority: "0.5" },
-  { path: "/termos", changefreq: "yearly", priority: "0.2" },
 ];
 
 const entries: SitemapEntry[] = isLegalConfigured
@@ -27,6 +25,7 @@ const entries: SitemapEntry[] = isLegalConfigured
       { path: "/politica-de-privacidade", changefreq: "yearly", priority: "0.3" },
       { path: "/termos-de-consentimento", changefreq: "yearly", priority: "0.3" },
       { path: "/cookies", changefreq: "yearly", priority: "0.2" },
+      { path: "/termos", changefreq: "yearly", priority: "0.2" },
     ]
   : baseEntries;
 

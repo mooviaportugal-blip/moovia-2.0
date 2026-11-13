@@ -51,11 +51,25 @@ export function CustomCursor() {
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
   const [isHovering, setIsHovering] = useState(false);
+  const [isOverText, setIsOverText] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [bgMode, setBgMode] = useState<'dark' | 'light'>('dark');
 
   useEffect(() => {
     const style = document.createElement('style');
-    style.innerHTML = `@media (pointer: fine) { html, body, * { cursor: none !important; } }`;
+    style.innerHTML = `
+      @media (pointer: fine) {
+        html, body { cursor: none; }
+        [data-hero-text], [data-hero-text] *,
+        [data-hero-pills], [data-hero-pills] *,
+        h1, h2, h3, h4, h5, h6, p, label, input, textarea {
+          cursor: auto !important;
+        }
+        a, button, [role="button"] {
+          cursor: pointer !important;
+        }
+      }
+    `;
     document.head.appendChild(style);
     return () => { document.head.removeChild(style); };
   }, []);
@@ -63,14 +77,26 @@ export function CustomCursor() {
   useEffect(() => {
     let raf = 0;
     let lastTarget: HTMLElement | null = null;
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
-      const target = e.target as HTMLElement;
-      if (target === lastTarget) return;
+      setIsVisible(true);
+
+      const target = e.target as HTMLElement | null;
+      if (!target || target === lastTarget) return;
       lastTarget = target;
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
+        // Impede que o cursor personalizado sobreponha texto da hero ou as pílulas
+        const overText = !!(
+          target.closest('[data-hero-text]') ||
+          target.closest('[data-hero-pills]') ||
+          target.closest('h1, h2, h3, h4, h5, h6, p, input, textarea') ||
+          target.closest('[data-no-cursor]')
+        );
+        setIsOverText(overText);
+
         const isInteractive =
           target.closest('button') ||
           target.closest('a') ||
@@ -80,9 +106,23 @@ export function CustomCursor() {
         setBgMode(readBgUnder(target));
       });
     };
+
+    const handleMouseLeave = () => {
+      setIsVisible(false);
+    };
+
+    const handleMouseEnter = () => {
+      setIsVisible(true);
+    };
+
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mouseenter', handleMouseEnter);
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mouseenter', handleMouseEnter);
       cancelAnimationFrame(raf);
     };
   }, [mouseX, mouseY]);
@@ -104,6 +144,14 @@ export function CustomCursor() {
         translateX: '-50%',
         translateY: '-50%',
       }}
+      animate={{
+        opacity: isVisible && !isOverText ? 1 : 0,
+        scale: isVisible && !isOverText ? (isHovering ? 1.2 : 1) : 0,
+      }}
+      transition={{
+        opacity: { duration: 0.15 },
+        scale: { duration: 0.2 },
+      }}
       className="hidden md:block"
     >
       <motion.img
@@ -111,10 +159,9 @@ export function CustomCursor() {
         alt="Cursor"
         className="w-8 h-8 object-contain drop-shadow-2xl"
         style={{ filter }}
-        animate={{ rotate: isHovering ? 360 : 0, scale: isHovering ? 1.2 : 1 }}
+        animate={{ rotate: isHovering ? 360 : 0 }}
         transition={{
           rotate: { duration: 1, repeat: isHovering ? Infinity : 0, ease: 'linear' },
-          scale: { duration: 0.3 },
         }}
       />
     </motion.div>

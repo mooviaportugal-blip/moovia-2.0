@@ -3,5 +3,10 @@ Allow: /
 
 Disallow: /admin/
 Disallow: /api/
+Disallow: /login
+Disallow: /dashboard
+Disallow: /meu-dashboard
+Disallow: /checkout
+Disallow: /checkout2
 
-Sitemap: https://mooviaportugal.com/sitemap.xml
+Sitemap: https://moovia.global/sitemap.xml

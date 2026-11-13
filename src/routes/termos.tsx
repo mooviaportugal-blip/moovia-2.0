@@ -1,10 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/LegalPage";
+import { isLegalConfigured } from "@/config/legalConstants";
 
 export const Route = createFileRoute("/termos")({
   head: () => ({
     meta: [
       { title: "Termos e Condições, MOOVIA Portugal" },
+      ...(isLegalConfigured
+        ? []
+        : [{ name: "robots", content: "noindex, nofollow" }]),
       { name: "description", content: "Termos e condições de utilização do site e dos serviços de consultoria boutique da MOOVIA Portugal." },
       { property: "og:title", content: "Termos e Condições, MOOVIA Portugal" },
       { property: "og:url", content: "https://moovia.global/termos" },

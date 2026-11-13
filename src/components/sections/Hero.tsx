@@ -106,6 +106,7 @@ export function Hero() {
         {/* LADO ESQUERDO: TEXTO (max-w-[520px] em desktop) */}
         <div
           key={locale}
+          data-hero-text
           className="relative z-10 w-full lg:w-[44%] xl:w-[42%] max-w-[520px] flex flex-col items-start text-left shrink-0"
         >
           {/* Eyebrow */}
@@ -314,7 +315,10 @@ export function Hero() {
             </motion.div>
 
             {/* COLUNA DE ETIQUETAS + CARTÃO DE DETALHE (Desktop à direita, Mobile abaixo) */}
-            <div className="w-full max-w-[340px] lg:w-[285px] xl:w-[315px] flex flex-col items-center lg:items-start gap-1.5 z-30 shrink-0">
+            <div
+              data-hero-pills
+              className="w-full max-w-[340px] lg:w-[285px] xl:w-[315px] flex flex-col items-center lg:items-start gap-1.5 z-30 shrink-0"
+            >
               {/* Eyebrow estático, não clicável, do Ripple Effect */}
               <p className="typo-eyebrow text-[#9B7A50] text-[10px] md:text-[11px] tracking-[0.25em] mb-1 select-none pointer-events-none self-center lg:self-start">
                 {t("rippleDrill.eyebrow")}

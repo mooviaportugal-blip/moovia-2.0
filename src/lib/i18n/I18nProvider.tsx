@@ -6,6 +6,8 @@ import i18n, {
   resourceKey,
   setLang as setLangCore,
   reapplyCurrentLang,
+  ENABLED_LOCALES,
+  DEFAULT_LOCALE,
   type Lang,
 } from "@/i18n";
 import { resetHeadOrigin } from "@/i18n/applyDom";
@@ -67,10 +69,11 @@ export function useI18n() {
     typeof window !== "undefined"
       ? (localStorage.getItem("mv_lang") as Lang | null)
       : null;
+  const safeStored = stored && ENABLED_LOCALES.includes(stored) ? stored : null;
   const raw = i18nInstance.language as string | undefined;
-  const fallback: Lang = raw === "en" ? "en" : raw === "es" ? "es" : "pt-PT";
+  const fallback: Lang = raw === "es" && ENABLED_LOCALES.includes("es") ? "es" : DEFAULT_LOCALE;
   return {
-    locale: stored ?? fallback,
+    locale: safeStored ?? fallback,
     setLocale: (l: string) => setLangCore(l as Lang),
     t: (key: string) => t(key),
   };

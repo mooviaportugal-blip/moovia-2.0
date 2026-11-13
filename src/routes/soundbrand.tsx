@@ -7,6 +7,7 @@ export const Route = createFileRoute("/soundbrand")({
   head: () => ({
     meta: [
       { title: "Sound Branding · MOOVIA" },
+      { name: "robots", content: "noindex, nofollow" },
       {
         name: "description",
         content:

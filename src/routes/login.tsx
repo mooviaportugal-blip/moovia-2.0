@@ -6,6 +6,12 @@ import { motion } from "framer-motion";
 import logoFooterAdminAsset from "@/assets/logo-footer-admin-transp.png.asset.json";
 
 export const Route = createFileRoute("/login")({
+  head: () => ({
+    meta: [
+      { title: "Login | MOOVIA" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: LoginPage,
 });
 

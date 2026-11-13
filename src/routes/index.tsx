@@ -11,26 +11,26 @@ import { FinalCtaStrip } from "@/components/sections/FinalCtaStrip";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Inteligência para os riscos humanos das missões internacionais" },
+      { title: "Human Risk Intelligence for Global Mobility Success." },
       {
         name: "description",
         content:
-          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais, antes que se transformem em problemas de desempenho, retenção ou repatriação.",
+          "MOOVIA helps companies and executives manage the human, cultural and family challenges that can compromise international assignments, before they impact performance, retention or business continuity.",
       },
-      { property: "og:title", content: "Inteligência para os riscos humanos das missões internacionais" },
+      { property: "og:title", content: "Human Risk Intelligence for Global Mobility Success." },
       {
         property: "og:description",
         content:
-          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais.",
+          "MOOVIA helps companies and executives manage the human, cultural and family challenges that can compromise international assignments.",
       },
       { property: "og:url", content: "https://moovia.global/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Inteligência para os riscos humanos das missões internacionais" },
+      { name: "twitter:title", content: "Human Risk Intelligence for Global Mobility Success." },
       {
         name: "twitter:description",
         content:
-          "A MOOVIA ajuda empresas e executivos a identificar e gerir os desafios humanos, culturais e familiares que podem comprometer missões internacionais.",
+          "MOOVIA helps companies and executives manage the human, cultural and family challenges that can compromise international assignments.",
       },
     ],
     links: [{ rel: "canonical", href: "https://moovia.global/" }],
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
           name: "MOOVIA",
           url: "https://moovia.global/",
           description:
-            "Inteligência para os riscos humanos das missões internacionais",
+            "Human Risk Intelligence for Global Mobility Success.",
         }),
       },
     ],
